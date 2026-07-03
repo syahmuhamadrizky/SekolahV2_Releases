@@ -2692,9 +2692,9 @@ app.get("/api/dashboard-stats", authenticate, asyncHandler(async (req, res) => {
     stats.student_by_gender = gender.map((g) => ({ gender: g.name || "N/A", total: Number(g.value) }));
     const [agama] = await getPool().execute(`SELECT agama as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY agama`, params);
     stats.student_by_religion = agama.map((r) => ({ agama: r.name || "Islam", total: Number(r.value) }));
-    const [staffStatus] = await getPool().execute("SELECT status_kepegawaian as name, COUNT(*) as value FROM pegawai GROUP BY status_kepegawaian");
+    const [staffStatus] = await getPool().execute("SELECT status_kepegawaian as name, COUNT(*) as value FROM pegawai WHERE jenis_ptk NOT LIKE '%Pengawas%' OR jenis_ptk IS NULL GROUP BY status_kepegawaian");
     stats.staff_by_status = staffStatus.map((s) => ({ status_kepegawaian: s.name || "Belum Diatur", total: Number(s.value) }));
-    const [jabatan] = await getPool().execute("SELECT jabatan_ptk as name, COUNT(*) as value FROM pegawai GROUP BY jabatan_ptk");
+    const [jabatan] = await getPool().execute("SELECT jabatan_ptk as name, COUNT(*) as value FROM pegawai WHERE jenis_ptk NOT LIKE '%Pengawas%' OR jenis_ptk IS NULL GROUP BY jabatan_ptk");
     stats.staff_by_position = jabatan.map((j) => ({ jabatan: j.name || "N/A", total: Number(j.value) }));
     console.log("[DEBUG] Dashboard stats compiled:", Object.keys(stats));
     res.json(stats);
