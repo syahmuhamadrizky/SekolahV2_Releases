@@ -644,6 +644,21 @@ async function initDb() {
         `
       },
       {
+        name: "struktur_organisasi",
+        query: `
+          CREATE TABLE IF NOT EXISTS struktur_organisasi (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            pegawai_id VARCHAR(36) DEFAULT NULL,
+            parent_id INT DEFAULT NULL,
+            jabatan_struktur VARCHAR(255) NOT NULL,
+            urutan INT DEFAULT 0,
+            kategori VARCHAR(50) DEFAULT 'struktur',
+            rincian_tugas TEXT DEFAULT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
         name: "referensi",
         query: `
           CREATE TABLE IF NOT EXISTS referensi (
@@ -1271,8 +1286,8 @@ async function initDb() {
           const [cols] = await p.query("SHOW COLUMNS FROM pengumuman");
           const colNames = cols.map((c) => c.Field);
           if (cols.some((c) => c.Field === "target" && c.Type.includes("'umum'"))) {
-            console.log("[DB] Migrating pengumuman.target from 'umum' to 'semua'...");
-            await p.query("ALTER TABLE pengumuman MODIFY COLUMN target ENUM('siswa', 'pegawai', 'semua') DEFAULT 'semua'");
+            console.log("[DB] Migrating pengumuman target enum...");
+            await p.query("ALTER TABLE pengumuman MODIFY COLUMN target ENUM('guru', 'siswa', 'semua') DEFAULT 'semua'");
             await p.query("UPDATE pengumuman SET target = 'semua' WHERE target = 'umum'");
           }
           if (cols.some((c) => c.Field === "target" && c.Type.includes("enum"))) {
@@ -3016,12 +3031,12 @@ app.post("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res)
   if (id) {
     await getPool().execute(
       "UPDATE struktur_organisasi SET pegawai_id=?, parent_id=?, jabatan_struktur=?, urutan=?, kategori=?, rincian_tugas=? WHERE id=?",
-      [pegawai_id || "", parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null, id]
+      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null, id]
     );
   } else {
     await getPool().execute(
       "INSERT INTO struktur_organisasi (pegawai_id, parent_id, jabatan_struktur, urutan, kategori, rincian_tugas) VALUES (?, ?, ?, ?, ?, ?)",
-      [pegawai_id || "", parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null]
+      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null]
     );
   }
   res.json({ success: true });

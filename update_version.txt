@@ -1,2 +1,2 @@
-Versi 1.6.3 - Perbaikan Bug
-- Perbaikan masalah Error 500 (Internal Server Error) ketika menyimpan Struktur Organisasi atau Tim Manajemen Sekolah dengan kolom pegawai yang dikosongkan.
+Versi 1.6.4 - Final Fix Struktur Organisasi
+- Penyesuaian database migration untuk allow NULL pegawai_id di struktur organisasi yang menyebabkan Internal Server Error (500) pada database lama.
