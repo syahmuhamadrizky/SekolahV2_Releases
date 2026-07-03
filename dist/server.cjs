@@ -3016,12 +3016,12 @@ app.post("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res)
   if (id) {
     await getPool().execute(
       "UPDATE struktur_organisasi SET pegawai_id=?, parent_id=?, jabatan_struktur=?, urutan=?, kategori=?, rincian_tugas=? WHERE id=?",
-      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null, id]
+      [pegawai_id || "", parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null, id]
     );
   } else {
     await getPool().execute(
       "INSERT INTO struktur_organisasi (pegawai_id, parent_id, jabatan_struktur, urutan, kategori, rincian_tugas) VALUES (?, ?, ?, ?, ?, ?)",
-      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null]
+      [pegawai_id || "", parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null]
     );
   }
   res.json({ success: true });
