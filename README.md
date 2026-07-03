@@ -14,32 +14,36 @@ Dapoy Schools hadir dengan segudang fitur *All-in-One* yang dibagi menjadi beber
 - **Integrasi Dapoy Hub:** Sinkronisasi langsung dengan `hub.dapoy.net` untuk aktivasi *License Key* secara instan tanpa ribet.
 
 ### 2. 📝 Sistem Penerimaan Murid Baru (SPMB)
-- Panel Pendaftaran Mandiri.
+- Panel Pendaftaran Mandiri untuk calon siswa.
 - Manajemen Status Pendaftar (Pending, Diterima, Ditolak).
 - Verifikasi Dokumen & Konversi pendaftar yang lulus menjadi Siswa Aktif dengan satu klik.
 
 ### 3. 👥 Manajemen Data Siswa & Pegawai Terlengkap
 - **Database Siswa Terpadu:** Sistem pencarian *real-time*, filter by kelas/rombel, dan profil detail siswa mencakup biodata, data periodik, afirmasi, hingga riwayat masuk/keluar.
+- **Export & Import (Excel):** Fitur ekspor dan impor data massal untuk Siswa dan Pegawai secara mudah dan cepat.
 - **ID Card Digital:** Kemampuan mencetak Kartu Tanda Pelajar lengkap dengan Barcode/QR-Code dengan desain elegan.
-- **Manajemen Staf & Pegawai:** Pendataan Guru & Tenaga Kependidikan dengan hak akses berjenjang (Role-Based Access Control).
-- **Pengajuan Perubahan Data:** Fitur interaktif bagi pengguna untuk merequest perubahan data yang kemudian di-review oleh Admin.
+- **Manajemen Staf & Pegawai:** Pendataan Guru & Tenaga Kependidikan dengan gelar akademik yang ditampilkan otomatis.
+- **Role-Based Access Control (RBAC):** Hak akses berjenjang yang ketat. Role *Superadmin* dikunci dan dilindungi secara sistem untuk stabilitas keamanan tertinggi.
+- **Pengajuan Perubahan Data:** Fitur interaktif bagi pengguna untuk me-request perubahan data yang kemudian di-review oleh Admin.
 
 ### 4. 📅 Akademik & Operasional
-- **Presensi Digital (Absensi):** Rekap kehadiran siswa harian dengan mudah dan pelaporan yang terstruktur.
-- **Jadwal Pelajaran:** Tata kelola mata pelajaran dan pengingat kelas.
+- **Presensi Digital (Absensi):** Rekap kehadiran siswa harian dan absensi bidang studi dengan pelaporan yang terstruktur.
+- **Jadwal Pelajaran:** Tata kelola mata pelajaran harian yang ringkas dan proporsional.
 - **Kalender Akademik:** Penjadwalan kegiatan sekolah, hari libur, dan event penting.
 - **Manajemen Kelas/Rombel:** Pemetaan siswa ke dalam rombongan belajar secara otomatis maupun manual.
-- **Kegiatan Ekstrakurikuler:** Pendataan kegiatan luar jam sekolah dan partisipasi aktif siswa.
+- **Kegiatan Ekstrakurikuler:** Pendataan kegiatan luar jam sekolah (Bidang Ekskul) dan partisipasi aktif siswa.
 
 ### 5. 📢 Mading Digital & Publikasi
-- **Pengumuman Resmi:** Panel *broadcast* pengumuman untuk seluruh warga sekolah.
-- **Blog Sekolah:** Platform *Blogging* internal untuk mempublikasikan karya tulis, berita, maupun prestasi sekolah.
+- **Pengumuman Resmi (Warta Sekolah):** Panel *broadcast* pengumuman untuk seluruh warga sekolah, yang langsung tampil interaktif di halaman depan Dashboard Pegawai.
+- **Blog Sekolah:** Platform *Blogging* internal untuk mempublikasikan karya tulis, berita, maupun prestasi sekolah dengan penulis yang dinamis (menampilkan nama lengkap + gelar).
 - **Galeri Foto:** Penyimpanan dokumentasi dan memori kegiatan sekolah.
+- **SEO Friendly:** Meta tags otomatis menyesuaikan nama sekolah dan judul halaman untuk optimasi mesin pencari.
 
 ### 6. ⚙️ Kemudahan Tambahan (Utility)
 - **Tautan Cepat (Quick Links):** Kumpulkan URL layanan penting seperti Dapodik, e-Rapor, BOS, dll dalam satu halaman yang mudah diakses *staff*.
+- **Pilihan Tema UI Dinamis:** Terdapat 4 pilihan Tema (termasuk Tema *Modern* dan Tema *Cheerful* pastel) yang bisa diganti kapan saja oleh Admin langsung dari menu Pengaturan.
 - **Live Clock:** Fitur penunjuk jam *real-time* dengan estetika tinggi di panel admin.
-- **Pengaturan Aplikasi Ekstensif:** Kustomisasi Logo Sekolah, Nama Lembaga, Data Kontak, Tema, dll tanpa perlu menyentuh *coding*.
+- **Pengaturan Aplikasi Ekstensif:** Kustomisasi Logo Sekolah, Nama Lembaga, Data Kontak, tanpa perlu menyentuh *coding*.
 
 ---
 

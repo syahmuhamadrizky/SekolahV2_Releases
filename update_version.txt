@@ -1,2 +1,4 @@
-Version 1.4.3
-- [FEATURE] Menambahkan fungsi Export Excel format Teks untuk Absensi Bidang Study, Absensi Siswa, Bantuan Siswa, dan Ekstrakurikuler.
+Versi 1.4.4
+- [FIX] Memperbaiki lazy load komponen pada Portal Guru.
+- [FIX] Memastikan logika hak akses (Role) dan menu tersinkronisasi untuk semua tipe user (terutama Guru).
+- [FIX] Memperbaiki regex cek update agar deteksi versi berjalan lebih baik.
