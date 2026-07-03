@@ -1,2 +1,6 @@
-Versi 1.4.6
-- [STYLE] Mengubah nama menu "Bantuan Siswa" menjadi "Program Bantuan" di semua dashboard (Admin, Pegawai, Siswa).
+Versi 1.4.7
+
+Changelog:
+- Perbaikan bug Login Guru (Blank Screen)
+- Perbaikan total siswa agar tidak menghitung siswa Lulus/Pindah
+- Implementasi pagination dan filter tambahan pada Arsip Siswa
