@@ -1,4 +1,4 @@
-# 🏫 Dapoy Schools (v1.5.0)
+# 🏫 Dapoy Schools (v1.5.2)
 
 **Dapoy Schools** adalah platform sistem informasi dan manajemen operasional sekolah generasi baru. Dibangun dengan desain antarmuka *Glassmorphism* yang modern, dukungan Mode Gelap (Dark Mode), dan performa kilat, aplikasi ini dirancang khusus untuk memenuhi segala kebutuhan digitalisasi sekolah masa kini—mulai dari penerimaan siswa baru, absensi, hingga publikasi mading digital.
 

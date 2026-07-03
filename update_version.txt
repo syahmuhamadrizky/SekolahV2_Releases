@@ -1,3 +1,9 @@
+v1.5.2
+- Mengubah teks Absen Ekskul menjadi Absen Ekstrakulikuler
+
+v1.5.1
+- Mengubah teks menu sidebar Absensi Siswa menjadi Absen Siswa (Kelas) dan Ekstrakurikuler menjadi Absen Ekskul
+
 v1.5.0
 - Memperbaiki layout kop surat mutasi (posisi kota, proper case)
 - Menghapus UPT Satuan Pendidikan pada signature dan mengganti Kepala menjadi Kepala Sekolah
@@ -5,3 +11,5 @@ v1.5.0
 - Menambahkan Kelas, Semester, dan Tahun Pelajaran di bawah nama siswa pada tabel permohonan pindah
 - Menambahkan kolom No Urut pada tabel
 - Menambahkan filter berdasarkan Status dan Tahun Pelajaran pada tabel
+
+
