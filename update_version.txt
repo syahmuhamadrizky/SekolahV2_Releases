@@ -1,1 +1,6 @@
-v1.5.7 - Move Program Bantuan menu to Application category
+v1.6.0 - Peningkatan Fitur & UI
+- Pengecualian PTK Pengawas dari rekap data
+- Pemindahan menu Program Bantuan ke dalam Application
+- Penambahan fitur input permohonan pindah oleh Admin dengan pencarian nama
+- Pemisahan 2 tab Struktur Organisasi & Tim Manajemen Sekolah dengan Rincian Tugas (tata letak grid berselang-seling)
+- Penyesuaian align-left pada teks detail artikel Blog
