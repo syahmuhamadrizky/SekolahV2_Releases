@@ -1,4 +1,4 @@
-Versi 1.4.4
-- [FIX] Memperbaiki lazy load komponen pada Portal Guru.
-- [FIX] Memastikan logika hak akses (Role) dan menu tersinkronisasi untuk semua tipe user (terutama Guru).
-- [FIX] Memperbaiki regex cek update agar deteksi versi berjalan lebih baik.
+Versi 1.4.5
+- [FEATURE] Sistem Migrasi & Sinkronisasi Database Otomatis (Auto-Sync Columns & Tables).
+- [FIX] Memperbaiki kolom `keterangan` yang hilang di tabel `arsip_siswa` saat kelulusan.
+- [FIX] Memperbaiki *bug* ketika skema tabel berubah di versi baru.
