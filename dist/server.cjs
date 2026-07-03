@@ -1471,6 +1471,63 @@ async function initDb() {
     } catch (e) {
       console.error("[DB] Error hashing plaintext passwords:", e);
     }
+    try {
+      const [columns] = await p.query("SHOW COLUMNS FROM pengaturan_sekolah");
+      const columnNames = columns.map((c) => c.Field);
+      const newColumns = [
+        { name: "kop_surat_url", def: "TEXT" },
+        { name: "fb_page_id", def: "VARCHAR(255)" },
+        { name: "ig_account_id", def: "VARCHAR(255)" },
+        { name: "meta_access_token", def: "TEXT" },
+        { name: "meta_app_id", def: "VARCHAR(255)" },
+        { name: "meta_app_secret", def: "VARCHAR(255)" },
+        { name: "elearning_url", def: "VARCHAR(255)" },
+        { name: "elearning_token", def: "VARCHAR(255)" },
+        { name: "google_drive_config", def: "TEXT" },
+        { name: "hero_stats_value", def: "VARCHAR(255)" },
+        { name: "hero_stats_label", def: "VARCHAR(255)" },
+        { name: "hero_stats_desc", def: "VARCHAR(255)" },
+        { name: "headmaster_photo", def: "TEXT" },
+        { name: "headmaster_welcome_title", def: "VARCHAR(255)" },
+        { name: "headmaster_welcome_content", def: "TEXT" },
+        { name: "headmaster_welcome_active", def: "TINYINT(1) DEFAULT 1" },
+        { name: "enable_struktur_organisasi", def: "TINYINT(1) DEFAULT 1" },
+        { name: "enable_spmb", def: "TINYINT(1) DEFAULT 1" },
+        { name: "enable_elearning", def: "TINYINT(1) DEFAULT 1" },
+        { name: "theme_color", def: 'VARCHAR(50) DEFAULT "#2563eb"' },
+        { name: "active_template", def: 'VARCHAR(50) DEFAULT "template1"' },
+        { name: "sync_token", def: "VARCHAR(100)" },
+        { name: "sitemap_enabled", def: "TINYINT(1) DEFAULT 1" },
+        { name: "seo_keywords", def: "TEXT" },
+        { name: "seo_description", def: "TEXT" },
+        { name: "seo_title", def: "TEXT" },
+        { name: "kelurahan", def: "VARCHAR(100)" },
+        { name: "kecamatan", def: "VARCHAR(100)" },
+        { name: "kota", def: "VARCHAR(100)" },
+        { name: "provinsi", def: "VARCHAR(100)" },
+        { name: "social_links", def: "LONGTEXT" },
+        { name: "spmb_config", def: "LONGTEXT" },
+        { name: "schedule_date", def: "VARCHAR(100)" }
+      ];
+      let alterQueries = [];
+      for (const col of newColumns) {
+        if (!columnNames.includes(col.name)) {
+          alterQueries.push(`ADD COLUMN ${col.name} ${col.def}`);
+        }
+      }
+      if (alterQueries.length > 0) {
+        const alterQuery = `ALTER TABLE pengaturan_sekolah ${alterQueries.join(", ")}`;
+        await p.query(alterQuery);
+        console.log(`[DB] Migrated pengaturan_sekolah with new columns: ${alterQueries.length} columns added.`);
+      }
+      const spmbConfigCol = columns.find((c) => c.Field === "spmb_config");
+      if (spmbConfigCol && spmbConfigCol.Type.toLowerCase() === "text") {
+        await p.query("ALTER TABLE pengaturan_sekolah MODIFY COLUMN spmb_config LONGTEXT");
+        console.log("[DB] Modified spmb_config to LONGTEXT");
+      }
+    } catch (e) {
+      console.error("[DB] Error auto-migrating pengaturan_sekolah:", e);
+    }
     console.log(`Database initialized in ${Date.now() - startTime}ms`);
   } catch (err) {
     console.error("Database initialization failed critically:", err);
