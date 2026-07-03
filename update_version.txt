@@ -1,3 +1,4 @@
-v1.6.1 - Peningkatan UI
+Versi 1.6.2 - Perbaikan Sistem Update & UI
 - Penambahan motif biru dan oranye pada card Struktur Organisasi dan Tim Manajemen Sekolah
 - Perbaikan layout dan estetika antarmuka publik
+- Sinkronisasi otomatis struktur tabel dan kolom untuk fitur manajemen sekolah
