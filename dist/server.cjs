@@ -3011,17 +3011,17 @@ app.get("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res) 
   res.json(rows);
 }));
 app.post("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res) => {
-  const { id, pegawai_id, parent_id, jabatan_struktur, urutan } = req.body;
+  const { id, pegawai_id, parent_id, jabatan_struktur, urutan, kategori, rincian_tugas } = req.body;
   if (!jabatan_struktur) return res.status(400).json({ error: "Jabatan Struktur wajib diisi" });
   if (id) {
     await getPool().execute(
-      "UPDATE struktur_organisasi SET pegawai_id=?, parent_id=?, jabatan_struktur=?, urutan=? WHERE id=?",
-      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, id]
+      "UPDATE struktur_organisasi SET pegawai_id=?, parent_id=?, jabatan_struktur=?, urutan=?, kategori=?, rincian_tugas=? WHERE id=?",
+      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null, id]
     );
   } else {
     await getPool().execute(
-      "INSERT INTO struktur_organisasi (pegawai_id, parent_id, jabatan_struktur, urutan) VALUES (?, ?, ?, ?)",
-      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0]
+      "INSERT INTO struktur_organisasi (pegawai_id, parent_id, jabatan_struktur, urutan, kategori, rincian_tugas) VALUES (?, ?, ?, ?, ?, ?)",
+      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, kategori || "struktur", rincian_tugas || null]
     );
   }
   res.json({ success: true });
@@ -3856,12 +3856,17 @@ app.get("/api/permohonan-pindah", authenticate, asyncHandler(async (req, res) =>
   res.json(rows);
 }));
 app.post("/api/permohonan-pindah", authenticate, asyncHandler(async (req, res) => {
-  if (req.user.type !== "student") return res.status(403).json({ error: "Only students can submit requests" });
-  const student_id = req.user.id;
+  let student_id;
+  if (req.user.type === "student") {
+    student_id = req.user.id;
+  } else {
+    if (!req.body.student_id) return res.status(400).json({ error: "student_id is required" });
+    student_id = req.body.student_id;
+  }
   const { wali_nama, wali_pekerjaan, wali_alamat, tujuan_sekolah, tujuan_desa, tujuan_kec, tujuan_prov, alasan } = req.body;
   const [existing] = await getPool().execute("SELECT id FROM permohonan_pindah WHERE student_id = ? AND status = 'menunggu'", [student_id]);
   if (existing.length > 0) {
-    return res.status(400).json({ error: "Anda sudah memiliki pengajuan yang sedang diproses." });
+    return res.status(400).json({ error: "Siswa ini sudah memiliki pengajuan yang sedang diproses." });
   }
   await getPool().execute(`
         INSERT INTO permohonan_pindah 
@@ -4744,6 +4749,13 @@ app.put("/api/berkas-insentif/:id/nomor-surat", authenticate, asyncHandler(async
   const p = getPool();
   await p.query("UPDATE berkas_insentif SET nomor_surat = ? WHERE id = ?", [nomor_surat, id]);
   res.json({ message: "Nomor surat berhasil diperbarui" });
+}));
+app.put("/api/berkas-insentif/:id", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { tahun, bulan } = req.body;
+  const p = getPool();
+  await p.query("UPDATE berkas_insentif SET tahun = ?, bulan = ? WHERE id = ?", [tahun, bulan, id]);
+  res.json({ message: "Periode insentif berhasil diperbarui" });
 }));
 app.delete("/api/berkas-insentif/:id", authenticate, asyncHandler(async (req, res) => {
   const { id } = req.params;
