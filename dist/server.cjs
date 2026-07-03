@@ -632,6 +632,18 @@ async function initDb() {
     console.log("[DB] Database connection successful");
     const tables = [
       {
+        name: "berkas_insentif",
+        query: `
+          CREATE TABLE IF NOT EXISTS berkas_insentif (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            tahun VARCHAR(4) NOT NULL,
+            bulan VARCHAR(20) NOT NULL,
+            penerima JSON,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
         name: "referensi",
         query: `
           CREATE TABLE IF NOT EXISTS referensi (
@@ -1301,6 +1313,7 @@ async function initDb() {
       }
     }
     await ensureColumn(p, "rombongan_belajar", "tingkat", "VARCHAR(20) AFTER id");
+    await ensureColumn(p, "berkas_insentif", "nomor_surat", "VARCHAR(100)");
     const pegawaiCols = [
       { c: "nuptk", t: "VARCHAR(50)" },
       { c: "jenis_kelamin", t: "VARCHAR(20) DEFAULT 'L'" },
@@ -4706,6 +4719,111 @@ app.post("/api/admin/settings/drive", authenticate, asyncHandler(async (req, res
   }
   await getPool().execute("UPDATE pengaturan_sekolah SET google_drive_config = ? WHERE id = 1", [JSON.stringify(config)]);
   res.json({ success: true, message: "Konfigurasi berhasil disimpan." });
+}));
+app.get("/api/berkas-insentif", authenticate, asyncHandler(async (req, res) => {
+  const p = getPool();
+  const [rows] = await p.query("SELECT * FROM berkas_insentif ORDER BY created_at DESC");
+  res.json(rows);
+}));
+app.post("/api/berkas-insentif", authenticate, asyncHandler(async (req, res) => {
+  const { tahun, bulan, nomor_surat } = req.body;
+  const p = getPool();
+  await p.query("INSERT INTO berkas_insentif (tahun, bulan, nomor_surat, penerima) VALUES (?, ?, ?, ?)", [tahun, bulan, nomor_surat || "-", JSON.stringify([])]);
+  res.json({ message: "Data insentif berhasil ditambahkan" });
+}));
+app.post("/api/berkas-insentif/:id/penerima", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { penerima } = req.body;
+  const p = getPool();
+  await p.query("UPDATE berkas_insentif SET penerima = ? WHERE id = ?", [JSON.stringify(penerima), id]);
+  res.json({ message: "Penerima berhasil diperbarui" });
+}));
+app.put("/api/berkas-insentif/:id/nomor-surat", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { nomor_surat } = req.body;
+  const p = getPool();
+  await p.query("UPDATE berkas_insentif SET nomor_surat = ? WHERE id = ?", [nomor_surat, id]);
+  res.json({ message: "Nomor surat berhasil diperbarui" });
+}));
+app.delete("/api/berkas-insentif/:id", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const p = getPool();
+  await p.query("DELETE FROM berkas_insentif WHERE id = ?", [id]);
+  res.json({ message: "Data insentif berhasil dihapus" });
+}));
+app.get("/api/berkas-insentif/:id/cetak-pernyataan", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const p = getPool();
+  const [berkas] = await p.query("SELECT * FROM berkas_insentif WHERE id = ?", [id]);
+  if (berkas.length === 0) return res.status(404).json({ error: "Data tidak ditemukan" });
+  const berkasInsentif = berkas[0];
+  const penerimaIds = typeof berkasInsentif.penerima === "string" ? JSON.parse(berkasInsentif.penerima) : berkasInsentif.penerima || [];
+  if (penerimaIds.length === 0) {
+    return res.json({ berkas: berkasInsentif, pegawai: [], sekolah: null, kepsek: null });
+  }
+  const [sekolah] = await p.query("SELECT school_name, contact_address, contact_phone, npsn, kop_surat_url, logo_url, status_sekolah FROM pengaturan_sekolah WHERE id=1 LIMIT 1");
+  const [kepsek] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip FROM pegawai WHERE jabatan_ptk = 'Kepala Sekolah' LIMIT 1");
+  const [pengawas] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip FROM pegawai WHERE jabatan_ptk = 'Pengawas' LIMIT 1");
+  const placeholders = penerimaIds.map(() => "?").join(",");
+  const [pegawaiList] = await p.query(`
+        SELECT p.pegawai_id, p.nama_lengkap, p.gelar_depan, p.gelar_belakang, p.nip, p.jabatan_ptk,
+               (SELECT GROUP_CONCAT(b.mata_pelajaran SEPARATOR ', ') FROM bidang_ekskul b WHERE b.pegawai_id = p.pegawai_id) as bidang_mengajar
+        FROM pegawai p
+        WHERE p.pegawai_id IN (${placeholders})
+    `, [...penerimaIds]);
+  res.json({
+    berkas: berkasInsentif,
+    sekolah: sekolah.length > 0 ? sekolah[0] : null,
+    kepsek: kepsek.length > 0 ? kepsek[0] : null,
+    pengawas: pengawas.length > 0 ? pengawas[0] : null,
+    pegawai: pegawaiList
+  });
+}));
+app.get("/api/berkas-insentif/:id/cetak-dokumen-kepsek", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const p = getPool();
+  const [berkas] = await p.query("SELECT * FROM berkas_insentif WHERE id = ?", [id]);
+  if (berkas.length === 0) return res.status(404).json({ error: "Data tidak ditemukan" });
+  const berkasInsentif = berkas[0];
+  const [sekolah] = await p.query("SELECT school_name, contact_address, contact_phone, npsn, kop_surat_url, logo_url, kelurahan, kecamatan, kota, status_sekolah FROM pengaturan_sekolah WHERE id=1 LIMIT 1");
+  const [kepsek] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip, jabatan_ptk FROM pegawai WHERE jabatan_ptk = 'Kepala Sekolah' LIMIT 1");
+  const [pengawas] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip, jabatan_ptk FROM pegawai WHERE jabatan_ptk LIKE '%Pengawas%' LIMIT 1");
+  res.json({
+    berkas: berkasInsentif,
+    sekolah: sekolah.length > 0 ? sekolah[0] : null,
+    kepsek: kepsek.length > 0 ? kepsek[0] : null,
+    pengawas: pengawas.length > 0 ? pengawas[0] : null
+  });
+}));
+app.get("/api/cetak/keterangan-rombel", authenticate, asyncHandler(async (req, res) => {
+  const p = getPool();
+  const [sekolah] = await p.query("SELECT school_name, contact_address, contact_phone, npsn, kop_surat_url, logo_url, status_sekolah, kota, kecamatan FROM pengaturan_sekolah WHERE id=1 LIMIT 1");
+  const [kepsek] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip FROM pegawai WHERE jabatan_ptk = 'Kepala Sekolah' LIMIT 1");
+  const [pengawas] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip FROM pegawai WHERE jabatan_ptk = 'Pengawas' LIMIT 1");
+  const [rombelRows] = await p.query(`
+        SELECT r.name, r.tingkat, p.nama_lengkap as wali_kelas_name, p.gelar_depan, p.gelar_belakang,
+            SUM(CASE WHEN s.jenis_kelamin = 'L' THEN 1 ELSE 0 END) as count_l,
+            SUM(CASE WHEN s.jenis_kelamin = 'P' THEN 1 ELSE 0 END) as count_p
+        FROM rombongan_belajar r
+        LEFT JOIN pegawai p ON r.wali_kelas_id = p.pegawai_id
+        LEFT JOIN siswa s ON r.name = s.rombel
+        GROUP BY r.name, r.tingkat, p.nama_lengkap, p.gelar_depan, p.gelar_belakang
+        ORDER BY r.name ASC
+    `);
+  const countByTingkat = {};
+  for (const r of rombelRows) {
+    const t = r.tingkat || "Belum Diatur";
+    if (!countByTingkat[t]) countByTingkat[t] = 0;
+    countByTingkat[t]++;
+  }
+  const tingkatAggr = Object.keys(countByTingkat).map((k) => ({ tingkat: k, count: countByTingkat[k] }));
+  res.json({
+    sekolah: sekolah[0] || null,
+    kepsek: kepsek[0] || null,
+    pengawas: pengawas[0] || null,
+    rombels: rombelRows,
+    tingkatAggr
+  });
 }));
 app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
