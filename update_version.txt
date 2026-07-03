@@ -1,4 +1,7 @@
-Versi 1.4.8
-
-Changelog:
-- Perbaikan bug perhitungan jumlah rombongan belajar di dashboard utama
+v1.5.0
+- Memperbaiki layout kop surat mutasi (posisi kota, proper case)
+- Menghapus UPT Satuan Pendidikan pada signature dan mengganti Kepala menjadi Kepala Sekolah
+- Merubah mekanisme cetak PDF menjadi open in new tab dengan auto print dialog
+- Menambahkan Kelas, Semester, dan Tahun Pelajaran di bawah nama siswa pada tabel permohonan pindah
+- Menambahkan kolom No Urut pada tabel
+- Menambahkan filter berdasarkan Status dan Tahun Pelajaran pada tabel

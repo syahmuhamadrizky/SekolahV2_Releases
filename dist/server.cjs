@@ -1,1 +1,5786 @@
-const a0_0xfa5210=a0_0x4966;(function(_0x4bd369,_0x38b149){const _0x1c6e03=a0_0x4966,_0x53081d=_0x4bd369();while(!![]){try{const _0xecd173=-parseInt(_0x1c6e03(0x401))/0x1+-parseInt(_0x1c6e03(0x514))/0x2*(-parseInt(_0x1c6e03(0x393))/0x3)+-parseInt(_0x1c6e03(0x128))/0x4+-parseInt(_0x1c6e03(0x2df))/0x5*(parseInt(_0x1c6e03(0x48f))/0x6)+parseInt(_0x1c6e03(0x147))/0x7*(parseInt(_0x1c6e03(0x39a))/0x8)+-parseInt(_0x1c6e03(0x53a))/0x9*(parseInt(_0x1c6e03(0x225))/0xa)+-parseInt(_0x1c6e03(0x351))/0xb*(-parseInt(_0x1c6e03(0x1fd))/0xc);if(_0xecd173===_0x38b149)break;else _0x53081d['push'](_0x53081d['shift']());}catch(_0x4d7134){_0x53081d['push'](_0x53081d['shift']());}}}(a0_0xb3e6,0x4b1d6));var __create=Object[a0_0xfa5210(0x2b1)],__defProp=Object['defineProperty'],__getOwnPropDesc=Object['getOwnPropertyDescriptor'],__getOwnPropNames=Object['getOwnPropertyNames'],__getProtoOf=Object[a0_0xfa5210(0x4dd)],__hasOwnProp=Object['prototype'][a0_0xfa5210(0x4f6)],__export=(_0x5cba6e,_0x59c2d1)=>{for(var _0x3d8762 in _0x59c2d1)__defProp(_0x5cba6e,_0x3d8762,{'get':_0x59c2d1[_0x3d8762],'enumerable':!![]});},__copyProps=(_0x10c07a,_0x1c7a46,_0x5d9913,_0x14e36f)=>{if(_0x1c7a46&&typeof _0x1c7a46==='object'||typeof _0x1c7a46==='function'){for(let _0x3d62ca of __getOwnPropNames(_0x1c7a46))if(!__hasOwnProp['call'](_0x10c07a,_0x3d62ca)&&_0x3d62ca!==_0x5d9913)__defProp(_0x10c07a,_0x3d62ca,{'get':()=>_0x1c7a46[_0x3d62ca],'enumerable':!(_0x14e36f=__getOwnPropDesc(_0x1c7a46,_0x3d62ca))||_0x14e36f['enumerable']});}return _0x10c07a;},__toESM=(_0x59e7b9,_0x474ea2,_0x22af2e)=>(_0x22af2e=_0x59e7b9!=null?__create(__getProtoOf(_0x59e7b9)):{},__copyProps(_0x474ea2||!_0x59e7b9||!_0x59e7b9[a0_0xfa5210(0x272)]?__defProp(_0x22af2e,a0_0xfa5210(0x60b),{'value':_0x59e7b9,'enumerable':!![]}):_0x22af2e,_0x59e7b9)),__toCommonJS=_0x2497cd=>__copyProps(__defProp({},a0_0xfa5210(0x272),{'value':!![]}),_0x2497cd),server_exports={};__export(server_exports,{'getPool':()=>getPool,'uploadToGoogleDriveFallback':()=>uploadToGoogleDriveFallback}),module[a0_0xfa5210(0x5cc)]=__toCommonJS(server_exports);var import_express=__toESM(require(a0_0xfa5210(0x3e5)),0x1),import_path=__toESM(require('path'),0x1),import_promise=__toESM(require(a0_0xfa5210(0x438)),0x1),import_dotenv2=__toESM(require(a0_0xfa5210(0x4d9)),0x1),import_jsonwebtoken=__toESM(require(a0_0xfa5210(0x4b9)),0x1),import_multer=__toESM(require(a0_0xfa5210(0x2ac)),0x1),import_fs=__toESM(require('fs'),0x1),import_crypto=__toESM(require(a0_0xfa5210(0x200)),0x1),import_os=__toESM(require('os'),0x1),import_bcryptjs=__toESM(require('bcryptjs'),0x1);async function testDriveConnection(){const _0x21d304=a0_0xfa5210;return{'success':![],'message':_0x21d304(0x123)};}async function uploadFileToDrive(_0x28af06){return{'viewLink':null};}async function getGoogleDriveConfig(){return null;}function a0_0x4966(_0x2bcec5,_0x2e1ebc){_0x2bcec5=_0x2bcec5-0xf0;const _0xb3e655=a0_0xb3e6();let _0x496644=_0xb3e655[_0x2bcec5];return _0x496644;}var import_dotenv=__toESM(require(a0_0xfa5210(0x4d9)),0x1);import_dotenv[a0_0xfa5210(0x60b)]['config']();function stripHtml(_0x1aa0ad){return _0x1aa0ad['replace'](/<[^>]*>?/gm,'');}async function postToSocialMedia(_0x337f1a,_0x566fe4,_0x28524c,_0x1b5e00,_0x794a4,_0x19dded,_0xb4a33a,_0x54bfb9){const _0x164117=a0_0xfa5210;if(!_0x54bfb9){console[_0x164117(0x47d)](_0x164117(0x110));return;}const _0x529443=stripHtml(_0x566fe4)[_0x164117(0x4cd)](0x0,0x1f4),_0xf1b2f6=_0x337f1a+'\x0a\x0a'+_0x529443+'...\x0a\x0aBaca\x20selengkapnya\x20di\x20website\x20sekolah\x20kami.';if(_0x1b5e00&&_0x19dded)try{console[_0x164117(0x50a)](_0x164117(0x26e));const _0x152b51=_0x164117(0x144)+_0x19dded+_0x164117(0x2d9),_0x1e1f95=new URLSearchParams({'access_token':_0x54bfb9,'message':_0xf1b2f6});if(_0x28524c)_0x1e1f95[_0x164117(0x43e)]('url',_0x28524c);const _0xff1af1=_0x28524c?_0x152b51:_0x164117(0x144)+_0x19dded+_0x164117(0x3c5),_0xf8ae94=await fetch(_0xff1af1+'?'+_0x1e1f95[_0x164117(0x381)](),{'method':_0x164117(0x49f)}),_0x468c1d=await _0xf8ae94[_0x164117(0x3c7)]();console[_0x164117(0x50a)](_0x164117(0x56c),_0x468c1d);}catch(_0x99f8c2){console[_0x164117(0x2e2)](_0x164117(0x502),_0x99f8c2);}if(_0x794a4&&_0xb4a33a&&_0x28524c)try{console[_0x164117(0x50a)](_0x164117(0x470));const _0x1994b4=_0x164117(0x144)+_0xb4a33a+_0x164117(0x21e),_0x448b59=new URLSearchParams({'access_token':_0x54bfb9,'image_url':_0x28524c,'caption':_0xf1b2f6}),_0x9fca5b=await fetch(_0x1994b4+'?'+_0x448b59[_0x164117(0x381)](),{'method':'POST'}),_0x74fd2e=await _0x9fca5b[_0x164117(0x3c7)]();if(_0x74fd2e['id']){const _0x2029a8=_0x164117(0x144)+_0xb4a33a+_0x164117(0x29e),_0x4232d5=new URLSearchParams({'access_token':_0x54bfb9,'creation_id':_0x74fd2e['id']}),_0x5b0ed9=await fetch(_0x2029a8+'?'+_0x4232d5['toString'](),{'method':_0x164117(0x49f)}),_0x11bdcf=await _0x5b0ed9['json']();console[_0x164117(0x50a)](_0x164117(0x299),_0x11bdcf);}else console[_0x164117(0x2e2)](_0x164117(0x210),_0x74fd2e);}catch(_0x4947bb){console[_0x164117(0x2e2)]('Instagram\x20Post\x20Error:',_0x4947bb);}else _0x794a4&&!_0x28524c&&console[_0x164117(0x47d)](_0x164117(0x624));}var import_https=__toESM(require(a0_0xfa5210(0x400)),0x1);process.env.NODE_TLS_REJECT_UNAUTHORIZED='0',import_dotenv2[a0_0xfa5210(0x60b)][a0_0xfa5210(0x48c)]();var isLicenseValid=!![],licenseTimer=null,isExpired=![];function getHwid(){const _0x29adde=a0_0xfa5210;try{const _0x55366b=import_os[_0x29adde(0x60b)][_0x29adde(0x478)]()||{};let _0x5a4271='';for(const _0x8baa54 of Object['keys'](_0x55366b)){const _0x28d99d=_0x55366b[_0x8baa54];if(!_0x28d99d)continue;for(const _0x4cecf7 of _0x28d99d){if(!_0x4cecf7[_0x29adde(0x4ba)]&&_0x4cecf7[_0x29adde(0x152)]&&_0x4cecf7[_0x29adde(0x152)]!=='00:00:00:00:00:00'){_0x5a4271=_0x4cecf7[_0x29adde(0x152)];break;}}if(_0x5a4271)break;}const _0x296b93=import_os[_0x29adde(0x60b)][_0x29adde(0x2d0)]()||[],_0x444d79=_0x296b93[_0x29adde(0x5be)]>0x0?_0x296b93[0x0]['model']:_0x29adde(0x3fe),_0x288647=import_os['default']['platform']()||_0x29adde(0x423),_0x27bc91=_0x5a4271+'-'+_0x444d79+'-'+_0x288647;return import_crypto['default']['createHash'](_0x29adde(0x18d))[_0x29adde(0x5b5)](_0x27bc91)[_0x29adde(0x5e9)](_0x29adde(0x42c))[_0x29adde(0x4cd)](0x0,0x10)[_0x29adde(0x4ce)]();}catch(_0x3bebd0){const _0x1b10e1=_0x29adde(0x4c7)+(import_os[_0x29adde(0x60b)][_0x29adde(0x5e2)]?import_os['default'][_0x29adde(0x5e2)]():_0x29adde(0x3ba));return import_crypto[_0x29adde(0x60b)][_0x29adde(0x4de)](_0x29adde(0x18d))['update'](_0x1b10e1)[_0x29adde(0x5e9)]('hex')[_0x29adde(0x4cd)](0x0,0x10)[_0x29adde(0x4ce)]();}}function updateEnv(_0x18b9d6,_0x2d7416){const _0x559e4f=a0_0xfa5210,_0x34f92b=import_path['default'][_0x559e4f(0x4ca)](process['cwd'](),_0x559e4f(0x53c));let _0x399c2e='';import_fs[_0x559e4f(0x60b)]['existsSync'](_0x34f92b)&&(_0x399c2e=import_fs[_0x559e4f(0x60b)][_0x559e4f(0x5d5)](_0x34f92b,_0x559e4f(0x155)));const _0x58668e=new RegExp('^'+_0x18b9d6+_0x559e4f(0x1e0),'m');_0x58668e[_0x559e4f(0x5ae)](_0x399c2e)?_0x399c2e=_0x399c2e[_0x559e4f(0x2de)](_0x58668e,_0x18b9d6+'='+_0x2d7416):_0x399c2e+='\x0a'+_0x18b9d6+'='+_0x2d7416,import_fs[_0x559e4f(0x60b)]['writeFileSync'](_0x34f92b,_0x399c2e[_0x559e4f(0x136)]()+'\x0a'),process.env[_0x18b9d6]=_0x2d7416;}async function verifyLicenseOnBoot(){const _0x5f4cd1=a0_0xfa5210;let _0x9918b0=process.env.LICENSE_KEY||'',_0x5279f0=getHwid();const _0x1f2952='https://hub.dapoy.net';if(_0x9918b0)try{const _0x1add47=await fetch(_0x1f2952+_0x5f4cd1(0x36c),{'method':_0x5f4cd1(0x49f),'headers':{'Content-Type':'application/json'},'body':JSON['stringify']({'license_key':_0x9918b0,'hardware_id':_0x5279f0,'app_name':_0x5f4cd1(0x427)})}),_0x4b5555=await _0x1add47[_0x5f4cd1(0x3c7)]();if(_0x4b5555['valid']){isLicenseValid=!![],isExpired=![],console[_0x5f4cd1(0x50a)](_0x5f4cd1(0x2e6)+(_0x4b5555[_0x5f4cd1(0x1c7)]||'Client'));if(licenseTimer)clearInterval(licenseTimer);licenseTimer=setInterval(verifyLicenseOnBoot,0x3c*0x3c*0x3e8);}else console['log']('[LICENSE]\x20Invalid:\x20'+_0x4b5555[_0x5f4cd1(0x2e2)]),isLicenseValid=![],checkFreeTrial();}catch(_0x50dba2){console[_0x5f4cd1(0x50a)](_0x5f4cd1(0x4ff)+_0x50dba2[_0x5f4cd1(0x19a)]+').\x20Retrying\x20later.'),isLicenseValid=![],checkFreeTrial();}else isLicenseValid=![],checkFreeTrial();}async function checkFreeTrial(){const _0x11a7fe=a0_0xfa5210;let _0x264ffc='';const _0x4aae75=import_path[_0x11a7fe(0x60b)][_0x11a7fe(0x4ca)](process[_0x11a7fe(0x3f8)](),'.env');import_fs['default'][_0x11a7fe(0x605)](_0x4aae75)&&(_0x264ffc=import_fs[_0x11a7fe(0x60b)]['readFileSync'](_0x4aae75,_0x11a7fe(0x155)));if(!_0x264ffc[_0x11a7fe(0x424)](_0x11a7fe(0x2a5))){const _0x2ee088=Date['now']();updateEnv(_0x11a7fe(0x3f4),_0x2ee088[_0x11a7fe(0x381)]());}const _0x5c614c=process.env.FREE_TRIAL_START;if(_0x5c614c){const _0x2abe72=parseInt(_0x5c614c),_0x45a882=Date[_0x11a7fe(0x287)](),_0x543f3f=0x5*0x18*0x3c*0x3c*0x3e8;if(_0x45a882-_0x2abe72>_0x543f3f)isExpired=!![],console[_0x11a7fe(0x50a)](_0x11a7fe(0x3d7));else{isExpired=![];const _0x12a8e3=Math[_0x11a7fe(0x428)]((_0x543f3f-(_0x45a882-_0x2abe72))/0xea60);console[_0x11a7fe(0x50a)](_0x11a7fe(0x190)+_0x12a8e3+'\x20menit.'),setTimeout(verifyLicenseOnBoot,_0x543f3f-(_0x45a882-_0x2abe72)+0x3e8);}}}var app=(0x0,import_express[a0_0xfa5210(0x60b)])();app['get'](a0_0xfa5210(0x559),(_0x3b8595,_0x29e339)=>{const _0x251960=a0_0xfa5210;_0x29e339[_0x251960(0x3c7)]({'ok':!![],'mode':process.env.NODE_ENV});}),app[a0_0xfa5210(0x477)](import_express['default'][a0_0xfa5210(0x3c7)]({'limit':a0_0xfa5210(0x2ea)}));var PORT=process.env.PORT||0x1389,JWT_SECRET=process.env.JWT_SECRET||a0_0xfa5210(0x47b),uploadDir=import_path[a0_0xfa5210(0x60b)]['join'](process['cwd'](),a0_0xfa5210(0x233));try{const dirsToCreate=[uploadDir,import_path[a0_0xfa5210(0x60b)]['join'](uploadDir,a0_0xfa5210(0x442)),import_path['default'][a0_0xfa5210(0x4ca)](uploadDir,a0_0xfa5210(0x442),a0_0xfa5210(0x20c)),import_path[a0_0xfa5210(0x60b)]['join'](uploadDir,a0_0xfa5210(0x442),'pegawai'),import_path['default'][a0_0xfa5210(0x4ca)](uploadDir,a0_0xfa5210(0x39d)),import_path[a0_0xfa5210(0x60b)]['join'](uploadDir,a0_0xfa5210(0x1c0)),import_path[a0_0xfa5210(0x60b)][a0_0xfa5210(0x4ca)](uploadDir,'ekskul')];for(const dir of dirsToCreate){!import_fs[a0_0xfa5210(0x60b)]['existsSync'](dir)&&import_fs[a0_0xfa5210(0x60b)][a0_0xfa5210(0x116)](dir,{'recursive':!![]});}}catch(a0_0x386cbc){console['error']('Failed\x20to\x20create\x20uploads\x20directory.\x20Make\x20sure\x20permissions\x20are\x20correct:',a0_0x386cbc);}var storage=import_multer[a0_0xfa5210(0x60b)][a0_0xfa5210(0x32a)]({'destination':(_0x536b8a,_0x227a16,_0x2e03bb)=>{_0x2e03bb(null,uploadDir);},'filename':(_0x59f0c1,_0x164024,_0x28ad6c)=>{const _0x54d011=a0_0xfa5210,_0x2f4be7=Date[_0x54d011(0x287)]()+'-'+Math[_0x54d011(0x428)](Math[_0x54d011(0x4a0)]()*0x3b9aca00);_0x28ad6c(null,_0x164024[_0x54d011(0x217)]+'-'+_0x2f4be7+import_path[_0x54d011(0x60b)][_0x54d011(0x55b)](_0x164024[_0x54d011(0x419)]));}}),upload=(0x0,import_multer[a0_0xfa5210(0x60b)])({'storage':storage,'limits':{'fileSize':0x1*0x400*0x400}});function a0_0xb3e6(){const _0x2131ec=['Username\x20dan\x20Password\x20wajib\x20diisi.','Posting\x20to\x20Instagram...','SELECT\x20nipd,\x20nik,\x20nama_lengkap\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?\x20OR\x20nisn\x20=\x20?','UPDATE\x20ekstrakurikuler\x20SET\x20name\x20=\x20?,\x20description\x20=\x20?,\x20image_url\x20=\x20?,\x20schedule_info\x20=\x20?\x20WHERE\x20id\x20=\x20?','\x20WHERE\x20jp.class_name\x20=\x20?','application/octet-stream','kelurahan','url','use','networkInterfaces','SELECT\x20google_drive_config\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','\x22\x20/>\x0a\x20\x20\x20\x20<meta\x20name=\x22twitter:title\x22\x20content=\x22','default-secret-do-not-use-in-production','UPDATE\x20data_periodik\x20SET\x20tinggi_badan\x20=\x20?,\x20berat_badan\x20=\x20?,\x20lingkar_kepala\x20=\x20?,\x20jarak_rumah\x20=\x20?,\x20waktu_tempuh\x20=\x20?,\x20anak_keberapa\x20=\x20?,\x20jumlah_saudara_kandung\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?','warn','tipe\x20=\x20\x27ibu\x27','map','/api/el/quizzes/:id/start','SELECT\x20id\x20FROM\x20data_periodik\x20WHERE\x20siswa_id\x20=\x20?','quiz_title','tmp','penghasilan_ibu','mimetype','/api/literasi/jurnal','sudah','INSERT\x20INTO\x20literasi_materi\x20(judul,\x20deskripsi,\x20cover_image,\x20file_url,\x20tingkat_kelas,\x20xp_reward,\x20created_by,\x20mata_pelajaran,\x20waktu_baca)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','/api/spmb/status','SELECT\x20nik,\x20nama_lengkap,\x20tempat_lahir,\x20tanggal_lahir,\x20nomor_kk,\x20provinsi,\x20kota,\x20kecamatan,\x20kelurahan,\x20rt,\x20rw,\x20alamat_jalan\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20l.*,\x20s.nama_lengkap,\x20s.nisn,\x20s.rombel,\x20p.istilah\x20as\x20jenis_bantuan,\x20j.nama_bantuan\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20laporan_bantuan\x20l\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20l.siswa_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20penerima_bantuan\x20p\x20ON\x20l.bantuan_id\x20=\x20p.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20jenis_bantuan\x20j\x20ON\x20p.istilah\x20=\x20j.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20l.created_at\x20DESC\x0a\x20\x20\x20\x20\x20\x20\x20\x20','config','/uploads/profiles/','max','2516694NQsQnP','VARCHAR(20)\x20DEFAULT\x20\x27L\x27','child_process','SELECT\x20c.*,\x20s.nama_lengkap\x20as\x20teacher_name\x20FROM\x20el_courses\x20c\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20c.teacher_id\x20=\x20s.pegawai_id\x20WHERE\x20c.teacher_id\x20=\x20?','[DB]\x20Migrating\x20pengumuman.target\x20from\x20\x27umum\x27\x20to\x20\x27semua\x27...','jenis_sertifikasi','kalender_akademik','SELECT\x20id\x20FROM\x20artikel_blog\x20WHERE\x20status\x20=\x20\x27published\x27','/api/ekstrakurikuler','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20data_orang_tua\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tipe\x20ENUM(\x27ayah\x27,\x20\x27ibu\x27)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nik\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tahun_lahir\x20VARCHAR(4)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pendidikan\x20VARCHAR(30)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pekerjaan\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20penghasilan\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kebutuhan_khusus\x20VARCHAR(10)\x20DEFAULT\x20\x27Tidak\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','INSERT\x20INTO\x20pengajuan_ubah_data\x20(student_id,\x20proposed_data,\x20document_url)\x20VALUES\x20(?,\x20?,\x20?)','/api/rombongan_belajar/public','package.json','from','headmaster_welcome_active','then','POST','random','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20pengajuan_ubah_data\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20student_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20proposed_data\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20ENUM(\x27pending\x27,\x20\x27approved\x27,\x20\x27rejected\x27)\x20DEFAULT\x20\x27pending\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20admin_note\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(student_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','dokumentasi','SELECT\x20id\x20FROM\x20penerima_bantuan\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20istilah\x20=\x20?\x20AND\x20tahun\x20=\x20?\x20AND\x20semester\x20=\x20?','publish_end','Nama\x20rombel\x20sudah\x20ada','student_by_rombel','UPDATE\x20literasi_jurnal\x20SET\x20status\x20=\x20\x27disetujui\x27,\x20earned_xp\x20=\x20?,\x20dinilai_oleh\x20=\x20?\x20WHERE\x20id\x20=\x20?','push','/api/el/courses/:courseId/modules','INSERT\x20INTO\x20el_quiz_questions\x20(quiz_id,\x20question_text,\x20question_image_url,\x20option_a,\x20option_a_image,\x20option_b,\x20option_b_image,\x20option_c,\x20option_c_image,\x20option_d,\x20option_d_image,\x20correct_answer,\x20points,\x20order_index)\x20VALUES\x20(?,?,?,?,?,?,?,?,?,?,?,?,?,?)','[UPDATE]\x20Mengunduh\x20rilis\x20terbaru...','failed','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20tanggal,\x20status,\x20keterangan\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20absensi_siswa\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20student_id\x20=\x20?\x20','useDriveForSiswa','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20DISTINCT\x20mp.nama\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20`ref.mata_pelajaran`\x20mp\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20`ref.mata_pelajaran_kurikulum`\x20mpk\x20ON\x20mp.mata_pelajaran_id\x20=\x20mpk.mata_pelajaran_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20`ref.kurikulum`\x20k\x20ON\x20mpk.kurikulum_id\x20=\x20k.kurikulum_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20pengaturan_sekolah\x20ps\x20ON\x20ps.kurikulum\x20COLLATE\x20utf8mb4_unicode_ci\x20=\x20k.nama_kurikulum\x20COLLATE\x20utf8mb4_unicode_ci\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20mp.nama\x0a\x20\x20\x20\x20\x20\x20\x20\x20','DELETE\x20FROM\x20quick_links\x20WHERE\x20id\x20=\x20?','foto_surat_wali','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pb.id\x20as\x20penerima_bantuan_id,\x20pb.siswa_id,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jb.nama_bantuan,\x20jb.istilah,\x20pb.tahun,\x20pb.semester,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20db.nomor_rekening,\x20db.bank,\x20db.an_rekening,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20prb.id\x20as\x20pengajuan_id,\x20prb.status_pengajuan,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20lb.id\x20as\x20laporan_id,\x20lb.tanggal_pencairan,\x20lb.tanggal_penarikan,\x20lb.nominal,\x20lb.upload_foto_selfie,\x20lb.upload_foto_transaksi,\x20lb.tanda_tangan\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20penerima_bantuan\x20pb\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20jenis_bantuan\x20jb\x20ON\x20pb.istilah\x20=\x20jb.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_bank\x20db\x20ON\x20pb.siswa_id\x20=\x20db.siswa_id\x20AND\x20pb.istilah\x20=\x20db.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pengajuan_rekening_bantuan\x20prb\x20ON\x20pb.siswa_id\x20=\x20prb.siswa_id\x20AND\x20pb.istilah\x20=\x20prb.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20laporan_bantuan\x20lb\x20ON\x20pb.id\x20=\x20lb.bantuan_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20pb.siswa_id\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20pb.created_at\x20DESC\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20j.id\x20as\x20jurnal_id,\x20j.siswa_id,\x20j.materi_id,\x20j.status,\x20j.created_at,\x20j.earned_xp,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.nama_lengkap,\x20s.rombel,\x20m.judul,\x20m.tingkat_kelas,\x20m.mata_pelajaran\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20literasi_jurnal\x20j\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20j.siswa_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20literasi_materi\x20m\x20ON\x20j.materi_id\x20=\x20m.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20j.status\x20=\x20\x27disetujui\x27\x0a\x20\x20\x20\x20','getConnection','REJECTED','pengguna_web','kurikulum','quizId','jsonwebtoken','internal','sync_token','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20ekstrakurikuler\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20name\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20description\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20image_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20schedule_info\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','SHOW\x20COLUMNS\x20FROM\x20siswa','Field','mengajar','AND\x20tanggal\x20>=\x20?\x20AND\x20tanggal\x20<=\x20?','INSERT\x20INTO\x20el_quizzes\x20(course_id,\x20module_id,\x20title,\x20passing_score,\x20time_limit_minutes,\x20status)\x20VALUES\x20(?,?,?,?,?,?)','find','Konfigurasi\x20berhasil\x20disimpan.','/api/artikel_blog','\x20ADD\x20COLUMN\x20','not-found','cpanel-fallback-','SELECT\x20nisn,\x20nama_lengkap\x20as\x20nama,\x20rombel\x20as\x20kelas\x20FROM\x20siswa\x20WHERE\x20status_aktif\x20=\x201\x20AND\x20nisn\x20IS\x20NOT\x20NULL\x20AND\x20nisn\x20!=\x20\x27\x27','\x20AND\x20tingkat_kelas\x20IN\x20(','join','post_to_ig','UPDATE\x20absensi_ekskul\x20SET\x20','substring','toUpperCase','Sakit','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20pengumuman\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20target\x20ENUM(\x27siswa\x27,\x20\x27pegawai\x27,\x20\x27semua\x27)\x20DEFAULT\x20\x27semua\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20ENUM(\x27draft\x27,\x20\x27published\x27)\x20DEFAULT\x20\x27published\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20intro\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20closing\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20signature\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20publish_start\x20TIMESTAMP\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20publish_end\x20TIMESTAMP\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_tags\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20updated_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x20ON\x20UPDATE\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20data_bank\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20istilah\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_rekening\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bank\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20an_rekening\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20upload_foto_buku_rekening\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(istilah)\x20REFERENCES\x20jenis_bantuan(istilah)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','/login','Nomor\x20HP\x20dan\x20PIN\x20wajib\x20diisi.','[DB]\x20Auto-sync:\x20Adding\x20missing\x20column\x20','/api/bantuan/pengajuan/:siswa_id/:istilah',',\x20semester=?','/api/penerima/laporan/:type/:penerimaan_id','Akun\x20Anda\x20telah\x20dinonaktifkan.\x20Silakan\x20hubungi\x20operator.','dotenv','scores','null','SELECT\x20*\x20FROM\x20pengguna_web\x20WHERE\x20username\x20=\x20\x27admin\x27','getPrototypeOf','createHash','sertifikasi','\x0a\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20INTO\x20permohonan_pindah\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(student_id,\x20wali_nama,\x20wali_pekerjaan,\x20wali_alamat,\x20tujuan_sekolah,\x20tujuan_desa,\x20tujuan_kec,\x20tujuan_prov,\x20alasan,\x20status)\x0a\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20\x27menunggu\x27)\x0a\x20\x20\x20\x20','SELECT\x20pegawai_id\x20as\x20id\x20FROM\x20pegawai\x20WHERE\x20nip\x20=\x20\x27198212292025211010\x27','penerima_bantuan','\x20in\x20','spmb_applicants','Check\x20update\x20error:','seo_tags','nik','Impor\x20selesai.\x20','/api/literasi/jurnal/:id/reject','social_links','Sudah\x20disetujui\x20sebelumnya','sitemap_enabled','Social\x20Media\x20Auto-Post\x20Job\x20Error:','Website\x20Resmi\x20SDN\x20Tanah\x20Tinggi\x201','misi','Jabatan\x20Struktur\x20wajib\x20diisi','UPDATE\x20pengguna_web\x20SET\x20foto_profil\x20=\x20?\x20WHERE\x20id\x20=\x20?','INSERT\x20INTO\x20arsip_siswa\x20(siswa_id,\x20tahun_pelajaran,\x20semester,\x20rombel,\x20keterangan)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20\x27Mutasi\x20Keluar\x27)','Failed\x20to\x20fetch\x20school_name\x20for\x20manifest,\x20using\x20default:','nik_ayah','SELECT\x20total_xp,\x20level\x20FROM\x20siswa_gamifikasi\x20WHERE\x20siswa_id\x20=\x20?','hasOwnProperty','school_name','Staff\x20not\x20found','kewarganegaraan','kota','protocol','x-forwarded-for','Gagal\x20menyimpan\x20pengaturan:\x20','/api/kalender_akademik/:id','[LICENSE]\x20Failed\x20to\x20contact\x20Hub\x20Server\x20(','parent','SELECT\x20*\x20FROM\x20el_courses\x20WHERE\x20id\x20=\x20?\x20AND\x20teacher_id\x20=\x20?','Facebook\x20Post\x20Error:','Jurnal\x20tidak\x20ditemukan','Password\x20salah.','UPDATE\x20pengumuman\x20SET\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title\x20=\x20?,\x20target\x20=\x20?,\x20status\x20=\x20?,\x20intro\x20=\x20?,\x20content\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20closing\x20=\x20?,\x20signature\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20publish_start\x20=\x20?,\x20publish_end\x20=\x20?,\x20seo_tags\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20id\x20=\x20?','penerima_kip','bank_pip','auth:','/api/penerima/laporan','log','INSERT\x20IGNORE\x20INTO\x20pegawai\x20(nama_lengkap,\x20nip,\x20nik)\x20VALUES\x20(?,\x20?,\x20?)','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20pengguna_web\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20staff_id\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20role_id\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20username\x20VARCHAR(100)\x20UNIQUE\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20password\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status_aktif\x20BOOLEAN\x20DEFAULT\x20TRUE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','kebutuhan_khusus_ayah','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20r.*,\x20s.nama_lengkap\x20as\x20wali_kelas_name,\x20s.nip\x20as\x20wali_kelas_nip,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(SELECT\x20COUNT(*)\x20FROM\x20siswa\x20WHERE\x20rombel\x20=\x20r.name)\x20as\x20student_count\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20rombongan_belajar\x20r\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20r.wali_kelas_id\x20=\x20s.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20','[DB]\x20Database\x20connection\x20successful','\x20to\x20','NISN','SSO\x20Verify\x20Error:','nama_ayah','34720AwKSDV','google','static','INSERT\x20INTO\x20peran\x20(name,\x20permissions)\x20VALUES\x20(\x27Superadmin\x27,\x20\x27[\x22all\x22]\x27)','VARCHAR(255)','content-type','dist','SELECT\x20jabatan_ptk\x20as\x20name,\x20COUNT(*)\x20as\x20value\x20FROM\x20pegawai\x20GROUP\x20BY\x20jabatan_ptk','alpa','instagram_business_account','gelar_depan','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20*\x20FROM\x20artikel_blog\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20status\x20=\x20\x27published\x27\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20AND\x20(social_post_schedule\x20IS\x20NULL\x20OR\x20social_post_schedule\x20<=\x20NOW())\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20AND\x20((post_to_fb\x20=\x201\x20AND\x20social_post_fb_done\x20=\x200)\x20OR\x20(post_to_ig\x20=\x201\x20AND\x20social_post_ig_done\x20=\x200))\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','question_text,\x20option_a,\x20dan\x20correct_answer\x20wajib\x20diisi.','VARCHAR(50)','INSERT\x20INTO\x20peran\x20(name,\x20permissions)\x20VALUES\x20(\x27Admin\x27,\x20\x27[\x22all\x22]\x27)','Kuis\x20tidak\x20ditemukan.','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20INTO\x20absensi_bidang_study\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(student_id,\x20tanggal,\x20mata_pelajaran,\x20rombel,\x20status,\x20keterangan,\x20recorded_by)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20=\x20VALUES(status),\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20keterangan\x20=\x20VALUES(keterangan),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20recorded_by\x20=\x20VALUES(recorded_by)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','UPDATE\x20data_orang_tua\x20SET\x20nama\x20=\x20?,\x20nik\x20=\x20?,\x20tahun_lahir\x20=\x20?,\x20pendidikan\x20=\x20?,\x20pekerjaan\x20=\x20?,\x20penghasilan\x20=\x20?,\x20kebutuhan_khusus\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20tipe\x20=\x20\x27ayah\x27','permissions','/api/literasi/guru-info','DELETE\x20FROM\x20peran\x20WHERE\x20id\x20=\x20?','tipe\x20=\x20\x27ayah\x27','literasi_materi','nipd','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kel.kode_wilayah\x20as\x20kelurahan_kode,\x20kel.nama\x20as\x20kelurahan,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kec.kode_wilayah\x20as\x20kecamatan_kode,\x20kec.nama\x20as\x20kecamatan,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kota.kode_wilayah\x20as\x20kota_kode,\x20kota.nama\x20as\x20kota,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20prov.kode_wilayah\x20as\x20provinsi_kode,\x20prov.nama\x20as\x20provinsi\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20ref_mst_wilayah\x20kel\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20ref_mst_wilayah\x20kec\x20ON\x20kel.mst_kode_wilayah\x20=\x20kec.kode_wilayah\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20ref_mst_wilayah\x20kota\x20ON\x20kec.mst_kode_wilayah\x20=\x20kota.kode_wilayah\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20ref_mst_wilayah\x20prov\x20ON\x20kota.mst_kode_wilayah\x20=\x20prov.kode_wilayah\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20kel.id_level_wilayah\x20=\x20\x274\x27\x20AND\x20kel.nama\x20LIKE\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20LIMIT\x2020\x0a\x20\x20\x20\x20','SELECT\x20p.*,\x20r.name\x20as\x20role_name\x20FROM\x20pengguna_web\x20p\x20JOIN\x20peran\x20r\x20ON\x20p.role_id\x20=\x20r.id\x20WHERE\x20p.id\x20=\x20?','nomor_akte_lahir','data','INSERT\x20INTO\x20el_points\x20(student_id,\x20points,\x20source,\x20source_id,\x20description)\x20VALUES\x20(?,?,?,?,?)','/api/drive-proxy','status_aktif\x20=\x20?','UPDATE\x20pengajuan_rekening_bantuan\x20SET\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_lengkap=?,\x20tempat_lahir=?,\x20tanggal_lahir=?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_ayah=?,\x20nik_ayah=?,\x20nama_ibu=?,\x20nik_ibu=?,\x20status_orang_tua=?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali=?,\x20nik_wali=?,\x20hubungan_wali=?,\x20nomor_hp=?,\x20nomor_kk=?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20provinsi=?,\x20kota=?,\x20kecamatan=?,\x20kelurahan=?,\x20rt=?,\x20rw=?,\x20alamat_jalan=?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20penanggung_jawab_rekening=?','Foto\x20Profil\x20Siswa','INSERT\x20INTO\x20arsip_siswa\x20(siswa_id,\x20tahun_pelajaran,\x20semester,\x20rombel)\x20VALUES\x20(?,?,?,?)','\x0a</urlset>','[DEBUG]\x20Dashboard\x20stats\x20compiled:','Only\x20students\x20can\x20view\x20their\x20requests','DELETE\x20FROM\x20','9pnjnaA','rombel','.env','hubungan_wali','percentage','[SYSTEM]\x20Memicu\x20restart\x20server\x20(PM2/cPanel)...','SELECT\x20sync_token\x20FROM\x20pengaturan_sekolah\x20LIMIT\x201','/api/siswa/naik-kelas','\x20baru,\x20','public/beranda','single','DELETE\x20FROM\x20literasi_pertanyaan\x20WHERE\x20materi_id\x20=\x20?','VARCHAR(255)\x20DEFAULT\x20NULL','nomor_pendaftaran','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20wu.*,\x20r.name\x20as\x20role_name,\x20r.permissions\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pengguna_web\x20wu\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20peran\x20r\x20ON\x20wu.role_id\x20=\x20r.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20wu.username\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20','pekerjaan','INSERT\x20INTO\x20bidang_ekskul\x20(pegawai_id,\x20kategori,\x20mata_pelajaran,\x20kelas)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','execute',',\x20upload_foto_transaksi=?','penerima_kps_pkh','peran','Pegawai','SELECT\x20student_id,\x20status,\x20keterangan\x20FROM\x20absensi_siswa\x20WHERE\x20tanggal\x20=\x20?','points','Username\x20dan\x20password\x20wajib\x20diisi.','teacher','UPDATE\x20el_courses\x20SET\x20name=?,\x20description=?,\x20cover_color=?,\x20rombel=?,\x20subject=?,\x20semester=?,\x20tahun_pelajaran=?,\x20status=?\x20WHERE\x20id=?','/api/akademik_ekskul','/api/bidang_ekskul/form_options','UPDATE\x20literasi_jurnal\x20SET\x20status\x20=\x20\x27menunggu_validasi\x27,\x20earned_xp\x20=\x200,\x20dinilai_oleh\x20=\x20NULL\x20WHERE\x20id\x20=\x20?','students:delete','/api/_test','/uploads/bantuan/','extname','guru','/api/admin/settings/drive','role','fields','stats_teachers','nomor_kk','/uploads/profiles/siswa/','/api/ekstrakurikuler/:id','[\x22all\x22]','Error\x20in\x20mutasi-keluar:','vite.svg','INSERT\x20INTO\x20riwayat_masuk\x20(student_id,\x20type,\x20username,\x20ip_address,\x20user_agent,\x20status)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?)','SELECT\x20id,\x20correct_answer,\x20points\x20FROM\x20el_quiz_questions\x20WHERE\x20quiz_id\x20=\x20?','/api/absensi_bidang_study','nomor_kks','Admin','Facebook\x20Post\x20Result:','tugas_tambahan','Student','/uploads/profiles/pegawai/','stringify','slice','data_wali','itu','DELETE\x20FROM\x20pengguna_web\x20WHERE\x20id\x20=\x20?','/api/permohonan-pindah/:id/status','/api/bantuan/jenis','/api/bantuan/rekening/:siswa_id/:istilah','getDay','Akun\x20tidak\x20ditemukan.','tanggal_lahir','/api/sync/siswa','DELETE\x20FROM\x20pengumuman\x20WHERE\x20id\x20=\x20?','renameSync','</loc>\x0a\x20\x20\x20\x20<lastmod>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20artikel_blog\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20image_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20author_id\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20author_name\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20category\x20VARCHAR(100)\x20DEFAULT\x20\x27Kegiatan\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20VARCHAR(20)\x20DEFAULT\x20\x27draft\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_tags\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20DATETIME\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20updated_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x20ON\x20UPDATE\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','DELETE\x20FROM\x20rombongan_belajar\x20WHERE\x20id\x20=\x20?','[Rombels]\x20Create\x20error:','penghasilan','#3B82F6','/api/siswa/mutasi-keluar','[DB]\x20Error\x20hashing\x20plaintext\x20passwords:','startsWith','contact_address','Tidak\x20punya\x20akses.','Jurnal\x20sedang\x20menunggu\x20validasi\x20guru.','Status\x20tidak\x20valid.','hero_title','jenjang_pendidikan','SELECT\x20id,\x20nipd,\x20nisn,\x20nik,\x20tahun_pelajaran,\x20semester,\x20rombel\x20FROM\x20siswa','/api/pengguna_web/:id/toggle-status','user-agent','spa','fb_page_id','/api/pegawai/:id','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20ae.*,\x20e.mata_pelajaran\x20as\x20nama_ekskul,\x20p.nama_lengkap\x20as\x20nama_pelatih\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20akademik_ekskul\x20ae\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20bidang_ekskul\x20e\x20ON\x20ae.ekskul_id\x20=\x20e.id\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20pegawai\x20p\x20ON\x20ae.pelatih_id\x20=\x20p.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20s.*,\x20COALESCE(f.drive,\x20f.server,\x20s.foto_profil)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20siswa\x20s\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20f\x20ON\x20s.id\x20=\x20f.data_id\x20AND\x20f.tipe_data\x20=\x20\x27siswa\x27\x20AND\x20f.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20s.id\x20=\x20?\x20OR\x20s.nisn\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20','/api/kalender_akademik','/api/literasi/materi/:id','compare','SELECT\x20id,\x20status,\x20earned_xp\x20FROM\x20literasi_jurnal\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20materi_id\x20=\x20?','literasi_jurnal','izin','Siswa\x20tidak\x20ditemukan.','headmaster_nip','query','Kursus\x20tidak\x20ditemukan.','/icons','Pendaftar\x20tidak\x20ditemukan.','photo','username','SELECT\x20*\x20FROM\x20quick_links\x20ORDER\x20BY\x20created_at\x20ASC','ALTER\x20TABLE\x20pengumuman\x20MODIFY\x20COLUMN\x20target\x20ENUM(\x27siswa\x27,\x20\x27pegawai\x27,\x20\x27semua\x27)\x20DEFAULT\x20\x27semua\x27','gallery_slide_interval','applicant_id','SELECT\x20name\x20FROM\x20rombongan_belajar\x20ORDER\x20BY\x20name','nomor_kip','0.0.0.0','Tidak\x20dapat\x20menghapus\x20Superadmin','\x20AND\x20','Only\x20students\x20can\x20submit\x20change\x20requests','debug_sso.txt','test','data_periodik','/api/artikel_blog/:id','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20UPDATE\x20artikel_blog\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SET\x20social_post_fb_done\x20=\x20IF(?\x20=\x201,\x201,\x20social_post_fb_done),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20social_post_ig_done\x20=\x20IF(?\x20=\x201,\x201,\x20social_post_ig_done)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20id\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','DELETE\x20FROM\x20artikel_blog\x20WHERE\x20id\x20=\x20?','SELECT\x20*\x20FROM\x20riwayat_masuk\x20ORDER\x20BY\x20created_at\x20DESC\x20LIMIT\x2050','/api/permohonan-pindah','update','/api/el/modules/:id','Tanpa\x20Keterangan','WHERE\x201=0','createPool','Failed\x20to\x20update\x20settings:','status_aktif','student_name','parent_name','length','User\x20not\x20found','nuptk','Siswa\x20not\x20found','arsip_siswa','\x20AND\x20s.rombel\x20IN\x20(','nama_sesuai_kip','/api/pegawai/search','/api/absensi','keterangan','getTimezoneOffset','parse','SELECT\x20*\x20FROM\x20el_quizzes\x20WHERE\x20id\x20=\x20?','NIK\x20atau\x20NISN\x20sudah\x20terdaftar\x20pada\x20pengguna\x20lain.','exports','upload_foto_selfie','students:toggle','\x0a\x20\x20</head>','ALTER\x20TABLE\x20pengumuman\x20ADD\x20COLUMN\x20publish_start\x20TIMESTAMP\x20NULL\x20AFTER\x20signature','\x20AND\x20is_active\x20=\x201','/api/pengguna_web/:id/toggle-elearning-admin','/api/literasi/jurnal/pending','nominal','readFileSync','UPDATE\x20pengguna_web\x20SET\x20password\x20=\x20?\x20WHERE\x20id\x20=\x20?','Pilih\x20setidaknya\x20satu\x20siswa.','/api/siswa/import','/api/arsip-siswa','absensi_bidang_study','SELECT\x20jenis_dokumen,\x20file_url\x20FROM\x20spmb_documents\x20WHERE\x20applicant_id\x20=\x20?','vite','Cache-Control','arrayBuffer','no_peserta_ujian_nasioal','tinggi_badan','/api/literasi/siswa/:id','hostname','\x0a\x20\x20\x20\x20SELECT\x20c.id\x20as\x20course_id,\x20c.name\x20as\x20course_name,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.id\x20as\x20student_id,\x20s.nama_lengkap\x20as\x20student_name,\x20s.nisn,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20q.title\x20as\x20quiz_title,\x20sub.score,\x20sub.max_score,\x20sub.percentage,\x20sub.submitted_at\x0a\x20\x20\x20\x20FROM\x20el_courses\x20c\x0a\x20\x20\x20\x20JOIN\x20el_submissions\x20sub\x20ON\x20sub.quiz_id\x20IN\x20(SELECT\x20id\x20FROM\x20el_quizzes\x20WHERE\x20course_id\x20=\x20c.id)\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20sub.student_id\x20=\x20s.id\x0a\x20\x20\x20\x20JOIN\x20el_quizzes\x20q\x20ON\x20sub.quiz_id\x20=\x20q.id\x0a\x20\x20\x20\x20WHERE\x20c.teacher_id\x20=\x20?\x0a\x20\x20','SELECT\x20id,\x20nama_lengkap\x20FROM\x20siswa\x20WHERE\x20nisn\x20=\x20?','params','/api/literasi/jurnal/history','\x20dilewati\x20-\x20tanpa\x20NIPD/NISN).','Aktivasi\x20berhasil','digest','\x20JOIN\x20rombongan_belajar\x20r\x20ON\x20jp.class_name\x20=\x20r.name','sekolah,\x20sdn,\x20tanah\x20tinggi\x201','name','xp_reward','status_sekolah','/api/literasi/jurnal/:id/cancel','WHERE\x20s.rombel\x20IN\x20(','pin','galeri','catch','\x0a\x20\x20\x20\x20SELECT\x20wu.*,\x20s.nama_lengkap\x20as\x20name,\x20r.name\x20as\x20role_name,\x20r.permissions\x0a\x20\x20\x20\x20FROM\x20pengguna_web\x20wu\x0a\x20\x20\x20\x20JOIN\x20pegawai\x20s\x20ON\x20wu.staff_id\x20=\x20s.pegawai_id\x0a\x20\x20\x20\x20JOIN\x20peran\x20r\x20ON\x20wu.role_id\x20=\x20r.id\x0a\x20\x20\x20\x20WHERE\x20wu.username\x20=\x20?\x20AND\x20wu.status_aktif\x20=\x20TRUE\x0a\x20\x20','SELECT\x20id,\x20nisn,\x20nipd,\x20nama_lengkap\x20FROM\x20siswa\x20WHERE\x20rombel\x20=\x20?\x20ORDER\x20BY\x20nama_lengkap\x20ASC','ig_account_id','VARCHAR(100)','&fb_exchange_token=','Hari\x20Libur:\x20','UPDATE\x20absensi_ekskul\x20SET\x20data_absen_siswa\x20=\x20?\x20WHERE\x20id\x20=\x20?','jarak_rumah','values','SELECT\x20*\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','Failed\x20to\x20upload\x20to\x20Google\x20Drive,\x20falling\x20back\x20to\x20local:','/api/el/login/teacher','karena','parent_phone','[SYSTEM]\x20Restart\x20error:','rollback','LONGTEXT','existsSync','/api/el/courses/:courseId/quizzes','SELECT\x20pegawai_id\x20as\x20id,\x20TRIM(CONCAT(IFNULL(CONCAT(NULLIF(gelar_depan,\x20\x27\x27),\x20\x27\x20\x27),\x20\x27\x27),\x20nama_lengkap,\x20IFNULL(CONCAT(\x27,\x20\x27,\x20NULLIF(gelar_belakang,\x20\x27\x27)),\x20\x27\x27)))\x20AS\x20nama_lengkap,\x20nip,\x20nik,\x20jabatan_ptk\x20FROM\x20pegawai\x20WHERE\x20nama_lengkap\x20LIKE\x20?\x20OR\x20nip\x20LIKE\x20?\x20OR\x20nik\x20LIKE\x20?\x20LIMIT\x2010','FULLTEXT\x20','flat','elearning_token','default','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20peran\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20name\x20VARCHAR(100)\x20UNIQUE\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20permissions\x20TEXT\x20NOT\x20NULL\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','atasnama_rek_pip','Error\x20updating\x20student:','TEXT','filter','ID\x20siswa\x20harus\x20diberikan.','berat_badan','UPDATE\x20el_quiz_questions\x20SET\x20question_text=?,\x20question_image_url=?,\x20option_a=?,\x20option_a_image=?,\x20option_b=?,\x20option_b_image=?,\x20option_c=?,\x20option_c_image=?,\x20option_d=?,\x20option_d_image=?,\x20correct_answer=?,\x20points=?,\x20order_index=?\x20WHERE\x20id=?','/api/pengguna_web','INSERT\x20INTO\x20spmb_applicants\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(nomor_pendaftaran,\x20nisn,\x20nik,\x20nama_lengkap,\x20tempat_lahir,\x20tanggal_lahir,\x20jenis_kelamin,\x20alamat_lengkap,\x20asal_sekolah,\x20nama_ayah,\x20nama_ibu,\x20pekerjaan_ayah,\x20pekerjaan_ibu,\x20no_telp_ortu,\x20email,\x20password)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','UPDATE\x20bidang_ekskul\x20SET\x20pegawai_id\x20=\x20?,\x20kategori\x20=\x20?,\x20mata_pelajaran\x20=\x20?,\x20kelas\x20=\x20?\x20WHERE\x20id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20jadwal_pelajaran\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20class_name\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20day_name\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20subject\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20start_time\x20TIME\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20end_time\x20TIME\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20teacher_name\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','=VALUES(','Jurnal\x20sudah\x20disetujui,\x20tidak\x20bisa\x20diubah.','jurusan','dengan','Only\x20students\x20can\x20submit\x20requests','INSERT\x20INTO\x20siswa\x20(','registered','SELECT\x20siswa_id,\x20earned_xp,\x20status\x20FROM\x20literasi_jurnal\x20WHERE\x20id\x20=\x20?','SELECT\x20nik,\x20nama_lengkap\x20FROM\x20pegawai\x20WHERE\x20pegawai_id\x20=\x20?','Honorer','/api/jadwal_pelajaran','nama','Instagram\x20posting\x20skipped:\x20No\x20image\x20URL\x20provided\x20(Instagram\x20requires\x20an\x20image).','/api/el/parent/students','social_post_fb_done','moda_transportasi','</lastmod>\x0a\x20\x20\x20\x20<changefreq>daily</changefreq>\x0a\x20\x20\x20\x20<priority>','Failed\x20to\x20update\x20profile\x20photo','statusText','/uploads/spmb/','/api/riwayat_masuk','SELECT\x20COUNT(*)\x20as\x20count\x20FROM\x20siswa','/api/spmb/me','LICENSE_KEY','SELECT\x20rombel\x20as\x20name,\x20COUNT(*)\x20as\x20value\x20FROM\x20siswa\x20','SELECT\x20id\x20FROM\x20data_orang_tua\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20tipe\x20=\x20\x27ayah\x27','forEach','tahun_lahir_ayah','SELECT\x20*\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?','Invalid\x20API\x20token','AKTE','/api/bantuan/siswa/me','untuk','ekskul-','pengaturan_sekolah','ALTER\x20TABLE\x20pengumuman\x20ADD\x20COLUMN\x20status\x20ENUM(\x27draft\x27,\x20\x27published\x27)\x20DEFAULT\x20\x27published\x27\x20AFTER\x20target','INDEX\x20','middlewares','telepon_rumah','production','INSERT\x20INTO\x20jenis_bantuan\x20(nama_bantuan,\x20istilah)\x20VALUES\x20(?,\x20?)','doesn\x27t\x20exist','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20IGNORE\x20INTO\x20el_student_pins\x20(student_id,\x20pin)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20id,\x20\x27123456\x27\x20FROM\x20siswa\x20WHERE\x20id\x20NOT\x20IN\x20(SELECT\x20student_id\x20FROM\x20el_student_pins\x20WHERE\x20student_id\x20IS\x20NOT\x20NULL)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x20WHERE\x20tingkat_kelas\x20=\x20?','INSERT\x20INTO\x20literasi_jurnal\x20(siswa_id,\x20materi_id,\x20status,\x20waktu_baca_aktual)\x20VALUES\x20(?,\x20?,\x20\x27menunggu_validasi\x27,\x20?)','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ab.*,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CONCAT_WS(\x27\x20\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20NULLIF(pg.gelar_depan,\x20\x27\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pg.nama_lengkap,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20NULLIF(pg.gelar_belakang,\x20\x27\x27)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ab.author_name\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x20AS\x20author_name\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20artikel_blog\x20ab\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pengguna_web\x20pw\x20ON\x20ab.author_id\x20=\x20pw.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20pg\x20ON\x20pw.staff_id\x20=\x20pg.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20ab.id\x20=\x20?\x0a\x20\x20\x20\x20','/blog','SELECT\x20school_name\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20jj.id,\x20jj.jawaban,\x20p.pertanyaan\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20literasi_jawaban_jurnal\x20jj\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20literasi_pertanyaan\x20p\x20ON\x20jj.pertanyaan_id\x20=\x20p.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20jj.jurnal_id\x20=\x20?\x0a\x20\x20\x20\x20','INSERT\x20INTO\x20file_storage\x20(data_id,\x20tipe_data,\x20kategori,\x20server,\x20drive)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20\x27siswa\x27,\x20\x27foto_profil\x27,\x20?,\x20?)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20server\x20=\x20VALUES(server),\x20drive\x20=\x20VALUES(drive)','\x20ORDER\x20BY\x20j.created_at\x20ASC','META_ACCESS_TOKEN\x20is\x20missing.\x20Cannot\x20post\x20to\x20social\x20media.','UNIQUE\x20KEY','/api/galeri/:id','Error\x20attaching\x20staff_id:','/api/activate','beginTransaction','mkdirSync','\x0a\x20\x20\x20\x20INSERT\x20IGNORE\x20INTO\x20el_student_pins\x20(student_id,\x20pin)\x0a\x20\x20\x20\x20SELECT\x20s.id,\x20\x27123456\x27\x20FROM\x20siswa\x20s\x20WHERE\x20s.nisn\x20IS\x20NOT\x20NULL\x20AND\x20s.nisn\x20!=\x20\x27\x27\x0a\x20\x20','match','Invalid\x20column','endsWith','\x0a\x20\x20\x20\x20<meta\x20property=\x22og:image\x22\x20content=\x22','permohonan_pindah','pasfoto','/api/pengajuan_ubah_data',')\x20VALUES\x20','HIT\x20API\x20REFERENSI:','UPDATE\x20laporan_bantuan\x20SET\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_pencairan=?,\x20tanggal_penarikan=?,\x20nominal=?,\x20tanda_tangan=?',',\x20tahun=?','Google\x20Drive\x20is\x20mocked.','PENDING','meta_app_id','/blog/','Database\x20initialization\x20failed\x20critically:','1808464zavlwt','/api/siswa','toLowerCase','max_score','[DB]\x20Starting\x20database\x20initialization...','Update\x20sedang\x20diproses.\x20Mohon\x20tunggu\x20sekitar\x2015-30\x20detik\x20kemudian\x20refresh\x20halaman.','/api','Portal\x20login\x20peserta\x20saat\x20ini\x20ditutup.','https://graph.facebook.com/v19.0/me/accounts?access_token=','Expires','SELECT\x20kurikulum_id,\x20nama_kurikulum\x20FROM\x20`ref.kurikulum`','/api/bidang_ekskul','User\x20tidak\x20ditemukan','SELECT\x20COALESCE(SUM(points),0)\x20as\x20total\x20FROM\x20el_points\x20WHERE\x20student_id\x20=\x20?','trim','draft','/api/el/login/student','/api/bantuan/pengajuan_all','/api/spmb/login','INSERT\x20INTO\x20data_orang_tua\x20(siswa_id,\x20tipe,\x20nama,\x20nik,\x20tahun_lahir,\x20pendidikan,\x20pekerjaan,\x20penghasilan,\x20kebutuhan_khusus)\x20VALUES\x20(?,\x20\x27ayah\x27,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','/api/absensi_ekskul/:id/dokumentasi','SELECT\x20nomor_rekening,\x20bank,\x20an_rekening,\x20upload_foto_buku_rekening\x20FROM\x20data_bank\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20istilah\x20=\x20?','SELECT\x20id,\x20nama_lengkap,\x20nisn,\x20nik,\x20nipd\x20FROM\x20siswa\x20WHERE\x20nisn\x20LIKE\x20?\x20OR\x20nik\x20LIKE\x20?\x20OR\x20nama_lengkap\x20LIKE\x20?\x20ORDER\x20BY\x20nama_lengkap\x20ASC\x20LIMIT\x2010','198212292025211010','\x20WHERE\x20tingkat_kelas\x20IN\x20(','Data\x20siswa\x20is\x20missing','temp_update','DELETE\x20FROM\x20akademik_ekskul\x20WHERE\x20id\x20=\x20?','https://graph.facebook.com/v19.0/',',\x20wali=','INSERT\x20INTO\x20data_afirmasi\x20(siswa_id,\x20nomor_kks,\x20penerima_kps_pkh,\x20nomor_kps,\x20penerima_kip,\x20nomor_kip,\x20nama_sesuai_kip,\x20bank_pip,\x20nomor_rek_pip,\x20atasnama_rek_pip,\x20layak_pip,\x20alasan_layak_pip)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','4459SKPRZO','UPDATE\x20spmb_applicants\x20SET\x20nisn=?,\x20nik=?,\x20nama_lengkap=?,\x20tempat_lahir=?,\x20tanggal_lahir=?,\x20jenis_kelamin=?,\x20alamat_lengkap=?,\x20asal_sekolah=?,\x20nama_ayah=?,\x20nama_ibu=?,\x20pekerjaan_ayah=?,\x20pekerjaan_ibu=?,\x20no_telp_ortu=?,\x20email=?,\x20status_pendaftaran=\x27PENDING\x27,\x20catatan_perbaikan=NULL','Anda\x20sudah\x20memiliki\x20pengajuan\x20yang\x20sedang\x20diproses.','\x20ORDER\x20BY\x20nama_kurikulum\x20ASC','post_to_fb','rombongan_belajar','tahun_pelajaran','host','jumlah_saudara_kandung','Link','Hadir','mac','UPDATE\x20pengguna_web\x20SET\x20is_elearning_admin\x20=\x20NOT\x20is_elearning_admin\x20WHERE\x20id\x20=\x20?',',\x20foto_akte=?','utf8','type','\x22\x20/>\x0a\x20\x20\x20\x20<meta\x20property=\x22og:description\x22\x20content=\x22','Libur\x20Akhir\x20Pekan','/api/system/version','standalone',')\x20VALUES\x20(','SELECT\x20COUNT(*)\x20as\x20total\x20FROM\x20el_courses\x20WHERE\x20status=\x27published\x27\x20AND\x20(rombel\x20=\x20?\x20OR\x20rombel\x20IS\x20NULL\x20OR\x20rombel\x20=\x20\x27\x27)','\x20WHERE\x20','UPDATE\x20spmb_applicants\x20SET\x20status_pendaftaran\x20=\x20?,\x20catatan_perbaikan\x20=\x20?\x20WHERE\x20id\x20=\x20?','Invalid\x20token','pegawai','akte','/assets','/api/bantuan/penerima/:id','\x20=\x20?','SPMB-EDIT-','UPDATE\x20siswa\x20SET\x20rombel\x20=\x20\x27PINDAH\x27,\x20status_aktif\x20=\x20?,\x20tanggal_mutasi\x20=\x20?\x20WHERE\x20id\x20=\x20?','staff:import','status_orang_tua','absensi_siswa','Direct\x20response\x20OK','jabatan_ptk','SELECT\x20*\x20FROM\x20peran\x20WHERE\x20name\x20IN\x20(\x27Admin\x27,\x20\x27Superadmin\x27,\x20\x27Guru\x27)','pendidikan_ayah','/api/absensi_bidang_study/report','INSERT\x20INTO\x20peran\x20(name,\x20permissions)\x20VALUES\x20(\x27Guru\x27,\x20\x27[\x22jadwal_pelajaran\x22,\x20\x22rombongan_belajar:view\x22,\x20\x22students:view\x22]\x27)','[UPDATE]\x20Endpoint\x20Error:','/api/pengajuan_ubah_data/:id/reject','staff_','/api/jadwal_pelajaran/public','content','SELECT\x20id\x20FROM\x20permohonan_pindah\x20WHERE\x20student_id\x20=\x20?\x20AND\x20status\x20=\x20\x27menunggu\x27','User\x20tidak\x20ditemukan\x20atau\x20password\x20salah','\x20diproses,\x20','/api/jadwal_pelajaran/:id','SELECT\x20id\x20FROM\x20data_kontak\x20WHERE\x20siswa_id\x20=\x20?','pm2\x20restart\x20','\x22\x20/>\x0a\x20\x20\x20\x20<meta\x20property=\x22og:site_name\x22\x20content=\x22','alamat_jalan','submitted_at','materi_id','SELECT\x20id,\x20nama_lengkap,\x20nisn\x20FROM\x20siswa\x20WHERE\x20rombel\x20=\x20?\x20ORDER\x20BY\x20nama_lengkap\x20ASC','INSERT\x20INTO\x20el_modules\x20(course_id,\x20title,\x20content,\x20video_url,\x20order_index)\x20VALUES\x20(?,?,?,?,?)','/api/pengguna_web/:id','Sekolah\x20Dasar\x20(SD)','INSERT\x20INTO\x20artikel_blog\x20(title,\x20content,\x20image_url,\x20author_id,\x20author_name,\x20category,\x20status,\x20seo_tags,\x20post_to_fb,\x20post_to_ig,\x20social_post_schedule,\x20created_at)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20NOW())','tahun_lahir_wali','/api/literasi/jurnal/:id','jurusan_prodi','/api/system/restart-pm2','meta_access_token','user','UPDATE\x20siswa_gamifikasi\x20SET\x20level\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?','method','pendidikan_ibu','sha256','\x20ORDER\x20BY\x20c.id\x20DESC','/api/el/courses','[LICENSE]\x20Versi\x20Free\x20berjalan.\x20Sisa\x20waktu:\x20','/api/sso/verify','hero_subtitle','admin','Import\x20Staff\x20Error:','kecamatan','SELECT\x20name\x20FROM\x20rombongan_belajar\x20WHERE\x20wali_kelas_id\x20=\x20?','Nama\x20bantuan\x20dan\x20istilah\x20harus\x20diisi','\x20WHERE\x20tingkat_kelas\x20=\x20\x27INVALID\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20s.*,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20TRIM(CONCAT(IFNULL(CONCAT(NULLIF(p.gelar_depan,\x20\x27\x27),\x20\x27\x20\x27),\x20\x27\x27),\x20p.nama_lengkap,\x20IFNULL(CONCAT(\x27,\x20\x27,\x20NULLIF(p.gelar_belakang,\x20\x27\x27)),\x20\x27\x27)))\x20AS\x20nama_lengkap,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20p.nip,\x20COALESCE(f.drive,\x20f.server)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20struktur_organisasi\x20s\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20p\x20ON\x20s.pegawai_id\x20COLLATE\x20utf8mb4_unicode_ci\x20=\x20p.pegawai_id\x20COLLATE\x20utf8mb4_unicode_ci\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20f\x20ON\x20p.pegawai_id\x20COLLATE\x20utf8mb4_unicode_ci\x20=\x20f.data_id\x20COLLATE\x20utf8mb4_unicode_ci\x20AND\x20f.tipe_data\x20=\x20\x27pegawai\x27\x20AND\x20f.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20s.urutan\x20ASC\x0a\x20\x20\x20\x20','message','Ukuran\x20file\x20terlalu\x20besar\x20(Maksimal\x201MB).','UPDATE\x20el_modules\x20SET\x20title=?,\x20content=?,\x20video_url=?,\x20order_index=?\x20WHERE\x20id=?','nomor_hp','lulus','Selamat\x20Datang\x20di\x20SDN\x20Tanah\x20Tinggi\x201','Failed\x20to\x20start\x20server:','Data\x20Pendaftar\x20SPMB','NIK,\x20Nama\x20Lengkap,\x20dan\x20Password\x20wajib\x20diisi.','IJAZAH','/api/struktur-organisasi','\x20GROUP\x20BY\x20agama','/api/student/profile/photo','SELECT\x20nama_lengkap\x20FROM\x20pegawai\x20WHERE\x20pegawai_id\x20=\x20?','buku_tabungan','/api/el/quizzes/:quizId/questions/:qid','lintang','penghasilan_ayah','URL\x20Gambar\x20harus\x20diisi','Tinggal\x20Kelas','status_pengajuan','/api/pegawai/import','studentId','/api/struktur-organisasi/public','students:update','/icons/icon-192x192.png','?fields=instagram_business_account&access_token=','[DB]\x20Ensuring\x20table\x20','ER_DUP_ENTRY','SHOW\x20COLUMNS\x20FROM\x20pengumuman','layak_pip','Error\x20fetching\x20rombel:','/uploads/ekskul/','Database\x20initialized\x20in\x20','wali','\x20AND\x20s.rombel\x20=\x20\x27INVALID\x27','Sistem\x20Informasi\x20Manajemen\x20Sekolah','nama_ibu','bantuan','event_date','/api/permohonan-pindah/:id/upload','akreditasi','SELECT\x20c.*,\x20s.nama_lengkap\x20as\x20teacher_name\x20FROM\x20el_courses\x20c\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20c.teacher_id\x20=\x20s.pegawai_id\x20WHERE\x20c.id\x20=\x20?','kompetensi','/api/hwid','client_name','useDriveForPendaftar','VARCHAR(20)\x20AFTER\x20id','jawaban','Server\x20sedang\x20direstart.\x20Mohon\x20tunggu\x205-10\x20detik.','Gagal\x20mengunduh\x20update','LIMIT_FILE_SIZE','nama_wali','/api/akademik_ekskul/:id','/api/pengajuan_ubah_data/:id/approve','/api/meta/exchange-token','\x20WHERE\x20is_active\x20=\x201','foto_ktp','LAPORAN_SELFIE','rahasia-dapoy-elearning','/uploads/','VARCHAR(20)\x20DEFAULT\x20\x27draft\x27','Syah\x20Muhamad\x20RIzky','google_drive_config','SELECT\x20*\x20FROM\x20spmb_applicants\x20ORDER\x20BY\x20tanggal_daftar\x20DESC',',\x20tingkat=','kode_pos','[Rombels]\x20Creating:\x20name=','VARCHAR(50)\x20DEFAULT\x20\x27#2563eb\x27','\x20GROUP\x20BY\x20jenis_kelamin','=.*','oleh','[Rombels]\x20Update\x20error\x20for\x20id=','Creating\x20database\x20pool\x20with\x20host:','setDate','ijazah','INSERT\x20INTO\x20spmb_documents\x20(applicant_id,\x20jenis_dokumen,\x20file_url)\x20VALUES\x20(?,\x20?,\x20?)','\x20Login','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20literasi_jawaban_jurnal\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jurnal_id\x20INT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pertanyaan_id\x20INT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jawaban\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(jurnal_id)\x20REFERENCES\x20literasi_jurnal(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(pertanyaan_id)\x20REFERENCES\x20literasi_pertanyaan(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','true','INSERT\x20INTO\x20penerima_laporan\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20(student_id,\x20penerimaan_id,\x20type,\x20tgl_pencairan,\x20tgl_penarikan,\x20selfie_url,\x20buku_tabungan_url,\x20surat_pernyataan_url)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','KTP','SELECT\x20total_xp\x20FROM\x20siswa_gamifikasi\x20WHERE\x20siswa_id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20dcr.*,\x20s.nama_lengkap,\x20s.nisn\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pengajuan_ubah_data\x20dcr\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20siswa\x20s\x20ON\x20dcr.student_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20dcr.created_at\x20DESC\x0a\x20\x20\x20\x20',',\x20foto_kk=?','stats_rooms','UPDATE\x20jadwal_pelajaran\x20SET\x20class_name\x20=\x20?,\x20day_name\x20=\x20?,\x20subject\x20=\x20?,\x20start_time\x20=\x20?,\x20end_time\x20=\x20?,\x20teacher_name\x20=\x20?\x20WHERE\x20id\x20=\x20?','nik_wali','GURU','total','student','INSERT\x20INTO\x20','SELECT\x20pw.username,\x20pw.staff_id,\x20r.name,\x20s.nik\x20FROM\x20pengguna_web\x20pw\x20LEFT\x20JOIN\x20peran\x20r\x20ON\x20pw.role_id\x20=\x20r.id\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20pw.staff_id\x20=\x20s.pegawai_id\x20WHERE\x20pw.id\x20=\x20?','/api/siswa/:id/toggle-status','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20literasi_pertanyaan\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20materi_id\x20INT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pertanyaan\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(materi_id)\x20REFERENCES\x20literasi_materi(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','dapoy-','Superadmin','/api/absensi_ekskul/:id/absen_siswa','get','2838504CDcXGO','SELECT\x20id,\x20password\x20FROM\x20pengguna_web','files','crypto','/api/struktur-organisasi/:id','success','staff_by_status','\x20ORDER\x20BY\x20jp.day_name,\x20jp.start_time','/uploads/permohonan/','cpSync','UPDATE\x20siswa\x20SET\x20','/api/bantuan/laporan_all','/api/tingkat_pendidikan','valid','/api/siswa/:id/bantuan','siswa','Akses\x20ditolak.','Portal\x20Login\x20','undefined','Instagram\x20Container\x20Error:','</priority>\x0a\x20\x20</url>','SHOW\x20COLUMNS\x20FROM\x20','File\x20upload\x20error','field','listen','No\x20token\x20provided','fieldname','post','SELECT\x20elearning_token\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','SELECT\x20agama\x20as\x20name,\x20COUNT(*)\x20as\x20value\x20FROM\x20siswa\x20','student_by_gender','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20l.*,\x20p.istilah\x20as\x20jenis_bantuan,\x20j.nama_bantuan,\x20p.tahun\x20as\x20penerima_tahun,\x20p.semester\x20as\x20penerima_semester\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20laporan_bantuan\x20l\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20penerima_bantuan\x20p\x20ON\x20l.bantuan_id\x20=\x20p.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20jenis_bantuan\x20j\x20ON\x20p.istilah\x20=\x20j.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20l.siswa_id\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20l.created_at\x20DESC\x0a\x20\x20\x20\x20\x20\x20\x20\x20','laporan_bantuan','/media','\x20ADD\x20COLUMN\x20`','count','Sekolahku','semester','jenis_kelamin','SELECT\x20tipe,\x20nama,\x20nik\x20FROM\x20data_orang_tua\x20WHERE\x20siswa_id\x20=\x20?','536970WCuqPo','INSERT\x20INTO\x20akademik_ekskul\x20(ekskul_id,\x20pelatih_id,\x20siswa_ids,\x20jadwal_latihan)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','SELECT\x20id,\x20nipd,\x20nik,\x20nama_lengkap\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?\x20OR\x20nisn\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20tanggal\x20DESC\x0a\x20\x20\x20\x20','spmb_config','Profile\x20photo\x20update\x20error:','://','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20pegawai\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pegawai_id\x20VARCHAR(36)\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_lengkap\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nuptk\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_kelamin\x20VARCHAR(20)\x20DEFAULT\x20\x27L\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tempat_lahir\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_lahir\x20DATE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nip\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status_kepegawaian\x20VARCHAR(50)\x20DEFAULT\x20\x27Honorer\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_ptk\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gelar_depan\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gelar_belakang\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenjang_pendidikan\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jurusan_prodi\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sertifikasi\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tmt_kerja\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tugas_tambahan\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mengajar\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jam_tugas_tambahan\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jjm\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20total_jjm\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kompetensi\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nik\x20VARCHAR(50)\x20UNIQUE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jabatan_ptk\x20VARCHAR(100)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','SELECT\x20*\x20FROM\x20permohonan_pindah\x20WHERE\x20student_id\x20=\x20?\x20ORDER\x20BY\x20created_at\x20DESC\x20LIMIT\x201','[UPDATE]\x20Background\x20process\x20error:','value','kepada','development','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20UPDATE\x20pengaturan_sekolah\x20SET\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hero_title\x20=\x20COALESCE(hero_title,\x20\x27Membangun\x20Masa\x20Depan\x20Cerdas\x20&\x20Berkarakter\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hero_subtitle\x20=\x20COALESCE(hero_subtitle,\x20\x27Kami\x20berkomitmen\x20menyelenggarakan\x20pendidikan\x20dasar\x20berkualitas\x20yang\x20berfokus\x20pada\x20potensi\x20unik\x20setiap\x20anak.\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hero_image_url\x20=\x20COALESCE(hero_image_url,\x20\x27https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop\x27)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20id\x20=\x201\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','uploads','provinsi','is_elearning_admin','INSERT\x20INTO\x20ekstrakurikuler\x20(name,\x20description,\x20image_url,\x20schedule_info)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','kebutuhan_khusus_ibu','answer','Invalid\x20SSO\x20Secret','seo_title','[elAuth]\x20path:','/api/siswa/search','\x20\x20MODE:\x20','image/png','setHeader','rmSync','npsn','INSERT\x20INTO\x20rombongan_belajar\x20(name,\x20wali_kelas_id,\x20tingkat)\x20VALUES\x20(?,\x20?,\x20?)','Internal\x20Server\x20Error','enum','path','Access\x20denied','Invalid\x20URL','SELECT\x20nomor_hp\x20FROM\x20data_kontak\x20WHERE\x20siswa_id\x20=\x20?','active','nonik','student_by_religion','stack','sebagai','\x20AND\x20m.tingkat_kelas\x20=\x20-1','UPDATE\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20p.*,\x20p.pegawai_id\x20as\x20id,\x20COALESCE(f.drive,\x20f.server)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pegawai\x20p\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20f\x20ON\x20p.pegawai_id\x20=\x20f.data_id\x20AND\x20f.tipe_data\x20=\x20\x27pegawai\x27\x20AND\x20f.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20p.nama_lengkap\x20ASC\x0a\x20\x20\x20\x20','isArray','Data\x20is\x20empty\x20or\x20invalid','SELECT\x20id,\x20pertanyaan\x20FROM\x20literasi_pertanyaan\x20WHERE\x20materi_id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20IGNORE\x20INTO\x20el_parent_pins\x20(student_id,\x20pin,\x20parent_name,\x20parent_phone)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20s.id,\x20\x27123456\x27,\x20COALESCE(s.nama_ayah,\x20\x27Orang\x20Tua\x27),\x20s.hp_orang_tua\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20siswa\x20s\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20s.hp_orang_tua\x20IS\x20NOT\x20NULL\x20AND\x20s.hp_orang_tua\x20!=\x20\x27\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20AND\x20s.id\x20NOT\x20IN\x20(SELECT\x20student_id\x20FROM\x20el_parent_pins\x20WHERE\x20student_id\x20IS\x20NOT\x20NULL)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','https://hub.dapoy.net','update.zip','Mewujudkan\x20generasi\x20cerdas,\x20berkarakter,\x20dan\x20berdaya\x20saing.','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20jenis_bantuan\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20istilah\x20VARCHAR(50)\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_bantuan\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','delete','full_name','/api/absensi/report','tanda_tangan','SELECT\x20*\x20FROM\x20el_modules\x20WHERE\x20course_id\x20=\x20?\x20ORDER\x20BY\x20order_index\x20ASC,\x20id\x20ASC','pendidikan_wali','Pragma','Failed\x20to\x20fetch\x20settings,\x20returning\x20defaults:','SELECT\x20nama_lengkap\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?','INSERT\x20INTO\x20pegawai\x20(pegawai_id,\x20nama_lengkap,\x20nuptk,\x20jenis_kelamin,\x20nip,\x20nik,\x20tempat_lahir,\x20tanggal_lahir,\x20status_kepegawaian,\x20jenis_ptk,\x20gelar_depan,\x20gelar_belakang,\x20jenjang_pendidikan,\x20jurusan_prodi,\x20sertifikasi,\x20tmt_kerja,\x20jabatan_ptk,\x20tugas_tambahan,\x20mengajar,\x20jam_tugas_tambahan,\x20jjm,\x20total_jjm,\x20siswa,\x20kompetensi)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_lengkap=VALUES(nama_lengkap),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nuptk=VALUES(nuptk),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_kelamin=VALUES(jenis_kelamin),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tempat_lahir=VALUES(tempat_lahir),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_lahir=VALUES(tanggal_lahir),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status_kepegawaian=VALUES(status_kepegawaian),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_ptk=VALUES(jenis_ptk),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gelar_depan=VALUES(gelar_depan),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gelar_belakang=VALUES(gelar_belakang),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenjang_pendidikan=VALUES(jenjang_pendidikan),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jurusan_prodi=VALUES(jurusan_prodi),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sertifikasi=VALUES(sertifikasi),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tmt_kerja=VALUES(tmt_kerja),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jabatan_ptk=VALUES(jabatan_ptk),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tugas_tambahan=VALUES(tugas_tambahan),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mengajar=VALUES(mengajar),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jam_tugas_tambahan=VALUES(jam_tugas_tambahan),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jjm=VALUES(jjm),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20total_jjm=VALUES(total_jjm),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa=VALUES(siswa),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kompetensi=VALUES(kompetensi)','adalah','tempat_lahir','SHOW\x20COLUMNS\x20FROM\x20pengguna_web',',\x20status_pengajuan=?','UPDATE\x20siswa\x20SET\x20status_aktif\x20=\x20NOT\x20status_aktif\x20WHERE\x20id\x20=\x20?','code','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20rombongan_belajar\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tingkat\x20VARCHAR(20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20name\x20VARCHAR(100)\x20UNIQUE\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali_kelas_id\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(wali_kelas_id)\x20REFERENCES\x20staff(id)\x20ON\x20DELETE\x20SET\x20NULL\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','/api/dashboard-stats','SELECT\x20materi_id,\x20status\x20FROM\x20literasi_jurnal\x20WHERE\x20siswa_id\x20=\x20?','#2563eb','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20artikel_blog\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20content\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20image_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20author_id\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20author_name\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20category\x20VARCHAR(100)\x20DEFAULT\x20\x27Kegiatan\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20VARCHAR(20)\x20DEFAULT\x20\x27draft\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20publish_start\x20TIMESTAMP\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20publish_end\x20TIMESTAMP\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_tags\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20DATETIME\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20updated_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x20ON\x20UPDATE\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(author_id)\x20REFERENCES\x20pengguna_web(id)\x20ON\x20DELETE\x20SET\x20NULL\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','Posting\x20to\x20Facebook...','tmt_kerja','VARCHAR(100)\x20DEFAULT\x20\x27Kurikulum\x20Merdeka\x27','Terjadi\x20kesalahan\x20server\x20saat\x20proses\x20naik\x20kelas.','__esModule','total_jjm','UPDATE\x20rombongan_belajar\x20SET\x20name\x20=\x20?,\x20wali_kelas_id\x20=\x20?,\x20tingkat\x20=\x20?\x20WHERE\x20id\x20=\x20?','SELECT\x20s.*,\x20esp.pin\x20FROM\x20siswa\x20s,\x20el_student_pins\x20esp\x20WHERE\x20s.id\x20=\x20esp.student_id\x20AND\x20s.nisn\x20=\x20?','https://github.com/syahmuhamadrizky/dapoy-schools-release/archive/refs/heads/main.zip','tingkat_kelas','alasan_layak_pip','[DB]\x20Failed\x20to\x20add\x20column\x20','/api/bantuan/laporan','SELECT\x20siswa_id,\x20materi_id,\x20status\x20FROM\x20literasi_jurnal\x20WHERE\x20id\x20=\x20?','DELETE\x20FROM\x20laporan_bantuan\x20WHERE\x20id\x20=\x20?','Photo\x20uploaded\x20successfully','sakit','SELECT\x20xp_reward\x20FROM\x20literasi_materi\x20WHERE\x20id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20p.*,\x20s.nama_lengkap\x20AS\x20siswa_nama,\x20s.nisn,\x20s.rombel\x20AS\x20nama_kelas,\x20s.nik\x20AS\x20siswa_nik,\x20j.nama_bantuan,\x20db.nomor_rekening,\x20db.bank\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pengajuan_rekening_bantuan\x20p\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20siswa\x20s\x20ON\x20p.siswa_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20jenis_bantuan\x20j\x20ON\x20p.istilah\x20=\x20j.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_bank\x20db\x20ON\x20p.siswa_id\x20=\x20db.siswa_id\x20AND\x20p.istilah\x20=\x20db.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','Staff\x20profile\x20not\x20found','entries','UPDATE\x20pengaturan_sekolah\x20SET\x20fb_page_id\x20=\x20?,\x20ig_account_id\x20=\x20?,\x20meta_access_token\x20=\x20?\x20WHERE\x20id\x20=\x201','icons','/academic','anak_keberapa','now','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pb.id\x20as\x20penerima_bantuan_id,\x20s.id\x20as\x20siswa_id,\x20s.nama_lengkap,\x20s.nisn,\x20s.rombel,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jb.nama_bantuan,\x20jb.istilah,\x20pb.tahun,\x20pb.semester,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.tempat_lahir,\x20s.tanggal_lahir,\x20s.nik,\x20dk.nomor_hp,\x20s.nomor_kk,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ibu.nama\x20as\x20nama_ibu,\x20ibu.nik\x20as\x20nik_ibu,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ayah.nama\x20as\x20nama_ayah,\x20ayah.nik\x20as\x20nik_ayah,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali.nama\x20as\x20nama_wali,\x20wali.nik\x20as\x20nik_wali,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20db.bank,\x20db.nomor_rekening,\x20db.an_rekening,\x20prb.penanggung_jawab_rekening\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20penerima_bantuan\x20pb\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20pb.siswa_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_kontak\x20dk\x20ON\x20s.id\x20=\x20dk.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20jenis_bantuan\x20jb\x20ON\x20pb.istilah\x20=\x20jb.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20ibu\x20ON\x20s.id\x20=\x20ibu.siswa_id\x20AND\x20ibu.tipe\x20=\x20\x27ibu\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20ayah\x20ON\x20s.id\x20=\x20ayah.siswa_id\x20AND\x20ayah.tipe\x20=\x20\x27ayah\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20wali\x20ON\x20s.id\x20=\x20wali.siswa_id\x20AND\x20wali.tipe\x20=\x20\x27wali\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_bank\x20db\x20ON\x20s.id\x20=\x20db.siswa_id\x20AND\x20db.istilah\x20=\x20pb.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pengajuan_rekening_bantuan\x20prb\x20ON\x20s.id\x20=\x20prb.siswa_id\x20AND\x20prb.istilah\x20=\x20pb.istilah\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','NIK\x20atau\x20NIP\x20sudah\x20terdaftar','Gagal:\x20','INSERT\x20INTO\x20el_submissions\x20(quiz_id,\x20student_id,\x20answers,\x20status)\x20VALUES\x20(?,?,?,?)','students:import','SELECT\x20staff_id\x20FROM\x20pengguna_web\x20WHERE\x20id\x20=\x20?','tempat_tinggal','headers','Failed\x20to\x20fetch\x20actual\x20student/staff\x20count:','SELECT\x20student_id,\x20status\x20FROM\x20absensi_bidang_study\x20WHERE\x20tanggal\x20BETWEEN\x20?\x20AND\x20?\x20AND\x20rombel\x20=\x20?\x20AND\x20mata_pelajaran\x20=\x20?','<title>','siswa_id','data_kontak','exit','/api/spmb/register','SPMB-','KEY\x20','Instagram\x20Post\x20Result:','tipe','0.8','atau','akan','/media_publish','Tidak','NIK\x20dan\x20Nama\x20Lengkap\x20wajib\x20diisi.','useDriveForPerubahanData','SELECT\x20COUNT(*)\x20as\x20count\x20FROM\x20rombongan_belajar\x20WHERE\x20wali_kelas_id\x20=\x20?','SELECT\x20id\x20FROM\x20peran\x20WHERE\x20name\x20=\x20\x27Superadmin\x27','Gagal\x20menyimpan\x20absensi\x20bidang\x20study','FREE_TRIAL_START=','INSERT\x20INTO\x20literasi_pertanyaan\x20(materi_id,\x20pertanyaan)\x20VALUES\x20(?,\x20?)','INSERT\x20INTO\x20penerima_bantuan\x20(siswa_id,\x20istilah,\x20tahun,\x20semester)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','VARCHAR(100)\x20DEFAULT\x20\x274\x27','INSERT\x20INTO\x20file_storage\x20(data_id,\x20tipe_data,\x20kategori,\x20server,\x20drive)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20\x27pegawai\x27,\x20\x27foto_profil\x27,\x20?,\x20NULL)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20server\x20=\x20VALUES(server),\x20drive\x20=\x20NULL','No\x20file\x20uploaded','spmb:read','multer','\x20GROUP\x20BY\x20rombel','INSERT\x20INTO\x20struktur_organisasi\x20(pegawai_id,\x20parent_id,\x20jabatan_struktur,\x20urutan)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','applicant','Error\x20in\x20naik-kelas:','create','REVISION','referensi','split','Negeri','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20literasi_materi\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20judul\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20deskripsi\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20cover_image\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20file_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tingkat_kelas\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20xp_reward\x20INT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_by\x20VARCHAR(36),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','INSERT\x20INTO\x20data_wali\x20(siswa_id,\x20nama,\x20nik,\x20tahun_lahir,\x20pendidikan,\x20pekerjaan,\x20penghasilan)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','/api/rombongan_belajar/:id','SELECT\x20a.student_id,\x20a.status,\x20COUNT(*)\x20as\x20count\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20absensi_siswa\x20a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20a.student_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20s.rombel\x20=\x20?\x20AND\x20a.tanggal\x20>=\x20?\x20AND\x20a.tanggal\x20<=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20GROUP\x20BY\x20a.student_id,\x20a.status','merupakan','INSERT\x20INTO\x20el_progress\x20(student_id,\x20module_id,\x20completed,\x20completed_at)\x20VALUES\x20(?,?,TRUE,NOW())\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20completed=TRUE,\x20completed_at=NOW()','VARCHAR(50)\x20NOT\x20NULL','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sg.siswa_id,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sg.total_xp,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sg.level,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.nama_lengkap,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.rombel,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(ROUND(SUM(j.waktu_baca_aktual)\x20/\x2060),\x200)\x20as\x20total_waktu_baca\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20siswa_gamifikasi\x20sg\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20sg.siswa_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20literasi_jurnal\x20j\x20ON\x20j.siswa_id\x20=\x20sg.siswa_id\x20AND\x20j.status\x20IN\x20(\x27disetujui\x27,\x20\x27menunggu_validasi\x27)\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20literasi_materi\x20m\x20ON\x20j.materi_id\x20=\x20m.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20s.rombel\x20LIKE\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20GROUP\x20BY\x20sg.siswa_id,\x20sg.total_xp,\x20sg.level,\x20s.nama_lengkap,\x20s.rombel\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20sg.total_xp\x20DESC,\x20total_waktu_baca\x20ASC\x0a\x20\x20\x20\x20\x20\x20\x20\x20LIMIT\x2010\x0a\x20\x20\x20\x20','total_xp','/api/bantuan/penerima','student_id','jp.class_name\x20=\x20?','Sitemap\x20is\x20disabled\x20by\x20administrator.','nomor_rek_pip','Siswa','hash','tahun','\x20check/creation\x20done.','/api/debug/courses','SELECT\x20id,\x20nama_lengkap,\x20nisn,\x20rombel\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?','role_name','foto_akte','istilah\x20is\x20required','Invalid\x20status','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20data_wali\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nik\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tahun_lahir\x20VARCHAR(4)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pendidikan\x20VARCHAR(30)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pekerjaan\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20penghasilan\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','UPDATE\x20literasi_jurnal\x20SET\x20status\x20=\x20\x27menunggu_validasi\x27,\x20earned_xp\x20=\x200,\x20dinilai_oleh\x20=\x20NULL,\x20waktu_baca_aktual\x20=\x20waktu_baca_aktual\x20+\x20?\x20WHERE\x20id\x20=\x20?','cpus','Berhasil\x20memutasi\x20keluar\x20','string','image_url','SELECT\x20*\x20FROM\x20penerima_laporan\x20WHERE\x20type\x20=\x20?\x20AND\x20penerimaan_id\x20=\x20?','UPDATE\x20quick_links\x20SET\x20title\x20=\x20?,\x20url\x20=\x20?,\x20target_audience\x20=\x20?,\x20icon_name\x20=\x20?\x20WHERE\x20id\x20=\x20?','SELECT\x20spmb_config\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','text','publish_start','/photos','INSERT\x20INTO\x20peran\x20(name,\x20permissions)\x20VALUES\x20(?,\x20?)','Token\x20missing','\x20ORDER\x20BY\x20created_at\x20DESC','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20INTO\x20pengaturan_sekolah\x20(id,\x20school_name,\x20npsn,\x20akreditasi,\x20hero_image_url,\x20hero_title,\x20hero_subtitle,\x20visi,\x20misi,\x20stats_students,\x20stats_teachers,\x20stats_rooms,\x20stats_extracurriculars,\x20provinsi,\x20kota,\x20kecamatan,\x20kelurahan,\x20contact_address,\x20contact_phone,\x20contact_email,\x20bentuk_pendidikan,\x20status_sekolah,\x20kurikulum,\x20gallery_slide_interval,\x20headmaster_name,\x20headmaster_nip,\x20schedule_date,\x20social_links)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(1,\x20\x27SDN\x20Tanah\x20Tinggi\x201\x27,\x20\x2720222830\x27,\x20\x27A\x27,\x20\x27https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop\x27,\x20\x27Membangun\x20Masa\x20Depan\x20Cerdas\x20&\x20Berkarakter\x27,\x20\x27Kami\x20berkomitmen\x20menyelenggarakan\x20pendidikan\x20dasar\x20berkualitas\x20yang\x20berfokus\x20pada\x20potensi\x20unik\x20setiap\x20anak.\x27,\x20\x27Terwujudnya\x20peserta\x20didik\x20yang\x20religius,\x20cerdas,\x20berkarakter,\x20dan\x20berwawasan\x20lingkungan.\x27,\x20\x27[\x22Pendidikan\x20berkualitas\x20&\x20inklusif\x20bagi\x20semua.\x22,\x20\x22Menanamkan\x20nilai\x20religius\x20&\x20budi\x20pekerti.\x22,\x20\x22Mengembangkan\x20potensi\x20akademik\x20&\x20bakat.\x22,\x20\x22Menciptakan\x20lingkungan\x20bersih\x20&\x20sehat.\x22]\x27,\x20\x27480+\x27,\x20\x2724\x27,\x20\x2718\x27,\x20\x2712\x27,\x20\x27Banten\x27,\x20\x27Kota\x20Tangerang\x27,\x20\x27Tangerang\x27,\x20\x27Tanah\x20Tinggi\x27,\x20\x27Jl.\x20Tanah\x20Tinggi\x20No.\x201,\x2015119\x27,\x20\x27(021)\x20555-1234\x27,\x20\x27info@sdntanahtinggi1.sch.id\x27,\x20\x27Sekolah\x20Dasar\x20(SD)\x27,\x20\x27Negeri\x27,\x20\x27Kurikulum\x20Merdeka\x27,\x202,\x20\x27Hj.\x20NENI\x20HERAWATI,\x20S.Pd\x27,\x20\x27197003181992032007\x27,\x20\x27Tangerang,\x20.........................\x2020...\x27,\x20\x27{}\x27)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','replace','5XGiTzr','agama','title','error','hero_image_url','foto_2\x20=\x20?,\x20','UPDATE\x20siswa_gamifikasi\x20SET\x20total_xp\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?','[LICENSE]\x20Valid.\x20Activated\x20for:\x20','BOOLEAN\x20DEFAULT\x200','\x20AND\x20m.tingkat_kelas\x20IN\x20(','/spmb','10mb','tingkat','/api/literasi/jurnal/:id/approve','data_orang_tua','gelar_belakang','Failed\x20to\x20read\x20package.json\x20version:','\x20WHERE\x20id=?','197003181992032007','body','\x20\x20<url>\x0a\x20\x20\x20\x20<loc>','SELECT\x20nama,\x20nik\x20FROM\x20data_wali\x20WHERE\x20siswa_id\x20=\x20?','SELECT\x20id,\x20nomor_pendaftaran,\x20nisn,\x20nik,\x20nama_lengkap,\x20status_pendaftaran,\x20catatan_perbaikan,\x20tanggal_daftar\x20FROM\x20spmb_applicants\x20WHERE\x20id\x20=\x20?','hp_orang_tua','index.html','NISN\x20dan\x20PIN\x20wajib\x20diisi.','application/xml','SELECT\x20id\x20FROM\x20','Gagal\x20memeriksa\x20update','INT\x20DEFAULT\x202','jenis_ptk','[DB]\x20Successfully\x20added\x20column\x20','/api/login','User\x20ini\x20tidak\x20memiliki\x20NIK\x20yang\x20valid','DELETE\x20FROM\x20penerima_bantuan\x20WHERE\x20id\x20=\x20?','Belum\x20Diatur','Role\x20Superadmin\x20tidak\x20dapat\x20dimodifikasi.','/api/pengaturan_sekolah','Berhasil\x20memproses\x20','bisa','Izin','VARCHAR(50)\x20DEFAULT\x20\x27Negeri\x27','time_limit_minutes','\x20siswa.','[DB]\x20Table\x20','SELECT\x20*\x20FROM\x20quick_links\x20WHERE\x20target_audience\x20IN\x20(\x27staff\x27,\x20\x27all\x27)\x20ORDER\x20BY\x20created_at\x20ASC','some','/api/admin/pegawai/:id/photo','/api/mata_pelajaran','SELECT\x20COUNT(*)\x20as\x20total\x20FROM\x20el_progress\x20WHERE\x20student_id\x20=\x20?\x20AND\x20completed\x20=\x20TRUE','target','email','SELECT\x20id\x20FROM\x20data_afirmasi\x20WHERE\x20siswa_id\x20=\x20?','DELETE\x20FROM\x20literasi_materi\x20WHERE\x20id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20wu.*,\x20s.nama_lengkap,\x20r.name\x20as\x20role_name\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pengguna_web\x20wu\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20wu.staff_id\x20=\x20s.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20peran\x20r\x20ON\x20wu.role_id\x20=\x20r.id\x0a\x20\x20\x20\x20','bujur','Akun\x20tidak\x20ditemukan.\x20Pastikan\x20NISN\x20Anda\x20benar.','module_id','Rombel\x20tidak\x20ditemukan','/api/pegawai','put','getMinutes','#f8fafc','/api/pengumuman/public','lingkar_kepala','passing_score','theme_color','UPDATE\x20pengajuan_ubah_data\x20SET\x20status\x20=\x20\x27approved\x27\x20WHERE\x20id\x20=\x20?','DELETE\x20FROM\x20pegawai\x20WHERE\x20pegawai_id\x20=\x20?','perubahan_data','Invalid\x20SSO\x20Token','send','upload_foto_transaksi','array','/api/galeri','diskStorage','/api/profile/photo','SELECT\x20*\x20FROM\x20el_quizzes\x20WHERE\x20course_id\x20=\x20?\x20AND\x20status\x20=\x20\x27published\x27\x20ORDER\x20BY\x20id\x20DESC','Data\x20tidak\x20lengkap','SELECT\x20*\x20FROM\x20el_quiz_questions\x20WHERE\x20quiz_id\x20=\x20?\x20ORDER\x20BY\x20order_index\x20ASC,\x20id\x20ASC','pekerjaan_wali','/api/rombongan_belajar','/api/el/courses/:id','App\x20ID\x20dan\x20App\x20Secret\x20belum\x20dikonfigurasi\x20di\x20pengaturan','filename','/api/pengguna_web/:id/reset-password','INSERT\x20INTO\x20kalender_akademik\x20(title,\x20event_date,\x20description,\x20category)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','UPDATE\x20artikel_blog\x20SET\x20title\x20=\x20?,\x20content\x20=\x20?,\x20image_url\x20=\x20?,\x20category\x20=\x20?,\x20status\x20=\x20?,\x20seo_tags\x20=\x20?,\x20post_to_fb\x20=\x20?,\x20post_to_ig\x20=\x20?,\x20social_post_schedule\x20=\x20?\x20WHERE\x20id\x20=\x20?','resolve','earned_xp','writeFileSync','INSERT\x20INTO\x20pengajuan_rekening_bantuan\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(siswa_id,\x20istilah,\x20nama_lengkap,\x20tempat_lahir,\x20tanggal_lahir,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_ayah,\x20nik_ayah,\x20nama_ibu,\x20nik_ibu,\x20status_orang_tua,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali,\x20nik_wali,\x20hubungan_wali,\x20nomor_hp,\x20nomor_kk,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20provinsi,\x20kota,\x20kecamatan,\x20kelurahan,\x20rt,\x20rw,\x20alamat_jalan,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20penanggung_jawab_rekening,\x20foto_ktp,\x20foto_kk,\x20foto_akte,\x20foto_surat_wali)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','\x20siswa\x20naik\x20kelas/lulus\x20dan\x20','Data\x20kosong\x20atau\x20tidak\x20valid.','SELECT\x20*\x20FROM\x20quick_links\x20WHERE\x20target_audience\x20IN\x20(\x27student\x27,\x20\x27all\x27)\x20ORDER\x20BY\x20created_at\x20ASC','INSERT\x20INTO\x20file_storage\x20(data_id,\x20tipe_data,\x20kategori,\x20server,\x20drive)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20\x27pegawai\x27,\x20\x27foto_profil\x27,\x20?,\x20?)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20server\x20=\x20VALUES(server),\x20drive\x20=\x20VALUES(drive)','Password\x20lama\x20salah.','DELETE\x20FROM\x20galeri\x20WHERE\x20id\x20=\x20?','INSERT\x20INTO\x20arsip_siswa\x20(siswa_id,\x20tahun_pelajaran,\x20semester,\x20rombel,\x20keterangan)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)','SELECT\x20event_date\x20FROM\x20kalender_akademik\x20WHERE\x20category\x20=\x20\x27Holiday\x27\x20AND\x20event_date\x20>=\x20?\x20AND\x20event_date\x20<=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20*\x20FROM\x20pengumuman\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20status\x20=\x20\x27published\x27\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20AND\x20(publish_start\x20IS\x20NULL\x20OR\x20publish_start\x20<=\x20CURRENT_TIMESTAMP)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20AND\x20(publish_end\x20IS\x20NULL\x20OR\x20publish_end\x20>=\x20CURRENT_TIMESTAMP)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20AND\x20(FIND_IN_SET(?,\x20target)\x20>\x200\x20OR\x20FIND_IN_SET(\x27public/semua\x27,\x20target)\x20>\x200)\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20created_at\x20DESC\x20LIMIT\x205\x0a\x20\x20\x20\x20','INSERT\x20INTO\x20file_storage\x20(data_id,\x20tipe_data,\x20kategori,\x20server,\x20drive)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20\x27siswa\x27,\x20\x27foto_profil\x27,\x20?,\x20NULL)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20server\x20=\x20VALUES(server),\x20drive\x20=\x20NULL','Alpa','Lengkap','ditolak','staff_id','/api/referensi/:column','score','DELETE\x20FROM\x20el_courses\x20WHERE\x20id\x20=\x20?','headmaster_photo','actual_student_count','nomor_kps','ialah','Islam','55YrvTQb','Parameter\x20tidak\x20lengkap','Post\x20tidak\x20ditemukan','tanggal_penarikan','Request\x20not\x20found','INSERT\x20INTO\x20data_orang_tua\x20(siswa_id,\x20tipe,\x20nama,\x20nik,\x20tahun_lahir,\x20pendidikan,\x20pekerjaan,\x20penghasilan,\x20kebutuhan_khusus)\x20VALUES\x20(?,\x20\x27ibu\x27,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','verify','[DB]\x20Migrated\x20','INSERT\x20INTO\x20literasi_jawaban_jurnal\x20(jurnal_id,\x20pertanyaan_id,\x20jawaban)\x20VALUES\x20(?,\x20?,\x20?)','sebab','bagi','dari','tk_paud','kelas','SELECT\x20name,\x20tingkat\x20FROM\x20rombongan_belajar\x20WHERE\x20wali_kelas_id\x20=\x20?','DELETE\x20FROM\x20jenis_bantuan\x20WHERE\x20istilah\x20=\x20?','tahun_lahir','Error\x20fetching\x20mapel:','exec','TIMESTAMP\x20NULL','Jurnal\x20belum\x20dinilai','no-cache,\x20no-store,\x20must-revalidate','x-forwarded-proto','SELECT\x20sitemap_enabled\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','headmaster_welcome_content','Kurikulum\x20Merdeka','Error\x20checking\x20Google\x20Drive\x20config:','/api/verify-license','/api/pengumuman/:id','UPDATE\x20el_submissions\x20SET\x20answers=?,\x20score=?,\x20max_score=?,\x20percentage=?,\x20status=\x27graded\x27\x20WHERE\x20id=?','Gagal\x20menghapus\x20rombel.\x20Mungkin\x20rombel\x20ini\x20masih\x20digunakan\x20di\x20tabel\x20lain.','/api/spmb/update','INSERT\x20INTO\x20riwayat_masuk\x20(type,\x20username,\x20ip_address,\x20user_agent,\x20status)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)','Nama\x20lengkap\x20harus\x20diisi','affectedRows','\x20SET\x20','INSERT\x20INTO\x20absensi_ekskul\x20(pembinaan_id,\x20tanggal_latihan,\x20materi_kegiatan,\x20status_pelatih,\x20data_absen_siswa)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)','./package.json','nama_lengkap','\x0a================================================\x0a','SELECT\x20p.username,\x20p.staff_id,\x20p.is_elearning_admin\x20FROM\x20pengguna_web\x20p\x20WHERE\x20p.status_aktif\x20=\x201','1.0.0','/api/el/quizzes/:quizId/questions','catatan_perbaikan','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20arsip_siswa\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tahun_pelajaran\x20VARCHAR(20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20semester\x20VARCHAR(10),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rombel\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20keterangan\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','Error\x20creating\x20student:','/api/peran/:id','SELECT\x20*\x20FROM\x20peran','toString','ALTER\x20TABLE\x20','INSERT\x20INTO\x20data_bank\x20(siswa_id,\x20istilah,\x20nomor_rekening,\x20bank,\x20an_rekening,\x20upload_foto_buku_rekening)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?)','/api/health','[DEBUG]\x20/api/debug/courses\x20hit!','BOOLEAN\x20DEFAULT\x20TRUE\x20AFTER\x20agama','access_token','/api/literasi/materi','</head>','end','\x20plaintext\x20passwords\x20to\x20bcrypt.','status_kepegawaian','commit','tahun_lahir_ibu','column','\x20LIKE\x20?','Gagal\x20mengecek\x20update','permohonan','12qmtzdR','Forbidden','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20galeri\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20description\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20image_url\x20TEXT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_tags\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','/api/pengumuman','stats_students','UPDATE\x20pengaturan_sekolah\x20SET\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20school_name\x20=\x20?,\x20npsn\x20=\x20?,\x20akreditasi\x20=\x20?,\x20logo_url\x20=\x20?,\x20hero_image_url\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20hero_title\x20=\x20?,\x20hero_subtitle\x20=\x20?,\x20visi\x20=\x20?,\x20misi\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20stats_students\x20=\x20?,\x20stats_teachers\x20=\x20?,\x20stats_rooms\x20=\x20?,\x20stats_extracurriculars\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20provinsi\x20=\x20?,\x20kota\x20=\x20?,\x20kecamatan\x20=\x20?,\x20kelurahan\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20contact_address\x20=\x20?,\x20contact_phone\x20=\x20?,\x20contact_email\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20bentuk_pendidikan\x20=\x20?,\x20status_sekolah\x20=\x20?,\x20kurikulum\x20=\x20?,\x20gallery_slide_interval\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20headmaster_name\x20=\x20?,\x20headmaster_nip\x20=\x20?,\x20schedule_date\x20=\x20?,\x20spmb_config\x20=\x20?,\x20social_links\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20seo_title\x20=\x20?,\x20seo_description\x20=\x20?,\x20seo_keywords\x20=\x20?,\x20sitemap_enabled\x20=\x20?,\x20sync_token\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20active_template\x20=\x20?,\x20theme_color\x20=\x20?,\x20hero_stats_value\x20=\x20?,\x20hero_stats_label\x20=\x20?,\x20hero_stats_desc\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20headmaster_photo\x20=\x20?,\x20headmaster_welcome_title\x20=\x20?,\x20headmaster_welcome_content\x20=\x20?,\x20headmaster_welcome_active\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20enable_struktur_organisasi\x20=\x20?,\x20enable_spmb\x20=\x20?,\x20enable_elearning\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20fb_page_id\x20=\x20?,\x20ig_account_id\x20=\x20?,\x20meta_access_token\x20=\x20?,\x20meta_app_id\x20=\x20?,\x20meta_app_secret\x20=\x20?,\x0a\x20\x20\x20\x20\x20\x20\x20\x20elearning_url\x20=\x20?,\x20elearning_token\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20WHERE\x20id\x20=\x201','insertId','2368KhFoFd','SELECT\x20tingkat\x20FROM\x20rombongan_belajar\x20WHERE\x20wali_kelas_id\x20=\x20?','SDN\x20Tanah\x20Tinggi\x201','documents','\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20istilah\x20=\x20?','PRIMARY\x20KEY','Lulus','\x20WHERE\x20id\x20=\x20?','[UPDATE]\x20Menyalin\x20file\x20baru\x20ke\x20direktori\x20utama...','Unhandled\x20error:','SELECT\x20pegawai_id,\x20nama_lengkap,\x20nik\x20FROM\x20pegawai\x20ORDER\x20BY\x20nama_lengkap','SELECT\x20*\x20FROM\x20arsip_siswa\x20ORDER\x20BY\x20created_at\x20DESC','setMinutes','riwayat_masuk','N/A','UPDATE\x20data_kontak\x20SET\x20telepon_rumah\x20=\x20?,\x20nomor_hp\x20=\x20?,\x20email\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?','staff_by_position','sekolah_asal','siswa_gamifikasi','meta_app_secret','SHOW\x20TABLES\x20LIKE\x20\x27el_student_pins\x27','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20absensi_bidang_study\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20student_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal\x20DATE\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mata_pelajaran\x20VARCHAR(100)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20guru_id\x20VARCHAR(36),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rombel\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20VARCHAR(50)\x20DEFAULT\x20\x27Hadir\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20keterangan\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20recorded_by\x20VARCHAR(36),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(student_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20UNIQUE\x20KEY\x20unique_subject_attendance\x20(student_id,\x20tanggal,\x20mata_pelajaran)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','extractAllTo','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20data_afirmasi\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_kks\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20penerima_kps_pkh\x20VARCHAR(10)\x20DEFAULT\x20\x27Tidak\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_kps\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20penerima_kip\x20VARCHAR(10)\x20DEFAULT\x20\x27Tidak\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_kip\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_sesuai_kip\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bank_pip\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_rek_pip\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20atasnama_rek_pip\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20layak_pip\x20VARCHAR(10)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20alasan_layak_pip\x20VARCHAR(200)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x20diperbarui.','Proxy\x20error:','Proxy\x20error','version','INSERT\x20INTO\x20spmb_documents\x20(applicant_id,\x20jenis_dokumen,\x20file_url)\x20VALUES\x20(?,\x20?,\x20?)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20file_url\x20=\x20VALUES(file_url)','artikel_blog','/api/absensi_ekskul','SELECT\x201','unknown','SELECT\x20COUNT(*)\x20as\x20count\x20FROM\x20pegawai','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20absensi_siswa\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20student_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal\x20DATE\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20VARCHAR(50)\x20DEFAULT\x20\x27Hadir\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20keterangan\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20recorded_by\x20VARCHAR(36),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(student_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20UNIQUE\x20KEY\x20unique_attendance\x20(student_id,\x20tanggal)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20','INSERT\x20INTO\x20data_kontak\x20(siswa_id,\x20telepon_rumah,\x20nomor_hp,\x20email)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','destination','Type','UPDATE\x20struktur_organisasi\x20SET\x20pegawai_id=?,\x20parent_id=?,\x20jabatan_struktur=?,\x20urutan=?\x20WHERE\x20id=?','nisn','Koneksi\x20ke\x20hub.dapoy.net\x20bermasalah','SELECT\x20id\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','courseId','/feed','jjm','json','[EL]\x20Student\x20login\x20failed:\x20NISN\x20not\x20found:','stats_extracurriculars','unlinkSync','/api/el/quizzes/:id','ayah','Failed\x20to\x20update\x20student:\x20','Tanggal\x20dan\x20rombel\x20harus\x20diisi','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20j.id\x20as\x20jurnal_id,\x20j.siswa_id,\x20j.materi_id,\x20j.status,\x20j.created_at,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.nama_lengkap,\x20s.rombel,\x20m.judul,\x20m.tingkat_kelas,\x20m.mata_pelajaran\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20literasi_jurnal\x20j\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20j.siswa_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20literasi_materi\x20m\x20ON\x20j.materi_id\x20=\x20m.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20j.status\x20=\x20\x27menunggu_validasi\x27\x0a\x20\x20\x20\x20','DELETE\x20FROM\x20bidang_ekskul\x20WHERE\x20id\x20=\x20?','\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20pp.*,\x20s.nama_lengkap,\x20s.nisn\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20permohonan_pindah\x20pp\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20pp.student_id\x20=\x20s.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20pp.created_at\x20DESC\x0a\x20\x20\x20\x20','email_orang_tua','SELECT\x20name\x20FROM\x20peran\x20WHERE\x20id\x20=\x20?','/api/literasi/materi/:id/toggle','/sw.js','all','[LICENSE]\x20Waktu\x20Versi\x20Free\x20(5\x20Hari)\x20telah\x20habis.\x20Harap\x20aktivasi\x20lisensi.','SELECT\x20password\x20FROM\x20pengguna_web\x20WHERE\x20id\x20=\x20?','SELECT\x20id\x20FROM\x20pengajuan_rekening_bantuan\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20istilah\x20=\x20?','dan','LAPORAN_TRANSAKSI','status','r.wali_kelas_id\x20=\x20?','SELECT\x20*\x20FROM\x20artikel_blog\x20WHERE\x20status\x20=\x20\x27published\x27\x20ORDER\x20BY\x20created_at\x20DESC','Hanya\x20siswa.','/api/peran','nik_ibu','social_post_ig_done','Error\x20serving\x20dynamic\x20index.html:','SELECT\x20*\x20FROM\x20spmb_documents','express','/api/admin/spmb_applicants/:id/status','System\x20Admin','Failed\x20to\x20alter\x20spmb_applicants\x20enum:','PASFOTO','password','author_id','UPDATE\x20el_quizzes\x20SET\x20title=?,\x20module_id=?,\x20passing_score=?,\x20time_limit_minutes=?,\x20status=?\x20WHERE\x20id=?','Import\x20Students\x20Error:','/api/quick_links','SELECT\x20*\x20FROM\x20kalender_akademik\x20ORDER\x20BY\x20event_date\x20ASC','has','ingin','nama_tk_paud','\x0a\x20\x20\x20\x20','FREE_TRIAL_START','No\x20files\x20uploaded','Indonesia','SELECT\x20nama_lengkap,\x20mengajar\x20FROM\x20pegawai\x20WHERE\x20nik\x20=\x20?','cwd','tanggal_pencairan','set','SELECT\x20id\x20FROM\x20pengguna_web\x20WHERE\x20role_id\x20=\x20?','jadwal_pelajaran','logo_url','unknown-cpu','Data\x20siswa\x20berhasil\x20disinkronisasi','https','207770NgvGWw','[UPDATE]\x20Mengekstrak\x20rilis...','/api/bantuan/laporan/:id','INSERT\x20INTO\x20pengguna_web\x20(staff_id,\x20role_id,\x20username,\x20password)\x20VALUES\x20(?,\x20?,\x20?,\x20?)','UPDATE\x20data_orang_tua\x20SET\x20nama\x20=\x20?,\x20nik\x20=\x20?,\x20tahun_lahir\x20=\x20?,\x20pendidikan\x20=\x20?,\x20pekerjaan\x20=\x20?,\x20penghasilan\x20=\x20?,\x20kebutuhan_khusus\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20tipe\x20=\x20\x27ibu\x27','sign','SELECT\x20id\x20FROM\x20data_orang_tua\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20tipe\x20=\x20\x27ibu\x27','template1','/api/permohonan-pindah/me','headmaster_name','waktu_tempuh','expired','no_seri_ijazah','pendidikan','toISOString','BOOLEAN\x20DEFAULT\x201','Lokasi\x20belum\x20diatur','active_template','reduce','foto_kk','WHERE\x20r.wali_kelas_id\x20=\x20?','\x20AND\x20c.id\x20=\x20?','[DB]\x20Failed\x20to\x20seed\x20pengaturan_sekolah:','admin123','originalname','SELECT\x20*\x20FROM\x20quick_links\x20WHERE\x20id\x20=\x20?','\x22\x20/>','Nama','ALTER\x20TABLE\x20pengumuman\x20MODIFY\x20COLUMN\x20target\x20VARCHAR(500)\x20DEFAULT\x20\x27semua\x27','file','pekerjaan_ayah','UPDATE\x20siswa_gamifikasi\x20SET\x20total_xp\x20=\x20?,\x20level\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?','keys','Sitemap:\x20Failed\x20to\x20fetch\x20blogs','unknown-platform','includes','/api/quick_links/:id','\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20','Dapoy\x20Schools','round','Error\x20during\x20initDb\x20call:','useDriveForPegawai','ibu','hex','no-cache','kebutuhan_khusus','INSERT\x20INTO\x20pengguna_web\x20(staff_id,\x20role_id,\x20username,\x20password,\x20is_elearning_admin)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)','Terjadi\x20kesalahan\x20server\x20saat\x20proses\x20mutasi\x20keluar.','SELECT\x20*\x20FROM\x20el_quizzes\x20WHERE\x20id\x20=\x20?\x20AND\x20status\x20=\x20\x27published\x27','\x20WHERE\x20jenjang_pendidikan_id\x20=\x20?','ktp','SELECT\x20id,\x20nisn,\x20nipd,\x20nik,\x20tahun_pelajaran,\x20semester,\x20rombel\x20FROM\x20siswa','SELECT\x20*\x20FROM\x20spmb_applicants\x20WHERE\x20nik\x20=\x20?\x20OR\x20nisn\x20=\x20?','ini','visi','mysql2/promise','DELETE\x20FROM\x20el_quiz_questions\x20WHERE\x20id\x20=\x20?','Naik\x20Kelas','\x20WHERE\x20siswa_id\x20IN\x20(','[UPDATE]\x20Membersihkan\x20file\x20sementara...','[ERROR]\x20Failed\x20to\x20fetch\x20dashboard\x20stats:','append','tahun_pelajaran\x20=\x20?','jam_tugas_tambahan','semua','profiles','SELECT\x20id,\x20tahun_pelajaran,\x20semester,\x20rombel\x20FROM\x20siswa\x20WHERE\x20id\x20IN\x20(','INSERT\x20INTO\x20riwayat_masuk\x20(user_id,\x20type,\x20username,\x20ip_address,\x20user_agent,\x20status)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?)','\x22\x20/>\x0a\x20\x20\x20\x20<meta\x20name=\x22twitter:card\x22\x20content=\x22summary_large_image\x22\x20/>','INSERT\x20INTO\x20laporan_bantuan\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(siswa_id,\x20bantuan_id,\x20tahun,\x20semester,\x20tanggal_pencairan,\x20tanggal_penarikan,\x20nominal,\x20upload_foto_selfie,\x20upload_foto_transaksi,\x20tanda_tangan)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','SELECT\x20school_name,\x20hero_title,\x20logo_url,\x20seo_title\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201','SELECT\x20r.name\x20FROM\x20pengguna_web\x20pw\x20LEFT\x20JOIN\x20peran\x20r\x20ON\x20pw.role_id\x20=\x20r.id\x20WHERE\x20pw.id\x20=\x20?','/api/siswa/:id','Hanya\x20guru.','DELETE\x20FROM\x20literasi_jawaban_jurnal\x20WHERE\x20jurnal_id\x20=\x20?','release','superadmin','data_afirmasi','DATETIME\x20NULL','FOREIGN\x20KEY','literasi_pertanyaan','SELECT\x20*\x20FROM\x20ekstrakurikuler','dalam','students:create','pengumuman','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20wu.*,\x20s.nama_lengkap,\x20s.jenis_ptk,\x20s.nip,\x20s.nuptk,\x20r.name\x20as\x20role_name,\x20r.permissions,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(f.drive,\x20f.server,\x20wu.foto_profil)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pengguna_web\x20wu\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20wu.staff_id\x20=\x20s.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20peran\x20r\x20ON\x20wu.role_id\x20=\x20r.id\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20f\x20ON\x20s.pegawai_id\x20=\x20f.data_id\x20AND\x20f.tipe_data\x20=\x20\x27pegawai\x27\x20AND\x20f.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20wu.username\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20','qid','https://raw.githubusercontent.com/syahmuhamadrizky/dapoy-schools-release/main/update_version.txt','randomUUID','INSERT\x20INTO\x20data_periodik\x20(siswa_id,\x20tinggi_badan,\x20berat_badan,\x20lingkar_kepala,\x20jarak_rumah,\x20waktu_tempuh,\x20anak_keberapa,\x20jumlah_saudara_kandung)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)','staff','SELECT\x20jp.*\x20FROM\x20jadwal_pelajaran\x20jp','UPDATE\x20akademik_ekskul\x20SET\x20ekskul_id\x20=\x20?,\x20pelatih_id\x20=\x20?,\x20siswa_ids\x20=\x20?,\x20jadwal_latihan\x20=\x20?\x20WHERE\x20id\x20=\x20?','SELECT\x20nama_lengkap,\x20mengajar\x20FROM\x20pegawai\x20WHERE\x20pegawai_id\x20=\x20?','harus','\x20AND\x20tingkat_kelas\x20=\x20\x27INVALID\x27','APPROVED','\x20AND\x20(c.rombel\x20=\x20?\x20OR\x20c.rombel\x20IS\x20NULL\x20OR\x20c.rombel\x20=\x20\x27\x27)','public,\x20max-age=31536000','question_id','ekstrakurikuler','Foto\x20Profil\x20Pegawai','disetujui','BOOLEAN\x20DEFAULT\x20TRUE\x20AFTER\x20password','actual_staff_count','pendaftar','nip','skhun','jenjang','DELETE\x20FROM\x20el_quizzes\x20WHERE\x20id\x20=\x20?'];a0_0xb3e6=function(){return _0x2131ec;};return a0_0xb3e6();}function generateSEOTags(_0x367591,_0x34e66e=''){const _0x1a6331=a0_0xfa5210,_0x305313=(_0x367591+'\x20'+_0x34e66e)[_0x1a6331(0x2de)](/<[^>]*>?/gm,'\x20')[_0x1a6331(0x12a)](),_0x1508f6=['di','ke',_0x1a6331(0x35c),'yang',_0x1a6331(0x3da),_0x1a6331(0x29c),_0x1a6331(0x436),_0x1a6331(0x573),'pada',_0x1a6331(0x453),_0x1a6331(0x61b),_0x1a6331(0xfd),_0x1a6331(0x24d),_0x1a6331(0x263),_0x1a6331(0x34f),_0x1a6331(0x2ba),_0x1a6331(0x1e1),_0x1a6331(0x230),_0x1a6331(0x35b),_0x1a6331(0x35a),_0x1a6331(0x600),_0x1a6331(0x306),'dapat',_0x1a6331(0x487),'telah',_0x1a6331(0x29d),_0x1a6331(0x3f1),_0x1a6331(0x45f)],_0x2ef20d=_0x305313['match'](/[a-z0-9]+/g)||[],_0x54e1e1=_0x2ef20d[_0x1a6331(0x610)](_0x3967f4=>_0x3967f4['length']>0x3&&!_0x1508f6['includes'](_0x3967f4)),_0x162f9e=[...new Set(_0x54e1e1)][_0x1a6331(0x571)](0x0,0xf);return _0x162f9e[_0x1a6331(0x4ca)](',\x20');}var uploadProfile=(0x0,import_multer[a0_0xfa5210(0x60b)])({'storage':import_multer[a0_0xfa5210(0x60b)][a0_0xfa5210(0x32a)]({'destination':(_0xc0134,_0x23b241,_0x259a28)=>_0x259a28(null,import_path['default']['join'](uploadDir,'profiles')),'filename':(_0x128732,_0x4ad9a1,_0x217003)=>_0x217003(null,'profile-'+Date[a0_0xfa5210(0x287)]()+import_path[a0_0xfa5210(0x60b)]['extname'](_0x4ad9a1[a0_0xfa5210(0x419)]))}),'limits':{'fileSize':0x1*0x400*0x400}}),uploadBantuan=(0x0,import_multer[a0_0xfa5210(0x60b)])({'storage':import_multer['default']['diskStorage']({'destination':(_0x5af246,_0xed0f7d,_0x221a47)=>_0x221a47(null,import_path[a0_0xfa5210(0x60b)][a0_0xfa5210(0x4ca)](uploadDir,'bantuan')),'filename':(_0x11e29e,_0x3f7ce3,_0x18a85e)=>_0x18a85e(null,'bantuan-'+Date[a0_0xfa5210(0x287)]()+'-'+Math[a0_0xfa5210(0x428)](Math['random']()*0x3b9aca00)+import_path[a0_0xfa5210(0x60b)][a0_0xfa5210(0x55b)](_0x3f7ce3[a0_0xfa5210(0x419)]))}),'limits':{'fileSize':0x5*0x400*0x400}}),uploadPermohonan=(0x0,import_multer[a0_0xfa5210(0x60b)])({'storage':import_multer[a0_0xfa5210(0x60b)][a0_0xfa5210(0x32a)]({'destination':(_0x2a05fc,_0x486bb6,_0x5e5369)=>{const _0x36afcc=a0_0xfa5210,_0x27e343=import_path['default'][_0x36afcc(0x4ca)](uploadDir,_0x36afcc(0x392));if(!import_fs[_0x36afcc(0x60b)][_0x36afcc(0x605)](_0x27e343))import_fs[_0x36afcc(0x60b)][_0x36afcc(0x116)](_0x27e343,{'recursive':!![]});_0x5e5369(null,_0x27e343);},'filename':(_0x16ce69,_0x8ad764,_0x3b31a7)=>_0x3b31a7(null,'permohonan-'+Date[a0_0xfa5210(0x287)]()+'-'+Math[a0_0xfa5210(0x428)](Math['random']()*0x3b9aca00)+import_path[a0_0xfa5210(0x60b)][a0_0xfa5210(0x55b)](_0x8ad764[a0_0xfa5210(0x419)]))}),'limits':{'fileSize':0x5*0x400*0x400}}),uploadEkskul=(0x0,import_multer['default'])({'storage':import_multer[a0_0xfa5210(0x60b)][a0_0xfa5210(0x32a)]({'destination':(_0x2c6a0f,_0x5df1db,_0x51c234)=>_0x51c234(null,import_path['default'][a0_0xfa5210(0x4ca)](uploadDir,'ekskul')),'filename':(_0x5799fa,_0x462587,_0x43d022)=>_0x43d022(null,a0_0xfa5210(0xfe)+Date[a0_0xfa5210(0x287)]()+'-'+Math[a0_0xfa5210(0x428)](Math[a0_0xfa5210(0x4a0)]()*0x3b9aca00)+import_path[a0_0xfa5210(0x60b)][a0_0xfa5210(0x55b)](_0x462587[a0_0xfa5210(0x419)]))}),'limits':{'fileSize':0x1*0x400*0x400}});app[a0_0xfa5210(0x477)](import_express[a0_0xfa5210(0x60b)]['json']({'limit':'50mb'})),app['use']((_0x5e8c03,_0xe544ca,_0x3936f7)=>{const _0xb038c8=a0_0xfa5210;console['log']('['+new Date()['toISOString']()+']\x20'+_0x5e8c03[_0xb038c8(0x18b)]+'\x20'+_0x5e8c03[_0xb038c8(0x476)]),_0x3936f7();}),app['get'](a0_0xfa5210(0x531),async(_0xc0bccb,_0xe1f83f)=>{const _0x954550=a0_0xfa5210,_0x89af1b=_0xc0bccb[_0x954550(0x59d)][_0x954550(0x476)];if(!_0x89af1b)return _0xe1f83f[_0x954550(0x3dc)](0x190)[_0x954550(0x326)]('No\x20URL\x20provided');if(!_0x89af1b['includes'](_0x954550(0x515)))return _0xe1f83f['status'](0x190)['send'](_0x954550(0x247));try{const _0x10259c=await fetch(_0x89af1b);if(!_0x10259c['ok'])return _0xe1f83f[_0x954550(0x3dc)](_0x10259c[_0x954550(0x3dc)])[_0x954550(0x326)](_0x10259c[_0x954550(0x62a)]);const _0x32f67e=_0x10259c['headers'][_0x954550(0x1fc)](_0x954550(0x519));if(_0x32f67e)_0xe1f83f[_0x954550(0x3fa)]('Content-Type',_0x32f67e);_0xe1f83f[_0x954550(0x3fa)](_0x954550(0x5dd),_0x954550(0x463));const _0x2cd8a8=await _0x10259c[_0x954550(0x5de)]();_0xe1f83f[_0x954550(0x326)](Buffer['from'](_0x2cd8a8));}catch(_0x28bbd5){console[_0x954550(0x2e2)](_0x954550(0x3b3),_0x28bbd5),_0xe1f83f[_0x954550(0x3dc)](0x1f4)[_0x954550(0x326)](_0x954550(0x3b4));}}),app[a0_0xfa5210(0x477)]('/uploads',import_express[a0_0xfa5210(0x60b)]['static'](uploadDir)),app['get'](a0_0xfa5210(0x384),(_0x551641,_0xef122c)=>{const _0x2c580b=a0_0xfa5210;_0xef122c[_0x2c580b(0x3c7)]({'status':'ok','timestamp':new Date()['toISOString']()});}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x1c6),(_0x29af08,_0x344718)=>{const _0x14a7d5=a0_0xfa5210;_0x344718[_0x14a7d5(0x3c7)]({'hwid':getHwid()});}),app[a0_0xfa5210(0x1fc)]('/api/license-status',async(_0x27cd61,_0x2072f8)=>{const _0x26ea30=a0_0xfa5210;let _0x15f8e9='trial',_0x591bf9=null;if(process.env.LICENSE_KEY)_0x15f8e9=_0x26ea30(0x61e);else{!process.env.FREE_TRIAL_START&&await checkFreeTrial();const _0x2f7226=process.env.FREE_TRIAL_START;if(_0x2f7226){const _0x4b6262=parseInt(_0x2f7226),_0x1d79c4=0x5*0x18*0x3c*0x3c*0x3e8;_0x591bf9=_0x4b6262+_0x1d79c4,Date[_0x26ea30(0x287)]()>_0x591bf9&&(_0x15f8e9=_0x26ea30(0x40c));}}_0x2072f8[_0x26ea30(0x3c7)]({'status':_0x15f8e9,'trialEndsAt':_0x591bf9,'hwid':getHwid(),'isLicenseValid':isLicenseValid,'isExpired':isExpired});}),app['post'](a0_0xfa5210(0x57b),async(_0x2b3f2a,_0x2b7f89)=>{const _0x563373=a0_0xfa5210;try{const {token:_0x243b2c,data:_0x55786a}=_0x2b3f2a[_0x563373(0x2f2)];if(!_0x243b2c)return _0x2b7f89['status'](0x191)['json']({'success':![],'message':_0x563373(0x2db)});const [_0x3f7042]=await pool[_0x563373(0x59d)](_0x563373(0x540));if(!_0x3f7042||_0x3f7042[_0x563373(0x5be)]===0x0||_0x3f7042[0x0]['sync_token']!==_0x243b2c||!_0x243b2c[_0x563373(0x586)](_0x563373(0x1f9)))return _0x2b7f89[_0x563373(0x3dc)](0x193)['json']({'success':![],'message':_0x563373(0xfa)});if(!_0x55786a||!_0x55786a['siswa'])return _0x2b7f89[_0x563373(0x3dc)](0x190)[_0x563373(0x3c7)]({'success':![],'message':_0x563373(0x141)});const [_0x7a8298]=await pool[_0x563373(0x59d)](_0x563373(0x434)),_0x36680a=new Map(),_0x97a258=new Map(),_0xf438da=new Map(),_0x759ef0=new Map();for(const _0x35a22c of _0x7a8298){_0x36680a['set'](_0x35a22c['id'],_0x35a22c);if(_0x35a22c[_0x563373(0x3c1)]&&_0x35a22c[_0x563373(0x3c1)][_0x563373(0x136)]()&&_0x35a22c['nisn'][_0x563373(0x136)]()!=='-')_0x97a258['set'](_0x35a22c[_0x563373(0x3c1)][_0x563373(0x136)](),_0x35a22c['id']);if(_0x35a22c[_0x563373(0x52b)]&&_0x35a22c['nipd'][_0x563373(0x136)]()&&_0x35a22c['nipd'][_0x563373(0x136)]()!=='-')_0xf438da[_0x563373(0x3fa)](_0x35a22c[_0x563373(0x52b)][_0x563373(0x136)](),_0x35a22c['id']);if(_0x35a22c[_0x563373(0x4e7)]&&_0x35a22c[_0x563373(0x4e7)][_0x563373(0x136)]()&&_0x35a22c[_0x563373(0x4e7)][_0x563373(0x136)]()!=='-')_0x759ef0[_0x563373(0x3fa)](_0x35a22c[_0x563373(0x4e7)][_0x563373(0x136)](),_0x35a22c['id']);}const _0x537b3f=new Map(),_0xc13008=[];for(const _0x4df81a of _0x55786a[_0x563373(0x20c)]){let _0x38e9a1=null;if(_0x36680a['has'](_0x4df81a['id']))_0x38e9a1=_0x36680a[_0x563373(0x1fc)](_0x4df81a['id']);else{if(_0x4df81a[_0x563373(0x3c1)]&&_0x97a258[_0x563373(0x3f0)](_0x4df81a[_0x563373(0x3c1)][_0x563373(0x136)]()))_0x38e9a1=_0x36680a[_0x563373(0x1fc)](_0x97a258[_0x563373(0x1fc)](_0x4df81a['nisn'][_0x563373(0x136)]()));else{if(_0x4df81a[_0x563373(0x52b)]&&_0xf438da[_0x563373(0x3f0)](_0x4df81a['nipd'][_0x563373(0x136)]()))_0x38e9a1=_0x36680a[_0x563373(0x1fc)](_0xf438da['get'](_0x4df81a[_0x563373(0x52b)][_0x563373(0x136)]()));else _0x4df81a[_0x563373(0x4e7)]&&_0x759ef0[_0x563373(0x3f0)](_0x4df81a[_0x563373(0x4e7)][_0x563373(0x136)]())&&(_0x38e9a1=_0x36680a['get'](_0x759ef0[_0x563373(0x1fc)](_0x4df81a[_0x563373(0x4e7)]['trim']())));}}if(_0x38e9a1){_0x38e9a1['id']!==_0x4df81a['id']&&(_0x537b3f[_0x563373(0x3fa)](_0x4df81a['id'],_0x38e9a1['id']),_0x4df81a['id']=_0x38e9a1['id']);const _0x4cc532=_0x4df81a[_0x563373(0x14d)]&&_0x38e9a1['tahun_pelajaran']!==_0x4df81a[_0x563373(0x14d)],_0x9d4708=_0x4df81a[_0x563373(0x222)]&&_0x38e9a1[_0x563373(0x222)]!==_0x4df81a[_0x563373(0x222)];(_0x4cc532||_0x9d4708)&&_0xc13008[_0x563373(0x4a8)]([_0x4df81a['id'],_0x38e9a1[_0x563373(0x14d)],_0x38e9a1[_0x563373(0x222)],_0x38e9a1[_0x563373(0x53b)]]);}}if(_0xc13008['length']>0x0){const _0x3e386c=0x64;for(let _0xcfb22c=0x0;_0xcfb22c<_0xc13008[_0x563373(0x5be)];_0xcfb22c+=_0x3e386c){const _0x37772c=_0xc13008[_0x563373(0x571)](_0xcfb22c,_0xcfb22c+_0x3e386c);if(_0x37772c['length']===0x0)continue;const _0x388c60=_0x37772c[_0x563373(0x47f)](()=>'(?,\x20?,\x20?,\x20?)')['join'](',');await pool[_0x563373(0x59d)]('INSERT\x20INTO\x20arsip_siswa\x20(siswa_id,\x20tahun_pelajaran,\x20semester,\x20rombel)\x20VALUES\x20'+_0x388c60,_0x37772c[_0x563373(0x609)]());}}const _0x15fa94=_0x46f474=>{const _0x4ed9eb=_0x563373;if(_0x46f474)for(const _0x1bd7d4 of _0x46f474){_0x537b3f[_0x4ed9eb(0x3f0)](_0x1bd7d4[_0x4ed9eb(0x293)])&&(_0x1bd7d4['siswa_id']=_0x537b3f[_0x4ed9eb(0x1fc)](_0x1bd7d4[_0x4ed9eb(0x293)]));}};_0x15fa94(_0x55786a['data_orang_tua']),_0x15fa94(_0x55786a['data_wali']),_0x15fa94(_0x55786a[_0x563373(0x294)]),_0x15fa94(_0x55786a[_0x563373(0x5af)]),_0x15fa94(_0x55786a[_0x563373(0x44e)]);const _0x488f1c=0x64,_0x3fe731=_0x55786a[_0x563373(0x20c)]?_0x55786a[_0x563373(0x20c)]['map'](_0x565a97=>_0x565a97['id']):[],_0x3bb22b=async(_0x34ab54,_0xe79d72)=>{const _0x3d46cc=_0x563373;if(!_0xe79d72||_0xe79d72[_0x3d46cc(0x5be)]===0x0)return;for(let _0x4118f5=0x0;_0x4118f5<_0xe79d72[_0x3d46cc(0x5be)];_0x4118f5+=_0x488f1c){const _0x4396e5=_0xe79d72[_0x3d46cc(0x571)](_0x4118f5,_0x4118f5+_0x488f1c);if(_0x4396e5[_0x3d46cc(0x5be)]===0x0)continue;const _0x116e95=_0x4396e5[_0x3d46cc(0x47f)](()=>'?')[_0x3d46cc(0x4ca)](',');await pool['query'](_0x3d46cc(0x539)+_0x34ab54+_0x3d46cc(0x43b)+_0x116e95+')',_0x4396e5);}};_0x3fe731[_0x563373(0x5be)]>0x0&&(await _0x3bb22b(_0x563373(0x2ed),_0x3fe731),await _0x3bb22b(_0x563373(0x572),_0x3fe731),await _0x3bb22b(_0x563373(0x294),_0x3fe731),await _0x3bb22b(_0x563373(0x5af),_0x3fe731),await _0x3bb22b(_0x563373(0x44e),_0x3fe731));const _0x1881ae=async(_0x2f3d28,_0x24fd7a)=>{const _0x27f417=_0x563373;if(!_0x24fd7a||_0x24fd7a[_0x27f417(0x5be)]===0x0)return;for(let _0x16b5fb=0x0;_0x16b5fb<_0x24fd7a[_0x27f417(0x5be)];_0x16b5fb+=_0x488f1c){const _0x89ce28=_0x24fd7a['slice'](_0x16b5fb,_0x16b5fb+_0x488f1c);if(_0x89ce28[_0x27f417(0x5be)]===0x0)continue;const _0x1a6417=Object['keys'](_0x89ce28[0x0]),_0x130d9e=_0x89ce28[_0x27f417(0x47f)](_0x14cd42=>_0x1a6417[_0x27f417(0x47f)](_0x1eda86=>_0x14cd42[_0x1eda86]===void 0x0?null:_0x14cd42[_0x1eda86])),_0x4904f9=_0x1a6417[_0x27f417(0x47f)](()=>'?')[_0x27f417(0x4ca)](','),_0x1cd270=_0x1a6417[_0x27f417(0x47f)](_0x3ac37a=>_0x3ac37a+_0x27f417(0x618)+_0x3ac37a+')')['join'](',\x20'),_0x22e5b4='INSERT\x20INTO\x20'+_0x2f3d28+'\x20('+_0x1a6417['join'](',')+_0x27f417(0x11f)+_0x89ce28[_0x27f417(0x47f)](()=>'('+_0x4904f9+')')[_0x27f417(0x4ca)](',')+_0x27f417(0x426)+_0x1cd270;await pool[_0x27f417(0x59d)](_0x22e5b4,_0x130d9e[_0x27f417(0x609)]());}},_0x1e58d0=async(_0x2c356f,_0x33f8d5)=>{const _0x5f40a5=_0x563373;if(!_0x33f8d5||_0x33f8d5['length']===0x0)return;for(let _0x73967f=0x0;_0x73967f<_0x33f8d5[_0x5f40a5(0x5be)];_0x73967f+=_0x488f1c){const _0x530c25=_0x33f8d5[_0x5f40a5(0x571)](_0x73967f,_0x73967f+_0x488f1c);if(_0x530c25[_0x5f40a5(0x5be)]===0x0)continue;const _0x1aa6f2=Object['keys'](_0x530c25[0x0]),_0x37c725=_0x530c25['map'](_0x567486=>_0x1aa6f2[_0x5f40a5(0x47f)](_0x33cb1c=>_0x567486[_0x33cb1c]===void 0x0?null:_0x567486[_0x33cb1c])),_0x4efd08=_0x1aa6f2[_0x5f40a5(0x47f)](()=>'?')[_0x5f40a5(0x4ca)](','),_0x107b5d=_0x5f40a5(0x1f5)+_0x2c356f+'\x20('+_0x1aa6f2[_0x5f40a5(0x4ca)](',')+_0x5f40a5(0x11f)+_0x530c25[_0x5f40a5(0x47f)](()=>'('+_0x4efd08+')')[_0x5f40a5(0x4ca)](',');await pool[_0x5f40a5(0x59d)](_0x107b5d,_0x37c725[_0x5f40a5(0x609)]());}};await _0x1881ae(_0x563373(0x20c),_0x55786a['siswa']),await _0x1e58d0('data_orang_tua',_0x55786a[_0x563373(0x2ed)]),await _0x1e58d0(_0x563373(0x572),_0x55786a[_0x563373(0x572)]),await _0x1e58d0('data_kontak',_0x55786a[_0x563373(0x294)]),await _0x1e58d0(_0x563373(0x5af),_0x55786a[_0x563373(0x5af)]),await _0x1e58d0('data_afirmasi',_0x55786a[_0x563373(0x44e)]),_0x2b7f89[_0x563373(0x3c7)]({'success':!![],'message':_0x563373(0x3ff),'count':_0x55786a[_0x563373(0x20c)][_0x563373(0x5be)]});}catch(_0x53187f){console[_0x563373(0x2e2)]('Error\x20syncing\x20data:',_0x53187f),_0x2b7f89['status'](0x1f4)['json']({'success':![],'message':_0x53187f[_0x563373(0x19a)]});}}),app['post'](a0_0xfa5210(0x114),async(_0x18af68,_0x471e5d)=>{const _0x25620b=a0_0xfa5210;try{const {license_key:_0x4d8127}=_0x18af68['body'],_0x457b08=getHwid(),_0x1ff4f7=_0x25620b(0x255),_0x44dd75=await fetch(_0x1ff4f7+'/api/verify-license',{'method':_0x25620b(0x49f),'headers':{'Content-Type':'application/json'},'body':JSON[_0x25620b(0x570)]({'license_key':_0x4d8127,'hardware_id':_0x457b08,'app_name':'Dapoy\x20Schools'})}),_0x54bbc8=await _0x44dd75['json']();if(_0x54bbc8[_0x25620b(0x20a)]){updateEnv(_0x25620b(0xf4),_0x4d8127),isLicenseValid=!![],isExpired=![];if(licenseTimer)clearInterval(licenseTimer);return licenseTimer=setInterval(verifyLicenseOnBoot,0x3c*0x3c*0x3e8),_0x471e5d[_0x25620b(0x3c7)]({'success':!![],'message':_0x54bbc8[_0x25620b(0x19a)]||_0x25620b(0x5e8)});}else return _0x471e5d[_0x25620b(0x3dc)](0x190)[_0x25620b(0x3c7)]({'success':![],'message':_0x54bbc8[_0x25620b(0x2e2)]||'License\x20Key\x20tidak\x20valid'});}catch(_0x5cfead){return console[_0x25620b(0x2e2)]('ACTIVATE\x20ERROR:',_0x5cfead),_0x471e5d[_0x25620b(0x3dc)](0x190)[_0x25620b(0x3c7)]({'success':![],'message':_0x25620b(0x28a)+(_0x5cfead[_0x25620b(0x19a)]||_0x25620b(0x3c2))});}}),app['get']('/api/check-update',async(_0x5cf524,_0x57dbb0)=>{const _0x3471c4=a0_0xfa5210;try{const _0x408083=await fetch(_0x3471c4(0x458)),_0x166f62=await _0x408083[_0x3471c4(0x2d7)](),_0xc3eee=_0x166f62[_0x3471c4(0x118)](/(?:Versi|Version)\s+([\d\.]+)/i),_0x1aaadb=_0xc3eee?_0xc3eee[0x1]:_0x3471c4(0x37a);let _0x19e3fd=_0x3471c4(0x37a);try{const _0x4de0f5=JSON['parse'](import_fs['default'][_0x3471c4(0x5d5)](import_path[_0x3471c4(0x60b)][_0x3471c4(0x4ca)](process[_0x3471c4(0x3f8)](),_0x3471c4(0x49b)),'utf-8'));_0x19e3fd=_0x4de0f5[_0x3471c4(0x3b5)]||_0x3471c4(0x37a);}catch(_0x4ea6b3){console[_0x3471c4(0x2e2)](_0x3471c4(0x2ef),_0x4ea6b3);}const _0xaf81c8=_0x19e3fd['split']('.')[_0x3471c4(0x47f)](Number),_0x2cc068=_0x1aaadb[_0x3471c4(0x2b4)]('.')['map'](Number);let _0x33e5a2=![];for(let _0x4b3189=0x0;_0x4b3189<0x3;_0x4b3189++){const _0x3c334c=_0xaf81c8[_0x4b3189]||0x0,_0x2a0e95=_0x2cc068[_0x4b3189]||0x0;if(_0x2a0e95>_0x3c334c){_0x33e5a2=!![];break;}if(_0x2a0e95<_0x3c334c)break;}_0x57dbb0[_0x3471c4(0x3c7)]({'current_version':_0x19e3fd,'latest_version':_0x1aaadb,'has_update':_0x33e5a2,'changelog':_0x166f62});}catch(_0x335262){_0x57dbb0[_0x3471c4(0x3dc)](0x1f4)[_0x3471c4(0x3c7)]({'error':_0x3471c4(0x391)});}});async function uploadToGoogleDriveFallback(_0x39cad0,_0x18e8dc,_0x30544b,_0x794bcd,_0x234685,_0x2812a4){const _0x28b737=a0_0xfa5210;try{const [_0x1bbb00]=await getPool()['execute'](_0x28b737(0x10c)),_0x164779=_0x1bbb00[_0x28b737(0x5be)]>0x0?_0x1bbb00[0x0][_0x28b737(0x4f7)]:_0x28b737(0x221),_0x117905=await getGoogleDriveConfig();if(_0x117905){if(_0x794bcd===_0x28b737(0x20c)&&!_0x117905[_0x28b737(0x4ae)])return null;if(_0x794bcd===_0x28b737(0x46a)&&!_0x117905[_0x28b737(0x1c8)])return null;if(_0x794bcd===_0x28b737(0x160)&&!_0x117905[_0x28b737(0x42a)])return null;if(_0x794bcd===_0x28b737(0x324)&&!_0x117905[_0x28b737(0x2a1)])return null;try{const _0x2d32b1=import_fs[_0x28b737(0x60b)][_0x28b737(0x5d5)](_0x39cad0),_0x3ef571=await uploadFileToDrive({'buffer':_0x2d32b1,'originalFilename':_0x18e8dc,'mimeType':_0x30544b,'schoolName':_0x164779,'category':_0x234685,'folderType':_0x794bcd,'subfolderName':_0x2812a4});return import_fs['default'][_0x28b737(0x3ca)](_0x39cad0),_0x3ef571['viewLink'];}catch(_0x2814e2){console['error'](_0x28b737(0x5fe),_0x2814e2[_0x28b737(0x19a)]);}}}catch(_0x16217e){console[_0x28b737(0x2e2)](_0x28b737(0x36b),_0x16217e);}return null;}var pool=null,clean=_0x15090d=>_0x15090d===''||_0x15090d===void 0x0||_0x15090d===null?null:_0x15090d;function getPool(){const _0x53ad9f=a0_0xfa5210;return!pool&&(console['log'](_0x53ad9f(0x1e3),process.env.DB_HOST),pool=import_promise['default'][_0x53ad9f(0x5b9)]({'host':process.env.DB_HOST,'user':process.env.DB_USER,'password':process.env.DB_PASSWORD,'database':process.env.DB_NAME,'waitForConnections':!![],'connectionLimit':0xa,'queueLimit':0x0,'connectTimeout':0x1388,'enableKeepAlive':!![],'keepAliveInitialDelay':0x2710})),pool;}async function ensureColumn(_0x58e1e4,_0x517a66,_0x593730,_0x1a19e1){const _0x3c5b57=a0_0xfa5210;try{const [_0x6c6f5c]=await _0x58e1e4[_0x3c5b57(0x59d)]('SHOW\x20COLUMNS\x20FROM\x20'+_0x517a66+_0x3c5b57(0x390),[_0x593730]);_0x6c6f5c[_0x3c5b57(0x5be)]===0x0&&(console[_0x3c5b57(0x50a)]('[DB]\x20Adding\x20missing\x20column\x20'+_0x593730+_0x3c5b57(0x510)+_0x517a66),await _0x58e1e4[_0x3c5b57(0x59d)]('ALTER\x20TABLE\x20'+_0x517a66+_0x3c5b57(0x4c5)+_0x593730+'\x20'+_0x1a19e1),console[_0x3c5b57(0x50a)](_0x3c5b57(0x2fe)+_0x593730+_0x3c5b57(0x510)+_0x517a66));}catch(_0x20ca19){console[_0x3c5b57(0x2e2)]('[DB]\x20Error\x20ensuring\x20column\x20'+_0x593730+_0x3c5b57(0x4e3)+_0x517a66+':',_0x20ca19[_0x3c5b57(0x19a)]);}}async function initDb(){const _0x43757a=a0_0xfa5210;console[_0x43757a(0x50a)](_0x43757a(0x12c));const _0xa9526b=Date[_0x43757a(0x287)]();try{const _0x19ac49=getPool();await _0x19ac49['query'](_0x43757a(0x3b9)),console[_0x43757a(0x50a)](_0x43757a(0x50f));const _0x32a3a1=[{'name':_0x43757a(0x2b3),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20referensi\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ref_id\x20VARCHAR(36)\x20DEFAULT\x20(UUID()),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_ptk\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bid_study\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20mata_pelajaran\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status_kepegawaian\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenjang_pendidikan\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_sertifikasi\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jurusan\x20VARCHAR(255)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x455),'query':_0x43757a(0x4d0)},{'name':'pengaturan_sekolah','query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20pengaturan_sekolah\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20PRIMARY\x20KEY\x20DEFAULT\x201,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20school_name\x20VARCHAR(255)\x20DEFAULT\x20\x27SDN\x20Tanah\x20Tinggi\x201\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20npsn\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20akreditasi\x20VARCHAR(10),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20logo_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hero_image_url\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hero_title\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hero_subtitle\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20visi\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20misi\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20stats_students\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20stats_teachers\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20stats_rooms\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20stats_extracurriculars\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contact_address\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contact_phone\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20contact_email\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bentuk_pendidikan\x20VARCHAR(100)\x20DEFAULT\x20\x27Sekolah\x20Dasar\x20(SD)\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status_sekolah\x20VARCHAR(50)\x20DEFAULT\x20\x27Negeri\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kurikulum\x20VARCHAR(100)\x20DEFAULT\x20\x27Kurikulum\x20Merdeka\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gallery_slide_interval\x20INT\x20DEFAULT\x202,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20headmaster_name\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20headmaster_nip\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20schedule_date\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20spmb_config\x20LONGTEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20social_links\x20LONGTEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_title\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_description\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20seo_keywords\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sitemap_enabled\x20BOOLEAN\x20DEFAULT\x201,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20active_template\x20VARCHAR(50)\x20DEFAULT\x20\x27template1\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20theme_color\x20VARCHAR(50)\x20DEFAULT\x20\x27#2563eb\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20headmaster_photo\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20headmaster_welcome_title\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20headmaster_welcome_content\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20headmaster_welcome_active\x20BOOLEAN\x20DEFAULT\x201,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20fb_page_id\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ig_account_id\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20meta_access_token\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20meta_app_id\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20meta_app_secret\x20VARCHAR(255)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x54e),'query':_0x43757a(0x60c)},{'name':_0x43757a(0x160),'query':_0x43757a(0x22c)},{'name':_0x43757a(0x4b6),'query':_0x43757a(0x50c)},{'name':_0x43757a(0x20c),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20siswa\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20VARCHAR(36)\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tahun_pelajaran\x20VARCHAR(20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20semester\x20VARCHAR(10),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nipd\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nisn\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nik\x20VARCHAR(20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_lengkap\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jenis_kelamin\x20VARCHAR(2)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tempat_lahir\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_lahir\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20agama\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kewarganegaraan\x20VARCHAR(30)\x20DEFAULT\x20\x27Indonesia\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20alamat_jalan\x20VARCHAR(200)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rt\x20VARCHAR(5)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rw\x20VARCHAR(5)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20provinsi\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kota\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kecamatan\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kelurahan\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kode_pos\x20VARCHAR(10)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20lintang\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bujur\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_kk\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tempat_tinggal\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20moda_transportasi\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20rombel\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status_aktif\x20BOOLEAN\x20DEFAULT\x20TRUE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tk_paud\x20VARCHAR(10)\x20DEFAULT\x20\x27Tidak\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_tk_paud\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_akte_lahir\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20skhun\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20no_peserta_ujian_nasioal\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20no_seri_ijazah\x20VARCHAR(50)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sekolah_asal\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20kebutuhan_khusus\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_mutasi\x20DATE\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INDEX\x20(nama_lengkap),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INDEX\x20(rombel)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x2ed),'query':_0x43757a(0x498)},{'name':'data_wali','query':_0x43757a(0x2ce)},{'name':_0x43757a(0x294),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20data_kontak\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20telepon_rumah\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nomor_hp\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20email\x20VARCHAR(100)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x5af),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20data_periodik\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tinggi_badan\x20DECIMAL(5,2)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20berat_badan\x20DECIMAL(5,2)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20lingkar_kepala\x20VARCHAR(10)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jarak_rumah\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20waktu_tempuh\x20VARCHAR(20)\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20anak_keberapa\x20INT\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jumlah_saudara_kandung\x20INT\x20DEFAULT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':'data_afirmasi','query':_0x43757a(0x3b1)},{'name':_0x43757a(0x5c2),'query':_0x43757a(0x37d)},{'name':_0x43757a(0x3a7),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20riwayat_masuk\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20user_id\x20INT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20student_id\x20VARCHAR(36),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20type\x20ENUM(\x27pegawai\x27,\x20\x27student\x27)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20username\x20VARCHAR(100),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ip_address\x20VARCHAR(50),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20user_agent\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20ENUM(\x27success\x27,\x20\x27failed\x27)\x20DEFAULT\x20\x27success\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(user_id)\x20REFERENCES\x20pengguna_web(id)\x20ON\x20DELETE\x20SET\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(student_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20SET\x20NULL\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x14c),'query':_0x43757a(0x269)},{'name':_0x43757a(0x169),'query':_0x43757a(0x3bc)},{'name':_0x43757a(0x5da),'query':_0x43757a(0x3af)},{'name':'pengajuan_ubah_data','query':_0x43757a(0x4a1)},{'name':_0x43757a(0x11c),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20permohonan_pindah\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20student_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali_nama\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali_pekerjaan\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20wali_alamat\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tujuan_sekolah\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tujuan_desa\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tujuan_kec\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tujuan_prov\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20alasan\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20ENUM(\x27menunggu\x27,\x20\x27disetujui\x27,\x20\x27ditolak\x27)\x20DEFAULT\x20\x27menunggu\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dokumen_scan\x20VARCHAR(255),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20updated_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x20ON\x20UPDATE\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x20ENGINE=InnoDB\x20DEFAULT\x20CHARSET=utf8mb4\x20COLLATE=utf8mb4_unicode_ci;\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x3b7),'query':_0x43757a(0x26d)},{'name':_0x43757a(0x5f2),'query':_0x43757a(0x395)},{'name':_0x43757a(0x495),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20kalender_akademik\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20title\x20VARCHAR(255)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20event_date\x20DATE\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20description\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20category\x20VARCHAR(100)\x20DEFAULT\x20\x27Event\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x3fc),'query':_0x43757a(0x617)},{'name':_0x43757a(0x465),'query':_0x43757a(0x4bc)},{'name':'jenis_bantuan','query':_0x43757a(0x258)},{'name':_0x43757a(0x4e2),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20penerima_bantuan\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20istilah\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tahun\x20VARCHAR(20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20semester\x20VARCHAR(10),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(istilah)\x20REFERENCES\x20jenis_bantuan(istilah)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':'data_bank','query':_0x43757a(0x4d1)},{'name':_0x43757a(0x21d),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20laporan_bantuan\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20istilah\x20VARCHAR(50)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tahun\x20VARCHAR(20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20semester\x20VARCHAR(10),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_pencairan\x20DATE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_penarikan\x20DATE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nominal\x20DECIMAL(15,2),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20upload_foto_selfie\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20upload_foto_transaksi\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanda_tangan\x20TEXT,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(istilah)\x20REFERENCES\x20jenis_bantuan(istilah)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':_0x43757a(0x52a),'query':_0x43757a(0x2b6)},{'name':_0x43757a(0x451),'query':_0x43757a(0x1f8)},{'name':_0x43757a(0x599),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20literasi_jurnal\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20id\x20INT\x20AUTO_INCREMENT\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20materi_id\x20INT\x20NOT\x20NULL,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20status\x20VARCHAR(50)\x20DEFAULT\x20\x27menunggu_validasi\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20earned_xp\x20INT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dinilai_oleh\x20VARCHAR(36),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20created_at\x20TIMESTAMP\x20DEFAULT\x20CURRENT_TIMESTAMP,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(materi_id)\x20REFERENCES\x20literasi_materi(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'},{'name':'literasi_jawaban_jurnal','query':_0x43757a(0x1e8)},{'name':_0x43757a(0x3ac),'query':'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CREATE\x20TABLE\x20IF\x20NOT\x20EXISTS\x20siswa_gamifikasi\x20(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20siswa_id\x20VARCHAR(36)\x20PRIMARY\x20KEY,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20total_xp\x20INT\x20DEFAULT\x200,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20level\x20INT\x20DEFAULT\x201,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FOREIGN\x20KEY\x20(siswa_id)\x20REFERENCES\x20siswa(id)\x20ON\x20DELETE\x20CASCADE\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x0a\x20\x20\x20\x20\x20\x20\x20\x20'}];for(const _0xba5f13 of _0x32a3a1){try{console[_0x43757a(0x50a)](_0x43757a(0x1b5)+_0xba5f13['name']+'\x20exists...');const _0x331632=await _0x19ac49[_0x43757a(0x59d)](_0xba5f13['query']);console[_0x43757a(0x50a)](_0x43757a(0x30b)+_0xba5f13[_0x43757a(0x5ec)]+_0x43757a(0x2c7));const [_0x4fa768]=await _0x19ac49['query'](_0x43757a(0x212)+_0xba5f13[_0x43757a(0x5ec)]),_0x4e93ef=_0x4fa768['map'](_0x246259=>_0x246259[_0x43757a(0x4be)]['toLowerCase']()),_0x260025=_0xba5f13[_0x43757a(0x59d)]['match'](/\(([\s\S]+)\)/);if(_0x260025){const _0x38eac3=_0x260025[0x1][_0x43757a(0x2b4)]('\x0a')[_0x43757a(0x47f)](_0x257d64=>_0x257d64[_0x43757a(0x136)]())[_0x43757a(0x610)](_0x39dcbf=>_0x39dcbf[_0x43757a(0x5be)]>0x0);for(let _0x37f8ac of _0x38eac3){if(_0x37f8ac['endsWith'](','))_0x37f8ac=_0x37f8ac[_0x43757a(0x571)](0x0,-0x1)[_0x43757a(0x136)]();const _0x2d9796=_0x37f8ac[_0x43757a(0x4ce)]();if(_0x2d9796[_0x43757a(0x586)](_0x43757a(0x450))||_0x2d9796[_0x43757a(0x586)](_0x43757a(0x39f))||_0x2d9796[_0x43757a(0x586)](_0x43757a(0x111))||_0x2d9796[_0x43757a(0x586)](_0x43757a(0x298))||_0x2d9796[_0x43757a(0x586)]('CONSTRAINT\x20')||_0x2d9796['startsWith'](_0x43757a(0x101))||_0x2d9796[_0x43757a(0x586)](_0x43757a(0x608)))continue;const _0x4881a8=_0x37f8ac[_0x43757a(0x2b4)](/\s+/);if(_0x4881a8['length']>=0x2){let _0x52c3a0=_0x4881a8[0x0];if(_0x52c3a0['startsWith']('`')&&_0x52c3a0[_0x43757a(0x11a)]('`'))_0x52c3a0=_0x52c3a0[_0x43757a(0x571)](0x1,-0x1);const _0x169013=_0x4881a8[_0x43757a(0x571)](0x1)[_0x43757a(0x4ca)]('\x20');if(!_0x4e93ef[_0x43757a(0x424)](_0x52c3a0[_0x43757a(0x12a)]())){console[_0x43757a(0x50a)](_0x43757a(0x4d4)+_0x52c3a0+_0x43757a(0x510)+_0xba5f13[_0x43757a(0x5ec)]);try{await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x382)+_0xba5f13[_0x43757a(0x5ec)]+_0x43757a(0x21f)+_0x52c3a0+'`\x20'+_0x169013),console[_0x43757a(0x50a)](_0x43757a(0x2fe)+_0x52c3a0+_0x43757a(0x510)+_0xba5f13[_0x43757a(0x5ec)]);}catch(_0x164b2e){console[_0x43757a(0x2e2)](_0x43757a(0x279)+_0x52c3a0+_0x43757a(0x510)+_0xba5f13['name']+':',_0x164b2e[_0x43757a(0x19a)]);}}}}}if(_0xba5f13['name']===_0x43757a(0x455)){const [_0xd6ecb8]=await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x1b7)),_0x2a8767=_0xd6ecb8[_0x43757a(0x47f)](_0x146f54=>_0x146f54[_0x43757a(0x4be)]);_0xd6ecb8[_0x43757a(0x30d)](_0x56d3e6=>_0x56d3e6['Field']===_0x43757a(0x311)&&_0x56d3e6[_0x43757a(0x3bf)][_0x43757a(0x424)]('\x27umum\x27'))&&(console[_0x43757a(0x50a)](_0x43757a(0x493)),await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x5a4)),await _0x19ac49[_0x43757a(0x59d)]('UPDATE\x20pengumuman\x20SET\x20target\x20=\x20\x27semua\x27\x20WHERE\x20target\x20=\x20\x27umum\x27')),_0xd6ecb8[_0x43757a(0x30d)](_0x1486b9=>_0x1486b9[_0x43757a(0x4be)]===_0x43757a(0x311)&&_0x1486b9['Type'][_0x43757a(0x424)](_0x43757a(0x244)))&&(console[_0x43757a(0x50a)]('[DB]\x20Migrating\x20pengumuman.target\x20from\x20ENUM\x20to\x20VARCHAR...'),await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x41d))),!_0x2a8767[_0x43757a(0x424)](_0x43757a(0x3dc))&&await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x100)),!_0x2a8767[_0x43757a(0x424)](_0x43757a(0x2d8))&&await _0x19ac49['query'](_0x43757a(0x5d0)),!_0x2a8767[_0x43757a(0x424)]('publish_end')&&await _0x19ac49['query']('ALTER\x20TABLE\x20pengumuman\x20ADD\x20COLUMN\x20publish_end\x20TIMESTAMP\x20NULL\x20AFTER\x20publish_start');}if(_0xba5f13[_0x43757a(0x5ec)]===_0x43757a(0x160)){}if(_0xba5f13['name']===_0x43757a(0x20c)){const [_0x22b451]=await _0x19ac49['query'](_0x43757a(0x4bd)),_0x50bf31=_0x22b451[_0x43757a(0x47f)](_0x3d51ef=>_0x3d51ef[_0x43757a(0x4be)]);!_0x50bf31[_0x43757a(0x424)]('agama')&&await _0x19ac49[_0x43757a(0x59d)]('ALTER\x20TABLE\x20siswa\x20ADD\x20COLUMN\x20agama\x20VARCHAR(50)\x20DEFAULT\x20\x27Islam\x27\x20AFTER\x20nik'),!_0x50bf31[_0x43757a(0x424)](_0x43757a(0x5bb))&&await _0x19ac49[_0x43757a(0x59d)]('ALTER\x20TABLE\x20siswa\x20ADD\x20COLUMN\x20status_aktif\x20BOOLEAN\x20DEFAULT\x20TRUE\x20AFTER\x20agama');}if(_0xba5f13[_0x43757a(0x5ec)]==='pengguna_web'){const [_0x2b950d]=await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x265)),_0x199505=_0x2b950d[_0x43757a(0x47f)](_0x53470a=>_0x53470a[_0x43757a(0x4be)]);!_0x199505[_0x43757a(0x424)]('status_aktif')&&await _0x19ac49[_0x43757a(0x59d)]('ALTER\x20TABLE\x20pengguna_web\x20ADD\x20COLUMN\x20status_aktif\x20BOOLEAN\x20DEFAULT\x20TRUE\x20AFTER\x20password');}}catch(_0x178f30){console[_0x43757a(0x2e2)]('[DB]\x20Failed\x20to\x20ensure\x20table\x20'+_0xba5f13[_0x43757a(0x5ec)]+':',_0x178f30[_0x43757a(0x19a)]);}}await ensureColumn(_0x19ac49,'rombongan_belajar',_0x43757a(0x2eb),_0x43757a(0x1c9));const _0xf21cb0=[{'c':_0x43757a(0x5c0),'t':_0x43757a(0x521)},{'c':'jenis_kelamin','t':_0x43757a(0x490)},{'c':_0x43757a(0x264),'t':'VARCHAR(100)'},{'c':'tanggal_lahir','t':'DATE'},{'c':'nip','t':_0x43757a(0x521)},{'c':_0x43757a(0x38c),'t':'VARCHAR(50)\x20DEFAULT\x20\x27Honorer\x27'},{'c':'jenis_ptk','t':_0x43757a(0x5f7)},{'c':_0x43757a(0x51e),'t':_0x43757a(0x521)},{'c':_0x43757a(0x2ee),'t':'VARCHAR(50)'},{'c':_0x43757a(0x58c),'t':_0x43757a(0x5f7)},{'c':_0x43757a(0x186),'t':_0x43757a(0x5f7)},{'c':'sertifikasi','t':_0x43757a(0x5f7)},{'c':'tmt_kerja','t':_0x43757a(0x521)},{'c':_0x43757a(0x56d),'t':_0x43757a(0x5f7)},{'c':_0x43757a(0x4bf),'t':_0x43757a(0x518)},{'c':'jam_tugas_tambahan','t':_0x43757a(0x521)},{'c':_0x43757a(0x3c6),'t':'VARCHAR(50)'},{'c':_0x43757a(0x273),'t':_0x43757a(0x521)},{'c':_0x43757a(0x20c),'t':_0x43757a(0x521)},{'c':_0x43757a(0x1c5),'t':_0x43757a(0x518)},{'c':'nik','t':'VARCHAR(50)\x20UNIQUE'},{'c':_0x43757a(0x16b),'t':_0x43757a(0x5f7)}];for(const _0x1e15d5 of _0xf21cb0){await ensureColumn(_0x19ac49,_0x43757a(0x160),_0x1e15d5['c'],_0x1e15d5['t']);}await ensureColumn(_0x19ac49,'siswa',_0x43757a(0x52b),_0x43757a(0x2bc)),await ensureColumn(_0x19ac49,_0x43757a(0x20c),_0x43757a(0x53b),_0x43757a(0x521)),await ensureColumn(_0x19ac49,_0x43757a(0x20c),'jenis_kelamin','VARCHAR(2)'),await ensureColumn(_0x19ac49,'siswa',_0x43757a(0x2e0),'VARCHAR(50)\x20AFTER\x20nik'),await ensureColumn(_0x19ac49,_0x43757a(0x20c),_0x43757a(0x5bb),_0x43757a(0x386)),await ensureColumn(_0x19ac49,'pengguna_web',_0x43757a(0x5bb),_0x43757a(0x468)),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x4f7),'VARCHAR(255)\x20DEFAULT\x20\x27SDN\x20Tanah\x20Tinggi\x201\x27'),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x241),_0x43757a(0x521)),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x1c3),'VARCHAR(10)'),await ensureColumn(_0x19ac49,'pengaturan_sekolah','logo_url',_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x2e3),_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0xff),'hero_title',_0x43757a(0x518)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x4bb),_0x43757a(0x546)),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x192),'VARCHAR(255)'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x437),_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x4ef),'TEXT'),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x234),_0x43757a(0x5f7)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x4fa),_0x43757a(0x5f7)),await ensureColumn(_0x19ac49,'pengaturan_sekolah','kecamatan',_0x43757a(0x5f7)),await ensureColumn(_0x19ac49,_0x43757a(0xff),'kelurahan',_0x43757a(0x5f7)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x587),_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0xff),'contact_phone',_0x43757a(0x5f7)),await ensureColumn(_0x19ac49,'pengaturan_sekolah','contact_email','VARCHAR(100)'),await ensureColumn(_0x19ac49,_0x43757a(0xff),'bentuk_pendidikan',_0x43757a(0x2a8)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x5ee),_0x43757a(0x308)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x4b7),_0x43757a(0x270)),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x5a5),_0x43757a(0x2fc)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x397),_0x43757a(0x521)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x560),_0x43757a(0x521)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x1ef),_0x43757a(0x521)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x3c9),'VARCHAR(50)'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x40a),'VARCHAR(255)'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x59c),_0x43757a(0x521)),await ensureColumn(_0x19ac49,_0x43757a(0xff),'schedule_date',_0x43757a(0x5f7)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x229),'LONGTEXT'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x4ea),_0x43757a(0x604)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x23a),'TEXT'),await ensureColumn(_0x19ac49,_0x43757a(0xff),'seo_description','TEXT'),await ensureColumn(_0x19ac49,_0x43757a(0xff),'seo_keywords',_0x43757a(0x60f)),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x4ec),'BOOLEAN\x20DEFAULT\x201'),await ensureColumn(_0x19ac49,'pengaturan_sekolah',_0x43757a(0x412),'VARCHAR(50)\x20DEFAULT\x20\x27template1\x27'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x321),_0x43757a(0x1de)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x34c),_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0xff),'headmaster_welcome_title','VARCHAR(255)'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x369),_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x49d),_0x43757a(0x410)),await ensureColumn(_0x19ac49,'pengaturan_sekolah','fb_page_id',_0x43757a(0x518)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x5f6),_0x43757a(0x518)),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x188),'TEXT'),await ensureColumn(_0x19ac49,_0x43757a(0xff),_0x43757a(0x125),_0x43757a(0x518)),await ensureColumn(_0x19ac49,_0x43757a(0xff),'meta_app_secret',_0x43757a(0x518)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),_0x43757a(0x3dc),_0x43757a(0x1d7)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),'publish_start','TIMESTAMP\x20NULL'),await ensureColumn(_0x19ac49,'artikel_blog',_0x43757a(0x4a4),_0x43757a(0x364)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),_0x43757a(0x4e6),_0x43757a(0x60f)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),_0x43757a(0x14b),_0x43757a(0x2e7)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),'post_to_ig',_0x43757a(0x2e7)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),'social_post_schedule',_0x43757a(0x44f)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),_0x43757a(0x626),_0x43757a(0x2e7)),await ensureColumn(_0x19ac49,_0x43757a(0x3b7),_0x43757a(0x3e2),'BOOLEAN\x20DEFAULT\x200'),await ensureColumn(_0x19ac49,_0x43757a(0x5f2),'seo_tags',_0x43757a(0x60f)),await ensureColumn(_0x19ac49,'pengumuman',_0x43757a(0x4e6),'TEXT'),await ensureColumn(_0x19ac49,_0x43757a(0x4e4),_0x43757a(0x37c),'TEXT\x20NULL');try{await _0x19ac49[_0x43757a(0x59d)]('ALTER\x20TABLE\x20spmb_applicants\x20MODIFY\x20COLUMN\x20status_pendaftaran\x20ENUM(\x27PENDING\x27,\x27APPROVED\x27,\x27REJECTED\x27,\x27REVISION\x27)\x20DEFAULT\x20\x27PENDING\x27');}catch(_0x32767d){console[_0x43757a(0x2e2)](_0x43757a(0x3e8),_0x32767d);}try{const [_0x2b1b00]=await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x5fd));if(_0x2b1b00[_0x43757a(0x5be)]===0x0)await _0x19ac49['execute'](_0x43757a(0x2dd));else{const _0x59329f=_0x2b1b00[0x0];(!_0x59329f['hero_title']||!_0x59329f[_0x43757a(0x192)])&&(console[_0x43757a(0x50a)]('[DB]\x20Updating\x20empty\x20hero\x20fields\x20in\x20pengaturan_sekolah...'),await _0x19ac49['execute'](_0x43757a(0x232)));}}catch(_0xe7441a){console['error'](_0x43757a(0x417),_0xe7441a[_0x43757a(0x19a)]);}const [_0x5c047f]=await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x16c));_0x5c047f[_0x43757a(0x5be)]<0x3&&(!_0x5c047f[_0x43757a(0x30d)](_0x5de5ad=>_0x5de5ad[_0x43757a(0x5ec)]===_0x43757a(0x56b))&&await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x522)),!_0x5c047f[_0x43757a(0x30d)](_0x1f3734=>_0x1f3734[_0x43757a(0x5ec)]==='Superadmin')&&await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x517)),!_0x5c047f[_0x43757a(0x30d)](_0x24a172=>_0x24a172[_0x43757a(0x5ec)]==='Guru')&&await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x16f)));const [_0x500258]=await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x4dc));if(_0x500258[_0x43757a(0x5be)]===0x0){const [_0x1364a4]=await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x2a3));if(_0x1364a4[_0x43757a(0x5be)]>0x0){const [_0x332d37]=await _0x19ac49['execute'](_0x43757a(0x50b),[_0x43757a(0x1d8),_0x43757a(0x13f),'3671010101010101']);let _0x5e9617;if(_0x332d37[_0x43757a(0x399)])_0x5e9617=_0x332d37[_0x43757a(0x399)];else{const [_0x21127b]=await _0x19ac49[_0x43757a(0x54b)](_0x43757a(0x4e1));_0x5e9617=_0x21127b[0x0]['id'];}await _0x19ac49['execute'](_0x43757a(0x404),[_0x5e9617,_0x1364a4[0x0]['id'],'admin',_0x43757a(0x418)]);}}try{const [_0x6228de]=await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x1fe));if(_0x6228de&&_0x6228de[_0x43757a(0x5be)]>0x0){let _0x4f98fb=0x0;for(const _0xeb220b of _0x6228de){if(_0xeb220b[_0x43757a(0x3ea)]&&!_0xeb220b[_0x43757a(0x3ea)]['startsWith']('$2a$')&&!_0xeb220b[_0x43757a(0x3ea)][_0x43757a(0x586)]('$2b$')){const _0x1816a4=await import_bcryptjs['default'][_0x43757a(0x2c5)](_0xeb220b[_0x43757a(0x3ea)],0xa);await _0x19ac49[_0x43757a(0x59d)](_0x43757a(0x5d6),[_0x1816a4,_0xeb220b['id']]),_0x4f98fb++;}}_0x4f98fb>0x0&&console[_0x43757a(0x50a)](_0x43757a(0x358)+_0x4f98fb+_0x43757a(0x38b));}}catch(_0x2d65b0){console[_0x43757a(0x2e2)](_0x43757a(0x585),_0x2d65b0);}console[_0x43757a(0x50a)](_0x43757a(0x1bb)+(Date[_0x43757a(0x287)]()-_0xa9526b)+'ms');}catch(_0x14fab1){console[_0x43757a(0x2e2)](_0x43757a(0x127),_0x14fab1);throw _0x14fab1;}}var authenticate=(_0x5e8a4c,_0x22b253,_0x536716)=>{const _0x2b9c24=a0_0xfa5210,_0x1ccd8f=_0x5e8a4c[_0x2b9c24(0x28f)]['authorization'];if(!_0x1ccd8f)return _0x22b253[_0x2b9c24(0x3dc)](0x191)[_0x2b9c24(0x3c7)]({'error':'No\x20token\x20provided'});const _0x7ec379=_0x1ccd8f[_0x2b9c24(0x2b4)]('\x20')[0x1];import_jsonwebtoken[_0x2b9c24(0x60b)][_0x2b9c24(0x357)](_0x7ec379,JWT_SECRET,async(_0x24a735,_0x77780b)=>{const _0x5c9e66=_0x2b9c24;if(_0x24a735)return _0x22b253[_0x5c9e66(0x3dc)](0x193)[_0x5c9e66(0x3c7)]({'error':_0x5c9e66(0x15f)});_0x5e8a4c['user']={..._0x77780b,'permissions':Array[_0x5c9e66(0x251)](_0x77780b?.[_0x5c9e66(0x526)])?_0x77780b['permissions']:[_0x5c9e66(0x3d6)]};if(_0x5e8a4c['user'][_0x5c9e66(0x156)]===_0x5c9e66(0x45b)&&!_0x5e8a4c[_0x5c9e66(0x189)][_0x5c9e66(0x348)]&&_0x5e8a4c[_0x5c9e66(0x189)]['id'])try{const [_0x2af752]=await getPool()[_0x5c9e66(0x54b)](_0x5c9e66(0x28d),[_0x5e8a4c['user']['id']]);if(_0x2af752['length']>0x0)_0x5e8a4c[_0x5c9e66(0x189)][_0x5c9e66(0x348)]=_0x2af752[0x0][_0x5c9e66(0x348)];}catch(_0x3d298e){console[_0x5c9e66(0x2e2)](_0x5c9e66(0x113),_0x3d298e);}_0x536716();});},asyncHandler=_0x240eb5=>(_0x5e7fb5,_0x1568f6,_0x38184b)=>{const _0x40fa6d=a0_0xfa5210;Promise[_0x40fa6d(0x337)](_0x240eb5(_0x5e7fb5,_0x1568f6,_0x38184b))[_0x40fa6d(0x5f3)](_0x38184b);};app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x576),authenticate,async(_0x16e5a5,_0x45780c)=>{const _0x46cf68=a0_0xfa5210;try{const [_0x526f19]=await getPool()['query']('SELECT\x20*\x20FROM\x20jenis_bantuan\x20ORDER\x20BY\x20created_at\x20DESC');_0x45780c[_0x46cf68(0x3c7)](_0x526f19);}catch(_0x5d2f54){_0x45780c['status'](0x1f4)[_0x46cf68(0x3c7)]({'error':_0x5d2f54['message']});}}),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x576),authenticate,async(_0x176f34,_0x568c6d)=>{const _0x44125a=a0_0xfa5210;try{const {nama_bantuan:_0x347c3b,istilah:_0x3bea90}=_0x176f34['body'];if(!_0x347c3b||!_0x3bea90)return _0x568c6d[_0x44125a(0x3dc)](0x190)[_0x44125a(0x3c7)]({'error':_0x44125a(0x197)});await getPool()[_0x44125a(0x59d)](_0x44125a(0x105),[_0x347c3b,_0x3bea90]),_0x568c6d[_0x44125a(0x3c7)]({'success':!![]});}catch(_0x4d293c){_0x568c6d[_0x44125a(0x3dc)](0x1f4)[_0x44125a(0x3c7)]({'error':_0x4d293c['message']});}}),app[a0_0xfa5210(0x259)]('/api/bantuan/jenis/:id',authenticate,async(_0x1df5a,_0x384c22)=>{const _0x11f3ae=a0_0xfa5210;try{await getPool()['query'](_0x11f3ae(0x360),[_0x1df5a['params']['id']]),_0x384c22[_0x11f3ae(0x3c7)]({'success':!![]});}catch(_0x1cd0b1){_0x384c22[_0x11f3ae(0x3dc)](0x1f4)[_0x11f3ae(0x3c7)]({'error':_0x1cd0b1['message']});}}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x2bf),authenticate,async(_0x175f22,_0x4365cb)=>{const _0x597f14=a0_0xfa5210;try{let _0x5a7d6d='';const _0x134fed=[];if(_0x175f22[_0x597f14(0x189)]['type']===_0x597f14(0x45b)){const _0x22a260=_0x175f22['user'][_0x597f14(0x526)]||[];if(!_0x22a260['includes'](_0x597f14(0x3d6))){const [_0x49f555]=await getPool()[_0x597f14(0x54b)](_0x597f14(0x196),[_0x175f22[_0x597f14(0x189)][_0x597f14(0x348)]]);if(_0x49f555[_0x597f14(0x5be)]>0x0){const _0x47d535=_0x49f555[_0x597f14(0x47f)](_0x165d99=>_0x165d99[_0x597f14(0x5ec)]);_0x5a7d6d=_0x597f14(0x5f0)+_0x47d535[_0x597f14(0x47f)](()=>'?')['join'](',')+')',_0x134fed[_0x597f14(0x4a8)](..._0x47d535);}else _0x5a7d6d=_0x597f14(0x5b8);}}const [_0x31de96]=await getPool()['execute'](_0x597f14(0x288)+_0x5a7d6d+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20s.nama_lengkap\x20ASC\x0a\x20\x20\x20\x20\x20\x20\x20\x20',_0x134fed);_0x4365cb[_0x597f14(0x3c7)](_0x31de96);}catch(_0x58da05){_0x4365cb[_0x597f14(0x3dc)](0x1f4)[_0x597f14(0x3c7)]({'error':_0x58da05[_0x597f14(0x19a)]});}}),app['delete'](a0_0xfa5210(0x163),authenticate,async(_0x16da8d,_0x5e44d9)=>{const _0x24e7a7=a0_0xfa5210;try{await getPool()[_0x24e7a7(0x59d)](_0x24e7a7(0x301),[_0x16da8d[_0x24e7a7(0x5e5)]['id']]),_0x5e44d9[_0x24e7a7(0x3c7)]({'success':!![]});}catch(_0x1bc521){_0x5e44d9['status'](0x1f4)[_0x24e7a7(0x3c7)]({'error':_0x1bc521['message']});}}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0xfc),authenticate,async(_0x5d46e8,_0x5a2d86)=>{const _0x226bc9=a0_0xfa5210;try{const _0x5ef7dd=_0x5d46e8[_0x226bc9(0x189)]['id'],[_0x52e0c4]=await getPool()[_0x226bc9(0x59d)](_0x226bc9(0x4b2),[_0x5ef7dd]);_0x5a2d86[_0x226bc9(0x3c7)](_0x52e0c4);}catch(_0x39b078){_0x5a2d86['status'](0x1f4)[_0x226bc9(0x3c7)]({'error':_0x39b078[_0x226bc9(0x19a)]});}}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x139),authenticate,async(_0x82b537,_0xd6379)=>{const _0x1b3e57=a0_0xfa5210;try{let _0x183b48='';const _0x497dc8=[];if(_0x82b537['user'][_0x1b3e57(0x156)]===_0x1b3e57(0x45b)){const _0x2c6af3=_0x82b537['user'][_0x1b3e57(0x526)]||[];if(!_0x2c6af3[_0x1b3e57(0x424)](_0x1b3e57(0x3d6))){const [_0x38a0db]=await getPool()[_0x1b3e57(0x54b)](_0x1b3e57(0x196),[_0x82b537['user']['staff_id']]);if(_0x38a0db['length']>0x0){const _0x363975=_0x38a0db[_0x1b3e57(0x47f)](_0x559fcc=>_0x559fcc['name']);_0x183b48=_0x1b3e57(0x5f0)+_0x363975[_0x1b3e57(0x47f)](()=>'?')[_0x1b3e57(0x4ca)](',')+')',_0x497dc8[_0x1b3e57(0x4a8)](..._0x363975);}else _0x183b48='WHERE\x201=0';}}const [_0x211917]=await getPool()[_0x1b3e57(0x54b)](_0x1b3e57(0x280)+_0x183b48+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20s.nama_lengkap\x20ASC\x0a\x20\x20\x20\x20\x20\x20\x20\x20',_0x497dc8);_0xd6379[_0x1b3e57(0x3c7)](_0x211917);}catch(_0x92119d){_0xd6379[_0x1b3e57(0x3dc)](0x1f4)['json']({'error':_0x92119d[_0x1b3e57(0x19a)]});}}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x577),authenticate,async(_0x3572e8,_0x586e60)=>{const _0x486854=a0_0xfa5210;try{const {siswa_id:_0x41be72,istilah:_0x348c1d}=_0x3572e8[_0x486854(0x5e5)],[_0x1d512c]=await getPool()[_0x486854(0x59d)](_0x486854(0x13d),[_0x41be72,_0x348c1d]);_0x586e60['json'](_0x1d512c[0x0]||{'nomor_rekening':'','bank':'','an_rekening':'','upload_foto_buku_rekening':''});}catch(_0x9ba646){_0x586e60[_0x486854(0x3dc)](0x1f4)[_0x486854(0x3c7)]({'error':_0x9ba646[_0x486854(0x19a)]});}}),app['post'](a0_0xfa5210(0x577),authenticate,uploadBantuan[a0_0xfa5210(0x544)](a0_0xfa5210(0x1a8)),async(_0xf2fb0,_0x382791)=>{const _0x156d3a=a0_0xfa5210;try{const {siswa_id:_0x38011a,istilah:_0x500b24}=_0xf2fb0[_0x156d3a(0x5e5)],{nomor_rekening:_0x482ba5,bank:_0x4d457c,an_rekening:_0x479ebd}=_0xf2fb0['body'];let _0x5debc9=void 0x0;_0xf2fb0[_0x156d3a(0x41e)]&&(_0x5debc9=_0x156d3a(0x55a)+_0xf2fb0[_0x156d3a(0x41e)][_0x156d3a(0x333)]);const [_0x2ebefb]=await getPool()[_0x156d3a(0x59d)]('SELECT\x20id\x20FROM\x20data_bank\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20istilah\x20=\x20?',[_0x38011a,_0x500b24]);if(_0x2ebefb['length']>0x0){let _0x3ede0c='UPDATE\x20data_bank\x20SET\x20nomor_rekening\x20=\x20?,\x20bank\x20=\x20?,\x20an_rekening\x20=\x20?';const _0x33b36b=[_0x482ba5,_0x4d457c,_0x479ebd];_0x5debc9&&(_0x3ede0c+=',\x20upload_foto_buku_rekening\x20=\x20?',_0x33b36b['push'](_0x5debc9)),_0x3ede0c+=_0x156d3a(0x39e),_0x33b36b[_0x156d3a(0x4a8)](_0x38011a,_0x500b24),await getPool()[_0x156d3a(0x59d)](_0x3ede0c,_0x33b36b);}else await getPool()[_0x156d3a(0x59d)](_0x156d3a(0x383),[_0x38011a,_0x500b24,_0x482ba5,_0x4d457c,_0x479ebd,_0x5debc9||null]);_0x382791[_0x156d3a(0x3c7)]({'success':!![],'file':_0x5debc9});}catch(_0x2241a8){_0x382791['status'](0x1f4)[_0x156d3a(0x3c7)]({'error':_0x2241a8[_0x156d3a(0x19a)]});}}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x4d5),authenticate,async(_0x136d3e,_0x3c1020)=>{const _0x4dfaf9=a0_0xfa5210;try{const {siswa_id:_0x421680,istilah:_0xd44fb0}=_0x136d3e['params'],[_0x4f2648]=await getPool()[_0x4dfaf9(0x59d)](_0x4dfaf9(0x48a),[_0x421680]);let _0x47c327=_0x4f2648[_0x4dfaf9(0x5be)]>0x0?_0x4f2648[0x0][_0x4dfaf9(0x4e7)]||'':'';const [_0x127f48]=await getPool()['query']('SELECT\x20*\x20FROM\x20pengajuan_rekening_bantuan\x20WHERE\x20siswa_id\x20=\x20?\x20AND\x20istilah\x20=\x20?',[_0x421680,_0xd44fb0]);if(_0x127f48['length']>0x0){let _0x54ce83=_0x127f48[0x0];return _0x54ce83[_0x4dfaf9(0x4e7)]=_0x47c327,_0x3c1020[_0x4dfaf9(0x3c7)](_0x54ce83);}const [_0xe257b1]=await getPool()[_0x4dfaf9(0x59d)](_0x4dfaf9(0x248),[_0x421680]),[_0x44cd5e]=await getPool()[_0x4dfaf9(0x59d)](_0x4dfaf9(0x224),[_0x421680]),[_0x344df0]=await getPool()[_0x4dfaf9(0x59d)](_0x4dfaf9(0x2f4),[_0x421680]);let _0x47da2a={'nik':_0x47c327,'nama_lengkap':'','tempat_lahir':'','tanggal_lahir':'','nomor_hp':'','nomor_kk':'','provinsi':'','kota':'','kecamatan':'','kelurahan':'','rt':'','rw':'','alamat_jalan':'','nama_ayah':'','nik_ayah':'','nama_ibu':'','nik_ibu':'','wali':'','nik_wali':'','hubungan_wali':''};if(_0x4f2648['length']>0x0){const _0xa1e9f5=_0x4f2648[0x0];_0x47da2a[_0x4dfaf9(0x377)]=_0xa1e9f5['nama_lengkap']||'',_0x47da2a[_0x4dfaf9(0x264)]=_0xa1e9f5[_0x4dfaf9(0x264)]||'',_0x47da2a[_0x4dfaf9(0x57a)]=_0xa1e9f5[_0x4dfaf9(0x57a)]?new Date(_0xa1e9f5[_0x4dfaf9(0x57a)])['toISOString']()[_0x4dfaf9(0x2b4)]('T')[0x0]:'',_0x47da2a[_0x4dfaf9(0x561)]=_0xa1e9f5[_0x4dfaf9(0x561)]||'',_0x47da2a[_0x4dfaf9(0x234)]=_0xa1e9f5[_0x4dfaf9(0x234)]||'',_0x47da2a[_0x4dfaf9(0x4fa)]=_0xa1e9f5[_0x4dfaf9(0x4fa)]||'',_0x47da2a[_0x4dfaf9(0x195)]=_0xa1e9f5[_0x4dfaf9(0x195)]||'',_0x47da2a[_0x4dfaf9(0x475)]=_0xa1e9f5['kelurahan']||'',_0x47da2a['rt']=_0xa1e9f5['rt']||'',_0x47da2a['rw']=_0xa1e9f5['rw']||'',_0x47da2a[_0x4dfaf9(0x17c)]=_0xa1e9f5[_0x4dfaf9(0x17c)]||'';}_0xe257b1[_0x4dfaf9(0x5be)]>0x0&&(_0x47da2a['nomor_hp']=_0xe257b1[0x0]['nomor_hp']||'');for(const _0x4fb180 of _0x44cd5e){_0x4fb180['tipe']===_0x4dfaf9(0x3cc)&&(_0x47da2a[_0x4dfaf9(0x513)]=_0x4fb180[_0x4dfaf9(0x623)]||'',_0x47da2a[_0x4dfaf9(0x4f4)]=_0x4fb180[_0x4dfaf9(0x4e7)]||''),_0x4fb180[_0x4dfaf9(0x29a)]===_0x4dfaf9(0x42b)&&(_0x47da2a['nama_ibu']=_0x4fb180['nama']||'',_0x47da2a[_0x4dfaf9(0x3e1)]=_0x4fb180[_0x4dfaf9(0x4e7)]||'');}_0x344df0['length']>0x0&&(_0x47da2a[_0x4dfaf9(0x1bc)]=_0x344df0[0x0]['nama']||'',_0x47da2a[_0x4dfaf9(0x1f1)]=_0x344df0[0x0][_0x4dfaf9(0x4e7)]||''),_0x3c1020[_0x4dfaf9(0x3c7)](_0x47da2a);}catch(_0x182aea){_0x3c1020['status'](0x1f4)['json']({'error':_0x182aea[_0x4dfaf9(0x19a)]});}}),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x4d5),authenticate,uploadBantuan[a0_0xfa5210(0x55f)]([{'name':a0_0xfa5210(0x1d3),'maxCount':0x1},{'name':a0_0xfa5210(0x414),'maxCount':0x1},{'name':a0_0xfa5210(0x2cb),'maxCount':0x1},{'name':a0_0xfa5210(0x4b1),'maxCount':0x1}]),async(_0x25d2b0,_0x1d5d70)=>{const _0x557c91=a0_0xfa5210;try{const {siswa_id:_0x4ac71f,istilah:_0x20f7eb}=_0x25d2b0[_0x557c91(0x5e5)],_0x57f7cd=_0x25d2b0['body'],_0x225566=_0x25d2b0['files'],_0x10cda4=(_0x3bcb6d,_0x2cf285)=>{const _0x589f89=_0x557c91;if(!_0x3bcb6d)return void 0x0;const _0x45d362=import_path[_0x589f89(0x60b)][_0x589f89(0x55b)](_0x3bcb6d['originalname']),_0x47d806=(_0x57f7cd['nama_lengkap']||'')[_0x589f89(0x2de)](/[^a-z0-9]/gi,'_')[_0x589f89(0x12a)](),_0x31e51c=_0x2cf285+'_'+(_0x57f7cd[_0x589f89(0x4e7)]||_0x589f89(0x24a))+'_'+_0x47d806+_0x45d362,_0xe58648=_0x3bcb6d[_0x589f89(0x245)],_0x18aed6=import_path[_0x589f89(0x60b)][_0x589f89(0x4ca)](_0x3bcb6d[_0x589f89(0x3be)],_0x31e51c);return import_fs[_0x589f89(0x60b)][_0x589f89(0x605)](_0xe58648)&&import_fs[_0x589f89(0x60b)][_0x589f89(0x57d)](_0xe58648,_0x18aed6),_0x589f89(0x55a)+_0x31e51c;};let _0x23f67e=_0x10cda4(_0x225566[_0x557c91(0x1d3)]?.[0x0],_0x557c91(0x1eb)),_0x1de3ed=_0x10cda4(_0x225566[_0x557c91(0x414)]?.[0x0],'KK'),_0x2ffafc=_0x10cda4(_0x225566[_0x557c91(0x2cb)]?.[0x0],'AKTE'),_0x1f66a6=_0x10cda4(_0x225566[_0x557c91(0x4b1)]?.[0x0],'SURAT_WALI');const [_0x48b641]=await getPool()[_0x557c91(0x59d)](_0x557c91(0x3d9),[_0x4ac71f,_0x20f7eb]);if(_0x48b641[_0x557c91(0x5be)]>0x0){let _0x136a84=_0x557c91(0x533);const _0x35e1ed=[_0x57f7cd['nama_lengkap'],_0x57f7cd[_0x557c91(0x264)],_0x57f7cd['tanggal_lahir']||null,_0x57f7cd[_0x557c91(0x513)],_0x57f7cd['nik_ayah'],_0x57f7cd[_0x557c91(0x1bf)],_0x57f7cd[_0x557c91(0x3e1)],_0x57f7cd['status_orang_tua']||_0x557c91(0x346),_0x57f7cd[_0x557c91(0x1bc)],_0x57f7cd[_0x557c91(0x1f1)],_0x57f7cd[_0x557c91(0x53d)],_0x57f7cd[_0x557c91(0x19d)],_0x57f7cd[_0x557c91(0x561)],_0x57f7cd[_0x557c91(0x234)],_0x57f7cd['kota'],_0x57f7cd[_0x557c91(0x195)],_0x57f7cd['kelurahan'],_0x57f7cd['rt'],_0x57f7cd['rw'],_0x57f7cd[_0x557c91(0x17c)],_0x57f7cd['penanggung_jawab_rekening']];_0x23f67e&&(_0x136a84+=',\x20foto_ktp=?',_0x35e1ed[_0x557c91(0x4a8)](_0x23f67e)),_0x1de3ed&&(_0x136a84+=_0x557c91(0x1ee),_0x35e1ed[_0x557c91(0x4a8)](_0x1de3ed)),_0x2ffafc&&(_0x136a84+=_0x557c91(0x154),_0x35e1ed['push'](_0x2ffafc)),_0x1f66a6&&(_0x136a84+=',\x20foto_surat_wali=?',_0x35e1ed['push'](_0x1f66a6)),_0x57f7cd[_0x557c91(0x1ae)]!==void 0x0&&(_0x136a84+=_0x557c91(0x266),_0x35e1ed['push'](_0x57f7cd[_0x557c91(0x1ae)])),_0x136a84+=_0x557c91(0x39e),_0x35e1ed[_0x557c91(0x4a8)](_0x4ac71f,_0x20f7eb),await getPool()[_0x557c91(0x59d)](_0x136a84,_0x35e1ed);}else await getPool()[_0x557c91(0x59d)](_0x557c91(0x33a),[_0x4ac71f,_0x20f7eb,_0x57f7cd[_0x557c91(0x377)],_0x57f7cd[_0x557c91(0x264)],_0x57f7cd['tanggal_lahir']||null,_0x57f7cd[_0x557c91(0x513)],_0x57f7cd[_0x557c91(0x4f4)],_0x57f7cd[_0x557c91(0x1bf)],_0x57f7cd[_0x557c91(0x3e1)],_0x57f7cd[_0x557c91(0x168)]||_0x557c91(0x346),_0x57f7cd[_0x557c91(0x1bc)],_0x57f7cd['nik_wali'],_0x57f7cd[_0x557c91(0x53d)],_0x57f7cd[_0x557c91(0x19d)],_0x57f7cd[_0x557c91(0x561)],_0x57f7cd['provinsi'],_0x57f7cd[_0x557c91(0x4fa)],_0x57f7cd[_0x557c91(0x195)],_0x57f7cd[_0x557c91(0x475)],_0x57f7cd['rt'],_0x57f7cd['rw'],_0x57f7cd[_0x557c91(0x17c)],_0x57f7cd['penanggung_jawab_rekening'],_0x23f67e||null,_0x1de3ed||null,_0x2ffafc||null,_0x1f66a6||null]);_0x1d5d70[_0x557c91(0x3c7)]({'success':!![]});}catch(_0x36517d){_0x1d5d70['status'](0x1f4)[_0x557c91(0x3c7)]({'error':_0x36517d[_0x557c91(0x19a)]});}}),app['get'](a0_0xfa5210(0x208),authenticate,async(_0x128463,_0x1dfb8b)=>{const _0x2ea32b=a0_0xfa5210;try{const _0x283a35=_0x2ea32b(0x48b),[_0x163618]=await getPool()[_0x2ea32b(0x59d)](_0x283a35);_0x1dfb8b[_0x2ea32b(0x3c7)](_0x163618);}catch(_0x247f73){_0x1dfb8b[_0x2ea32b(0x3dc)](0x1f4)[_0x2ea32b(0x3c7)]({'error':_0x247f73[_0x2ea32b(0x19a)]});}}),app[a0_0xfa5210(0x1fc)]('/api/bantuan/laporan/me',authenticate,async(_0x5c6bc6,_0xea36a7)=>{const _0x49c2a6=a0_0xfa5210;try{const _0x491e87=_0x49c2a6(0x21c),[_0x2be555]=await getPool()[_0x49c2a6(0x59d)](_0x491e87,[_0x5c6bc6[_0x49c2a6(0x189)]['id']]);_0xea36a7['json'](_0x2be555);}catch(_0x52134f){_0xea36a7[_0x49c2a6(0x3dc)](0x1f4)[_0x49c2a6(0x3c7)]({'error':_0x52134f[_0x49c2a6(0x19a)]});}}),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x27a),authenticate,uploadBantuan[a0_0xfa5210(0x55f)]([{'name':a0_0xfa5210(0x5cd),'maxCount':0x1},{'name':a0_0xfa5210(0x327),'maxCount':0x1}]),async(_0x37e99c,_0x305b24)=>{const _0x2c6803=a0_0xfa5210;try{const _0x1fd0c2=_0x37e99c[_0x2c6803(0x2f2)],_0x5664ae=_0x37e99c[_0x2c6803(0x189)]['id'],_0x4ed10b=_0x37e99c[_0x2c6803(0x1ff)],_0x9880fa=(_0x43f6d0,_0xee71c5)=>{const _0x24f4e8=_0x2c6803;if(!_0x43f6d0)return void 0x0;const _0x505e5e=import_path[_0x24f4e8(0x60b)][_0x24f4e8(0x55b)](_0x43f6d0[_0x24f4e8(0x419)]),_0x3615dc='${jenisFile}_${siswa_id}_${Date.now()}${ext}',_0x2ea600=_0x43f6d0[_0x24f4e8(0x245)],_0x483ae9=import_path['default'][_0x24f4e8(0x4ca)](_0x43f6d0[_0x24f4e8(0x3be)],_0x3615dc);return import_fs[_0x24f4e8(0x60b)][_0x24f4e8(0x605)](_0x2ea600)&&import_fs[_0x24f4e8(0x60b)][_0x24f4e8(0x57d)](_0x2ea600,_0x483ae9),_0x24f4e8(0x55a)+_0x3615dc;};let _0x54fd06=_0x9880fa(_0x4ed10b[_0x2c6803(0x5cd)]?.[0x0],_0x2c6803(0x1d4)),_0x3e9d74=_0x9880fa(_0x4ed10b[_0x2c6803(0x327)]?.[0x0],_0x2c6803(0x3db)),_0x13df94='',_0x5029a4=[];_0x1fd0c2['id']&&_0x1fd0c2['id']!==_0x2c6803(0x20f)&&_0x1fd0c2['id']!==_0x2c6803(0x4db)&&_0x1fd0c2['id']!==''?(_0x13df94=_0x2c6803(0x121),_0x5029a4=[_0x1fd0c2[_0x2c6803(0x3f9)]||null,_0x1fd0c2[_0x2c6803(0x354)]||null,_0x1fd0c2[_0x2c6803(0x5d4)]||null,_0x1fd0c2[_0x2c6803(0x25c)]||null],_0x54fd06&&(_0x13df94+=',\x20upload_foto_selfie=?',_0x5029a4[_0x2c6803(0x4a8)](_0x54fd06)),_0x3e9d74&&(_0x13df94+=_0x2c6803(0x54c),_0x5029a4['push'](_0x3e9d74)),_0x1fd0c2[_0x2c6803(0x2c6)]&&(_0x13df94+=_0x2c6803(0x122),_0x5029a4[_0x2c6803(0x4a8)](_0x1fd0c2[_0x2c6803(0x2c6)])),_0x1fd0c2['semester']&&(_0x13df94+=_0x2c6803(0x4d6),_0x5029a4[_0x2c6803(0x4a8)](_0x1fd0c2[_0x2c6803(0x222)])),_0x13df94+='\x20WHERE\x20id=?\x20AND\x20siswa_id=?',_0x5029a4[_0x2c6803(0x4a8)](_0x1fd0c2['id'],_0x5664ae)):(_0x13df94=_0x2c6803(0x446),_0x5029a4=[_0x5664ae,_0x1fd0c2['bantuan_id'],_0x1fd0c2['tahun']||null,_0x1fd0c2[_0x2c6803(0x222)]||null,_0x1fd0c2[_0x2c6803(0x3f9)]||null,_0x1fd0c2[_0x2c6803(0x354)]||null,_0x1fd0c2[_0x2c6803(0x5d4)]||null,_0x54fd06||null,_0x3e9d74||null,_0x1fd0c2[_0x2c6803(0x25c)]||null]),await getPool()['query'](_0x13df94,_0x5029a4),_0x305b24[_0x2c6803(0x3c7)]({'success':!![]});}catch(_0x30d9fb){_0x305b24[_0x2c6803(0x3dc)](0x1f4)['json']({'error':_0x30d9fb[_0x2c6803(0x19a)]});}}),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x403),authenticate,async(_0x358eb8,_0x464c3b)=>{const _0x31eddc=a0_0xfa5210;try{await getPool()[_0x31eddc(0x59d)](_0x31eddc(0x27c),[_0x358eb8[_0x31eddc(0x5e5)]['id']]),_0x464c3b[_0x31eddc(0x3c7)]({'success':!![]});}catch(_0x445e5c){_0x464c3b['status'](0x1f4)[_0x31eddc(0x3c7)]({'error':_0x445e5c['message']});}}),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x159),authenticate,(_0x14e53c,_0x378691)=>{const _0x3d30ca=a0_0xfa5210;try{const _0x22ec2a=JSON[_0x3d30ca(0x5c9)](import_fs[_0x3d30ca(0x60b)][_0x3d30ca(0x5d5)](_0x3d30ca(0x376),_0x3d30ca(0x155)));_0x378691[_0x3d30ca(0x3c7)]({'version':_0x22ec2a['version']});}catch(_0x4ad822){_0x378691[_0x3d30ca(0x3dc)](0x1f4)['json']({'error':_0x4ad822[_0x3d30ca(0x19a)]});}}),app[a0_0xfa5210(0x1fc)]('/api/system/check-update',authenticate,async(_0x53d90e,_0x59d6cc)=>{const _0x3d4ad8=a0_0xfa5210;try{const _0x5cec4e=new Date()['getTime'](),_0x227f10='https://raw.githubusercontent.com/syahmuhamadrizky/dapoy-schools-release/main/package.json?t=${timestamp}',_0x281a12=await new Promise((_0x2e2fe4,_0x4263b6)=>{const _0x991175=a0_0x4966;import_https[_0x991175(0x60b)][_0x991175(0x1fc)](_0x227f10,{'headers':{'Cache-Control':_0x991175(0x42d)}},_0x1137d0=>{const _0x526544=_0x991175;let _0xf720a4='';_0x1137d0['on'](_0x526544(0x52f),_0x66c2b0=>{_0xf720a4+=_0x66c2b0;}),_0x1137d0['on'](_0x526544(0x38a),()=>{try{_0x2e2fe4(JSON['parse'](_0xf720a4));}catch(_0x34c413){_0x4263b6(_0x34c413);}});})['on'](_0x991175(0x2e2),_0x4263b6);}),_0x339184=__dirname[_0x3d4ad8(0x11a)](_0x3d4ad8(0x51a))||__dirname[_0x3d4ad8(0x11a)]('dist\x5c'),_0x47b22d=_0x339184?import_path[_0x3d4ad8(0x60b)][_0x3d4ad8(0x4ca)](__dirname,'..'):__dirname,_0x7d6279=import_path['default']['join'](_0x47b22d,_0x3d4ad8(0x49b)),_0x2046c8=JSON['parse'](import_fs[_0x3d4ad8(0x60b)][_0x3d4ad8(0x5d5)](_0x7d6279,_0x3d4ad8(0x155))),_0x21cf98=_0x281a12[_0x3d4ad8(0x3b5)]!==_0x2046c8['version'];_0x59d6cc['json']({'available':_0x21cf98,'currentVersion':_0x2046c8[_0x3d4ad8(0x3b5)],'latestVersion':_0x281a12[_0x3d4ad8(0x3b5)]});}catch(_0x3f9966){console['error'](_0x3d4ad8(0x4e5),_0x3f9966),_0x59d6cc[_0x3d4ad8(0x3dc)](0x1f4)['json']({'error':_0x3f9966[_0x3d4ad8(0x19a)]||_0x3d4ad8(0x2fb)});}}),app[a0_0xfa5210(0x218)]('/api/system/install-update',authenticate,async(_0x26781d,_0x1b5b67)=>{const _0x4142d4=a0_0xfa5210;try{_0x1b5b67[_0x4142d4(0x3c7)]({'success':!![],'message':_0x4142d4(0x12d)}),setTimeout(async()=>{const _0x52a228=_0x4142d4;try{const _0xa80a0b=require('adm-zip'),_0x3e3fe9=require(_0x52a228(0x245)),_0x3a1685=require('fs'),_0x28794c=process[_0x52a228(0x3f8)](),_0x1782fb=_0x3e3fe9[_0x52a228(0x4ca)](_0x28794c,_0x52a228(0x142)),_0x1dcc8b=_0x3e3fe9[_0x52a228(0x4ca)](_0x28794c,_0x52a228(0x256));console['log'](_0x52a228(0x4ab));const _0x5771c9=await fetch(_0x52a228(0x276));if(!_0x5771c9['ok'])throw new Error(_0x52a228(0x1cc));const _0x55ba45=await _0x5771c9['arrayBuffer']();_0x3a1685[_0x52a228(0x339)](_0x1dcc8b,Buffer[_0x52a228(0x49c)](_0x55ba45)),console[_0x52a228(0x50a)](_0x52a228(0x402));const _0x1562a1=new _0xa80a0b(_0x1dcc8b);_0x1562a1[_0x52a228(0x3b0)](_0x1782fb,!![]),console[_0x52a228(0x50a)](_0x52a228(0x3a2));const _0x59a809=_0x3e3fe9[_0x52a228(0x4ca)](_0x1782fb,'dapoy-schools-release-main');_0x3a1685[_0x52a228(0x206)](_0x59a809,_0x28794c,{'recursive':!![],'force':!![]}),console[_0x52a228(0x50a)](_0x52a228(0x43c)),_0x3a1685[_0x52a228(0x240)](_0x1782fb,{'recursive':!![],'force':!![]}),_0x3a1685[_0x52a228(0x240)](_0x1dcc8b,{'force':!![]}),console['log']('[UPDATE]\x20Memicu\x20restart\x20server\x20(cPanel/PM2)...');const _0x2d9f95=_0x3e3fe9['join'](process[_0x52a228(0x3f8)](),_0x52a228(0x483));if(!_0x3a1685['existsSync'](_0x2d9f95))_0x3a1685[_0x52a228(0x116)](_0x2d9f95);_0x3a1685['writeFileSync'](_0x3e3fe9[_0x52a228(0x4ca)](_0x2d9f95,'restart.txt'),String(Date[_0x52a228(0x287)]())),setTimeout(()=>{const _0xe55502=_0x52a228;process.env.pm_id?require(_0xe55502(0x491))[_0xe55502(0x363)]('pm2\x20restart\x20'+process.env.pm_id,_0x24741c=>{const _0x1afbb6=_0xe55502;if(_0x24741c)process[_0x1afbb6(0x295)](0x1);}):process[_0xe55502(0x295)](0x1);},0x3e8);}catch(_0x3eb9e8){console[_0x52a228(0x2e2)](_0x52a228(0x22e),_0x3eb9e8);}},0x64);}catch(_0x12c163){console[_0x4142d4(0x2e2)](_0x4142d4(0x170),_0x12c163),_0x1b5b67[_0x4142d4(0x3dc)](0x1f4)['json']({'success':![],'message':_0x12c163[_0x4142d4(0x19a)]});}}),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x187),authenticate,async(_0x49c7db,_0x1ccaa1)=>{const _0x44b2b0=a0_0xfa5210;try{_0x1ccaa1[_0x44b2b0(0x3c7)]({'success':!![],'message':_0x44b2b0(0x1cb)}),setTimeout(()=>{const _0xd8c182=_0x44b2b0;try{const _0x118f25=require('fs'),_0x183585=require(_0xd8c182(0x245)),_0x2e2aaa=_0x183585[_0xd8c182(0x4ca)](process['cwd'](),_0xd8c182(0x483));if(!_0x118f25[_0xd8c182(0x605)](_0x2e2aaa))_0x118f25[_0xd8c182(0x116)](_0x2e2aaa);_0x118f25[_0xd8c182(0x339)](_0x183585[_0xd8c182(0x4ca)](_0x2e2aaa,'restart.txt'),String(Date['now']())),console[_0xd8c182(0x50a)](_0xd8c182(0x53f)),process.env.pm_id?require(_0xd8c182(0x491))[_0xd8c182(0x363)](_0xd8c182(0x17a)+process.env.pm_id,_0x3e099f=>{const _0x836af7=_0xd8c182;if(_0x3e099f)process[_0x836af7(0x295)](0x1);}):process[_0xd8c182(0x295)](0x1);}catch(_0xfe0a26){console[_0xd8c182(0x2e2)](_0xd8c182(0x602),_0xfe0a26);}},0x3e8);}catch(_0x473330){_0x1ccaa1[_0x44b2b0(0x3dc)](0x1f4)['json']({'success':![],'message':_0x473330[_0x44b2b0(0x19a)]});}}),app[a0_0xfa5210(0x218)]('/api/upload',authenticate,(_0x1b254d,_0x38986b,_0x583745)=>{const _0x293d2b=a0_0xfa5210;upload['single'](_0x293d2b(0x41e))(_0x1b254d,_0x38986b,_0x2e5a2d=>{const _0x1c01c6=_0x293d2b;if(_0x2e5a2d)return console[_0x1c01c6(0x2e2)]('Multer\x20error:',_0x2e5a2d),_0x38986b[_0x1c01c6(0x3dc)](0x190)['json']({'error':_0x2e5a2d[_0x1c01c6(0x19a)]||'File\x20upload\x20error'});if(!_0x1b254d[_0x1c01c6(0x41e)])return _0x38986b['status'](0x190)[_0x1c01c6(0x3c7)]({'error':'No\x20file\x20uploaded'});_0x38986b[_0x1c01c6(0x3c7)]({'url':_0x1c01c6(0x1d6)+_0x1b254d[_0x1c01c6(0x41e)]['filename']});});}),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x32b),authenticate,(_0x3285d4,_0x204642,_0x5bc6b5)=>{const _0x7b685f=a0_0xfa5210;uploadProfile[_0x7b685f(0x544)](_0x7b685f(0x5a1))(_0x3285d4,_0x204642,async _0x3f94cf=>{const _0x109ea1=_0x7b685f;if(_0x3f94cf)return _0x204642[_0x109ea1(0x3dc)](0x190)[_0x109ea1(0x3c7)]({'error':_0x3f94cf[_0x109ea1(0x19a)]||_0x109ea1(0x213)});if(!_0x3285d4[_0x109ea1(0x41e)])return _0x204642[_0x109ea1(0x3dc)](0x190)[_0x109ea1(0x3c7)]({'error':_0x109ea1(0x2aa)});try{const _0x4b0d68=_0x109ea1(0x48d)+_0x3285d4[_0x109ea1(0x41e)][_0x109ea1(0x333)];await getPool()[_0x109ea1(0x54b)](_0x109ea1(0x4f1),[_0x4b0d68,_0x3285d4[_0x109ea1(0x189)]['id']]);let _0x39d5a2=_0x3285d4[_0x109ea1(0x189)]['staff_id'];if(_0x3285d4[_0x109ea1(0x189)][_0x109ea1(0x156)]===_0x109ea1(0x45b)&&!_0x39d5a2){const [_0x4713ad]=await getPool()[_0x109ea1(0x54b)](_0x109ea1(0x28d),[_0x3285d4['user']['id']]);if(_0x4713ad[_0x109ea1(0x5be)])_0x39d5a2=_0x4713ad[0x0]['staff_id'];}if(_0x39d5a2)await getPool()[_0x109ea1(0x54b)](_0x109ea1(0x2a9),[_0x39d5a2,_0x4b0d68]);else _0x3285d4[_0x109ea1(0x189)]['type']===_0x109ea1(0x1f4)&&await getPool()[_0x109ea1(0x54b)](_0x109ea1(0x344),[_0x3285d4[_0x109ea1(0x189)]['id'],_0x4b0d68]);_0x204642[_0x109ea1(0x3c7)]({'photo_url':_0x4b0d68});}catch(_0x165384){console[_0x109ea1(0x2e2)](_0x109ea1(0x22a),_0x165384),_0x204642[_0x109ea1(0x3dc)](0x1f4)[_0x109ea1(0x3c7)]({'error':_0x109ea1(0x629)});}});}),app[a0_0xfa5210(0x31b)]('/api/profile/password',authenticate,asyncHandler(async(_0x351f68,_0x52a1ff)=>{const _0x4c6389=a0_0xfa5210,{oldPassword:_0x3c635d,newPassword:_0x4d89f4}=_0x351f68['body'],[_0x77d470]=await getPool()[_0x4c6389(0x54b)](_0x4c6389(0x3d8),[_0x351f68[_0x4c6389(0x189)]['id']]);if(!_0x77d470[_0x4c6389(0x5be)])return _0x52a1ff[_0x4c6389(0x3dc)](0x194)[_0x4c6389(0x3c7)]({'error':_0x4c6389(0x5bf)});const _0x5e7dd8=await import_bcryptjs['default'][_0x4c6389(0x597)](_0x3c635d,_0x77d470[0x0]['password']);if(!_0x5e7dd8)return _0x52a1ff[_0x4c6389(0x3dc)](0x190)[_0x4c6389(0x3c7)]({'error':_0x4c6389(0x33f)});const _0x503bbe=await import_bcryptjs[_0x4c6389(0x60b)]['hash'](_0x4d89f4,0xa);await getPool()[_0x4c6389(0x54b)](_0x4c6389(0x5d6),[_0x503bbe,_0x351f68['user']['id']]),_0x52a1ff[_0x4c6389(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x31e),asyncHandler(async(_0x397e92,_0x198848)=>{const _0x1279c6=a0_0xfa5210,{page:_0x28dd92}=_0x397e92[_0x1279c6(0x59d)];let _0x3da797=_0x28dd92||_0x1279c6(0x543),_0x125f8a=_0x1279c6(0x343);const [_0x45af1d]=await getPool()[_0x1279c6(0x54b)](_0x125f8a,[_0x3da797]);_0x198848[_0x1279c6(0x3c7)](_0x45af1d);})),app[a0_0xfa5210(0x1fc)]('/api/pengumuman',authenticate,asyncHandler(async(_0x4251b1,_0xeddbcd)=>{const _0x5a4366=a0_0xfa5210,{target:_0x4bbf75,isAdmin:_0x66ccd1}=_0x4251b1[_0x5a4366(0x59d)];let _0x5b51b8='SELECT\x20*\x20FROM\x20pengumuman\x20WHERE\x201=1',_0x3452ff=[];_0x66ccd1!==_0x5a4366(0x1e9)&&(_0x5b51b8+='\x20AND\x20status\x20=\x20\x27published\x27\x20AND\x20(publish_start\x20IS\x20NULL\x20OR\x20publish_start\x20<=\x20CURRENT_TIMESTAMP)\x20AND\x20(publish_end\x20IS\x20NULL\x20OR\x20publish_end\x20>=\x20CURRENT_TIMESTAMP)');_0x4bbf75&&(_0x5b51b8+='\x20AND\x20(FIND_IN_SET(?,\x20target)\x20>\x200\x20OR\x20FIND_IN_SET(\x27semua\x27,\x20target)\x20>\x200)',_0x3452ff[_0x5a4366(0x4a8)](_0x4bbf75));_0x5b51b8+=_0x5a4366(0x2dc);const [_0x6c4567]=await getPool()[_0x5a4366(0x54b)](_0x5b51b8,_0x3452ff);_0xeddbcd[_0x5a4366(0x3c7)](_0x6c4567);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x396),authenticate,asyncHandler(async(_0x42e9e3,_0x5b62e3)=>{const _0x384d77=a0_0xfa5210,{title:_0x2e4286,target:_0x66f604,status:_0x2dc151,intro:_0x11e17c,content:_0x19a569,closing:_0x383669,signature:_0x476e81,publish_start:_0x369c42,publish_end:_0x3473fd}=_0x42e9e3[_0x384d77(0x2f2)];let {seo_tags:_0x37bd8b}=_0x42e9e3[_0x384d77(0x2f2)];if(!_0x37bd8b)_0x37bd8b=generateSEOTags(_0x2e4286,(_0x11e17c||'')+'\x20'+_0x19a569);await getPool()[_0x384d77(0x54b)]('INSERT\x20INTO\x20pengumuman\x20(title,\x20target,\x20status,\x20intro,\x20content,\x20closing,\x20signature,\x20publish_start,\x20publish_end,\x20seo_tags)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x2e4286,_0x66f604||_0x384d77(0x441),_0x2dc151||'published',_0x11e17c,_0x19a569,_0x383669,_0x476e81,_0x369c42||null,_0x3473fd||null,_0x37bd8b]),_0x5b62e3[_0x384d77(0x3c7)]({'success':!![]});})),app['put'](a0_0xfa5210(0x36d),authenticate,asyncHandler(async(_0x5d9983,_0xe440ea)=>{const _0x547813=a0_0xfa5210,{title:_0x53a2e0,target:_0x457547,status:_0x6a1e7e,intro:_0x114b88,content:_0x3e2712,closing:_0x2347e6,signature:_0x4177ed,publish_start:_0x391118,publish_end:_0x170224}=_0x5d9983[_0x547813(0x2f2)];let {seo_tags:_0x5f5637}=_0x5d9983[_0x547813(0x2f2)];if(!_0x5f5637)_0x5f5637=generateSEOTags(_0x53a2e0,(_0x114b88||'')+'\x20'+_0x3e2712);await getPool()['execute'](_0x547813(0x505),[_0x53a2e0,_0x457547,_0x6a1e7e,_0x114b88,_0x3e2712,_0x2347e6,_0x4177ed,_0x391118||null,_0x170224||null,_0x5f5637,_0x5d9983[_0x547813(0x5e5)]['id']]),_0xe440ea[_0x547813(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x36d),authenticate,asyncHandler(async(_0x42952d,_0x3e4fd6)=>{const _0x2fb694=a0_0xfa5210,[_0x33d6cb]=await getPool()[_0x2fb694(0x54b)](_0x2fb694(0x57c),[_0x42952d[_0x2fb694(0x5e5)]['id']]);if(_0x33d6cb[_0x2fb694(0x373)]===0x0)return _0x3e4fd6[_0x2fb694(0x3dc)](0x194)['json']({'error':'Pengumuman\x20tidak\x20ditemukan'});_0x3e4fd6[_0x2fb694(0x3c7)]({'success':!![]});})),app['get']('/manifest.json',asyncHandler(async(_0x4ac987,_0x5ac953)=>{const _0x1a96b5=a0_0xfa5210;let _0x2ffa66=_0x1a96b5(0x427);try{const [_0x57d317]=await getPool()[_0x1a96b5(0x54b)](_0x1a96b5(0x10c));_0x57d317&&_0x57d317[_0x1a96b5(0x5be)]>0x0&&(_0x2ffa66=_0x57d317[0x0]['school_name']||_0x2ffa66);}catch(_0x6b4d8e){console['error'](_0x1a96b5(0x4f3),_0x6b4d8e);}_0x5ac953['json']({'name':_0x2ffa66+_0x1a96b5(0x1e7),'short_name':_0x2ffa66,'start_url':_0x1a96b5(0x4d2),'display':_0x1a96b5(0x15a),'background_color':_0x1a96b5(0x31d),'theme_color':_0x1a96b5(0x26c),'description':_0x1a96b5(0x20e)+_0x2ffa66,'icons':[{'src':_0x1a96b5(0x1b3),'sizes':'192x192','type':_0x1a96b5(0x23e)},{'src':'/icons/icon-512x512.png','sizes':'512x512','type':_0x1a96b5(0x23e)}]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x304),asyncHandler(async(_0x66c7c2,_0x34e0e7)=>{const _0x3d6dcb=a0_0xfa5210;try{const [_0x29477c]=await getPool()[_0x3d6dcb(0x54b)](_0x3d6dcb(0x5fd));if(_0x29477c&&_0x29477c['length']>0x0){const _0x51e214=_0x29477c[0x0];try{const [_0x44d86b]=await getPool()[_0x3d6dcb(0x54b)](_0x3d6dcb(0xf2));_0x51e214[_0x3d6dcb(0x34d)]=_0x44d86b[0x0][_0x3d6dcb(0x220)];const [_0x3f7f5c]=await getPool()[_0x3d6dcb(0x54b)](_0x3d6dcb(0x3bb));_0x51e214[_0x3d6dcb(0x469)]=_0x3f7f5c[0x0][_0x3d6dcb(0x220)];}catch(_0x3cb7f4){console[_0x3d6dcb(0x2e2)](_0x3d6dcb(0x290),_0x3cb7f4);}_0x34e0e7[_0x3d6dcb(0x3c7)](_0x51e214);}else throw new Error('Settings\x20not\x20found');}catch(_0x34a6e6){console[_0x3d6dcb(0x2e2)](_0x3d6dcb(0x260),_0x34a6e6),_0x34e0e7['json']({'school_name':_0x3d6dcb(0x39c),'npsn':'20222830','akreditasi':'A','hero_title':_0x3d6dcb(0x19f),'hero_subtitle':_0x3d6dcb(0x257),'hero_image_url':'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop','visi':'Terwujudnya\x20sekolah\x20yang\x20unggul\x20dalam\x20prestasi\x20dan\x20berakhlak\x20mulia.','misi':'[]','stats_students':'0','stats_teachers':'0','stats_rooms':'0','stats_extracurriculars':'0','provinsi':'','kota':'','kecamatan':'','kelurahan':'','contact_address':_0x3d6dcb(0x411),'contact_phone':'-','contact_email':'-','bentuk_pendidikan':_0x3d6dcb(0x182),'status_sekolah':_0x3d6dcb(0x2b5),'kurikulum':_0x3d6dcb(0x36a),'gallery_slide_interval':0x2,'headmaster_name':'Hj.\x20NENI\x20HERAWATI,\x20S.Pd','headmaster_nip':_0x3d6dcb(0x2f1),'schedule_date':'Tangerang,\x20.........................\x2020...','spmb_config':'{}','social_links':'[]','seo_title':_0x3d6dcb(0x39c),'seo_description':_0x3d6dcb(0x4ee),'seo_keywords':_0x3d6dcb(0x5eb),'sitemap_enabled':0x1});}})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x304),authenticate,asyncHandler(async(_0x9bee60,_0x7e1f2e)=>{const _0x33e360=a0_0xfa5210,{school_name:_0x3b343b,npsn:_0x3e8605,akreditasi:_0x5c9867,logo_url:_0x538bdf,hero_image_url:_0x3bed80,hero_title:_0x229336,hero_subtitle:_0x43e5b0,visi:_0x3ae9de,misi:_0x2ccc00,stats_students:_0x26dc0d,stats_teachers:_0x15681f,stats_rooms:_0x2c424d,stats_extracurriculars:_0x4618c1,provinsi:_0x29e185,kota:_0x8975dd,kecamatan:_0x47c988,kelurahan:_0x53c5fe,contact_address:_0x2b4367,contact_phone:_0x2fde39,contact_email:_0x541adc,bentuk_pendidikan:_0x427a3c,status_sekolah:_0x4fbdf3,kurikulum:_0x870ed1,gallery_slide_interval:_0x3354da,headmaster_name:_0x40071b,headmaster_nip:_0x4b431a,schedule_date:_0x17043b,spmb_config:_0x3cff64,social_links:_0x9b4d6f,seo_title:_0x558798,seo_description:_0x5089ac,seo_keywords:_0x15c10f,sitemap_enabled:_0xf63485,sync_token:_0x58e553,active_template:_0x196c7d,theme_color:_0x4f69eb,hero_stats_value:_0x4ba84a,hero_stats_label:_0x42a993,hero_stats_desc:_0x48e9ed,headmaster_photo:_0x28f82d,headmaster_welcome_title:_0x3da1b9,headmaster_welcome_content:_0x289ebc,headmaster_welcome_active:_0x32b54e,enable_struktur_organisasi:_0x31fdf8,enable_spmb:_0xaba1d9,enable_elearning:_0x998b95,fb_page_id:_0x152696,ig_account_id:_0x178d73,meta_access_token:_0x578a48,meta_app_id:_0x4480ce,meta_app_secret:_0xb1c3fe,elearning_url:_0x428ba3,elearning_token:_0x393529}=_0x9bee60[_0x33e360(0x2f2)];try{const [_0x17d483]=await getPool()[_0x33e360(0x54b)](_0x33e360(0x398),[_0x3b343b,_0x3e8605,_0x5c9867,_0x538bdf,_0x3bed80,_0x229336,_0x43e5b0,typeof _0x3ae9de===_0x33e360(0x2d2)?_0x3ae9de:JSON['stringify'](_0x3ae9de),typeof _0x2ccc00==='string'?_0x2ccc00:JSON['stringify'](_0x2ccc00),_0x26dc0d,_0x15681f,_0x2c424d,_0x4618c1,_0x29e185,_0x8975dd,_0x47c988,_0x53c5fe,_0x2b4367,_0x2fde39,_0x541adc,_0x427a3c,_0x4fbdf3,_0x870ed1,_0x3354da,_0x40071b,_0x4b431a,_0x17043b,typeof _0x3cff64===_0x33e360(0x2d2)?_0x3cff64:_0x3cff64?JSON['stringify'](_0x3cff64):'{}',typeof _0x9b4d6f===_0x33e360(0x2d2)?_0x9b4d6f:_0x9b4d6f?JSON['stringify'](_0x9b4d6f):'{}',_0x558798,_0x5089ac,_0x15c10f,_0xf63485,_0x58e553||null,_0x196c7d||_0x33e360(0x408),_0x4f69eb||'#2563eb',_0x4ba84a,_0x42a993,_0x48e9ed,_0x28f82d,_0x3da1b9,_0x289ebc,_0x32b54e===void 0x0?0x1:_0x32b54e,_0x31fdf8===void 0x0?0x1:_0x31fdf8,_0xaba1d9===void 0x0?0x1:_0xaba1d9,_0x998b95===void 0x0?0x0:_0x998b95,_0x152696,_0x178d73,_0x578a48,_0x4480ce,_0xb1c3fe,_0x428ba3||null,_0x393529||null][_0x33e360(0x47f)](_0x40911d=>_0x40911d===void 0x0?null:_0x40911d));if(_0x17d483[_0x33e360(0x373)]===0x0){const [_0x38c3ed]=await getPool()['execute'](_0x33e360(0x3c3));_0x38c3ed['length']===0x0&&await getPool()[_0x33e360(0x54b)]('INSERT\x20INTO\x20pengaturan_sekolah\x20(id,\x20school_name,\x20npsn,\x20akreditasi,\x20logo_url,\x20hero_image_url,\x20hero_title,\x20hero_subtitle,\x20visi,\x20misi,\x20stats_students,\x20stats_teachers,\x20stats_rooms,\x20stats_extracurriculars,\x20provinsi,\x20kota,\x20kecamatan,\x20kelurahan,\x20contact_address,\x20contact_phone,\x20contact_email,\x20bentuk_pendidikan,\x20status_sekolah,\x20kurikulum,\x20gallery_slide_interval,\x20headmaster_name,\x20headmaster_nip,\x20schedule_date,\x20spmb_config,\x20social_links,\x20seo_title,\x20seo_description,\x20seo_keywords,\x20sitemap_enabled,\x20sync_token,\x20active_template,\x20theme_color,\x20hero_stats_value,\x20hero_stats_label,\x20hero_stats_desc,\x20headmaster_photo,\x20headmaster_welcome_title,\x20headmaster_welcome_content,\x20headmaster_welcome_active,\x20enable_struktur_organisasi,\x20enable_spmb,\x20enable_elearning,\x20fb_page_id,\x20ig_account_id,\x20meta_access_token,\x20meta_app_id,\x20meta_app_secret,\x20elearning_url,\x20elearning_token)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(1,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x3b343b,_0x3e8605,_0x5c9867,_0x538bdf,_0x3bed80,_0x229336,_0x43e5b0,typeof _0x3ae9de===_0x33e360(0x2d2)?_0x3ae9de:JSON['stringify'](_0x3ae9de),typeof _0x2ccc00===_0x33e360(0x2d2)?_0x2ccc00:JSON[_0x33e360(0x570)](_0x2ccc00),_0x26dc0d,_0x15681f,_0x2c424d,_0x4618c1,_0x29e185,_0x8975dd,_0x47c988,_0x53c5fe,_0x2b4367,_0x2fde39,_0x541adc,_0x427a3c,_0x4fbdf3,_0x870ed1,_0x3354da,_0x40071b,_0x4b431a,_0x17043b,typeof _0x3cff64===_0x33e360(0x2d2)?_0x3cff64:_0x3cff64?JSON[_0x33e360(0x570)](_0x3cff64):'{}',typeof _0x9b4d6f===_0x33e360(0x2d2)?_0x9b4d6f:_0x9b4d6f?JSON[_0x33e360(0x570)](_0x9b4d6f):'{}',_0x558798,_0x5089ac,_0x15c10f,_0xf63485,_0x58e553||null,_0x196c7d||_0x33e360(0x408),_0x4f69eb||_0x33e360(0x26c),_0x4ba84a,_0x42a993,_0x48e9ed,_0x28f82d,_0x3da1b9,_0x289ebc,_0x32b54e===void 0x0?0x1:_0x32b54e,_0x31fdf8===void 0x0?0x1:_0x31fdf8,_0xaba1d9===void 0x0?0x1:_0xaba1d9,_0x998b95===void 0x0?0x0:_0x998b95,_0x152696,_0x178d73,_0x578a48,_0x4480ce,_0xb1c3fe,_0x428ba3||null,_0x393529||null][_0x33e360(0x47f)](_0x430528=>_0x430528===void 0x0?null:_0x430528));}_0x7e1f2e[_0x33e360(0x3c7)]({'success':!![]});}catch(_0x21e8ab){console[_0x33e360(0x2e2)](_0x33e360(0x5ba),_0x21e8ab),_0x7e1f2e[_0x33e360(0x3dc)](0x1f4)[_0x33e360(0x3c7)]({'error':_0x33e360(0x4fd)+_0x21e8ab[_0x33e360(0x19a)]});}})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x1d1),authenticate,asyncHandler(async(_0x46ef94,_0x1ddeaa)=>{const _0x51d842=a0_0xfa5210,{shortLivedToken:_0xaa7d12}=_0x46ef94['body'],[_0x48a393]=await getPool()[_0x51d842(0x54b)]('SELECT\x20meta_app_id,\x20meta_app_secret\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201');if(!_0x48a393||_0x48a393[_0x51d842(0x5be)]===0x0||!_0x48a393[0x0][_0x51d842(0x125)]||!_0x48a393[0x0][_0x51d842(0x3ad)])return _0x1ddeaa[_0x51d842(0x3dc)](0x190)[_0x51d842(0x3c7)]({'error':_0x51d842(0x332)});const _0x293f62='https://graph.facebook.com/v19.0/oauth/access_token?grant_type=fb_exchange_token&client_id='+_0x48a393[0x0]['meta_app_id']+'&client_secret='+_0x48a393[0x0]['meta_app_secret']+_0x51d842(0x5f8)+_0xaa7d12,_0x3faada=await fetch(_0x293f62),_0x1c15bf=await _0x3faada[_0x51d842(0x3c7)]();if(_0x1c15bf[_0x51d842(0x2e2)])return _0x1ddeaa[_0x51d842(0x3dc)](0x190)[_0x51d842(0x3c7)]({'error':_0x1c15bf[_0x51d842(0x2e2)][_0x51d842(0x19a)]});const _0x10efd1=_0x1c15bf[_0x51d842(0x387)],_0x56bced=await fetch(_0x51d842(0x130)+_0x10efd1),_0x42ea8f=await _0x56bced['json']();if(_0x42ea8f['error'])return _0x1ddeaa[_0x51d842(0x3dc)](0x190)[_0x51d842(0x3c7)]({'error':_0x42ea8f['error']['message']});_0x1ddeaa[_0x51d842(0x3c7)]({'pages':_0x42ea8f[_0x51d842(0x52f)],'longLivedToken':_0x10efd1});})),app[a0_0xfa5210(0x218)]('/api/meta/save-page',authenticate,asyncHandler(async(_0x3046f3,_0x18ccf8)=>{const _0x58fac6=a0_0xfa5210,{pageId:_0x2ce2d1,pageAccessToken:_0x413b42,pageName:_0x1a36e1}=_0x3046f3[_0x58fac6(0x2f2)],_0x5402fc=await fetch('https://graph.facebook.com/v19.0/'+_0x2ce2d1+_0x58fac6(0x1b4)+_0x413b42),_0x191519=await _0x5402fc[_0x58fac6(0x3c7)]();let _0x24e973=null;_0x191519[_0x58fac6(0x51d)]&&(_0x24e973=_0x191519[_0x58fac6(0x51d)]['id']),await getPool()[_0x58fac6(0x54b)](_0x58fac6(0x283),[_0x2ce2d1,_0x24e973,_0x413b42]),_0x18ccf8[_0x58fac6(0x3c7)]({'success':!![],'igAccountId':_0x24e973});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x49a),asyncHandler(async(_0x1833f2,_0x3f0d0d)=>{const _0x169371=a0_0xfa5210,[_0x195fc0]=await getPool()['execute']('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20r.*,\x20s.nama_lengkap\x20as\x20wali_kelas_name,\x20s.nip\x20as\x20wali_kelas_nip\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20rombongan_belajar\x20r\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20r.wali_kelas_id\x20=\x20s.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20r.tingkat,\x20r.name\x0a\x20\x20\x20\x20');_0x3f0d0d[_0x169371(0x3c7)](_0x195fc0);})),app[a0_0xfa5210(0x1fc)]('/api/rombongan_belajar',authenticate,asyncHandler(async(_0x26e4c0,_0x240114)=>{const _0xca2045=a0_0xfa5210;let _0x15084f='';const _0x539c7f=[];if(_0x26e4c0[_0xca2045(0x189)][_0xca2045(0x156)]===_0xca2045(0x45b)){const _0x4f8d0d=_0x26e4c0['user'][_0xca2045(0x526)]||[];if(!_0x4f8d0d[_0xca2045(0x424)]('all')){const [_0x7db4f3]=await getPool()[_0xca2045(0x54b)](_0xca2045(0x2a2),[_0x26e4c0[_0xca2045(0x189)][_0xca2045(0x348)]]);_0x7db4f3[0x0][_0xca2045(0x220)]>0x0&&(_0x15084f=_0xca2045(0x415),_0x539c7f[_0xca2045(0x4a8)](_0x26e4c0['user'][_0xca2045(0x348)]));}}const [_0x3315f5]=await getPool()[_0xca2045(0x54b)](_0xca2045(0x50e)+_0x15084f+_0xca2045(0x3f3),_0x539c7f);_0x240114[_0xca2045(0x3c7)](_0x3315f5);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x330),authenticate,asyncHandler(async(_0x1c49a9,_0x1d0762)=>{const _0x20e83c=a0_0xfa5210,{name:_0x1462c5,wali_kelas_id:_0x315cbe,tingkat:_0x59cb3a}=_0x1c49a9[_0x20e83c(0x2f2)];console['log'](_0x20e83c(0x1dd)+_0x1462c5+_0x20e83c(0x145)+_0x315cbe+_0x20e83c(0x1db)+_0x59cb3a);try{await getPool()[_0x20e83c(0x54b)](_0x20e83c(0x242),[_0x1462c5,_0x315cbe||null,_0x59cb3a||null]['map'](clean)),_0x1d0762[_0x20e83c(0x3c7)]({'success':!![]});}catch(_0x2534ae){console['error'](_0x20e83c(0x581),_0x2534ae);if(_0x2534ae[_0x20e83c(0x268)]===_0x20e83c(0x1b6))return _0x1d0762[_0x20e83c(0x3dc)](0x190)['json']({'error':'Nama\x20rombel\x20sudah\x20ada'});throw _0x2534ae;}})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x2b8),authenticate,asyncHandler(async(_0x8e3c41,_0x52c00c)=>{const _0x4dec00=a0_0xfa5210,_0xef6aa4=_0x8e3c41[_0x4dec00(0x5e5)]['id'];console['log']('[Rombels]\x20Deleting\x20id='+_0xef6aa4);try{const [_0x3f3f55]=await getPool()[_0x4dec00(0x54b)](_0x4dec00(0x580),[_0xef6aa4]);if(_0x3f3f55[_0x4dec00(0x373)]===0x0)return _0x52c00c[_0x4dec00(0x3dc)](0x194)['json']({'error':_0x4dec00(0x319)});_0x52c00c['json']({'success':!![],'affectedRows':_0x3f3f55['affectedRows']});}catch(_0x72aa81){console[_0x4dec00(0x2e2)]('[Rombels]\x20Delete\x20error\x20for\x20id='+_0xef6aa4+':',_0x72aa81),_0x52c00c[_0x4dec00(0x3dc)](0x1f4)[_0x4dec00(0x3c7)]({'error':_0x4dec00(0x36f),'detail':_0x72aa81[_0x4dec00(0x19a)]});}})),app[a0_0xfa5210(0x31b)]('/api/rombongan_belajar/:id',authenticate,asyncHandler(async(_0x46a84e,_0x5a3a7a)=>{const _0x2d1c0a=a0_0xfa5210,{name:_0x322918,wali_kelas_id:_0x1b5285,tingkat:_0x4c4325}=_0x46a84e[_0x2d1c0a(0x2f2)],_0x2feca6=_0x46a84e[_0x2d1c0a(0x5e5)]['id'];console[_0x2d1c0a(0x50a)]('[Rombels]\x20Updating\x20id='+_0x2feca6+':\x20name='+_0x322918+_0x2d1c0a(0x145)+_0x1b5285+_0x2d1c0a(0x1db)+_0x4c4325);try{await getPool()[_0x2d1c0a(0x54b)](_0x2d1c0a(0x274),[_0x322918,_0x1b5285||null,_0x4c4325||null,_0x2feca6][_0x2d1c0a(0x47f)](clean)),_0x5a3a7a[_0x2d1c0a(0x3c7)]({'success':!![]});}catch(_0x3d8840){console['error'](_0x2d1c0a(0x1e2)+_0x2feca6+':',_0x3d8840);if(_0x3d8840[_0x2d1c0a(0x268)]===_0x2d1c0a(0x1b6))return _0x5a3a7a[_0x2d1c0a(0x3dc)](0x190)[_0x2d1c0a(0x3c7)]({'error':_0x2d1c0a(0x4a5)});throw _0x3d8840;}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x26a),authenticate,asyncHandler(async(_0x50d9bd,_0x50e2c6)=>{const _0x3d0259=a0_0xfa5210;try{const _0xfb65f9={};let _0x1f5f18='';const _0xd8688e=[];if(_0x50d9bd['user']['type']==='staff'){const _0x38e228=_0x50d9bd['user'][_0x3d0259(0x526)]||[];if(!_0x38e228[_0x3d0259(0x424)]('all')){const [_0x3627a3]=await getPool()['execute'](_0x3d0259(0x196),[_0x50d9bd[_0x3d0259(0x189)][_0x3d0259(0x348)]]);if(_0x3627a3['length']>0x0){const _0x488085=_0x3627a3[_0x3d0259(0x47f)](_0x37bfa7=>_0x37bfa7['name']);_0x1f5f18='WHERE\x20rombel\x20IN\x20('+_0x488085[_0x3d0259(0x47f)](()=>'?')[_0x3d0259(0x4ca)](',')+')',_0xd8688e[_0x3d0259(0x4a8)](..._0x488085);}}}const [_0x2f4da5]=await getPool()['execute'](_0x3d0259(0xf5)+_0x1f5f18+_0x3d0259(0x2ad),_0xd8688e);_0xfb65f9[_0x3d0259(0x4a6)]=_0x2f4da5[_0x3d0259(0x47f)](_0x4d636f=>({'rombel_name':_0x4d636f[_0x3d0259(0x5ec)]||_0x3d0259(0x3a8),'total':Number(_0x4d636f['value'])}));const [_0x95860c]=await getPool()[_0x3d0259(0x54b)]('SELECT\x20jenis_kelamin\x20as\x20name,\x20COUNT(*)\x20as\x20value\x20FROM\x20siswa\x20'+_0x1f5f18+_0x3d0259(0x1df),_0xd8688e);_0xfb65f9[_0x3d0259(0x21b)]=_0x95860c[_0x3d0259(0x47f)](_0x2163fc=>({'gender':_0x2163fc[_0x3d0259(0x5ec)]||_0x3d0259(0x3a8),'total':Number(_0x2163fc[_0x3d0259(0x22f)])}));const [_0x29f817]=await getPool()[_0x3d0259(0x54b)](_0x3d0259(0x21a)+_0x1f5f18+_0x3d0259(0x1a5),_0xd8688e);_0xfb65f9[_0x3d0259(0x24b)]=_0x29f817[_0x3d0259(0x47f)](_0x526538=>({'agama':_0x526538[_0x3d0259(0x5ec)]||_0x3d0259(0x350),'total':Number(_0x526538[_0x3d0259(0x22f)])}));const [_0x24ff08]=await getPool()[_0x3d0259(0x54b)]('SELECT\x20status_kepegawaian\x20as\x20name,\x20COUNT(*)\x20as\x20value\x20FROM\x20pegawai\x20GROUP\x20BY\x20status_kepegawaian');_0xfb65f9[_0x3d0259(0x203)]=_0x24ff08['map'](_0x2cad7d=>({'status_kepegawaian':_0x2cad7d[_0x3d0259(0x5ec)]||_0x3d0259(0x302),'total':Number(_0x2cad7d[_0x3d0259(0x22f)])}));const [_0x575515]=await getPool()[_0x3d0259(0x54b)](_0x3d0259(0x51b));_0xfb65f9[_0x3d0259(0x3aa)]=_0x575515[_0x3d0259(0x47f)](_0x415db5=>({'jabatan':_0x415db5['name']||_0x3d0259(0x3a8),'total':Number(_0x415db5['value'])})),console['log'](_0x3d0259(0x537),Object[_0x3d0259(0x421)](_0xfb65f9)),_0x50e2c6[_0x3d0259(0x3c7)](_0xfb65f9);}catch(_0x282143){console['error'](_0x3d0259(0x43d),_0x282143),_0x50e2c6[_0x3d0259(0x3dc)](0x1f4)[_0x3d0259(0x3c7)]({'error':_0x3d0259(0x243)});}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0xf1),authenticate,asyncHandler(async(_0x472b41,_0x137fb1)=>{const _0x2aba36=a0_0xfa5210,[_0x4cb88e]=await getPool()[_0x2aba36(0x54b)](_0x2aba36(0x5b3));_0x137fb1['json'](_0x4cb88e);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x58e),authenticate,asyncHandler(async(_0x5ea006,_0x440809)=>{const _0x4ef161=a0_0xfa5210;await getPool()[_0x4ef161(0x54b)]('UPDATE\x20pengguna_web\x20SET\x20status_aktif\x20=\x20NOT\x20status_aktif\x20WHERE\x20id\x20=\x20?',[_0x5ea006['params']['id']]),_0x440809[_0x4ef161(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)]('/api/kalender_akademik',asyncHandler(async(_0x50421f,_0x1a253e)=>{const _0x1517a6=a0_0xfa5210,[_0x2573da]=await getPool()[_0x1517a6(0x54b)](_0x1517a6(0x3ef));_0x1a253e[_0x1517a6(0x3c7)](_0x2573da);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x595),authenticate,asyncHandler(async(_0x20c458,_0x2d3953)=>{const _0x1798aa=a0_0xfa5210,{title:_0x1322b6,event_date:_0x1383d5,description:_0x764cff,category:_0x181826}=_0x20c458[_0x1798aa(0x2f2)];await getPool()[_0x1798aa(0x54b)](_0x1798aa(0x335),[_0x1322b6,_0x1383d5,_0x764cff,_0x181826]['map'](clean)),_0x2d3953[_0x1798aa(0x3c7)]({'success':!![]});})),app['delete'](a0_0xfa5210(0x4fe),authenticate,asyncHandler(async(_0x57414f,_0x490ad7)=>{const _0x1e76e5=a0_0xfa5210;await getPool()['execute']('DELETE\x20FROM\x20kalender_akademik\x20WHERE\x20id\x20=\x20?',[_0x57414f[_0x1e76e5(0x5e5)]['id']]),_0x490ad7[_0x1e76e5(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x622),authenticate,asyncHandler(async(_0x22dbb,_0x3ad951)=>{const _0x543ae0=a0_0xfa5210,{class_name:_0x1b8629}=_0x22dbb[_0x543ae0(0x59d)];let _0x15981a='SELECT\x20jp.*\x20FROM\x20jadwal_pelajaran\x20jp',_0x32838b=[],_0x2709ec=[];_0x1b8629&&(_0x2709ec[_0x543ae0(0x4a8)](_0x543ae0(0x2c1)),_0x32838b[_0x543ae0(0x4a8)](_0x1b8629));if(_0x22dbb[_0x543ae0(0x189)][_0x543ae0(0x156)]==='staff'){const _0x4b229d=_0x22dbb[_0x543ae0(0x189)]['permissions']||[];if(!_0x4b229d[_0x543ae0(0x424)]('all')){_0x15981a+=_0x543ae0(0x5ea);const [_0x2ba872]=await getPool()[_0x543ae0(0x54b)](_0x543ae0(0x2a2),[_0x22dbb['user'][_0x543ae0(0x348)]]);_0x2ba872[0x0]['count']>0x0&&(_0x2709ec[_0x543ae0(0x4a8)](_0x543ae0(0x3dd)),_0x32838b[_0x543ae0(0x4a8)](_0x22dbb[_0x543ae0(0x189)]['staff_id']));}}_0x2709ec[_0x543ae0(0x5be)]>0x0&&(_0x15981a+=_0x543ae0(0x15d)+_0x2709ec['join'](_0x543ae0(0x5ab)));_0x15981a+=_0x543ae0(0x204);const [_0x25044d]=await getPool()['execute'](_0x15981a,_0x32838b);_0x3ad951['json'](_0x25044d);})),app['get'](a0_0xfa5210(0x173),asyncHandler(async(_0xb863d2,_0x3e2400)=>{const _0x53b064=a0_0xfa5210,{class_name:_0x5960e0}=_0xb863d2[_0x53b064(0x59d)];let _0x2820eb=_0x53b064(0x45c),_0x131b12=[];_0x5960e0&&(_0x2820eb+=_0x53b064(0x473),_0x131b12[_0x53b064(0x4a8)](_0x5960e0));_0x2820eb+='\x20ORDER\x20BY\x20jp.day_name,\x20jp.start_time';const [_0x3e7a56]=await getPool()[_0x53b064(0x54b)](_0x2820eb,_0x131b12);_0x3e2400[_0x53b064(0x3c7)](_0x3e7a56);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x622),authenticate,asyncHandler(async(_0x1c0c3f,_0x4d3200)=>{const _0x4388a7=a0_0xfa5210,{class_name:_0x8606bc,day_name:_0x249625,subject:_0x302cb9,start_time:_0x36e53e,end_time:_0x2298d8,teacher_name:_0x555807}=_0x1c0c3f[_0x4388a7(0x2f2)];await getPool()['execute']('INSERT\x20INTO\x20jadwal_pelajaran\x20(class_name,\x20day_name,\x20subject,\x20start_time,\x20end_time,\x20teacher_name)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x8606bc,_0x249625,_0x302cb9,_0x36e53e,_0x2298d8,_0x555807]),_0x4d3200['json']({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x178),authenticate,asyncHandler(async(_0x15664e,_0x1480f6)=>{const _0x5d3aaa=a0_0xfa5210;await getPool()[_0x5d3aaa(0x54b)]('DELETE\x20FROM\x20jadwal_pelajaran\x20WHERE\x20id\x20=\x20?',[_0x15664e['params']['id']]),_0x1480f6[_0x5d3aaa(0x3c7)]({'success':!![]});})),app['get'](a0_0xfa5210(0x497),asyncHandler(async(_0x125c7d,_0x211a6a)=>{const _0x2acee2=a0_0xfa5210,[_0x4d7f4b]=await getPool()[_0x2acee2(0x54b)](_0x2acee2(0x452));_0x211a6a['json'](_0x4d7f4b);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x497),authenticate,asyncHandler(async(_0x61fd59,_0x2b4cb1)=>{const _0x42b8d0=a0_0xfa5210,{name:_0x12b2ca,description:_0x4f6d48,image_url:_0x4fb96c,schedule_info:_0x264a0f}=_0x61fd59[_0x42b8d0(0x2f2)];await getPool()['execute'](_0x42b8d0(0x236),[_0x12b2ca,_0x4f6d48,_0x4fb96c,_0x264a0f]),_0x2b4cb1[_0x42b8d0(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x563),authenticate,asyncHandler(async(_0x34a474,_0x466e0d)=>{const _0x5b46ab=a0_0xfa5210;await getPool()['execute']('DELETE\x20FROM\x20ekstrakurikuler\x20WHERE\x20id\x20=\x20?',[_0x34a474[_0x5b46ab(0x5e5)]['id']]),_0x466e0d[_0x5b46ab(0x3c7)]({'success':!![]});})),app['put'](a0_0xfa5210(0x4fe),authenticate,asyncHandler(async(_0x2b0408,_0x174165)=>{const _0x18123e=a0_0xfa5210,{title:_0x54e8ce,event_date:_0x20e651,description:_0x2caead,category:_0x1ab9f1}=_0x2b0408[_0x18123e(0x2f2)];await getPool()[_0x18123e(0x54b)]('UPDATE\x20kalender_akademik\x20SET\x20title\x20=\x20?,\x20event_date\x20=\x20?,\x20description\x20=\x20?,\x20category\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x54e8ce,_0x20e651,_0x2caead,_0x1ab9f1,_0x2b0408[_0x18123e(0x5e5)]['id']]['map'](clean)),_0x174165[_0x18123e(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x31b)](a0_0xfa5210(0x178),authenticate,asyncHandler(async(_0x23065c,_0x979cff)=>{const _0x872dd8=a0_0xfa5210,{class_name:_0x5dfcaf,day_name:_0x2f8a17,subject:_0x5c0b9d,start_time:_0x5ddd08,end_time:_0x36a374,teacher_name:_0x37ad6d}=_0x23065c[_0x872dd8(0x2f2)];await getPool()[_0x872dd8(0x54b)](_0x872dd8(0x1f0),[_0x5dfcaf,_0x2f8a17,_0x5c0b9d,_0x5ddd08,_0x36a374,_0x37ad6d,_0x23065c[_0x872dd8(0x5e5)]['id']]),_0x979cff[_0x872dd8(0x3c7)]({'success':!![]});})),app['put']('/api/ekstrakurikuler/:id',authenticate,asyncHandler(async(_0x2c15ff,_0x57995f)=>{const _0x5f0bfe=a0_0xfa5210,{name:_0x4cab2d,description:_0x3d2fc4,image_url:_0x4be123,schedule_info:_0x1a705d}=_0x2c15ff[_0x5f0bfe(0x2f2)];await getPool()[_0x5f0bfe(0x54b)](_0x5f0bfe(0x472),[_0x4cab2d,_0x3d2fc4,_0x4be123,_0x1a705d,_0x2c15ff[_0x5f0bfe(0x5e5)]['id']]),_0x57995f['json']({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x1f7),authenticate,asyncHandler(async(_0x1dc97e,_0xc50ef8)=>{const _0xc26e34=a0_0xfa5210;if(!_0x1dc97e[_0xc26e34(0x189)][_0xc26e34(0x526)][_0xc26e34(0x424)](_0xc26e34(0x3d6))&&!_0x1dc97e[_0xc26e34(0x189)][_0xc26e34(0x526)][_0xc26e34(0x424)](_0xc26e34(0x5ce)))return _0xc50ef8[_0xc26e34(0x3dc)](0x193)[_0xc26e34(0x3c7)]({'error':_0xc26e34(0x20d)});await getPool()['execute'](_0xc26e34(0x267),[_0x1dc97e[_0xc26e34(0x5e5)]['id']]),_0xc50ef8['json']({'success':!![]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x3e0),authenticate,asyncHandler(async(_0x42d7a2,_0x54dfad)=>{const _0x3efff3=a0_0xfa5210,[_0x535143]=await getPool()[_0x3efff3(0x54b)](_0x3efff3(0x380));_0x54dfad[_0x3efff3(0x3c7)](_0x535143);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x3e0),authenticate,asyncHandler(async(_0x397e75,_0x5068c8)=>{const _0x41c4ed=a0_0xfa5210,{name:_0x3e3b7f,permissions:_0x2a7d05}=_0x397e75[_0x41c4ed(0x2f2)];await getPool()['execute'](_0x41c4ed(0x2da),[_0x3e3b7f,JSON[_0x41c4ed(0x570)](_0x2a7d05)]),_0x5068c8[_0x41c4ed(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x31b)](a0_0xfa5210(0x37f),authenticate,asyncHandler(async(_0x4857b8,_0x44e2b1)=>{const _0x4e1d00=a0_0xfa5210,[_0x1089f2]=await getPool()['execute'](_0x4e1d00(0x3d3),[_0x4857b8[_0x4e1d00(0x5e5)]['id']]);if(_0x1089f2[_0x4e1d00(0x5be)]>0x0&&_0x1089f2[0x0][_0x4e1d00(0x5ec)][_0x4e1d00(0x12a)]()===_0x4e1d00(0x44d))return _0x44e2b1[_0x4e1d00(0x3dc)](0x193)[_0x4e1d00(0x3c7)]({'error':_0x4e1d00(0x303)});const {name:_0x2f72bc,permissions:_0x3b73ea}=_0x4857b8['body'];await getPool()[_0x4e1d00(0x54b)]('UPDATE\x20peran\x20SET\x20name\x20=\x20?,\x20permissions\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x2f72bc,JSON[_0x4e1d00(0x570)](_0x3b73ea),_0x4857b8[_0x4e1d00(0x5e5)]['id']]),_0x44e2b1[_0x4e1d00(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x37f),authenticate,asyncHandler(async(_0x22a3ef,_0x329512)=>{const _0x516f75=a0_0xfa5210,[_0x5e90b4]=await getPool()[_0x516f75(0x54b)]('SELECT\x20name\x20FROM\x20peran\x20WHERE\x20id\x20=\x20?',[_0x22a3ef[_0x516f75(0x5e5)]['id']]);if(_0x5e90b4[_0x516f75(0x5be)]>0x0&&_0x5e90b4[0x0][_0x516f75(0x5ec)]['toLowerCase']()===_0x516f75(0x44d))return _0x329512[_0x516f75(0x3dc)](0x193)[_0x516f75(0x3c7)]({'error':'Role\x20Superadmin\x20tidak\x20dapat\x20dihapus.'});const [_0x3aa22d]=await getPool()['execute'](_0x516f75(0x3fb),[_0x22a3ef[_0x516f75(0x5e5)]['id']]);if(_0x3aa22d[_0x516f75(0x5be)]>0x0)return _0x329512['status'](0x190)['json']({'error':'Role\x20cannot\x20be\x20deleted\x20while\x20it\x20is\x20assigned\x20to\x20users.'});await getPool()['execute'](_0x516f75(0x528),[_0x22a3ef[_0x516f75(0x5e5)]['id']]),_0x329512[_0x516f75(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)]('/api/wilayah/search',authenticate,asyncHandler(async(_0x55ac91,_0x34d105)=>{const _0x270ccb=a0_0xfa5210,_0x369f15=_0x55ac91['query']['q'];if(!_0x369f15||typeof _0x369f15!==_0x270ccb(0x2d2)||_0x369f15[_0x270ccb(0x5be)]<0x3)return _0x34d105[_0x270ccb(0x3c7)]([]);const _0x480955='%'+_0x369f15+'%',_0x1e2020=_0x270ccb(0x52c),[_0x31b6a6]=await getPool()[_0x270ccb(0x59d)](_0x1e2020,[_0x480955]),_0x49b404=_0x31b6a6[_0x270ccb(0x47f)](_0x5b0c07=>({'kelurahan':_0x5b0c07[_0x270ccb(0x475)],'kecamatan':_0x5b0c07[_0x270ccb(0x195)],'kota':_0x5b0c07[_0x270ccb(0x4fa)],'provinsi':_0x5b0c07[_0x270ccb(0x234)],'full_text':(_0x5b0c07[_0x270ccb(0x475)]||'')+',\x20'+(_0x5b0c07['kecamatan']||'')+',\x20'+(_0x5b0c07[_0x270ccb(0x4fa)]||'')+',\x20'+(_0x5b0c07[_0x270ccb(0x234)]||'')}));_0x34d105[_0x270ccb(0x3c7)](_0x49b404);})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x349),(_0x2db79b,_0x53ecc1,_0x36e201)=>{const _0x5bd5f7=a0_0xfa5210;console[_0x5bd5f7(0x50a)](_0x5bd5f7(0x120),_0x2db79b[_0x5bd5f7(0x5e5)][_0x5bd5f7(0x38f)]),_0x36e201();},authenticate,asyncHandler(async(_0x18df66,_0x29208c)=>{const _0x3f278e=a0_0xfa5210,{column:_0x2b37da}=_0x18df66[_0x3f278e(0x5e5)],_0x22ee57=[_0x3f278e(0x2fd),'bid_study','mata_pelajaran','status_kepegawaian',_0x3f278e(0x58c),_0x3f278e(0x494),_0x3f278e(0x61a)];if(!_0x22ee57[_0x3f278e(0x424)](_0x2b37da))return _0x29208c['status'](0x190)['json']({'error':_0x3f278e(0x119)});const _0x48083a=getPool(),[_0x177e6d]=await _0x48083a[_0x3f278e(0x59d)]('SELECT\x20DISTINCT\x20??\x20as\x20value\x20FROM\x20referensi\x20WHERE\x20??\x20IS\x20NOT\x20NULL\x20AND\x20??\x20!=\x20\x27\x27\x20ORDER\x20BY\x20??\x20ASC',[_0x2b37da,_0x2b37da,_0x2b37da,_0x2b37da]);_0x29208c[_0x3f278e(0x3c7)](_0x177e6d[_0x3f278e(0x47f)](_0x3cc51d=>_0x3cc51d['value']));})),app['post'](a0_0xfa5210(0x1af),authenticate,asyncHandler(async(_0x53f3a8,_0x43186a)=>{const _0x1b99eb=a0_0xfa5210;if(!_0x53f3a8[_0x1b99eb(0x189)][_0x1b99eb(0x526)][_0x1b99eb(0x424)]('all')&&!_0x53f3a8[_0x1b99eb(0x189)][_0x1b99eb(0x526)][_0x1b99eb(0x424)](_0x1b99eb(0x167)))return _0x43186a['status'](0x193)[_0x1b99eb(0x3c7)]({'error':'Access\x20denied'});const _0x391bd6=_0x53f3a8[_0x1b99eb(0x2f2)];if(!Array[_0x1b99eb(0x251)](_0x391bd6)||_0x391bd6['length']===0x0)return _0x43186a[_0x1b99eb(0x3dc)](0x190)[_0x1b99eb(0x3c7)]({'error':_0x1b99eb(0x252)});const _0x26b87d=await getPool()[_0x1b99eb(0x4b4)]();try{let _0x114295=0x0,_0x17fe93=0x0;for(const _0x1313e7 of _0x391bd6){if(!_0x1313e7[_0x1b99eb(0x377)])continue;const _0x2cb703=String(_0x1313e7[_0x1b99eb(0x46b)]||''),_0x5183db=String(_0x1313e7['nik']||''),_0x5d2a51=import_crypto['default'][_0x1b99eb(0x459)](),[_0x34f917]=await _0x26b87d[_0x1b99eb(0x59d)](_0x1b99eb(0x262),[_0x5d2a51,String(_0x1313e7['nama_lengkap']||''),String(_0x1313e7['nuptk']||'')||null,String(_0x1313e7[_0x1b99eb(0x223)]||'')||null,_0x2cb703||null,_0x5183db||null,String(_0x1313e7[_0x1b99eb(0x264)]||'')||null,_0x1313e7[_0x1b99eb(0x57a)]||null,String(_0x1313e7[_0x1b99eb(0x38c)]||'Honorer')||null,String(_0x1313e7[_0x1b99eb(0x2fd)]||'')||null,String(_0x1313e7[_0x1b99eb(0x51e)]||'')||null,String(_0x1313e7[_0x1b99eb(0x2ee)]||'')||null,String(_0x1313e7['jenjang_pendidikan']||'')||null,String(_0x1313e7[_0x1b99eb(0x186)]||'')||null,String(_0x1313e7[_0x1b99eb(0x4df)]||'')||null,String(_0x1313e7[_0x1b99eb(0x26f)]||'')||null,String(_0x1313e7[_0x1b99eb(0x16b)]||'')||null,String(_0x1313e7[_0x1b99eb(0x56d)]||'')||null,String(_0x1313e7['mengajar']||'')||null,String(_0x1313e7[_0x1b99eb(0x440)]||'')||null,String(_0x1313e7[_0x1b99eb(0x3c6)]||'')||null,String(_0x1313e7[_0x1b99eb(0x273)]||'')||null,String(_0x1313e7[_0x1b99eb(0x20c)]||'')||null,String(_0x1313e7['kompetensi']||'')||null]);if(_0x34f917['affectedRows']<=0x2)_0x114295++;else _0x17fe93++;}_0x43186a[_0x1b99eb(0x3c7)]({'success':!![],'message':_0x1b99eb(0x4e8)+_0x114295+_0x1b99eb(0x177)+_0x17fe93+_0x1b99eb(0x3b2)});}catch(_0x4977f5){console[_0x1b99eb(0x2e2)](_0x1b99eb(0x194),_0x4977f5),_0x43186a[_0x1b99eb(0x3dc)](0x1f4)[_0x1b99eb(0x3c7)]({'error':'Gagal\x20impor:\x20'+_0x4977f5['message']});}finally{_0x26b87d['release']();}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x31a),authenticate,asyncHandler(async(_0x587043,_0x22a570)=>{const _0x426be0=a0_0xfa5210,[_0x12c2c8]=await getPool()['execute'](_0x426be0(0x250));_0x22a570[_0x426be0(0x3c7)](_0x12c2c8);})),app['get'](a0_0xfa5210(0x1b1),asyncHandler(async(_0x4003d1,_0xe17a3a)=>{const _0xd7eec2=a0_0xfa5210,[_0x5bf1a9]=await getPool()['execute'](_0xd7eec2(0x199));_0xe17a3a['json'](_0x5bf1a9);})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x1a4),authenticate,asyncHandler(async(_0xd5148a,_0x74733a)=>{const _0x832d0c=a0_0xfa5210,[_0x14e910]=await getPool()[_0x832d0c(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20s.*,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20TRIM(CONCAT(IFNULL(CONCAT(NULLIF(p.gelar_depan,\x20\x27\x27),\x20\x27\x20\x27),\x20\x27\x27),\x20p.nama_lengkap,\x20IFNULL(CONCAT(\x27,\x20\x27,\x20NULLIF(p.gelar_belakang,\x20\x27\x27)),\x20\x27\x27)))\x20AS\x20nama_lengkap,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20p.nip,\x20COALESCE(f.drive,\x20f.server)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20struktur_organisasi\x20s\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20p\x20ON\x20s.pegawai_id\x20COLLATE\x20utf8mb4_unicode_ci\x20=\x20p.pegawai_id\x20COLLATE\x20utf8mb4_unicode_ci\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20f\x20ON\x20p.pegawai_id\x20COLLATE\x20utf8mb4_unicode_ci\x20=\x20f.data_id\x20COLLATE\x20utf8mb4_unicode_ci\x20AND\x20f.tipe_data\x20=\x20\x27pegawai\x27\x20AND\x20f.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20s.urutan\x20ASC\x0a\x20\x20\x20\x20');_0x74733a[_0x832d0c(0x3c7)](_0x14e910);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x1a4),authenticate,asyncHandler(async(_0x3dcfd7,_0xd269b1)=>{const _0x507831=a0_0xfa5210,{id:_0x4b3530,pegawai_id:_0x3d351d,parent_id:_0x4a1c4f,jabatan_struktur:_0x42f7eb,urutan:_0x3bef05}=_0x3dcfd7['body'];if(!_0x42f7eb)return _0xd269b1['status'](0x190)[_0x507831(0x3c7)]({'error':_0x507831(0x4f0)});_0x4b3530?await getPool()['execute'](_0x507831(0x3c0),[_0x3d351d||null,_0x4a1c4f||null,_0x42f7eb,_0x3bef05||0x0,_0x4b3530]):await getPool()['execute'](_0x507831(0x2ae),[_0x3d351d||null,_0x4a1c4f||null,_0x42f7eb,_0x3bef05||0x0]),_0xd269b1[_0x507831(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x201),authenticate,asyncHandler(async(_0x420106,_0x366d1d)=>{const _0x450b27=a0_0xfa5210;await getPool()[_0x450b27(0x54b)]('DELETE\x20FROM\x20struktur_organisasi\x20WHERE\x20id\x20=\x20?',[_0x420106['params']['id']]),_0x366d1d[_0x450b27(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x31a),authenticate,asyncHandler(async(_0x5456db,_0x24660d)=>{const _0x3e24db=a0_0xfa5210,{nama_lengkap:_0x367915,nuptk:_0x31798d,jenis_kelamin:_0x9689fc,nip:_0x26b8af,nik:_0x6edbfd,tempat_lahir:_0x4f3a02,tanggal_lahir:_0x4e72c6,status_kepegawaian:_0x564af3,jenis_ptk:_0x2c2fc3,gelar_depan:_0x16339d,gelar_belakang:_0x257300,jenjang_pendidikan:_0xe0f52f,jurusan_prodi:_0x51e623,sertifikasi:_0x3b1868,tmt_kerja:_0x1a246b,jabatan_ptk:_0x3ec5ab,tugas_tambahan:_0x4ebb1d,mengajar:_0x364045,jam_tugas_tambahan:_0x3fe796,jjm:_0x16fd7e,total_jjm:_0x44c1d2,siswa:_0x176cb4,kompetensi:_0x15840e}=_0x5456db[_0x3e24db(0x2f2)];if(!_0x367915)return _0x24660d[_0x3e24db(0x3dc)](0x190)['json']({'error':_0x3e24db(0x372)});const _0x53b326=_0x43585e=>{if(typeof _0x43585e==='string'){const _0x14b2e2=_0x43585e['trim']();return _0x14b2e2===''||_0x14b2e2==='-'?null:_0x14b2e2;}return _0x43585e===void 0x0||_0x43585e===null?null:_0x43585e;};try{const _0x3d021d=import_crypto[_0x3e24db(0x60b)][_0x3e24db(0x459)]();await getPool()[_0x3e24db(0x54b)]('INSERT\x20INTO\x20pegawai\x20(pegawai_id,\x20nama_lengkap,\x20nuptk,\x20jenis_kelamin,\x20nip,\x20nik,\x20tempat_lahir,\x20tanggal_lahir,\x20status_kepegawaian,\x20jenis_ptk,\x20gelar_depan,\x20gelar_belakang,\x20jenjang_pendidikan,\x20jurusan_prodi,\x20sertifikasi,\x20tmt_kerja,\x20jabatan_ptk,\x20tugas_tambahan,\x20mengajar,\x20jam_tugas_tambahan,\x20jjm,\x20total_jjm,\x20siswa,\x20kompetensi)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x3d021d,_0x367915,_0x31798d||null,_0x9689fc||null,_0x26b8af||null,_0x6edbfd||null,_0x4f3a02||null,_0x4e72c6||null,_0x564af3||_0x3e24db(0x621),_0x2c2fc3||null,_0x16339d||null,_0x257300||null,_0xe0f52f||null,_0x51e623||null,_0x3b1868||null,_0x1a246b||null,_0x3ec5ab||null,_0x4ebb1d||null,_0x364045||null,_0x3fe796||null,_0x16fd7e||null,_0x44c1d2||null,_0x176cb4||null,_0x15840e||null][_0x3e24db(0x47f)](_0x53b326)),_0x24660d['json']({'success':!![]});}catch(_0x58c33a){if(_0x58c33a[_0x3e24db(0x268)]===_0x3e24db(0x1b6))return _0x24660d['status'](0x190)[_0x3e24db(0x3c7)]({'error':_0x3e24db(0x289)});throw _0x58c33a;}})),app[a0_0xfa5210(0x31b)]('/api/pegawai/:id',authenticate,asyncHandler(async(_0x56d09f,_0x315666)=>{const _0x188fd7=a0_0xfa5210,{nama_lengkap:_0x357252,nuptk:_0x4fd429,jenis_kelamin:_0x296ff5,nip:_0x3cdd49,nik:_0x5928ef,tempat_lahir:_0x51839e,tanggal_lahir:_0x26fbf6,status_kepegawaian:_0x30ae5f,jenis_ptk:_0x521d54,gelar_depan:_0x5a0b61,gelar_belakang:_0x53c634,jenjang_pendidikan:_0x298dd7,jurusan_prodi:_0x27ec6e,sertifikasi:_0x52558d,tmt_kerja:_0x21cc7e,jabatan_ptk:_0x17b5d8,tugas_tambahan:_0x233579,mengajar:_0xe45f68,jam_tugas_tambahan:_0x1fd3be,jjm:_0x2d6936,total_jjm:_0x2364ea,siswa:_0x5ba3d8,kompetensi:_0x49ed8a}=_0x56d09f[_0x188fd7(0x2f2)],{id:_0x11e9c5}=_0x56d09f[_0x188fd7(0x5e5)];if(!_0x357252)return _0x315666[_0x188fd7(0x3dc)](0x190)[_0x188fd7(0x3c7)]({'error':_0x188fd7(0x372)});const _0x554a94=_0x2ee56b=>{const _0x320413=_0x188fd7;if(typeof _0x2ee56b===_0x320413(0x2d2)){const _0x30109e=_0x2ee56b[_0x320413(0x136)]();return _0x30109e===''||_0x30109e==='-'?null:_0x30109e;}return _0x2ee56b===void 0x0||_0x2ee56b===null?null:_0x2ee56b;};try{await getPool()[_0x188fd7(0x54b)]('UPDATE\x20pegawai\x20SET\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20nama_lengkap\x20=\x20?,\x20nuptk\x20=\x20?,\x20jenis_kelamin\x20=\x20?,\x20nip\x20=\x20?,\x20nik\x20=\x20?,\x20tempat_lahir\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tanggal_lahir\x20=\x20?,\x20status_kepegawaian\x20=\x20?,\x20jenis_ptk\x20=\x20?,\x20gelar_depan\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gelar_belakang\x20=\x20?,\x20jenjang_pendidikan\x20=\x20?,\x20jurusan_prodi\x20=\x20?,\x20sertifikasi\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20tmt_kerja\x20=\x20?,\x20jabatan_ptk\x20=\x20?,\x20tugas_tambahan\x20=\x20?,\x20mengajar\x20=\x20?,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20jam_tugas_tambahan\x20=\x20?,\x20jjm\x20=\x20?,\x20total_jjm\x20=\x20?,\x20siswa\x20=\x20?,\x20kompetensi\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20pegawai_id\x20=\x20?',[_0x357252,_0x4fd429||null,_0x296ff5||null,_0x3cdd49||null,_0x5928ef||null,_0x51839e||null,_0x26fbf6||null,_0x30ae5f||'Honorer',_0x521d54||null,_0x5a0b61||null,_0x53c634||null,_0x298dd7||null,_0x27ec6e||null,_0x52558d||null,_0x21cc7e||null,_0x17b5d8||null,_0x233579||null,_0xe45f68||null,_0x1fd3be||null,_0x2d6936||null,_0x2364ea||null,_0x5ba3d8||null,_0x49ed8a||null,_0x11e9c5][_0x188fd7(0x47f)](_0x554a94)),_0x315666[_0x188fd7(0x3c7)]({'success':!![]});}catch(_0x2ab685){if(_0x2ab685[_0x188fd7(0x268)]==='ER_DUP_ENTRY')return _0x315666[_0x188fd7(0x3dc)](0x190)[_0x188fd7(0x3c7)]({'error':_0x188fd7(0x289)});throw _0x2ab685;}})),app['delete'](a0_0xfa5210(0x592),authenticate,asyncHandler(async(_0x3eb696,_0x5404ef)=>{const _0x114472=a0_0xfa5210;await getPool()[_0x114472(0x54b)](_0x114472(0x323),[_0x3eb696['params']['id']]),_0x5404ef[_0x114472(0x3c7)]({'success':!![]});})),app['get'](a0_0xfa5210(0x5c5),authenticate,asyncHandler(async(_0xa8a5d8,_0x46d5dd)=>{const _0x58c8e9=a0_0xfa5210,_0x23f30d=_0xa8a5d8['query']['q'],[_0x25266b]=await getPool()['execute'](_0x58c8e9(0x607),['%'+_0x23f30d+'%','%'+_0x23f30d+'%','%'+_0x23f30d+'%']);_0x46d5dd['json'](_0x25266b);})),app[a0_0xfa5210(0x1fc)]('/api/pengguna_web',authenticate,asyncHandler(async(_0x52092d,_0x19cbcc)=>{const _0x3c9a5b=a0_0xfa5210,[_0x3dda28]=await getPool()[_0x3c9a5b(0x54b)](_0x3c9a5b(0x315));_0x19cbcc[_0x3c9a5b(0x3c7)](_0x3dda28);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x614),authenticate,asyncHandler(async(_0x50add2,_0x25afc6)=>{const _0x3fb641=a0_0xfa5210,{staff_id:_0x51df95,role_id:_0x52d616,username:_0x40e11e,password:_0x4e99bc,is_elearning_admin:_0xe053d4}=_0x50add2[_0x3fb641(0x2f2)],_0x3556c6=await import_bcryptjs[_0x3fb641(0x60b)][_0x3fb641(0x2c5)](_0x4e99bc,0xa),_0x19ec47=_0xe053d4?0x1:0x0;await getPool()[_0x3fb641(0x54b)](_0x3fb641(0x42f),[clean(_0x51df95),clean(_0x52d616),clean(_0x40e11e),_0x3556c6,_0x19ec47]),_0x25afc6[_0x3fb641(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x5d2),authenticate,asyncHandler(async(_0x3d6fdb,_0x22febb)=>{const _0x166cdc=a0_0xfa5210;await getPool()['execute'](_0x166cdc(0x153),[_0x3d6fdb[_0x166cdc(0x5e5)]['id']]),_0x22febb[_0x166cdc(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x181),authenticate,asyncHandler(async(_0x517fac,_0x1f0ae3)=>{const _0x5f0b70=a0_0xfa5210,[_0xe2159]=await getPool()[_0x5f0b70(0x54b)](_0x5f0b70(0x448),[_0x517fac[_0x5f0b70(0x5e5)]['id']]);if(_0xe2159[_0x5f0b70(0x5be)]>0x0&&_0xe2159[0x0]['name']&&_0xe2159[0x0]['name'][_0x5f0b70(0x12a)]()===_0x5f0b70(0x44d))return _0x1f0ae3[_0x5f0b70(0x3dc)](0x193)[_0x5f0b70(0x3c7)]({'error':_0x5f0b70(0x5aa)});await getPool()[_0x5f0b70(0x54b)](_0x5f0b70(0x574),[_0x517fac[_0x5f0b70(0x5e5)]['id']]),_0x1f0ae3[_0x5f0b70(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x334),authenticate,asyncHandler(async(_0xc8496b,_0x93bd74)=>{const _0x3540ca=a0_0xfa5210,{password:_0x3cd3f9,useNik:_0x8b0eef}=_0xc8496b[_0x3540ca(0x2f2)];let _0x457af9=_0x3cd3f9;const [_0x4573cf]=await getPool()['execute'](_0x3540ca(0x1f6),[_0xc8496b[_0x3540ca(0x5e5)]['id']]);if(_0x4573cf[_0x3540ca(0x5be)]===0x0)return _0x93bd74['status'](0x194)[_0x3540ca(0x3c7)]({'error':_0x3540ca(0x134)});if(_0x4573cf[0x0]['name']&&_0x4573cf[0x0]['name'][_0x3540ca(0x12a)]()===_0x3540ca(0x44d)&&!_0x4573cf[0x0][_0x3540ca(0x348)])return _0x93bd74[_0x3540ca(0x3dc)](0x193)[_0x3540ca(0x3c7)]({'error':'Tidak\x20dapat\x20mereset\x20password\x20Superadmin\x20Utama'});if(_0x8b0eef){if(!_0x4573cf[0x0][_0x3540ca(0x4e7)])return _0x93bd74['status'](0x190)[_0x3540ca(0x3c7)]({'error':_0x3540ca(0x300)});_0x457af9=_0x4573cf[0x0][_0x3540ca(0x4e7)];}if(!_0x457af9)return _0x93bd74['status'](0x190)[_0x3540ca(0x3c7)]({'error':'Password\x20diperlukan'});const _0x2802e2=await import_bcryptjs[_0x3540ca(0x60b)][_0x3540ca(0x2c5)](_0x457af9,0xa);await getPool()['execute'](_0x3540ca(0x5d6),[_0x2802e2,_0xc8496b[_0x3540ca(0x5e5)]['id']]),_0x93bd74[_0x3540ca(0x3c7)]({'success':!![]});})),app['post'](a0_0xfa5210(0x5d8),authenticate,asyncHandler(async(_0x5406cd,_0x7c8cbb)=>{const _0x2da105=a0_0xfa5210,_0x3c8f18=_0x5406cd['user']?.[_0x2da105(0x526)]||[];if(!_0x3c8f18[_0x2da105(0x424)]('all')&&!_0x3c8f18['includes'](_0x2da105(0x28c)))return _0x7c8cbb[_0x2da105(0x3dc)](0x193)[_0x2da105(0x3c7)]({'error':'Access\x20denied'});const _0x34909a=_0x5406cd[_0x2da105(0x2f2)];if(!Array['isArray'](_0x34909a)||_0x34909a[_0x2da105(0x5be)]===0x0)return _0x7c8cbb['status'](0x190)[_0x2da105(0x3c7)]({'error':_0x2da105(0x33c)});const _0xca3b90=await getPool()[_0x2da105(0x4b4)]();try{const [_0x2346d5]=await _0xca3b90[_0x2da105(0x54b)](_0x2da105(0x58d)),_0x10882f=new Map(),_0x52aefa=new Map(),_0x529e4a=new Map(),_0x250324=new Map();for(const _0x5d1359 of _0x2346d5){_0x10882f['set'](_0x5d1359['id'],_0x5d1359);if(_0x5d1359[_0x2da105(0x52b)]&&_0x5d1359[_0x2da105(0x52b)]['trim']()&&_0x5d1359[_0x2da105(0x52b)][_0x2da105(0x136)]()!=='-')_0x52aefa[_0x2da105(0x3fa)](_0x5d1359[_0x2da105(0x52b)][_0x2da105(0x136)](),_0x5d1359['id']);if(_0x5d1359[_0x2da105(0x3c1)]&&_0x5d1359['nisn'][_0x2da105(0x136)]()&&_0x5d1359[_0x2da105(0x3c1)]['trim']()!=='-')_0x529e4a[_0x2da105(0x3fa)](_0x5d1359[_0x2da105(0x3c1)]['trim'](),_0x5d1359['id']);if(_0x5d1359[_0x2da105(0x4e7)]&&_0x5d1359[_0x2da105(0x4e7)][_0x2da105(0x136)]()&&_0x5d1359[_0x2da105(0x4e7)][_0x2da105(0x136)]()!=='-')_0x250324[_0x2da105(0x3fa)](_0x5d1359[_0x2da105(0x4e7)][_0x2da105(0x136)](),_0x5d1359['id']);}await _0xca3b90[_0x2da105(0x115)]();try{let _0x5f1f7d=0x0,_0x7ce9c5=0x0,_0x533c76=0x0,_0x21e3a9=0x0;const _0x260bf3=(_0x233c33,_0x5c81ac)=>{const _0x53967c=_0x2da105,_0x490b87={};for(const [_0x311b58,_0x173d18]of Object[_0x53967c(0x282)](_0x5c81ac)){const _0x126d6b=Object['keys'](_0x233c33)[_0x53967c(0x4c2)](_0x4b134e=>_0x4b134e[_0x53967c(0x136)]()[_0x53967c(0x12a)]()===_0x311b58[_0x53967c(0x12a)]());_0x126d6b&&_0x233c33[_0x126d6b]!==void 0x0&&_0x233c33[_0x126d6b]!==''&&(_0x490b87[_0x173d18]=_0x233c33[_0x126d6b]);}return _0x490b87;};for(const _0xd31982 of _0x34909a){const _0x1d514d=_0xd31982[_0x2da105(0x52b)]?String(_0xd31982['nipd'])[_0x2da105(0x136)]():null,_0x1bab45=_0xd31982[_0x2da105(0x3c1)]?String(_0xd31982['nisn'])['trim']():null;if(!_0x1d514d&&!_0x1bab45){_0x5f1f7d++,_0x7ce9c5++;continue;}const _0x3f1f33={'tahun_pelajaran':'tahun_pelajaran','semester':_0x2da105(0x222),'nipd':_0x2da105(0x52b),'nisn':_0x2da105(0x3c1),'nik':_0x2da105(0x4e7),'nama_lengkap':_0x2da105(0x377),'jenis_kelamin':_0x2da105(0x223),'tempat_lahir':_0x2da105(0x264),'tanggal_lahir':'tanggal_lahir','agama':_0x2da105(0x2e0),'kewarganegaraan':'kewarganegaraan','alamat_jalan':_0x2da105(0x17c),'rt':'rt','rw':'rw','provinsi':'provinsi','kota':_0x2da105(0x4fa),'kecamatan':_0x2da105(0x195),'kelurahan':_0x2da105(0x475),'kode_pos':'kode_pos','lintang':_0x2da105(0x1aa),'bujur':_0x2da105(0x316),'nomor_kk':_0x2da105(0x561),'tempat_tinggal':'tempat_tinggal','moda_transportasi':'moda_transportasi','rombel':_0x2da105(0x53b),'tk_paud':_0x2da105(0x35d),'nama_tk_paud':_0x2da105(0x3f2),'nomor_akte_lahir':_0x2da105(0x52e),'skhun':_0x2da105(0x46c),'no_peserta_ujian_nasioal':_0x2da105(0x5df),'no_seri_ijazah':_0x2da105(0x40d),'sekolah_asal':'sekolah_asal','kebutuhan_khusus':'kebutuhan_khusus'},_0x582e04=_0x260bf3(_0xd31982,_0x3f1f33);_0x582e04[_0x2da105(0x53b)]&&typeof _0x582e04[_0x2da105(0x53b)]===_0x2da105(0x2d2)&&(_0x582e04[_0x2da105(0x53b)]=_0x582e04['rombel'][_0x2da105(0x2de)](/^Kelas\s+/i,'')[_0x2da105(0x136)]());_0xd31982['status_aktif']!==void 0x0&&(_0x582e04[_0x2da105(0x5bb)]=_0xd31982[_0x2da105(0x5bb)]===!![]||_0xd31982[_0x2da105(0x5bb)]===0x1||String(_0xd31982[_0x2da105(0x5bb)])[_0x2da105(0x12a)]()===_0x2da105(0x1e9)||String(_0xd31982[_0x2da105(0x5bb)])[_0x2da105(0x12a)]()==='1'?0x1:0x0);let _0x2919ca=null,_0x4ed6c8=null;const _0x16d7cb=_0xd31982['nik']?String(_0xd31982[_0x2da105(0x4e7)])[_0x2da105(0x136)]():null;if(_0x1d514d&&_0x52aefa[_0x2da105(0x3f0)](_0x1d514d))_0x4ed6c8=_0x10882f[_0x2da105(0x1fc)](_0x52aefa[_0x2da105(0x1fc)](_0x1d514d));else{if(_0x1bab45&&_0x529e4a['has'](_0x1bab45))_0x4ed6c8=_0x10882f[_0x2da105(0x1fc)](_0x529e4a[_0x2da105(0x1fc)](_0x1bab45));else{if(_0x16d7cb&&_0x250324['has'](_0x16d7cb))_0x4ed6c8=_0x10882f[_0x2da105(0x1fc)](_0x250324[_0x2da105(0x1fc)](_0x16d7cb));}}if(_0x4ed6c8){_0x2919ca=_0x4ed6c8['id'];const _0x7bcc4b=_0x582e04[_0x2da105(0x14d)]&&_0x4ed6c8[_0x2da105(0x14d)]!==_0x582e04[_0x2da105(0x14d)],_0x20492a=_0x582e04[_0x2da105(0x222)]&&_0x4ed6c8[_0x2da105(0x222)]!==_0x582e04[_0x2da105(0x222)];(_0x7bcc4b||_0x20492a)&&await _0xca3b90[_0x2da105(0x54b)](_0x2da105(0x535),[_0x2919ca,_0x4ed6c8[_0x2da105(0x14d)],_0x4ed6c8[_0x2da105(0x222)],_0x4ed6c8[_0x2da105(0x53b)]]);const _0x1a2737=Object[_0x2da105(0x421)](_0x582e04);if(_0x1a2737[_0x2da105(0x5be)]>0x0){const _0x4f6d9c=_0x1a2737[_0x2da105(0x47f)](_0x7c7109=>_0x7c7109+'=?'),_0x14b151=_0x1a2737[_0x2da105(0x47f)](_0x1358f5=>_0x582e04[_0x1358f5]);await _0xca3b90['execute'](_0x2da105(0x207)+_0x4f6d9c['join'](',')+_0x2da105(0x2f0),[..._0x14b151,_0x2919ca]);}_0x21e3a9++;}else{_0x2919ca=import_crypto[_0x2da105(0x60b)][_0x2da105(0x459)](),_0x582e04['id']=_0x2919ca;const _0x418a7a=Object[_0x2da105(0x421)](_0x582e04),_0x5ccaee=_0x418a7a[_0x2da105(0x47f)](_0x106836=>_0x582e04[_0x106836]),[_0x396790]=await _0xca3b90[_0x2da105(0x54b)](_0x2da105(0x61d)+_0x418a7a[_0x2da105(0x4ca)](',')+_0x2da105(0x15b)+_0x418a7a[_0x2da105(0x47f)](()=>'?')[_0x2da105(0x4ca)](',')+')',_0x5ccaee);if(_0x1d514d)_0x52aefa[_0x2da105(0x3fa)](_0x1d514d,_0x2919ca);if(_0x1bab45)_0x529e4a[_0x2da105(0x3fa)](_0x1bab45,_0x2919ca);if(_0x16d7cb)_0x250324['set'](_0x16d7cb,_0x2919ca);_0x10882f[_0x2da105(0x3fa)](_0x2919ca,{'id':_0x2919ca,'nipd':_0x1d514d,'nisn':_0x1bab45,'nik':_0x16d7cb,'tahun_pelajaran':_0x582e04['tahun_pelajaran'],'semester':_0x582e04['semester'],'rombel':_0x582e04[_0x2da105(0x53b)]}),_0x533c76++;}const _0x2f4eba=async(_0x4449ad,_0x32f6a6,_0x30e111,_0x1b1fb6,_0x785187)=>{const _0x2d87c6=_0x2da105;if(Object[_0x2d87c6(0x421)](_0x785187)['length']===0x0)return;let _0x415dfa=_0x2d87c6(0x2fa)+_0x4449ad+_0x2d87c6(0x15d)+_0x32f6a6+_0x2d87c6(0x164),_0x4aed17=[_0x30e111];if(_0x1b1fb6)_0x415dfa+=_0x2d87c6(0x5ab)+_0x1b1fb6;const [_0x98df59]=await _0xca3b90[_0x2d87c6(0x54b)](_0x415dfa,_0x4aed17);if(_0x98df59[_0x2d87c6(0x5be)]>0x0){const _0x10e3a9=_0x98df59[0x0]['id'],_0x4b8d27=Object[_0x2d87c6(0x421)](_0x785187),_0x589220=_0x4b8d27['map'](_0x55b4af=>_0x55b4af+'=?'),_0x418b16=_0x4b8d27['map'](_0x9f27e3=>_0x785187[_0x9f27e3]);await _0xca3b90[_0x2d87c6(0x54b)](_0x2d87c6(0x24f)+_0x4449ad+_0x2d87c6(0x374)+_0x589220[_0x2d87c6(0x4ca)](',')+_0x2d87c6(0x2f0),[..._0x418b16,_0x10e3a9]);}else{_0x785187[_0x32f6a6]=_0x30e111;if(_0x1b1fb6&&_0x1b1fb6[_0x2d87c6(0x424)]('tipe\x20=\x20\x27ayah\x27'))_0x785187[_0x2d87c6(0x29a)]=_0x2d87c6(0x3cc);if(_0x1b1fb6&&_0x1b1fb6[_0x2d87c6(0x424)](_0x2d87c6(0x47e)))_0x785187['tipe']=_0x2d87c6(0x42b);const _0x50777f=Object[_0x2d87c6(0x421)](_0x785187),_0x2b621d=_0x50777f[_0x2d87c6(0x47f)](_0x536430=>_0x785187[_0x536430]);await _0xca3b90[_0x2d87c6(0x54b)](_0x2d87c6(0x1f5)+_0x4449ad+'\x20('+_0x50777f[_0x2d87c6(0x4ca)](',')+_0x2d87c6(0x15b)+_0x50777f['map'](()=>'?')[_0x2d87c6(0x4ca)](',')+')',_0x2b621d);}},_0x1c49a3={'nama_ayah':_0x2da105(0x623),'nik_ayah':_0x2da105(0x4e7),'tahun_lahir_ayah':_0x2da105(0x361),'pendidikan_ayah':'pendidikan','pekerjaan_ayah':_0x2da105(0x549),'penghasilan_ayah':_0x2da105(0x582),'kebutuhan_khusus_ayah':_0x2da105(0x42e)};await _0x2f4eba(_0x2da105(0x2ed),'siswa_id',_0x2919ca,_0x2da105(0x529),_0x260bf3(_0xd31982,_0x1c49a3));const _0x16206e={'nama_ibu':_0x2da105(0x623),'nik_ibu':_0x2da105(0x4e7),'tahun_lahir_ibu':'tahun_lahir','pendidikan_ibu':_0x2da105(0x40e),'pekerjaan_ibu':_0x2da105(0x549),'penghasilan_ibu':'penghasilan','kebutuhan_khusus_ibu':_0x2da105(0x42e)};await _0x2f4eba('data_orang_tua','siswa_id',_0x2919ca,_0x2da105(0x47e),_0x260bf3(_0xd31982,_0x16206e));const _0x322141={'nama_wali':'nama','nik_wali':_0x2da105(0x4e7),'tahun_lahir_wali':_0x2da105(0x361),'pendidikan_wali':_0x2da105(0x40e),'pekerjaan_wali':_0x2da105(0x549),'penghasilan_wali':_0x2da105(0x582)};await _0x2f4eba(_0x2da105(0x572),_0x2da105(0x293),_0x2919ca,null,_0x260bf3(_0xd31982,_0x322141));const _0x1e3d3e={'telepon_rumah':_0x2da105(0x103),'hp_orang_tua':'nomor_hp','email_orang_tua':_0x2da105(0x312)};await _0x2f4eba(_0x2da105(0x294),'siswa_id',_0x2919ca,null,_0x260bf3(_0xd31982,_0x1e3d3e));const _0x28bbf7={'tinggi_badan':_0x2da105(0x5e0),'berat_badan':_0x2da105(0x612),'jarak_rumah':_0x2da105(0x5fb),'waktu_tempuh':'waktu_tempuh','anak_keberapa':_0x2da105(0x286),'jumlah_saudara_kandung':_0x2da105(0x14f),'lingkar_kepala':_0x2da105(0x31f)};await _0x2f4eba('data_periodik','siswa_id',_0x2919ca,null,_0x260bf3(_0xd31982,_0x28bbf7));const _0x403108={'penerima_kps_pkh':_0x2da105(0x54d),'nomor_kks':_0x2da105(0x56a),'penerima_kip':_0x2da105(0x506),'nomor_kip':_0x2da105(0x5a8),'nama_sesuai_kip':_0x2da105(0x5c4),'nomor_kps':'nomor_kps','bank_pip':'bank_pip','nomor_rek_pip':_0x2da105(0x2c3),'atasnama_rek_pip':_0x2da105(0x60d),'layak_pip':_0x2da105(0x1b8),'alasan_layak_pip':_0x2da105(0x278)};await _0x2f4eba('data_afirmasi',_0x2da105(0x293),_0x2919ca,null,_0x260bf3(_0xd31982,_0x403108)),_0x5f1f7d++;}await _0xca3b90[_0x2da105(0x38d)](),_0x7c8cbb[_0x2da105(0x3c7)]({'success':!![],'message':'Impor\x20selesai.\x20'+_0x5f1f7d+'\x20diproses\x20('+_0x533c76+_0x2da105(0x542)+_0x21e3a9+'\x20diperbarui,\x20'+_0x7ce9c5+_0x2da105(0x5e7)});}catch(_0x2ad837){await _0xca3b90[_0x2da105(0x603)]();throw _0x2ad837;}}catch(_0x50317d){console['error'](_0x2da105(0x3ed),_0x50317d),_0x7c8cbb[_0x2da105(0x3dc)](0x1f4)['json']({'error':'Gagal\x20impor:\x20'+_0x50317d[_0x2da105(0x19a)]});}finally{_0xca3b90[_0x2da105(0x44c)]();}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x129),authenticate,asyncHandler(async(_0x113756,_0x4b3046)=>{const _0x594736=a0_0xfa5210;let _0x229076='';const _0x1a00fd=[];if(_0x113756[_0x594736(0x189)][_0x594736(0x156)]===_0x594736(0x45b)){const _0x1b9ad4=_0x113756['user'][_0x594736(0x526)]||[];if(!_0x1b9ad4[_0x594736(0x424)](_0x594736(0x3d6))){const [_0x4fb24d]=await getPool()[_0x594736(0x54b)](_0x594736(0x196),[_0x113756[_0x594736(0x189)]['staff_id']]);if(_0x4fb24d['length']>0x0){const _0xf89602=_0x4fb24d[_0x594736(0x47f)](_0x2780fb=>_0x2780fb[_0x594736(0x5ec)]);_0x229076=_0x594736(0x5f0)+_0xf89602[_0x594736(0x47f)](()=>'?')['join'](',')+')',_0x1a00fd[_0x594736(0x4a8)](..._0xf89602);}}}const [_0x165f2e]=await getPool()[_0x594736(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.*,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dot_ayah.nama\x20as\x20nama_ayah,\x20dot_ayah.nik\x20as\x20nik_ayah,\x20dot_ayah.tahun_lahir\x20as\x20tahun_lahir_ayah,\x20dot_ayah.pendidikan\x20as\x20pendidikan_ayah,\x20dot_ayah.pekerjaan\x20as\x20pekerjaan_ayah,\x20dot_ayah.penghasilan\x20as\x20penghasilan_ayah,\x20dot_ayah.kebutuhan_khusus\x20as\x20kebutuhan_khusus_ayah,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dot_ibu.nama\x20as\x20nama_ibu,\x20dot_ibu.nik\x20as\x20nik_ibu,\x20dot_ibu.tahun_lahir\x20as\x20tahun_lahir_ibu,\x20dot_ibu.pendidikan\x20as\x20pendidikan_ibu,\x20dot_ibu.pekerjaan\x20as\x20pekerjaan_ibu,\x20dot_ibu.penghasilan\x20as\x20penghasilan_ibu,\x20dot_ibu.kebutuhan_khusus\x20as\x20kebutuhan_khusus_ibu,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dw.nama\x20as\x20nama_wali,\x20dw.nik\x20as\x20nik_wali,\x20dw.tahun_lahir\x20as\x20tahun_lahir_wali,\x20dw.pendidikan\x20as\x20pendidikan_wali,\x20dw.pekerjaan\x20as\x20pekerjaan_wali,\x20dw.penghasilan\x20as\x20penghasilan_wali,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dk.telepon_rumah\x20as\x20telepon_rumah,\x20dk.nomor_hp\x20as\x20hp_orang_tua,\x20dk.email\x20as\x20email_orang_tua,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dp.tinggi_badan,\x20dp.berat_badan,\x20dp.lingkar_kepala,\x20dp.jarak_rumah,\x20dp.waktu_tempuh,\x20dp.anak_keberapa,\x20dp.jumlah_saudara_kandung,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20da.nomor_kks,\x20da.penerima_kps_pkh,\x20da.penerima_kip,\x20da.nomor_kip,\x20da.nama_sesuai_kip,\x20da.nomor_kps,\x20da.bank_pip,\x20da.nomor_rek_pip,\x20da.atasnama_rek_pip,\x20da.layak_pip,\x20da.alasan_layak_pip,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20(SELECT\x20GROUP_CONCAT(COALESCE(NULLIF(jb.istilah,\x20\x27\x27),\x20jb.nama_bantuan)\x20SEPARATOR\x20\x27,\x20\x27)\x20FROM\x20penerima_bantuan\x20pb\x20JOIN\x20jenis_bantuan\x20jb\x20ON\x20pb.istilah\x20=\x20jb.istilah\x20WHERE\x20pb.siswa_id\x20=\x20s.id)\x20as\x20bantuan_diterima,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(fs_foto.drive,\x20fs_foto.server)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20siswa\x20s\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20dot_ayah\x20ON\x20s.id\x20=\x20dot_ayah.siswa_id\x20AND\x20dot_ayah.tipe\x20=\x20\x27ayah\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20dot_ibu\x20ON\x20s.id\x20=\x20dot_ibu.siswa_id\x20AND\x20dot_ibu.tipe\x20=\x20\x27ibu\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_wali\x20dw\x20ON\x20s.id\x20=\x20dw.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_kontak\x20dk\x20ON\x20s.id\x20=\x20dk.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_periodik\x20dp\x20ON\x20s.id\x20=\x20dp.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_afirmasi\x20da\x20ON\x20s.id\x20=\x20da.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20fs_foto\x20ON\x20s.id\x20=\x20fs_foto.data_id\x20AND\x20fs_foto.tipe_data\x20=\x20\x27siswa\x27\x20AND\x20fs_foto.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20'+_0x229076+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20s.nama_lengkap\x20ASC\x0a\x20\x20\x20\x20',_0x1a00fd);_0x4b3046[_0x594736(0x3c7)](_0x165f2e);})),app['post'](a0_0xfa5210(0x20b),authenticate,asyncHandler(async(_0x6dbec0,_0x15e20e)=>{const _0x4221d2=a0_0xfa5210,{id:_0x1b041b}=_0x6dbec0['params'],{istilah:_0x320999,tahun:_0x4ae50c,semester:_0x1cb445}=_0x6dbec0[_0x4221d2(0x2f2)];if(!_0x320999)return _0x15e20e[_0x4221d2(0x3dc)](0x190)[_0x4221d2(0x3c7)]({'error':_0x4221d2(0x2cc)});const _0x4ed2c0=await getPool()[_0x4221d2(0x4b4)]();try{await _0x4ed2c0['beginTransaction']();const [_0xfc0900]=await _0x4ed2c0[_0x4221d2(0x54b)](_0x4221d2(0x4a3),[_0x1b041b,_0x320999,_0x4ae50c||null,_0x1cb445||null]);if(_0xfc0900[_0x4221d2(0x5be)]>0x0)return await _0x4ed2c0[_0x4221d2(0x603)](),_0x15e20e[_0x4221d2(0x3dc)](0x190)[_0x4221d2(0x3c7)]({'error':'Siswa\x20sudah\x20menerima\x20bantuan\x20ini\x20pada\x20tahun\x20dan\x20semester\x20yang\x20dipilih.'});await _0x4ed2c0['execute'](_0x4221d2(0x2a7),[_0x1b041b,_0x320999,_0x4ae50c||null,_0x1cb445||null]),await _0x4ed2c0[_0x4221d2(0x38d)](),_0x15e20e['json']({'success':!![]});}catch(_0x367ee8){await _0x4ed2c0[_0x4221d2(0x603)](),_0x15e20e['status'](0x1f4)['json']({'error':_0x367ee8['message']});}finally{_0x4ed2c0['release']();}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x5d9),authenticate,asyncHandler(async(_0x4c5b8c,_0x5b7e01)=>{const _0x4a0a18=a0_0xfa5210,[_0x41b851]=await getPool()[_0x4a0a18(0x54b)](_0x4a0a18(0x3a5));_0x5b7e01[_0x4a0a18(0x3c7)](_0x41b851);})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x23c),authenticate,asyncHandler(async(_0x411c69,_0x1923c0)=>{const _0x4038c6=a0_0xfa5210,_0x20349f=_0x411c69[_0x4038c6(0x59d)]['q'],[_0x1afeeb]=await getPool()[_0x4038c6(0x54b)](_0x4038c6(0x13e),['%'+_0x20349f+'%','%'+_0x20349f+'%','%'+_0x20349f+'%']);_0x1923c0['json'](_0x1afeeb);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x541),authenticate,asyncHandler(async(_0xe5582c,_0x47e629)=>{const _0x6368da=a0_0xfa5210;if(!_0xe5582c['user'][_0x6368da(0x526)]['includes'](_0x6368da(0x3d6))&&!_0xe5582c['user']['permissions'][_0x6368da(0x424)](_0x6368da(0x1b2)))return _0x47e629[_0x6368da(0x3dc)](0x193)[_0x6368da(0x3c7)]({'error':_0x6368da(0x20d)});const {rombel_asal:_0x3f331b,rombel_tujuan:_0x2f7772,tahun_pelajaran_baru:_0x38dc5c,semester_baru:_0x374a26,siswa_naik:_0xda7bbf,siswa_tinggal:_0x31058b}=_0xe5582c[_0x6368da(0x2f2)];if(!_0x3f331b||!_0x2f7772)return _0x47e629['status'](0x190)[_0x6368da(0x3c7)]({'error':'Rombel\x20asal\x20dan\x20tujuan\x20harus\x20diisi.'});const _0x3b28bc=Array['isArray'](_0xda7bbf)?_0xda7bbf:[],_0x44f836=Array[_0x6368da(0x251)](_0x31058b)?_0x31058b:[];if(_0x3b28bc['length']===0x0&&_0x44f836[_0x6368da(0x5be)]===0x0)return _0x47e629[_0x6368da(0x3dc)](0x190)[_0x6368da(0x3c7)]({'error':_0x6368da(0x5d7)});const _0x4d9825=await getPool()[_0x6368da(0x4b4)]();try{await _0x4d9825[_0x6368da(0x115)]();const _0xe64d38=[..._0x3b28bc,..._0x44f836],_0x241899=_0xe64d38[_0x6368da(0x47f)](()=>'?')[_0x6368da(0x4ca)](','),[_0x15e24d]=await _0x4d9825['execute'](_0x6368da(0x443)+_0x241899+')',_0xe64d38);if(_0x15e24d[_0x6368da(0x5be)]===0x0)return await _0x4d9825[_0x6368da(0x603)](),_0x4d9825[_0x6368da(0x44c)](),_0x47e629['status'](0x194)[_0x6368da(0x3c7)]({'error':'Tidak\x20ada\x20siswa\x20yang\x20ditemukan.'});for(const _0x111ba2 of _0x15e24d){const _0x428343=_0x3b28bc[_0x6368da(0x424)](_0x111ba2['id']),_0x36579f=_0x44f836[_0x6368da(0x424)](_0x111ba2['id']);let _0x3a9f67=_0x428343?_0x2f7772['toLowerCase']()==='lulus'?_0x6368da(0x3a0):_0x6368da(0x43a):_0x6368da(0x1ad);await _0x4d9825[_0x6368da(0x54b)](_0x6368da(0x341),[_0x111ba2['id'],_0x111ba2[_0x6368da(0x14d)],_0x111ba2[_0x6368da(0x222)],_0x111ba2[_0x6368da(0x53b)],_0x3a9f67]);let _0x43f9ce='UPDATE\x20siswa\x20SET\x20',_0x7cd692=[],_0x25affb=[];_0x428343&&(_0x25affb[_0x6368da(0x4a8)]('rombel\x20=\x20?'),_0x7cd692['push'](_0x2f7772),_0x2f7772[_0x6368da(0x12a)]()===_0x6368da(0x19e)&&(_0x25affb[_0x6368da(0x4a8)](_0x6368da(0x532)),_0x7cd692[_0x6368da(0x4a8)](![]))),_0x38dc5c&&(_0x25affb[_0x6368da(0x4a8)](_0x6368da(0x43f)),_0x7cd692[_0x6368da(0x4a8)](_0x38dc5c)),_0x374a26&&(_0x25affb[_0x6368da(0x4a8)]('semester\x20=\x20?'),_0x7cd692['push'](_0x374a26)),_0x25affb[_0x6368da(0x5be)]>0x0&&(_0x43f9ce+=_0x25affb[_0x6368da(0x4ca)](',\x20')+'\x20WHERE\x20id\x20=\x20?',_0x7cd692['push'](_0x111ba2['id']),await _0x4d9825[_0x6368da(0x54b)](_0x43f9ce,_0x7cd692));}await _0x4d9825['commit'](),_0x47e629[_0x6368da(0x3c7)]({'message':_0x6368da(0x305)+_0x3b28bc[_0x6368da(0x5be)]+_0x6368da(0x33b)+_0x44f836[_0x6368da(0x5be)]+'\x20siswa\x20tinggal\x20kelas.'});}catch(_0x134293){await _0x4d9825['rollback'](),console['error'](_0x6368da(0x2b0),_0x134293),_0x47e629[_0x6368da(0x3dc)](0x1f4)[_0x6368da(0x3c7)]({'error':_0x6368da(0x271)});}finally{_0x4d9825['release']();}})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x584),authenticate,asyncHandler(async(_0x7f9b65,_0x288ffc)=>{const _0x154ed0=a0_0xfa5210;if(!_0x7f9b65[_0x154ed0(0x189)][_0x154ed0(0x526)][_0x154ed0(0x424)]('all')&&!_0x7f9b65['user'][_0x154ed0(0x526)]['includes']('students:update'))return _0x288ffc[_0x154ed0(0x3dc)](0x193)[_0x154ed0(0x3c7)]({'error':_0x154ed0(0x20d)});const {student_ids:_0x40c384,tanggal_mutasi:_0x345214}=_0x7f9b65['body'];if(!_0x40c384||!Array[_0x154ed0(0x251)](_0x40c384)||_0x40c384[_0x154ed0(0x5be)]===0x0)return _0x288ffc['status'](0x190)[_0x154ed0(0x3c7)]({'error':_0x154ed0(0x611)});const _0x1c2189=_0x345214||new Date()[_0x154ed0(0x40f)]()[_0x154ed0(0x2b4)]('T')[0x0],_0x5dd616=await getPool()[_0x154ed0(0x4b4)]();try{await _0x5dd616['beginTransaction']();const _0x25ef1b=_0x40c384[_0x154ed0(0x47f)](()=>'?')[_0x154ed0(0x4ca)](','),[_0x41e913]=await _0x5dd616[_0x154ed0(0x54b)]('SELECT\x20id,\x20tahun_pelajaran,\x20semester,\x20rombel\x20FROM\x20siswa\x20WHERE\x20id\x20IN\x20('+_0x25ef1b+')',_0x40c384);if(_0x41e913['length']===0x0)return await _0x5dd616[_0x154ed0(0x603)](),_0x5dd616['release'](),_0x288ffc['status'](0x194)[_0x154ed0(0x3c7)]({'error':_0x154ed0(0x59b)});for(const _0x8342f9 of _0x41e913){await _0x5dd616[_0x154ed0(0x54b)](_0x154ed0(0x4f2),[_0x8342f9['id'],_0x8342f9[_0x154ed0(0x14d)],_0x8342f9[_0x154ed0(0x222)],_0x8342f9[_0x154ed0(0x53b)]]),await _0x5dd616[_0x154ed0(0x54b)](_0x154ed0(0x166),[![],_0x1c2189,_0x8342f9['id']]);}await _0x5dd616[_0x154ed0(0x38d)](),_0x288ffc['json']({'message':_0x154ed0(0x2d1)+_0x41e913[_0x154ed0(0x5be)]+_0x154ed0(0x30a)});}catch(_0x2ff91e){await _0x5dd616[_0x154ed0(0x603)](),console[_0x154ed0(0x2e2)](_0x154ed0(0x565),_0x2ff91e),_0x288ffc[_0x154ed0(0x3dc)](0x1f4)[_0x154ed0(0x3c7)]({'error':_0x154ed0(0x430)});}finally{_0x5dd616[_0x154ed0(0x44c)]();}})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x129),authenticate,asyncHandler(async(_0x3652f5,_0x48e736)=>{const _0x45dee9=a0_0xfa5210;if(!_0x3652f5['user'][_0x45dee9(0x526)][_0x45dee9(0x424)](_0x45dee9(0x3d6))&&!_0x3652f5['user'][_0x45dee9(0x526)]['includes'](_0x45dee9(0x454)))return _0x48e736[_0x45dee9(0x3dc)](0x193)[_0x45dee9(0x3c7)]({'error':_0x45dee9(0x20d)});const _0x50cbe4=_0x3652f5['body'],_0x3268ce=await getPool()['getConnection']();try{await _0x3268ce[_0x45dee9(0x115)]();const _0x2305a3=_0xee0661=>_0xee0661===''?null:_0xee0661,_0x781350=import_crypto['default'][_0x45dee9(0x459)]();await _0x3268ce[_0x45dee9(0x54b)]('INSERT\x20INTO\x20siswa\x20(id,\x20tahun_pelajaran,\x20semester,\x20nipd,\x20nisn,\x20nik,\x20nama_lengkap,\x20jenis_kelamin,\x20tempat_lahir,\x20tanggal_lahir,\x20agama,\x20kewarganegaraan,\x20alamat_jalan,\x20rt,\x20rw,\x20provinsi,\x20kota,\x20kecamatan,\x20kelurahan,\x20kode_pos,\x20lintang,\x20bujur,\x20nomor_kk,\x20tempat_tinggal,\x20moda_transportasi,\x20rombel,\x20tk_paud,\x20nama_tk_paud,\x20nomor_akte_lahir,\x20skhun,\x20no_peserta_ujian_nasioal,\x20no_seri_ijazah,\x20sekolah_asal,\x20kebutuhan_khusus)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x781350,_0x50cbe4[_0x45dee9(0x14d)],_0x50cbe4[_0x45dee9(0x222)],_0x50cbe4['nipd'],_0x50cbe4['nisn'],_0x50cbe4[_0x45dee9(0x4e7)],_0x50cbe4[_0x45dee9(0x377)],_0x50cbe4[_0x45dee9(0x223)],_0x50cbe4[_0x45dee9(0x264)],_0x50cbe4[_0x45dee9(0x57a)],_0x50cbe4[_0x45dee9(0x2e0)],_0x50cbe4[_0x45dee9(0x4f9)]||'Indonesia',_0x50cbe4[_0x45dee9(0x17c)],_0x50cbe4['rt'],_0x50cbe4['rw'],_0x50cbe4[_0x45dee9(0x234)],_0x50cbe4['kota'],_0x50cbe4[_0x45dee9(0x195)],_0x50cbe4[_0x45dee9(0x475)],_0x50cbe4[_0x45dee9(0x1dc)],_0x50cbe4[_0x45dee9(0x1aa)],_0x50cbe4[_0x45dee9(0x316)],_0x50cbe4[_0x45dee9(0x561)],_0x50cbe4[_0x45dee9(0x28e)],_0x50cbe4[_0x45dee9(0x627)],_0x50cbe4[_0x45dee9(0x53b)],_0x50cbe4[_0x45dee9(0x35d)]||'Tidak',_0x50cbe4[_0x45dee9(0x3f2)],_0x50cbe4[_0x45dee9(0x52e)],_0x50cbe4[_0x45dee9(0x46c)],_0x50cbe4[_0x45dee9(0x5df)],_0x50cbe4['no_seri_ijazah'],_0x50cbe4[_0x45dee9(0x3ab)],_0x50cbe4['kebutuhan_khusus']||_0x45dee9(0x29f)]['map'](_0x2305a3)),await _0x3268ce[_0x45dee9(0x54b)]('INSERT\x20INTO\x20data_orang_tua\x20(siswa_id,\x20tipe,\x20nama,\x20nik,\x20tahun_lahir,\x20pendidikan,\x20pekerjaan,\x20penghasilan,\x20kebutuhan_khusus)\x20VALUES\x20(?,\x20\x27ayah\x27,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x781350,_0x50cbe4[_0x45dee9(0x513)],_0x50cbe4[_0x45dee9(0x4f4)],_0x50cbe4['tahun_lahir_ayah'],_0x50cbe4[_0x45dee9(0x16d)],_0x50cbe4[_0x45dee9(0x41f)],_0x50cbe4[_0x45dee9(0x1ab)],_0x50cbe4['kebutuhan_khusus_ayah']||_0x45dee9(0x29f)]['map'](_0x2305a3)),await _0x3268ce['execute'](_0x45dee9(0x356),[_0x781350,_0x50cbe4[_0x45dee9(0x1bf)],_0x50cbe4['nik_ibu'],_0x50cbe4['tahun_lahir_ibu'],_0x50cbe4[_0x45dee9(0x18c)],_0x50cbe4['pekerjaan_ibu'],_0x50cbe4[_0x45dee9(0x484)],_0x50cbe4[_0x45dee9(0x237)]||'Tidak'][_0x45dee9(0x47f)](_0x2305a3)),_0x50cbe4[_0x45dee9(0x1ce)]&&await _0x3268ce['execute'](_0x45dee9(0x2b7),[_0x781350,_0x50cbe4[_0x45dee9(0x1ce)],_0x50cbe4[_0x45dee9(0x1f1)],_0x50cbe4[_0x45dee9(0x184)],_0x50cbe4['pendidikan_wali'],_0x50cbe4['pekerjaan_wali'],_0x50cbe4['penghasilan_wali']]['map'](_0x2305a3)),await _0x3268ce[_0x45dee9(0x54b)](_0x45dee9(0x3bd),[_0x781350,_0x50cbe4['telepon_rumah'],_0x50cbe4['hp_orang_tua'],_0x50cbe4[_0x45dee9(0x3d2)]][_0x45dee9(0x47f)](_0x2305a3)),await _0x3268ce[_0x45dee9(0x54b)]('INSERT\x20INTO\x20data_periodik\x20(siswa_id,\x20tinggi_badan,\x20berat_badan,\x20lingkar_kepala,\x20jarak_rumah,\x20waktu_tempuh,\x20anak_keberapa,\x20jumlah_saudara_kandung)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x781350,_0x50cbe4[_0x45dee9(0x5e0)],_0x50cbe4[_0x45dee9(0x612)],_0x50cbe4['lingkar_kepala'],_0x50cbe4[_0x45dee9(0x5fb)],_0x50cbe4[_0x45dee9(0x40b)],_0x50cbe4['anak_keberapa'],_0x50cbe4[_0x45dee9(0x14f)]][_0x45dee9(0x47f)](_0x2305a3)),await _0x3268ce[_0x45dee9(0x54b)](_0x45dee9(0x146),[_0x781350,_0x50cbe4[_0x45dee9(0x56a)],_0x50cbe4[_0x45dee9(0x54d)]||'Tidak',_0x50cbe4[_0x45dee9(0x34e)],_0x50cbe4[_0x45dee9(0x506)]||_0x45dee9(0x29f),_0x50cbe4['nomor_kip'],_0x50cbe4[_0x45dee9(0x5c4)],_0x50cbe4['bank_pip'],_0x50cbe4['nomor_rek_pip'],_0x50cbe4[_0x45dee9(0x60d)],_0x50cbe4[_0x45dee9(0x1b8)]||_0x45dee9(0x29f),_0x50cbe4[_0x45dee9(0x278)]][_0x45dee9(0x47f)](_0x2305a3)),await _0x3268ce[_0x45dee9(0x38d)](),_0x48e736[_0x45dee9(0x3c7)]({'success':!![]});}catch(_0xea38be){await _0x3268ce[_0x45dee9(0x603)](),console[_0x45dee9(0x2e2)](_0x45dee9(0x37e),_0xea38be),_0x48e736[_0x45dee9(0x3dc)](0x1f4)[_0x45dee9(0x3c7)]({'error':'Failed\x20to\x20create\x20student:\x20'+_0xea38be[_0x45dee9(0x19a)]});}finally{_0x3268ce[_0x45dee9(0x44c)]();}})),app[a0_0xfa5210(0x31b)]('/api/siswa/:id',authenticate,asyncHandler(async(_0x5b34c7,_0x309886)=>{const _0xfb92b2=a0_0xfa5210;if(!_0x5b34c7[_0xfb92b2(0x189)][_0xfb92b2(0x526)]['includes'](_0xfb92b2(0x3d6))&&!_0x5b34c7['user']['permissions'][_0xfb92b2(0x424)](_0xfb92b2(0x1b2)))return _0x309886[_0xfb92b2(0x3dc)](0x193)['json']({'error':_0xfb92b2(0x20d)});const _0x151d57=_0x5b34c7[_0xfb92b2(0x2f2)],_0x1f9b48=_0x5b34c7[_0xfb92b2(0x5e5)]['id'],_0x30c713=await getPool()[_0xfb92b2(0x4b4)]();try{await _0x30c713[_0xfb92b2(0x115)]();const _0x3db7f8=_0x1ad91f=>_0x1ad91f===''?null:_0x1ad91f;await _0x30c713[_0xfb92b2(0x54b)]('UPDATE\x20siswa\x20SET\x20tahun_pelajaran\x20=\x20?,\x20semester\x20=\x20?,\x20nipd\x20=\x20?,\x20nisn\x20=\x20?,\x20nik\x20=\x20?,\x20nama_lengkap\x20=\x20?,\x20jenis_kelamin\x20=\x20?,\x20tempat_lahir\x20=\x20?,\x20tanggal_lahir\x20=\x20?,\x20agama\x20=\x20?,\x20kewarganegaraan\x20=\x20?,\x20alamat_jalan\x20=\x20?,\x20rt\x20=\x20?,\x20rw\x20=\x20?,\x20provinsi\x20=\x20?,\x20kota\x20=\x20?,\x20kecamatan\x20=\x20?,\x20kelurahan\x20=\x20?,\x20kode_pos\x20=\x20?,\x20lintang\x20=\x20?,\x20bujur\x20=\x20?,\x20nomor_kk\x20=\x20?,\x20tempat_tinggal\x20=\x20?,\x20moda_transportasi\x20=\x20?,\x20rombel\x20=\x20?,\x20tk_paud\x20=\x20?,\x20nama_tk_paud\x20=\x20?,\x20nomor_akte_lahir\x20=\x20?,\x20skhun\x20=\x20?,\x20no_peserta_ujian_nasioal\x20=\x20?,\x20no_seri_ijazah\x20=\x20?,\x20sekolah_asal\x20=\x20?,\x20kebutuhan_khusus\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x151d57['tahun_pelajaran'],_0x151d57[_0xfb92b2(0x222)],_0x151d57[_0xfb92b2(0x52b)],_0x151d57[_0xfb92b2(0x3c1)],_0x151d57[_0xfb92b2(0x4e7)],_0x151d57[_0xfb92b2(0x377)],_0x151d57[_0xfb92b2(0x223)],_0x151d57['tempat_lahir'],_0x151d57[_0xfb92b2(0x57a)],_0x151d57[_0xfb92b2(0x2e0)],_0x151d57['kewarganegaraan']||_0xfb92b2(0x3f6),_0x151d57[_0xfb92b2(0x17c)],_0x151d57['rt'],_0x151d57['rw'],_0x151d57[_0xfb92b2(0x234)],_0x151d57[_0xfb92b2(0x4fa)],_0x151d57[_0xfb92b2(0x195)],_0x151d57[_0xfb92b2(0x475)],_0x151d57[_0xfb92b2(0x1dc)],_0x151d57['lintang'],_0x151d57[_0xfb92b2(0x316)],_0x151d57[_0xfb92b2(0x561)],_0x151d57[_0xfb92b2(0x28e)],_0x151d57[_0xfb92b2(0x627)],_0x151d57[_0xfb92b2(0x53b)],_0x151d57[_0xfb92b2(0x35d)]||_0xfb92b2(0x29f),_0x151d57[_0xfb92b2(0x3f2)],_0x151d57[_0xfb92b2(0x52e)],_0x151d57[_0xfb92b2(0x46c)],_0x151d57['no_peserta_ujian_nasioal'],_0x151d57[_0xfb92b2(0x40d)],_0x151d57[_0xfb92b2(0x3ab)],_0x151d57['kebutuhan_khusus']||_0xfb92b2(0x29f),_0x1f9b48][_0xfb92b2(0x47f)](_0x3db7f8));const [_0x5c8010]=await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0xf6),[_0x1f9b48]);_0x5c8010[_0xfb92b2(0x5be)]>0x0?await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x525),[_0x151d57[_0xfb92b2(0x513)],_0x151d57['nik_ayah'],_0x151d57[_0xfb92b2(0xf8)],_0x151d57[_0xfb92b2(0x16d)],_0x151d57[_0xfb92b2(0x41f)],_0x151d57['penghasilan_ayah'],_0x151d57['kebutuhan_khusus_ayah']||_0xfb92b2(0x29f),_0x1f9b48]['map'](_0x3db7f8)):await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x13b),[_0x1f9b48,_0x151d57[_0xfb92b2(0x513)],_0x151d57[_0xfb92b2(0x4f4)],_0x151d57[_0xfb92b2(0xf8)],_0x151d57[_0xfb92b2(0x16d)],_0x151d57[_0xfb92b2(0x41f)],_0x151d57[_0xfb92b2(0x1ab)],_0x151d57[_0xfb92b2(0x50d)]||_0xfb92b2(0x29f)]['map'](_0x3db7f8));const [_0x5370e0]=await _0x30c713['execute'](_0xfb92b2(0x407),[_0x1f9b48]);_0x5370e0[_0xfb92b2(0x5be)]>0x0?await _0x30c713['execute'](_0xfb92b2(0x405),[_0x151d57[_0xfb92b2(0x1bf)],_0x151d57[_0xfb92b2(0x3e1)],_0x151d57[_0xfb92b2(0x38e)],_0x151d57[_0xfb92b2(0x18c)],_0x151d57['pekerjaan_ibu'],_0x151d57[_0xfb92b2(0x484)],_0x151d57[_0xfb92b2(0x237)]||_0xfb92b2(0x29f),_0x1f9b48]['map'](_0x3db7f8)):await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x356),[_0x1f9b48,_0x151d57[_0xfb92b2(0x1bf)],_0x151d57[_0xfb92b2(0x3e1)],_0x151d57[_0xfb92b2(0x38e)],_0x151d57[_0xfb92b2(0x18c)],_0x151d57['pekerjaan_ibu'],_0x151d57[_0xfb92b2(0x484)],_0x151d57[_0xfb92b2(0x237)]||_0xfb92b2(0x29f)][_0xfb92b2(0x47f)](_0x3db7f8));const [_0x89d4b7]=await _0x30c713['execute']('SELECT\x20id\x20FROM\x20data_wali\x20WHERE\x20siswa_id\x20=\x20?',[_0x1f9b48]);if(_0x89d4b7[_0xfb92b2(0x5be)]>0x0)await _0x30c713['execute']('UPDATE\x20data_wali\x20SET\x20nama\x20=\x20?,\x20nik\x20=\x20?,\x20tahun_lahir\x20=\x20?,\x20pendidikan\x20=\x20?,\x20pekerjaan\x20=\x20?,\x20penghasilan\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?',[_0x151d57[_0xfb92b2(0x1ce)],_0x151d57[_0xfb92b2(0x1f1)],_0x151d57[_0xfb92b2(0x184)],_0x151d57[_0xfb92b2(0x25e)],_0x151d57[_0xfb92b2(0x32f)],_0x151d57['penghasilan_wali'],_0x1f9b48]['map'](_0x3db7f8));else _0x151d57[_0xfb92b2(0x1ce)]&&await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x2b7),[_0x1f9b48,_0x151d57[_0xfb92b2(0x1ce)],_0x151d57['nik_wali'],_0x151d57[_0xfb92b2(0x184)],_0x151d57[_0xfb92b2(0x25e)],_0x151d57['pekerjaan_wali'],_0x151d57['penghasilan_wali']]['map'](_0x3db7f8));const [_0x216f48]=await _0x30c713['execute'](_0xfb92b2(0x179),[_0x1f9b48]);_0x216f48[_0xfb92b2(0x5be)]>0x0?await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x3a9),[_0x151d57[_0xfb92b2(0x103)],_0x151d57['hp_orang_tua'],_0x151d57[_0xfb92b2(0x3d2)],_0x1f9b48][_0xfb92b2(0x47f)](_0x3db7f8)):await _0x30c713['execute'](_0xfb92b2(0x3bd),[_0x1f9b48,_0x151d57[_0xfb92b2(0x103)],_0x151d57[_0xfb92b2(0x2f6)],_0x151d57['email_orang_tua']][_0xfb92b2(0x47f)](_0x3db7f8));const [_0x2270c5]=await _0x30c713['execute'](_0xfb92b2(0x481),[_0x1f9b48]);_0x2270c5[_0xfb92b2(0x5be)]>0x0?await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x47c),[_0x151d57[_0xfb92b2(0x5e0)],_0x151d57[_0xfb92b2(0x612)],_0x151d57[_0xfb92b2(0x31f)],_0x151d57[_0xfb92b2(0x5fb)],_0x151d57[_0xfb92b2(0x40b)],_0x151d57[_0xfb92b2(0x286)],_0x151d57['jumlah_saudara_kandung'],_0x1f9b48][_0xfb92b2(0x47f)](_0x3db7f8)):await _0x30c713['execute'](_0xfb92b2(0x45a),[_0x1f9b48,_0x151d57[_0xfb92b2(0x5e0)],_0x151d57[_0xfb92b2(0x612)],_0x151d57['lingkar_kepala'],_0x151d57[_0xfb92b2(0x5fb)],_0x151d57[_0xfb92b2(0x40b)],_0x151d57['anak_keberapa'],_0x151d57[_0xfb92b2(0x14f)]][_0xfb92b2(0x47f)](_0x3db7f8));const [_0x26af4b]=await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x313),[_0x1f9b48]);_0x26af4b[_0xfb92b2(0x5be)]>0x0?await _0x30c713['execute']('UPDATE\x20data_afirmasi\x20SET\x20nomor_kks\x20=\x20?,\x20penerima_kps_pkh\x20=\x20?,\x20nomor_kps\x20=\x20?,\x20penerima_kip\x20=\x20?,\x20nomor_kip\x20=\x20?,\x20nama_sesuai_kip\x20=\x20?,\x20bank_pip\x20=\x20?,\x20nomor_rek_pip\x20=\x20?,\x20atasnama_rek_pip\x20=\x20?,\x20layak_pip\x20=\x20?,\x20alasan_layak_pip\x20=\x20?\x20WHERE\x20siswa_id\x20=\x20?',[_0x151d57[_0xfb92b2(0x56a)],_0x151d57[_0xfb92b2(0x54d)]||_0xfb92b2(0x29f),_0x151d57[_0xfb92b2(0x34e)],_0x151d57[_0xfb92b2(0x506)]||'Tidak',_0x151d57['nomor_kip'],_0x151d57['nama_sesuai_kip'],_0x151d57['bank_pip'],_0x151d57[_0xfb92b2(0x2c3)],_0x151d57[_0xfb92b2(0x60d)],_0x151d57[_0xfb92b2(0x1b8)]||'Tidak',_0x151d57[_0xfb92b2(0x278)],_0x1f9b48][_0xfb92b2(0x47f)](_0x3db7f8)):await _0x30c713[_0xfb92b2(0x54b)](_0xfb92b2(0x146),[_0x1f9b48,_0x151d57[_0xfb92b2(0x56a)],_0x151d57[_0xfb92b2(0x54d)]||'Tidak',_0x151d57[_0xfb92b2(0x34e)],_0x151d57[_0xfb92b2(0x506)]||'Tidak',_0x151d57[_0xfb92b2(0x5a8)],_0x151d57[_0xfb92b2(0x5c4)],_0x151d57[_0xfb92b2(0x507)],_0x151d57[_0xfb92b2(0x2c3)],_0x151d57['atasnama_rek_pip'],_0x151d57[_0xfb92b2(0x1b8)]||_0xfb92b2(0x29f),_0x151d57[_0xfb92b2(0x278)]][_0xfb92b2(0x47f)](_0x3db7f8)),await _0x30c713['commit'](),_0x309886[_0xfb92b2(0x3c7)]({'success':!![]});}catch(_0x2236ba){await _0x30c713[_0xfb92b2(0x603)](),console[_0xfb92b2(0x2e2)](_0xfb92b2(0x60e),_0x2236ba),_0x309886[_0xfb92b2(0x3dc)](0x1f4)[_0xfb92b2(0x3c7)]({'error':_0xfb92b2(0x3cd)+_0x2236ba[_0xfb92b2(0x19a)]});}finally{_0x30c713[_0xfb92b2(0x44c)]();}})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x449),authenticate,asyncHandler(async(_0x5586a1,_0x5ca78b)=>{const _0x320284=a0_0xfa5210;if(!_0x5586a1[_0x320284(0x189)]['permissions'][_0x320284(0x424)](_0x320284(0x3d6))&&!_0x5586a1['user'][_0x320284(0x526)][_0x320284(0x424)](_0x320284(0x558)))return _0x5ca78b[_0x320284(0x3dc)](0x193)['json']({'error':_0x320284(0x20d)});await getPool()[_0x320284(0x54b)]('DELETE\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?',[_0x5586a1['params']['id']]),_0x5ca78b[_0x320284(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)]('/api/me',authenticate,asyncHandler(async(_0x27cf7c,_0x4e917c)=>{const _0xb3bbe9=a0_0xfa5210;if(_0x27cf7c[_0xb3bbe9(0x189)][_0xb3bbe9(0x156)]===_0xb3bbe9(0x45b)){const [_0x58cebb]=await getPool()[_0xb3bbe9(0x54b)](_0xb3bbe9(0x456),[_0x27cf7c[_0xb3bbe9(0x189)]['username']]);if(_0x58cebb[_0xb3bbe9(0x5be)]>0x0){const _0x2b6a6a=_0x58cebb[0x0],_0x2ad11a=_0x2b6a6a[_0xb3bbe9(0x2fd)]&&_0x2b6a6a[_0xb3bbe9(0x2fd)][_0xb3bbe9(0x12a)]()[_0xb3bbe9(0x424)](_0xb3bbe9(0x55c))||_0x2b6a6a[_0xb3bbe9(0x2ca)]&&_0x2b6a6a[_0xb3bbe9(0x2ca)][_0xb3bbe9(0x12a)]()[_0xb3bbe9(0x424)](_0xb3bbe9(0x55c));return _0x4e917c[_0xb3bbe9(0x3c7)]({..._0x2b6a6a,'type':_0xb3bbe9(0x160),'is_teacher':_0x2ad11a});}if(_0x27cf7c[_0xb3bbe9(0x189)]['username']===process.env.ADMIN_USERNAME&&_0x27cf7c[_0xb3bbe9(0x189)][_0xb3bbe9(0x55e)]===_0xb3bbe9(0x56b))return _0x4e917c[_0xb3bbe9(0x3c7)]({'nama_lengkap':_0xb3bbe9(0x3e7),'role_name':_0xb3bbe9(0x56b),'permissions':_0xb3bbe9(0x564),'type':_0xb3bbe9(0x160),'is_teacher':![]});}else{if(_0x27cf7c[_0xb3bbe9(0x189)][_0xb3bbe9(0x156)]===_0xb3bbe9(0x1f4)){const _0x29e1a3=_0x27cf7c[_0xb3bbe9(0x189)]['id']||_0xb3bbe9(0x4c6),_0x7f8ba5=_0x27cf7c['user']['nisn']||_0x27cf7c[_0xb3bbe9(0x189)][_0xb3bbe9(0x5a2)]||_0xb3bbe9(0x4c6),[_0x871c39]=await getPool()[_0xb3bbe9(0x54b)](_0xb3bbe9(0x594),[_0x29e1a3,_0x7f8ba5]);if(_0x871c39['length']>0x0)return _0x4e917c['json']({..._0x871c39[0x0],'type':_0xb3bbe9(0x1f4),'role_name':_0xb3bbe9(0x56e),'permissions':'[]'});}}_0x4e917c[_0xb3bbe9(0x3dc)](0x194)[_0xb3bbe9(0x3c7)]({'error':_0xb3bbe9(0x5bf)});})),app[a0_0xfa5210(0x218)]('/api/staff/profile/photo',authenticate,uploadProfile[a0_0xfa5210(0x544)](a0_0xfa5210(0x5a1)),asyncHandler(async(_0x4739fc,_0x2d5246)=>{const _0x2fbd98=a0_0xfa5210;if(_0x4739fc[_0x2fbd98(0x189)][_0x2fbd98(0x156)]!==_0x2fbd98(0x45b))return _0x2d5246[_0x2fbd98(0x3dc)](0x193)[_0x2fbd98(0x3c7)]({'error':'Access\x20denied'});if(!_0x4739fc[_0x2fbd98(0x41e)])return _0x2d5246['status'](0x190)[_0x2fbd98(0x3c7)]({'error':_0x2fbd98(0x2aa)});const [_0x46275b]=await getPool()[_0x2fbd98(0x54b)]('SELECT\x20pw.staff_id,\x20p.nik,\x20p.nama_lengkap\x20FROM\x20pengguna_web\x20pw\x20LEFT\x20JOIN\x20pegawai\x20p\x20ON\x20pw.staff_id\x20=\x20p.pegawai_id\x20WHERE\x20pw.username\x20=\x20?',[_0x4739fc[_0x2fbd98(0x189)][_0x2fbd98(0x5a2)]]);if(_0x46275b[_0x2fbd98(0x5be)]===0x0||!_0x46275b[0x0]['staff_id'])return _0x2d5246[_0x2fbd98(0x3dc)](0x194)[_0x2fbd98(0x3c7)]({'error':_0x2fbd98(0x281)});const _0x16cf62=_0x46275b[0x0][_0x2fbd98(0x348)],_0x16980b=_0x46275b[0x0][_0x2fbd98(0x4e7)]||_0x2fbd98(0x172)+_0x16cf62,_0x185372=_0x46275b[0x0][_0x2fbd98(0x377)]||_0x2fbd98(0x54f),_0x21b154=(_0x16980b+'_'+_0x185372)[_0x2fbd98(0x2de)](/[^a-zA-Z0-9_-]/g,'_'),_0x3bd25f=import_path[_0x2fbd98(0x60b)][_0x2fbd98(0x55b)](_0x4739fc[_0x2fbd98(0x41e)]['originalname']),_0x3d621e=''+_0x21b154+_0x3bd25f,_0x3b8cb1=import_path['default'][_0x2fbd98(0x4ca)](uploadDir,_0x2fbd98(0x442),_0x2fbd98(0x160),_0x3d621e);import_fs[_0x2fbd98(0x60b)][_0x2fbd98(0x57d)](_0x4739fc[_0x2fbd98(0x41e)][_0x2fbd98(0x245)],_0x3b8cb1);let _0x5e71e1=_0x2fbd98(0x56f)+_0x3d621e,_0x3beee0=null;const _0x5a6158=await uploadToGoogleDriveFallback(_0x3b8cb1,_0x3d621e,_0x4739fc[_0x2fbd98(0x41e)]['mimetype'],_0x2fbd98(0x160),_0x2fbd98(0x466));_0x5a6158&&(_0x3beee0=_0x5a6158,_0x5e71e1=null),await getPool()['execute'](_0x2fbd98(0x33e),[_0x16cf62,_0x5e71e1,_0x3beee0]),_0x2d5246[_0x2fbd98(0x3c7)]({'message':_0x2fbd98(0x27d),'photo_url':_0x3beee0||_0x5e71e1});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x30e),authenticate,uploadProfile[a0_0xfa5210(0x544)](a0_0xfa5210(0x5a1)),asyncHandler(async(_0xc48419,_0x250de6)=>{const _0x159d1d=a0_0xfa5210;if(!_0xc48419[_0x159d1d(0x189)][_0x159d1d(0x526)]?.[_0x159d1d(0x424)](_0x159d1d(0x3d6))&&_0xc48419[_0x159d1d(0x189)]['role']!==_0x159d1d(0x56b))return _0x250de6[_0x159d1d(0x3dc)](0x193)[_0x159d1d(0x3c7)]({'error':_0x159d1d(0x246)});if(!_0xc48419[_0x159d1d(0x41e)])return _0x250de6['status'](0x190)[_0x159d1d(0x3c7)]({'error':'No\x20file\x20uploaded'});const _0x41a920=_0xc48419[_0x159d1d(0x5e5)]['id'],[_0x3c30fb]=await getPool()['execute'](_0x159d1d(0x620),[_0x41a920]);if(_0x3c30fb['length']===0x0)return _0x250de6[_0x159d1d(0x3dc)](0x194)['json']({'error':'Pegawai\x20not\x20found'});const _0x54514d=_0x3c30fb[0x0][_0x159d1d(0x4e7)]||_0x159d1d(0x172)+_0x41a920,_0x55b1e3=_0x3c30fb[0x0][_0x159d1d(0x377)]||'Pegawai',_0x29f34b=(_0x54514d+'_'+_0x55b1e3)[_0x159d1d(0x2de)](/[^a-zA-Z0-9_-]/g,'_'),_0x4536b7=import_path[_0x159d1d(0x60b)]['extname'](_0xc48419['file'][_0x159d1d(0x419)]),_0x43d89e=''+_0x29f34b+_0x4536b7,_0x195108=import_path[_0x159d1d(0x60b)][_0x159d1d(0x4ca)](uploadDir,_0x159d1d(0x442),_0x159d1d(0x160),_0x43d89e);import_fs[_0x159d1d(0x60b)][_0x159d1d(0x57d)](_0xc48419[_0x159d1d(0x41e)][_0x159d1d(0x245)],_0x195108);let _0xffec26='/uploads/profiles/pegawai/'+_0x43d89e,_0x3eebde=null;const _0x24fa14=await uploadToGoogleDriveFallback(_0x195108,_0x43d89e,_0xc48419[_0x159d1d(0x41e)][_0x159d1d(0x485)],'pegawai',_0x159d1d(0x466));_0x24fa14&&(_0x3eebde=_0x24fa14,_0xffec26=null),await getPool()[_0x159d1d(0x54b)]('INSERT\x20INTO\x20file_storage\x20(data_id,\x20tipe_data,\x20kategori,\x20server,\x20drive)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20\x27pegawai\x27,\x20\x27foto_profil\x27,\x20?,\x20?)\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20server\x20=\x20VALUES(server),\x20drive\x20=\x20VALUES(drive)',[_0x41a920,_0xffec26,_0x3eebde]),_0x250de6[_0x159d1d(0x3c7)]({'message':_0x159d1d(0x27d),'photo_url':_0x3eebde||_0xffec26});})),app['get']('/api/student/profile',authenticate,asyncHandler(async(_0x1c7269,_0x2b1904)=>{const _0x3c54d7=a0_0xfa5210;if(_0x1c7269['user'][_0x3c54d7(0x156)]!==_0x3c54d7(0x1f4))return _0x2b1904[_0x3c54d7(0x3dc)](0x193)[_0x3c54d7(0x3c7)]({'error':_0x3c54d7(0x246)});const _0x413b30=_0x1c7269[_0x3c54d7(0x189)]['id']||'not-found',_0x1f1542=_0x1c7269[_0x3c54d7(0x189)][_0x3c54d7(0x3c1)]||_0x1c7269[_0x3c54d7(0x189)][_0x3c54d7(0x5a2)]||_0x3c54d7(0x4c6),[_0x597d77]=await getPool()['execute']('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20s.*,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dot_ayah.nama\x20as\x20nama_ayah,\x20dot_ayah.nik\x20as\x20nik_ayah,\x20dot_ayah.pekerjaan\x20as\x20pekerjaan_ayah,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dot_ibu.nama\x20as\x20nama_ibu,\x20dot_ibu.nik\x20as\x20nik_ibu,\x20dot_ibu.pekerjaan\x20as\x20pekerjaan_ibu,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dw.nama\x20as\x20nama_wali,\x20dw.nik\x20as\x20nik_wali,\x20dw.pekerjaan\x20as\x20pekerjaan_wali,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20dk.nomor_hp\x20as\x20hp_orang_tua,\x20dk.email\x20as\x20email_orang_tua,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(fs_foto.drive,\x20fs_foto.server)\x20AS\x20foto_profil\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20siswa\x20s\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20dot_ayah\x20ON\x20s.id\x20=\x20dot_ayah.siswa_id\x20AND\x20dot_ayah.tipe\x20=\x20\x27ayah\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_orang_tua\x20dot_ibu\x20ON\x20s.id\x20=\x20dot_ibu.siswa_id\x20AND\x20dot_ibu.tipe\x20=\x20\x27ibu\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_wali\x20dw\x20ON\x20s.id\x20=\x20dw.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_kontak\x20dk\x20ON\x20s.id\x20=\x20dk.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_periodik\x20dp\x20ON\x20s.id\x20=\x20dp.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20data_afirmasi\x20da\x20ON\x20s.id\x20=\x20da.siswa_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20file_storage\x20fs_foto\x20ON\x20s.id\x20=\x20fs_foto.data_id\x20AND\x20fs_foto.tipe_data\x20=\x20\x27siswa\x27\x20AND\x20fs_foto.kategori\x20=\x20\x27foto_profil\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20s.id\x20=\x20?\x20OR\x20s.nisn\x20=\x20?',[_0x413b30,_0x1f1542]);_0x2b1904['json'](_0x597d77[0x0]||null);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x1a6),authenticate,uploadProfile[a0_0xfa5210(0x544)]('photo'),asyncHandler(async(_0xdcd6bb,_0x30a42d)=>{const _0x340a77=a0_0xfa5210;if(_0xdcd6bb[_0x340a77(0x189)]['type']!=='student')return _0x30a42d[_0x340a77(0x3dc)](0x193)[_0x340a77(0x3c7)]({'error':'Access\x20denied'});if(!_0xdcd6bb[_0x340a77(0x41e)])return _0x30a42d['status'](0x190)['json']({'error':_0x340a77(0x2aa)});const _0x1747d9=_0xdcd6bb[_0x340a77(0x189)]['id']||null,_0x1aa65a=_0xdcd6bb['user']['nisn']||_0xdcd6bb[_0x340a77(0x189)]['username']||null,[_0x37614c]=await getPool()['execute'](_0x340a77(0x227),[_0x1747d9,_0x1aa65a]);if(_0x37614c[_0x340a77(0x5be)]===0x0)return _0x30a42d[_0x340a77(0x3dc)](0x194)[_0x340a77(0x3c7)]({'error':_0x340a77(0x5c1)});const _0x54bf32=_0x37614c[0x0]['id'],_0x4242f2=_0x37614c[0x0][_0x340a77(0x4e7)]||_0x37614c[0x0][_0x340a77(0x52b)]||'siswa_'+_0x54bf32,_0x2e8049=_0x37614c[0x0][_0x340a77(0x377)]||_0x340a77(0x2c4),_0x1c4063=(_0x4242f2+'_'+_0x2e8049)[_0x340a77(0x2de)](/[^a-zA-Z0-9_-]/g,'_'),_0x5576a5=import_path[_0x340a77(0x60b)]['extname'](_0xdcd6bb[_0x340a77(0x41e)][_0x340a77(0x419)]),_0x283e99=''+_0x1c4063+_0x5576a5,_0x3aa4e6=import_path[_0x340a77(0x60b)][_0x340a77(0x4ca)](uploadDir,_0x340a77(0x442),'siswa',_0x283e99);import_fs[_0x340a77(0x60b)]['renameSync'](_0xdcd6bb['file']['path'],_0x3aa4e6);let _0x781cf8=_0x340a77(0x562)+_0x283e99,_0x5f59c6=null;const _0x5afc8a=await uploadToGoogleDriveFallback(_0x3aa4e6,_0x283e99,_0xdcd6bb[_0x340a77(0x41e)][_0x340a77(0x485)],'siswa',_0x340a77(0x534));_0x5afc8a&&(_0x5f59c6=_0x5afc8a,_0x781cf8=null),await getPool()['execute'](_0x340a77(0x10e),[_0x54bf32,_0x781cf8,_0x5f59c6]),_0x30a42d[_0x340a77(0x3c7)]({'message':_0x340a77(0x27d),'photo_url':_0x5f59c6||_0x781cf8});})),app[a0_0xfa5210(0x1fc)]('/api/student/absensi',authenticate,asyncHandler(async(_0x4d1439,_0x3aa1b8)=>{const _0x280abc=a0_0xfa5210;if(_0x4d1439['user'][_0x280abc(0x156)]!==_0x280abc(0x1f4))return _0x3aa1b8[_0x280abc(0x3dc)](0x193)[_0x280abc(0x3c7)]({'error':_0x280abc(0x246)});const _0x12096c=_0x4d1439[_0x280abc(0x189)]['id']||'not-found',{start_date:_0x301eb0,end_date:_0x2b2fca}=_0x4d1439[_0x280abc(0x59d)];let _0x16a5c3='';const _0x10eb57=[_0x12096c];_0x301eb0&&_0x2b2fca&&(_0x16a5c3=_0x280abc(0x4c0),_0x10eb57['push'](_0x301eb0,_0x2b2fca));const [_0x18481b]=await getPool()[_0x280abc(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20status,\x20COUNT(*)\x20as\x20count\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20absensi_siswa\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20student_id\x20=\x20?\x20'+_0x16a5c3+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20GROUP\x20BY\x20status\x0a\x20\x20\x20\x20',_0x10eb57),[_0x29cb0c]=await getPool()[_0x280abc(0x54b)](_0x280abc(0x4ad)+_0x16a5c3+_0x280abc(0x228),_0x10eb57);_0x3aa1b8[_0x280abc(0x3c7)]({'summary':_0x18481b,'records':_0x29cb0c});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x409),authenticate,asyncHandler(async(_0xb53944,_0x2da02d)=>{const _0x1b6659=a0_0xfa5210;if(_0xb53944['user'][_0x1b6659(0x156)]!==_0x1b6659(0x1f4))return _0x2da02d[_0x1b6659(0x3dc)](0x193)[_0x1b6659(0x3c7)]({'error':_0x1b6659(0x538)});const _0x3ab6a0=_0xb53944[_0x1b6659(0x189)]['id'],[_0x3eb53d]=await getPool()[_0x1b6659(0x54b)](_0x1b6659(0x22d),[_0x3ab6a0]);_0x2da02d[_0x1b6659(0x3c7)](_0x3eb53d[0x0]||null);})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x5b4),authenticate,asyncHandler(async(_0x142751,_0x4faf3b)=>{const _0x256b48=a0_0xfa5210,[_0x39f7ab]=await getPool()['execute'](_0x256b48(0x3d1));_0x4faf3b[_0x256b48(0x3c7)](_0x39f7ab);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x5b4),authenticate,asyncHandler(async(_0xd29c60,_0x73c83c)=>{const _0x314b66=a0_0xfa5210;if(_0xd29c60[_0x314b66(0x189)]['type']!=='student')return _0x73c83c[_0x314b66(0x3dc)](0x193)[_0x314b66(0x3c7)]({'error':_0x314b66(0x61c)});const _0x411d2e=_0xd29c60[_0x314b66(0x189)]['id'],{wali_nama:_0x10fb89,wali_pekerjaan:_0xb2e26c,wali_alamat:_0x3e23ca,tujuan_sekolah:_0x28871b,tujuan_desa:_0x45620d,tujuan_kec:_0x287622,tujuan_prov:_0x39f74a,alasan:_0x3c5330}=_0xd29c60[_0x314b66(0x2f2)],[_0x232916]=await getPool()[_0x314b66(0x54b)](_0x314b66(0x175),[_0x411d2e]);if(_0x232916[_0x314b66(0x5be)]>0x0)return _0x73c83c[_0x314b66(0x3dc)](0x190)[_0x314b66(0x3c7)]({'error':_0x314b66(0x149)});await getPool()['execute'](_0x314b66(0x4e0),[_0x411d2e,_0x10fb89,_0xb2e26c,_0x3e23ca,_0x28871b,_0x45620d,_0x287622,_0x39f74a,_0x3c5330]),_0x73c83c['json']({'success':!![]});})),app[a0_0xfa5210(0x31b)](a0_0xfa5210(0x575),authenticate,asyncHandler(async(_0x4defa0,_0x189653)=>{const _0x335607=a0_0xfa5210,{status:_0x8da5de}=_0x4defa0['body'];if(![_0x335607(0x467),_0x335607(0x347)][_0x335607(0x424)](_0x8da5de))return _0x189653[_0x335607(0x3dc)](0x190)['json']({'error':_0x335607(0x2cd)});await getPool()[_0x335607(0x54b)]('UPDATE\x20permohonan_pindah\x20SET\x20status\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x8da5de,_0x4defa0[_0x335607(0x5e5)]['id']]),_0x189653[_0x335607(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x1c2),authenticate,uploadPermohonan['single']('dokumen_scan'),asyncHandler(async(_0x388363,_0xbfee45)=>{const _0x560384=a0_0xfa5210;if(!_0x388363['file'])return _0xbfee45[_0x560384(0x3dc)](0x190)['json']({'error':'No\x20file\x20uploaded'});const _0x414b7c=_0x560384(0x205)+_0x388363[_0x560384(0x41e)][_0x560384(0x333)];await getPool()['execute']('UPDATE\x20permohonan_pindah\x20SET\x20dokumen_scan\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x414b7c,_0x388363[_0x560384(0x5e5)]['id']]),_0xbfee45[_0x560384(0x3c7)]({'success':!![],'url':_0x414b7c});})),app['get'](a0_0xfa5210(0x11e),authenticate,asyncHandler(async(_0x117cad,_0x5d8368)=>{const _0xd85b6a=a0_0xfa5210,[_0x1f0837]=await getPool()[_0xd85b6a(0x54b)](_0xd85b6a(0x1ed));_0x5d8368['json'](_0x1f0837);})),app[a0_0xfa5210(0x218)]('/api/pengajuan_ubah_data',authenticate,asyncHandler(async(_0x4de0fe,_0x1d0361)=>{const _0x234664=a0_0xfa5210;if(_0x4de0fe[_0x234664(0x189)][_0x234664(0x156)]!==_0x234664(0x1f4))return _0x1d0361[_0x234664(0x3dc)](0x193)['json']({'error':_0x234664(0x5ac)});let {proposed_data:_0x4c4c73,document_url:_0x2cc5c8}=_0x4de0fe[_0x234664(0x2f2)];if(_0x2cc5c8&&_0x2cc5c8[_0x234664(0x586)](_0x234664(0x1d6))){const _0x35d093=import_path['default'][_0x234664(0x4ca)](process[_0x234664(0x3f8)](),_0x2cc5c8);if(import_fs[_0x234664(0x60b)][_0x234664(0x605)](_0x35d093)){const _0x44cf8f=_0x4de0fe[_0x234664(0x189)]['id']||null,_0x2080a0=_0x4de0fe[_0x234664(0x189)][_0x234664(0x3c1)]||_0x4de0fe[_0x234664(0x189)][_0x234664(0x5a2)]||null,[_0x15a162]=await getPool()[_0x234664(0x54b)](_0x234664(0x471),[_0x44cf8f,_0x2080a0]);if(_0x15a162[_0x234664(0x5be)]>0x0){const _0x5e396e=_0x15a162[0x0][_0x234664(0x4e7)]||_0x15a162[0x0][_0x234664(0x52b)]||'siswa_'+_0x44cf8f,_0x46cdb0=_0x15a162[0x0][_0x234664(0x377)]||_0x234664(0x2c4),_0x559d1e=(_0x5e396e+'_'+_0x46cdb0)[_0x234664(0x2de)](/[^a-zA-Z0-9_-]/g,'_'),_0x13fba5=import_path[_0x234664(0x60b)][_0x234664(0x55b)](_0x35d093),_0x27933f='DokumenPerubahan_'+_0x559d1e+_0x13fba5,_0x241825=await uploadToGoogleDriveFallback(_0x35d093,_0x27933f,_0x234664(0x474),'perubahan_data','File\x20Perubahan\x20Data');_0x241825&&(_0x2cc5c8=_0x241825);}}}await getPool()[_0x234664(0x54b)](_0x234664(0x499),[_0x4de0fe['user']['id'],JSON[_0x234664(0x570)](_0x4c4c73),_0x2cc5c8||null]),_0x1d0361[_0x234664(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x509),authenticate,asyncHandler(async(_0x109ac8,_0x509db9)=>{const _0x29a738=a0_0xfa5210;if(_0x109ac8[_0x29a738(0x189)][_0x29a738(0x156)]!=='student')return _0x509db9[_0x29a738(0x3dc)](0x193)['json']({'error':'Hanya\x20siswa\x20yang\x20dapat\x20mengirim\x20laporan'});const {penerimaan_id:_0x42c17b,type:_0x23a15b,tgl_pencairan:_0x590fe3,tgl_penarikan:_0x5b91e6,selfie_url:_0x187090,buku_tabungan_url:_0x46497b,surat_pernyataan_url:_0x3e77d5}=_0x109ac8[_0x29a738(0x2f2)];await getPool()[_0x29a738(0x54b)](_0x29a738(0x1ea),[_0x109ac8['user']['id'],_0x42c17b,_0x23a15b,_0x590fe3,_0x5b91e6,_0x187090,_0x46497b,_0x3e77d5||null]),_0x509db9[_0x29a738(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x4d7),authenticate,asyncHandler(async(_0x6203e7,_0x529e31)=>{const _0x566960=a0_0xfa5210,{type:_0x1c7cbb,penerimaan_id:_0x2dbd47}=_0x6203e7[_0x566960(0x5e5)],[_0x28cd06]=await getPool()[_0x566960(0x54b)](_0x566960(0x2d4),[_0x1c7cbb,_0x2dbd47]);_0x529e31[_0x566960(0x3c7)](_0x28cd06);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x1d0),authenticate,asyncHandler(async(_0x3e9b2e,_0x944ea9)=>{const _0x6c05ac=a0_0xfa5210,{id:_0x2bdc4c}=_0x3e9b2e[_0x6c05ac(0x5e5)],[_0x41c87f]=await getPool()['execute']('SELECT\x20*\x20FROM\x20pengajuan_ubah_data\x20WHERE\x20id\x20=\x20?',[_0x2bdc4c]);if(_0x41c87f[_0x6c05ac(0x5be)]===0x0)return _0x944ea9['status'](0x194)['json']({'error':_0x6c05ac(0x355)});const _0x3bb6f6=_0x41c87f[0x0],_0x2fae81=JSON['parse'](_0x3bb6f6['proposed_data']),_0x4c308b=Object[_0x6c05ac(0x421)](_0x2fae81),_0x4d8828=Object[_0x6c05ac(0x5fc)](_0x2fae81),_0x5c4542=_0x4c308b[_0x6c05ac(0x47f)](_0x3c959e=>_0x3c959e+_0x6c05ac(0x164))[_0x6c05ac(0x4ca)](',\x20');await getPool()[_0x6c05ac(0x54b)]('UPDATE\x20siswa\x20SET\x20'+_0x5c4542+_0x6c05ac(0x3a1),[..._0x4d8828,_0x3bb6f6[_0x6c05ac(0x2c0)]]),await getPool()[_0x6c05ac(0x54b)](_0x6c05ac(0x322),[_0x2bdc4c]),_0x944ea9[_0x6c05ac(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x171),authenticate,asyncHandler(async(_0x3f2851,_0x471d5a)=>{const _0x4185b8=a0_0xfa5210,{id:_0x1d5fd5}=_0x3f2851['params'],{admin_note:_0x16e295}=_0x3f2851[_0x4185b8(0x2f2)];await getPool()[_0x4185b8(0x54b)]('UPDATE\x20pengajuan_ubah_data\x20SET\x20status\x20=\x20\x27rejected\x27,\x20admin_note\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x16e295,_0x1d5fd5]),_0x471d5a[_0x4185b8(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x2ff),asyncHandler(async(_0x4e6445,_0x24898e)=>{const _0x5601d0=a0_0xfa5210,{username:_0x59e463,password:_0x375694,type:_0x1cd0f3}=_0x4e6445[_0x5601d0(0x2f2)],_0x5bee8e=_0x4e6445[_0x5601d0(0x28f)][_0x5601d0(0x4fc)]||_0x4e6445['socket']['remoteAddress'],_0x2b14e4=_0x4e6445['headers'][_0x5601d0(0x58f)];if(_0x1cd0f3===_0x5601d0(0x45b)){if(_0x59e463===process.env.ADMIN_USERNAME&&_0x375694===process.env.ADMIN_PASSWORD){const _0x22a298=import_jsonwebtoken['default'][_0x5601d0(0x406)]({'username':_0x59e463,'role':_0x5601d0(0x56b),'type':_0x5601d0(0x45b),'permissions':[_0x5601d0(0x3d6)]},JWT_SECRET,{'expiresIn':'24h'});return await getPool()[_0x5601d0(0x54b)]('INSERT\x20INTO\x20riwayat_masuk\x20(type,\x20username,\x20ip_address,\x20user_agent,\x20status)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)',['staff',_0x59e463,_0x5bee8e,_0x2b14e4,_0x5601d0(0x202)]),_0x24898e[_0x5601d0(0x3c7)]({'success':!![],'token':_0x22a298,'role':_0x5601d0(0x56b),'type':_0x5601d0(0x45b)});}const [_0x541b3d]=await getPool()[_0x5601d0(0x54b)](_0x5601d0(0x548),[_0x59e463]);if(_0x541b3d[_0x5601d0(0x5be)]>0x0){const _0x103a8a=_0x541b3d[0x0],_0x4563f=await import_bcryptjs[_0x5601d0(0x60b)][_0x5601d0(0x597)](_0x375694,_0x103a8a[_0x5601d0(0x3ea)]);if(!_0x4563f)return await getPool()[_0x5601d0(0x54b)](_0x5601d0(0x371),[_0x1cd0f3,_0x59e463,_0x5bee8e,_0x2b14e4,_0x5601d0(0x4ac)]),_0x24898e['status'](0x191)[_0x5601d0(0x3c7)]({'error':_0x5601d0(0x176)});if(!_0x103a8a[_0x5601d0(0x5bb)])return await getPool()[_0x5601d0(0x54b)]('INSERT\x20INTO\x20riwayat_masuk\x20(user_id,\x20type,\x20username,\x20ip_address,\x20user_agent,\x20status)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x103a8a['id'],'staff',_0x59e463,_0x5bee8e,_0x2b14e4,'failed']),_0x24898e[_0x5601d0(0x3dc)](0x193)[_0x5601d0(0x3c7)]({'error':_0x5601d0(0x4d8)});const _0x137d40=((()=>{const _0x1d3145=_0x5601d0;try{return JSON[_0x1d3145(0x5c9)](_0x103a8a['permissions']);}catch{return[_0x1d3145(0x3d6)];}})()),_0x55bf7d=import_jsonwebtoken[_0x5601d0(0x60b)][_0x5601d0(0x406)]({'id':_0x103a8a['id'],'username':_0x103a8a['username'],'role':_0x103a8a[_0x5601d0(0x2ca)],'type':_0x5601d0(0x45b),'permissions':_0x137d40,'staff_id':_0x103a8a['staff_id']},JWT_SECRET,{'expiresIn':'24h'});return await getPool()[_0x5601d0(0x54b)](_0x5601d0(0x444),[_0x103a8a['id'],_0x5601d0(0x45b),_0x59e463,_0x5bee8e,_0x2b14e4,_0x5601d0(0x202)]),_0x24898e['json']({'success':!![],'token':_0x55bf7d,'role':_0x103a8a[_0x5601d0(0x2ca)],'type':_0x5601d0(0x45b),'id':_0x103a8a['id']});}}else{if(_0x1cd0f3===_0x5601d0(0x1f4)){const _0x58569b=_0x59e463||null,_0x204ead=_0x375694||null,[_0x519895]=await getPool()[_0x5601d0(0x54b)]('SELECT\x20*\x20FROM\x20siswa\x20WHERE\x20(nisn\x20=\x20?\x20OR\x20nik\x20=\x20?)\x20AND\x20tanggal_lahir\x20=\x20?',[_0x58569b,_0x58569b,_0x204ead]);if(_0x519895[_0x5601d0(0x5be)]>0x0){const _0x1cac63=_0x519895[0x0];if(!_0x1cac63[_0x5601d0(0x5bb)])return await getPool()[_0x5601d0(0x54b)]('INSERT\x20INTO\x20riwayat_masuk\x20(student_id,\x20type,\x20username,\x20ip_address,\x20user_agent,\x20status)\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?,\x20?)',[_0x1cac63['id'],_0x5601d0(0x1f4),_0x59e463,_0x5bee8e,_0x2b14e4,_0x5601d0(0x4ac)]),_0x24898e[_0x5601d0(0x3dc)](0x193)[_0x5601d0(0x3c7)]({'error':'Login\x20siswa\x20ditangguhkan.\x20Silakan\x20hubungi\x20wali\x20kelas.'});const _0x2a4a1b=import_jsonwebtoken['default'][_0x5601d0(0x406)]({'id':_0x1cac63['id'],'nisn':_0x1cac63[_0x5601d0(0x3c1)],'type':_0x5601d0(0x1f4),'permissions':[]},JWT_SECRET,{'expiresIn':'24h'});return await getPool()[_0x5601d0(0x54b)](_0x5601d0(0x567),[_0x1cac63['id'],_0x5601d0(0x1f4),_0x59e463,_0x5bee8e,_0x2b14e4,_0x5601d0(0x202)]),_0x24898e[_0x5601d0(0x3c7)]({'success':!![],'token':_0x2a4a1b,'type':_0x5601d0(0x1f4),'id':_0x1cac63['id']});}}}await getPool()[_0x5601d0(0x54b)](_0x5601d0(0x371),[_0x1cd0f3,_0x59e463,_0x5bee8e,_0x2b14e4,_0x5601d0(0x4ac)]),_0x24898e[_0x5601d0(0x3dc)](0x191)[_0x5601d0(0x3c7)]({'error':_0x5601d0(0x176)});})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x191),asyncHandler(async(_0x57197f,_0x149890)=>{const _0x49ee71=a0_0xfa5210,{sso_token:_0x33c138,secret_key:_0x2233fd}=_0x57197f['body'],[_0x2f80eb]=await getPool()[_0x49ee71(0x54b)](_0x49ee71(0x219));let _0x874881=process.env.SSO_SECRET||_0x49ee71(0x1d5);_0x2f80eb[_0x49ee71(0x5be)]>0x0&&_0x2f80eb[0x0][_0x49ee71(0x60a)]&&(_0x874881=_0x2f80eb[0x0][_0x49ee71(0x60a)]);if(_0x2233fd!==_0x874881)return _0x149890[_0x49ee71(0x3dc)](0x193)[_0x49ee71(0x3c7)]({'error':_0x49ee71(0x239)});try{const _0x4d1fa3=import_jsonwebtoken[_0x49ee71(0x60b)]['verify'](_0x33c138,JWT_SECRET);if(_0x4d1fa3[_0x49ee71(0x156)]===_0x49ee71(0x1f4)){const [_0x30c82f]=await getPool()[_0x49ee71(0x54b)](_0x49ee71(0xf9),[_0x4d1fa3['id']]);if(_0x30c82f['length']===0x0)return _0x149890[_0x49ee71(0x3dc)](0x194)[_0x49ee71(0x3c7)]({'error':'Siswa\x20not\x20found'});const _0x222a09=_0x30c82f[0x0];return _0x149890['json']({'success':!![],'type':'SISWA','data':{'username':_0x222a09[_0x49ee71(0x3c1)],'nama':_0x222a09[_0x49ee71(0x623)],'nisn':_0x222a09['nisn'],'kelas':null}});}else{if(_0x4d1fa3['type']==='staff'){const [_0x494a83]=await getPool()[_0x49ee71(0x54b)](_0x49ee71(0x52d),[_0x4d1fa3['id']]);if(_0x494a83[_0x49ee71(0x5be)]===0x0)return _0x149890[_0x49ee71(0x3dc)](0x194)[_0x49ee71(0x3c7)]({'error':_0x49ee71(0x4f8)});const _0x4857c3=_0x494a83[0x0];let _0x221769=_0x4857c3[_0x49ee71(0x5a2)];if(_0x4857c3['staff_id']){const [_0x293f98]=await getPool()[_0x49ee71(0x54b)](_0x49ee71(0x1a7),[_0x4857c3[_0x49ee71(0x348)]]);if(_0x293f98[_0x49ee71(0x5be)]>0x0)_0x221769=_0x293f98[0x0][_0x49ee71(0x377)];}if(_0x4857c3['is_elearning_admin'])return _0x149890[_0x49ee71(0x3c7)]({'success':!![],'type':'ADMIN','data':{'username':_0x4857c3[_0x49ee71(0x5a2)],'nama':_0x221769,'role':'Administrator'}});return _0x149890[_0x49ee71(0x3c7)]({'success':!![],'type':_0x49ee71(0x1f2),'data':{'username':_0x4857c3[_0x49ee71(0x5a2)],'nama':_0x221769,'role':_0x4857c3[_0x49ee71(0x2ca)]}});}}}catch(_0xe6fdd3){return import('fs')[_0x49ee71(0x49e)](_0x4737fe=>_0x4737fe['writeFileSync'](_0x49ee71(0x5ad),_0xe6fdd3['toString']()+'\x5cn'+(_0xe6fdd3[_0x49ee71(0x24c)]||''))),console[_0x49ee71(0x2e2)](_0x49ee71(0x512),_0xe6fdd3),_0x149890[_0x49ee71(0x3dc)](0x191)[_0x49ee71(0x3c7)]({'error':_0x49ee71(0x325)});}})),app['post']('/api/sso/sync-data',asyncHandler(async(_0xd2ff1b,_0x254686)=>{const _0x31a01b=a0_0xfa5210,{secret_key:_0x44d1fe}=_0xd2ff1b[_0x31a01b(0x2f2)],[_0x3b0c91]=await getPool()[_0x31a01b(0x54b)](_0x31a01b(0x219));let _0x470ae0=process.env.SSO_SECRET||_0x31a01b(0x1d5);_0x3b0c91['length']>0x0&&_0x3b0c91[0x0][_0x31a01b(0x60a)]&&(_0x470ae0=_0x3b0c91[0x0][_0x31a01b(0x60a)]);if(_0x44d1fe!==_0x470ae0)return _0x254686[_0x31a01b(0x3dc)](0x193)[_0x31a01b(0x3c7)]({'error':_0x31a01b(0x239)});const [_0x3aff34]=await getPool()['execute'](_0x31a01b(0x4c8)),[_0x3d68a2]=await getPool()[_0x31a01b(0x54b)](_0x31a01b(0x379)),_0x13cb33=await Promise[_0x31a01b(0x3d6)](_0x3d68a2[_0x31a01b(0x47f)](async _0x398bcd=>{const _0x3f2774=_0x31a01b;let _0x205e45=_0x398bcd[_0x3f2774(0x5a2)],_0x57c1f3=null;if(_0x398bcd[_0x3f2774(0x348)]){const [_0x3f6a31]=await getPool()[_0x3f2774(0x54b)](_0x3f2774(0x45e),[_0x398bcd[_0x3f2774(0x348)]]);_0x3f6a31['length']>0x0&&(_0x205e45=_0x3f6a31[0x0][_0x3f2774(0x377)],_0x57c1f3=_0x3f6a31[0x0][_0x3f2774(0x4bf)]);}else{const [_0x2c75f5]=await getPool()[_0x3f2774(0x54b)](_0x3f2774(0x3f7),[_0x398bcd[_0x3f2774(0x5a2)]]);_0x2c75f5['length']>0x0&&(_0x205e45=_0x2c75f5[0x0][_0x3f2774(0x377)],_0x57c1f3=_0x2c75f5[0x0][_0x3f2774(0x4bf)]);}return{'username':_0x398bcd['username'],'nama':_0x205e45,'mapel':_0x57c1f3,'is_admin':!!_0x398bcd[_0x3f2774(0x235)]};}));return _0x254686[_0x31a01b(0x3c7)]({'success':!![],'data':{'siswa':_0x3aff34,'guru':_0x13cb33}});})),app['get'](a0_0xfa5210(0x3ee),authenticate,asyncHandler(async(_0x190a79,_0x3abfdb)=>{const _0xc3ecf7=a0_0xfa5210;let _0x3f4b51=_0xc3ecf7(0x5a3),_0x29aed7=[];if(_0x190a79[_0xc3ecf7(0x189)][_0xc3ecf7(0x156)]===_0xc3ecf7(0x1f4))_0x3f4b51=_0xc3ecf7(0x33d);else _0x190a79[_0xc3ecf7(0x189)][_0xc3ecf7(0x156)]===_0xc3ecf7(0x45b)&&(_0x190a79[_0xc3ecf7(0x59d)][_0xc3ecf7(0x193)]===_0xc3ecf7(0x1e9)?_0x3f4b51='SELECT\x20*\x20FROM\x20quick_links\x20ORDER\x20BY\x20created_at\x20ASC':_0x3f4b51=_0xc3ecf7(0x30c));const [_0x51d5fa]=await getPool()['execute'](_0x3f4b51,_0x29aed7);_0x3abfdb['json'](_0x51d5fa);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x3ee),authenticate,asyncHandler(async(_0x47f904,_0x564ede)=>{const _0x3fe72a=a0_0xfa5210;if(!_0x47f904['user'][_0x3fe72a(0x526)]?.[_0x3fe72a(0x424)](_0x3fe72a(0x3d6))&&_0x47f904[_0x3fe72a(0x189)]['role']!==_0x3fe72a(0x56b))return _0x564ede['status'](0x193)[_0x3fe72a(0x3c7)]({'error':_0x3fe72a(0x246)});const {title:_0x580c38,url:_0xf0f850,target_audience:_0x65d9f1,icon_name:_0x3fd747}=_0x47f904[_0x3fe72a(0x2f2)],[_0x452c87]=await getPool()[_0x3fe72a(0x54b)]('INSERT\x20INTO\x20quick_links\x20(title,\x20url,\x20target_audience,\x20icon_name)\x20VALUES\x20(?,\x20?,\x20?,\x20?)',[_0x580c38,_0xf0f850,_0x65d9f1||_0x3fe72a(0x3d6),_0x3fd747||_0x3fe72a(0x150)]),[_0x55704b]=await getPool()['execute'](_0x3fe72a(0x41a),[_0x452c87[_0x3fe72a(0x399)]]);_0x564ede['json'](_0x55704b[0x0]);})),app[a0_0xfa5210(0x31b)](a0_0xfa5210(0x425),authenticate,asyncHandler(async(_0x66753d,_0x1e8e4a)=>{const _0xbfefac=a0_0xfa5210;if(!_0x66753d[_0xbfefac(0x189)][_0xbfefac(0x526)]?.[_0xbfefac(0x424)]('all')&&_0x66753d[_0xbfefac(0x189)][_0xbfefac(0x55e)]!==_0xbfefac(0x56b))return _0x1e8e4a[_0xbfefac(0x3dc)](0x193)[_0xbfefac(0x3c7)]({'error':_0xbfefac(0x246)});const {title:_0x3263f0,url:_0x581ac8,target_audience:_0x38c90e,icon_name:_0xbc736}=_0x66753d[_0xbfefac(0x2f2)];await getPool()[_0xbfefac(0x54b)](_0xbfefac(0x2d5),[_0x3263f0,_0x581ac8,_0x38c90e,_0xbc736,_0x66753d[_0xbfefac(0x5e5)]['id']]);const [_0x352a24]=await getPool()['execute'](_0xbfefac(0x41a),[_0x66753d[_0xbfefac(0x5e5)]['id']]);_0x1e8e4a[_0xbfefac(0x3c7)](_0x352a24[0x0]);})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x425),authenticate,asyncHandler(async(_0x4643dd,_0x46c2ed)=>{const _0x847f47=a0_0xfa5210;if(!_0x4643dd[_0x847f47(0x189)][_0x847f47(0x526)]?.['includes'](_0x847f47(0x3d6))&&_0x4643dd[_0x847f47(0x189)][_0x847f47(0x55e)]!==_0x847f47(0x56b))return _0x46c2ed['status'](0x193)[_0x847f47(0x3c7)]({'error':_0x847f47(0x246)});await getPool()[_0x847f47(0x54b)](_0x847f47(0x4b0),[_0x4643dd[_0x847f47(0x5e5)]['id']]),_0x46c2ed[_0x847f47(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)]('/api/artikel_blog',asyncHandler(async(_0x704315,_0xb4559d)=>{const _0x5f0c89=a0_0xfa5210;try{const [_0x8a3ae0]=await getPool()[_0x5f0c89(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ab.*,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CONCAT_WS(\x27\x20\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20NULLIF(pg.gelar_depan,\x20\x27\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pg.nama_lengkap,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20NULLIF(pg.gelar_belakang,\x20\x27\x27)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ab.author_name\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x20AS\x20author_name\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20artikel_blog\x20ab\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pengguna_web\x20pw\x20ON\x20ab.author_id\x20=\x20pw.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20pg\x20ON\x20pw.staff_id\x20=\x20pg.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20ab.status\x20=\x20\x27published\x27\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20ab.created_at\x20DESC\x0a\x20\x20\x20\x20\x20\x20\x20\x20');_0xb4559d[_0x5f0c89(0x3c7)](_0x8a3ae0);}catch(_0x5a9d5f){if(_0x5a9d5f[_0x5f0c89(0x19a)]['includes']('Table')&&_0x5a9d5f[_0x5f0c89(0x19a)][_0x5f0c89(0x424)](_0x5f0c89(0x106))){console[_0x5f0c89(0x50a)]('[DB]\x20Blog\x20table\x20missing,\x20creating\x20now...'),await getPool()[_0x5f0c89(0x59d)](_0x5f0c89(0x57f));const [_0x3c4e0a]=await getPool()['execute'](_0x5f0c89(0x3de));return _0xb4559d['json'](_0x3c4e0a);}throw _0x5a9d5f;}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x5b0),asyncHandler(async(_0x4891ac,_0x4da404)=>{const _0x58d039=a0_0xfa5210,[_0x46db3a]=await getPool()[_0x58d039(0x54b)](_0x58d039(0x10a),[_0x4891ac[_0x58d039(0x5e5)]['id']]);if(_0x46db3a[_0x58d039(0x5be)]===0x0)return _0x4da404['status'](0x194)[_0x58d039(0x3c7)]({'error':_0x58d039(0x353)});_0x4da404[_0x58d039(0x3c7)](_0x46db3a[0x0]);})),app['post'](a0_0xfa5210(0x4c4),authenticate,asyncHandler(async(_0x37b706,_0x506aeb)=>{const _0x3ed0bf=a0_0xfa5210,{title:_0x2c158d,content:_0x301ab5,image_url:_0x450547,category:_0x5002bd,status:_0x296fc8,postToFacebook:_0x5dce53,postToInstagram:_0xed2b7d,socialPostSchedule:_0x1b6469}=_0x37b706['body'];let {seo_tags:_0x5b177b}=_0x37b706['body'];if(!_0x5b177b)_0x5b177b=generateSEOTags(_0x2c158d,_0x301ab5);const _0x9e854c=_0x37b706['user']?.['id']||_0x37b706['body'][_0x3ed0bf(0x3eb)];let _0x2d7752=_0x37b706[_0x3ed0bf(0x2f2)]['author_name']||_0x37b706[_0x3ed0bf(0x189)]?.[_0x3ed0bf(0x5a2)]||'';if(_0x37b706[_0x3ed0bf(0x189)]?.['id'])try{const [_0x343dc9]=await getPool()[_0x3ed0bf(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20COALESCE(\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20CONCAT_WS(\x27\x20\x27,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20NULLIF(pg.gelar_depan,\x20\x27\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pg.nama_lengkap,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20NULLIF(pg.gelar_belakang,\x20\x27\x27)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20pw.username\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20)\x20AS\x20full_name\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20pengguna_web\x20pw\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20LEFT\x20JOIN\x20pegawai\x20pg\x20ON\x20pw.staff_id\x20=\x20pg.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20pw.id\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20',[_0x37b706[_0x3ed0bf(0x189)]['id']]);_0x343dc9[_0x3ed0bf(0x5be)]>0x0&&_0x343dc9[0x0][_0x3ed0bf(0x25a)]&&(_0x2d7752=_0x343dc9[0x0][_0x3ed0bf(0x25a)]);}catch(_0x14bba3){console[_0x3ed0bf(0x2e2)]('Error\x20fetching\x20author\x20name:',_0x14bba3);}await getPool()[_0x3ed0bf(0x54b)](_0x3ed0bf(0x183),[_0x2c158d,_0x301ab5,_0x450547,_0x9e854c,_0x2d7752,_0x5002bd,_0x296fc8||_0x3ed0bf(0x137),_0x5b177b,_0x5dce53?0x1:0x0,_0xed2b7d?0x1:0x0,_0x1b6469||null]),_0x506aeb[_0x3ed0bf(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x31b)](a0_0xfa5210(0x5b0),authenticate,asyncHandler(async(_0x59a480,_0x3a61bf)=>{const _0x3aa359=a0_0xfa5210,{title:_0x1a0fe9,content:_0x1a1620,image_url:_0x3c36f0,category:_0x4f5937,status:_0x6bec4a,postToFacebook:_0x3a597b,postToInstagram:_0x5b9b9d,socialPostSchedule:_0x726a0c}=_0x59a480[_0x3aa359(0x2f2)];let {seo_tags:_0x24b988}=_0x59a480['body'];if(!_0x24b988)_0x24b988=generateSEOTags(_0x1a0fe9,_0x1a1620);await getPool()[_0x3aa359(0x54b)](_0x3aa359(0x336),[_0x1a0fe9,_0x1a1620,_0x3c36f0,_0x4f5937,_0x6bec4a||_0x3aa359(0x137),_0x24b988,_0x3a597b?0x1:0x0,_0x5b9b9d?0x1:0x0,_0x726a0c||null,_0x59a480[_0x3aa359(0x5e5)]['id']]),_0x3a61bf[_0x3aa359(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)]('/api/artikel_blog/:id',authenticate,asyncHandler(async(_0x45e9ab,_0x450a02)=>{const _0x20c9fe=a0_0xfa5210;await getPool()[_0x20c9fe(0x54b)](_0x20c9fe(0x5b2),[_0x45e9ab[_0x20c9fe(0x5e5)]['id']]),_0x450a02[_0x20c9fe(0x3c7)]({'success':!![]});})),app['get'](a0_0xfa5210(0x329),asyncHandler(async(_0x5c9ded,_0x179417)=>{const _0x1eb1f4=a0_0xfa5210,[_0x386a78]=await getPool()[_0x1eb1f4(0x54b)]('SELECT\x20*\x20FROM\x20galeri\x20ORDER\x20BY\x20created_at\x20DESC');_0x179417[_0x1eb1f4(0x3c7)](_0x386a78);})),app['post'](a0_0xfa5210(0x329),authenticate,asyncHandler(async(_0x266e22,_0x1704f2)=>{const _0x5af264=a0_0xfa5210,{title:_0x45930c,description:_0x4286e6,image_url:_0x29e3a2}=_0x266e22[_0x5af264(0x2f2)];let {seo_tags:_0x488f38}=_0x266e22[_0x5af264(0x2f2)];if(!_0x29e3a2)return _0x1704f2[_0x5af264(0x3dc)](0x190)[_0x5af264(0x3c7)]({'error':_0x5af264(0x1ac)});if(!_0x488f38)_0x488f38=generateSEOTags(_0x45930c||'',_0x4286e6||'');await getPool()[_0x5af264(0x54b)]('INSERT\x20INTO\x20galeri\x20(title,\x20description,\x20image_url,\x20seo_tags)\x20VALUES\x20(?,\x20?,\x20?,\x20?)',[_0x45930c||null,_0x4286e6||null,_0x29e3a2,_0x488f38]),_0x1704f2[_0x5af264(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x259)](a0_0xfa5210(0x112),authenticate,asyncHandler(async(_0x182081,_0x13fe30)=>{const _0x53406c=a0_0xfa5210;await getPool()[_0x53406c(0x54b)](_0x53406c(0x340),[_0x182081[_0x53406c(0x5e5)]['id']]),_0x13fe30[_0x53406c(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x5c6),authenticate,asyncHandler(async(_0x54c0b7,_0x45e0fa)=>{const _0x183dda=a0_0xfa5210,{tanggal:_0x48304f,rombel:_0x494056}=_0x54c0b7[_0x183dda(0x59d)];if(!_0x48304f||!_0x494056)return _0x45e0fa[_0x183dda(0x3dc)](0x190)[_0x183dda(0x3c7)]({'error':_0x183dda(0x3ce)});const _0x1dc49b=new Date(_0x48304f);if(_0x1dc49b['getDay']()===0x0||_0x1dc49b[_0x183dda(0x578)]()===0x6)return _0x45e0fa[_0x183dda(0x3c7)]({'isHoliday':!![],'holidayName':_0x183dda(0x158)});const [_0x5d7dfe]=await getPool()[_0x183dda(0x54b)]('SELECT\x20title\x20FROM\x20kalender_akademik\x20WHERE\x20category\x20=\x20\x27Holiday\x27\x20AND\x20event_date\x20=\x20?',[_0x48304f]);if(_0x5d7dfe['length']>0x0)return _0x45e0fa[_0x183dda(0x3c7)]({'isHoliday':!![],'holidayName':_0x5d7dfe[0x0]['title']});const [_0x5877dd]=await getPool()[_0x183dda(0x54b)](_0x183dda(0x5f5),[_0x494056]),[_0x485acf]=await getPool()['execute'](_0x183dda(0x550),[_0x48304f]),_0x160ef7=new Map();_0x485acf[_0x183dda(0xf7)](_0x1f6443=>_0x160ef7[_0x183dda(0x3fa)](_0x1f6443[_0x183dda(0x2c0)],_0x1f6443));const _0xdc0cb1=_0x5877dd[_0x183dda(0x47f)](_0x4ab427=>{const _0x42e9b2=_0x183dda,_0x128a0e=_0x160ef7[_0x42e9b2(0x1fc)](_0x4ab427['id']);return{..._0x4ab427,'status':_0x128a0e?_0x128a0e[_0x42e9b2(0x3dc)]:_0x42e9b2(0x151),'keterangan':_0x128a0e?_0x128a0e['keterangan']:''};});_0x45e0fa[_0x183dda(0x3c7)](_0xdc0cb1);})),app['get'](a0_0xfa5210(0x30f),authenticate,asyncHandler(async(_0x3ea134,_0x49c203)=>{const _0x51d698=a0_0xfa5210,{kurikulum_id:_0x48098d,tingkat_pendidikan_id:_0x27e5ec}=_0x3ea134[_0x51d698(0x59d)];if(!_0x48098d||!_0x27e5ec)return _0x49c203[_0x51d698(0x3c7)]([]);const [_0x4d94a4]=await getPool()[_0x51d698(0x59d)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20mp.mata_pelajaran_id,\x20mp.nama\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20`ref.mata_pelajaran_kurikulum`\x20mpk\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20`ref.mata_pelajaran`\x20mp\x20ON\x20mpk.mata_pelajaran_id\x20=\x20mp.mata_pelajaran_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20`ref.kurikulum`\x20kr\x20ON\x20mpk.kurikulum_id\x20=\x20kr.kurikulum_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20kr.nama_kurikulum\x20=\x20?\x20AND\x20mpk.tingkat_pendidikan_id\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20mp.nama\x20ASC\x0a\x20\x20\x20\x20',[_0x48098d,_0x27e5ec]);_0x49c203['json'](_0x4d94a4);})),app['get'](a0_0xfa5210(0x209),authenticate,asyncHandler(async(_0x2f5c7c,_0x22b5b5)=>{const _0x21a1a3=a0_0xfa5210,{jenjang_pendidikan_id:_0x1484e5}=_0x2f5c7c[_0x21a1a3(0x59d)];if(!_0x1484e5)return _0x22b5b5['json']([]);const [_0x2266e1]=await getPool()[_0x21a1a3(0x59d)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20tingkat_pendidikan_id\x20as\x20id,\x20nama\x20as\x20label,\x20kode\x20as\x20value\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20`ref.tingkat_pendidikan`\x0a\x20\x20\x20\x20\x20\x20\x20\x20WHERE\x20jenjang_pendidikan_id\x20=\x20?\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20CAST(tingkat_pendidikan_id\x20AS\x20UNSIGNED)\x20ASC\x0a\x20\x20\x20\x20',[_0x1484e5]);_0x22b5b5['json'](_0x2266e1);})),app['get']('/api/kurikulum',authenticate,asyncHandler(async(_0x1c19aa,_0x4bf6dd)=>{const _0x17595d=a0_0xfa5210,_0x1f8811=_0x1c19aa[_0x17595d(0x59d)][_0x17595d(0x46d)];let _0x3980f3=_0x17595d(0x132),_0x108555=[];_0x1f8811&&(_0x3980f3+=_0x17595d(0x432),_0x108555[_0x17595d(0x4a8)](_0x1f8811));_0x3980f3+=_0x17595d(0x14a);const [_0x1ed9dd]=await getPool()[_0x17595d(0x59d)](_0x3980f3,_0x108555);_0x4bf6dd[_0x17595d(0x3c7)](_0x1ed9dd);})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x5c6),authenticate,asyncHandler(async(_0x4de1f6,_0x3fbaa9)=>{const _0x409df2=a0_0xfa5210,{tanggal:_0x3cbc96,rombel:_0x2faeb1,records:_0x239ee3}=_0x4de1f6[_0x409df2(0x2f2)];if(!_0x3cbc96||!_0x2faeb1||!Array['isArray'](_0x239ee3))return _0x3fbaa9['status'](0x190)[_0x409df2(0x3c7)]({'error':_0x409df2(0x32d)});const _0x2aa04a=new Date(_0x3cbc96);if(_0x2aa04a[_0x409df2(0x578)]()===0x0||_0x2aa04a[_0x409df2(0x578)]()===0x6)return _0x3fbaa9[_0x409df2(0x3dc)](0x190)[_0x409df2(0x3c7)]({'error':_0x409df2(0x158)});const [_0x593974]=await getPool()['execute']('SELECT\x20title\x20FROM\x20kalender_akademik\x20WHERE\x20category\x20=\x20\x27Holiday\x27\x20AND\x20event_date\x20=\x20?',[_0x3cbc96]);if(_0x593974[_0x409df2(0x5be)]>0x0)return _0x3fbaa9[_0x409df2(0x3dc)](0x190)['json']({'error':_0x409df2(0x5f9)+_0x593974[0x0]['title']});const _0x562ac9=await getPool()[_0x409df2(0x4b4)]();try{await _0x562ac9[_0x409df2(0x115)]();for(const _0x46318d of _0x239ee3){_0x46318d['status']===_0x409df2(0x151)&&!_0x46318d[_0x409df2(0x5c7)]?await _0x562ac9[_0x409df2(0x54b)]('DELETE\x20FROM\x20absensi_siswa\x20WHERE\x20student_id\x20=\x20?\x20AND\x20tanggal\x20=\x20?',[_0x46318d['student_id'],_0x3cbc96]):await _0x562ac9[_0x409df2(0x54b)]('INSERT\x20INTO\x20absensi_siswa\x20(student_id,\x20tanggal,\x20status,\x20keterangan,\x20recorded_by)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20VALUES\x20(?,\x20?,\x20?,\x20?,\x20?)\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ON\x20DUPLICATE\x20KEY\x20UPDATE\x20status\x20=\x20VALUES(status),\x20keterangan\x20=\x20VALUES(keterangan),\x20recorded_by\x20=\x20VALUES(recorded_by)',[_0x46318d['student_id'],_0x3cbc96,_0x46318d[_0x409df2(0x3dc)],_0x46318d[_0x409df2(0x5c7)]||null,_0x4de1f6[_0x409df2(0x189)]['staff_id']||null]);}await _0x562ac9[_0x409df2(0x38d)](),_0x3fbaa9[_0x409df2(0x3c7)]({'success':!![]});}catch(_0x121b7a){await _0x562ac9['rollback']();throw _0x121b7a;}finally{_0x562ac9[_0x409df2(0x44c)]();}})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x25b),authenticate,asyncHandler(async(_0x3fe169,_0x358772)=>{const _0x5c7bc5=a0_0xfa5210,{start_date:_0x395551,end_date:_0x51694a,rombel:_0x1cb172}=_0x3fe169['query'];if(!_0x395551||!_0x51694a||!_0x1cb172)return _0x358772[_0x5c7bc5(0x3dc)](0x190)[_0x5c7bc5(0x3c7)]({'error':_0x5c7bc5(0x352)});const [_0x420af6]=await getPool()[_0x5c7bc5(0x54b)](_0x5c7bc5(0x342),[_0x395551,_0x51694a]),_0x3621e4=_0x420af6[_0x5c7bc5(0x47f)](_0x2c408b=>{const _0x8659f=_0x5c7bc5,_0x33f097=new Date(_0x2c408b[_0x8659f(0x1c1)]);return _0x33f097[_0x8659f(0x3a6)](_0x33f097[_0x8659f(0x31c)]()-_0x33f097[_0x8659f(0x5c8)]()),_0x33f097['toISOString']()[_0x8659f(0x2b4)]('T')[0x0];});let _0x43ba57=0x0;const _0x2ef2eb=new Date(_0x395551),_0x6ed2cd=new Date(_0x51694a);for(let _0x1466d5=new Date(_0x2ef2eb);_0x1466d5<=_0x6ed2cd;_0x1466d5[_0x5c7bc5(0x1e4)](_0x1466d5['getDate']()+0x1)){const _0x27570e=_0x1466d5['getDay']();if(_0x27570e!==0x0&&_0x27570e!==0x6){const _0x133dd9=new Date(_0x1466d5);_0x133dd9['setMinutes'](_0x133dd9[_0x5c7bc5(0x31c)]()-_0x133dd9[_0x5c7bc5(0x5c8)]());const _0x538f36=_0x133dd9[_0x5c7bc5(0x40f)]()[_0x5c7bc5(0x2b4)]('T')[0x0];!_0x3621e4[_0x5c7bc5(0x424)](_0x538f36)&&_0x43ba57++;}}const [_0x3e9c54]=await getPool()[_0x5c7bc5(0x54b)]('SELECT\x20id,\x20nisn,\x20nipd,\x20nama_lengkap\x20FROM\x20siswa\x20WHERE\x20rombel\x20=\x20?\x20ORDER\x20BY\x20nama_lengkap\x20ASC',[_0x1cb172]),[_0x53c3ae]=await getPool()[_0x5c7bc5(0x54b)](_0x5c7bc5(0x2b9),[_0x1cb172,_0x395551,_0x51694a]),_0xac809=new Map();_0x3e9c54[_0x5c7bc5(0xf7)](_0x1a647a=>{const _0x336e92=_0x5c7bc5;_0xac809[_0x336e92(0x3fa)](_0x1a647a['id'],{..._0x1a647a,'hadir':0x0,'sakit':0x0,'izin':0x0,'alpa':0x0});}),_0x53c3ae[_0x5c7bc5(0xf7)](_0x317b1e=>{const _0x519236=_0x5c7bc5,_0x410547=_0xac809['get'](_0x317b1e['student_id']);if(_0x410547){if(_0x317b1e[_0x519236(0x3dc)]===_0x519236(0x4cf))_0x410547[_0x519236(0x27e)]=_0x317b1e[_0x519236(0x220)];else{if(_0x317b1e['status']==='Izin')_0x410547[_0x519236(0x59a)]=_0x317b1e[_0x519236(0x220)];else{if(_0x317b1e[_0x519236(0x3dc)]===_0x519236(0x5b7))_0x410547['alpa']=_0x317b1e['count'];}}}});const _0x279d14=Array['from'](_0xac809[_0x5c7bc5(0x5fc)]())[_0x5c7bc5(0x47f)](_0x649b3c=>{const _0x502bff=_0x5c7bc5;return _0x649b3c['hadir']=Math[_0x502bff(0x48e)](0x0,_0x43ba57-_0x649b3c[_0x502bff(0x27e)]-_0x649b3c[_0x502bff(0x59a)]-_0x649b3c[_0x502bff(0x51c)]),_0x649b3c;});_0x358772[_0x5c7bc5(0x3c7)]({'workingDays':_0x43ba57,'report':_0x279d14});})),app[a0_0xfa5210(0x1fc)]('/sitemap.xml',asyncHandler(async(_0x3a73bb,_0x4301c4)=>{const _0x424ee0=a0_0xfa5210,[_0x3e3671]=await getPool()[_0x424ee0(0x54b)](_0x424ee0(0x368)),_0x445b37=_0x3e3671[_0x424ee0(0x5be)]>0x0?_0x3e3671[0x0]['sitemap_enabled']:0x1;if(!_0x445b37)return _0x4301c4[_0x424ee0(0x3dc)](0x194)[_0x424ee0(0x326)](_0x424ee0(0x2c2));const _0x17dabb=_0x3a73bb[_0x424ee0(0x4fb)]+_0x424ee0(0x22b)+_0x3a73bb['get'](_0x424ee0(0x14e)),_0x249a56=['/',_0x424ee0(0x4d2),_0x424ee0(0x2e9),_0x424ee0(0x285),_0x424ee0(0x10b)];let _0x54aa98=[];try{const [_0x45b2cb]=await getPool()[_0x424ee0(0x54b)](_0x424ee0(0x496));_0x54aa98=_0x45b2cb[_0x424ee0(0x47f)](_0x3dc3bf=>_0x424ee0(0x126)+_0x3dc3bf['id']);}catch(_0x4a16d4){console['error'](_0x424ee0(0x422),_0x4a16d4);}const _0x55c652=[..._0x249a56,..._0x54aa98],_0x38515b='<?xml\x20version=\x221.0\x22\x20encoding=\x22UTF-8\x22?>\x0a<urlset\x20xmlns=\x22http://www.sitemaps.org/schemas/sitemap/0.9\x22>\x0a'+_0x55c652[_0x424ee0(0x47f)](_0x3a7673=>_0x424ee0(0x2f3)+_0x17dabb+_0x3a7673+_0x424ee0(0x57e)+new Date()[_0x424ee0(0x40f)]()+_0x424ee0(0x628)+(_0x3a7673==='/'?'1.0':_0x424ee0(0x29b))+_0x424ee0(0x211))[_0x424ee0(0x4ca)]('\x0a')+_0x424ee0(0x536);_0x4301c4['header']('Content-Type',_0x424ee0(0x2f9)),_0x4301c4[_0x424ee0(0x326)](_0x38515b);}));var uploadSpmb=(0x0,import_multer[a0_0xfa5210(0x60b)])({'storage':import_multer[a0_0xfa5210(0x60b)][a0_0xfa5210(0x32a)]({'destination':(_0x4ac7c1,_0x1e1ecf,_0x1d49ca)=>{const _0x223da9=a0_0xfa5210,_0x5682bf=import_path[_0x223da9(0x60b)]['join'](uploadDir,'spmb');if(!import_fs[_0x223da9(0x60b)][_0x223da9(0x605)](_0x5682bf))import_fs['default']['mkdirSync'](_0x5682bf,{'recursive':!![]});_0x1d49ca(null,_0x5682bf);},'filename':(_0xd4e862,_0x49b44b,_0x74cade)=>{const _0x424b31=a0_0xfa5210,_0x1745dc=Date[_0x424b31(0x287)]()+'-'+Math[_0x424b31(0x428)](Math['random']()*0x3b9aca00);_0x74cade(null,_0x1745dc+import_path[_0x424b31(0x60b)][_0x424b31(0x55b)](_0x49b44b[_0x424b31(0x419)]));}}),'limits':{'fileSize':0x1*0x400*0x400}});app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x489),asyncHandler(async(_0x9d990,_0x211310)=>{const _0xcefa9d=a0_0xfa5210,[_0x250727]=await getPool()[_0xcefa9d(0x54b)](_0xcefa9d(0x2d6));if(_0x250727[_0xcefa9d(0x5be)]===0x0)return _0x211310[_0xcefa9d(0x3c7)]({'active':![]});try{const _0x568194=JSON[_0xcefa9d(0x5c9)](_0x250727[0x0][_0xcefa9d(0x229)]||'{}');_0x211310['json']({'active':!!_0x568194[_0xcefa9d(0x249)]});}catch{_0x211310[_0xcefa9d(0x3c7)]({'active':![]});}})),app[a0_0xfa5210(0x218)](a0_0xfa5210(0x296),uploadSpmb[a0_0xfa5210(0x55f)]([{'name':'akte','maxCount':0x1},{'name':'kk','maxCount':0x1},{'name':a0_0xfa5210(0x433),'maxCount':0x1},{'name':'pasfoto','maxCount':0x1},{'name':a0_0xfa5210(0x1e5),'maxCount':0x1}]),asyncHandler(async(_0xab6710,_0x171e55)=>{const _0x148927=a0_0xfa5210,{nisn:_0x216122,nik:_0x315e62,nama_lengkap:_0x2592cd,tempat_lahir:_0x85fb2,tanggal_lahir:_0x250b26,jenis_kelamin:_0x348c61,alamat_lengkap:_0x461cd4,asal_sekolah:_0x46b074,nama_ayah:_0x45bc0c,nama_ibu:_0x1c13a2,pekerjaan_ayah:_0x1f72c4,pekerjaan_ibu:_0x325d96,no_telp_ortu:_0x17fb25,email:_0x5956bf,password:_0x4f4419}=_0xab6710['body'],[_0x558f9c]=await getPool()['execute'](_0x148927(0x2d6));if(_0x558f9c['length']>0x0)try{const _0x24bedd=JSON[_0x148927(0x5c9)](_0x558f9c[0x0][_0x148927(0x229)]||'{}');if(!_0x24bedd[_0x148927(0x249)])return _0x171e55[_0x148927(0x3dc)](0x193)[_0x148927(0x3c7)]({'error':'Pendaftaran\x20SPMB\x20sedang\x20ditutup.'});}catch{}if(!_0x315e62||!_0x2592cd||!_0x4f4419)return _0x171e55['status'](0x190)['json']({'error':_0x148927(0x1a2)});const _0x3d4f69=await import_bcryptjs['default'][_0x148927(0x2c5)](_0x4f4419,0xa),_0x58fac5=_0x148927(0x297)+Date[_0x148927(0x287)](),_0xfd7964=await getPool()[_0x148927(0x4b4)]();try{await _0xfd7964[_0x148927(0x115)]();const [_0x3aa378]=await _0xfd7964['execute'](_0x148927(0x615),[_0x58fac5,_0x216122||null,_0x315e62,_0x2592cd,_0x85fb2||null,_0x250b26||null,_0x348c61||null,_0x461cd4||null,_0x46b074||null,_0x45bc0c||null,_0x1c13a2||null,_0x1f72c4||null,_0x325d96||null,_0x17fb25||null,_0x5956bf||null,_0x3d4f69]),_0x3aad5c=_0x3aa378[_0x148927(0x399)],_0x559102=_0xab6710[_0x148927(0x1ff)]||{},_0x50a6a0=[{'field':_0x148927(0x161),'type':_0x148927(0xfb)},{'field':'kk','type':'KK'},{'field':_0x148927(0x433),'type':'KTP_ORTU'},{'field':'pasfoto','type':_0x148927(0x3e9)},{'field':_0x148927(0x1e5),'type':_0x148927(0x1a3)}];for(const _0x4f4269 of _0x50a6a0){if(_0x559102[_0x4f4269[_0x148927(0x214)]]&&_0x559102[_0x4f4269[_0x148927(0x214)]][_0x148927(0x5be)]>0x0){const _0x518d1b=_0x559102[_0x4f4269[_0x148927(0x214)]][0x0];let _0x4a8eca=_0x148927(0xf0)+_0x518d1b[_0x148927(0x333)];const _0x123786=(_0x315e62+'_'+_0x2592cd)[_0x148927(0x2de)](/[^a-zA-Z0-9_-]/g,'_'),_0x22b83d=import_path[_0x148927(0x60b)]['extname'](_0x518d1b[_0x148927(0x419)]),_0xe0c731=_0x4f4269[_0x148927(0x156)]+'_'+_0x123786+_0x22b83d,_0x3fd68e=await uploadToGoogleDriveFallback(_0x518d1b['path'],_0xe0c731,_0x518d1b[_0x148927(0x485)],_0x148927(0x46a),_0x148927(0x1a1),_0x58fac5);_0x3fd68e&&(_0x4a8eca=_0x3fd68e),await _0xfd7964['execute'](_0x148927(0x1e6),[_0x3aad5c,_0x4f4269[_0x148927(0x156)],_0x4a8eca]);}}await _0xfd7964[_0x148927(0x38d)](),_0x171e55[_0x148927(0x3c7)]({'success':!![],'nomor_pendaftaran':_0x58fac5});}catch(_0x53a5d7){await _0xfd7964['rollback']();if(_0x53a5d7[_0x148927(0x268)]===_0x148927(0x1b6))return _0x171e55[_0x148927(0x3dc)](0x190)[_0x148927(0x3c7)]({'error':'NIK\x20atau\x20NISN\x20sudah\x20terdaftar.'});throw _0x53a5d7;}finally{_0xfd7964[_0x148927(0x44c)]();}})),app['put'](a0_0xfa5210(0x370),authenticate,uploadSpmb[a0_0xfa5210(0x55f)]([{'name':a0_0xfa5210(0x161),'maxCount':0x1},{'name':'kk','maxCount':0x1},{'name':a0_0xfa5210(0x433),'maxCount':0x1},{'name':a0_0xfa5210(0x11d),'maxCount':0x1},{'name':a0_0xfa5210(0x1e5),'maxCount':0x1}]),asyncHandler(async(_0x2955f4,_0x33ca0b)=>{const _0x54b760=a0_0xfa5210;if(_0x2955f4[_0x54b760(0x189)][_0x54b760(0x156)]!==_0x54b760(0x2af))return _0x33ca0b[_0x54b760(0x3dc)](0x193)[_0x54b760(0x3c7)]({'error':_0x54b760(0x20d)});const _0x422f7f=_0x2955f4['user']['id'],{nisn:_0x128635,nik:_0x535d40,nama_lengkap:_0x173ce0,tempat_lahir:_0x4c4d37,tanggal_lahir:_0x5e76c1,jenis_kelamin:_0x4aca1e,alamat_lengkap:_0x3ac31e,asal_sekolah:_0x5a9d12,nama_ayah:_0x2ede29,nama_ibu:_0x207208,pekerjaan_ayah:_0x2406c8,pekerjaan_ibu:_0x4d1173,no_telp_ortu:_0x458902,email:_0x238fc9,password:_0x1aa020}=_0x2955f4['body'];if(!_0x535d40||!_0x173ce0)return _0x33ca0b[_0x54b760(0x3dc)](0x190)['json']({'error':_0x54b760(0x2a0)});const _0x375d10=await getPool()['getConnection']();try{await _0x375d10[_0x54b760(0x115)]();let _0x2eb62f=_0x54b760(0x148),_0x4b7bcb=[_0x128635||null,_0x535d40,_0x173ce0,_0x4c4d37||null,_0x5e76c1||null,_0x4aca1e||null,_0x3ac31e||null,_0x5a9d12||null,_0x2ede29||null,_0x207208||null,_0x2406c8||null,_0x4d1173||null,_0x458902||null,_0x238fc9||null];if(_0x1aa020){const _0xd6b6be=await import_bcryptjs[_0x54b760(0x60b)]['hash'](_0x1aa020,0xa);_0x2eb62f+=',\x20password=?',_0x4b7bcb['push'](_0xd6b6be);}_0x2eb62f+='\x20WHERE\x20id=?',_0x4b7bcb['push'](_0x422f7f),await _0x375d10['execute'](_0x2eb62f,_0x4b7bcb);const _0x14b865=_0x2955f4['files']||{},_0x323668=[{'field':_0x54b760(0x161),'type':_0x54b760(0xfb)},{'field':'kk','type':'KK'},{'field':_0x54b760(0x433),'type':'KTP_ORTU'},{'field':_0x54b760(0x11d),'type':_0x54b760(0x3e9)},{'field':_0x54b760(0x1e5),'type':_0x54b760(0x1a3)}],[_0x4a80e0]=await _0x375d10[_0x54b760(0x54b)]('SELECT\x20nomor_pendaftaran\x20FROM\x20spmb_applicants\x20WHERE\x20id=?',[_0x422f7f]),_0x466664=_0x4a80e0[0x0]?.[_0x54b760(0x547)]||_0x54b760(0x165)+_0x422f7f;for(const _0x5843ea of _0x323668){if(_0x14b865[_0x5843ea[_0x54b760(0x214)]]&&_0x14b865[_0x5843ea[_0x54b760(0x214)]][_0x54b760(0x5be)]>0x0){const _0x408cda=_0x14b865[_0x5843ea[_0x54b760(0x214)]][0x0];let _0x4fc9d3=_0x54b760(0xf0)+_0x408cda[_0x54b760(0x333)];const _0x5ef012=(_0x535d40+'_'+_0x173ce0)['replace'](/[^a-zA-Z0-9_-]/g,'_'),_0x107a7d=import_path[_0x54b760(0x60b)][_0x54b760(0x55b)](_0x408cda['originalname']),_0x637fb7=_0x5843ea[_0x54b760(0x156)]+'_'+_0x5ef012+_0x107a7d,_0x33dcab=await uploadToGoogleDriveFallback(_0x408cda[_0x54b760(0x245)],_0x637fb7,_0x408cda['mimetype'],'pendaftar',_0x54b760(0x1a1),_0x466664);_0x33dcab&&(_0x4fc9d3=_0x33dcab),await _0x375d10[_0x54b760(0x54b)](_0x54b760(0x3b6),[_0x422f7f,_0x5843ea[_0x54b760(0x156)],_0x4fc9d3]);}}await _0x375d10['commit'](),_0x33ca0b[_0x54b760(0x3c7)]({'success':!![]});}catch(_0x107dc0){await _0x375d10['rollback']();if(_0x107dc0[_0x54b760(0x268)]==='ER_DUP_ENTRY')return _0x33ca0b[_0x54b760(0x3dc)](0x190)[_0x54b760(0x3c7)]({'error':_0x54b760(0x5cb)});throw _0x107dc0;}finally{_0x375d10['release']();}})),app['post'](a0_0xfa5210(0x13a),asyncHandler(async(_0x12e4a2,_0x12a906)=>{const _0x40d2bf=a0_0xfa5210,[_0x10773d]=await getPool()[_0x40d2bf(0x54b)](_0x40d2bf(0x2d6));if(_0x10773d[_0x40d2bf(0x5be)]>0x0)try{const _0xa6a680=JSON['parse'](_0x10773d[0x0]['spmb_config']||'{}');if(_0xa6a680['login_portal_active']===![])return _0x12a906[_0x40d2bf(0x3dc)](0x193)[_0x40d2bf(0x3c7)]({'error':_0x40d2bf(0x12f)});}catch{}const {username:_0x10c8fa,password:_0x169c93}=_0x12e4a2[_0x40d2bf(0x2f2)];if(!_0x10c8fa||!_0x169c93)return _0x12a906[_0x40d2bf(0x3dc)](0x190)[_0x40d2bf(0x3c7)]({'error':_0x40d2bf(0x46f)});const [_0x156c6e]=await getPool()[_0x40d2bf(0x54b)](_0x40d2bf(0x435),[_0x10c8fa,_0x10c8fa]);if(_0x156c6e['length']===0x0)return _0x12a906[_0x40d2bf(0x3dc)](0x191)['json']({'error':_0x40d2bf(0x579)});const _0x283aa1=_0x156c6e[0x0],_0x35d78c=await import_bcryptjs['default'][_0x40d2bf(0x597)](_0x169c93,_0x283aa1[_0x40d2bf(0x3ea)]);if(!_0x35d78c)return _0x12a906[_0x40d2bf(0x3dc)](0x191)[_0x40d2bf(0x3c7)]({'error':_0x40d2bf(0x504)});const _0x39972e=import_jsonwebtoken[_0x40d2bf(0x60b)][_0x40d2bf(0x406)]({'id':_0x283aa1['id'],'type':_0x40d2bf(0x2af),'name':_0x283aa1[_0x40d2bf(0x377)]},JWT_SECRET,{'expiresIn':'7d'});_0x12a906['json']({'success':!![],'token':_0x39972e,'applicant':{'id':_0x283aa1['id'],'nama_lengkap':_0x283aa1[_0x40d2bf(0x377)],'nomor_pendaftaran':_0x283aa1['nomor_pendaftaran']}});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0xf3),authenticate,asyncHandler(async(_0x1ec220,_0x23704a)=>{const _0xd2bed8=a0_0xfa5210;if(_0x1ec220[_0xd2bed8(0x189)][_0xd2bed8(0x156)]!==_0xd2bed8(0x2af))return _0x23704a[_0xd2bed8(0x3dc)](0x193)[_0xd2bed8(0x3c7)]({'error':_0xd2bed8(0x20d)});const [_0x32b5d7]=await getPool()[_0xd2bed8(0x54b)](_0xd2bed8(0x2f5),[_0x1ec220[_0xd2bed8(0x189)]['id']]);if(_0x32b5d7[_0xd2bed8(0x5be)]===0x0)return _0x23704a[_0xd2bed8(0x3dc)](0x194)['json']({'error':_0xd2bed8(0x5a0)});const [_0x16a748]=await getPool()['execute'](_0xd2bed8(0x5db),[_0x1ec220[_0xd2bed8(0x189)]['id']]);_0x23704a[_0xd2bed8(0x3c7)]({..._0x32b5d7[0x0],'documents':_0x16a748});})),app[a0_0xfa5210(0x1fc)]('/api/admin/spmb_applicants',authenticate,asyncHandler(async(_0x49f8bc,_0x4a107a)=>{const _0x1cf8d8=a0_0xfa5210;if(!_0x49f8bc[_0x1cf8d8(0x189)][_0x1cf8d8(0x526)]?.['includes'](_0x1cf8d8(0x3d6))&&!_0x49f8bc[_0x1cf8d8(0x189)][_0x1cf8d8(0x526)]?.[_0x1cf8d8(0x424)](_0x1cf8d8(0x2ab))&&_0x49f8bc[_0x1cf8d8(0x189)][_0x1cf8d8(0x55e)]!==_0x1cf8d8(0x56b))return _0x4a107a[_0x1cf8d8(0x3dc)](0x193)[_0x1cf8d8(0x3c7)]({'error':_0x1cf8d8(0x20d)});const [_0x52a694]=await getPool()[_0x1cf8d8(0x54b)](_0x1cf8d8(0x1da)),[_0x186de6]=await getPool()['execute'](_0x1cf8d8(0x3e4)),_0x28ee36=new Map();for(const _0x15f68 of _0x186de6){if(!_0x28ee36[_0x1cf8d8(0x3f0)](_0x15f68['applicant_id']))_0x28ee36['set'](_0x15f68[_0x1cf8d8(0x5a6)],[]);_0x28ee36[_0x1cf8d8(0x1fc)](_0x15f68[_0x1cf8d8(0x5a6)])['push'](_0x15f68);}const _0x313874=_0x52a694[_0x1cf8d8(0x47f)](_0xce77ae=>{const _0x9afc20=_0x1cf8d8;return delete _0xce77ae['password'],{..._0xce77ae,'documents':_0x28ee36[_0x9afc20(0x1fc)](_0xce77ae['id'])||[]};});_0x4a107a[_0x1cf8d8(0x3c7)](_0x313874);})),app[a0_0xfa5210(0x31b)](a0_0xfa5210(0x3e6),authenticate,asyncHandler(async(_0x40c300,_0x6c3bf3)=>{const _0x306b71=a0_0xfa5210;if(!_0x40c300[_0x306b71(0x189)][_0x306b71(0x526)]?.[_0x306b71(0x424)](_0x306b71(0x3d6))&&!_0x40c300[_0x306b71(0x189)][_0x306b71(0x526)]?.[_0x306b71(0x424)]('spmb:update')&&_0x40c300['user'][_0x306b71(0x55e)]!=='Admin')return _0x6c3bf3[_0x306b71(0x3dc)](0x193)['json']({'error':_0x306b71(0x20d)});const {status:_0x303961,catatan:_0x3a3373}=_0x40c300[_0x306b71(0x2f2)];if(![_0x306b71(0x124),_0x306b71(0x461),_0x306b71(0x4b5),_0x306b71(0x2b2)]['includes'](_0x303961))return _0x6c3bf3[_0x306b71(0x3dc)](0x190)[_0x306b71(0x3c7)]({'error':_0x306b71(0x58a)});await getPool()[_0x306b71(0x54b)](_0x306b71(0x15e),[_0x303961,_0x3a3373||null,_0x40c300['params']['id']]),_0x6c3bf3[_0x306b71(0x3c7)]({'success':!![]});})),app[a0_0xfa5210(0x1fc)](a0_0xfa5210(0x55d),authenticate,asyncHandler(async(_0x5091a7,_0x1afeae)=>{const _0x2fef55=a0_0xfa5210;if(!['Admin',_0x2fef55(0x1fa)][_0x2fef55(0x424)](_0x5091a7['user']['role']))return _0x1afeae[_0x2fef55(0x3dc)](0x193)[_0x2fef55(0x3c7)]({'error':_0x2fef55(0x246)});const [_0x52ba4b]=await getPool()['execute'](_0x2fef55(0x479)),_0x1bd3af=_0x52ba4b[_0x2fef55(0x5be)]>0x0&&_0x52ba4b[0x0][_0x2fef55(0x1d9)]?JSON[_0x2fef55(0x5c9)](_0x52ba4b[0x0]['google_drive_config']):null;_0x1afeae[_0x2fef55(0x3c7)]({'config':_0x1bd3af});})),app['post']('/api/admin/settings/drive',authenticate,asyncHandler(async(_0x24772a,_0xd65263)=>{const _0x2e0eef=a0_0xfa5210;if(![_0x2e0eef(0x56b),_0x2e0eef(0x1fa)][_0x2e0eef(0x424)](_0x24772a[_0x2e0eef(0x189)][_0x2e0eef(0x55e)]))return _0xd65263[_0x2e0eef(0x3dc)](0x193)[_0x2e0eef(0x3c7)]({'error':'Access\x20denied'});const _0x59d297=_0x24772a[_0x2e0eef(0x2f2)][_0x2e0eef(0x48c)];if(_0x24772a['body']['testConnection']){const _0xc4e07b=await testDriveConnection(_0x59d297,_0x24772a[_0x2e0eef(0x2f2)]['testFolderId']);return _0xd65263[_0x2e0eef(0x3c7)](_0xc4e07b);}await getPool()['execute']('UPDATE\x20pengaturan_sekolah\x20SET\x20google_drive_config\x20=\x20?\x20WHERE\x20id\x20=\x201',[JSON[_0x2e0eef(0x570)](_0x59d297)]),_0xd65263[_0x2e0eef(0x3c7)]({'success':!![],'message':_0x2e0eef(0x4c3)});})),app[a0_0xfa5210(0x477)]((_0x4f8d5e,_0x1d965d,_0x4333bb,_0x20a943)=>{const _0x52b8c3=a0_0xfa5210;console['error'](_0x52b8c3(0x3a3),_0x4f8d5e);if(_0x4f8d5e[_0x52b8c3(0x268)]===_0x52b8c3(0x1cd))return _0x4333bb[_0x52b8c3(0x3dc)](0x190)['json']({'error':_0x52b8c3(0x19b)});_0x4333bb[_0x52b8c3(0x3dc)](0x1f4)[_0x52b8c3(0x3c7)]({'error':'Internal\x20Server\x20Error','message':_0x4f8d5e['message'],'stack':_0x4f8d5e[_0x52b8c3(0x24c)]});});async function startServer(){const _0x3fc4b5=a0_0xfa5210;try{try{await initDb()[_0x3fc4b5(0x5f3)](_0x45168c=>{console['error']('Database\x20initialization\x20failed\x20(non-fatal):',_0x45168c);});}catch(_0x261bef){console[_0x3fc4b5(0x2e2)](_0x3fc4b5(0x429),_0x261bef);}try{const [_0x388f15]=await getPool()[_0x3fc4b5(0x54b)](_0x3fc4b5(0x3ae));_0x388f15[_0x3fc4b5(0x5be)]>0x0&&(await getPool()[_0x3fc4b5(0x54b)](_0x3fc4b5(0x107)),await getPool()['execute'](_0x3fc4b5(0x254)));}catch(_0x8d32fb){console[_0x3fc4b5(0x2e2)]('E-Learning\x20seed\x20skipped:',_0x8d32fb);}app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x133),authenticate,asyncHandler(async(_0x4d520b,_0x5e5062)=>{const _0x51a6d1=_0x3fc4b5,[_0x5496a3]=await getPool()[_0x51a6d1(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20be.*,\x20p.nama_lengkap,\x20p.nik\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20bidang_ekskul\x20be\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20pegawai\x20p\x20ON\x20be.pegawai_id\x20=\x20p.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20be.created_at\x20DESC\x0a\x20\x20\x20\x20'),_0x1081c5=_0x5496a3[_0x51a6d1(0x47f)](_0x1b9cfc=>({..._0x1b9cfc,'kelas':_0x1b9cfc[_0x51a6d1(0x35e)]?JSON[_0x51a6d1(0x5c9)](_0x1b9cfc['kelas']):[]}));_0x5e5062[_0x51a6d1(0x3c7)](_0x1081c5);})),app['post'](_0x3fc4b5(0x133),authenticate,asyncHandler(async(_0x2ddaa8,_0x331449)=>{const _0x342cd8=_0x3fc4b5,{pegawai_id:_0x5da574,kategori:_0x3b9ef9,mata_pelajaran:_0x1c8dcd,kelas:_0xe41e38}=_0x2ddaa8[_0x342cd8(0x2f2)],_0x534428=JSON['stringify'](_0xe41e38||[]);await getPool()[_0x342cd8(0x54b)](_0x342cd8(0x54a),[_0x5da574,_0x3b9ef9,_0x1c8dcd,_0x534428]),_0x331449[_0x342cd8(0x3c7)]({'success':!![]});})),app['put']('/api/bidang_ekskul/:id',authenticate,asyncHandler(async(_0x3ccf06,_0x1f2ff3)=>{const _0x3d1421=_0x3fc4b5,{pegawai_id:_0x73614a,kategori:_0x24b31a,mata_pelajaran:_0x299abe,kelas:_0xd478eb}=_0x3ccf06['body'],_0x4e38f6=JSON[_0x3d1421(0x570)](_0xd478eb||[]);await getPool()[_0x3d1421(0x54b)](_0x3d1421(0x616),[_0x73614a,_0x24b31a,_0x299abe,_0x4e38f6,_0x3ccf06[_0x3d1421(0x5e5)]['id']]),_0x1f2ff3[_0x3d1421(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x259)]('/api/bidang_ekskul/:id',authenticate,asyncHandler(async(_0x4435b7,_0x1093db)=>{const _0x165104=_0x3fc4b5;await getPool()[_0x165104(0x54b)](_0x165104(0x3d0),[_0x4435b7[_0x165104(0x5e5)]['id']]),_0x1093db['json']({'success':!![]});})),app['get'](_0x3fc4b5(0x556),authenticate,asyncHandler(async(_0x3cba85,_0x5a729d)=>{const _0x3ae01d=_0x3fc4b5,[_0x44bb90]=await getPool()[_0x3ae01d(0x54b)](_0x3ae01d(0x3a4));let _0x3a3c91=[];try{const [_0x44469c]=await getPool()[_0x3ae01d(0x54b)](_0x3ae01d(0x4af));_0x3a3c91=_0x44469c;}catch(_0x259b5d){console[_0x3ae01d(0x2e2)](_0x3ae01d(0x362),_0x259b5d);}let _0x56586f=[];try{const [_0x43273e]=await getPool()[_0x3ae01d(0x54b)](_0x3ae01d(0x5a7));_0x56586f=_0x43273e;}catch(_0xdd9179){console[_0x3ae01d(0x2e2)](_0x3ae01d(0x1b9),_0xdd9179);}_0x5a729d[_0x3ae01d(0x3c7)]({'pegawai':_0x44bb90,'mapel':_0x3a3c91,'rombongan_belajar':_0x56586f});})),app['get'](_0x3fc4b5(0x555),authenticate,asyncHandler(async(_0x52c138,_0x182e2d)=>{const _0x418a65=_0x3fc4b5,[_0x4252d9]=await getPool()[_0x418a65(0x54b)](_0x418a65(0x593));_0x182e2d[_0x418a65(0x3c7)](_0x4252d9);})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x555),authenticate,asyncHandler(async(_0xa99c71,_0x271440)=>{const _0x5b7080=_0x3fc4b5,{ekskul_id:_0x3da255,pelatih_id:_0x582bdb,siswa_ids:_0x421f7d,jadwal_latihan:_0x58c9ce}=_0xa99c71[_0x5b7080(0x2f2)];await getPool()[_0x5b7080(0x54b)](_0x5b7080(0x226),[_0x3da255,_0x582bdb,JSON[_0x5b7080(0x570)](_0x421f7d||[]),JSON[_0x5b7080(0x570)](_0x58c9ce||[])]),_0x271440['json']({'success':!![]});})),app[_0x3fc4b5(0x31b)]('/api/akademik_ekskul/:id',authenticate,asyncHandler(async(_0xe01f5,_0x3b16f1)=>{const _0x352a30=_0x3fc4b5,{ekskul_id:_0x4be238,pelatih_id:_0xbffbed,siswa_ids:_0x5d1147,jadwal_latihan:_0x45ecc1}=_0xe01f5[_0x352a30(0x2f2)];await getPool()['execute'](_0x352a30(0x45d),[_0x4be238,_0xbffbed,JSON[_0x352a30(0x570)](_0x5d1147||[]),JSON[_0x352a30(0x570)](_0x45ecc1||[]),_0xe01f5[_0x352a30(0x5e5)]['id']]),_0x3b16f1[_0x352a30(0x3c7)]({'success':!![]});})),app['delete'](_0x3fc4b5(0x1cf),authenticate,asyncHandler(async(_0x15205c,_0x314d84)=>{const _0x17b4ba=_0x3fc4b5;await getPool()['execute'](_0x17b4ba(0x143),[_0x15205c[_0x17b4ba(0x5e5)]['id']]),_0x314d84['json']({'success':!![]});})),app['get'](_0x3fc4b5(0x3b8),authenticate,asyncHandler(async(_0x11300c,_0x34bda6)=>{const _0x137f32=_0x3fc4b5,[_0xa745b6]=await getPool()[_0x137f32(0x54b)]('\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20SELECT\x20a.*,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20e.mata_pelajaran\x20as\x20nama_ekskul,\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20p.nama_lengkap\x20as\x20nama_pelatih\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20FROM\x20absensi_ekskul\x20a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20akademik_ekskul\x20ae\x20ON\x20a.pembinaan_id\x20=\x20ae.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20bidang_ekskul\x20e\x20ON\x20ae.ekskul_id\x20=\x20e.id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20pegawai\x20p\x20ON\x20ae.pelatih_id\x20=\x20p.pegawai_id\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ORDER\x20BY\x20a.tanggal_latihan\x20DESC,\x20a.created_at\x20DESC\x0a\x20\x20\x20\x20\x20\x20\x20\x20');_0x34bda6['json'](_0xa745b6);})),app['post']('/api/absensi_ekskul/buka_sesi',authenticate,asyncHandler(async(_0x52718a,_0x1a29cb)=>{const _0x54a00e=_0x3fc4b5,{pembinaan_id:_0x2e85ad,tanggal_latihan:_0x258bb9,materi_kegiatan:_0xa3f7,status_pelatih:_0x3c8876}=_0x52718a[_0x54a00e(0x2f2)],[_0x1c1a13]=await getPool()[_0x54a00e(0x54b)](_0x54a00e(0x375),[_0x2e85ad,_0x258bb9,_0xa3f7,_0x3c8876,JSON[_0x54a00e(0x570)]([])]);_0x1a29cb[_0x54a00e(0x3c7)]({'success':!![],'insertId':_0x1c1a13[_0x54a00e(0x399)]});})),app[_0x3fc4b5(0x31b)](_0x3fc4b5(0x1fb),authenticate,asyncHandler(async(_0x2f1611,_0x394235)=>{const _0x23bdf9=_0x3fc4b5,{data_absen_siswa:_0x3994b2}=_0x2f1611[_0x23bdf9(0x2f2)];await getPool()[_0x23bdf9(0x54b)](_0x23bdf9(0x5fa),[JSON[_0x23bdf9(0x570)](_0x3994b2),_0x2f1611[_0x23bdf9(0x5e5)]['id']]),_0x394235[_0x23bdf9(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x13c),authenticate,uploadEkskul[_0x3fc4b5(0x328)](_0x3fc4b5(0x4a2),0x2),asyncHandler(async(_0x4e6745,_0x531403)=>{const _0x10d859=_0x3fc4b5,_0x10a975=_0x4e6745[_0x10d859(0x1ff)];if(!_0x10a975)return _0x531403['status'](0x190)[_0x10d859(0x3c7)]({'error':_0x10d859(0x3f5)});const _0x1ba133=_0x10a975[_0x10d859(0x47f)](_0x272852=>_0x10d859(0x1ba)+_0x272852[_0x10d859(0x333)]),_0x1091e7=_0x1ba133[0x0]||null,_0x298791=_0x1ba133[0x1]||null;let _0x55f87f=_0x10d859(0x4cc),_0x15f3b9=[];_0x1091e7&&(_0x55f87f+='foto_1\x20=\x20?,\x20',_0x15f3b9[_0x10d859(0x4a8)](_0x1091e7)),_0x298791&&(_0x55f87f+=_0x10d859(0x2e4),_0x15f3b9[_0x10d859(0x4a8)](_0x298791)),_0x15f3b9[_0x10d859(0x5be)]>0x0&&(_0x55f87f=_0x55f87f[_0x10d859(0x571)](0x0,-0x2),_0x55f87f+='\x20WHERE\x20id\x20=\x20?',_0x15f3b9[_0x10d859(0x4a8)](_0x4e6745[_0x10d859(0x5e5)]['id']),await getPool()['execute'](_0x55f87f,_0x15f3b9)),_0x531403[_0x10d859(0x3c7)]({'success':!![],'foto_1':_0x1091e7,'foto_2':_0x298791});}));try{await getPool()['execute'](_0x3fc4b5(0x117));}catch(_0x4e5a2f){}app[_0x3fc4b5(0x218)](_0x3fc4b5(0x138),asyncHandler(async(_0x4d15c5,_0x1458c8)=>{const _0x4768f3=_0x3fc4b5,{nisn:_0x313a0c,pin:_0x4e84a5}=_0x4d15c5[_0x4768f3(0x2f2)];if(!_0x313a0c||!_0x4e84a5)return _0x1458c8['status'](0x190)[_0x4768f3(0x3c7)]({'error':_0x4768f3(0x2f8)});const [_0xb7f063]=await getPool()[_0x4768f3(0x54b)](_0x4768f3(0x275),[_0x313a0c]);if(!_0xb7f063[_0x4768f3(0x5be)]){const [_0x152e82]=await getPool()[_0x4768f3(0x54b)](_0x4768f3(0x5e4),[_0x313a0c]);if(!_0x152e82[_0x4768f3(0x5be)])return console[_0x4768f3(0x2e2)](_0x4768f3(0x3c8),_0x313a0c),_0x1458c8[_0x4768f3(0x3dc)](0x191)[_0x4768f3(0x3c7)]({'error':_0x4768f3(0x317)});else{await getPool()[_0x4768f3(0x54b)]('INSERT\x20IGNORE\x20INTO\x20el_student_pins\x20(student_id,\x20pin)\x20VALUES\x20(?,\x20\x27123456\x27)',[_0x152e82[0x0]['id']]);const [_0x3e2e0c]=await getPool()[_0x4768f3(0x54b)](_0x4768f3(0x275),[_0x313a0c]);if(!_0x3e2e0c[_0x4768f3(0x5be)])return _0x1458c8[_0x4768f3(0x3dc)](0x191)[_0x4768f3(0x3c7)]({'error':_0x4768f3(0x579)});_0xb7f063[0x0]=_0x3e2e0c[0x0];}}const _0xbf02d8=_0xb7f063[0x0];if(_0xbf02d8[_0x4768f3(0x5f1)]!==_0x4e84a5)return _0x1458c8['status'](0x191)['json']({'error':'PIN\x20salah.'});const [_0x2f009f]=await getPool()['execute'](_0x4768f3(0x135),[_0xbf02d8['id']]),_0x5379d6=_0x2f009f[0x0]?.[_0x4768f3(0x1f3)]||0x0,_0xe7d9d8=import_jsonwebtoken[_0x4768f3(0x60b)][_0x4768f3(0x406)]({'id':_0xbf02d8['id'],'nisn':_0xbf02d8[_0x4768f3(0x3c1)],'type':_0x4768f3(0x1f4),'name':_0xbf02d8[_0x4768f3(0x377)],'rombel':_0xbf02d8['rombel']},JWT_SECRET,{'expiresIn':'7d'});_0x1458c8['json']({'success':!![],'token':_0xe7d9d8,'student':{'id':_0xbf02d8['id'],'name':_0xbf02d8[_0x4768f3(0x377)],'nisn':_0xbf02d8[_0x4768f3(0x3c1)],'rombel':_0xbf02d8[_0x4768f3(0x53b)],'total_points':_0x5379d6}});})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x5ff),asyncHandler(async(_0x3a71ff,_0x3262c1)=>{const _0x19d8c4=_0x3fc4b5,{username:_0x1f95b1,password:_0x52d538}=_0x3a71ff[_0x19d8c4(0x2f2)];if(!_0x1f95b1||!_0x52d538)return _0x3262c1['status'](0x190)['json']({'error':_0x19d8c4(0x552)});const [_0x5c8d5e]=await getPool()[_0x19d8c4(0x54b)](_0x19d8c4(0x5f4),[_0x1f95b1]);if(!_0x5c8d5e[_0x19d8c4(0x5be)])return _0x3262c1[_0x19d8c4(0x3dc)](0x191)[_0x19d8c4(0x3c7)]({'error':'Akun\x20tidak\x20ditemukan\x20atau\x20tidak\x20aktif.'});const _0x3373a7=_0x5c8d5e[0x0],_0x585f4c=await import_bcryptjs[_0x19d8c4(0x60b)][_0x19d8c4(0x597)](_0x52d538,_0x3373a7[_0x19d8c4(0x3ea)]);if(!_0x585f4c)return _0x3262c1[_0x19d8c4(0x3dc)](0x191)[_0x19d8c4(0x3c7)]({'error':_0x19d8c4(0x504)});const _0x97ecc7=import_jsonwebtoken[_0x19d8c4(0x60b)][_0x19d8c4(0x406)]({'id':_0x3373a7['id'],'username':_0x1f95b1,'type':_0x19d8c4(0x553),'role':_0x3373a7['role_name'],'name':_0x3373a7['name'],'staff_id':_0x3373a7[_0x19d8c4(0x348)]},JWT_SECRET,{'expiresIn':'7d'});_0x3262c1[_0x19d8c4(0x3c7)]({'success':!![],'token':_0x97ecc7,'teacher':{'id':_0x3373a7['id'],'name':_0x3373a7[_0x19d8c4(0x5ec)],'username':_0x1f95b1,'role':_0x3373a7['role_name']}});})),app['post']('/api/el/login/parent',asyncHandler(async(_0xf1fbbb,_0x39d51a)=>{const _0x22cb19=_0x3fc4b5,{phone:_0x4a0760,pin:_0x780003}=_0xf1fbbb[_0x22cb19(0x2f2)];if(!_0x4a0760||!_0x780003)return _0x39d51a[_0x22cb19(0x3dc)](0x190)[_0x22cb19(0x3c7)]({'error':_0x22cb19(0x4d3)});const [_0x1e3cc4]=await getPool()[_0x22cb19(0x54b)]('SELECT\x20epp.*,\x20s.nama_lengkap\x20as\x20student_name\x20FROM\x20el_parent_pins\x20epp,\x20siswa\x20s\x20WHERE\x20epp.student_id\x20=\x20s.id\x20AND\x20epp.parent_phone\x20=\x20?',[_0x4a0760]);if(!_0x1e3cc4[_0x22cb19(0x5be)])return _0x39d51a['status'](0x191)[_0x22cb19(0x3c7)]({'error':_0x22cb19(0x579)});const _0x1944b9=_0x1e3cc4[0x0];if(_0x1944b9['pin']!==_0x780003)return _0x39d51a[_0x22cb19(0x3dc)](0x191)['json']({'error':'PIN\x20salah.'});const _0x391d5b=import_jsonwebtoken[_0x22cb19(0x60b)][_0x22cb19(0x406)]({'id':_0x1944b9['id'],'phone':_0x1944b9[_0x22cb19(0x601)],'type':_0x22cb19(0x500),'student_id':_0x1944b9['student_id'],'student_name':_0x1944b9[_0x22cb19(0x5bc)]},JWT_SECRET,{'expiresIn':'7d'});_0x39d51a[_0x22cb19(0x3c7)]({'success':!![],'token':_0x391d5b,'parent':{'id':_0x1944b9['id'],'name':_0x1944b9[_0x22cb19(0x5bd)],'student_id':_0x1944b9[_0x22cb19(0x2c0)],'student_name':_0x1944b9[_0x22cb19(0x5bc)]}});}));const _0x19f2e6=(_0x34e832,_0x3a0cb0,_0x109593)=>{const _0x1d08b4=_0x3fc4b5;console[_0x1d08b4(0x50a)](_0x1d08b4(0x23b),_0x34e832[_0x1d08b4(0x245)],_0x1d08b4(0x508),_0x34e832[_0x1d08b4(0x28f)]['authorization']?.[_0x1d08b4(0x4cd)](0x0,0x14));const _0xc99397=_0x34e832['headers']['authorization'];if(!_0xc99397)return _0x3a0cb0[_0x1d08b4(0x3dc)](0x191)[_0x1d08b4(0x3c7)]({'error':_0x1d08b4(0x216)});const _0x5cd4be=_0xc99397[_0x1d08b4(0x2b4)]('\x20')[0x1];import_jsonwebtoken['default']['verify'](_0x5cd4be,JWT_SECRET,(_0x4a4cc8,_0x212003)=>{const _0x398eda=_0x1d08b4;if(_0x4a4cc8)return _0x3a0cb0['status'](0x193)[_0x398eda(0x3c7)]({'error':_0x398eda(0x15f)});_0x34e832['user']=_0x212003,_0x109593();});};app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x2c8),(_0x28db8e,_0x1e3c98)=>{const _0x2d7b84=_0x3fc4b5;console[_0x2d7b84(0x50a)](_0x2d7b84(0x385)),_0x1e3c98[_0x2d7b84(0x3c7)]({'success':!![],'message':_0x2d7b84(0x16a)});}),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x18f),_0x19f2e6,asyncHandler(async(_0x4e2c0a,_0x254870)=>{const _0x4cf006=_0x3fc4b5,{type:_0x2a6ba8}=_0x4e2c0a[_0x4cf006(0x189)];let _0xac3a95='SELECT\x20c.*,\x20s.nama_lengkap\x20as\x20teacher_name\x20FROM\x20el_courses\x20c\x20LEFT\x20JOIN\x20pegawai\x20s\x20ON\x20c.teacher_id\x20=\x20s.pegawai_id\x20WHERE\x20c.status\x20=\x20\x27published\x27';const _0x112f76=[];if(_0x2a6ba8===_0x4cf006(0x1f4))_0xac3a95+=_0x4cf006(0x462),_0x112f76[_0x4cf006(0x4a8)](_0x4e2c0a[_0x4cf006(0x189)][_0x4cf006(0x53b)]);else _0x2a6ba8===_0x4cf006(0x553)&&(_0xac3a95=_0x4cf006(0x492),_0x112f76[_0x4cf006(0x4a8)](_0x4e2c0a[_0x4cf006(0x189)][_0x4cf006(0x348)]));_0xac3a95+=_0x4cf006(0x18e);const [_0x103239]=await getPool()[_0x4cf006(0x54b)](_0xac3a95,_0x112f76);_0x254870[_0x4cf006(0x3c7)](_0x103239);})),app['get'](_0x3fc4b5(0x331),_0x19f2e6,asyncHandler(async(_0x47483d,_0xb11442)=>{const _0x1bbcb2=_0x3fc4b5,[_0x21c132]=await getPool()[_0x1bbcb2(0x54b)](_0x1bbcb2(0x1c4),[_0x47483d[_0x1bbcb2(0x5e5)]['id']]);if(!_0x21c132['length'])return _0xb11442[_0x1bbcb2(0x3dc)](0x194)[_0x1bbcb2(0x3c7)]({'error':_0x1bbcb2(0x59e)});_0xb11442[_0x1bbcb2(0x3c7)](_0x21c132[0x0]);})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x18f),_0x19f2e6,asyncHandler(async(_0x1120b0,_0x37cb38)=>{const _0x5d99c3=_0x3fc4b5;if(_0x1120b0[_0x5d99c3(0x189)][_0x5d99c3(0x156)]!==_0x5d99c3(0x553))return _0x37cb38[_0x5d99c3(0x3dc)](0x193)[_0x5d99c3(0x3c7)]({'error':'Hanya\x20guru\x20yang\x20bisa\x20membuat\x20kursus.'});const {name:_0x52d597,description:_0x1e5498,cover_color:_0x5e5585,rombel:_0x13324f,subject:_0x2c341a,semester:_0xeb32fe,tahun_pelajaran:_0x527f15,status:_0x53d035}=_0x1120b0[_0x5d99c3(0x2f2)],[_0x2112f3]=await getPool()[_0x5d99c3(0x54b)]('INSERT\x20INTO\x20el_courses\x20(name,\x20description,\x20cover_color,\x20teacher_id,\x20rombel,\x20subject,\x20semester,\x20tahun_pelajaran,\x20status)\x20VALUES\x20(?,?,?,?,?,?,?,?,?)',[_0x52d597,_0x1e5498,_0x5e5585||_0x5d99c3(0x583),_0x1120b0[_0x5d99c3(0x189)]['staff_id'],_0x13324f,_0x2c341a,_0xeb32fe,_0x527f15,_0x53d035||_0x5d99c3(0x137)]);_0x37cb38['json']({'success':!![],'id':_0x2112f3[_0x5d99c3(0x399)]});})),app[_0x3fc4b5(0x31b)](_0x3fc4b5(0x331),_0x19f2e6,asyncHandler(async(_0x591530,_0x20fa36)=>{const _0x5cee16=_0x3fc4b5,{name:_0x3b4c65,description:_0x2a7659,cover_color:_0x17c49b,rombel:_0x402323,subject:_0x258cbc,semester:_0x16f7e3,tahun_pelajaran:_0x35924d,status:_0x56800e}=_0x591530[_0x5cee16(0x2f2)];await getPool()[_0x5cee16(0x54b)](_0x5cee16(0x554),[_0x3b4c65,_0x2a7659,_0x17c49b,_0x402323,_0x258cbc,_0x16f7e3,_0x35924d,_0x56800e,_0x591530[_0x5cee16(0x5e5)]['id']]),_0x20fa36[_0x5cee16(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x259)](_0x3fc4b5(0x331),_0x19f2e6,asyncHandler(async(_0x42a185,_0x522821)=>{const _0x4450dd=_0x3fc4b5;if(_0x42a185[_0x4450dd(0x189)][_0x4450dd(0x156)]!==_0x4450dd(0x553))return _0x522821[_0x4450dd(0x3dc)](0x193)['json']({'error':'Hanya\x20guru\x20yang\x20bisa\x20menghapus\x20kursus.'});await getPool()[_0x4450dd(0x54b)](_0x4450dd(0x34b),[_0x42a185['params']['id']]),_0x522821[_0x4450dd(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x4a9),_0x19f2e6,asyncHandler(async(_0x5946b3,_0xac6faa)=>{const _0x46b044=_0x3fc4b5,[_0x1e4ba7]=await getPool()[_0x46b044(0x54b)](_0x46b044(0x25d),[_0x5946b3[_0x46b044(0x5e5)][_0x46b044(0x3c4)]]);_0xac6faa['json'](_0x1e4ba7);})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x4a9),_0x19f2e6,asyncHandler(async(_0x24e5ce,_0x2c82ef)=>{const _0x28bcb7=_0x3fc4b5;if(_0x24e5ce[_0x28bcb7(0x189)][_0x28bcb7(0x156)]!==_0x28bcb7(0x553))return _0x2c82ef[_0x28bcb7(0x3dc)](0x193)[_0x28bcb7(0x3c7)]({'error':_0x28bcb7(0x44a)});const {title:_0x38f7e8,content:_0xfa75e8,video_url:_0x3b0abf,order_index:_0x57e24b}=_0x24e5ce['body'],[_0x81ef61]=await getPool()[_0x28bcb7(0x54b)](_0x28bcb7(0x180),[_0x24e5ce[_0x28bcb7(0x5e5)]['courseId'],_0x38f7e8,_0xfa75e8,_0x3b0abf,_0x57e24b||0x0]);_0x2c82ef[_0x28bcb7(0x3c7)]({'success':!![],'id':_0x81ef61[_0x28bcb7(0x399)]});})),app['put']('/api/el/modules/:id',_0x19f2e6,asyncHandler(async(_0x443f9c,_0x189ce6)=>{const _0x576c65=_0x3fc4b5;if(_0x443f9c[_0x576c65(0x189)][_0x576c65(0x156)]!==_0x576c65(0x553))return _0x189ce6[_0x576c65(0x3dc)](0x193)[_0x576c65(0x3c7)]({'error':_0x576c65(0x44a)});const {title:_0x34bf67,content:_0x1aa510,video_url:_0x577905,order_index:_0x2d916e}=_0x443f9c[_0x576c65(0x2f2)];await getPool()[_0x576c65(0x54b)](_0x576c65(0x19c),[_0x34bf67,_0x1aa510,_0x577905,_0x2d916e,_0x443f9c[_0x576c65(0x5e5)]['id']]),_0x189ce6[_0x576c65(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x259)](_0x3fc4b5(0x5b6),_0x19f2e6,asyncHandler(async(_0x4de6b4,_0x6752a6)=>{const _0x2fc1f7=_0x3fc4b5;if(_0x4de6b4['user']['type']!==_0x2fc1f7(0x553))return _0x6752a6[_0x2fc1f7(0x3dc)](0x193)[_0x2fc1f7(0x3c7)]({'error':_0x2fc1f7(0x44a)});await getPool()[_0x2fc1f7(0x54b)]('DELETE\x20FROM\x20el_modules\x20WHERE\x20id\x20=\x20?',[_0x4de6b4[_0x2fc1f7(0x5e5)]['id']]),_0x6752a6[_0x2fc1f7(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x606),_0x19f2e6,asyncHandler(async(_0x252e0f,_0x1333f1)=>{const _0x28e3eb=_0x3fc4b5,[_0xb064f7]=await getPool()['execute'](_0x28e3eb(0x32c),[_0x252e0f['params'][_0x28e3eb(0x3c4)]]);_0x1333f1[_0x28e3eb(0x3c7)](_0xb064f7);})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x606),_0x19f2e6,asyncHandler(async(_0x56552f,_0x3693cb)=>{const _0x3111ef=_0x3fc4b5;if(_0x56552f[_0x3111ef(0x189)][_0x3111ef(0x156)]!==_0x3111ef(0x553))return _0x3693cb['status'](0x193)['json']({'error':_0x3111ef(0x44a)});const {title:_0x5cc0da,module_id:_0x18ce61,passing_score:_0x4ffd1d,time_limit_minutes:_0x25137b,status:_0x540775}=_0x56552f['body'],[_0x8234a8]=await getPool()[_0x3111ef(0x54b)](_0x3111ef(0x4c1),[_0x56552f[_0x3111ef(0x5e5)]['courseId'],_0x18ce61||null,_0x5cc0da,_0x4ffd1d||0x46,_0x25137b||0x1e,_0x540775||_0x3111ef(0x137)]);_0x3693cb[_0x3111ef(0x3c7)]({'success':!![],'id':_0x8234a8[_0x3111ef(0x399)]});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x3cb),_0x19f2e6,asyncHandler(async(_0x11499f,_0x559d54)=>{const _0x3a4a23=_0x3fc4b5,[_0x39dda7]=await getPool()[_0x3a4a23(0x54b)](_0x3a4a23(0x5ca),[_0x11499f['params']['id']]);if(!_0x39dda7[_0x3a4a23(0x5be)])return _0x559d54[_0x3a4a23(0x3dc)](0x194)['json']({'error':'Kuis\x20tidak\x20ditemukan.'});_0x559d54[_0x3a4a23(0x3c7)](_0x39dda7[0x0]);})),app[_0x3fc4b5(0x31b)]('/api/el/quizzes/:id',_0x19f2e6,asyncHandler(async(_0x433232,_0x41af89)=>{const _0x349a6b=_0x3fc4b5;if(_0x433232[_0x349a6b(0x189)][_0x349a6b(0x156)]!==_0x349a6b(0x553))return _0x41af89[_0x349a6b(0x3dc)](0x193)[_0x349a6b(0x3c7)]({'error':_0x349a6b(0x44a)});const {title:_0x129cf6,module_id:_0x2a776b,passing_score:_0x2ff2a5,time_limit_minutes:_0x307adc,status:_0x130607}=_0x433232['body'];await getPool()[_0x349a6b(0x54b)](_0x349a6b(0x3ec),[_0x129cf6,_0x2a776b||null,_0x2ff2a5,_0x307adc,_0x130607,_0x433232[_0x349a6b(0x5e5)]['id']]),_0x41af89[_0x349a6b(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x259)](_0x3fc4b5(0x3cb),_0x19f2e6,asyncHandler(async(_0x37fd6e,_0x4754ce)=>{const _0x348540=_0x3fc4b5;if(_0x37fd6e[_0x348540(0x189)][_0x348540(0x156)]!==_0x348540(0x553))return _0x4754ce['status'](0x193)[_0x348540(0x3c7)]({'error':_0x348540(0x44a)});await getPool()[_0x348540(0x54b)](_0x348540(0x46e),[_0x37fd6e['params']['id']]),_0x4754ce[_0x348540(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x37b),_0x19f2e6,asyncHandler(async(_0x57c8c7,_0x2e3692)=>{const _0x205048=_0x3fc4b5,[_0x10c1f4]=await getPool()[_0x205048(0x54b)](_0x205048(0x32e),[_0x57c8c7[_0x205048(0x5e5)][_0x205048(0x4b8)]]);_0x2e3692[_0x205048(0x3c7)](_0x10c1f4);})),app['post'](_0x3fc4b5(0x37b),_0x19f2e6,asyncHandler(async(_0x5797a9,_0x59ee60)=>{const _0x3bb9ec=_0x3fc4b5;if(_0x5797a9[_0x3bb9ec(0x189)][_0x3bb9ec(0x156)]!=='teacher')return _0x59ee60[_0x3bb9ec(0x3dc)](0x193)[_0x3bb9ec(0x3c7)]({'error':_0x3bb9ec(0x44a)});const {question_text:_0x3d1581,question_image_url:_0xf94a3b,option_a:_0x4ca938,option_a_image:_0x58beab,option_b:_0x199236,option_b_image:_0x4b12ce,option_c:_0x459ac6,option_c_image:_0x4d3621,option_d:_0x2ba45f,option_d_image:_0x3d8129,correct_answer:_0x18bfba,points:_0x48156f,order_index:_0x379155}=_0x5797a9[_0x3bb9ec(0x2f2)];if(!_0x3d1581||!_0x4ca938||!_0x18bfba)return _0x59ee60[_0x3bb9ec(0x3dc)](0x190)['json']({'error':_0x3bb9ec(0x520)});const _0x228bb7=_0x741d3c=>_0x741d3c===''||_0x741d3c===void 0x0||_0x741d3c===null?null:_0x741d3c,[_0x195157]=await getPool()[_0x3bb9ec(0x54b)](_0x3bb9ec(0x4aa),[_0x5797a9[_0x3bb9ec(0x5e5)]['quizId'],_0x228bb7(_0x3d1581),_0x228bb7(_0xf94a3b),_0x228bb7(_0x4ca938),_0x228bb7(_0x58beab),_0x228bb7(_0x199236),_0x228bb7(_0x4b12ce),_0x228bb7(_0x459ac6),_0x228bb7(_0x4d3621),_0x228bb7(_0x2ba45f),_0x228bb7(_0x3d8129),_0x228bb7(_0x18bfba),_0x228bb7(_0x48156f)||0xa,_0x228bb7(_0x379155)||0x0]);_0x59ee60[_0x3bb9ec(0x3c7)]({'success':!![],'id':_0x195157[_0x3bb9ec(0x399)]});})),app[_0x3fc4b5(0x31b)](_0x3fc4b5(0x1a9),_0x19f2e6,asyncHandler(async(_0x540c6b,_0x1b66a4)=>{const _0x5482d5=_0x3fc4b5;if(_0x540c6b[_0x5482d5(0x189)][_0x5482d5(0x156)]!=='teacher')return _0x1b66a4[_0x5482d5(0x3dc)](0x193)[_0x5482d5(0x3c7)]({'error':_0x5482d5(0x44a)});const {question_text:_0x11b659,question_image_url:_0x522ce9,option_a:_0x48a0cc,option_a_image:_0x4309a0,option_b:_0x313448,option_b_image:_0x103800,option_c:_0x117972,option_c_image:_0x100d78,option_d:_0x131cf3,option_d_image:_0x17b5aa,correct_answer:_0x3a8e76,points:_0x473111,order_index:_0x109f91}=_0x540c6b['body'];await getPool()[_0x5482d5(0x54b)](_0x5482d5(0x613),[_0x11b659,_0x522ce9,_0x48a0cc,_0x4309a0,_0x313448,_0x103800,_0x117972,_0x100d78,_0x131cf3,_0x17b5aa,_0x3a8e76,_0x473111,_0x109f91,_0x540c6b[_0x5482d5(0x5e5)]['qid']]),_0x1b66a4[_0x5482d5(0x3c7)]({'success':!![]});})),app[_0x3fc4b5(0x259)](_0x3fc4b5(0x1a9),_0x19f2e6,asyncHandler(async(_0x3a4771,_0x2e5cdd)=>{const _0x55b4d6=_0x3fc4b5;if(_0x3a4771[_0x55b4d6(0x189)][_0x55b4d6(0x156)]!==_0x55b4d6(0x553))return _0x2e5cdd['status'](0x193)['json']({'error':'Hanya\x20guru.'});await getPool()['execute'](_0x55b4d6(0x439),[_0x3a4771[_0x55b4d6(0x5e5)][_0x55b4d6(0x457)]]),_0x2e5cdd[_0x55b4d6(0x3c7)]({'success':!![]});})),app['post'](_0x3fc4b5(0x480),_0x19f2e6,asyncHandler(async(_0x46855b,_0x48b5d2)=>{const _0x1a5281=_0x3fc4b5;if(_0x46855b['user']['type']!==_0x1a5281(0x1f4))return _0x48b5d2[_0x1a5281(0x3dc)](0x193)[_0x1a5281(0x3c7)]({'error':'Hanya\x20siswa.'});const [_0x111c01]=await getPool()[_0x1a5281(0x54b)](_0x1a5281(0x431),[_0x46855b[_0x1a5281(0x5e5)]['id']]);if(!_0x111c01['length'])return _0x48b5d2[_0x1a5281(0x3dc)](0x194)[_0x1a5281(0x3c7)]({'error':_0x1a5281(0x523)});const _0xa9f857=_0x111c01[0x0],[_0x4d851c]=await getPool()[_0x1a5281(0x54b)]('SELECT\x20id,\x20question_text,\x20question_image_url,\x20option_a,\x20option_a_image,\x20option_b,\x20option_b_image,\x20option_c,\x20option_c_image,\x20option_d,\x20option_d_image,\x20points,\x20order_index\x20FROM\x20el_quiz_questions\x20WHERE\x20quiz_id\x20=\x20?\x20ORDER\x20BY\x20order_index\x20ASC,\x20id\x20ASC',[_0x46855b[_0x1a5281(0x5e5)]['id']]),[_0xf9a4d5]=await getPool()[_0x1a5281(0x54b)](_0x1a5281(0x28b),[_0x46855b[_0x1a5281(0x5e5)]['id'],_0x46855b[_0x1a5281(0x189)]['id'],JSON[_0x1a5281(0x570)]([]),'submitted']);_0x48b5d2[_0x1a5281(0x3c7)]({'submission_id':_0xf9a4d5['insertId'],'questions':_0x4d851c,'time_limit_minutes':_0xa9f857[_0x1a5281(0x309)]});})),app[_0x3fc4b5(0x218)]('/api/el/quizzes/:id/submit',_0x19f2e6,asyncHandler(async(_0x3f2927,_0x586406)=>{const _0x1273bf=_0x3fc4b5;if(_0x3f2927[_0x1273bf(0x189)][_0x1273bf(0x156)]!=='student')return _0x586406[_0x1273bf(0x3dc)](0x193)[_0x1273bf(0x3c7)]({'error':_0x1273bf(0x3df)});const {submission_id:_0x202f05,answers:_0x30f42a}=_0x3f2927['body'],[_0x521ea3]=await getPool()[_0x1273bf(0x54b)](_0x1273bf(0x568),[_0x3f2927['params']['id']]),[_0x2d53e7]=await getPool()[_0x1273bf(0x54b)](_0x1273bf(0x5ca),[_0x3f2927['params']['id']]);let _0x1a8bb9=0x0,_0x182bf4=0x0;for(const _0x625918 of _0x521ea3){_0x182bf4+=_0x625918[_0x1273bf(0x551)];const _0x8d5bdd=_0x30f42a?.[_0x1273bf(0x4c2)](_0x58fee3=>_0x58fee3[_0x1273bf(0x464)]===_0x625918['id']);if(_0x8d5bdd&&_0x8d5bdd[_0x1273bf(0x238)]===_0x625918['correct_answer'])_0x1a8bb9+=_0x625918[_0x1273bf(0x551)];}const _0x3d2615=_0x182bf4>0x0?Math[_0x1273bf(0x428)](_0x1a8bb9/_0x182bf4*0x64):0x0,_0x7665a=_0x3d2615>=(_0x2d53e7[0x0]?.[_0x1273bf(0x320)]||0x46);await getPool()[_0x1273bf(0x54b)](_0x1273bf(0x36e),[JSON[_0x1273bf(0x570)](_0x30f42a),_0x1a8bb9,_0x182bf4,_0x3d2615,_0x202f05]);let _0x3933c7=0x0;if(_0x3d2615>=0x50)_0x3933c7=0x19;else{if(_0x3d2615>=0x32)_0x3933c7=0xf;else _0x3933c7=0x5;}_0x3933c7>0x0&&await getPool()[_0x1273bf(0x54b)](_0x1273bf(0x530),[_0x3f2927[_0x1273bf(0x189)]['id'],_0x3933c7,'quiz',_0x3f2927[_0x1273bf(0x5e5)]['id'],'Kuis:\x20'+(_0x2d53e7[0x0]?.[_0x1273bf(0x2e1)]||'Kuis')]);_0x2d53e7[0x0]?.[_0x1273bf(0x318)]&&await getPool()[_0x1273bf(0x54b)](_0x1273bf(0x2bb),[_0x3f2927['user']['id'],_0x2d53e7[0x0]['module_id']]);const [_0x58e0e8]=await getPool()[_0x1273bf(0x54b)](_0x1273bf(0x135),[_0x3f2927[_0x1273bf(0x189)]['id']]);_0x586406[_0x1273bf(0x3c7)]({'score':_0x1a8bb9,'max_score':_0x182bf4,'percentage':_0x3d2615,'passed':_0x7665a,'points_earned':_0x3933c7,'total_points':_0x58e0e8[0x0]?.['total']||0x0});})),app[_0x3fc4b5(0x1fc)]('/api/el/students/:id/profile',_0x19f2e6,asyncHandler(async(_0x3600d4,_0x5c3dbf)=>{const _0x34f226=_0x3fc4b5;if(_0x3600d4[_0x34f226(0x189)][_0x34f226(0x156)]==='student'&&_0x3600d4[_0x34f226(0x189)]['id']!==parseInt(_0x3600d4[_0x34f226(0x5e5)]['id']))return _0x5c3dbf[_0x34f226(0x3dc)](0x193)['json']({'error':_0x34f226(0x588)});const [_0x4c705f]=await getPool()[_0x34f226(0x54b)]('SELECT\x20id,\x20nama_lengkap,\x20nisn,\x20rombel,\x20jenis_kelamin\x20FROM\x20siswa\x20WHERE\x20id\x20=\x20?',[_0x3600d4[_0x34f226(0x5e5)]['id']]);if(!_0x4c705f[_0x34f226(0x5be)])return _0x5c3dbf[_0x34f226(0x3dc)](0x194)[_0x34f226(0x3c7)]({'error':_0x34f226(0x59b)});const _0x5003c5=_0x4c705f[0x0],[_0x52a50e]=await getPool()['execute'](_0x34f226(0x135),[_0x3600d4[_0x34f226(0x5e5)]['id']]),[_0x5128bc]=await getPool()[_0x34f226(0x54b)](_0x34f226(0x310),[_0x3600d4[_0x34f226(0x5e5)]['id']]),[_0x3a9b5e]=await getPool()['execute'](_0x34f226(0x15c),[_0x5003c5[_0x34f226(0x53b)]]);_0x5c3dbf[_0x34f226(0x3c7)]({'id':_0x5003c5['id'],'name':_0x5003c5['nama_lengkap'],'nisn':_0x5003c5[_0x34f226(0x3c1)],'rombel':_0x5003c5[_0x34f226(0x53b)],'jenis_kelamin':_0x5003c5[_0x34f226(0x223)],'total_points':_0x52a50e[0x0]?.[_0x34f226(0x1f3)]||0x0,'completed_modules':_0x5128bc[0x0]?.[_0x34f226(0x1f3)]||0x0,'enrolled_courses':_0x3a9b5e[0x0]?.[_0x34f226(0x1f3)]||0x0});})),app[_0x3fc4b5(0x1fc)]('/api/el/teacher/gradebook',_0x19f2e6,asyncHandler(async(_0x4c52b6,_0x54f397)=>{const _0x18f8d9=_0x3fc4b5;if(_0x4c52b6[_0x18f8d9(0x189)][_0x18f8d9(0x156)]!=='teacher')return _0x54f397[_0x18f8d9(0x3dc)](0x193)['json']({'error':_0x18f8d9(0x44a)});const {course_id:_0xf385f5}=_0x4c52b6[_0x18f8d9(0x59d)];let _0x275231=_0x18f8d9(0x5e3);const _0x35c599=[_0x4c52b6[_0x18f8d9(0x189)]['staff_id']];_0xf385f5&&(_0x275231+=_0x18f8d9(0x416),_0x35c599[_0x18f8d9(0x4a8)](_0xf385f5));_0x275231+='\x20ORDER\x20BY\x20c.id,\x20s.nama_lengkap';const [_0x1fb972]=await getPool()[_0x18f8d9(0x54b)](_0x275231,_0x35c599),_0x46bb47={};for(const _0x723088 of _0x1fb972){const _0x5be3c3=_0x723088[_0x18f8d9(0x2c0)];if(!_0x46bb47[_0x5be3c3])_0x46bb47[_0x5be3c3]={'id':_0x723088['student_id'],'name':_0x723088['student_name'],'nisn':_0x723088[_0x18f8d9(0x3c1)],'submissions':[]};_0x46bb47[_0x5be3c3]['submissions'][_0x18f8d9(0x4a8)]({'quiz_title':_0x723088[_0x18f8d9(0x482)],'score':_0x723088[_0x18f8d9(0x34a)],'max_score':_0x723088[_0x18f8d9(0x12b)],'percentage':_0x723088[_0x18f8d9(0x53e)],'submitted_at':_0x723088[_0x18f8d9(0x17d)]});}_0x54f397['json'](Object[_0x18f8d9(0x5fc)](_0x46bb47));})),app[_0x3fc4b5(0x1fc)]('/api/el/teacher/gradebook/:courseId/export',_0x19f2e6,asyncHandler(async(_0x2e6c73,_0x2fe214)=>{const _0x865112=_0x3fc4b5;if(_0x2e6c73[_0x865112(0x189)][_0x865112(0x156)]!==_0x865112(0x553))return _0x2fe214[_0x865112(0x3dc)](0x193)[_0x865112(0x3c7)]({'error':_0x865112(0x44a)});const [_0x10cf7b]=await getPool()['execute'](_0x865112(0x501),[_0x2e6c73['params'][_0x865112(0x3c4)],_0x2e6c73[_0x865112(0x189)][_0x865112(0x348)]]);if(!_0x10cf7b[_0x865112(0x5be)])return _0x2fe214[_0x865112(0x3dc)](0x194)[_0x865112(0x3c7)]({'error':_0x865112(0x59e)});const [_0xfeedc2]=await getPool()[_0x865112(0x54b)]('SELECT\x20*\x20FROM\x20el_quizzes\x20WHERE\x20course_id\x20=\x20?\x20ORDER\x20BY\x20id',[_0x2e6c73[_0x865112(0x5e5)][_0x865112(0x3c4)]]),[_0x196911]=await getPool()[_0x865112(0x54b)]('\x0a\x20\x20\x20\x20SELECT\x20s.id\x20as\x20student_id,\x20s.nama_lengkap,\x20s.nisn,\x20q.id\x20as\x20quiz_id,\x20q.title\x20as\x20quiz_title,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20sub.score,\x20sub.max_score,\x20sub.percentage\x0a\x20\x20\x20\x20FROM\x20el_submissions\x20sub\x0a\x20\x20\x20\x20\x20\x20\x20\x20JOIN\x20siswa\x20s\x20ON\x20sub.student_id\x20=\x20s.id\x0a\x20\x20\x20\x20JOIN\x20el_quizzes\x20q\x20ON\x20sub.quiz_id\x20=\x20q.id\x0a\x20\x20\x20\x20WHERE\x20q.course_id\x20=\x20?\x0a\x20\x20\x20\x20ORDER\x20BY\x20s.nama_lengkap,\x20q.id\x0a\x20\x20',[_0x2e6c73[_0x865112(0x5e5)][_0x865112(0x3c4)]]),_0x692cbf=_0xfeedc2[_0x865112(0x47f)](_0x10088b=>_0x10088b['title']),_0x78bb0=[_0x865112(0x41c),_0x865112(0x511),..._0x692cbf,'Rata-rata'],_0x3141d6={};for(const _0x3f1e20 of _0x196911){!_0x3141d6[_0x3f1e20[_0x865112(0x2c0)]]&&(_0x3141d6[_0x3f1e20['student_id']]={'name':_0x3f1e20[_0x865112(0x377)],'nisn':_0x3f1e20[_0x865112(0x3c1)],'scores':{}}),_0x3141d6[_0x3f1e20[_0x865112(0x2c0)]][_0x865112(0x4da)][_0x3f1e20['quiz_id']]=_0x3f1e20;}const _0x55de0c=[_0x78bb0];for(const _0x54f352 of Object[_0x865112(0x5fc)](_0x3141d6)){const _0x153221=[_0x54f352['name'],_0x54f352[_0x865112(0x3c1)]];let _0x563a38=0x0,_0x1fbdfe=0x0;for(const _0x52aafe of _0xfeedc2){const _0x174d00=_0x54f352[_0x865112(0x4da)][_0x52aafe['id']];if(_0x174d00)_0x153221[_0x865112(0x4a8)](_0x174d00[_0x865112(0x34a)]+'/'+_0x174d00['max_score']+'\x20('+_0x174d00[_0x865112(0x53e)]+'%)'),_0x563a38+=_0x174d00['percentage'],_0x1fbdfe++;else _0x153221[_0x865112(0x4a8)]('-');}_0x153221[_0x865112(0x4a8)](_0x1fbdfe>0x0?Math[_0x865112(0x428)](_0x563a38/_0x1fbdfe)+'%':'-'),_0x55de0c['push'](_0x153221);}_0x2fe214[_0x865112(0x3c7)]({'success':!![],'data':_0x55de0c,'course_name':_0x10cf7b[0x0]['name']});})),app['get'](_0x3fc4b5(0x625),_0x19f2e6,asyncHandler(async(_0x4d88da,_0x567429)=>{const _0x5f272c=_0x3fc4b5;if(_0x4d88da[_0x5f272c(0x189)][_0x5f272c(0x156)]!==_0x5f272c(0x500))return _0x567429[_0x5f272c(0x3dc)](0x193)[_0x5f272c(0x3c7)]({'error':'Hanya\x20orang\x20tua.'});const [_0x5d669f]=await getPool()['execute'](_0x5f272c(0x2c9),[_0x4d88da[_0x5f272c(0x189)][_0x5f272c(0x2c0)]]);_0x567429[_0x5f272c(0x3c7)](_0x5d669f);})),app['get']('/api/el/parent/student/:studentId/scores',_0x19f2e6,asyncHandler(async(_0x140ee9,_0xa6a500)=>{const _0x1e7f27=_0x3fc4b5;if(_0x140ee9[_0x1e7f27(0x189)][_0x1e7f27(0x156)]!==_0x1e7f27(0x500)&&_0x140ee9[_0x1e7f27(0x189)][_0x1e7f27(0x156)]!=='teacher')return _0xa6a500['status'](0x193)['json']({'error':_0x1e7f27(0x20d)});const [_0x23ab32]=await getPool()[_0x1e7f27(0x54b)](_0x1e7f27(0x261),[_0x140ee9[_0x1e7f27(0x5e5)]['studentId']]),[_0x5b9263]=await getPool()[_0x1e7f27(0x54b)]('\x0a\x20\x20\x20\x20SELECT\x20q.title\x20as\x20quiz_title,\x20c.name\x20as\x20course_name,\x20sub.score,\x20sub.max_score,\x20sub.percentage,\x20sub.submitted_at\x0a\x20\x20\x20\x20FROM\x20el_submissions\x20sub\x0a\x20\x20\x20\x20JOIN\x20el_quizzes\x20q\x20ON\x20sub.quiz_id\x20=\x20q.id\x0a\x20\x20\x20\x20JOIN\x20el_courses\x20c\x20ON\x20q.course_id\x20=\x20c.id\x0a\x20\x20\x20\x20WHERE\x20sub.student_id\x20=\x20?\x0a\x20\x20\x20\x20ORDER\x20BY\x20sub.submitted_at\x20DESC\x0a\x20\x20\x20\x20LIMIT\x2050\x0a\x20\x20',[_0x140ee9[_0x1e7f27(0x5e5)][_0x1e7f27(0x1b0)]]);_0xa6a500[_0x1e7f27(0x3c7)]({'student_name':_0x23ab32[0x0]?.['nama_lengkap']||'-','scores':_0x5b9263});})),app['get'](_0x3fc4b5(0x569),authenticate,asyncHandler(async(_0x544577,_0x25c523)=>{const _0x466834=_0x3fc4b5,{tanggal:_0x1e8450,rombel:_0x3fdaef,mata_pelajaran:_0x2d45f4}=_0x544577[_0x466834(0x59d)],[_0x2b2a7b]=await getPool()['execute'](_0x466834(0x17f),[_0x3fdaef]),[_0x346299]=await getPool()['execute']('SELECT\x20student_id,\x20status,\x20keterangan\x20FROM\x20absensi_bidang_study\x20WHERE\x20tanggal\x20=\x20?\x20AND\x20rombel\x20=\x20?\x20AND\x20mata_pelajaran\x20=\x20?',[_0x1e8450,_0x3fdaef,_0x2d45f4]),_0x29c47d=new Map();for(const _0x1e429d of _0x346299){_0x29c47d[_0x466834(0x3fa)](_0x1e429d[_0x466834(0x2c0)],_0x1e429d);}const _0x5d6e96=_0x2b2a7b[_0x466834(0x47f)](_0x4ab567=>({'id':_0x4ab567['id'],'nama_lengkap':_0x4ab567[_0x466834(0x377)],'nisn':_0x4ab567[_0x466834(0x3c1)],'status':_0x29c47d[_0x466834(0x3f0)](_0x4ab567['id'])?_0x29c47d[_0x466834(0x1fc)](_0x4ab567['id'])[_0x466834(0x3dc)]:'Hadir','keterangan':_0x29c47d[_0x466834(0x3f0)](_0x4ab567['id'])?_0x29c47d['get'](_0x4ab567['id'])[_0x466834(0x5c7)]:''}));_0x25c523[_0x466834(0x3c7)](_0x5d6e96);})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x569),authenticate,asyncHandler(async(_0x5e7951,_0x49c7eb)=>{const _0x584aea=_0x3fc4b5,{tanggal:_0x23ad50,rombel:_0x1f552a,mata_pelajaran:_0x4a5ad8,records:_0x39a157}=_0x5e7951[_0x584aea(0x2f2)],_0x566077=_0x5e7951['user']?.['id']||null,_0x388a3e=await getPool()[_0x584aea(0x4b4)]();try{await _0x388a3e[_0x584aea(0x115)]();for(const _0x23efcf of _0x39a157){await _0x388a3e[_0x584aea(0x54b)](_0x584aea(0x524),[_0x23efcf['student_id'],_0x23ad50,_0x4a5ad8,_0x1f552a,_0x23efcf[_0x584aea(0x3dc)],_0x23efcf[_0x584aea(0x5c7)],_0x566077]);}await _0x388a3e['commit'](),_0x49c7eb[_0x584aea(0x3c7)]({'success':!![]});}catch(_0x3a986b){await _0x388a3e[_0x584aea(0x603)](),console['error'](_0x3a986b),_0x49c7eb[_0x584aea(0x3dc)](0x1f4)[_0x584aea(0x3c7)]({'error':_0x584aea(0x2a4)});}finally{_0x388a3e[_0x584aea(0x44c)]();}})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x16e),authenticate,asyncHandler(async(_0x4759ce,_0x25ad99)=>{const _0x271a85=_0x3fc4b5,{start_date:_0x7dbb88,end_date:_0x45db1f,rombel:_0x13c2a8,mata_pelajaran:_0x342563}=_0x4759ce[_0x271a85(0x59d)],[_0x137582]=await getPool()[_0x271a85(0x54b)](_0x271a85(0x17f),[_0x13c2a8]),[_0x457a51]=await getPool()[_0x271a85(0x54b)](_0x271a85(0x291),[_0x7dbb88,_0x45db1f,_0x13c2a8,_0x342563]),_0x54ccc9=_0x137582['map'](_0x2ec779=>{const _0x1a2397=_0x271a85,_0x241eab=_0x457a51['filter'](_0x408581=>_0x408581['student_id']===_0x2ec779['id']);let _0x57379b=0x0,_0x4fea15=0x0,_0x4a1da2=0x0,_0x5c889c=0x0;for(const _0xb9d156 of _0x241eab){if(_0xb9d156['status']===_0x1a2397(0x151))_0x57379b++;else{if(_0xb9d156[_0x1a2397(0x3dc)]===_0x1a2397(0x4cf))_0x4fea15++;else{if(_0xb9d156[_0x1a2397(0x3dc)]===_0x1a2397(0x307))_0x4a1da2++;else{if(_0xb9d156[_0x1a2397(0x3dc)]===_0x1a2397(0x345))_0x5c889c++;}}}}return{'id':_0x2ec779['id'],'nisn':_0x2ec779[_0x1a2397(0x3c1)],'nama_lengkap':_0x2ec779['nama_lengkap'],'hadir':_0x57379b,'sakit':_0x4fea15,'izin':_0x4a1da2,'alpa':_0x5c889c};});_0x25ad99[_0x271a85(0x3c7)]({'report':_0x54ccc9});})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x388),authenticate,asyncHandler(async(_0x49c1d2,_0x355e32)=>{const _0x2b2fe8=_0x3fc4b5,{judul:_0xe0348e,deskripsi:_0x945fa5,cover_image:_0x528b5c,file_url:_0x58fdc3,tingkat_kelas:_0x13f5ed,xp_reward:_0x5b7583,pertanyaan:_0x3bae2c,mata_pelajaran:_0x38cffc,waktu_baca:_0x340c49}=_0x49c1d2[_0x2b2fe8(0x2f2)],[_0x4491a8]=await getPool()[_0x2b2fe8(0x54b)](_0x2b2fe8(0x488),[_0xe0348e,_0x945fa5,_0x528b5c,_0x58fdc3,_0x13f5ed,_0x5b7583||0x0,_0x49c1d2[_0x2b2fe8(0x189)]['id'],_0x38cffc||null,_0x340c49||0x0]),_0x1ca064=_0x4491a8[_0x2b2fe8(0x399)];if(_0x3bae2c&&Array['isArray'](_0x3bae2c))for(const _0x38dd16 of _0x3bae2c){_0x38dd16['trim']()&&await getPool()[_0x2b2fe8(0x54b)](_0x2b2fe8(0x2a6),[_0x1ca064,_0x38dd16]);}_0x355e32[_0x2b2fe8(0x3c7)]({'success':!![],'materi_id':_0x1ca064});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x527),authenticate,asyncHandler(async(_0x431c6b,_0x3c78f7)=>{const _0x5f0b24=_0x3fc4b5;let _0x4db768=[],_0x328c79=[],_0x3974f3=_0x431c6b[_0x5f0b24(0x189)][_0x5f0b24(0x526)]&&_0x431c6b[_0x5f0b24(0x189)][_0x5f0b24(0x526)][_0x5f0b24(0x424)](_0x5f0b24(0x3d6));if(_0x431c6b[_0x5f0b24(0x189)][_0x5f0b24(0x156)]==='staff'&&!_0x3974f3&&_0x431c6b['user'][_0x5f0b24(0x348)]){const [_0x559017]=await getPool()[_0x5f0b24(0x54b)](_0x5f0b24(0x35f),[_0x431c6b['user'][_0x5f0b24(0x348)]]);_0x4db768=[...new Set(_0x559017[_0x5f0b24(0x47f)](_0x555908=>_0x555908[_0x5f0b24(0x2eb)])[_0x5f0b24(0x610)](Boolean))],_0x328c79=[...new Set(_0x559017[_0x5f0b24(0x47f)](_0x2ebe2b=>_0x2ebe2b[_0x5f0b24(0x5ec)])[_0x5f0b24(0x610)](Boolean))];}_0x3c78f7[_0x5f0b24(0x3c7)]({'isAdmin':_0x3974f3,'tingkatList':_0x4db768,'rombelList':_0x328c79});})),app[_0x3fc4b5(0x1fc)]('/api/literasi/materi',authenticate,asyncHandler(async(_0x4e41f6,_0x1acf41)=>{const _0x16eb0d=_0x3fc4b5,{tingkat_kelas:_0x429f26}=_0x4e41f6[_0x16eb0d(0x59d)];let _0x179a9f='SELECT\x20*\x20FROM\x20literasi_materi',_0x30f5f0=[],_0x132aa5=![];_0x429f26&&(_0x179a9f+=_0x16eb0d(0x108),_0x30f5f0['push'](_0x429f26),_0x132aa5=!![]);if(_0x4e41f6[_0x16eb0d(0x189)][_0x16eb0d(0x156)]===_0x16eb0d(0x45b)&&!_0x4e41f6['user'][_0x16eb0d(0x526)][_0x16eb0d(0x424)](_0x16eb0d(0x3d6))&&_0x4e41f6['user'][_0x16eb0d(0x348)]){const [_0x286259]=await getPool()[_0x16eb0d(0x54b)](_0x16eb0d(0x39b),[_0x4e41f6[_0x16eb0d(0x189)][_0x16eb0d(0x348)]]);if(_0x286259[_0x16eb0d(0x5be)]>0x0){const _0x5eae3e=[...new Set(_0x286259[_0x16eb0d(0x47f)](_0x2be650=>_0x2be650[_0x16eb0d(0x2eb)])[_0x16eb0d(0x610)](Boolean))];_0x5eae3e[_0x16eb0d(0x5be)]>0x0?(!_0x132aa5?(_0x179a9f+=_0x16eb0d(0x140)+_0x5eae3e[_0x16eb0d(0x47f)](()=>'?')['join'](',')+')',_0x132aa5=!![]):_0x179a9f+=_0x16eb0d(0x4c9)+_0x5eae3e['map'](()=>'?')[_0x16eb0d(0x4ca)](',')+')',_0x30f5f0['push'](..._0x5eae3e)):(_0x179a9f+=_0x132aa5?_0x16eb0d(0x460):'\x20WHERE\x20tingkat_kelas\x20=\x20\x27INVALID\x27',_0x132aa5=!![]);}else _0x179a9f+=_0x132aa5?_0x16eb0d(0x460):_0x16eb0d(0x198),_0x132aa5=!![];}if(_0x4e41f6[_0x16eb0d(0x189)][_0x16eb0d(0x156)]===_0x16eb0d(0x1f4)){_0x179a9f+=_0x132aa5?_0x16eb0d(0x5d1):_0x16eb0d(0x1d2),_0x179a9f+=_0x16eb0d(0x2dc);const [_0x237eff]=await getPool()[_0x16eb0d(0x54b)](_0x179a9f,_0x30f5f0),[_0x1d87a5]=await getPool()[_0x16eb0d(0x54b)](_0x16eb0d(0x26b),[_0x4e41f6['user']['id']]),_0x3ab5e6=_0x1d87a5[_0x16eb0d(0x413)]((_0x3d8651,_0x3c3993)=>({..._0x3d8651,[_0x3c3993[_0x16eb0d(0x17e)]]:_0x3c3993[_0x16eb0d(0x3dc)]}),{}),_0x1a177a=_0x237eff[_0x16eb0d(0x47f)](_0x25c685=>({..._0x25c685,'jurnal_status':_0x3ab5e6[_0x25c685['id']]||null}));return _0x1acf41['json']({'materi':_0x1a177a});}_0x179a9f+=_0x16eb0d(0x2dc);const [_0x4ea7d0]=await getPool()[_0x16eb0d(0x54b)](_0x179a9f,_0x30f5f0);_0x1acf41['json']({'materi':_0x4ea7d0});})),app[_0x3fc4b5(0x1fc)]('/api/literasi/materi/:id/pertanyaan',authenticate,asyncHandler(async(_0x5afdc7,_0x1e5d53)=>{const _0x52d9e2=_0x3fc4b5,[_0x5c31ae]=await getPool()['execute'](_0x52d9e2(0x253),[_0x5afdc7['params']['id']]);_0x1e5d53[_0x52d9e2(0x3c7)]({'pertanyaan':_0x5c31ae});})),app[_0x3fc4b5(0x31b)](_0x3fc4b5(0x3d4),authenticate,asyncHandler(async(_0x1bb0f9,_0x8f948d)=>{const _0x21dfa3=_0x3fc4b5;if(_0x1bb0f9[_0x21dfa3(0x189)][_0x21dfa3(0x156)]!==_0x21dfa3(0x45b))return _0x8f948d[_0x21dfa3(0x3dc)](0x193)[_0x21dfa3(0x3c7)]({'error':_0x21dfa3(0x394)});const {is_active:_0x3f9aa7}=_0x1bb0f9[_0x21dfa3(0x2f2)];await getPool()[_0x21dfa3(0x54b)]('UPDATE\x20literasi_materi\x20SET\x20is_active\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x3f9aa7?0x1:0x0,_0x1bb0f9[_0x21dfa3(0x5e5)]['id']]),_0x8f948d['json']({'success':!![]});})),app[_0x3fc4b5(0x31b)]('/api/literasi/materi/:id',authenticate,asyncHandler(async(_0x4f1c5,_0x525ac0)=>{const _0x6f5b24=_0x3fc4b5;if(_0x4f1c5['user']['type']!==_0x6f5b24(0x45b))return _0x525ac0[_0x6f5b24(0x3dc)](0x193)[_0x6f5b24(0x3c7)]({'error':_0x6f5b24(0x394)});const {judul:_0x3eb3f8,deskripsi:_0x480488,cover_image:_0x583e3e,file_url:_0x30594a,tingkat_kelas:_0x8894e2,xp_reward:_0x4f3e7f,pertanyaan:_0x575846,mata_pelajaran:_0x5ccf7,waktu_baca:_0x32d74f}=_0x4f1c5[_0x6f5b24(0x2f2)];await getPool()[_0x6f5b24(0x54b)]('UPDATE\x20literasi_materi\x20SET\x20judul\x20=\x20?,\x20deskripsi\x20=\x20?,\x20cover_image\x20=\x20?,\x20file_url\x20=\x20?,\x20tingkat_kelas\x20=\x20?,\x20xp_reward\x20=\x20?,\x20mata_pelajaran\x20=\x20?,\x20waktu_baca\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x3eb3f8,_0x480488,_0x583e3e,_0x30594a,_0x8894e2,_0x4f3e7f||0x0,_0x5ccf7||null,_0x32d74f||0x0,_0x4f1c5[_0x6f5b24(0x5e5)]['id']]),await getPool()[_0x6f5b24(0x54b)]('DELETE\x20FROM\x20literasi_pertanyaan\x20WHERE\x20materi_id\x20=\x20?',[_0x4f1c5[_0x6f5b24(0x5e5)]['id']]);if(_0x575846&&Array[_0x6f5b24(0x251)](_0x575846))for(const _0x1ce3db of _0x575846){_0x1ce3db[_0x6f5b24(0x136)]()&&await getPool()[_0x6f5b24(0x54b)]('INSERT\x20INTO\x20literasi_pertanyaan\x20(materi_id,\x20pertanyaan)\x20VALUES\x20(?,\x20?)',[_0x4f1c5[_0x6f5b24(0x5e5)]['id'],_0x1ce3db]);}_0x525ac0['json']({'success':!![]});})),app[_0x3fc4b5(0x259)](_0x3fc4b5(0x596),authenticate,asyncHandler(async(_0x1d8bb3,_0x245325)=>{const _0x1ae67e=_0x3fc4b5;if(_0x1d8bb3['user'][_0x1ae67e(0x156)]!==_0x1ae67e(0x45b))return _0x245325[_0x1ae67e(0x3dc)](0x193)['json']({'error':_0x1ae67e(0x394)});await getPool()['execute'](_0x1ae67e(0x545),[_0x1d8bb3[_0x1ae67e(0x5e5)]['id']]),await getPool()[_0x1ae67e(0x54b)](_0x1ae67e(0x314),[_0x1d8bb3[_0x1ae67e(0x5e5)]['id']]),_0x245325['json']({'success':!![]});})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x486),authenticate,asyncHandler(async(_0x48e7a0,_0x54aa56)=>{const _0x9750c4=_0x3fc4b5,{materi_id:_0x3eb330,jawaban_list:_0x5838ce,waktu_baca_aktual:_0x3c2f4c}=_0x48e7a0[_0x9750c4(0x2f2)],_0x42ba44=_0x48e7a0[_0x9750c4(0x189)]['id'],_0x2432bb=_0x3c2f4c||0x0,[_0xa94737]=await getPool()['execute'](_0x9750c4(0x598),[_0x42ba44,_0x3eb330]);let _0x46f477;if(_0xa94737[_0x9750c4(0x5be)]>0x0){const _0x178be8=_0xa94737[0x0];if(_0x178be8[_0x9750c4(0x3dc)]==='disetujui')return _0x54aa56['status'](0x190)[_0x9750c4(0x3c7)]({'error':_0x9750c4(0x619)});else{if(_0x178be8['status']==='menunggu_validasi')return _0x54aa56[_0x9750c4(0x3dc)](0x190)[_0x9750c4(0x3c7)]({'error':_0x9750c4(0x589)});else{if(_0x178be8[_0x9750c4(0x3dc)]===_0x9750c4(0x347)){if(_0x178be8[_0x9750c4(0x338)]>0x0){const [_0x111fef]=await getPool()[_0x9750c4(0x54b)](_0x9750c4(0x1ec),[_0x42ba44]);if(_0x111fef[_0x9750c4(0x5be)]>0x0){let _0x45a3d4=_0x111fef[0x0][_0x9750c4(0x2be)]-_0x178be8[_0x9750c4(0x338)];if(_0x45a3d4<0x0)_0x45a3d4=0x0;await getPool()[_0x9750c4(0x54b)](_0x9750c4(0x2e5),[_0x45a3d4,_0x42ba44]);}}await getPool()['execute'](_0x9750c4(0x2cf),[_0x2432bb,_0x178be8['id']]),await getPool()[_0x9750c4(0x54b)](_0x9750c4(0x44b),[_0x178be8['id']]),_0x46f477=_0x178be8['id'];}}}}else{const [_0x28200f]=await getPool()[_0x9750c4(0x54b)](_0x9750c4(0x109),[_0x42ba44,_0x3eb330,_0x2432bb]);_0x46f477=_0x28200f['insertId'];}if(_0x5838ce&&Array['isArray'](_0x5838ce))for(const _0x3be601 of _0x5838ce){await getPool()['execute'](_0x9750c4(0x359),[_0x46f477,_0x3be601['pertanyaan_id'],_0x3be601[_0x9750c4(0x1ca)]]);}_0x54aa56[_0x9750c4(0x3c7)]({'success':!![],'jurnal_id':_0x46f477});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x5d3),authenticate,asyncHandler(async(_0x3284e8,_0x5cb5e0)=>{const _0x129c84=_0x3fc4b5,{rombel:_0x553be6}=_0x3284e8[_0x129c84(0x59d)];let _0x487782=_0x129c84(0x3cf),_0x25feb3=[];_0x553be6&&(_0x487782+='\x20AND\x20s.rombel\x20=\x20?',_0x25feb3[_0x129c84(0x4a8)](_0x553be6));if(_0x3284e8[_0x129c84(0x189)][_0x129c84(0x156)]==='staff'&&!_0x3284e8['user']['permissions'][_0x129c84(0x424)](_0x129c84(0x3d6))&&_0x3284e8['user'][_0x129c84(0x348)]){const [_0xd345c0]=await getPool()[_0x129c84(0x54b)](_0x129c84(0x196),[_0x3284e8[_0x129c84(0x189)][_0x129c84(0x348)]]);if(_0xd345c0[_0x129c84(0x5be)]>0x0){const _0x10f4ff=_0xd345c0[_0x129c84(0x47f)](_0x1bcdaf=>_0x1bcdaf[_0x129c84(0x5ec)])[_0x129c84(0x610)](Boolean);_0x10f4ff[_0x129c84(0x5be)]>0x0?(_0x487782+=_0x129c84(0x5c3)+_0x10f4ff[_0x129c84(0x47f)](()=>'?')['join'](',')+')',_0x25feb3['push'](..._0x10f4ff)):_0x487782+=_0x129c84(0x1bd);}else _0x487782+=_0x129c84(0x1bd);}_0x487782+=_0x129c84(0x10f);const [_0x1dc58d]=await getPool()[_0x129c84(0x54b)](_0x487782,_0x25feb3);_0x5cb5e0[_0x129c84(0x3c7)]({'jurnal':_0x1dc58d});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x5e6),authenticate,asyncHandler(async(_0x4037c9,_0x335489)=>{const _0x55e1e6=_0x3fc4b5;let _0x5b9e6d=_0x55e1e6(0x4b3),_0x3a8ddd=[];if(_0x4037c9[_0x55e1e6(0x189)][_0x55e1e6(0x156)]===_0x55e1e6(0x45b)&&!_0x4037c9[_0x55e1e6(0x189)]['permissions'][_0x55e1e6(0x424)]('all')&&_0x4037c9[_0x55e1e6(0x189)][_0x55e1e6(0x348)]){const [_0x13a573]=await getPool()[_0x55e1e6(0x54b)](_0x55e1e6(0x39b),[_0x4037c9[_0x55e1e6(0x189)][_0x55e1e6(0x348)]]);if(_0x13a573[_0x55e1e6(0x5be)]>0x0){const _0x5949c0=Array[_0x55e1e6(0x49c)](new Set(_0x13a573[_0x55e1e6(0x47f)](_0x1ed1ce=>_0x1ed1ce[_0x55e1e6(0x2eb)])[_0x55e1e6(0x610)](Boolean)));_0x5949c0[_0x55e1e6(0x5be)]>0x0?(_0x5b9e6d+=_0x55e1e6(0x2e8)+_0x5949c0['map'](()=>'?')[_0x55e1e6(0x4ca)](',')+')',_0x3a8ddd[_0x55e1e6(0x4a8)](..._0x5949c0)):_0x5b9e6d+=_0x55e1e6(0x24e);}else _0x5b9e6d+=_0x55e1e6(0x24e);}_0x5b9e6d+='\x20ORDER\x20BY\x20j.created_at\x20DESC\x20LIMIT\x20100';const [_0x3b0a28]=await getPool()[_0x55e1e6(0x54b)](_0x5b9e6d,_0x3a8ddd);_0x335489['json']({'jurnal':_0x3b0a28});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x185),authenticate,asyncHandler(async(_0x1ab012,_0x173080)=>{const _0x274d2=_0x3fc4b5,[_0xb3e155]=await getPool()['execute'](_0x274d2(0x10d),[_0x1ab012['params']['id']]);_0x173080[_0x274d2(0x3c7)]({'jawaban':_0xb3e155});})),app['post'](_0x3fc4b5(0x2ec),authenticate,asyncHandler(async(_0x60296,_0x460a10)=>{const _0xd7049=_0x3fc4b5,_0x113efc=_0x60296[_0xd7049(0x5e5)]['id'];let _0x13f879=_0x60296[_0xd7049(0x189)]['id'];if(_0x60296['user'][_0xd7049(0x156)]===_0xd7049(0x45b)){if(_0x60296[_0xd7049(0x189)]['staff_id'])_0x13f879=_0x60296[_0xd7049(0x189)]['staff_id'];else{const [_0x5e72a4]=await getPool()[_0xd7049(0x54b)](_0xd7049(0x28d),[_0x60296[_0xd7049(0x189)]['id']]);_0x5e72a4[_0xd7049(0x5be)]>0x0&&_0x5e72a4[0x0][_0xd7049(0x348)]&&(_0x13f879=_0x5e72a4[0x0][_0xd7049(0x348)]);}}const [_0x1059cd]=await getPool()[_0xd7049(0x54b)](_0xd7049(0x27b),[_0x113efc]);if(_0x1059cd[_0xd7049(0x5be)]===0x0)return _0x460a10['status'](0x194)[_0xd7049(0x3c7)]({'error':_0xd7049(0x503)});if(_0x1059cd[0x0]['status']===_0xd7049(0x467))return _0x460a10[_0xd7049(0x3dc)](0x190)['json']({'error':_0xd7049(0x4eb)});const _0x4e5290=_0x1059cd[0x0]['siswa_id'],[_0x1df0da]=await getPool()[_0xd7049(0x54b)](_0xd7049(0x27f),[_0x1059cd[0x0][_0xd7049(0x17e)]]),_0x99ef91=_0x1df0da['length']>0x0?_0x1df0da[0x0][_0xd7049(0x5ed)]:0x0,_0x370df3=_0x60296['body']['grade']||0x64,_0x482693=Math[_0xd7049(0x428)](_0x99ef91*(_0x370df3/0x64));await getPool()[_0xd7049(0x54b)](_0xd7049(0x4a7),[_0x482693,_0x13f879,_0x113efc]);const [_0x1f7c69]=await getPool()[_0xd7049(0x54b)](_0xd7049(0x1ec),[_0x4e5290]);let _0x431b26=_0x482693;_0x1f7c69['length']>0x0?(_0x431b26+=_0x1f7c69[0x0][_0xd7049(0x2be)],await getPool()[_0xd7049(0x54b)](_0xd7049(0x2e5),[_0x431b26,_0x4e5290])):await getPool()[_0xd7049(0x54b)]('INSERT\x20INTO\x20siswa_gamifikasi\x20(siswa_id,\x20total_xp,\x20level)\x20VALUES\x20(?,\x20?,\x201)',[_0x4e5290,_0x431b26]);let _0x3a1c19=0x1;if(_0x431b26>=0x3e8)_0x3a1c19=0x6;else{if(_0x431b26>=0x2bc)_0x3a1c19=0x5;else{if(_0x431b26>=0x1c2)_0x3a1c19=0x4;else{if(_0x431b26>=0xfa)_0x3a1c19=0x3;else{if(_0x431b26>=0x64)_0x3a1c19=0x2;}}}}await getPool()['execute'](_0xd7049(0x18a),[_0x3a1c19,_0x4e5290]),_0x460a10[_0xd7049(0x3c7)]({'success':!![],'xp_given':_0x482693,'new_level':_0x3a1c19});})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x4e9),authenticate,asyncHandler(async(_0x22ca90,_0x64799b)=>{const _0x10d8f3=_0x3fc4b5,_0x5a1383=_0x22ca90['params']['id'];let _0x21f71e=_0x22ca90['user']['id'];if(_0x22ca90['user']['type']==='staff'){if(_0x22ca90[_0x10d8f3(0x189)][_0x10d8f3(0x348)])_0x21f71e=_0x22ca90[_0x10d8f3(0x189)][_0x10d8f3(0x348)];else{const [_0x17d9a0]=await getPool()[_0x10d8f3(0x54b)](_0x10d8f3(0x28d),[_0x22ca90[_0x10d8f3(0x189)]['id']]);_0x17d9a0[_0x10d8f3(0x5be)]>0x0&&_0x17d9a0[0x0][_0x10d8f3(0x348)]&&(_0x21f71e=_0x17d9a0[0x0][_0x10d8f3(0x348)]);}}const [_0x5a919d]=await getPool()[_0x10d8f3(0x54b)](_0x10d8f3(0x27b),[_0x5a1383]);if(_0x5a919d[_0x10d8f3(0x5be)]===0x0)return _0x64799b[_0x10d8f3(0x3dc)](0x194)[_0x10d8f3(0x3c7)]({'error':_0x10d8f3(0x503)});if(_0x5a919d[0x0][_0x10d8f3(0x3dc)]==='ditolak'||_0x5a919d[0x0][_0x10d8f3(0x3dc)]===_0x10d8f3(0x467))return _0x64799b[_0x10d8f3(0x3dc)](0x190)[_0x10d8f3(0x3c7)]({'error':'Jurnal\x20sudah\x20direspons\x20sebelumnya'});const _0x38c724=_0x5a919d[0x0][_0x10d8f3(0x293)],[_0x59b3ac]=await getPool()[_0x10d8f3(0x54b)](_0x10d8f3(0x27f),[_0x5a919d[0x0][_0x10d8f3(0x17e)]]),_0x35f25f=_0x59b3ac[_0x10d8f3(0x5be)]>0x0?_0x59b3ac[0x0][_0x10d8f3(0x5ed)]:0x0,_0x1830fd=0x0;await getPool()[_0x10d8f3(0x54b)]('UPDATE\x20literasi_jurnal\x20SET\x20status\x20=\x20\x27ditolak\x27,\x20earned_xp\x20=\x20?,\x20dinilai_oleh\x20=\x20?\x20WHERE\x20id\x20=\x20?',[_0x1830fd,_0x21f71e,_0x5a1383]);const _0x9a7f83=null;_0x64799b['json']({'success':!![],'xp_given':_0x1830fd,'new_level':_0x9a7f83});})),app[_0x3fc4b5(0x218)](_0x3fc4b5(0x5ef),authenticate,asyncHandler(async(_0xb03b9d,_0x34e101)=>{const _0x11d925=_0x3fc4b5,_0x1bb7b0=_0xb03b9d['params']['id'],[_0x34f636]=await getPool()[_0x11d925(0x54b)](_0x11d925(0x61f),[_0x1bb7b0]);if(_0x34f636[_0x11d925(0x5be)]===0x0)return _0x34e101[_0x11d925(0x3dc)](0x194)[_0x11d925(0x3c7)]({'error':_0x11d925(0x503)});if(_0x34f636[0x0][_0x11d925(0x3dc)]!==_0x11d925(0x467)&&_0x34f636[0x0][_0x11d925(0x3dc)]!=='ditolak')return _0x34e101['status'](0x190)[_0x11d925(0x3c7)]({'error':_0x11d925(0x365)});const _0x215754=_0x34f636[0x0][_0x11d925(0x293)],_0x48e59d=_0x34f636[0x0]['earned_xp']||0x0;await getPool()['execute'](_0x11d925(0x557),[_0x1bb7b0]);if(_0x48e59d>0x0){const [_0xcdcfb4]=await getPool()[_0x11d925(0x54b)](_0x11d925(0x1ec),[_0x215754]);if(_0xcdcfb4['length']>0x0){let _0x5b4486=_0xcdcfb4[0x0][_0x11d925(0x2be)]-_0x48e59d;if(_0x5b4486<0x0)_0x5b4486=0x0;let _0x4c112f=0x1;if(_0x5b4486>=0x3e8)_0x4c112f=0x6;else{if(_0x5b4486>=0x2bc)_0x4c112f=0x5;else{if(_0x5b4486>=0x1c2)_0x4c112f=0x4;else{if(_0x5b4486>=0xfa)_0x4c112f=0x3;else{if(_0x5b4486>=0x64)_0x4c112f=0x2;}}}}await getPool()[_0x11d925(0x54b)](_0x11d925(0x420),[_0x5b4486,_0x4c112f,_0x215754]);}}_0x34e101['json']({'success':!![]});})),app['get']('/api/literasi/leaderboard/:tingkat_kelas',authenticate,asyncHandler(async(_0x1d36f6,_0x1d2baa)=>{const _0x576f61=_0x3fc4b5,_0xf29c89=_0x1d36f6[_0x576f61(0x5e5)][_0x576f61(0x277)],[_0x31adff]=await getPool()['execute'](_0x576f61(0x2bd),['%'+_0xf29c89+'%']);_0x1d2baa['json']({'leaderboard':_0x31adff});})),app[_0x3fc4b5(0x1fc)](_0x3fc4b5(0x5e1),authenticate,asyncHandler(async(_0x4fbfe4,_0x2fa627)=>{const _0x14d37e=_0x3fc4b5,_0xc1e6d=_0x4fbfe4[_0x14d37e(0x5e5)]['id']===_0x14d37e(0x4db)||_0x4fbfe4[_0x14d37e(0x5e5)]['id']===_0x14d37e(0x20f)||!_0x4fbfe4['params']['id']?_0x4fbfe4[_0x14d37e(0x189)]['id']:_0x4fbfe4[_0x14d37e(0x5e5)]['id'],[_0x8c13a8]=await getPool()[_0x14d37e(0x54b)](_0x14d37e(0x4f5),[_0xc1e6d]);_0x8c13a8['length']>0x0?_0x2fa627[_0x14d37e(0x3c7)](_0x8c13a8[0x0]):_0x2fa627[_0x14d37e(0x3c7)]({'total_xp':0x0,'level':0x1});}));if(process.env.NODE_ENV!==_0x3fc4b5(0x104)){console[_0x3fc4b5(0x50a)]('Starting\x20in\x20development\x20mode\x20with\x20Vite\x20middleware...');const {createServer:_0x55052e}=await import(_0x3fc4b5(0x5dc)),_0x1f91c8=await _0x55052e({'server':{'middlewareMode':!![]},'appType':_0x3fc4b5(0x590)});app[_0x3fc4b5(0x477)](_0x1f91c8[_0x3fc4b5(0x102)]);}else{const _0x58a79=process['cwd'](),_0x14ae28=import_fs['default'][_0x3fc4b5(0x605)](import_path[_0x3fc4b5(0x60b)][_0x3fc4b5(0x4ca)](_0x58a79,_0x3fc4b5(0x51a)))?import_path[_0x3fc4b5(0x60b)][_0x3fc4b5(0x4ca)](_0x58a79,_0x3fc4b5(0x51a)):_0x58a79,_0x2ed010=/^\/(assets|icons|favicon|sw\.js|vite.*\.js|vite.*\.css)/;app[_0x3fc4b5(0x1fc)](_0x2ed010,(_0x5b68cb,_0x4238bd,_0x45b50b)=>_0x45b50b()),app['use'](_0x3fc4b5(0x162),import_express[_0x3fc4b5(0x60b)][_0x3fc4b5(0x516)](import_path[_0x3fc4b5(0x60b)][_0x3fc4b5(0x4ca)](_0x14ae28,'assets'))),app[_0x3fc4b5(0x477)](_0x3fc4b5(0x59f),import_express['default'][_0x3fc4b5(0x516)](import_path[_0x3fc4b5(0x60b)][_0x3fc4b5(0x4ca)](_0x14ae28,_0x3fc4b5(0x284)))),app['use']('/vite.svg',import_express[_0x3fc4b5(0x60b)]['static'](import_path[_0x3fc4b5(0x60b)][_0x3fc4b5(0x4ca)](_0x14ae28,_0x3fc4b5(0x566)))),app[_0x3fc4b5(0x477)](_0x3fc4b5(0x3d5),import_express[_0x3fc4b5(0x60b)][_0x3fc4b5(0x516)](import_path[_0x3fc4b5(0x60b)][_0x3fc4b5(0x4ca)](_0x14ae28,'sw.js'))),app[_0x3fc4b5(0x1fc)]('*',async(_0x40199a,_0x515a15,_0xe7ad8e)=>{const _0x2d224b=_0x3fc4b5;if(_0x40199a[_0x2d224b(0x245)]['startsWith'](_0x2d224b(0x12e)))return _0xe7ad8e();_0x515a15[_0x2d224b(0x23f)]('Cache-Control',_0x2d224b(0x366)),_0x515a15[_0x2d224b(0x23f)](_0x2d224b(0x25f),'no-cache'),_0x515a15['setHeader'](_0x2d224b(0x131),'0');try{const _0xd6f2b5=import_path[_0x2d224b(0x60b)][_0x2d224b(0x4ca)](_0x14ae28,_0x2d224b(0x2f7));let _0x13975b=import_fs[_0x2d224b(0x60b)]['readFileSync'](_0xd6f2b5,_0x2d224b(0x155));const [_0x5304bd]=await getPool()[_0x2d224b(0x54b)](_0x2d224b(0x447)),_0xc18011=_0x5304bd['length']>0x0&&_0x5304bd[0x0][_0x2d224b(0x4f7)]?_0x5304bd[0x0][_0x2d224b(0x4f7)]:'Sistem\x20Informasi\x20Sekolah',_0x25bfd1=_0x5304bd[_0x2d224b(0x5be)]>0x0&&_0x5304bd[0x0][_0x2d224b(0x23a)]?_0x5304bd[0x0]['seo_title']:_0xc18011,_0x4eaf8e=_0x5304bd[_0x2d224b(0x5be)]>0x0&&_0x5304bd[0x0][_0x2d224b(0x58b)]?_0x5304bd[0x0][_0x2d224b(0x58b)]:_0x2d224b(0x1be),_0x4b502f=_0x5304bd[_0x2d224b(0x5be)]>0x0&&_0x5304bd[0x0]['logo_url']?_0x5304bd[0x0][_0x2d224b(0x3fd)]:'';_0x13975b=_0x13975b['replace'](/<title>.*?<\/title>/i,_0x2d224b(0x292)+_0x25bfd1+'</title>');let _0xdb764='\x0a\x20\x20\x20\x20<meta\x20property=\x22og:title\x22\x20content=\x22'+_0x25bfd1+_0x2d224b(0x157)+_0x4eaf8e+_0x2d224b(0x17b)+_0x25bfd1+_0x2d224b(0x47a)+_0x25bfd1+'\x22\x20/>\x0a\x20\x20\x20\x20<meta\x20name=\x22twitter:description\x22\x20content=\x22'+_0x4eaf8e+_0x2d224b(0x41b);if(_0x4b502f){let _0x231c32=_0x4b502f;if(_0x4b502f[_0x2d224b(0x586)]('/')){const _0x4bbd52=_0x40199a[_0x2d224b(0x28f)][_0x2d224b(0x367)]||_0x40199a['protocol'];_0x231c32=_0x4bbd52+_0x2d224b(0x22b)+_0x40199a[_0x2d224b(0x1fc)](_0x2d224b(0x14e))+_0x4b502f;}_0xdb764+=_0x2d224b(0x11b)+_0x231c32+'\x22\x20/>\x0a\x20\x20\x20\x20<meta\x20name=\x22twitter:image\x22\x20content=\x22'+_0x231c32+_0x2d224b(0x445);}_0x13975b=_0x13975b[_0x2d224b(0x2de)](_0x2d224b(0x389),_0xdb764+_0x2d224b(0x5cf)),_0x515a15[_0x2d224b(0x326)](_0x13975b);}catch(_0xb1d2e6){console[_0x2d224b(0x2e2)](_0x2d224b(0x3e3),_0xb1d2e6),_0x515a15['sendFile'](import_path[_0x2d224b(0x60b)][_0x2d224b(0x4ca)](_0x14ae28,_0x2d224b(0x2f7)));}});}setTimeout(verifyLicenseOnBoot,0x7d0),await initDb(),setInterval(async()=>{const _0x10f22c=_0x3fc4b5;try{const [_0x44a1b5]=await getPool()[_0x10f22c(0x54b)](_0x10f22c(0x51f));if(_0x44a1b5['length']>0x0){const [_0x449c02]=await getPool()['execute']('SELECT\x20fb_page_id,\x20ig_account_id,\x20meta_access_token\x20FROM\x20pengaturan_sekolah\x20WHERE\x20id\x20=\x201');if(_0x449c02&&_0x449c02[_0x10f22c(0x5be)]>0x0&&_0x449c02[0x0][_0x10f22c(0x188)])for(const _0x1af7fc of _0x44a1b5){const _0x545e86=_0x1af7fc[_0x10f22c(0x14b)]===0x1&&_0x1af7fc[_0x10f22c(0x626)]===0x0,_0x10f6e2=_0x1af7fc[_0x10f22c(0x4cb)]===0x1&&_0x1af7fc[_0x10f22c(0x3e2)]===0x0;if(_0x545e86||_0x10f6e2)try{await postToSocialMedia(_0x1af7fc[_0x10f22c(0x2e1)],_0x1af7fc[_0x10f22c(0x174)],_0x1af7fc[_0x10f22c(0x2d3)],_0x545e86,_0x10f6e2,_0x449c02[0x0][_0x10f22c(0x591)],_0x449c02[0x0][_0x10f22c(0x5f6)],_0x449c02[0x0]['meta_access_token']),await getPool()[_0x10f22c(0x54b)](_0x10f22c(0x5b1),[_0x545e86?0x1:0x0,_0x10f6e2?0x1:0x0,_0x1af7fc['id']]);}catch(_0x1ae537){console[_0x10f22c(0x2e2)]('Failed\x20to\x20auto-post\x20blog\x20ID',_0x1af7fc['id'],_0x1ae537);}}}}catch(_0x7ce238){console[_0x10f22c(0x2e2)](_0x10f22c(0x4ed),_0x7ce238);}},0xea60),app[_0x3fc4b5(0x215)](PORT,_0x3fc4b5(0x5a9),()=>{const _0x1bf24d=_0x3fc4b5;console[_0x1bf24d(0x50a)](_0x1bf24d(0x378)),console[_0x1bf24d(0x50a)]('\x20\x20SERVER\x20RUNNING\x20ON\x20PORT\x20'+PORT),console[_0x1bf24d(0x50a)]('\x20\x20URL:\x20http://localhost:'+PORT),console[_0x1bf24d(0x50a)](_0x1bf24d(0x23d)+(process.env.NODE_ENV||_0x1bf24d(0x231))),console[_0x1bf24d(0x50a)](_0x1bf24d(0x378));});}catch(_0x5d7744){console[_0x3fc4b5(0x2e2)](_0x3fc4b5(0x1a0),_0x5d7744),process[_0x3fc4b5(0x295)](0x1);}}startServer(),0x0&&(module[a0_0xfa5210(0x5cc)]={'getPool':getPool,'uploadToGoogleDriveFallback':uploadToGoogleDriveFallback});
+var __create = Object.create;
+var __defProp = Object.defineProperty;
+var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+var __copyProps = (to, from, except, desc) => {
+  if (from && typeof from === "object" || typeof from === "function") {
+    for (let key of __getOwnPropNames(from))
+      if (!__hasOwnProp.call(to, key) && key !== except)
+        __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
+  }
+  return to;
+};
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
+var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+// server.ts
+var server_exports = {};
+__export(server_exports, {
+  getPool: () => getPool,
+  uploadToGoogleDriveFallback: () => uploadToGoogleDriveFallback
+});
+module.exports = __toCommonJS(server_exports);
+var import_express = __toESM(require("express"), 1);
+var import_path = __toESM(require("path"), 1);
+var import_promise = __toESM(require("mysql2/promise"), 1);
+var import_dotenv2 = __toESM(require("dotenv"), 1);
+var import_jsonwebtoken = __toESM(require("jsonwebtoken"), 1);
+var import_multer = __toESM(require("multer"), 1);
+var import_fs = __toESM(require("fs"), 1);
+var import_crypto = __toESM(require("crypto"), 1);
+var import_os = __toESM(require("os"), 1);
+var import_bcryptjs = __toESM(require("bcryptjs"), 1);
+
+// googleDrive.ts
+async function testDriveConnection() {
+  return { success: false, message: "Google Drive is mocked." };
+}
+async function uploadFileToDrive(options) {
+  return { viewLink: null };
+}
+async function getGoogleDriveConfig() {
+  return null;
+}
+
+// socialMedia.ts
+var import_dotenv = __toESM(require("dotenv"), 1);
+import_dotenv.default.config();
+function stripHtml(html) {
+  return html.replace(/<[^>]*>?/gm, "");
+}
+async function postToSocialMedia(title, content, imageUrl, postToFacebook, postToInstagram, fbPageId, igAccountId, accessToken) {
+  if (!accessToken) {
+    console.warn("META_ACCESS_TOKEN is missing. Cannot post to social media.");
+    return;
+  }
+  const cleanContent = stripHtml(content).substring(0, 500);
+  const caption = `${title}
+
+${cleanContent}...
+
+Baca selengkapnya di website sekolah kami.`;
+  if (postToFacebook && fbPageId) {
+    try {
+      console.log("Posting to Facebook...");
+      const url = `https://graph.facebook.com/v19.0/${fbPageId}/photos`;
+      const fbParams = new URLSearchParams({
+        access_token: accessToken,
+        message: caption
+      });
+      if (imageUrl) fbParams.append("url", imageUrl);
+      const fbEndpoint = imageUrl ? url : `https://graph.facebook.com/v19.0/${fbPageId}/feed`;
+      const res = await fetch(`${fbEndpoint}?${fbParams.toString()}`, { method: "POST" });
+      const data = await res.json();
+      console.log("Facebook Post Result:", data);
+    } catch (e) {
+      console.error("Facebook Post Error:", e);
+    }
+  }
+  if (postToInstagram && igAccountId && imageUrl) {
+    try {
+      console.log("Posting to Instagram...");
+      const containerUrl = `https://graph.facebook.com/v19.0/${igAccountId}/media`;
+      const containerParams = new URLSearchParams({
+        access_token: accessToken,
+        image_url: imageUrl,
+        caption
+      });
+      const containerRes = await fetch(`${containerUrl}?${containerParams.toString()}`, { method: "POST" });
+      const containerData = await containerRes.json();
+      if (containerData.id) {
+        const publishUrl = `https://graph.facebook.com/v19.0/${igAccountId}/media_publish`;
+        const publishParams = new URLSearchParams({
+          access_token: accessToken,
+          creation_id: containerData.id
+        });
+        const publishRes = await fetch(`${publishUrl}?${publishParams.toString()}`, { method: "POST" });
+        const publishData = await publishRes.json();
+        console.log("Instagram Post Result:", publishData);
+      } else {
+        console.error("Instagram Container Error:", containerData);
+      }
+    } catch (e) {
+      console.error("Instagram Post Error:", e);
+    }
+  } else if (postToInstagram && !imageUrl) {
+    console.warn("Instagram posting skipped: No image URL provided (Instagram requires an image).");
+  }
+}
+
+// server.ts
+var import_https = __toESM(require("https"), 1);
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+import_dotenv2.default.config();
+var isLicenseValid = true;
+var licenseTimer = null;
+var isExpired = false;
+function getHwid() {
+  try {
+    const interfaces = import_os.default.networkInterfaces() || {};
+    let mac = "";
+    for (const name of Object.keys(interfaces)) {
+      const iface = interfaces[name];
+      if (!iface) continue;
+      for (const i of iface) {
+        if (!i.internal && i.mac && i.mac !== "00:00:00:00:00:00") {
+          mac = i.mac;
+          break;
+        }
+      }
+      if (mac) break;
+    }
+    const cpus = import_os.default.cpus() || [];
+    const cpuInfo = cpus.length > 0 ? cpus[0].model : "unknown-cpu";
+    const platform = import_os.default.platform() || "unknown-platform";
+    const raw = `${mac}-${cpuInfo}-${platform}`;
+    return import_crypto.default.createHash("sha256").update(raw).digest("hex").substring(0, 16).toUpperCase();
+  } catch (err) {
+    const raw = `cpanel-fallback-${import_os.default.hostname ? import_os.default.hostname() : "unknown"}`;
+    return import_crypto.default.createHash("sha256").update(raw).digest("hex").substring(0, 16).toUpperCase();
+  }
+}
+function updateEnv(key, value) {
+  const envPath = import_path.default.join(process.cwd(), ".env");
+  let envContent = "";
+  if (import_fs.default.existsSync(envPath)) {
+    envContent = import_fs.default.readFileSync(envPath, "utf8");
+  }
+  const regex = new RegExp(`^${key}=.*`, "m");
+  if (regex.test(envContent)) {
+    envContent = envContent.replace(regex, `${key}=${value}`);
+  } else {
+    envContent += `
+${key}=${value}`;
+  }
+  import_fs.default.writeFileSync(envPath, envContent.trim() + "\n");
+  process.env[key] = value;
+}
+async function verifyLicenseOnBoot() {
+  let licenseKey = process.env.LICENSE_KEY || "";
+  let hwid = getHwid();
+  const hubServerUrl = "https://hub.dapoy.net";
+  if (licenseKey) {
+    try {
+      const res = await fetch(`${hubServerUrl}/api/verify-license`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          license_key: licenseKey,
+          hardware_id: hwid,
+          app_name: "Dapoy Schools"
+        })
+      });
+      const data = await res.json();
+      if (data.valid) {
+        isLicenseValid = true;
+        isExpired = false;
+        console.log(`[LICENSE] Valid. Activated for: ${data.client_name || "Client"}`);
+        if (licenseTimer) clearInterval(licenseTimer);
+        licenseTimer = setInterval(verifyLicenseOnBoot, 60 * 60 * 1e3);
+      } else {
+        console.log(`[LICENSE] Invalid: ${data.error}`);
+        isLicenseValid = false;
+        checkFreeTrial();
+      }
+    } catch (err) {
+      console.log(`[LICENSE] Failed to contact Hub Server (${err.message}). Retrying later.`);
+      isLicenseValid = false;
+      checkFreeTrial();
+    }
+  } else {
+    isLicenseValid = false;
+    checkFreeTrial();
+  }
+}
+async function checkFreeTrial() {
+  let envContent = "";
+  const envPath = import_path.default.join(process.cwd(), ".env");
+  if (import_fs.default.existsSync(envPath)) {
+    envContent = import_fs.default.readFileSync(envPath, "utf8");
+  }
+  if (!envContent.includes("FREE_TRIAL_START=")) {
+    const startTime = Date.now();
+    updateEnv("FREE_TRIAL_START", startTime.toString());
+  }
+  const trialStartStr = process.env.FREE_TRIAL_START;
+  if (trialStartStr) {
+    const trialStart = parseInt(trialStartStr);
+    const now = Date.now();
+    const twoHours = 5 * 24 * 60 * 60 * 1e3;
+    if (now - trialStart > twoHours) {
+      isExpired = true;
+      console.log(`[LICENSE] Waktu Versi Free (5 Hari) telah habis. Harap aktivasi lisensi.`);
+    } else {
+      isExpired = false;
+      const remaining = Math.round((twoHours - (now - trialStart)) / 6e4);
+      console.log(`[LICENSE] Versi Free berjalan. Sisa waktu: ${remaining} menit.`);
+      setTimeout(verifyLicenseOnBoot, twoHours - (now - trialStart) + 1e3);
+    }
+  }
+}
+var app = (0, import_express.default)();
+app.get("/api/_test", (req, res) => {
+  res.json({ ok: true, mode: process.env.NODE_ENV });
+});
+app.use(import_express.default.json({ limit: "10mb" }));
+var PORT = process.env.PORT || 5001;
+var JWT_SECRET = process.env.JWT_SECRET || "default-secret-do-not-use-in-production";
+var uploadDir = import_path.default.join(process.cwd(), "uploads");
+try {
+  const dirsToCreate = [
+    uploadDir,
+    import_path.default.join(uploadDir, "profiles"),
+    import_path.default.join(uploadDir, "profiles", "siswa"),
+    import_path.default.join(uploadDir, "profiles", "pegawai"),
+    import_path.default.join(uploadDir, "documents"),
+    import_path.default.join(uploadDir, "bantuan"),
+    import_path.default.join(uploadDir, "ekskul")
+  ];
+  for (const dir of dirsToCreate) {
+    if (!import_fs.default.existsSync(dir)) {
+      import_fs.default.mkdirSync(dir, { recursive: true });
+    }
+  }
+} catch (e) {
+  console.error("Failed to create uploads directory. Make sure permissions are correct:", e);
+}
+var storage = import_multer.default.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, uploadDir);
+  },
+  filename: (req, file, cb) => {
+    const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+    cb(null, file.fieldname + "-" + uniqueSuffix + import_path.default.extname(file.originalname));
+  }
+});
+var upload = (0, import_multer.default)({
+  storage,
+  limits: { fileSize: 1 * 1024 * 1024 }
+  // 1MB limit
+});
+function generateSEOTags(title, content = "") {
+  const text = (title + " " + content).replace(/<[^>]*>?/gm, " ").toLowerCase();
+  const stopWords = ["di", "ke", "dari", "yang", "dan", "atau", "ini", "itu", "pada", "dalam", "dengan", "untuk", "sebagai", "adalah", "ialah", "merupakan", "oleh", "kepada", "bagi", "sebab", "karena", "bisa", "dapat", "sudah", "telah", "akan", "ingin", "harus"];
+  const words = text.match(/[a-z0-9]+/g) || [];
+  const keywords = words.filter((word) => word.length > 3 && !stopWords.includes(word));
+  const uniqueKeywords = [...new Set(keywords)].slice(0, 15);
+  return uniqueKeywords.join(", ");
+}
+var uploadProfile = (0, import_multer.default)({
+  storage: import_multer.default.diskStorage({
+    destination: (req, file, cb) => cb(null, import_path.default.join(uploadDir, "profiles")),
+    filename: (req, file, cb) => cb(null, "profile-" + Date.now() + import_path.default.extname(file.originalname))
+  }),
+  limits: { fileSize: 1 * 1024 * 1024 }
+  // 1MB limit
+});
+var uploadBantuan = (0, import_multer.default)({
+  storage: import_multer.default.diskStorage({
+    destination: (req, file, cb) => cb(null, import_path.default.join(uploadDir, "bantuan")),
+    filename: (req, file, cb) => cb(null, "bantuan-" + Date.now() + "-" + Math.round(Math.random() * 1e9) + import_path.default.extname(file.originalname))
+  }),
+  limits: { fileSize: 5 * 1024 * 1024 }
+  // 5MB limit for docs
+});
+var uploadPermohonan = (0, import_multer.default)({
+  storage: import_multer.default.diskStorage({
+    destination: (req, file, cb) => {
+      const dir = import_path.default.join(uploadDir, "permohonan");
+      if (!import_fs.default.existsSync(dir)) import_fs.default.mkdirSync(dir, { recursive: true });
+      cb(null, dir);
+    },
+    filename: (req, file, cb) => cb(null, "permohonan-" + Date.now() + "-" + Math.round(Math.random() * 1e9) + import_path.default.extname(file.originalname))
+  }),
+  limits: { fileSize: 5 * 1024 * 1024 }
+  // 5MB limit for docs
+});
+var uploadEkskul = (0, import_multer.default)({
+  storage: import_multer.default.diskStorage({
+    destination: (req, file, cb) => cb(null, import_path.default.join(uploadDir, "ekskul")),
+    filename: (req, file, cb) => cb(null, "ekskul-" + Date.now() + "-" + Math.round(Math.random() * 1e9) + import_path.default.extname(file.originalname))
+  }),
+  limits: { fileSize: 1 * 1024 * 1024 }
+  // 1MB limit for photos
+});
+app.use(import_express.default.json({ limit: "50mb" }));
+app.use((req, res, next) => {
+  console.log(`[${(/* @__PURE__ */ new Date()).toISOString()}] ${req.method} ${req.url}`);
+  next();
+});
+app.get("/api/drive-proxy", async (req, res) => {
+  const url = req.query.url;
+  if (!url) return res.status(400).send("No URL provided");
+  if (!url.includes("google")) return res.status(400).send("Invalid URL");
+  try {
+    const response = await fetch(url);
+    if (!response.ok) return res.status(response.status).send(response.statusText);
+    const contentType = response.headers.get("content-type");
+    if (contentType) res.set("Content-Type", contentType);
+    res.set("Cache-Control", "public, max-age=31536000");
+    const arrayBuffer = await response.arrayBuffer();
+    res.send(Buffer.from(arrayBuffer));
+  } catch (e) {
+    console.error("Proxy error:", e);
+    res.status(500).send("Proxy error");
+  }
+});
+app.use("/uploads", import_express.default.static(uploadDir));
+app.get("/api/health", (req, res) => {
+  res.json({ status: "ok", timestamp: (/* @__PURE__ */ new Date()).toISOString() });
+});
+app.get("/api/hwid", (req, res) => {
+  res.json({ hwid: getHwid() });
+});
+app.get("/api/license-status", async (req, res) => {
+  let status = "trial";
+  let trialEndsAt = null;
+  if (process.env.LICENSE_KEY) {
+    status = "registered";
+  } else {
+    if (!process.env.FREE_TRIAL_START) {
+      await checkFreeTrial();
+    }
+    const trialStartStr = process.env.FREE_TRIAL_START;
+    if (trialStartStr) {
+      const trialStart = parseInt(trialStartStr);
+      const twoHours = 5 * 24 * 60 * 60 * 1e3;
+      trialEndsAt = trialStart + twoHours;
+      if (Date.now() > trialEndsAt) {
+        status = "expired";
+      }
+    }
+  }
+  res.json({ status, trialEndsAt, hwid: getHwid(), isLicenseValid, isExpired });
+});
+app.post("/api/sync/siswa", async (req, res) => {
+  try {
+    const { token, data } = req.body;
+    if (!token) return res.status(401).json({ success: false, message: "Token missing" });
+    const [settingsRows] = await pool.query("SELECT sync_token FROM pengaturan_sekolah LIMIT 1");
+    if (!settingsRows || settingsRows.length === 0 || settingsRows[0].sync_token !== token || !token.startsWith("dapoy-")) {
+      return res.status(403).json({ success: false, message: "Invalid API token" });
+    }
+    if (!data || !data.siswa) {
+      return res.status(400).json({ success: false, message: "Data siswa is missing" });
+    }
+    const [existingStudents] = await pool.query("SELECT id, nisn, nipd, nik, tahun_pelajaran, semester, rombel FROM siswa");
+    const mapById = /* @__PURE__ */ new Map();
+    const mapByNisn = /* @__PURE__ */ new Map();
+    const mapByNipd = /* @__PURE__ */ new Map();
+    const mapByNik = /* @__PURE__ */ new Map();
+    for (const s of existingStudents) {
+      mapById.set(s.id, s);
+      if (s.nisn && s.nisn.trim() && s.nisn.trim() !== "-") mapByNisn.set(s.nisn.trim(), s.id);
+      if (s.nipd && s.nipd.trim() && s.nipd.trim() !== "-") mapByNipd.set(s.nipd.trim(), s.id);
+      if (s.nik && s.nik.trim() && s.nik.trim() !== "-") mapByNik.set(s.nik.trim(), s.id);
+    }
+    const idMap = /* @__PURE__ */ new Map();
+    const arsipData = [];
+    for (const s of data.siswa) {
+      let resolvedOldStudent = null;
+      if (mapById.has(s.id)) {
+        resolvedOldStudent = mapById.get(s.id);
+      } else if (s.nisn && mapByNisn.has(s.nisn.trim())) {
+        resolvedOldStudent = mapById.get(mapByNisn.get(s.nisn.trim()));
+      } else if (s.nipd && mapByNipd.has(s.nipd.trim())) {
+        resolvedOldStudent = mapById.get(mapByNipd.get(s.nipd.trim()));
+      } else if (s.nik && mapByNik.has(s.nik.trim())) {
+        resolvedOldStudent = mapById.get(mapByNik.get(s.nik.trim()));
+      }
+      if (resolvedOldStudent) {
+        if (resolvedOldStudent.id !== s.id) {
+          idMap.set(s.id, resolvedOldStudent.id);
+          s.id = resolvedOldStudent.id;
+        }
+        const isDifferentYear = s.tahun_pelajaran && resolvedOldStudent.tahun_pelajaran !== s.tahun_pelajaran;
+        const isDifferentSemester = s.semester && resolvedOldStudent.semester !== s.semester;
+        if (isDifferentYear || isDifferentSemester) {
+          arsipData.push([
+            s.id,
+            resolvedOldStudent.tahun_pelajaran,
+            resolvedOldStudent.semester,
+            resolvedOldStudent.rombel
+          ]);
+        }
+      }
+    }
+    if (arsipData.length > 0) {
+      const BATCH_SIZE2 = 100;
+      for (let i = 0; i < arsipData.length; i += BATCH_SIZE2) {
+        const batch = arsipData.slice(i, i + BATCH_SIZE2);
+        if (batch.length === 0) continue;
+        const placeholders = batch.map(() => "(?, ?, ?, ?)").join(",");
+        await pool.query(`INSERT INTO arsip_siswa (siswa_id, tahun_pelajaran, semester, rombel) VALUES ${placeholders}`, batch.flat());
+      }
+    }
+    const resolveChildIds = (arr) => {
+      if (arr) {
+        for (const child of arr) {
+          if (idMap.has(child.siswa_id)) {
+            child.siswa_id = idMap.get(child.siswa_id);
+          }
+        }
+      }
+    };
+    resolveChildIds(data.data_orang_tua);
+    resolveChildIds(data.data_wali);
+    resolveChildIds(data.data_kontak);
+    resolveChildIds(data.data_periodik);
+    resolveChildIds(data.data_afirmasi);
+    const BATCH_SIZE = 100;
+    const siswaIds = data.siswa ? data.siswa.map((s) => s.id) : [];
+    const deleteChildRecords = async (table, ids) => {
+      if (!ids || ids.length === 0) return;
+      for (let i = 0; i < ids.length; i += BATCH_SIZE) {
+        const batch = ids.slice(i, i + BATCH_SIZE);
+        if (batch.length === 0) continue;
+        const placeholders = batch.map(() => "?").join(",");
+        await pool.query(`DELETE FROM ${table} WHERE siswa_id IN (${placeholders})`, batch);
+      }
+    };
+    if (siswaIds.length > 0) {
+      await deleteChildRecords("data_orang_tua", siswaIds);
+      await deleteChildRecords("data_wali", siswaIds);
+      await deleteChildRecords("data_kontak", siswaIds);
+      await deleteChildRecords("data_periodik", siswaIds);
+      await deleteChildRecords("data_afirmasi", siswaIds);
+    }
+    const upsert = async (table, items) => {
+      if (!items || items.length === 0) return;
+      for (let i = 0; i < items.length; i += BATCH_SIZE) {
+        const batch = items.slice(i, i + BATCH_SIZE);
+        if (batch.length === 0) continue;
+        const keys = Object.keys(batch[0]);
+        const values = batch.map((obj) => keys.map((k) => obj[k] === void 0 ? null : obj[k]));
+        const placeholders = keys.map(() => "?").join(",");
+        const updateStr = keys.map((k) => `${k}=VALUES(${k})`).join(", ");
+        const query = `INSERT INTO ${table} (${keys.join(",")}) VALUES ${batch.map(() => `(${placeholders})`).join(",")} ON DUPLICATE KEY UPDATE ${updateStr}`;
+        await pool.query(query, values.flat());
+      }
+    };
+    const insert = async (table, items) => {
+      if (!items || items.length === 0) return;
+      for (let i = 0; i < items.length; i += BATCH_SIZE) {
+        const batch = items.slice(i, i + BATCH_SIZE);
+        if (batch.length === 0) continue;
+        const keys = Object.keys(batch[0]);
+        const values = batch.map((obj) => keys.map((k) => obj[k] === void 0 ? null : obj[k]));
+        const placeholders = keys.map(() => "?").join(",");
+        const query = `INSERT INTO ${table} (${keys.join(",")}) VALUES ${batch.map(() => `(${placeholders})`).join(",")}`;
+        await pool.query(query, values.flat());
+      }
+    };
+    await upsert("siswa", data.siswa);
+    await insert("data_orang_tua", data.data_orang_tua);
+    await insert("data_wali", data.data_wali);
+    await insert("data_kontak", data.data_kontak);
+    await insert("data_periodik", data.data_periodik);
+    await insert("data_afirmasi", data.data_afirmasi);
+    res.json({ success: true, message: "Data siswa berhasil disinkronisasi", count: data.siswa.length });
+  } catch (e) {
+    console.error("Error syncing data:", e);
+    res.status(500).json({ success: false, message: e.message });
+  }
+});
+app.post("/api/activate", async (req, res) => {
+  try {
+    const { license_key } = req.body;
+    const hwid = getHwid();
+    const hubServerUrl = "https://hub.dapoy.net";
+    const apiRes = await fetch(`${hubServerUrl}/api/verify-license`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        license_key,
+        hardware_id: hwid,
+        app_name: "Dapoy Schools"
+      })
+    });
+    const data = await apiRes.json();
+    if (data.valid) {
+      updateEnv("LICENSE_KEY", license_key);
+      isLicenseValid = true;
+      isExpired = false;
+      if (licenseTimer) clearInterval(licenseTimer);
+      licenseTimer = setInterval(verifyLicenseOnBoot, 60 * 60 * 1e3);
+      return res.json({ success: true, message: data.message || "Aktivasi berhasil" });
+    } else {
+      return res.status(400).json({ success: false, message: data.error || "License Key tidak valid" });
+    }
+  } catch (error) {
+    console.error("ACTIVATE ERROR:", error);
+    return res.status(400).json({ success: false, message: "Gagal: " + (error.message || "Koneksi ke hub.dapoy.net bermasalah") });
+  }
+});
+app.get("/api/check-update", async (req, res) => {
+  try {
+    const response = await fetch("https://raw.githubusercontent.com/syahmuhamadrizky/dapoy-schools-release/main/update_version.txt");
+    const text = await response.text();
+    const match = text.match(/(?:Versi|Version)\s+([\d\.]+)/i);
+    const latest_version = match ? match[1] : "1.0.0";
+    let current_version = "1.0.0";
+    try {
+      const packageJson = JSON.parse(import_fs.default.readFileSync(import_path.default.join(process.cwd(), "package.json"), "utf-8"));
+      current_version = packageJson.version || "1.0.0";
+    } catch (e) {
+      console.error("Failed to read package.json version:", e);
+    }
+    const currentParts = current_version.split(".").map(Number);
+    const latestParts = latest_version.split(".").map(Number);
+    let has_update = false;
+    for (let i = 0; i < 3; i++) {
+      const cur = currentParts[i] || 0;
+      const lat = latestParts[i] || 0;
+      if (lat > cur) {
+        has_update = true;
+        break;
+      }
+      if (lat < cur) {
+        break;
+      }
+    }
+    res.json({ current_version, latest_version, has_update, changelog: text });
+  } catch (error) {
+    res.status(500).json({ error: "Gagal mengecek update" });
+  }
+});
+async function uploadToGoogleDriveFallback(localFilePath, newFilename, mimeType, folderType, category, subfolderName) {
+  try {
+    const [settingsRows] = await getPool().execute("SELECT school_name FROM pengaturan_sekolah WHERE id = 1");
+    const schoolName = settingsRows.length > 0 ? settingsRows[0].school_name : "Sekolahku";
+    const config = await getGoogleDriveConfig();
+    if (config) {
+      if (folderType === "siswa" && !config.useDriveForSiswa) return null;
+      if (folderType === "pendaftar" && !config.useDriveForPendaftar) return null;
+      if (folderType === "pegawai" && !config.useDriveForPegawai) return null;
+      if (folderType === "perubahan_data" && !config.useDriveForPerubahanData) return null;
+      try {
+        const buffer = import_fs.default.readFileSync(localFilePath);
+        const res = await uploadFileToDrive({
+          buffer,
+          originalFilename: newFilename,
+          mimeType,
+          schoolName,
+          category,
+          folderType,
+          subfolderName
+        });
+        import_fs.default.unlinkSync(localFilePath);
+        return res.viewLink;
+      } catch (err) {
+        console.error("Failed to upload to Google Drive, falling back to local:", err.message);
+      }
+    }
+  } catch (err) {
+    console.error("Error checking Google Drive config:", err);
+  }
+  return null;
+}
+var pool = null;
+var clean = (v) => v === "" || v === void 0 || v === null ? null : v;
+function getPool() {
+  if (!pool) {
+    console.log("Creating database pool with host:", process.env.DB_HOST);
+    pool = import_promise.default.createPool({
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
+      waitForConnections: true,
+      connectionLimit: 10,
+      // Reduced for safer start
+      queueLimit: 0,
+      connectTimeout: 5e3,
+      // Reduced timeout
+      enableKeepAlive: true,
+      keepAliveInitialDelay: 1e4
+    });
+  }
+  return pool;
+}
+async function ensureColumn(p, table, column, definition) {
+  try {
+    const [rows] = await p.query(`SHOW COLUMNS FROM ${table} LIKE ?`, [column]);
+    if (rows.length === 0) {
+      console.log(`[DB] Adding missing column ${column} to ${table}`);
+      await p.query(`ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`);
+      console.log(`[DB] Successfully added column ${column} to ${table}`);
+    }
+  } catch (err) {
+    console.error(`[DB] Error ensuring column ${column} in ${table}:`, err.message);
+  }
+}
+async function initDb() {
+  console.log("[DB] Starting database initialization...");
+  const startTime = Date.now();
+  try {
+    const p = getPool();
+    await p.query("SELECT 1");
+    console.log("[DB] Database connection successful");
+    const tables = [
+      {
+        name: "referensi",
+        query: `
+          CREATE TABLE IF NOT EXISTS referensi (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            ref_id VARCHAR(36) DEFAULT (UUID()),
+            jenis_ptk VARCHAR(255),
+            bid_study VARCHAR(255),
+            mata_pelajaran VARCHAR(255),
+            status_kepegawaian VARCHAR(255),
+            jenjang_pendidikan VARCHAR(255),
+            jenis_sertifikasi VARCHAR(255),
+            jurusan VARCHAR(255)
+          )
+        `
+      },
+      {
+        name: "pengumuman",
+        query: `
+          CREATE TABLE IF NOT EXISTS pengumuman (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255) NOT NULL,
+            target ENUM('siswa', 'pegawai', 'semua') DEFAULT 'semua',
+            status ENUM('draft', 'published') DEFAULT 'published',
+            intro TEXT,
+            content TEXT NOT NULL,
+            closing TEXT,
+            signature VARCHAR(100),
+            publish_start TIMESTAMP NULL,
+            publish_end TIMESTAMP NULL,
+            seo_tags TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "pengaturan_sekolah",
+        query: `
+          CREATE TABLE IF NOT EXISTS pengaturan_sekolah (
+            id INT PRIMARY KEY DEFAULT 1,
+            school_name VARCHAR(255) DEFAULT 'SDN Tanah Tinggi 1',
+            npsn VARCHAR(50),
+            akreditasi VARCHAR(10),
+            logo_url TEXT,
+            kop_surat_url TEXT,
+            hero_image_url TEXT,
+            hero_title VARCHAR(255),
+            hero_subtitle VARCHAR(255),
+            visi TEXT,
+            misi TEXT,
+            stats_students VARCHAR(50),
+            stats_teachers VARCHAR(50),
+            stats_rooms VARCHAR(50),
+            stats_extracurriculars VARCHAR(50),
+            contact_address TEXT,
+            contact_phone VARCHAR(100),
+            contact_email VARCHAR(100),
+            bentuk_pendidikan VARCHAR(100) DEFAULT 'Sekolah Dasar (SD)',
+            status_sekolah VARCHAR(50) DEFAULT 'Negeri',
+            kurikulum VARCHAR(100) DEFAULT 'Kurikulum Merdeka',
+            gallery_slide_interval INT DEFAULT 2,
+            headmaster_name VARCHAR(255),
+            headmaster_nip VARCHAR(50),
+            schedule_date VARCHAR(100),
+            spmb_config LONGTEXT,
+            social_links LONGTEXT,
+            seo_title TEXT,
+            seo_description TEXT,
+            seo_keywords TEXT,
+            sitemap_enabled BOOLEAN DEFAULT 1,
+            active_template VARCHAR(50) DEFAULT 'template1',
+            theme_color VARCHAR(50) DEFAULT '#2563eb',
+            headmaster_photo TEXT,
+            headmaster_welcome_title VARCHAR(255),
+            headmaster_welcome_content TEXT,
+            headmaster_welcome_active BOOLEAN DEFAULT 1,
+            fb_page_id VARCHAR(255),
+            ig_account_id VARCHAR(255),
+            meta_access_token TEXT,
+            meta_app_id VARCHAR(255),
+            meta_app_secret VARCHAR(255)
+          )
+        `
+      },
+      {
+        name: "peran",
+        query: `
+          CREATE TABLE IF NOT EXISTS peran (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(100) UNIQUE NOT NULL,
+            permissions TEXT NOT NULL
+          )
+        `
+      },
+      {
+        name: "pegawai",
+        query: `
+          CREATE TABLE IF NOT EXISTS pegawai (
+            pegawai_id VARCHAR(36) PRIMARY KEY,
+            nama_lengkap VARCHAR(255) NOT NULL,
+            nuptk VARCHAR(50),
+            jenis_kelamin VARCHAR(20) DEFAULT 'L',
+            tempat_lahir VARCHAR(100),
+            tanggal_lahir DATE,
+            nip VARCHAR(50),
+            status_kepegawaian VARCHAR(50) DEFAULT 'Honorer',
+            jenis_ptk VARCHAR(100),
+            gelar_depan VARCHAR(50),
+            gelar_belakang VARCHAR(50),
+            jenjang_pendidikan VARCHAR(100),
+            jurusan_prodi VARCHAR(100),
+            sertifikasi VARCHAR(100),
+            tmt_kerja VARCHAR(50),
+            tugas_tambahan VARCHAR(100),
+            mengajar VARCHAR(255),
+            jam_tugas_tambahan VARCHAR(50),
+            jjm VARCHAR(50),
+            total_jjm VARCHAR(50),
+            siswa VARCHAR(50),
+            kompetensi VARCHAR(255),
+            nik VARCHAR(50) UNIQUE,
+            jabatan_ptk VARCHAR(100)
+          )
+        `
+      },
+      {
+        name: "pengguna_web",
+        query: `
+          CREATE TABLE IF NOT EXISTS pengguna_web (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            staff_id INT,
+            role_id INT,
+            username VARCHAR(100) UNIQUE NOT NULL,
+            password VARCHAR(255) NOT NULL,
+            status_aktif BOOLEAN DEFAULT TRUE
+          )
+        `
+      },
+      {
+        name: "siswa",
+        query: `
+          CREATE TABLE IF NOT EXISTS siswa (
+            id VARCHAR(36) PRIMARY KEY,
+            tahun_pelajaran VARCHAR(20),
+            semester VARCHAR(10),
+            nipd VARCHAR(50) NOT NULL,
+            nisn VARCHAR(50) NOT NULL,
+            nik VARCHAR(20),
+            nama_lengkap VARCHAR(255) NOT NULL,
+            jenis_kelamin VARCHAR(2) DEFAULT NULL,
+            tempat_lahir VARCHAR(50) DEFAULT NULL,
+            tanggal_lahir VARCHAR(20) DEFAULT NULL,
+            agama VARCHAR(50) DEFAULT NULL,
+            kewarganegaraan VARCHAR(30) DEFAULT 'Indonesia',
+            alamat_jalan VARCHAR(200) DEFAULT NULL,
+            rt VARCHAR(5) DEFAULT NULL,
+            rw VARCHAR(5) DEFAULT NULL,
+            provinsi VARCHAR(100) DEFAULT NULL,
+            kota VARCHAR(100) DEFAULT NULL,
+            kecamatan VARCHAR(100) DEFAULT NULL,
+            kelurahan VARCHAR(100) DEFAULT NULL,
+            kode_pos VARCHAR(10) DEFAULT NULL,
+            lintang VARCHAR(20) DEFAULT NULL,
+            bujur VARCHAR(20) DEFAULT NULL,
+            nomor_kk VARCHAR(50) DEFAULT NULL,
+            tempat_tinggal VARCHAR(50) DEFAULT NULL,
+            moda_transportasi VARCHAR(50) DEFAULT NULL,
+            rombel VARCHAR(50),
+            status_aktif BOOLEAN DEFAULT TRUE,
+            tk_paud VARCHAR(10) DEFAULT 'Tidak',
+            nama_tk_paud VARCHAR(100) DEFAULT NULL,
+            nomor_akte_lahir VARCHAR(50) DEFAULT NULL,
+            skhun VARCHAR(50) DEFAULT NULL,
+            no_peserta_ujian_nasioal VARCHAR(50) DEFAULT NULL,
+            no_seri_ijazah VARCHAR(50) DEFAULT NULL,
+            sekolah_asal VARCHAR(100) DEFAULT NULL,
+            kebutuhan_khusus VARCHAR(100) DEFAULT NULL,
+            tanggal_mutasi DATE DEFAULT NULL,
+            INDEX (nama_lengkap),
+            INDEX (rombel)
+          )
+        `
+      },
+      {
+        name: "data_orang_tua",
+        query: `
+          CREATE TABLE IF NOT EXISTS data_orang_tua (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              siswa_id VARCHAR(36) NOT NULL,
+              tipe ENUM('ayah', 'ibu') NOT NULL,
+              nama VARCHAR(100) DEFAULT NULL,
+              nik VARCHAR(20) DEFAULT NULL,
+              tahun_lahir VARCHAR(4) DEFAULT NULL,
+              pendidikan VARCHAR(30) DEFAULT NULL,
+              pekerjaan VARCHAR(50) DEFAULT NULL,
+              penghasilan VARCHAR(50) DEFAULT NULL,
+              kebutuhan_khusus VARCHAR(10) DEFAULT 'Tidak',
+              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "data_wali",
+        query: `
+          CREATE TABLE IF NOT EXISTS data_wali (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              siswa_id VARCHAR(36) NOT NULL,
+              nama VARCHAR(100) DEFAULT NULL,
+              nik VARCHAR(20) DEFAULT NULL,
+              tahun_lahir VARCHAR(4) DEFAULT NULL,
+              pendidikan VARCHAR(30) DEFAULT NULL,
+              pekerjaan VARCHAR(50) DEFAULT NULL,
+              penghasilan VARCHAR(50) DEFAULT NULL,
+              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "data_kontak",
+        query: `
+          CREATE TABLE IF NOT EXISTS data_kontak (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              siswa_id VARCHAR(36) NOT NULL,
+              telepon_rumah VARCHAR(20) DEFAULT NULL,
+              nomor_hp VARCHAR(20) DEFAULT NULL,
+              email VARCHAR(100) DEFAULT NULL,
+              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "data_periodik",
+        query: `
+          CREATE TABLE IF NOT EXISTS data_periodik (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              siswa_id VARCHAR(36) NOT NULL,
+              tinggi_badan DECIMAL(5,2) DEFAULT NULL,
+              berat_badan DECIMAL(5,2) DEFAULT NULL,
+              lingkar_kepala VARCHAR(10) DEFAULT NULL,
+              jarak_rumah VARCHAR(20) DEFAULT NULL,
+              waktu_tempuh VARCHAR(20) DEFAULT NULL,
+              anak_keberapa INT DEFAULT NULL,
+              jumlah_saudara_kandung INT DEFAULT NULL,
+              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "data_afirmasi",
+        query: `
+          CREATE TABLE IF NOT EXISTS data_afirmasi (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              siswa_id VARCHAR(36) NOT NULL,
+              nomor_kks VARCHAR(50) DEFAULT NULL,
+              penerima_kps_pkh VARCHAR(10) DEFAULT 'Tidak',
+              nomor_kps VARCHAR(50) DEFAULT NULL,
+              penerima_kip VARCHAR(10) DEFAULT 'Tidak',
+              nomor_kip VARCHAR(50) DEFAULT NULL,
+              nama_sesuai_kip VARCHAR(100) DEFAULT NULL,
+              bank_pip VARCHAR(50) DEFAULT NULL,
+              nomor_rek_pip VARCHAR(50) DEFAULT NULL,
+              atasnama_rek_pip VARCHAR(100) DEFAULT NULL,
+              layak_pip VARCHAR(10) DEFAULT NULL,
+              alasan_layak_pip VARCHAR(200) DEFAULT NULL,
+              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "arsip_siswa",
+        query: `
+          CREATE TABLE IF NOT EXISTS arsip_siswa (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            siswa_id VARCHAR(36) NOT NULL,
+            tahun_pelajaran VARCHAR(20),
+            semester VARCHAR(10),
+            rombel VARCHAR(50),
+            keterangan VARCHAR(50) DEFAULT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "riwayat_masuk",
+        query: `
+          CREATE TABLE IF NOT EXISTS riwayat_masuk (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            user_id INT,
+            student_id VARCHAR(36),
+            type ENUM('pegawai', 'student') NOT NULL,
+            username VARCHAR(100),
+            ip_address VARCHAR(50),
+            user_agent TEXT,
+            status ENUM('success', 'failed') DEFAULT 'success',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (user_id) REFERENCES pengguna_web(id) ON DELETE SET NULL,
+            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE SET NULL
+          )
+        `
+      },
+      {
+        name: "rombongan_belajar",
+        query: `
+          CREATE TABLE IF NOT EXISTS rombongan_belajar (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            tingkat VARCHAR(20),
+            name VARCHAR(100) UNIQUE NOT NULL,
+            wali_kelas_id INT,
+            FOREIGN KEY (wali_kelas_id) REFERENCES staff(id) ON DELETE SET NULL
+          )
+        `
+      },
+      {
+        name: "absensi_siswa",
+        query: `
+          CREATE TABLE IF NOT EXISTS absensi_siswa (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            student_id VARCHAR(36) NOT NULL,
+            tanggal DATE NOT NULL,
+            status VARCHAR(50) DEFAULT 'Hadir',
+            keterangan TEXT,
+            recorded_by VARCHAR(36),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE CASCADE,
+            UNIQUE KEY unique_attendance (student_id, tanggal)
+          )
+        `
+      },
+      {
+        name: "absensi_bidang_study",
+        query: `
+          CREATE TABLE IF NOT EXISTS absensi_bidang_study (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            student_id VARCHAR(36) NOT NULL,
+            tanggal DATE NOT NULL,
+            mata_pelajaran VARCHAR(100) NOT NULL,
+            guru_id VARCHAR(36),
+            rombel VARCHAR(100),
+            status VARCHAR(50) DEFAULT 'Hadir',
+            keterangan TEXT,
+            recorded_by VARCHAR(36),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE CASCADE,
+            UNIQUE KEY unique_subject_attendance (student_id, tanggal, mata_pelajaran)
+          )
+        `
+      },
+      {
+        name: "pengajuan_ubah_data",
+        query: `
+          CREATE TABLE IF NOT EXISTS pengajuan_ubah_data (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            student_id VARCHAR(36) NOT NULL,
+            proposed_data TEXT NOT NULL,
+            document_url TEXT,
+            status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            admin_note TEXT,
+            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "permohonan_pindah",
+        query: `
+          CREATE TABLE IF NOT EXISTS permohonan_pindah (
+              id INT AUTO_INCREMENT PRIMARY KEY,
+              student_id VARCHAR(36) NOT NULL,
+              wali_nama VARCHAR(255),
+              wali_pekerjaan VARCHAR(255),
+              wali_alamat TEXT,
+              tujuan_sekolah VARCHAR(255),
+              tujuan_desa VARCHAR(255),
+              tujuan_kec VARCHAR(255),
+              tujuan_prov VARCHAR(255),
+              alasan TEXT,
+              status ENUM('menunggu', 'disetujui', 'ditolak') DEFAULT 'menunggu',
+              dokumen_scan VARCHAR(255),
+              created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+              updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+        `
+      },
+      {
+        name: "artikel_blog",
+        query: `
+          CREATE TABLE IF NOT EXISTS artikel_blog (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255) NOT NULL,
+            content TEXT NOT NULL,
+            image_url TEXT,
+            author_id INT,
+            author_name VARCHAR(255),
+            category VARCHAR(100) DEFAULT 'Kegiatan',
+            status VARCHAR(20) DEFAULT 'draft',
+            publish_start TIMESTAMP NULL,
+            publish_end TIMESTAMP NULL,
+            seo_tags TEXT,
+            created_at DATETIME DEFAULT NULL,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            FOREIGN KEY (author_id) REFERENCES pengguna_web(id) ON DELETE SET NULL
+          )
+        `
+      },
+      {
+        name: "galeri",
+        query: `
+          CREATE TABLE IF NOT EXISTS galeri (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255),
+            description TEXT,
+            image_url TEXT NOT NULL,
+            seo_tags TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "kalender_akademik",
+        query: `
+          CREATE TABLE IF NOT EXISTS kalender_akademik (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            title VARCHAR(255) NOT NULL,
+            event_date DATE NOT NULL,
+            description TEXT,
+            category VARCHAR(100) DEFAULT 'Event',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "jadwal_pelajaran",
+        query: `
+          CREATE TABLE IF NOT EXISTS jadwal_pelajaran (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            class_name VARCHAR(50) NOT NULL,
+            day_name VARCHAR(50) NOT NULL,
+            subject VARCHAR(255) NOT NULL,
+            start_time TIME NOT NULL,
+            end_time TIME NOT NULL,
+            teacher_name VARCHAR(255),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "ekstrakurikuler",
+        query: `
+          CREATE TABLE IF NOT EXISTS ekstrakurikuler (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            description TEXT,
+            image_url TEXT,
+            schedule_info VARCHAR(255),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "jenis_bantuan",
+        query: `
+          CREATE TABLE IF NOT EXISTS jenis_bantuan (
+            istilah VARCHAR(50) PRIMARY KEY,
+            nama_bantuan VARCHAR(255) NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "penerima_bantuan",
+        query: `
+          CREATE TABLE IF NOT EXISTS penerima_bantuan (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            siswa_id VARCHAR(36) NOT NULL,
+            istilah VARCHAR(50) NOT NULL,
+            tahun VARCHAR(20),
+            semester VARCHAR(10),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE,
+            FOREIGN KEY (istilah) REFERENCES jenis_bantuan(istilah) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "data_bank",
+        query: `
+          CREATE TABLE IF NOT EXISTS data_bank (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            siswa_id VARCHAR(36) NOT NULL,
+            istilah VARCHAR(50) NOT NULL,
+            nomor_rekening VARCHAR(100),
+            bank VARCHAR(100),
+            an_rekening VARCHAR(255),
+            upload_foto_buku_rekening TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE,
+            FOREIGN KEY (istilah) REFERENCES jenis_bantuan(istilah) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "laporan_bantuan",
+        query: `
+          CREATE TABLE IF NOT EXISTS laporan_bantuan (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            siswa_id VARCHAR(36) NOT NULL,
+            istilah VARCHAR(50) NOT NULL,
+            tahun VARCHAR(20),
+            semester VARCHAR(10),
+            tanggal_pencairan DATE,
+            tanggal_penarikan DATE,
+            nominal DECIMAL(15,2),
+            upload_foto_selfie TEXT,
+            upload_foto_transaksi TEXT,
+            tanda_tangan TEXT,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE,
+            FOREIGN KEY (istilah) REFERENCES jenis_bantuan(istilah) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "literasi_materi",
+        query: `
+          CREATE TABLE IF NOT EXISTS literasi_materi (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            judul VARCHAR(255) NOT NULL,
+            deskripsi TEXT,
+            cover_image TEXT,
+            file_url TEXT,
+            tingkat_kelas INT,
+            xp_reward INT DEFAULT 0,
+            created_by VARCHAR(36),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+          )
+        `
+      },
+      {
+        name: "literasi_pertanyaan",
+        query: `
+          CREATE TABLE IF NOT EXISTS literasi_pertanyaan (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            materi_id INT NOT NULL,
+            pertanyaan TEXT NOT NULL,
+            FOREIGN KEY (materi_id) REFERENCES literasi_materi(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "literasi_jurnal",
+        query: `
+          CREATE TABLE IF NOT EXISTS literasi_jurnal (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            siswa_id VARCHAR(36) NOT NULL,
+            materi_id INT NOT NULL,
+            status VARCHAR(50) DEFAULT 'menunggu_validasi',
+            earned_xp INT DEFAULT 0,
+            dinilai_oleh VARCHAR(36),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE,
+            FOREIGN KEY (materi_id) REFERENCES literasi_materi(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "literasi_jawaban_jurnal",
+        query: `
+          CREATE TABLE IF NOT EXISTS literasi_jawaban_jurnal (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            jurnal_id INT NOT NULL,
+            pertanyaan_id INT NOT NULL,
+            jawaban TEXT,
+            FOREIGN KEY (jurnal_id) REFERENCES literasi_jurnal(id) ON DELETE CASCADE,
+            FOREIGN KEY (pertanyaan_id) REFERENCES literasi_pertanyaan(id) ON DELETE CASCADE
+          )
+        `
+      },
+      {
+        name: "siswa_gamifikasi",
+        query: `
+          CREATE TABLE IF NOT EXISTS siswa_gamifikasi (
+            siswa_id VARCHAR(36) PRIMARY KEY,
+            total_xp INT DEFAULT 0,
+            level INT DEFAULT 1,
+            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
+          )
+        `
+      }
+    ];
+    for (const table of tables) {
+      try {
+        console.log(`[DB] Ensuring table ${table.name} exists...`);
+        const result = await p.query(table.query);
+        console.log(`[DB] Table ${table.name} check/creation done.`);
+        const [existingCols] = await p.query(`SHOW COLUMNS FROM ${table.name}`);
+        const existingColNames = existingCols.map((c) => c.Field.toLowerCase());
+        const match = table.query.match(/\(([\s\S]+)\)/);
+        if (match) {
+          const lines = match[1].split("\n").map((l) => l.trim()).filter((l) => l.length > 0);
+          for (let line of lines) {
+            if (line.endsWith(",")) line = line.slice(0, -1).trim();
+            const upperLine = line.toUpperCase();
+            if (upperLine.startsWith("FOREIGN KEY") || upperLine.startsWith("PRIMARY KEY") || upperLine.startsWith("UNIQUE KEY") || upperLine.startsWith("KEY ") || upperLine.startsWith("CONSTRAINT ") || upperLine.startsWith("INDEX ") || upperLine.startsWith("FULLTEXT ")) {
+              continue;
+            }
+            const parts = line.split(/\s+/);
+            if (parts.length >= 2) {
+              let colName = parts[0];
+              if (colName.startsWith("`") && colName.endsWith("`")) colName = colName.slice(1, -1);
+              const colDef = parts.slice(1).join(" ");
+              if (!existingColNames.includes(colName.toLowerCase())) {
+                console.log(`[DB] Auto-sync: Adding missing column ${colName} to ${table.name}`);
+                try {
+                  await p.query(`ALTER TABLE ${table.name} ADD COLUMN \`${colName}\` ${colDef}`);
+                  console.log(`[DB] Successfully added column ${colName} to ${table.name}`);
+                } catch (err) {
+                  console.error(`[DB] Failed to add column ${colName} to ${table.name}:`, err.message);
+                }
+              }
+            }
+          }
+        }
+        if (table.name === "pengumuman") {
+          const [cols] = await p.query("SHOW COLUMNS FROM pengumuman");
+          const colNames = cols.map((c) => c.Field);
+          if (cols.some((c) => c.Field === "target" && c.Type.includes("'umum'"))) {
+            console.log("[DB] Migrating pengumuman.target from 'umum' to 'semua'...");
+            await p.query("ALTER TABLE pengumuman MODIFY COLUMN target ENUM('siswa', 'pegawai', 'semua') DEFAULT 'semua'");
+            await p.query("UPDATE pengumuman SET target = 'semua' WHERE target = 'umum'");
+          }
+          if (cols.some((c) => c.Field === "target" && c.Type.includes("enum"))) {
+            console.log("[DB] Migrating pengumuman.target from ENUM to VARCHAR...");
+            await p.query("ALTER TABLE pengumuman MODIFY COLUMN target VARCHAR(500) DEFAULT 'semua'");
+          }
+          if (!colNames.includes("status")) {
+            await p.query("ALTER TABLE pengumuman ADD COLUMN status ENUM('draft', 'published') DEFAULT 'published' AFTER target");
+          }
+          if (!colNames.includes("publish_start")) {
+            await p.query("ALTER TABLE pengumuman ADD COLUMN publish_start TIMESTAMP NULL AFTER signature");
+          }
+          if (!colNames.includes("publish_end")) {
+            await p.query("ALTER TABLE pengumuman ADD COLUMN publish_end TIMESTAMP NULL AFTER publish_start");
+          }
+        }
+        if (table.name === "pegawai") {
+        }
+        if (table.name === "siswa") {
+          const [cols] = await p.query("SHOW COLUMNS FROM siswa");
+          const colNames = cols.map((c) => c.Field);
+          if (!colNames.includes("agama")) {
+            await p.query("ALTER TABLE siswa ADD COLUMN agama VARCHAR(50) DEFAULT 'Islam' AFTER nik");
+          }
+          if (!colNames.includes("status_aktif")) {
+            await p.query("ALTER TABLE siswa ADD COLUMN status_aktif BOOLEAN DEFAULT TRUE AFTER agama");
+          }
+        }
+        if (table.name === "pengguna_web") {
+          const [cols] = await p.query("SHOW COLUMNS FROM pengguna_web");
+          const colNames = cols.map((c) => c.Field);
+          if (!colNames.includes("status_aktif")) {
+            await p.query("ALTER TABLE pengguna_web ADD COLUMN status_aktif BOOLEAN DEFAULT TRUE AFTER password");
+          }
+        }
+      } catch (err) {
+        console.error(`[DB] Failed to ensure table ${table.name}:`, err.message);
+      }
+    }
+    await ensureColumn(p, "rombongan_belajar", "tingkat", "VARCHAR(20) AFTER id");
+    const pegawaiCols = [
+      { c: "nuptk", t: "VARCHAR(50)" },
+      { c: "jenis_kelamin", t: "VARCHAR(20) DEFAULT 'L'" },
+      { c: "tempat_lahir", t: "VARCHAR(100)" },
+      { c: "tanggal_lahir", t: "DATE" },
+      { c: "nip", t: "VARCHAR(50)" },
+      { c: "status_kepegawaian", t: "VARCHAR(50) DEFAULT 'Honorer'" },
+      { c: "jenis_ptk", t: "VARCHAR(100)" },
+      { c: "gelar_depan", t: "VARCHAR(50)" },
+      { c: "gelar_belakang", t: "VARCHAR(50)" },
+      { c: "jenjang_pendidikan", t: "VARCHAR(100)" },
+      { c: "jurusan_prodi", t: "VARCHAR(100)" },
+      { c: "sertifikasi", t: "VARCHAR(100)" },
+      { c: "tmt_kerja", t: "VARCHAR(50)" },
+      { c: "tugas_tambahan", t: "VARCHAR(100)" },
+      { c: "mengajar", t: "VARCHAR(255)" },
+      { c: "jam_tugas_tambahan", t: "VARCHAR(50)" },
+      { c: "jjm", t: "VARCHAR(50)" },
+      { c: "total_jjm", t: "VARCHAR(50)" },
+      { c: "siswa", t: "VARCHAR(50)" },
+      { c: "kompetensi", t: "VARCHAR(255)" },
+      { c: "nik", t: "VARCHAR(50) UNIQUE" },
+      { c: "jabatan_ptk", t: "VARCHAR(100)" }
+    ];
+    for (const col of pegawaiCols) {
+      await ensureColumn(p, "pegawai", col.c, col.t);
+    }
+    await ensureColumn(p, "siswa", "nipd", "VARCHAR(50) NOT NULL");
+    await ensureColumn(p, "siswa", "rombel", "VARCHAR(50)");
+    await ensureColumn(p, "siswa", "jenis_kelamin", "VARCHAR(2)");
+    await ensureColumn(p, "siswa", "agama", "VARCHAR(50) AFTER nik");
+    await ensureColumn(p, "siswa", "status_aktif", "BOOLEAN DEFAULT TRUE AFTER agama");
+    await ensureColumn(p, "pengguna_web", "status_aktif", "BOOLEAN DEFAULT TRUE AFTER password");
+    await ensureColumn(p, "pengaturan_sekolah", "school_name", "VARCHAR(255) DEFAULT 'SDN Tanah Tinggi 1'");
+    await ensureColumn(p, "pengaturan_sekolah", "npsn", "VARCHAR(50)");
+    await ensureColumn(p, "pengaturan_sekolah", "akreditasi", "VARCHAR(10)");
+    await ensureColumn(p, "pengaturan_sekolah", "logo_url", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "kop_surat_url", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "hero_image_url", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "hero_title", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "sync_token", "VARCHAR(255) DEFAULT NULL");
+    await ensureColumn(p, "pengaturan_sekolah", "hero_subtitle", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "visi", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "misi", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "provinsi", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "kota", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "kecamatan", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "kelurahan", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "contact_address", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "contact_phone", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "contact_email", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "bentuk_pendidikan", "VARCHAR(100) DEFAULT '4'");
+    await ensureColumn(p, "pengaturan_sekolah", "status_sekolah", "VARCHAR(50) DEFAULT 'Negeri'");
+    await ensureColumn(p, "pengaturan_sekolah", "kurikulum", "VARCHAR(100) DEFAULT 'Kurikulum Merdeka'");
+    await ensureColumn(p, "pengaturan_sekolah", "gallery_slide_interval", "INT DEFAULT 2");
+    await ensureColumn(p, "pengaturan_sekolah", "stats_students", "VARCHAR(50)");
+    await ensureColumn(p, "pengaturan_sekolah", "stats_teachers", "VARCHAR(50)");
+    await ensureColumn(p, "pengaturan_sekolah", "stats_rooms", "VARCHAR(50)");
+    await ensureColumn(p, "pengaturan_sekolah", "stats_extracurriculars", "VARCHAR(50)");
+    await ensureColumn(p, "pengaturan_sekolah", "headmaster_name", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "headmaster_nip", "VARCHAR(50)");
+    await ensureColumn(p, "pengaturan_sekolah", "schedule_date", "VARCHAR(100)");
+    await ensureColumn(p, "pengaturan_sekolah", "spmb_config", "LONGTEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "social_links", "LONGTEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "seo_title", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "seo_description", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "seo_keywords", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "sitemap_enabled", "BOOLEAN DEFAULT 1");
+    await ensureColumn(p, "pengaturan_sekolah", "active_template", "VARCHAR(50) DEFAULT 'template1'");
+    await ensureColumn(p, "pengaturan_sekolah", "theme_color", "VARCHAR(50) DEFAULT '#2563eb'");
+    await ensureColumn(p, "pengaturan_sekolah", "headmaster_photo", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "headmaster_welcome_title", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "headmaster_welcome_content", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "headmaster_welcome_active", "BOOLEAN DEFAULT 1");
+    await ensureColumn(p, "pengaturan_sekolah", "fb_page_id", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "ig_account_id", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "meta_access_token", "TEXT");
+    await ensureColumn(p, "pengaturan_sekolah", "meta_app_id", "VARCHAR(255)");
+    await ensureColumn(p, "pengaturan_sekolah", "meta_app_secret", "VARCHAR(255)");
+    await ensureColumn(p, "artikel_blog", "status", "VARCHAR(20) DEFAULT 'draft'");
+    await ensureColumn(p, "artikel_blog", "publish_start", "TIMESTAMP NULL");
+    await ensureColumn(p, "artikel_blog", "publish_end", "TIMESTAMP NULL");
+    await ensureColumn(p, "artikel_blog", "seo_tags", "TEXT");
+    await ensureColumn(p, "artikel_blog", "post_to_fb", "BOOLEAN DEFAULT 0");
+    await ensureColumn(p, "artikel_blog", "post_to_ig", "BOOLEAN DEFAULT 0");
+    await ensureColumn(p, "artikel_blog", "social_post_schedule", "DATETIME NULL");
+    await ensureColumn(p, "artikel_blog", "social_post_fb_done", "BOOLEAN DEFAULT 0");
+    await ensureColumn(p, "artikel_blog", "social_post_ig_done", "BOOLEAN DEFAULT 0");
+    await ensureColumn(p, "galeri", "seo_tags", "TEXT");
+    await ensureColumn(p, "pengumuman", "seo_tags", "TEXT");
+    await ensureColumn(p, "spmb_applicants", "catatan_perbaikan", "TEXT NULL");
+    try {
+      await p.query("ALTER TABLE spmb_applicants MODIFY COLUMN status_pendaftaran ENUM('PENDING','APPROVED','REJECTED','REVISION') DEFAULT 'PENDING'");
+    } catch (e) {
+      console.error("Failed to alter spmb_applicants enum:", e);
+    }
+    try {
+      const [rows] = await p.execute("SELECT * FROM pengaturan_sekolah WHERE id = 1");
+      if (rows.length === 0) {
+        await p.execute(`
+          INSERT INTO pengaturan_sekolah (id, school_name, npsn, akreditasi, hero_image_url, hero_title, hero_subtitle, visi, misi, stats_students, stats_teachers, stats_rooms, stats_extracurriculars, provinsi, kota, kecamatan, kelurahan, contact_address, contact_phone, contact_email, bentuk_pendidikan, status_sekolah, kurikulum, gallery_slide_interval, headmaster_name, headmaster_nip, schedule_date, social_links)
+          VALUES (1, 'SDN Tanah Tinggi 1', '20222830', 'A', 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop', 'Membangun Masa Depan Cerdas & Berkarakter', 'Kami berkomitmen menyelenggarakan pendidikan dasar berkualitas yang berfokus pada potensi unik setiap anak.', 'Terwujudnya peserta didik yang religius, cerdas, berkarakter, dan berwawasan lingkungan.', '["Pendidikan berkualitas & inklusif bagi semua.", "Menanamkan nilai religius & budi pekerti.", "Mengembangkan potensi akademik & bakat.", "Menciptakan lingkungan bersih & sehat."]', '480+', '24', '18', '12', 'Banten', 'Kota Tangerang', 'Tangerang', 'Tanah Tinggi', 'Jl. Tanah Tinggi No. 1, 15119', '(021) 555-1234', 'info@sdntanahtinggi1.sch.id', 'Sekolah Dasar (SD)', 'Negeri', 'Kurikulum Merdeka', 2, 'Hj. NENI HERAWATI, S.Pd', '197003181992032007', 'Tangerang, ......................... 20...', '{}')
+        `);
+      } else {
+        const row = rows[0];
+        if (!row.hero_title || !row.hero_subtitle) {
+          console.log("[DB] Updating empty hero fields in pengaturan_sekolah...");
+          await p.execute(`
+            UPDATE pengaturan_sekolah SET 
+              hero_title = COALESCE(hero_title, 'Membangun Masa Depan Cerdas & Berkarakter'),
+              hero_subtitle = COALESCE(hero_subtitle, 'Kami berkomitmen menyelenggarakan pendidikan dasar berkualitas yang berfokus pada potensi unik setiap anak.'),
+              hero_image_url = COALESCE(hero_image_url, 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop')
+            WHERE id = 1
+          `);
+        }
+      }
+    } catch (err) {
+      console.error("[DB] Failed to seed pengaturan_sekolah:", err.message);
+    }
+    const [roleRows] = await p.execute("SELECT * FROM peran WHERE name IN ('Admin', 'Superadmin', 'Guru')");
+    if (roleRows.length < 3) {
+      if (!roleRows.some((r) => r.name === "Admin")) {
+        await p.execute(`INSERT INTO peran (name, permissions) VALUES ('Admin', '["all"]')`);
+      }
+      if (!roleRows.some((r) => r.name === "Superadmin")) {
+        await p.execute(`INSERT INTO peran (name, permissions) VALUES ('Superadmin', '["all"]')`);
+      }
+      if (!roleRows.some((r) => r.name === "Guru")) {
+        await p.execute(`INSERT INTO peran (name, permissions) VALUES ('Guru', '["jadwal_pelajaran", "rombongan_belajar:view", "students:view"]')`);
+      }
+    }
+    const [userRows] = await p.execute("SELECT * FROM pengguna_web WHERE username = 'admin'");
+    if (userRows.length === 0) {
+      const [superadminRole] = await p.execute("SELECT id FROM peran WHERE name = 'Superadmin'");
+      if (superadminRole.length > 0) {
+        const [staffInsert] = await p.execute(
+          "INSERT IGNORE INTO pegawai (nama_lengkap, nip, nik) VALUES (?, ?, ?)",
+          ["Syah Muhamad RIzky", "198212292025211010", "3671010101010101"]
+        );
+        let staffId;
+        if (staffInsert.insertId) {
+          staffId = staffInsert.insertId;
+        } else {
+          const [existingStaff] = await p.execute("SELECT pegawai_id as id FROM pegawai WHERE nip = '198212292025211010'");
+          staffId = existingStaff[0].id;
+        }
+        await p.execute(
+          "INSERT INTO pengguna_web (staff_id, role_id, username, password) VALUES (?, ?, ?, ?)",
+          [staffId, superadminRole[0].id, "admin", "admin123"]
+        );
+      }
+    }
+    try {
+      const [users] = await p.query("SELECT id, password FROM pengguna_web");
+      if (users && users.length > 0) {
+        let hashedCount = 0;
+        for (const user of users) {
+          if (user.password && !user.password.startsWith("$2a$") && !user.password.startsWith("$2b$")) {
+            const hashedPassword = await import_bcryptjs.default.hash(user.password, 10);
+            await p.query("UPDATE pengguna_web SET password = ? WHERE id = ?", [hashedPassword, user.id]);
+            hashedCount++;
+          }
+        }
+        if (hashedCount > 0) {
+          console.log(`[DB] Migrated ${hashedCount} plaintext passwords to bcrypt.`);
+        }
+      }
+    } catch (e) {
+      console.error("[DB] Error hashing plaintext passwords:", e);
+    }
+    console.log(`Database initialized in ${Date.now() - startTime}ms`);
+  } catch (err) {
+    console.error("Database initialization failed critically:", err);
+    throw err;
+  }
+}
+var authenticate = (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) return res.status(401).json({ error: "No token provided" });
+  const token = authHeader.split(" ")[1];
+  import_jsonwebtoken.default.verify(token, JWT_SECRET, async (err, user) => {
+    if (err) return res.status(403).json({ error: "Invalid token" });
+    req.user = { ...user, permissions: Array.isArray(user?.permissions) ? user.permissions : ["all"] };
+    if (req.user.type === "staff" && !req.user.staff_id && req.user.id) {
+      try {
+        const [uRows] = await getPool().execute("SELECT staff_id FROM pengguna_web WHERE id = ?", [req.user.id]);
+        if (uRows.length > 0) req.user.staff_id = uRows[0].staff_id;
+      } catch (e) {
+        console.error("Error attaching staff_id:", e);
+      }
+    }
+    next();
+  });
+};
+var asyncHandler = (fn) => (req, res, next) => {
+  Promise.resolve(fn(req, res, next)).catch(next);
+};
+app.get("/api/bantuan/jenis", authenticate, async (req, res) => {
+  try {
+    const [rows] = await getPool().query("SELECT * FROM jenis_bantuan ORDER BY created_at DESC");
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.post("/api/bantuan/jenis", authenticate, async (req, res) => {
+  try {
+    const { nama_bantuan, istilah } = req.body;
+    if (!nama_bantuan || !istilah) {
+      return res.status(400).json({ error: "Nama bantuan dan istilah harus diisi" });
+    }
+    await getPool().query("INSERT INTO jenis_bantuan (nama_bantuan, istilah) VALUES (?, ?)", [nama_bantuan, istilah]);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.delete("/api/bantuan/jenis/:id", authenticate, async (req, res) => {
+  try {
+    await getPool().query("DELETE FROM jenis_bantuan WHERE istilah = ?", [req.params.id]);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/penerima", authenticate, async (req, res) => {
+  try {
+    let whereClause = "";
+    const params = [];
+    if (req.user.type === "staff") {
+      const perms = req.user.permissions || [];
+      if (!perms.includes("all")) {
+        const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        if (rombelRows.length > 0) {
+          const names = rombelRows.map((r) => r.name);
+          whereClause = `WHERE s.rombel IN (${names.map(() => "?").join(",")})`;
+          params.push(...names);
+        } else {
+          whereClause = `WHERE 1=0`;
+        }
+      }
+    }
+    const [rows] = await getPool().execute(`
+            SELECT 
+                pb.id as penerima_bantuan_id, s.id as siswa_id, s.nama_lengkap, s.nisn, s.rombel, 
+                jb.nama_bantuan, jb.istilah, pb.tahun, pb.semester,
+                s.tempat_lahir, s.tanggal_lahir, s.nik, dk.nomor_hp, s.nomor_kk,
+                ibu.nama as nama_ibu, ibu.nik as nik_ibu,
+                ayah.nama as nama_ayah, ayah.nik as nik_ayah,
+                wali.nama as nama_wali, wali.nik as nik_wali,
+                db.bank, db.nomor_rekening, db.an_rekening, prb.penanggung_jawab_rekening
+            FROM penerima_bantuan pb
+            JOIN siswa s ON pb.siswa_id = s.id
+            LEFT JOIN data_kontak dk ON s.id = dk.siswa_id
+            JOIN jenis_bantuan jb ON pb.istilah = jb.istilah
+            LEFT JOIN data_orang_tua ibu ON s.id = ibu.siswa_id AND ibu.tipe = 'ibu'
+            LEFT JOIN data_orang_tua ayah ON s.id = ayah.siswa_id AND ayah.tipe = 'ayah'
+            LEFT JOIN data_orang_tua wali ON s.id = wali.siswa_id AND wali.tipe = 'wali'
+            LEFT JOIN data_bank db ON s.id = db.siswa_id AND db.istilah = pb.istilah
+            LEFT JOIN pengajuan_rekening_bantuan prb ON s.id = prb.siswa_id AND prb.istilah = pb.istilah
+            ${whereClause}
+            ORDER BY s.nama_lengkap ASC
+        `, params);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.delete("/api/bantuan/penerima/:id", authenticate, async (req, res) => {
+  try {
+    await getPool().query("DELETE FROM penerima_bantuan WHERE id = ?", [req.params.id]);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/siswa/me", authenticate, async (req, res) => {
+  try {
+    const siswaId = req.user.id;
+    const [rows] = await getPool().query(`
+            SELECT 
+                pb.id as penerima_bantuan_id, pb.siswa_id,
+                jb.nama_bantuan, jb.istilah, pb.tahun, pb.semester,
+                db.nomor_rekening, db.bank, db.an_rekening,
+                prb.id as pengajuan_id, prb.status_pengajuan,
+                lb.id as laporan_id, lb.tanggal_pencairan, lb.tanggal_penarikan, lb.nominal, lb.upload_foto_selfie, lb.upload_foto_transaksi, lb.tanda_tangan
+            FROM penerima_bantuan pb
+            JOIN jenis_bantuan jb ON pb.istilah = jb.istilah
+            LEFT JOIN data_bank db ON pb.siswa_id = db.siswa_id AND pb.istilah = db.istilah
+            LEFT JOIN pengajuan_rekening_bantuan prb ON pb.siswa_id = prb.siswa_id AND pb.istilah = prb.istilah
+            LEFT JOIN laporan_bantuan lb ON pb.id = lb.bantuan_id
+            WHERE pb.siswa_id = ?
+            ORDER BY pb.created_at DESC
+        `, [siswaId]);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/pengajuan_all", authenticate, async (req, res) => {
+  try {
+    let whereClause = "";
+    const params = [];
+    if (req.user.type === "staff") {
+      const perms = req.user.permissions || [];
+      if (!perms.includes("all")) {
+        const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        if (rombelRows.length > 0) {
+          const names = rombelRows.map((r) => r.name);
+          whereClause = `WHERE s.rombel IN (${names.map(() => "?").join(",")})`;
+          params.push(...names);
+        } else {
+          whereClause = `WHERE 1=0`;
+        }
+      }
+    }
+    const [rows] = await getPool().execute(`
+            SELECT p.*, s.nama_lengkap AS siswa_nama, s.nisn, s.rombel AS nama_kelas, s.nik AS siswa_nik, j.nama_bantuan, db.nomor_rekening, db.bank
+            FROM pengajuan_rekening_bantuan p
+            LEFT JOIN siswa s ON p.siswa_id = s.id
+            LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
+            LEFT JOIN data_bank db ON p.siswa_id = db.siswa_id AND p.istilah = db.istilah
+            ${whereClause}
+            ORDER BY s.nama_lengkap ASC
+        `, params);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/rekening/:siswa_id/:istilah", authenticate, async (req, res) => {
+  try {
+    const { siswa_id, istilah } = req.params;
+    const [rows] = await getPool().query(
+      "SELECT nomor_rekening, bank, an_rekening, upload_foto_buku_rekening FROM data_bank WHERE siswa_id = ? AND istilah = ?",
+      [siswa_id, istilah]
+    );
+    res.json(rows[0] || { nomor_rekening: "", bank: "", an_rekening: "", upload_foto_buku_rekening: "" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.post("/api/bantuan/rekening/:siswa_id/:istilah", authenticate, uploadBantuan.single("buku_tabungan"), async (req, res) => {
+  try {
+    const { siswa_id, istilah } = req.params;
+    const { nomor_rekening, bank, an_rekening } = req.body;
+    let buku_tabungan_path = void 0;
+    if (req.file) {
+      buku_tabungan_path = "/uploads/bantuan/" + req.file.filename;
+    }
+    const [existing] = await getPool().query(
+      "SELECT id FROM data_bank WHERE siswa_id = ? AND istilah = ?",
+      [siswa_id, istilah]
+    );
+    if (existing.length > 0) {
+      let updateQuery = "UPDATE data_bank SET nomor_rekening = ?, bank = ?, an_rekening = ?";
+      const params = [nomor_rekening, bank, an_rekening];
+      if (buku_tabungan_path) {
+        updateQuery += ", upload_foto_buku_rekening = ?";
+        params.push(buku_tabungan_path);
+      }
+      updateQuery += " WHERE siswa_id = ? AND istilah = ?";
+      params.push(siswa_id, istilah);
+      await getPool().query(updateQuery, params);
+    } else {
+      await getPool().query(
+        "INSERT INTO data_bank (siswa_id, istilah, nomor_rekening, bank, an_rekening, upload_foto_buku_rekening) VALUES (?, ?, ?, ?, ?, ?)",
+        [siswa_id, istilah, nomor_rekening, bank, an_rekening, buku_tabungan_path || null]
+      );
+    }
+    res.json({ success: true, file: buku_tabungan_path });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, async (req, res) => {
+  try {
+    const { siswa_id, istilah } = req.params;
+    const [siswaData] = await getPool().query("SELECT nik, nama_lengkap, tempat_lahir, tanggal_lahir, nomor_kk, provinsi, kota, kecamatan, kelurahan, rt, rw, alamat_jalan FROM siswa WHERE id = ?", [siswa_id]);
+    let nikSiswa = siswaData.length > 0 ? siswaData[0].nik || "" : "";
+    const [existing] = await getPool().query("SELECT * FROM pengajuan_rekening_bantuan WHERE siswa_id = ? AND istilah = ?", [siswa_id, istilah]);
+    if (existing.length > 0) {
+      let existingData = existing[0];
+      existingData.nik = nikSiswa;
+      return res.json(existingData);
+    }
+    const [kontakData] = await getPool().query("SELECT nomor_hp FROM data_kontak WHERE siswa_id = ?", [siswa_id]);
+    const [ortuData] = await getPool().query("SELECT tipe, nama, nik FROM data_orang_tua WHERE siswa_id = ?", [siswa_id]);
+    const [waliData] = await getPool().query("SELECT nama, nik FROM data_wali WHERE siswa_id = ?", [siswa_id]);
+    let prefill = {
+      nik: nikSiswa,
+      nama_lengkap: "",
+      tempat_lahir: "",
+      tanggal_lahir: "",
+      nomor_hp: "",
+      nomor_kk: "",
+      provinsi: "",
+      kota: "",
+      kecamatan: "",
+      kelurahan: "",
+      rt: "",
+      rw: "",
+      alamat_jalan: "",
+      nama_ayah: "",
+      nik_ayah: "",
+      nama_ibu: "",
+      nik_ibu: "",
+      wali: "",
+      nik_wali: "",
+      hubungan_wali: ""
+    };
+    if (siswaData.length > 0) {
+      const s = siswaData[0];
+      prefill.nama_lengkap = s.nama_lengkap || "";
+      prefill.tempat_lahir = s.tempat_lahir || "";
+      prefill.tanggal_lahir = s.tanggal_lahir ? new Date(s.tanggal_lahir).toISOString().split("T")[0] : "";
+      prefill.nomor_kk = s.nomor_kk || "";
+      prefill.provinsi = s.provinsi || "";
+      prefill.kota = s.kota || "";
+      prefill.kecamatan = s.kecamatan || "";
+      prefill.kelurahan = s.kelurahan || "";
+      prefill.rt = s.rt || "";
+      prefill.rw = s.rw || "";
+      prefill.alamat_jalan = s.alamat_jalan || "";
+    }
+    if (kontakData.length > 0) {
+      prefill.nomor_hp = kontakData[0].nomor_hp || "";
+    }
+    for (const ortu of ortuData) {
+      if (ortu.tipe === "ayah") {
+        prefill.nama_ayah = ortu.nama || "";
+        prefill.nik_ayah = ortu.nik || "";
+      }
+      if (ortu.tipe === "ibu") {
+        prefill.nama_ibu = ortu.nama || "";
+        prefill.nik_ibu = ortu.nik || "";
+      }
+    }
+    if (waliData.length > 0) {
+      prefill.wali = waliData[0].nama || "";
+      prefill.nik_wali = waliData[0].nik || "";
+    }
+    res.json(prefill);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantuan.fields([
+  { name: "foto_ktp", maxCount: 1 },
+  { name: "foto_kk", maxCount: 1 },
+  { name: "foto_akte", maxCount: 1 },
+  { name: "foto_surat_wali", maxCount: 1 }
+]), async (req, res) => {
+  try {
+    const { siswa_id, istilah } = req.params;
+    const body = req.body;
+    const files = req.files;
+    const renameFile = (fileObj, jenisFile) => {
+      if (!fileObj) return void 0;
+      const ext = import_path.default.extname(fileObj.originalname);
+      const sanitizedNama = (body.nama_lengkap || "").replace(/[^a-z0-9]/gi, "_").toLowerCase();
+      const newName = `${jenisFile}_${body.nik || "nonik"}_${sanitizedNama}${ext}`;
+      const oldPath = fileObj.path;
+      const newPath = import_path.default.join(fileObj.destination, newName);
+      if (import_fs.default.existsSync(oldPath)) {
+        import_fs.default.renameSync(oldPath, newPath);
+      }
+      return "/uploads/bantuan/" + newName;
+    };
+    let foto_ktp = renameFile(files["foto_ktp"]?.[0], "KTP");
+    let foto_kk = renameFile(files["foto_kk"]?.[0], "KK");
+    let foto_akte = renameFile(files["foto_akte"]?.[0], "AKTE");
+    let foto_surat_wali = renameFile(files["foto_surat_wali"]?.[0], "SURAT_WALI");
+    const [existing] = await getPool().query("SELECT id FROM pengajuan_rekening_bantuan WHERE siswa_id = ? AND istilah = ?", [siswa_id, istilah]);
+    if (existing.length > 0) {
+      let updateQuery = `UPDATE pengajuan_rekening_bantuan SET 
+                nama_lengkap=?, tempat_lahir=?, tanggal_lahir=?, 
+                nama_ayah=?, nik_ayah=?, nama_ibu=?, nik_ibu=?, status_orang_tua=?,
+                wali=?, nik_wali=?, hubungan_wali=?, nomor_hp=?, nomor_kk=?, 
+                provinsi=?, kota=?, kecamatan=?, kelurahan=?, rt=?, rw=?, alamat_jalan=?,
+                penanggung_jawab_rekening=?`;
+      const params = [
+        body.nama_lengkap,
+        body.tempat_lahir,
+        body.tanggal_lahir || null,
+        body.nama_ayah,
+        body.nik_ayah,
+        body.nama_ibu,
+        body.nik_ibu,
+        body.status_orang_tua || "Lengkap",
+        body.wali,
+        body.nik_wali,
+        body.hubungan_wali,
+        body.nomor_hp,
+        body.nomor_kk,
+        body.provinsi,
+        body.kota,
+        body.kecamatan,
+        body.kelurahan,
+        body.rt,
+        body.rw,
+        body.alamat_jalan,
+        body.penanggung_jawab_rekening
+      ];
+      if (foto_ktp) {
+        updateQuery += ", foto_ktp=?";
+        params.push(foto_ktp);
+      }
+      if (foto_kk) {
+        updateQuery += ", foto_kk=?";
+        params.push(foto_kk);
+      }
+      if (foto_akte) {
+        updateQuery += ", foto_akte=?";
+        params.push(foto_akte);
+      }
+      if (foto_surat_wali) {
+        updateQuery += ", foto_surat_wali=?";
+        params.push(foto_surat_wali);
+      }
+      if (body.status_pengajuan !== void 0) {
+        updateQuery += ", status_pengajuan=?";
+        params.push(body.status_pengajuan);
+      }
+      updateQuery += " WHERE siswa_id = ? AND istilah = ?";
+      params.push(siswa_id, istilah);
+      await getPool().query(updateQuery, params);
+    } else {
+      await getPool().query(
+        `INSERT INTO pengajuan_rekening_bantuan 
+                (siswa_id, istilah, nama_lengkap, tempat_lahir, tanggal_lahir, 
+                nama_ayah, nik_ayah, nama_ibu, nik_ibu, status_orang_tua,
+                wali, nik_wali, hubungan_wali, nomor_hp, nomor_kk,
+                provinsi, kota, kecamatan, kelurahan, rt, rw, alamat_jalan, 
+                penanggung_jawab_rekening, foto_ktp, foto_kk, foto_akte, foto_surat_wali) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          siswa_id,
+          istilah,
+          body.nama_lengkap,
+          body.tempat_lahir,
+          body.tanggal_lahir || null,
+          body.nama_ayah,
+          body.nik_ayah,
+          body.nama_ibu,
+          body.nik_ibu,
+          body.status_orang_tua || "Lengkap",
+          body.wali,
+          body.nik_wali,
+          body.hubungan_wali,
+          body.nomor_hp,
+          body.nomor_kk,
+          body.provinsi,
+          body.kota,
+          body.kecamatan,
+          body.kelurahan,
+          body.rt,
+          body.rw,
+          body.alamat_jalan,
+          body.penanggung_jawab_rekening,
+          foto_ktp || null,
+          foto_kk || null,
+          foto_akte || null,
+          foto_surat_wali || null
+        ]
+      );
+    }
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/laporan_all", authenticate, async (req, res) => {
+  try {
+    const query = `
+            SELECT l.*, s.nama_lengkap, s.nisn, s.rombel, p.istilah as jenis_bantuan, j.nama_bantuan
+            FROM laporan_bantuan l
+            JOIN siswa s ON l.siswa_id = s.id
+            JOIN penerima_bantuan p ON l.bantuan_id = p.id
+            LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
+            ORDER BY l.created_at DESC
+        `;
+    const [rows] = await getPool().query(query);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/bantuan/laporan/me", authenticate, async (req, res) => {
+  try {
+    const query = `
+            SELECT l.*, p.istilah as jenis_bantuan, j.nama_bantuan, p.tahun as penerima_tahun, p.semester as penerima_semester
+            FROM laporan_bantuan l
+            JOIN penerima_bantuan p ON l.bantuan_id = p.id
+            LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
+            WHERE l.siswa_id = ?
+            ORDER BY l.created_at DESC
+        `;
+    const [rows] = await getPool().query(query, [req.user.id]);
+    res.json(rows);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.post("/api/bantuan/laporan", authenticate, uploadBantuan.fields([
+  { name: "upload_foto_selfie", maxCount: 1 },
+  { name: "upload_foto_transaksi", maxCount: 1 }
+]), async (req, res) => {
+  try {
+    const body = req.body;
+    const siswa_id = req.user.id;
+    const files = req.files;
+    const renameFile = (fileObj, jenisFile) => {
+      if (!fileObj) return void 0;
+      const ext = import_path.default.extname(fileObj.originalname);
+      const newName = `\${jenisFile}_\${siswa_id}_\${Date.now()}\${ext}`;
+      const oldPath = fileObj.path;
+      const newPath = import_path.default.join(fileObj.destination, newName);
+      if (import_fs.default.existsSync(oldPath)) {
+        import_fs.default.renameSync(oldPath, newPath);
+      }
+      return "/uploads/bantuan/" + newName;
+    };
+    let upload_foto_selfie = renameFile(files["upload_foto_selfie"]?.[0], "LAPORAN_SELFIE");
+    let upload_foto_transaksi = renameFile(files["upload_foto_transaksi"]?.[0], "LAPORAN_TRANSAKSI");
+    let query = "";
+    let params = [];
+    if (body.id && body.id !== "undefined" && body.id !== "null" && body.id !== "") {
+      query = `UPDATE laporan_bantuan SET 
+                tanggal_pencairan=?, tanggal_penarikan=?, nominal=?, tanda_tangan=?`;
+      params = [body.tanggal_pencairan || null, body.tanggal_penarikan || null, body.nominal || null, body.tanda_tangan || null];
+      if (upload_foto_selfie) {
+        query += ", upload_foto_selfie=?";
+        params.push(upload_foto_selfie);
+      }
+      if (upload_foto_transaksi) {
+        query += ", upload_foto_transaksi=?";
+        params.push(upload_foto_transaksi);
+      }
+      if (body.tahun) {
+        query += ", tahun=?";
+        params.push(body.tahun);
+      }
+      if (body.semester) {
+        query += ", semester=?";
+        params.push(body.semester);
+      }
+      query += " WHERE id=? AND siswa_id=?";
+      params.push(body.id, siswa_id);
+    } else {
+      query = `INSERT INTO laporan_bantuan 
+                (siswa_id, bantuan_id, tahun, semester, tanggal_pencairan, tanggal_penarikan, nominal, upload_foto_selfie, upload_foto_transaksi, tanda_tangan) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+      params = [
+        siswa_id,
+        body.bantuan_id,
+        body.tahun || null,
+        body.semester || null,
+        body.tanggal_pencairan || null,
+        body.tanggal_penarikan || null,
+        body.nominal || null,
+        upload_foto_selfie || null,
+        upload_foto_transaksi || null,
+        body.tanda_tangan || null
+      ];
+    }
+    await getPool().query(query, params);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.delete("/api/bantuan/laporan/:id", authenticate, async (req, res) => {
+  try {
+    await getPool().query("DELETE FROM laporan_bantuan WHERE id = ?", [req.params.id]);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.get("/api/system/version", authenticate, (req, res) => {
+  try {
+    const pkg = JSON.parse(import_fs.default.readFileSync("./package.json", "utf8"));
+    res.json({ version: pkg.version });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+app.get("/api/system/check-update", authenticate, async (req, res) => {
+  try {
+    const timestamp = (/* @__PURE__ */ new Date()).getTime();
+    const url = `https://raw.githubusercontent.com/syahmuhamadrizky/dapoy-schools-release/main/package.json?t=\${timestamp}`;
+    const remotePkg = await new Promise((resolve, reject) => {
+      import_https.default.get(url, { headers: { "Cache-Control": "no-cache" } }, (resp) => {
+        let data = "";
+        resp.on("data", (chunk) => {
+          data += chunk;
+        });
+        resp.on("end", () => {
+          try {
+            resolve(JSON.parse(data));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      }).on("error", reject);
+    });
+    const isDist = __dirname.endsWith("dist") || __dirname.endsWith("dist\\");
+    const rootDir = isDist ? import_path.default.join(__dirname, "..") : __dirname;
+    const localPkgPath = import_path.default.join(rootDir, "package.json");
+    const localPkg = JSON.parse(import_fs.default.readFileSync(localPkgPath, "utf8"));
+    const hasUpdate = remotePkg.version !== localPkg.version;
+    res.json({
+      available: hasUpdate,
+      currentVersion: localPkg.version,
+      latestVersion: remotePkg.version
+    });
+  } catch (error) {
+    console.error("Check update error:", error);
+    res.status(500).json({ error: error.message || "Gagal memeriksa update" });
+  }
+});
+app.post("/api/system/install-update", authenticate, async (req, res) => {
+  try {
+    res.json({ success: true, message: "Update sedang diproses. Mohon tunggu sekitar 15-30 detik kemudian refresh halaman." });
+    setTimeout(async () => {
+      try {
+        const AdmZip = require("adm-zip");
+        const path2 = require("path");
+        const fsExt = require("fs");
+        const rootDir = process.cwd();
+        const tempDir = path2.join(rootDir, "temp_update");
+        const zipFile = path2.join(rootDir, "update.zip");
+        console.log("[UPDATE] Mengunduh rilis terbaru...");
+        const response = await fetch("https://github.com/syahmuhamadrizky/dapoy-schools-release/archive/refs/heads/main.zip");
+        if (!response.ok) throw new Error("Gagal mengunduh update");
+        const buffer = await response.arrayBuffer();
+        fsExt.writeFileSync(zipFile, Buffer.from(buffer));
+        console.log("[UPDATE] Mengekstrak rilis...");
+        const zip = new AdmZip(zipFile);
+        zip.extractAllTo(tempDir, true);
+        console.log("[UPDATE] Menyalin file baru ke direktori utama...");
+        const sourceDir = path2.join(tempDir, "dapoy-schools-release-main");
+        fsExt.cpSync(sourceDir, rootDir, { recursive: true, force: true });
+        console.log("[UPDATE] Membersihkan file sementara...");
+        fsExt.rmSync(tempDir, { recursive: true, force: true });
+        fsExt.rmSync(zipFile, { force: true });
+        console.log("[UPDATE] Memicu restart server (cPanel/PM2)...");
+        const tmpDir = path2.join(process.cwd(), "tmp");
+        if (!fsExt.existsSync(tmpDir)) fsExt.mkdirSync(tmpDir);
+        fsExt.writeFileSync(path2.join(tmpDir, "restart.txt"), String(Date.now()));
+        setTimeout(() => {
+          if (process.env.pm_id) {
+            require("child_process").exec(`pm2 restart ${process.env.pm_id}`, (err) => {
+              if (err) process.exit(1);
+            });
+          } else {
+            process.exit(1);
+          }
+        }, 1e3);
+      } catch (err) {
+        console.error("[UPDATE] Background process error:", err);
+      }
+    }, 100);
+  } catch (error) {
+    console.error("[UPDATE] Endpoint Error:", error);
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+app.post("/api/system/restart-pm2", authenticate, async (req, res) => {
+  try {
+    res.json({ success: true, message: "Server sedang direstart. Mohon tunggu 5-10 detik." });
+    setTimeout(() => {
+      try {
+        const fsExt = require("fs");
+        const path2 = require("path");
+        const tmpDir = path2.join(process.cwd(), "tmp");
+        if (!fsExt.existsSync(tmpDir)) fsExt.mkdirSync(tmpDir);
+        fsExt.writeFileSync(path2.join(tmpDir, "restart.txt"), String(Date.now()));
+        console.log("[SYSTEM] Memicu restart server (PM2/cPanel)...");
+        if (process.env.pm_id) {
+          require("child_process").exec(`pm2 restart ${process.env.pm_id}`, (err) => {
+            if (err) process.exit(1);
+          });
+        } else {
+          process.exit(1);
+        }
+      } catch (err) {
+        console.error("[SYSTEM] Restart error:", err);
+      }
+    }, 1e3);
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+app.post("/api/upload", authenticate, (req, res, next) => {
+  upload.single("file")(req, res, (err) => {
+    if (err) {
+      console.error("Multer error:", err);
+      return res.status(400).json({ error: err.message || "File upload error" });
+    }
+    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+    res.json({ url: `/uploads/${req.file.filename}` });
+  });
+});
+app.post("/api/profile/photo", authenticate, (req, res, next) => {
+  uploadProfile.single("photo")(req, res, async (err) => {
+    if (err) return res.status(400).json({ error: err.message || "File upload error" });
+    if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+    try {
+      const photoUrl = `/uploads/profiles/${req.file.filename}`;
+      await getPool().execute("UPDATE pengguna_web SET foto_profil = ? WHERE id = ?", [photoUrl, req.user.id]);
+      let staffId = req.user.staff_id;
+      if (req.user.type === "staff" && !staffId) {
+        const [pw] = await getPool().execute("SELECT staff_id FROM pengguna_web WHERE id = ?", [req.user.id]);
+        if (pw.length) staffId = pw[0].staff_id;
+      }
+      if (staffId) {
+        await getPool().execute(`INSERT INTO file_storage (data_id, tipe_data, kategori, server, drive) 
+                    VALUES (?, 'pegawai', 'foto_profil', ?, NULL) 
+                    ON DUPLICATE KEY UPDATE server = VALUES(server), drive = NULL`, [staffId, photoUrl]);
+      } else if (req.user.type === "student") {
+        await getPool().execute(`INSERT INTO file_storage (data_id, tipe_data, kategori, server, drive) 
+                    VALUES (?, 'siswa', 'foto_profil', ?, NULL) 
+                    ON DUPLICATE KEY UPDATE server = VALUES(server), drive = NULL`, [req.user.id, photoUrl]);
+      }
+      res.json({ photo_url: photoUrl });
+    } catch (error) {
+      console.error("Profile photo update error:", error);
+      res.status(500).json({ error: "Failed to update profile photo" });
+    }
+  });
+});
+app.put("/api/profile/password", authenticate, asyncHandler(async (req, res) => {
+  const { oldPassword, newPassword } = req.body;
+  const [rows] = await getPool().execute("SELECT password FROM pengguna_web WHERE id = ?", [req.user.id]);
+  if (!rows.length) return res.status(404).json({ error: "User not found" });
+  const isMatch = await import_bcryptjs.default.compare(oldPassword, rows[0].password);
+  if (!isMatch) return res.status(400).json({ error: "Password lama salah." });
+  const hashed = await import_bcryptjs.default.hash(newPassword, 10);
+  await getPool().execute("UPDATE pengguna_web SET password = ? WHERE id = ?", [hashed, req.user.id]);
+  res.json({ success: true });
+}));
+app.get("/api/pengumuman/public", asyncHandler(async (req, res) => {
+  const { page } = req.query;
+  let targetPage = page || "public/beranda";
+  let query = `
+        SELECT * FROM pengumuman 
+        WHERE status = 'published' 
+        AND (publish_start IS NULL OR publish_start <= CURRENT_TIMESTAMP) 
+        AND (publish_end IS NULL OR publish_end >= CURRENT_TIMESTAMP) 
+        AND (FIND_IN_SET(?, target) > 0 OR FIND_IN_SET('public/semua', target) > 0)
+        ORDER BY created_at DESC LIMIT 5
+    `;
+  const [rows] = await getPool().execute(query, [targetPage]);
+  res.json(rows);
+}));
+app.get("/api/pengumuman", authenticate, asyncHandler(async (req, res) => {
+  const { target, isAdmin } = req.query;
+  let query = "SELECT * FROM pengumuman WHERE 1=1";
+  let params = [];
+  if (isAdmin !== "true") {
+    query += " AND status = 'published' AND (publish_start IS NULL OR publish_start <= CURRENT_TIMESTAMP) AND (publish_end IS NULL OR publish_end >= CURRENT_TIMESTAMP)";
+  }
+  if (target) {
+    query += " AND (FIND_IN_SET(?, target) > 0 OR FIND_IN_SET('semua', target) > 0)";
+    params.push(target);
+  }
+  query += " ORDER BY created_at DESC";
+  const [rows] = await getPool().execute(query, params);
+  res.json(rows);
+}));
+app.post("/api/pengumuman", authenticate, asyncHandler(async (req, res) => {
+  const { title, target, status, intro, content, closing, signature, publish_start, publish_end } = req.body;
+  let { seo_tags } = req.body;
+  if (!seo_tags) seo_tags = generateSEOTags(title, (intro || "") + " " + content);
+  await getPool().execute(
+    "INSERT INTO pengumuman (title, target, status, intro, content, closing, signature, publish_start, publish_end, seo_tags) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    [title, target || "semua", status || "published", intro, content, closing, signature, publish_start || null, publish_end || null, seo_tags]
+  );
+  res.json({ success: true });
+}));
+app.put("/api/pengumuman/:id", authenticate, asyncHandler(async (req, res) => {
+  const { title, target, status, intro, content, closing, signature, publish_start, publish_end } = req.body;
+  let { seo_tags } = req.body;
+  if (!seo_tags) seo_tags = generateSEOTags(title, (intro || "") + " " + content);
+  await getPool().execute(
+    `UPDATE pengumuman SET 
+            title = ?, target = ?, status = ?, intro = ?, content = ?, 
+            closing = ?, signature = ?,
+            publish_start = ?, publish_end = ?, seo_tags = ?
+        WHERE id = ?`,
+    [title, target, status, intro, content, closing, signature, publish_start || null, publish_end || null, seo_tags, req.params.id]
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/pengumuman/:id", authenticate, asyncHandler(async (req, res) => {
+  const [result] = await getPool().execute("DELETE FROM pengumuman WHERE id = ?", [req.params.id]);
+  if (result.affectedRows === 0) {
+    return res.status(404).json({ error: "Pengumuman tidak ditemukan" });
+  }
+  res.json({ success: true });
+}));
+app.get("/manifest.json", asyncHandler(async (req, res) => {
+  let schoolName = "Dapoy Schools";
+  try {
+    const [rows] = await getPool().execute("SELECT school_name FROM pengaturan_sekolah WHERE id = 1");
+    if (rows && rows.length > 0) {
+      schoolName = rows[0].school_name || schoolName;
+    }
+  } catch (err) {
+    console.error("Failed to fetch school_name for manifest, using default:", err);
+  }
+  res.json({
+    name: `${schoolName} Login`,
+    short_name: schoolName,
+    start_url: "/login",
+    display: "standalone",
+    background_color: "#f8fafc",
+    theme_color: "#2563eb",
+    description: `Portal Login ${schoolName}`,
+    icons: [
+      {
+        src: "/icons/icon-192x192.png",
+        sizes: "192x192",
+        type: "image/png"
+      },
+      {
+        src: "/icons/icon-512x512.png",
+        sizes: "512x512",
+        type: "image/png"
+      }
+    ]
+  });
+}));
+app.get("/api/pengaturan_sekolah", asyncHandler(async (req, res) => {
+  try {
+    const [rows] = await getPool().execute("SELECT * FROM pengaturan_sekolah WHERE id = 1");
+    if (rows && rows.length > 0) {
+      const settingsData = rows[0];
+      try {
+        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM siswa");
+        settingsData.actual_student_count = studentRows[0].count;
+        const [staffRows] = await getPool().execute("SELECT COUNT(*) as count FROM pegawai");
+        settingsData.actual_staff_count = staffRows[0].count;
+      } catch (e) {
+        console.error("Failed to fetch actual student/staff count:", e);
+      }
+      res.json(settingsData);
+    } else {
+      throw new Error("Settings not found");
+    }
+  } catch (err) {
+    console.error("Failed to fetch settings, returning defaults:", err);
+    res.json({
+      school_name: "SDN Tanah Tinggi 1",
+      npsn: "20222830",
+      akreditasi: "A",
+      hero_title: "Selamat Datang di SDN Tanah Tinggi 1",
+      hero_subtitle: "Mewujudkan generasi cerdas, berkarakter, dan berdaya saing.",
+      hero_image_url: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=2071&auto=format&fit=crop",
+      visi: "Terwujudnya sekolah yang unggul dalam prestasi dan berakhlak mulia.",
+      misi: "[]",
+      stats_students: "0",
+      stats_teachers: "0",
+      stats_rooms: "0",
+      stats_extracurriculars: "0",
+      provinsi: "",
+      kota: "",
+      kecamatan: "",
+      kelurahan: "",
+      contact_address: "Lokasi belum diatur",
+      contact_phone: "-",
+      contact_email: "-",
+      bentuk_pendidikan: "Sekolah Dasar (SD)",
+      status_sekolah: "Negeri",
+      kurikulum: "Kurikulum Merdeka",
+      gallery_slide_interval: 2,
+      headmaster_name: "Hj. NENI HERAWATI, S.Pd",
+      headmaster_nip: "197003181992032007",
+      schedule_date: "Tangerang, ......................... 20...",
+      spmb_config: "{}",
+      social_links: "[]",
+      seo_title: "SDN Tanah Tinggi 1",
+      seo_description: "Website Resmi SDN Tanah Tinggi 1",
+      seo_keywords: "sekolah, sdn, tanah tinggi 1",
+      sitemap_enabled: 1
+    });
+  }
+}));
+app.post("/api/pengaturan_sekolah", authenticate, asyncHandler(async (req, res) => {
+  const {
+    school_name,
+    npsn,
+    akreditasi,
+    logo_url,
+    kop_surat_url,
+    hero_image_url,
+    hero_title,
+    hero_subtitle,
+    visi,
+    misi,
+    stats_students,
+    stats_teachers,
+    stats_rooms,
+    stats_extracurriculars,
+    provinsi,
+    kota,
+    kecamatan,
+    kelurahan,
+    contact_address,
+    contact_phone,
+    contact_email,
+    bentuk_pendidikan,
+    status_sekolah,
+    kurikulum,
+    gallery_slide_interval,
+    headmaster_name,
+    headmaster_nip,
+    schedule_date,
+    spmb_config,
+    social_links,
+    seo_title,
+    seo_description,
+    seo_keywords,
+    sitemap_enabled,
+    sync_token,
+    active_template,
+    theme_color,
+    hero_stats_value,
+    hero_stats_label,
+    hero_stats_desc,
+    headmaster_photo,
+    headmaster_welcome_title,
+    headmaster_welcome_content,
+    headmaster_welcome_active,
+    enable_struktur_organisasi,
+    enable_spmb,
+    enable_elearning,
+    fb_page_id,
+    ig_account_id,
+    meta_access_token,
+    meta_app_id,
+    meta_app_secret,
+    elearning_url,
+    elearning_token
+  } = req.body;
+  try {
+    const [result] = await getPool().execute(
+      `UPDATE pengaturan_sekolah SET 
+        school_name = ?, npsn = ?, akreditasi = ?, logo_url = ?, kop_surat_url = ?, hero_image_url = ?,
+        hero_title = ?, hero_subtitle = ?, visi = ?, misi = ?, 
+        stats_students = ?, stats_teachers = ?, stats_rooms = ?, stats_extracurriculars = ?, 
+        provinsi = ?, kota = ?, kecamatan = ?, kelurahan = ?,
+        contact_address = ?, contact_phone = ?, contact_email = ?,
+        bentuk_pendidikan = ?, status_sekolah = ?, kurikulum = ?, gallery_slide_interval = ?,
+        headmaster_name = ?, headmaster_nip = ?, schedule_date = ?, spmb_config = ?, social_links = ?,
+        seo_title = ?, seo_description = ?, seo_keywords = ?, sitemap_enabled = ?, sync_token = ?,
+        active_template = ?, theme_color = ?, hero_stats_value = ?, hero_stats_label = ?, hero_stats_desc = ?,
+        headmaster_photo = ?, headmaster_welcome_title = ?, headmaster_welcome_content = ?, headmaster_welcome_active = ?,
+        enable_struktur_organisasi = ?, enable_spmb = ?, enable_elearning = ?,
+        fb_page_id = ?, ig_account_id = ?, meta_access_token = ?, meta_app_id = ?, meta_app_secret = ?,
+        elearning_url = ?, elearning_token = ?
+      WHERE id = 1`,
+      [
+        school_name,
+        npsn,
+        akreditasi,
+        logo_url,
+        kop_surat_url,
+        hero_image_url,
+        hero_title,
+        hero_subtitle,
+        typeof visi === "string" ? visi : JSON.stringify(visi),
+        typeof misi === "string" ? misi : JSON.stringify(misi),
+        stats_students,
+        stats_teachers,
+        stats_rooms,
+        stats_extracurriculars,
+        provinsi,
+        kota,
+        kecamatan,
+        kelurahan,
+        contact_address,
+        contact_phone,
+        contact_email,
+        bentuk_pendidikan,
+        status_sekolah,
+        kurikulum,
+        gallery_slide_interval,
+        headmaster_name,
+        headmaster_nip,
+        schedule_date,
+        typeof spmb_config === "string" ? spmb_config : spmb_config ? JSON.stringify(spmb_config) : "{}",
+        typeof social_links === "string" ? social_links : social_links ? JSON.stringify(social_links) : "{}",
+        seo_title,
+        seo_description,
+        seo_keywords,
+        sitemap_enabled,
+        sync_token || null,
+        active_template || "template1",
+        theme_color || "#2563eb",
+        hero_stats_value,
+        hero_stats_label,
+        hero_stats_desc,
+        headmaster_photo,
+        headmaster_welcome_title,
+        headmaster_welcome_content,
+        headmaster_welcome_active === void 0 ? 1 : headmaster_welcome_active,
+        enable_struktur_organisasi === void 0 ? 1 : enable_struktur_organisasi,
+        enable_spmb === void 0 ? 1 : enable_spmb,
+        enable_elearning === void 0 ? 0 : enable_elearning,
+        fb_page_id,
+        ig_account_id,
+        meta_access_token,
+        meta_app_id,
+        meta_app_secret,
+        elearning_url || null,
+        elearning_token || null
+      ].map((v) => v === void 0 ? null : v)
+    );
+    if (result.affectedRows === 0) {
+      const [check] = await getPool().execute("SELECT id FROM pengaturan_sekolah WHERE id = 1");
+      if (check.length === 0) {
+        await getPool().execute(
+          `INSERT INTO pengaturan_sekolah (id, school_name, npsn, akreditasi, logo_url, kop_surat_url, hero_image_url, hero_title, hero_subtitle, visi, misi, stats_students, stats_teachers, stats_rooms, stats_extracurriculars, provinsi, kota, kecamatan, kelurahan, contact_address, contact_phone, contact_email, bentuk_pendidikan, status_sekolah, kurikulum, gallery_slide_interval, headmaster_name, headmaster_nip, schedule_date, spmb_config, social_links, seo_title, seo_description, seo_keywords, sitemap_enabled, sync_token, active_template, theme_color, hero_stats_value, hero_stats_label, hero_stats_desc, headmaster_photo, headmaster_welcome_title, headmaster_welcome_content, headmaster_welcome_active, enable_struktur_organisasi, enable_spmb, enable_elearning, fb_page_id, ig_account_id, meta_access_token, meta_app_id, meta_app_secret, elearning_url, elearning_token)
+          VALUES (1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          [
+            school_name,
+            npsn,
+            akreditasi,
+            logo_url,
+            kop_surat_url,
+            hero_image_url,
+            hero_title,
+            hero_subtitle,
+            typeof visi === "string" ? visi : JSON.stringify(visi),
+            typeof misi === "string" ? misi : JSON.stringify(misi),
+            stats_students,
+            stats_teachers,
+            stats_rooms,
+            stats_extracurriculars,
+            provinsi,
+            kota,
+            kecamatan,
+            kelurahan,
+            contact_address,
+            contact_phone,
+            contact_email,
+            bentuk_pendidikan,
+            status_sekolah,
+            kurikulum,
+            gallery_slide_interval,
+            headmaster_name,
+            headmaster_nip,
+            schedule_date,
+            typeof spmb_config === "string" ? spmb_config : spmb_config ? JSON.stringify(spmb_config) : "{}",
+            typeof social_links === "string" ? social_links : social_links ? JSON.stringify(social_links) : "{}",
+            seo_title,
+            seo_description,
+            seo_keywords,
+            sitemap_enabled,
+            sync_token || null,
+            active_template || "template1",
+            theme_color || "#2563eb",
+            hero_stats_value,
+            hero_stats_label,
+            hero_stats_desc,
+            headmaster_photo,
+            headmaster_welcome_title,
+            headmaster_welcome_content,
+            headmaster_welcome_active === void 0 ? 1 : headmaster_welcome_active,
+            enable_struktur_organisasi === void 0 ? 1 : enable_struktur_organisasi,
+            enable_spmb === void 0 ? 1 : enable_spmb,
+            enable_elearning === void 0 ? 0 : enable_elearning,
+            fb_page_id,
+            ig_account_id,
+            meta_access_token,
+            meta_app_id,
+            meta_app_secret,
+            elearning_url || null,
+            elearning_token || null
+          ].map((v) => v === void 0 ? null : v)
+        );
+      }
+    }
+    res.json({ success: true });
+  } catch (err) {
+    console.error("Failed to update settings:", err);
+    res.status(500).json({ error: "Gagal menyimpan pengaturan: " + err.message });
+  }
+}));
+app.post("/api/meta/exchange-token", authenticate, asyncHandler(async (req, res) => {
+  const { shortLivedToken } = req.body;
+  const [settings] = await getPool().execute("SELECT meta_app_id, meta_app_secret FROM pengaturan_sekolah WHERE id = 1");
+  if (!settings || settings.length === 0 || !settings[0].meta_app_id || !settings[0].meta_app_secret) {
+    return res.status(400).json({ error: "App ID dan App Secret belum dikonfigurasi di pengaturan" });
+  }
+  const url = `https://graph.facebook.com/v19.0/oauth/access_token?grant_type=fb_exchange_token&client_id=${settings[0].meta_app_id}&client_secret=${settings[0].meta_app_secret}&fb_exchange_token=${shortLivedToken}`;
+  const tokenRes = await fetch(url);
+  const tokenData = await tokenRes.json();
+  if (tokenData.error) {
+    return res.status(400).json({ error: tokenData.error.message });
+  }
+  const longLivedToken = tokenData.access_token;
+  const pagesRes = await fetch(`https://graph.facebook.com/v19.0/me/accounts?access_token=${longLivedToken}`);
+  const pagesData = await pagesRes.json();
+  if (pagesData.error) {
+    return res.status(400).json({ error: pagesData.error.message });
+  }
+  res.json({ pages: pagesData.data, longLivedToken });
+}));
+app.post("/api/meta/save-page", authenticate, asyncHandler(async (req, res) => {
+  const { pageId, pageAccessToken, pageName } = req.body;
+  const igRes = await fetch(`https://graph.facebook.com/v19.0/${pageId}?fields=instagram_business_account&access_token=${pageAccessToken}`);
+  const igData = await igRes.json();
+  let igAccountId = null;
+  if (igData.instagram_business_account) {
+    igAccountId = igData.instagram_business_account.id;
+  }
+  await getPool().execute(
+    "UPDATE pengaturan_sekolah SET fb_page_id = ?, ig_account_id = ?, meta_access_token = ? WHERE id = 1",
+    [pageId, igAccountId, pageAccessToken]
+  );
+  res.json({ success: true, igAccountId });
+}));
+app.get("/api/rombongan_belajar/public", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT r.*, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip
+        FROM rombongan_belajar r
+        LEFT JOIN pegawai s ON r.wali_kelas_id = s.pegawai_id
+        ORDER BY r.tingkat, r.name
+    `);
+  res.json(rows);
+}));
+app.get("/api/rombongan_belajar", authenticate, asyncHandler(async (req, res) => {
+  let whereClause = "";
+  const params = [];
+  if (req.user.type === "staff") {
+    const perms = req.user.permissions || [];
+    if (!perms.includes("all")) {
+      const [rombelCheck] = await getPool().execute(
+        "SELECT COUNT(*) as count FROM rombongan_belajar WHERE wali_kelas_id = ?",
+        [req.user.staff_id]
+      );
+      if (rombelCheck[0].count > 0) {
+        whereClause = "WHERE r.wali_kelas_id = ?";
+        params.push(req.user.staff_id);
+      }
+    }
+  }
+  const [rows] = await getPool().execute(`
+        SELECT r.*, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip,
+               (SELECT COUNT(*) FROM siswa WHERE rombel = r.name) as student_count
+        FROM rombongan_belajar r
+        LEFT JOIN pegawai s ON r.wali_kelas_id = s.pegawai_id
+        ${whereClause}
+    `, params);
+  res.json(rows);
+}));
+app.post("/api/rombongan_belajar", authenticate, asyncHandler(async (req, res) => {
+  const { name, wali_kelas_id, tingkat } = req.body;
+  console.log(`[Rombels] Creating: name=${name}, wali=${wali_kelas_id}, tingkat=${tingkat}`);
+  try {
+    await getPool().execute("INSERT INTO rombongan_belajar (name, wali_kelas_id, tingkat) VALUES (?, ?, ?)", [name, wali_kelas_id || null, tingkat || null].map(clean));
+    res.json({ success: true });
+  } catch (err) {
+    console.error("[Rombels] Create error:", err);
+    if (err.code === "ER_DUP_ENTRY") return res.status(400).json({ error: "Nama rombel sudah ada" });
+    throw err;
+  }
+}));
+app.delete("/api/rombongan_belajar/:id", authenticate, asyncHandler(async (req, res) => {
+  const id = req.params.id;
+  console.log(`[Rombels] Deleting id=${id}`);
+  try {
+    const [result] = await getPool().execute("DELETE FROM rombongan_belajar WHERE id = ?", [id]);
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ error: "Rombel tidak ditemukan" });
+    }
+    res.json({ success: true, affectedRows: result.affectedRows });
+  } catch (err) {
+    console.error(`[Rombels] Delete error for id=${id}:`, err);
+    res.status(500).json({ error: "Gagal menghapus rombel. Mungkin rombel ini masih digunakan di tabel lain.", detail: err.message });
+  }
+}));
+app.put("/api/rombongan_belajar/:id", authenticate, asyncHandler(async (req, res) => {
+  const { name, wali_kelas_id, tingkat } = req.body;
+  const id = req.params.id;
+  console.log(`[Rombels] Updating id=${id}: name=${name}, wali=${wali_kelas_id}, tingkat=${tingkat}`);
+  try {
+    await getPool().execute("UPDATE rombongan_belajar SET name = ?, wali_kelas_id = ?, tingkat = ? WHERE id = ?", [name, wali_kelas_id || null, tingkat || null, id].map(clean));
+    res.json({ success: true });
+  } catch (err) {
+    console.error(`[Rombels] Update error for id=${id}:`, err);
+    if (err.code === "ER_DUP_ENTRY") return res.status(400).json({ error: "Nama rombel sudah ada" });
+    throw err;
+  }
+}));
+app.get("/api/dashboard-stats", authenticate, asyncHandler(async (req, res) => {
+  try {
+    const stats = {};
+    let whereClause = "";
+    const params = [];
+    if (req.user.type === "staff") {
+      const perms = req.user.permissions || [];
+      if (!perms.includes("all")) {
+        const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        if (rombelRows.length > 0) {
+          const names = rombelRows.map((r) => r.name);
+          whereClause = `WHERE rombel IN (${names.map(() => "?").join(",")})`;
+          params.push(...names);
+        }
+      }
+    }
+    const [rombongan_belajar] = await getPool().execute(`SELECT rombel as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY rombel`, params);
+    stats.student_by_rombel = rombongan_belajar.map((r) => ({ rombel_name: r.name || "N/A", total: Number(r.value) }));
+    const [gender] = await getPool().execute(`SELECT jenis_kelamin as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY jenis_kelamin`, params);
+    stats.student_by_gender = gender.map((g) => ({ gender: g.name || "N/A", total: Number(g.value) }));
+    const [agama] = await getPool().execute(`SELECT agama as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY agama`, params);
+    stats.student_by_religion = agama.map((r) => ({ agama: r.name || "Islam", total: Number(r.value) }));
+    const [staffStatus] = await getPool().execute("SELECT status_kepegawaian as name, COUNT(*) as value FROM pegawai GROUP BY status_kepegawaian");
+    stats.staff_by_status = staffStatus.map((s) => ({ status_kepegawaian: s.name || "Belum Diatur", total: Number(s.value) }));
+    const [jabatan] = await getPool().execute("SELECT jabatan_ptk as name, COUNT(*) as value FROM pegawai GROUP BY jabatan_ptk");
+    stats.staff_by_position = jabatan.map((j) => ({ jabatan: j.name || "N/A", total: Number(j.value) }));
+    console.log("[DEBUG] Dashboard stats compiled:", Object.keys(stats));
+    res.json(stats);
+  } catch (error) {
+    console.error("[ERROR] Failed to fetch dashboard stats:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+}));
+app.get("/api/riwayat_masuk", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT * FROM riwayat_masuk ORDER BY created_at DESC LIMIT 50");
+  res.json(rows);
+}));
+app.post("/api/pengguna_web/:id/toggle-status", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("UPDATE pengguna_web SET status_aktif = NOT status_aktif WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/kalender_akademik", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT * FROM kalender_akademik ORDER BY event_date ASC");
+  res.json(rows);
+}));
+app.post("/api/kalender_akademik", authenticate, asyncHandler(async (req, res) => {
+  const { title, event_date, description, category } = req.body;
+  await getPool().execute(
+    "INSERT INTO kalender_akademik (title, event_date, description, category) VALUES (?, ?, ?, ?)",
+    [title, event_date, description, category].map(clean)
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/kalender_akademik/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM kalender_akademik WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/jadwal_pelajaran", authenticate, asyncHandler(async (req, res) => {
+  const { class_name } = req.query;
+  let query = "SELECT jp.* FROM jadwal_pelajaran jp";
+  let params = [];
+  let whereConditions = [];
+  if (class_name) {
+    whereConditions.push("jp.class_name = ?");
+    params.push(class_name);
+  }
+  if (req.user.type === "staff") {
+    const perms = req.user.permissions || [];
+    if (!perms.includes("all")) {
+      query += " JOIN rombongan_belajar r ON jp.class_name = r.name";
+      const [rombelCheck] = await getPool().execute(
+        "SELECT COUNT(*) as count FROM rombongan_belajar WHERE wali_kelas_id = ?",
+        [req.user.staff_id]
+      );
+      if (rombelCheck[0].count > 0) {
+        whereConditions.push("r.wali_kelas_id = ?");
+        params.push(req.user.staff_id);
+      }
+    }
+  }
+  if (whereConditions.length > 0) {
+    query += " WHERE " + whereConditions.join(" AND ");
+  }
+  query += " ORDER BY jp.day_name, jp.start_time";
+  const [rows] = await getPool().execute(query, params);
+  res.json(rows);
+}));
+app.get("/api/jadwal_pelajaran/public", asyncHandler(async (req, res) => {
+  const { class_name } = req.query;
+  let query = "SELECT jp.* FROM jadwal_pelajaran jp";
+  let params = [];
+  if (class_name) {
+    query += " WHERE jp.class_name = ?";
+    params.push(class_name);
+  }
+  query += " ORDER BY jp.day_name, jp.start_time";
+  const [rows] = await getPool().execute(query, params);
+  res.json(rows);
+}));
+app.post("/api/jadwal_pelajaran", authenticate, asyncHandler(async (req, res) => {
+  const { class_name, day_name, subject, start_time, end_time, teacher_name } = req.body;
+  await getPool().execute(
+    "INSERT INTO jadwal_pelajaran (class_name, day_name, subject, start_time, end_time, teacher_name) VALUES (?, ?, ?, ?, ?, ?)",
+    [class_name, day_name, subject, start_time, end_time, teacher_name]
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/jadwal_pelajaran/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM jadwal_pelajaran WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/ekstrakurikuler", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT * FROM ekstrakurikuler");
+  res.json(rows);
+}));
+app.post("/api/ekstrakurikuler", authenticate, asyncHandler(async (req, res) => {
+  const { name, description, image_url, schedule_info } = req.body;
+  await getPool().execute(
+    "INSERT INTO ekstrakurikuler (name, description, image_url, schedule_info) VALUES (?, ?, ?, ?)",
+    [name, description, image_url, schedule_info]
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/ekstrakurikuler/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM ekstrakurikuler WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.put("/api/kalender_akademik/:id", authenticate, asyncHandler(async (req, res) => {
+  const { title, event_date, description, category } = req.body;
+  await getPool().execute(
+    "UPDATE kalender_akademik SET title = ?, event_date = ?, description = ?, category = ? WHERE id = ?",
+    [title, event_date, description, category, req.params.id].map(clean)
+  );
+  res.json({ success: true });
+}));
+app.put("/api/jadwal_pelajaran/:id", authenticate, asyncHandler(async (req, res) => {
+  const { class_name, day_name, subject, start_time, end_time, teacher_name } = req.body;
+  await getPool().execute(
+    "UPDATE jadwal_pelajaran SET class_name = ?, day_name = ?, subject = ?, start_time = ?, end_time = ?, teacher_name = ? WHERE id = ?",
+    [class_name, day_name, subject, start_time, end_time, teacher_name, req.params.id]
+  );
+  res.json({ success: true });
+}));
+app.put("/api/ekstrakurikuler/:id", authenticate, asyncHandler(async (req, res) => {
+  const { name, description, image_url, schedule_info } = req.body;
+  await getPool().execute(
+    "UPDATE ekstrakurikuler SET name = ?, description = ?, image_url = ?, schedule_info = ? WHERE id = ?",
+    [name, description, image_url, schedule_info, req.params.id]
+  );
+  res.json({ success: true });
+}));
+app.post("/api/siswa/:id/toggle-status", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:toggle")) {
+    return res.status(403).json({ error: "Akses ditolak." });
+  }
+  await getPool().execute("UPDATE siswa SET status_aktif = NOT status_aktif WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/peran", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT * FROM peran");
+  res.json(rows);
+}));
+app.post("/api/peran", authenticate, asyncHandler(async (req, res) => {
+  const { name, permissions } = req.body;
+  await getPool().execute("INSERT INTO peran (name, permissions) VALUES (?, ?)", [name, JSON.stringify(permissions)]);
+  res.json({ success: true });
+}));
+app.put("/api/peran/:id", authenticate, asyncHandler(async (req, res) => {
+  const [targetRoles] = await getPool().execute("SELECT name FROM peran WHERE id = ?", [req.params.id]);
+  if (targetRoles.length > 0 && targetRoles[0].name.toLowerCase() === "superadmin") {
+    return res.status(403).json({ error: "Role Superadmin tidak dapat dimodifikasi." });
+  }
+  const { name, permissions } = req.body;
+  await getPool().execute("UPDATE peran SET name = ?, permissions = ? WHERE id = ?", [name, JSON.stringify(permissions), req.params.id]);
+  res.json({ success: true });
+}));
+app.delete("/api/peran/:id", authenticate, asyncHandler(async (req, res) => {
+  const [targetRoles] = await getPool().execute("SELECT name FROM peran WHERE id = ?", [req.params.id]);
+  if (targetRoles.length > 0 && targetRoles[0].name.toLowerCase() === "superadmin") {
+    return res.status(403).json({ error: "Role Superadmin tidak dapat dihapus." });
+  }
+  const [users] = await getPool().execute("SELECT id FROM pengguna_web WHERE role_id = ?", [req.params.id]);
+  if (users.length > 0) {
+    return res.status(400).json({ error: "Role cannot be deleted while it is assigned to users." });
+  }
+  await getPool().execute("DELETE FROM peran WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/wilayah/search", authenticate, asyncHandler(async (req, res) => {
+  const q = req.query.q;
+  if (!q || typeof q !== "string" || q.length < 3) {
+    return res.json([]);
+  }
+  const searchQuery = "%" + q + "%";
+  const sql = `
+        SELECT 
+            kel.kode_wilayah as kelurahan_kode, kel.nama as kelurahan,
+            kec.kode_wilayah as kecamatan_kode, kec.nama as kecamatan,
+            kota.kode_wilayah as kota_kode, kota.nama as kota,
+            prov.kode_wilayah as provinsi_kode, prov.nama as provinsi
+        FROM ref_mst_wilayah kel
+        LEFT JOIN ref_mst_wilayah kec ON kel.mst_kode_wilayah = kec.kode_wilayah
+        LEFT JOIN ref_mst_wilayah kota ON kec.mst_kode_wilayah = kota.kode_wilayah
+        LEFT JOIN ref_mst_wilayah prov ON kota.mst_kode_wilayah = prov.kode_wilayah
+        WHERE kel.id_level_wilayah = '4' AND kel.nama LIKE ?
+        LIMIT 20
+    `;
+  const [rows] = await getPool().query(sql, [searchQuery]);
+  const results = rows.map((r) => ({
+    kelurahan: r.kelurahan,
+    kecamatan: r.kecamatan,
+    kota: r.kota,
+    provinsi: r.provinsi,
+    full_text: `${r.kelurahan || ""}, ${r.kecamatan || ""}, ${r.kota || ""}, ${r.provinsi || ""}`
+  }));
+  res.json(results);
+}));
+app.get("/api/referensi/:column", (req, res, next) => {
+  console.log("HIT API REFERENSI:", req.params.column);
+  next();
+}, authenticate, asyncHandler(async (req, res) => {
+  const { column } = req.params;
+  const allowedColumns = ["jenis_ptk", "bid_study", "mata_pelajaran", "status_kepegawaian", "jenjang_pendidikan", "jenis_sertifikasi", "jurusan"];
+  if (!allowedColumns.includes(column)) {
+    return res.status(400).json({ error: "Invalid column" });
+  }
+  const p = getPool();
+  const [rows] = await p.query(`SELECT DISTINCT ?? as value FROM referensi WHERE ?? IS NOT NULL AND ?? != '' ORDER BY ?? ASC`, [column, column, column, column]);
+  res.json(rows.map((r) => r.value));
+}));
+app.post("/api/pegawai/import", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("staff:import")) {
+    return res.status(403).json({ error: "Access denied" });
+  }
+  const data = req.body;
+  if (!Array.isArray(data) || data.length === 0) return res.status(400).json({ error: "Data is empty or invalid" });
+  const conn = await getPool().getConnection();
+  try {
+    let imported = 0, updated = 0;
+    for (const row of data) {
+      if (!row.nama_lengkap) continue;
+      const nip = String(row.nip || "");
+      const nik = String(row.nik || "");
+      const pegawai_id = import_crypto.default.randomUUID();
+      const [result] = await conn.query(
+        `INSERT INTO pegawai (pegawai_id, nama_lengkap, nuptk, jenis_kelamin, nip, nik, tempat_lahir, tanggal_lahir, status_kepegawaian, jenis_ptk, gelar_depan, gelar_belakang, jenjang_pendidikan, jurusan_prodi, sertifikasi, tmt_kerja, jabatan_ptk, tugas_tambahan, mengajar, jam_tugas_tambahan, jjm, total_jjm, siswa, kompetensi)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                ON DUPLICATE KEY UPDATE
+                    nama_lengkap=VALUES(nama_lengkap),
+                    nuptk=VALUES(nuptk),
+                    jenis_kelamin=VALUES(jenis_kelamin),
+                    tempat_lahir=VALUES(tempat_lahir),
+                    tanggal_lahir=VALUES(tanggal_lahir),
+                    status_kepegawaian=VALUES(status_kepegawaian),
+                    jenis_ptk=VALUES(jenis_ptk),
+                    gelar_depan=VALUES(gelar_depan),
+                    gelar_belakang=VALUES(gelar_belakang),
+                    jenjang_pendidikan=VALUES(jenjang_pendidikan),
+                    jurusan_prodi=VALUES(jurusan_prodi),
+                    sertifikasi=VALUES(sertifikasi),
+                    tmt_kerja=VALUES(tmt_kerja),
+                    jabatan_ptk=VALUES(jabatan_ptk),
+                    tugas_tambahan=VALUES(tugas_tambahan),
+                    mengajar=VALUES(mengajar),
+                    jam_tugas_tambahan=VALUES(jam_tugas_tambahan),
+                    jjm=VALUES(jjm),
+                    total_jjm=VALUES(total_jjm),
+                    siswa=VALUES(siswa),
+                    kompetensi=VALUES(kompetensi)`,
+        [
+          pegawai_id,
+          String(row.nama_lengkap || ""),
+          String(row.nuptk || "") || null,
+          String(row.jenis_kelamin || "") || null,
+          nip || null,
+          nik || null,
+          String(row.tempat_lahir || "") || null,
+          row.tanggal_lahir || null,
+          String(row.status_kepegawaian || "Honorer") || null,
+          String(row.jenis_ptk || "") || null,
+          String(row.gelar_depan || "") || null,
+          String(row.gelar_belakang || "") || null,
+          String(row.jenjang_pendidikan || "") || null,
+          String(row.jurusan_prodi || "") || null,
+          String(row.sertifikasi || "") || null,
+          String(row.tmt_kerja || "") || null,
+          String(row.jabatan_ptk || "") || null,
+          String(row.tugas_tambahan || "") || null,
+          String(row.mengajar || "") || null,
+          String(row.jam_tugas_tambahan || "") || null,
+          String(row.jjm || "") || null,
+          String(row.total_jjm || "") || null,
+          String(row.siswa || "") || null,
+          String(row.kompetensi || "") || null
+        ]
+      );
+      if (result.affectedRows <= 2) imported++;
+      else updated++;
+    }
+    res.json({ success: true, message: `Impor selesai. ${imported} diproses, ${updated} diperbarui.` });
+  } catch (error) {
+    console.error("Import Staff Error:", error);
+    res.status(500).json({ error: `Gagal impor: ${error.message}` });
+  } finally {
+    conn.release();
+  }
+}));
+app.get("/api/pegawai", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT p.*, p.pegawai_id as id, COALESCE(f.drive, f.server) AS foto_profil
+        FROM pegawai p
+        LEFT JOIN file_storage f ON p.pegawai_id = f.data_id AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+        ORDER BY p.nama_lengkap ASC
+    `);
+  res.json(rows);
+}));
+app.get("/api/struktur-organisasi/public", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT s.*, 
+        TRIM(CONCAT(IFNULL(CONCAT(NULLIF(p.gelar_depan, ''), ' '), ''), p.nama_lengkap, IFNULL(CONCAT(', ', NULLIF(p.gelar_belakang, '')), ''))) AS nama_lengkap, 
+        p.nip, COALESCE(f.drive, f.server) AS foto_profil
+        FROM struktur_organisasi s
+        LEFT JOIN pegawai p ON s.pegawai_id COLLATE utf8mb4_unicode_ci = p.pegawai_id COLLATE utf8mb4_unicode_ci
+        LEFT JOIN file_storage f ON p.pegawai_id COLLATE utf8mb4_unicode_ci = f.data_id COLLATE utf8mb4_unicode_ci AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+        ORDER BY s.urutan ASC
+    `);
+  res.json(rows);
+}));
+app.get("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT s.*, 
+        TRIM(CONCAT(IFNULL(CONCAT(NULLIF(p.gelar_depan, ''), ' '), ''), p.nama_lengkap, IFNULL(CONCAT(', ', NULLIF(p.gelar_belakang, '')), ''))) AS nama_lengkap, 
+        p.nip, COALESCE(f.drive, f.server) AS foto_profil
+        FROM struktur_organisasi s
+        LEFT JOIN pegawai p ON s.pegawai_id COLLATE utf8mb4_unicode_ci = p.pegawai_id COLLATE utf8mb4_unicode_ci
+        LEFT JOIN file_storage f ON p.pegawai_id COLLATE utf8mb4_unicode_ci = f.data_id COLLATE utf8mb4_unicode_ci AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+        ORDER BY s.urutan ASC
+    `);
+  res.json(rows);
+}));
+app.post("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res) => {
+  const { id, pegawai_id, parent_id, jabatan_struktur, urutan } = req.body;
+  if (!jabatan_struktur) return res.status(400).json({ error: "Jabatan Struktur wajib diisi" });
+  if (id) {
+    await getPool().execute(
+      "UPDATE struktur_organisasi SET pegawai_id=?, parent_id=?, jabatan_struktur=?, urutan=? WHERE id=?",
+      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0, id]
+    );
+  } else {
+    await getPool().execute(
+      "INSERT INTO struktur_organisasi (pegawai_id, parent_id, jabatan_struktur, urutan) VALUES (?, ?, ?, ?)",
+      [pegawai_id || null, parent_id || null, jabatan_struktur, urutan || 0]
+    );
+  }
+  res.json({ success: true });
+}));
+app.delete("/api/struktur-organisasi/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM struktur_organisasi WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.post("/api/pegawai", authenticate, asyncHandler(async (req, res) => {
+  const { nama_lengkap, nuptk, jenis_kelamin, nip, nik, tempat_lahir, tanggal_lahir, status_kepegawaian, jenis_ptk, gelar_depan, gelar_belakang, jenjang_pendidikan, jurusan_prodi, sertifikasi, tmt_kerja, jabatan_ptk, tugas_tambahan, mengajar, jam_tugas_tambahan, jjm, total_jjm, siswa, kompetensi } = req.body;
+  if (!nama_lengkap) return res.status(400).json({ error: "Nama lengkap harus diisi" });
+  const cleanPegawai = (v) => {
+    if (typeof v === "string") {
+      const t = v.trim();
+      return t === "" || t === "-" ? null : t;
+    }
+    return v === void 0 || v === null ? null : v;
+  };
+  try {
+    const pegawai_id = import_crypto.default.randomUUID();
+    await getPool().execute(
+      "INSERT INTO pegawai (pegawai_id, nama_lengkap, nuptk, jenis_kelamin, nip, nik, tempat_lahir, tanggal_lahir, status_kepegawaian, jenis_ptk, gelar_depan, gelar_belakang, jenjang_pendidikan, jurusan_prodi, sertifikasi, tmt_kerja, jabatan_ptk, tugas_tambahan, mengajar, jam_tugas_tambahan, jjm, total_jjm, siswa, kompetensi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      [pegawai_id, nama_lengkap, nuptk || null, jenis_kelamin || null, nip || null, nik || null, tempat_lahir || null, tanggal_lahir || null, status_kepegawaian || "Honorer", jenis_ptk || null, gelar_depan || null, gelar_belakang || null, jenjang_pendidikan || null, jurusan_prodi || null, sertifikasi || null, tmt_kerja || null, jabatan_ptk || null, tugas_tambahan || null, mengajar || null, jam_tugas_tambahan || null, jjm || null, total_jjm || null, siswa || null, kompetensi || null].map(cleanPegawai)
+    );
+    res.json({ success: true });
+  } catch (err) {
+    if (err.code === "ER_DUP_ENTRY") return res.status(400).json({ error: "NIK atau NIP sudah terdaftar" });
+    throw err;
+  }
+}));
+app.put("/api/pegawai/:id", authenticate, asyncHandler(async (req, res) => {
+  const { nama_lengkap, nuptk, jenis_kelamin, nip, nik, tempat_lahir, tanggal_lahir, status_kepegawaian, jenis_ptk, gelar_depan, gelar_belakang, jenjang_pendidikan, jurusan_prodi, sertifikasi, tmt_kerja, jabatan_ptk, tugas_tambahan, mengajar, jam_tugas_tambahan, jjm, total_jjm, siswa, kompetensi } = req.body;
+  const { id } = req.params;
+  if (!nama_lengkap) return res.status(400).json({ error: "Nama lengkap harus diisi" });
+  const cleanPegawai = (v) => {
+    if (typeof v === "string") {
+      const t = v.trim();
+      return t === "" || t === "-" ? null : t;
+    }
+    return v === void 0 || v === null ? null : v;
+  };
+  try {
+    await getPool().execute(
+      `UPDATE pegawai SET 
+                nama_lengkap = ?, nuptk = ?, jenis_kelamin = ?, nip = ?, nik = ?, tempat_lahir = ?, 
+                tanggal_lahir = ?, status_kepegawaian = ?, jenis_ptk = ?, gelar_depan = ?, 
+                gelar_belakang = ?, jenjang_pendidikan = ?, jurusan_prodi = ?, sertifikasi = ?, 
+                tmt_kerja = ?, jabatan_ptk = ?, tugas_tambahan = ?, mengajar = ?, 
+                jam_tugas_tambahan = ?, jjm = ?, total_jjm = ?, siswa = ?, kompetensi = ?
+            WHERE pegawai_id = ?`,
+      [nama_lengkap, nuptk || null, jenis_kelamin || null, nip || null, nik || null, tempat_lahir || null, tanggal_lahir || null, status_kepegawaian || "Honorer", jenis_ptk || null, gelar_depan || null, gelar_belakang || null, jenjang_pendidikan || null, jurusan_prodi || null, sertifikasi || null, tmt_kerja || null, jabatan_ptk || null, tugas_tambahan || null, mengajar || null, jam_tugas_tambahan || null, jjm || null, total_jjm || null, siswa || null, kompetensi || null, id].map(cleanPegawai)
+    );
+    res.json({ success: true });
+  } catch (err) {
+    if (err.code === "ER_DUP_ENTRY") return res.status(400).json({ error: "NIK atau NIP sudah terdaftar" });
+    throw err;
+  }
+}));
+app.delete("/api/pegawai/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM pegawai WHERE pegawai_id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/pegawai/search", authenticate, asyncHandler(async (req, res) => {
+  const q = req.query.q;
+  const [rows] = await getPool().execute(
+    "SELECT pegawai_id as id, TRIM(CONCAT(IFNULL(CONCAT(NULLIF(gelar_depan, ''), ' '), ''), nama_lengkap, IFNULL(CONCAT(', ', NULLIF(gelar_belakang, '')), ''))) AS nama_lengkap, nip, nik, jabatan_ptk FROM pegawai WHERE nama_lengkap LIKE ? OR nip LIKE ? OR nik LIKE ? LIMIT 10",
+    [`%${q}%`, `%${q}%`, `%${q}%`]
+  );
+  res.json(rows);
+}));
+app.get("/api/pengguna_web", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT wu.*, s.nama_lengkap, r.name as role_name 
+        FROM pengguna_web wu
+        LEFT JOIN pegawai s ON wu.staff_id = s.pegawai_id
+        LEFT JOIN peran r ON wu.role_id = r.id
+    `);
+  res.json(rows);
+}));
+app.post("/api/pengguna_web", authenticate, asyncHandler(async (req, res) => {
+  const { staff_id, role_id, username, password, is_elearning_admin } = req.body;
+  const hashedPassword = await import_bcryptjs.default.hash(password, 10);
+  const isAdmin = is_elearning_admin ? 1 : 0;
+  await getPool().execute(
+    "INSERT INTO pengguna_web (staff_id, role_id, username, password, is_elearning_admin) VALUES (?, ?, ?, ?, ?)",
+    [clean(staff_id), clean(role_id), clean(username), hashedPassword, isAdmin]
+  );
+  res.json({ success: true });
+}));
+app.post("/api/pengguna_web/:id/toggle-elearning-admin", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute(
+    "UPDATE pengguna_web SET is_elearning_admin = NOT is_elearning_admin WHERE id = ?",
+    [req.params.id]
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/pengguna_web/:id", authenticate, asyncHandler(async (req, res) => {
+  const [user] = await getPool().execute(
+    "SELECT r.name FROM pengguna_web pw LEFT JOIN peran r ON pw.role_id = r.id WHERE pw.id = ?",
+    [req.params.id]
+  );
+  if (user.length > 0 && user[0].name && user[0].name.toLowerCase() === "superadmin") {
+    return res.status(403).json({ error: "Tidak dapat menghapus Superadmin" });
+  }
+  await getPool().execute("DELETE FROM pengguna_web WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.post("/api/pengguna_web/:id/reset-password", authenticate, asyncHandler(async (req, res) => {
+  const { password, useNik } = req.body;
+  let newPassword = password;
+  const [user] = await getPool().execute(
+    "SELECT pw.username, pw.staff_id, r.name, s.nik FROM pengguna_web pw LEFT JOIN peran r ON pw.role_id = r.id LEFT JOIN pegawai s ON pw.staff_id = s.pegawai_id WHERE pw.id = ?",
+    [req.params.id]
+  );
+  if (user.length === 0) return res.status(404).json({ error: "User tidak ditemukan" });
+  if (user[0].name && user[0].name.toLowerCase() === "superadmin" && !user[0].staff_id) {
+    return res.status(403).json({ error: "Tidak dapat mereset password Superadmin Utama" });
+  }
+  if (useNik) {
+    if (!user[0].nik) return res.status(400).json({ error: "User ini tidak memiliki NIK yang valid" });
+    newPassword = user[0].nik;
+  }
+  if (!newPassword) return res.status(400).json({ error: "Password diperlukan" });
+  const hashedPassword = await import_bcryptjs.default.hash(newPassword, 10);
+  await getPool().execute("UPDATE pengguna_web SET password = ? WHERE id = ?", [hashedPassword, req.params.id]);
+  res.json({ success: true });
+}));
+app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
+  const perms = req.user?.permissions || [];
+  if (!perms.includes("all") && !perms.includes("students:import")) {
+    return res.status(403).json({ error: "Access denied" });
+  }
+  const data = req.body;
+  if (!Array.isArray(data) || data.length === 0) return res.status(400).json({ error: "Data kosong atau tidak valid." });
+  const conn = await getPool().getConnection();
+  try {
+    const [existingRows] = await conn.execute("SELECT id, nipd, nisn, nik, tahun_pelajaran, semester, rombel FROM siswa");
+    const existingMap = /* @__PURE__ */ new Map();
+    const existingByNIPD = /* @__PURE__ */ new Map();
+    const existingByNISN = /* @__PURE__ */ new Map();
+    const existingByNIK = /* @__PURE__ */ new Map();
+    for (const r of existingRows) {
+      existingMap.set(r.id, r);
+      if (r.nipd && r.nipd.trim() && r.nipd.trim() !== "-") existingByNIPD.set(r.nipd.trim(), r.id);
+      if (r.nisn && r.nisn.trim() && r.nisn.trim() !== "-") existingByNISN.set(r.nisn.trim(), r.id);
+      if (r.nik && r.nik.trim() && r.nik.trim() !== "-") existingByNIK.set(r.nik.trim(), r.id);
+    }
+    await conn.beginTransaction();
+    try {
+      let processed = 0, skipped = 0, inserted = 0, updated = 0;
+      const extractFields = (row, map) => {
+        const obj = {};
+        for (const [excelKey, dbKey] of Object.entries(map)) {
+          const foundKey = Object.keys(row).find((k) => k.trim().toLowerCase() === excelKey.toLowerCase());
+          if (foundKey && row[foundKey] !== void 0 && row[foundKey] !== "") {
+            obj[dbKey] = row[foundKey];
+          }
+        }
+        return obj;
+      };
+      for (const row of data) {
+        const nipd = row.nipd ? String(row.nipd).trim() : null;
+        const nisn = row.nisn ? String(row.nisn).trim() : null;
+        if (!nipd && !nisn) {
+          processed++;
+          skipped++;
+          continue;
+        }
+        const siswaMap = {
+          "tahun_pelajaran": "tahun_pelajaran",
+          "semester": "semester",
+          "nipd": "nipd",
+          "nisn": "nisn",
+          "nik": "nik",
+          "nama_lengkap": "nama_lengkap",
+          "jenis_kelamin": "jenis_kelamin",
+          "tempat_lahir": "tempat_lahir",
+          "tanggal_lahir": "tanggal_lahir",
+          "agama": "agama",
+          "kewarganegaraan": "kewarganegaraan",
+          "alamat_jalan": "alamat_jalan",
+          "rt": "rt",
+          "rw": "rw",
+          "provinsi": "provinsi",
+          "kota": "kota",
+          "kecamatan": "kecamatan",
+          "kelurahan": "kelurahan",
+          "kode_pos": "kode_pos",
+          "lintang": "lintang",
+          "bujur": "bujur",
+          "nomor_kk": "nomor_kk",
+          "tempat_tinggal": "tempat_tinggal",
+          "moda_transportasi": "moda_transportasi",
+          "rombel": "rombel",
+          "tk_paud": "tk_paud",
+          "nama_tk_paud": "nama_tk_paud",
+          "nomor_akte_lahir": "nomor_akte_lahir",
+          "skhun": "skhun",
+          "no_peserta_ujian_nasioal": "no_peserta_ujian_nasioal",
+          "no_seri_ijazah": "no_seri_ijazah",
+          "sekolah_asal": "sekolah_asal",
+          "kebutuhan_khusus": "kebutuhan_khusus"
+        };
+        const siswaData = extractFields(row, siswaMap);
+        if (siswaData.rombel && typeof siswaData.rombel === "string") {
+          siswaData.rombel = siswaData.rombel.replace(/^Kelas\s+/i, "").trim();
+        }
+        if (row.status_aktif !== void 0) {
+          siswaData.status_aktif = row.status_aktif === true || row.status_aktif === 1 || String(row.status_aktif).toLowerCase() === "true" || String(row.status_aktif).toLowerCase() === "1" ? 1 : 0;
+        }
+        let siswaId = null;
+        let resolvedOldStudent = null;
+        const nikVal = row.nik ? String(row.nik).trim() : null;
+        if (nipd && existingByNIPD.has(nipd)) resolvedOldStudent = existingMap.get(existingByNIPD.get(nipd));
+        else if (nisn && existingByNISN.has(nisn)) resolvedOldStudent = existingMap.get(existingByNISN.get(nisn));
+        else if (nikVal && existingByNIK.has(nikVal)) resolvedOldStudent = existingMap.get(existingByNIK.get(nikVal));
+        if (resolvedOldStudent) {
+          siswaId = resolvedOldStudent.id;
+          const isDifferentYear = siswaData.tahun_pelajaran && resolvedOldStudent.tahun_pelajaran !== siswaData.tahun_pelajaran;
+          const isDifferentSemester = siswaData.semester && resolvedOldStudent.semester !== siswaData.semester;
+          if (isDifferentYear || isDifferentSemester) {
+            await conn.execute(`INSERT INTO arsip_siswa (siswa_id, tahun_pelajaran, semester, rombel) VALUES (?,?,?,?)`, [
+              siswaId,
+              resolvedOldStudent.tahun_pelajaran,
+              resolvedOldStudent.semester,
+              resolvedOldStudent.rombel
+            ]);
+          }
+          const fields = Object.keys(siswaData);
+          if (fields.length > 0) {
+            const setPairs = fields.map((f) => `${f}=?`);
+            const values = fields.map((f) => siswaData[f]);
+            await conn.execute(`UPDATE siswa SET ${setPairs.join(",")} WHERE id=?`, [...values, siswaId]);
+          }
+          updated++;
+        } else {
+          siswaId = import_crypto.default.randomUUID();
+          siswaData.id = siswaId;
+          const fields = Object.keys(siswaData);
+          const values = fields.map((f) => siswaData[f]);
+          const [res2] = await conn.execute(
+            `INSERT INTO siswa (${fields.join(",")}) VALUES (${fields.map(() => "?").join(",")})`,
+            values
+          );
+          if (nipd) existingByNIPD.set(nipd, siswaId);
+          if (nisn) existingByNISN.set(nisn, siswaId);
+          if (nikVal) existingByNIK.set(nikVal, siswaId);
+          existingMap.set(siswaId, { id: siswaId, nipd, nisn, nik: nikVal, tahun_pelajaran: siswaData.tahun_pelajaran, semester: siswaData.semester, rombel: siswaData.rombel });
+          inserted++;
+        }
+        const upsertRelation = async (table, uniqueCol, uniqueVal, extraMatch, dataObj) => {
+          if (Object.keys(dataObj).length === 0) return;
+          let query = `SELECT id FROM ${table} WHERE ${uniqueCol} = ?`;
+          let params = [uniqueVal];
+          if (extraMatch) query += ` AND ${extraMatch}`;
+          const [rows] = await conn.execute(query, params);
+          if (rows.length > 0) {
+            const id = rows[0].id;
+            const fields = Object.keys(dataObj);
+            const setPairs = fields.map((f) => `${f}=?`);
+            const values = fields.map((f) => dataObj[f]);
+            await conn.execute(`UPDATE ${table} SET ${setPairs.join(",")} WHERE id=?`, [...values, id]);
+          } else {
+            dataObj[uniqueCol] = uniqueVal;
+            if (extraMatch && extraMatch.includes("tipe = 'ayah'")) dataObj["tipe"] = "ayah";
+            if (extraMatch && extraMatch.includes("tipe = 'ibu'")) dataObj["tipe"] = "ibu";
+            const fields = Object.keys(dataObj);
+            const values = fields.map((f) => dataObj[f]);
+            await conn.execute(
+              `INSERT INTO ${table} (${fields.join(",")}) VALUES (${fields.map(() => "?").join(",")})`,
+              values
+            );
+          }
+        };
+        const ayahMap = { "nama_ayah": "nama", "nik_ayah": "nik", "tahun_lahir_ayah": "tahun_lahir", "pendidikan_ayah": "pendidikan", "pekerjaan_ayah": "pekerjaan", "penghasilan_ayah": "penghasilan", "kebutuhan_khusus_ayah": "kebutuhan_khusus" };
+        await upsertRelation("data_orang_tua", "siswa_id", siswaId, "tipe = 'ayah'", extractFields(row, ayahMap));
+        const ibuMap = { "nama_ibu": "nama", "nik_ibu": "nik", "tahun_lahir_ibu": "tahun_lahir", "pendidikan_ibu": "pendidikan", "pekerjaan_ibu": "pekerjaan", "penghasilan_ibu": "penghasilan", "kebutuhan_khusus_ibu": "kebutuhan_khusus" };
+        await upsertRelation("data_orang_tua", "siswa_id", siswaId, "tipe = 'ibu'", extractFields(row, ibuMap));
+        const waliMap = { "nama_wali": "nama", "nik_wali": "nik", "tahun_lahir_wali": "tahun_lahir", "pendidikan_wali": "pendidikan", "pekerjaan_wali": "pekerjaan", "penghasilan_wali": "penghasilan" };
+        await upsertRelation("data_wali", "siswa_id", siswaId, null, extractFields(row, waliMap));
+        const kontakMap = { "telepon_rumah": "telepon_rumah", "hp_orang_tua": "nomor_hp", "email_orang_tua": "email" };
+        await upsertRelation("data_kontak", "siswa_id", siswaId, null, extractFields(row, kontakMap));
+        const periodikMap = { "tinggi_badan": "tinggi_badan", "berat_badan": "berat_badan", "jarak_rumah": "jarak_rumah", "waktu_tempuh": "waktu_tempuh", "anak_keberapa": "anak_keberapa", "jumlah_saudara_kandung": "jumlah_saudara_kandung", "lingkar_kepala": "lingkar_kepala" };
+        await upsertRelation("data_periodik", "siswa_id", siswaId, null, extractFields(row, periodikMap));
+        const afirmasiMap = { "penerima_kps_pkh": "penerima_kps_pkh", "nomor_kks": "nomor_kks", "penerima_kip": "penerima_kip", "nomor_kip": "nomor_kip", "nama_sesuai_kip": "nama_sesuai_kip", "nomor_kps": "nomor_kps", "bank_pip": "bank_pip", "nomor_rek_pip": "nomor_rek_pip", "atasnama_rek_pip": "atasnama_rek_pip", "layak_pip": "layak_pip", "alasan_layak_pip": "alasan_layak_pip" };
+        await upsertRelation("data_afirmasi", "siswa_id", siswaId, null, extractFields(row, afirmasiMap));
+        processed++;
+      }
+      await conn.commit();
+      res.json({ success: true, message: `Impor selesai. ${processed} diproses (${inserted} baru, ${updated} diperbarui, ${skipped} dilewati - tanpa NIPD/NISN).` });
+    } catch (error) {
+      await conn.rollback();
+      throw error;
+    }
+  } catch (error) {
+    console.error("Import Students Error:", error);
+    res.status(500).json({ error: `Gagal impor: ${error.message}` });
+  } finally {
+    conn.release();
+  }
+}));
+app.get("/api/siswa", authenticate, asyncHandler(async (req, res) => {
+  let whereClause = "";
+  const params = [];
+  if (req.user.type === "staff") {
+    const perms = req.user.permissions || [];
+    if (!perms.includes("all")) {
+      const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+      if (rombelRows.length > 0) {
+        const names = rombelRows.map((r) => r.name);
+        whereClause = `WHERE s.rombel IN (${names.map(() => "?").join(",")})`;
+        params.push(...names);
+      }
+    }
+  }
+  const [rows] = await getPool().execute(`
+        SELECT 
+            s.*,
+            dot_ayah.nama as nama_ayah, dot_ayah.nik as nik_ayah, dot_ayah.tahun_lahir as tahun_lahir_ayah, dot_ayah.pendidikan as pendidikan_ayah, dot_ayah.pekerjaan as pekerjaan_ayah, dot_ayah.penghasilan as penghasilan_ayah, dot_ayah.kebutuhan_khusus as kebutuhan_khusus_ayah,
+            dot_ibu.nama as nama_ibu, dot_ibu.nik as nik_ibu, dot_ibu.tahun_lahir as tahun_lahir_ibu, dot_ibu.pendidikan as pendidikan_ibu, dot_ibu.pekerjaan as pekerjaan_ibu, dot_ibu.penghasilan as penghasilan_ibu, dot_ibu.kebutuhan_khusus as kebutuhan_khusus_ibu,
+            dw.nama as nama_wali, dw.nik as nik_wali, dw.tahun_lahir as tahun_lahir_wali, dw.pendidikan as pendidikan_wali, dw.pekerjaan as pekerjaan_wali, dw.penghasilan as penghasilan_wali,
+            dk.telepon_rumah as telepon_rumah, dk.nomor_hp as hp_orang_tua, dk.email as email_orang_tua,
+            dp.tinggi_badan, dp.berat_badan, dp.lingkar_kepala, dp.jarak_rumah, dp.waktu_tempuh, dp.anak_keberapa, dp.jumlah_saudara_kandung,
+            da.nomor_kks, da.penerima_kps_pkh, da.penerima_kip, da.nomor_kip, da.nama_sesuai_kip, da.nomor_kps, da.bank_pip, da.nomor_rek_pip, da.atasnama_rek_pip, da.layak_pip, da.alasan_layak_pip,
+            (SELECT GROUP_CONCAT(COALESCE(NULLIF(jb.istilah, ''), jb.nama_bantuan) SEPARATOR ', ') FROM penerima_bantuan pb JOIN jenis_bantuan jb ON pb.istilah = jb.istilah WHERE pb.siswa_id = s.id) as bantuan_diterima,
+            COALESCE(fs_foto.drive, fs_foto.server) AS foto_profil
+         FROM siswa s
+        LEFT JOIN data_orang_tua dot_ayah ON s.id = dot_ayah.siswa_id AND dot_ayah.tipe = 'ayah'
+        LEFT JOIN data_orang_tua dot_ibu ON s.id = dot_ibu.siswa_id AND dot_ibu.tipe = 'ibu'
+        LEFT JOIN data_wali dw ON s.id = dw.siswa_id
+        LEFT JOIN data_kontak dk ON s.id = dk.siswa_id
+        LEFT JOIN data_periodik dp ON s.id = dp.siswa_id
+        LEFT JOIN data_afirmasi da ON s.id = da.siswa_id
+        LEFT JOIN file_storage fs_foto ON s.id = fs_foto.data_id AND fs_foto.tipe_data = 'siswa' AND fs_foto.kategori = 'foto_profil'
+        ${whereClause}
+        ORDER BY s.nama_lengkap ASC
+    `, params);
+  res.json(rows);
+}));
+app.post("/api/siswa/:id/bantuan", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { istilah, tahun, semester } = req.body;
+  if (!istilah) {
+    return res.status(400).json({ error: "istilah is required" });
+  }
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    const [existing] = await conn.execute(
+      `SELECT id FROM penerima_bantuan WHERE siswa_id = ? AND istilah = ? AND tahun = ? AND semester = ?`,
+      [id, istilah, tahun || null, semester || null]
+    );
+    if (existing.length > 0) {
+      await conn.rollback();
+      return res.status(400).json({ error: "Siswa sudah menerima bantuan ini pada tahun dan semester yang dipilih." });
+    }
+    await conn.execute(
+      `INSERT INTO penerima_bantuan (siswa_id, istilah, tahun, semester) VALUES (?, ?, ?, ?)`,
+      [id, istilah, tahun || null, semester || null]
+    );
+    await conn.commit();
+    res.json({ success: true });
+  } catch (err) {
+    await conn.rollback();
+    res.status(500).json({ error: err.message });
+  } finally {
+    conn.release();
+  }
+}));
+app.get("/api/arsip-siswa", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT * FROM arsip_siswa ORDER BY created_at DESC");
+  res.json(rows);
+}));
+app.get("/api/siswa/search", authenticate, asyncHandler(async (req, res) => {
+  const q = req.query.q;
+  const [rows] = await getPool().execute(
+    "SELECT id, nama_lengkap, nisn, nik, nipd FROM siswa WHERE nisn LIKE ? OR nik LIKE ? OR nama_lengkap LIKE ? ORDER BY nama_lengkap ASC LIMIT 10",
+    [`%${q}%`, `%${q}%`, `%${q}%`]
+  );
+  res.json(rows);
+}));
+app.post("/api/siswa/naik-kelas", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:update")) {
+    return res.status(403).json({ error: "Akses ditolak." });
+  }
+  const { rombel_asal, rombel_tujuan, tahun_pelajaran_baru, semester_baru, siswa_naik, siswa_tinggal } = req.body;
+  if (!rombel_asal || !rombel_tujuan) {
+    return res.status(400).json({ error: "Rombel asal dan tujuan harus diisi." });
+  }
+  const naikIds = Array.isArray(siswa_naik) ? siswa_naik : [];
+  const tinggalIds = Array.isArray(siswa_tinggal) ? siswa_tinggal : [];
+  if (naikIds.length === 0 && tinggalIds.length === 0) {
+    return res.status(400).json({ error: "Pilih setidaknya satu siswa." });
+  }
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    const allIds = [...naikIds, ...tinggalIds];
+    const placeholders = allIds.map(() => "?").join(",");
+    const [students] = await conn.execute(
+      `SELECT id, tahun_pelajaran, semester, rombel FROM siswa WHERE id IN (${placeholders})`,
+      allIds
+    );
+    if (students.length === 0) {
+      await conn.rollback();
+      conn.release();
+      return res.status(404).json({ error: "Tidak ada siswa yang ditemukan." });
+    }
+    for (const student of students) {
+      const isNaik = naikIds.includes(student.id);
+      const isTinggal = tinggalIds.includes(student.id);
+      let keterangan = isNaik ? rombel_tujuan.toLowerCase() === "lulus" ? "Lulus" : "Naik Kelas" : "Tinggal Kelas";
+      await conn.execute(
+        "INSERT INTO arsip_siswa (siswa_id, tahun_pelajaran, semester, rombel, keterangan) VALUES (?, ?, ?, ?, ?)",
+        [student.id, student.tahun_pelajaran, student.semester, student.rombel, keterangan]
+      );
+      let updateQuery = "UPDATE siswa SET ";
+      let updateParams = [];
+      let sets = [];
+      if (isNaik) {
+        sets.push("rombel = ?");
+        updateParams.push(rombel_tujuan);
+        if (rombel_tujuan.toLowerCase() === "lulus") {
+          sets.push("status_aktif = ?");
+          updateParams.push(false);
+        }
+      }
+      if (tahun_pelajaran_baru) {
+        sets.push("tahun_pelajaran = ?");
+        updateParams.push(tahun_pelajaran_baru);
+      }
+      if (semester_baru) {
+        sets.push("semester = ?");
+        updateParams.push(semester_baru);
+      }
+      if (sets.length > 0) {
+        updateQuery += sets.join(", ") + " WHERE id = ?";
+        updateParams.push(student.id);
+        await conn.execute(updateQuery, updateParams);
+      }
+    }
+    await conn.commit();
+    res.json({ message: `Berhasil memproses ${naikIds.length} siswa naik kelas/lulus dan ${tinggalIds.length} siswa tinggal kelas.` });
+  } catch (err) {
+    await conn.rollback();
+    console.error("Error in naik-kelas:", err);
+    res.status(500).json({ error: "Terjadi kesalahan server saat proses naik kelas." });
+  } finally {
+    conn.release();
+  }
+}));
+app.post("/api/siswa/mutasi-keluar", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:update")) {
+    return res.status(403).json({ error: "Akses ditolak." });
+  }
+  const { student_ids, tanggal_mutasi } = req.body;
+  if (!student_ids || !Array.isArray(student_ids) || student_ids.length === 0) {
+    return res.status(400).json({ error: "ID siswa harus diberikan." });
+  }
+  const mutationDate = tanggal_mutasi || (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    const placeholders = student_ids.map(() => "?").join(",");
+    const [students] = await conn.execute(
+      `SELECT id, tahun_pelajaran, semester, rombel FROM siswa WHERE id IN (${placeholders})`,
+      student_ids
+    );
+    if (students.length === 0) {
+      await conn.rollback();
+      conn.release();
+      return res.status(404).json({ error: "Siswa tidak ditemukan." });
+    }
+    for (const student of students) {
+      await conn.execute(
+        "INSERT INTO arsip_siswa (siswa_id, tahun_pelajaran, semester, rombel, keterangan) VALUES (?, ?, ?, ?, 'Mutasi Keluar')",
+        [student.id, student.tahun_pelajaran, student.semester, student.rombel]
+      );
+      await conn.execute(
+        "UPDATE siswa SET rombel = 'PINDAH', status_aktif = ?, tanggal_mutasi = ? WHERE id = ?",
+        [false, mutationDate, student.id]
+      );
+    }
+    await conn.commit();
+    res.json({ message: `Berhasil memutasi keluar ${students.length} siswa.` });
+  } catch (err) {
+    await conn.rollback();
+    console.error("Error in mutasi-keluar:", err);
+    res.status(500).json({ error: "Terjadi kesalahan server saat proses mutasi keluar." });
+  } finally {
+    conn.release();
+  }
+}));
+app.post("/api/siswa", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:create")) {
+    return res.status(403).json({ error: "Akses ditolak." });
+  }
+  const s = req.body;
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    const clean2 = (val) => val === "" ? null : val;
+    const siswaId = import_crypto.default.randomUUID();
+    await conn.execute(
+      `INSERT INTO siswa (id, tahun_pelajaran, semester, nipd, nisn, nik, nama_lengkap, jenis_kelamin, tempat_lahir, tanggal_lahir, agama, kewarganegaraan, alamat_jalan, rt, rw, provinsi, kota, kecamatan, kelurahan, kode_pos, lintang, bujur, nomor_kk, tempat_tinggal, moda_transportasi, rombel, tk_paud, nama_tk_paud, nomor_akte_lahir, skhun, no_peserta_ujian_nasioal, no_seri_ijazah, sekolah_asal, kebutuhan_khusus)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [siswaId, s.tahun_pelajaran, s.semester, s.nipd, s.nisn, s.nik, s.nama_lengkap, s.jenis_kelamin, s.tempat_lahir, s.tanggal_lahir, s.agama, s.kewarganegaraan || "Indonesia", s.alamat_jalan, s.rt, s.rw, s.provinsi, s.kota, s.kecamatan, s.kelurahan, s.kode_pos, s.lintang, s.bujur, s.nomor_kk, s.tempat_tinggal, s.moda_transportasi, s.rombel, s.tk_paud || "Tidak", s.nama_tk_paud, s.nomor_akte_lahir, s.skhun, s.no_peserta_ujian_nasioal, s.no_seri_ijazah, s.sekolah_asal, s.kebutuhan_khusus || "Tidak"].map(clean2)
+    );
+    await conn.execute(
+      `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ayah', ?, ?, ?, ?, ?, ?, ?)`,
+      [siswaId, s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.pendidikan_ayah, s.pekerjaan_ayah, s.penghasilan_ayah, s.kebutuhan_khusus_ayah || "Tidak"].map(clean2)
+    );
+    await conn.execute(
+      `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ibu', ?, ?, ?, ?, ?, ?, ?)`,
+      [siswaId, s.nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.pendidikan_ibu, s.pekerjaan_ibu, s.penghasilan_ibu, s.kebutuhan_khusus_ibu || "Tidak"].map(clean2)
+    );
+    if (s.nama_wali) {
+      await conn.execute(
+        `INSERT INTO data_wali (siswa_id, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.pendidikan_wali, s.pekerjaan_wali, s.penghasilan_wali].map(clean2)
+      );
+    }
+    await conn.execute(
+      `INSERT INTO data_kontak (siswa_id, telepon_rumah, nomor_hp, email) VALUES (?, ?, ?, ?)`,
+      [siswaId, s.telepon_rumah, s.hp_orang_tua, s.email_orang_tua].map(clean2)
+    );
+    await conn.execute(
+      `INSERT INTO data_periodik (siswa_id, tinggi_badan, berat_badan, lingkar_kepala, jarak_rumah, waktu_tempuh, anak_keberapa, jumlah_saudara_kandung) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      [siswaId, s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah, s.waktu_tempuh, s.anak_keberapa, s.jumlah_saudara_kandung].map(clean2)
+    );
+    await conn.execute(
+      `INSERT INTO data_afirmasi (siswa_id, nomor_kks, penerima_kps_pkh, nomor_kps, penerima_kip, nomor_kip, nama_sesuai_kip, bank_pip, nomor_rek_pip, atasnama_rek_pip, layak_pip, alasan_layak_pip) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [siswaId, s.nomor_kks, s.penerima_kps_pkh || "Tidak", s.nomor_kps, s.penerima_kip || "Tidak", s.nomor_kip, s.nama_sesuai_kip, s.bank_pip, s.nomor_rek_pip, s.atasnama_rek_pip, s.layak_pip || "Tidak", s.alasan_layak_pip].map(clean2)
+    );
+    await conn.commit();
+    res.json({ success: true });
+  } catch (err) {
+    await conn.rollback();
+    console.error("Error creating student:", err);
+    res.status(500).json({ error: "Failed to create student: " + err.message });
+  } finally {
+    conn.release();
+  }
+}));
+app.put("/api/siswa/:id", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:update")) {
+    return res.status(403).json({ error: "Akses ditolak." });
+  }
+  const s = req.body;
+  const siswaId = req.params.id;
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    const clean2 = (val) => val === "" ? null : val;
+    await conn.execute(
+      `UPDATE siswa SET tahun_pelajaran = ?, semester = ?, nipd = ?, nisn = ?, nik = ?, nama_lengkap = ?, jenis_kelamin = ?, tempat_lahir = ?, tanggal_lahir = ?, agama = ?, kewarganegaraan = ?, alamat_jalan = ?, rt = ?, rw = ?, provinsi = ?, kota = ?, kecamatan = ?, kelurahan = ?, kode_pos = ?, lintang = ?, bujur = ?, nomor_kk = ?, tempat_tinggal = ?, moda_transportasi = ?, rombel = ?, tk_paud = ?, nama_tk_paud = ?, nomor_akte_lahir = ?, skhun = ?, no_peserta_ujian_nasioal = ?, no_seri_ijazah = ?, sekolah_asal = ?, kebutuhan_khusus = ? WHERE id = ?`,
+      [s.tahun_pelajaran, s.semester, s.nipd, s.nisn, s.nik, s.nama_lengkap, s.jenis_kelamin, s.tempat_lahir, s.tanggal_lahir, s.agama, s.kewarganegaraan || "Indonesia", s.alamat_jalan, s.rt, s.rw, s.provinsi, s.kota, s.kecamatan, s.kelurahan, s.kode_pos, s.lintang, s.bujur, s.nomor_kk, s.tempat_tinggal, s.moda_transportasi, s.rombel, s.tk_paud || "Tidak", s.nama_tk_paud, s.nomor_akte_lahir, s.skhun, s.no_peserta_ujian_nasioal, s.no_seri_ijazah, s.sekolah_asal, s.kebutuhan_khusus || "Tidak", siswaId].map(clean2)
+    );
+    const [ayahRows] = await conn.execute("SELECT id FROM data_orang_tua WHERE siswa_id = ? AND tipe = 'ayah'", [siswaId]);
+    if (ayahRows.length > 0) {
+      await conn.execute(
+        `UPDATE data_orang_tua SET nama = ?, nik = ?, tahun_lahir = ?, pendidikan = ?, pekerjaan = ?, penghasilan = ?, kebutuhan_khusus = ? WHERE siswa_id = ? AND tipe = 'ayah'`,
+        [s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.pendidikan_ayah, s.pekerjaan_ayah, s.penghasilan_ayah, s.kebutuhan_khusus_ayah || "Tidak", siswaId].map(clean2)
+      );
+    } else {
+      await conn.execute(
+        `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ayah', ?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.pendidikan_ayah, s.pekerjaan_ayah, s.penghasilan_ayah, s.kebutuhan_khusus_ayah || "Tidak"].map(clean2)
+      );
+    }
+    const [ibuRows] = await conn.execute("SELECT id FROM data_orang_tua WHERE siswa_id = ? AND tipe = 'ibu'", [siswaId]);
+    if (ibuRows.length > 0) {
+      await conn.execute(
+        `UPDATE data_orang_tua SET nama = ?, nik = ?, tahun_lahir = ?, pendidikan = ?, pekerjaan = ?, penghasilan = ?, kebutuhan_khusus = ? WHERE siswa_id = ? AND tipe = 'ibu'`,
+        [s.nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.pendidikan_ibu, s.pekerjaan_ibu, s.penghasilan_ibu, s.kebutuhan_khusus_ibu || "Tidak", siswaId].map(clean2)
+      );
+    } else {
+      await conn.execute(
+        `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ibu', ?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.pendidikan_ibu, s.pekerjaan_ibu, s.penghasilan_ibu, s.kebutuhan_khusus_ibu || "Tidak"].map(clean2)
+      );
+    }
+    const [waliRows] = await conn.execute("SELECT id FROM data_wali WHERE siswa_id = ?", [siswaId]);
+    if (waliRows.length > 0) {
+      await conn.execute(
+        `UPDATE data_wali SET nama = ?, nik = ?, tahun_lahir = ?, pendidikan = ?, pekerjaan = ?, penghasilan = ? WHERE siswa_id = ?`,
+        [s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.pendidikan_wali, s.pekerjaan_wali, s.penghasilan_wali, siswaId].map(clean2)
+      );
+    } else if (s.nama_wali) {
+      await conn.execute(
+        `INSERT INTO data_wali (siswa_id, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.pendidikan_wali, s.pekerjaan_wali, s.penghasilan_wali].map(clean2)
+      );
+    }
+    const [kontakRows] = await conn.execute("SELECT id FROM data_kontak WHERE siswa_id = ?", [siswaId]);
+    if (kontakRows.length > 0) {
+      await conn.execute(
+        `UPDATE data_kontak SET telepon_rumah = ?, nomor_hp = ?, email = ? WHERE siswa_id = ?`,
+        [s.telepon_rumah, s.hp_orang_tua, s.email_orang_tua, siswaId].map(clean2)
+      );
+    } else {
+      await conn.execute(
+        `INSERT INTO data_kontak (siswa_id, telepon_rumah, nomor_hp, email) VALUES (?, ?, ?, ?)`,
+        [siswaId, s.telepon_rumah, s.hp_orang_tua, s.email_orang_tua].map(clean2)
+      );
+    }
+    const [periodikRows] = await conn.execute("SELECT id FROM data_periodik WHERE siswa_id = ?", [siswaId]);
+    if (periodikRows.length > 0) {
+      await conn.execute(
+        `UPDATE data_periodik SET tinggi_badan = ?, berat_badan = ?, lingkar_kepala = ?, jarak_rumah = ?, waktu_tempuh = ?, anak_keberapa = ?, jumlah_saudara_kandung = ? WHERE siswa_id = ?`,
+        [s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah, s.waktu_tempuh, s.anak_keberapa, s.jumlah_saudara_kandung, siswaId].map(clean2)
+      );
+    } else {
+      await conn.execute(
+        `INSERT INTO data_periodik (siswa_id, tinggi_badan, berat_badan, lingkar_kepala, jarak_rumah, waktu_tempuh, anak_keberapa, jumlah_saudara_kandung) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah, s.waktu_tempuh, s.anak_keberapa, s.jumlah_saudara_kandung].map(clean2)
+      );
+    }
+    const [afirmasiRows] = await conn.execute("SELECT id FROM data_afirmasi WHERE siswa_id = ?", [siswaId]);
+    if (afirmasiRows.length > 0) {
+      await conn.execute(
+        `UPDATE data_afirmasi SET nomor_kks = ?, penerima_kps_pkh = ?, nomor_kps = ?, penerima_kip = ?, nomor_kip = ?, nama_sesuai_kip = ?, bank_pip = ?, nomor_rek_pip = ?, atasnama_rek_pip = ?, layak_pip = ?, alasan_layak_pip = ? WHERE siswa_id = ?`,
+        [s.nomor_kks, s.penerima_kps_pkh || "Tidak", s.nomor_kps, s.penerima_kip || "Tidak", s.nomor_kip, s.nama_sesuai_kip, s.bank_pip, s.nomor_rek_pip, s.atasnama_rek_pip, s.layak_pip || "Tidak", s.alasan_layak_pip, siswaId].map(clean2)
+      );
+    } else {
+      await conn.execute(
+        `INSERT INTO data_afirmasi (siswa_id, nomor_kks, penerima_kps_pkh, nomor_kps, penerima_kip, nomor_kip, nama_sesuai_kip, bank_pip, nomor_rek_pip, atasnama_rek_pip, layak_pip, alasan_layak_pip) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.nomor_kks, s.penerima_kps_pkh || "Tidak", s.nomor_kps, s.penerima_kip || "Tidak", s.nomor_kip, s.nama_sesuai_kip, s.bank_pip, s.nomor_rek_pip, s.atasnama_rek_pip, s.layak_pip || "Tidak", s.alasan_layak_pip].map(clean2)
+      );
+    }
+    await conn.commit();
+    res.json({ success: true });
+  } catch (err) {
+    await conn.rollback();
+    console.error("Error updating student:", err);
+    res.status(500).json({ error: "Failed to update student: " + err.message });
+  } finally {
+    conn.release();
+  }
+}));
+app.delete("/api/siswa/:id", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:delete")) {
+    return res.status(403).json({ error: "Akses ditolak." });
+  }
+  await getPool().execute("DELETE FROM siswa WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/me", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type === "staff") {
+    const [rows] = await getPool().execute(`
+            SELECT wu.*, s.nama_lengkap, s.jenis_ptk, s.nip, s.nuptk, r.name as role_name, r.permissions,
+                   COALESCE(f.drive, f.server, wu.foto_profil) AS foto_profil
+            FROM pengguna_web wu
+            LEFT JOIN pegawai s ON wu.staff_id = s.pegawai_id
+            LEFT JOIN peran r ON wu.role_id = r.id 
+            LEFT JOIN file_storage f ON s.pegawai_id = f.data_id AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+            WHERE wu.username = ?
+        `, [req.user.username]);
+    if (rows.length > 0) {
+      const userObj = rows[0];
+      const isTeacher = userObj.jenis_ptk && userObj.jenis_ptk.toLowerCase().includes("guru") || userObj.role_name && userObj.role_name.toLowerCase().includes("guru");
+      return res.json({ ...userObj, type: "pegawai", is_teacher: isTeacher });
+    }
+    if (req.user.username === process.env.ADMIN_USERNAME && req.user.role === "Admin") {
+      return res.json({ nama_lengkap: "System Admin", role_name: "Admin", permissions: '["all"]', type: "pegawai", is_teacher: false });
+    }
+  } else if (req.user.type === "student") {
+    const id = req.user.id || "not-found";
+    const nisn = req.user.nisn || req.user.username || "not-found";
+    const [rows] = await getPool().execute(`
+            SELECT s.*, COALESCE(f.drive, f.server, s.foto_profil) AS foto_profil
+            FROM siswa s 
+            LEFT JOIN file_storage f ON s.id = f.data_id AND f.tipe_data = 'siswa' AND f.kategori = 'foto_profil'
+            WHERE s.id = ? OR s.nisn = ?
+        `, [id, nisn]);
+    if (rows.length > 0) return res.json({ ...rows[0], type: "student", role_name: "Student", permissions: "[]" });
+  }
+  res.status(404).json({ error: "User not found" });
+}));
+app.post("/api/staff/profile/photo", authenticate, uploadProfile.single("photo"), asyncHandler(async (req, res) => {
+  if (req.user.type !== "staff") return res.status(403).json({ error: "Access denied" });
+  if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+  const [userRows] = await getPool().execute(
+    "SELECT pw.staff_id, p.nik, p.nama_lengkap FROM pengguna_web pw LEFT JOIN pegawai p ON pw.staff_id = p.pegawai_id WHERE pw.username = ?",
+    [req.user.username]
+  );
+  if (userRows.length === 0 || !userRows[0].staff_id) return res.status(404).json({ error: "Staff profile not found" });
+  const staffId = userRows[0].staff_id;
+  const nik = userRows[0].nik || `staff_${staffId}`;
+  const nama = userRows[0].nama_lengkap || "Pegawai";
+  const safeName = `${nik}_${nama}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+  const ext = import_path.default.extname(req.file.originalname);
+  const newFileName = `${safeName}${ext}`;
+  const newPath = import_path.default.join(uploadDir, "profiles", "pegawai", newFileName);
+  import_fs.default.renameSync(req.file.path, newPath);
+  let serverLink = `/uploads/profiles/pegawai/${newFileName}`;
+  let driveLink = null;
+  const gdLink = await uploadToGoogleDriveFallback(newPath, newFileName, req.file.mimetype, "pegawai", "Foto Profil Pegawai");
+  if (gdLink) {
+    driveLink = gdLink;
+    serverLink = null;
+  }
+  await getPool().execute(
+    `INSERT INTO file_storage (data_id, tipe_data, kategori, server, drive) 
+         VALUES (?, 'pegawai', 'foto_profil', ?, ?) 
+         ON DUPLICATE KEY UPDATE server = VALUES(server), drive = VALUES(drive)`,
+    [staffId, serverLink, driveLink]
+  );
+  res.json({ message: "Photo uploaded successfully", photo_url: driveLink || serverLink });
+}));
+app.post("/api/admin/pegawai/:id/photo", authenticate, uploadProfile.single("photo"), asyncHandler(async (req, res) => {
+  if (!req.user.permissions?.includes("all") && req.user.role !== "Admin") return res.status(403).json({ error: "Access denied" });
+  if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+  const staffId = req.params.id;
+  const [pegawaiRows] = await getPool().execute(
+    "SELECT nik, nama_lengkap FROM pegawai WHERE pegawai_id = ?",
+    [staffId]
+  );
+  if (pegawaiRows.length === 0) return res.status(404).json({ error: "Pegawai not found" });
+  const nik = pegawaiRows[0].nik || `staff_${staffId}`;
+  const nama = pegawaiRows[0].nama_lengkap || "Pegawai";
+  const safeName = `${nik}_${nama}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+  const ext = import_path.default.extname(req.file.originalname);
+  const newFileName = `${safeName}${ext}`;
+  const newPath = import_path.default.join(uploadDir, "profiles", "pegawai", newFileName);
+  import_fs.default.renameSync(req.file.path, newPath);
+  let serverLink = `/uploads/profiles/pegawai/${newFileName}`;
+  let driveLink = null;
+  const gdLink = await uploadToGoogleDriveFallback(newPath, newFileName, req.file.mimetype, "pegawai", "Foto Profil Pegawai");
+  if (gdLink) {
+    driveLink = gdLink;
+    serverLink = null;
+  }
+  await getPool().execute(
+    `INSERT INTO file_storage (data_id, tipe_data, kategori, server, drive) 
+         VALUES (?, 'pegawai', 'foto_profil', ?, ?) 
+         ON DUPLICATE KEY UPDATE server = VALUES(server), drive = VALUES(drive)`,
+    [staffId, serverLink, driveLink]
+  );
+  res.json({ message: "Photo uploaded successfully", photo_url: driveLink || serverLink });
+}));
+app.get("/api/student/profile", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Access denied" });
+  const id = req.user.id || "not-found";
+  const nisn = req.user.nisn || req.user.username || "not-found";
+  const [rows] = await getPool().execute(`
+        SELECT 
+            s.*,
+            dot_ayah.nama as nama_ayah, dot_ayah.nik as nik_ayah, dot_ayah.pekerjaan as pekerjaan_ayah,
+            dot_ibu.nama as nama_ibu, dot_ibu.nik as nik_ibu, dot_ibu.pekerjaan as pekerjaan_ibu,
+            dw.nama as nama_wali, dw.nik as nik_wali, dw.pekerjaan as pekerjaan_wali,
+            dk.nomor_hp as hp_orang_tua, dk.email as email_orang_tua,
+            COALESCE(fs_foto.drive, fs_foto.server) AS foto_profil
+         FROM siswa s
+        LEFT JOIN data_orang_tua dot_ayah ON s.id = dot_ayah.siswa_id AND dot_ayah.tipe = 'ayah'
+        LEFT JOIN data_orang_tua dot_ibu ON s.id = dot_ibu.siswa_id AND dot_ibu.tipe = 'ibu'
+        LEFT JOIN data_wali dw ON s.id = dw.siswa_id
+        LEFT JOIN data_kontak dk ON s.id = dk.siswa_id
+        LEFT JOIN data_periodik dp ON s.id = dp.siswa_id
+        LEFT JOIN data_afirmasi da ON s.id = da.siswa_id
+        LEFT JOIN file_storage fs_foto ON s.id = fs_foto.data_id AND fs_foto.tipe_data = 'siswa' AND fs_foto.kategori = 'foto_profil'
+        WHERE s.id = ? OR s.nisn = ?`, [id, nisn]);
+  res.json(rows[0] || null);
+}));
+app.post("/api/student/profile/photo", authenticate, uploadProfile.single("photo"), asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Access denied" });
+  if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+  const id = req.user.id || null;
+  const nisn = req.user.nisn || req.user.username || null;
+  const [rows] = await getPool().execute("SELECT id, nipd, nik, nama_lengkap FROM siswa WHERE id = ? OR nisn = ?", [id, nisn]);
+  if (rows.length === 0) return res.status(404).json({ error: "Siswa not found" });
+  const actualId = rows[0].id;
+  const nik = rows[0].nik || rows[0].nipd || `siswa_${actualId}`;
+  const nama = rows[0].nama_lengkap || "Siswa";
+  const safeName = `${nik}_${nama}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+  const ext = import_path.default.extname(req.file.originalname);
+  const newFileName = `${safeName}${ext}`;
+  const newPath = import_path.default.join(uploadDir, "profiles", "siswa", newFileName);
+  import_fs.default.renameSync(req.file.path, newPath);
+  let serverLink = `/uploads/profiles/siswa/${newFileName}`;
+  let driveLink = null;
+  const gdLink = await uploadToGoogleDriveFallback(newPath, newFileName, req.file.mimetype, "siswa", "Foto Profil Siswa");
+  if (gdLink) {
+    driveLink = gdLink;
+    serverLink = null;
+  }
+  await getPool().execute(
+    `INSERT INTO file_storage (data_id, tipe_data, kategori, server, drive) 
+         VALUES (?, 'siswa', 'foto_profil', ?, ?) 
+         ON DUPLICATE KEY UPDATE server = VALUES(server), drive = VALUES(drive)`,
+    [actualId, serverLink, driveLink]
+  );
+  res.json({ message: "Photo uploaded successfully", photo_url: driveLink || serverLink });
+}));
+app.get("/api/student/absensi", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Access denied" });
+  const id = req.user.id || "not-found";
+  const { start_date, end_date } = req.query;
+  let dateFilter = "";
+  const params = [id];
+  if (start_date && end_date) {
+    dateFilter = "AND tanggal >= ? AND tanggal <= ?";
+    params.push(start_date, end_date);
+  }
+  const [rows] = await getPool().execute(`
+        SELECT status, COUNT(*) as count 
+        FROM absensi_siswa 
+        WHERE student_id = ? ${dateFilter}
+        GROUP BY status
+    `, params);
+  const [records] = await getPool().execute(`
+        SELECT tanggal, status, keterangan 
+        FROM absensi_siswa 
+        WHERE student_id = ? ${dateFilter}
+        ORDER BY tanggal DESC
+    `, params);
+  res.json({ summary: rows, records });
+}));
+app.get("/api/permohonan-pindah/me", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Only students can view their requests" });
+  const student_id = req.user.id;
+  const [rows] = await getPool().execute("SELECT * FROM permohonan_pindah WHERE student_id = ? ORDER BY created_at DESC LIMIT 1", [student_id]);
+  res.json(rows[0] || null);
+}));
+app.get("/api/permohonan-pindah", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT pp.*, s.nama_lengkap, s.nisn, s.tempat_lahir, s.tanggal_lahir, s.agama, s.jenis_kelamin, s.rombel, s.tahun_pelajaran, s.semester
+        FROM permohonan_pindah pp
+        JOIN siswa s ON pp.student_id = s.id
+        ORDER BY pp.created_at DESC
+    `);
+  res.json(rows);
+}));
+app.post("/api/permohonan-pindah", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Only students can submit requests" });
+  const student_id = req.user.id;
+  const { wali_nama, wali_pekerjaan, wali_alamat, tujuan_sekolah, tujuan_desa, tujuan_kec, tujuan_prov, alasan } = req.body;
+  const [existing] = await getPool().execute("SELECT id FROM permohonan_pindah WHERE student_id = ? AND status = 'menunggu'", [student_id]);
+  if (existing.length > 0) {
+    return res.status(400).json({ error: "Anda sudah memiliki pengajuan yang sedang diproses." });
+  }
+  await getPool().execute(`
+        INSERT INTO permohonan_pindah 
+        (student_id, wali_nama, wali_pekerjaan, wali_alamat, tujuan_sekolah, tujuan_desa, tujuan_kec, tujuan_prov, alasan, status)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'menunggu')
+    `, [student_id, wali_nama, wali_pekerjaan, wali_alamat, tujuan_sekolah, tujuan_desa, tujuan_kec, tujuan_prov, alasan]);
+  res.json({ success: true });
+}));
+app.put("/api/permohonan-pindah/:id/status", authenticate, asyncHandler(async (req, res) => {
+  const { status } = req.body;
+  if (!["disetujui", "ditolak"].includes(status)) return res.status(400).json({ error: "Invalid status" });
+  await getPool().execute("UPDATE permohonan_pindah SET status = ? WHERE id = ?", [status, req.params.id]);
+  res.json({ success: true });
+}));
+app.post("/api/permohonan-pindah/:id/upload", authenticate, uploadPermohonan.single("dokumen_scan"), asyncHandler(async (req, res) => {
+  if (!req.file) return res.status(400).json({ error: "No file uploaded" });
+  const docUrl = "/uploads/permohonan/" + req.file.filename;
+  await getPool().execute("UPDATE permohonan_pindah SET dokumen_scan = ? WHERE id = ?", [docUrl, req.params.id]);
+  res.json({ success: true, url: docUrl });
+}));
+app.get("/api/pengajuan_ubah_data", authenticate, asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT dcr.*, s.nama_lengkap, s.nisn 
+        FROM pengajuan_ubah_data dcr
+        LEFT JOIN siswa s ON dcr.student_id = s.id
+        ORDER BY dcr.created_at DESC
+    `);
+  res.json(rows);
+}));
+app.post("/api/pengajuan_ubah_data", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Only students can submit change requests" });
+  let { proposed_data, document_url } = req.body;
+  if (document_url && document_url.startsWith("/uploads/")) {
+    const localPath = import_path.default.join(process.cwd(), document_url);
+    if (import_fs.default.existsSync(localPath)) {
+      const id = req.user.id || null;
+      const nisn = req.user.nisn || req.user.username || null;
+      const [rows] = await getPool().execute("SELECT nipd, nik, nama_lengkap FROM siswa WHERE id = ? OR nisn = ?", [id, nisn]);
+      if (rows.length > 0) {
+        const nik = rows[0].nik || rows[0].nipd || `siswa_${id}`;
+        const nama = rows[0].nama_lengkap || "Siswa";
+        const safeName = `${nik}_${nama}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+        const ext = import_path.default.extname(localPath);
+        const newFileName = `DokumenPerubahan_${safeName}${ext}`;
+        const gdLink = await uploadToGoogleDriveFallback(localPath, newFileName, "application/octet-stream", "perubahan_data", "File Perubahan Data");
+        if (gdLink) {
+          document_url = gdLink;
+        }
+      }
+    }
+  }
+  await getPool().execute(
+    "INSERT INTO pengajuan_ubah_data (student_id, proposed_data, document_url) VALUES (?, ?, ?)",
+    [req.user.id, JSON.stringify(proposed_data), document_url || null]
+  );
+  res.json({ success: true });
+}));
+app.post("/api/penerima/laporan", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "student") return res.status(403).json({ error: "Hanya siswa yang dapat mengirim laporan" });
+  const { penerimaan_id, type, tgl_pencairan, tgl_penarikan, selfie_url, buku_tabungan_url, surat_pernyataan_url } = req.body;
+  await getPool().execute(
+    `INSERT INTO penerima_laporan 
+        (student_id, penerimaan_id, type, tgl_pencairan, tgl_penarikan, selfie_url, buku_tabungan_url, surat_pernyataan_url) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+    [req.user.id, penerimaan_id, type, tgl_pencairan, tgl_penarikan, selfie_url, buku_tabungan_url, surat_pernyataan_url || null]
+  );
+  res.json({ success: true });
+}));
+app.get("/api/penerima/laporan/:type/:penerimaan_id", authenticate, asyncHandler(async (req, res) => {
+  const { type, penerimaan_id } = req.params;
+  const [rows] = await getPool().execute(
+    "SELECT * FROM penerima_laporan WHERE type = ? AND penerimaan_id = ?",
+    [type, penerimaan_id]
+  );
+  res.json(rows);
+}));
+app.post("/api/pengajuan_ubah_data/:id/approve", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const [requestRows] = await getPool().execute("SELECT * FROM pengajuan_ubah_data WHERE id = ?", [id]);
+  if (requestRows.length === 0) return res.status(404).json({ error: "Request not found" });
+  const request = requestRows[0];
+  const proposedData = JSON.parse(request.proposed_data);
+  const fields = Object.keys(proposedData);
+  const values = Object.values(proposedData);
+  const setClause = fields.map((f) => `${f} = ?`).join(", ");
+  await getPool().execute(
+    `UPDATE siswa SET ${setClause} WHERE id = ?`,
+    [...values, request.student_id]
+  );
+  await getPool().execute(
+    "UPDATE pengajuan_ubah_data SET status = 'approved' WHERE id = ?",
+    [id]
+  );
+  res.json({ success: true });
+}));
+app.post("/api/pengajuan_ubah_data/:id/reject", authenticate, asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { admin_note } = req.body;
+  await getPool().execute(
+    "UPDATE pengajuan_ubah_data SET status = 'rejected', admin_note = ? WHERE id = ?",
+    [admin_note, id]
+  );
+  res.json({ success: true });
+}));
+app.post("/api/login", asyncHandler(async (req, res) => {
+  const { username, password, type } = req.body;
+  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
+  const ua = req.headers["user-agent"];
+  if (type === "staff") {
+    if (username === process.env.ADMIN_USERNAME && password === process.env.ADMIN_PASSWORD) {
+      const token = import_jsonwebtoken.default.sign({ username, role: "Admin", type: "staff", permissions: ["all"] }, JWT_SECRET, { expiresIn: "24h" });
+      await getPool().execute(
+        "INSERT INTO riwayat_masuk (type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?)",
+        ["staff", username, ip, ua, "success"]
+      );
+      return res.json({ success: true, token, role: "Admin", type: "staff" });
+    }
+    const [rows] = await getPool().execute(`
+            SELECT wu.*, r.name as role_name, r.permissions
+            FROM pengguna_web wu
+            JOIN peran r ON wu.role_id = r.id
+            WHERE wu.username = ?
+        `, [username]);
+    if (rows.length > 0) {
+      const user = rows[0];
+      const isMatch = await import_bcryptjs.default.compare(password, user.password);
+      if (!isMatch) {
+        await getPool().execute(
+          "INSERT INTO riwayat_masuk (type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?)",
+          [type, username, ip, ua, "failed"]
+        );
+        return res.status(401).json({ error: "User tidak ditemukan atau password salah" });
+      }
+      if (!user.status_aktif) {
+        await getPool().execute(
+          "INSERT INTO riwayat_masuk (user_id, type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?, ?)",
+          [user.id, "staff", username, ip, ua, "failed"]
+        );
+        return res.status(403).json({ error: "Akun Anda telah dinonaktifkan. Silakan hubungi operator." });
+      }
+      const perms = (() => {
+        try {
+          return JSON.parse(user.permissions);
+        } catch {
+          return ["all"];
+        }
+      })();
+      const token = import_jsonwebtoken.default.sign({ id: user.id, username: user.username, role: user.role_name, type: "staff", permissions: perms, staff_id: user.staff_id }, JWT_SECRET, { expiresIn: "24h" });
+      await getPool().execute(
+        "INSERT INTO riwayat_masuk (user_id, type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?, ?)",
+        [user.id, "staff", username, ip, ua, "success"]
+      );
+      return res.json({ success: true, token, role: user.role_name, type: "staff", id: user.id });
+    }
+  } else if (type === "student") {
+    const queryUsername = username || null;
+    const queryPassword = password || null;
+    const [rows] = await getPool().execute("SELECT * FROM siswa WHERE (nisn = ? OR nik = ?) AND tanggal_lahir = ?", [queryUsername, queryUsername, queryPassword]);
+    if (rows.length > 0) {
+      const student = rows[0];
+      if (!student.status_aktif) {
+        await getPool().execute(
+          "INSERT INTO riwayat_masuk (student_id, type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?, ?)",
+          [student.id, "student", username, ip, ua, "failed"]
+        );
+        return res.status(403).json({ error: "Login siswa ditangguhkan. Silakan hubungi wali kelas." });
+      }
+      const token = import_jsonwebtoken.default.sign({ id: student.id, nisn: student.nisn, type: "student", permissions: [] }, JWT_SECRET, { expiresIn: "24h" });
+      await getPool().execute(
+        "INSERT INTO riwayat_masuk (student_id, type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?, ?)",
+        [student.id, "student", username, ip, ua, "success"]
+      );
+      return res.json({ success: true, token, type: "student", id: student.id });
+    }
+  }
+  await getPool().execute(
+    "INSERT INTO riwayat_masuk (type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?)",
+    [type, username, ip, ua, "failed"]
+  );
+  res.status(401).json({ error: "User tidak ditemukan atau password salah" });
+}));
+app.post("/api/sso/verify", asyncHandler(async (req, res) => {
+  const { sso_token, secret_key } = req.body;
+  const [settingsRows] = await getPool().execute("SELECT elearning_token FROM pengaturan_sekolah WHERE id = 1");
+  let validSecret = process.env.SSO_SECRET || "rahasia-dapoy-elearning";
+  if (settingsRows.length > 0 && settingsRows[0].elearning_token) {
+    validSecret = settingsRows[0].elearning_token;
+  }
+  if (secret_key !== validSecret) {
+    return res.status(403).json({ error: "Invalid SSO Secret" });
+  }
+  try {
+    const decoded = import_jsonwebtoken.default.verify(sso_token, JWT_SECRET);
+    if (decoded.type === "student") {
+      const [rows] = await getPool().execute("SELECT * FROM siswa WHERE id = ?", [decoded.id]);
+      if (rows.length === 0) return res.status(404).json({ error: "Siswa not found" });
+      const s = rows[0];
+      return res.json({ success: true, type: "SISWA", data: { username: s.nisn, nama: s.nama, nisn: s.nisn, kelas: null } });
+    } else if (decoded.type === "staff") {
+      const [rows] = await getPool().execute("SELECT p.*, r.name as role_name FROM pengguna_web p JOIN peran r ON p.role_id = r.id WHERE p.id = ?", [decoded.id]);
+      if (rows.length === 0) return res.status(404).json({ error: "Staff not found" });
+      const s = rows[0];
+      let nama = s.username;
+      if (s.staff_id) {
+        const [pegRows] = await getPool().execute("SELECT nama_lengkap FROM pegawai WHERE pegawai_id = ?", [s.staff_id]);
+        if (pegRows.length > 0) nama = pegRows[0].nama_lengkap;
+      }
+      if (s.is_elearning_admin) {
+        return res.json({ success: true, type: "ADMIN", data: { username: s.username, nama, role: "Administrator" } });
+      }
+      return res.json({ success: true, type: "GURU", data: { username: s.username, nama, role: s.role_name } });
+    }
+  } catch (e) {
+    import("fs").then((fs2) => fs2.writeFileSync("debug_sso.txt", e.toString() + "\\n" + (e.stack || "")));
+    console.error("SSO Verify Error:", e);
+    return res.status(401).json({ error: "Invalid SSO Token" });
+  }
+}));
+app.post("/api/sso/sync-data", asyncHandler(async (req, res) => {
+  const { secret_key } = req.body;
+  const [settingsRows] = await getPool().execute("SELECT elearning_token FROM pengaturan_sekolah WHERE id = 1");
+  let validSecret = process.env.SSO_SECRET || "rahasia-dapoy-elearning";
+  if (settingsRows.length > 0 && settingsRows[0].elearning_token) {
+    validSecret = settingsRows[0].elearning_token;
+  }
+  if (secret_key !== validSecret) {
+    return res.status(403).json({ error: "Invalid SSO Secret" });
+  }
+  const [siswaRows] = await getPool().execute(
+    "SELECT nisn, nama_lengkap as nama, rombel as kelas FROM siswa WHERE status_aktif = 1 AND nisn IS NOT NULL AND nisn != ''"
+  );
+  const [guruRows] = await getPool().execute(
+    "SELECT p.username, p.staff_id, p.is_elearning_admin FROM pengguna_web p WHERE p.status_aktif = 1"
+  );
+  const guruData = await Promise.all(guruRows.map(async (g) => {
+    let nama = g.username;
+    let mapel = null;
+    if (g.staff_id) {
+      const [pegRows] = await getPool().execute("SELECT nama_lengkap, mengajar FROM pegawai WHERE pegawai_id = ?", [g.staff_id]);
+      if (pegRows.length > 0) {
+        nama = pegRows[0].nama_lengkap;
+        mapel = pegRows[0].mengajar;
+      }
+    } else {
+      const [pegRows2] = await getPool().execute("SELECT nama_lengkap, mengajar FROM pegawai WHERE nik = ?", [g.username]);
+      if (pegRows2.length > 0) {
+        nama = pegRows2[0].nama_lengkap;
+        mapel = pegRows2[0].mengajar;
+      }
+    }
+    return { username: g.username, nama, mapel, is_admin: !!g.is_elearning_admin };
+  }));
+  return res.json({ success: true, data: { siswa: siswaRows, guru: guruData } });
+}));
+app.get("/api/quick_links", authenticate, asyncHandler(async (req, res) => {
+  let query = "SELECT * FROM quick_links ORDER BY created_at ASC";
+  let params = [];
+  if (req.user.type === "student") {
+    query = "SELECT * FROM quick_links WHERE target_audience IN ('student', 'all') ORDER BY created_at ASC";
+  } else if (req.user.type === "staff") {
+    if (req.query.admin === "true") {
+      query = "SELECT * FROM quick_links ORDER BY created_at ASC";
+    } else {
+      query = "SELECT * FROM quick_links WHERE target_audience IN ('staff', 'all') ORDER BY created_at ASC";
+    }
+  }
+  const [rows] = await getPool().execute(query, params);
+  res.json(rows);
+}));
+app.post("/api/quick_links", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions?.includes("all") && req.user.role !== "Admin") return res.status(403).json({ error: "Access denied" });
+  const { title, url, target_audience, icon_name } = req.body;
+  const [result] = await getPool().execute(
+    "INSERT INTO quick_links (title, url, target_audience, icon_name) VALUES (?, ?, ?, ?)",
+    [title, url, target_audience || "all", icon_name || "Link"]
+  );
+  const [rows] = await getPool().execute("SELECT * FROM quick_links WHERE id = ?", [result.insertId]);
+  res.json(rows[0]);
+}));
+app.put("/api/quick_links/:id", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions?.includes("all") && req.user.role !== "Admin") return res.status(403).json({ error: "Access denied" });
+  const { title, url, target_audience, icon_name } = req.body;
+  await getPool().execute(
+    "UPDATE quick_links SET title = ?, url = ?, target_audience = ?, icon_name = ? WHERE id = ?",
+    [title, url, target_audience, icon_name, req.params.id]
+  );
+  const [rows] = await getPool().execute("SELECT * FROM quick_links WHERE id = ?", [req.params.id]);
+  res.json(rows[0]);
+}));
+app.delete("/api/quick_links/:id", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions?.includes("all") && req.user.role !== "Admin") return res.status(403).json({ error: "Access denied" });
+  await getPool().execute("DELETE FROM quick_links WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/artikel_blog", asyncHandler(async (req, res) => {
+  try {
+    const [rows] = await getPool().execute(`
+            SELECT
+                ab.*,
+                COALESCE(
+                    CONCAT_WS(' ',
+                        NULLIF(pg.gelar_depan, ''),
+                        pg.nama_lengkap,
+                        NULLIF(pg.gelar_belakang, '')
+                    ),
+                    ab.author_name
+                ) AS author_name
+            FROM artikel_blog ab
+            LEFT JOIN pengguna_web pw ON ab.author_id = pw.id
+            LEFT JOIN pegawai pg ON pw.staff_id = pg.pegawai_id
+            WHERE ab.status = 'published'
+            ORDER BY ab.created_at DESC
+        `);
+    res.json(rows);
+  } catch (err) {
+    if (err.message.includes("Table") && err.message.includes("doesn't exist")) {
+      console.log("[DB] Blog table missing, creating now...");
+      await getPool().query(`
+                CREATE TABLE IF NOT EXISTS artikel_blog (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    title VARCHAR(255) NOT NULL,
+                    content TEXT NOT NULL,
+                    image_url TEXT,
+                    author_id INT,
+                    author_name VARCHAR(255),
+                    category VARCHAR(100) DEFAULT 'Kegiatan',
+                    status VARCHAR(20) DEFAULT 'draft',
+                    seo_tags TEXT,
+                    created_at DATETIME DEFAULT NULL,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+                )
+            `);
+      const [rows2] = await getPool().execute("SELECT * FROM artikel_blog WHERE status = 'published' ORDER BY created_at DESC");
+      return res.json(rows2);
+    }
+    throw err;
+  }
+}));
+app.get("/api/artikel_blog/:id", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute(`
+        SELECT
+            ab.*,
+            COALESCE(
+                CONCAT_WS(' ',
+                    NULLIF(pg.gelar_depan, ''),
+                    pg.nama_lengkap,
+                    NULLIF(pg.gelar_belakang, '')
+                ),
+                ab.author_name
+            ) AS author_name
+        FROM artikel_blog ab
+        LEFT JOIN pengguna_web pw ON ab.author_id = pw.id
+        LEFT JOIN pegawai pg ON pw.staff_id = pg.pegawai_id
+        WHERE ab.id = ?
+    `, [req.params.id]);
+  if (rows.length === 0) return res.status(404).json({ error: "Post tidak ditemukan" });
+  res.json(rows[0]);
+}));
+app.post("/api/artikel_blog", authenticate, asyncHandler(async (req, res) => {
+  const { title, content, image_url, category, status, postToFacebook, postToInstagram, socialPostSchedule } = req.body;
+  let { seo_tags } = req.body;
+  if (!seo_tags) seo_tags = generateSEOTags(title, content);
+  const author_id = req.user?.id || req.body.author_id;
+  let author_name = req.body.author_name || req.user?.username || "";
+  if (req.user?.id) {
+    try {
+      const [authorRows] = await getPool().execute(`
+                SELECT
+                    COALESCE(
+                        CONCAT_WS(' ',
+                            NULLIF(pg.gelar_depan, ''),
+                            pg.nama_lengkap,
+                            NULLIF(pg.gelar_belakang, '')
+                        ),
+                        pw.username
+                    ) AS full_name
+                FROM pengguna_web pw
+                LEFT JOIN pegawai pg ON pw.staff_id = pg.pegawai_id
+                WHERE pw.id = ?
+            `, [req.user.id]);
+      if (authorRows.length > 0 && authorRows[0].full_name) {
+        author_name = authorRows[0].full_name;
+      }
+    } catch (e) {
+      console.error("Error fetching author name:", e);
+    }
+  }
+  await getPool().execute(
+    "INSERT INTO artikel_blog (title, content, image_url, author_id, author_name, category, status, seo_tags, post_to_fb, post_to_ig, social_post_schedule, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())",
+    [title, content, image_url, author_id, author_name, category, status || "draft", seo_tags, postToFacebook ? 1 : 0, postToInstagram ? 1 : 0, socialPostSchedule || null]
+  );
+  res.json({ success: true });
+}));
+app.put("/api/artikel_blog/:id", authenticate, asyncHandler(async (req, res) => {
+  const { title, content, image_url, category, status, postToFacebook, postToInstagram, socialPostSchedule } = req.body;
+  let { seo_tags } = req.body;
+  if (!seo_tags) seo_tags = generateSEOTags(title, content);
+  await getPool().execute(
+    "UPDATE artikel_blog SET title = ?, content = ?, image_url = ?, category = ?, status = ?, seo_tags = ?, post_to_fb = ?, post_to_ig = ?, social_post_schedule = ? WHERE id = ?",
+    [title, content, image_url, category, status || "draft", seo_tags, postToFacebook ? 1 : 0, postToInstagram ? 1 : 0, socialPostSchedule || null, req.params.id]
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/artikel_blog/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM artikel_blog WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/galeri", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT * FROM galeri ORDER BY created_at DESC");
+  res.json(rows);
+}));
+app.post("/api/galeri", authenticate, asyncHandler(async (req, res) => {
+  const { title, description, image_url } = req.body;
+  let { seo_tags } = req.body;
+  if (!image_url) return res.status(400).json({ error: "URL Gambar harus diisi" });
+  if (!seo_tags) seo_tags = generateSEOTags(title || "", description || "");
+  await getPool().execute(
+    "INSERT INTO galeri (title, description, image_url, seo_tags) VALUES (?, ?, ?, ?)",
+    [title || null, description || null, image_url, seo_tags]
+  );
+  res.json({ success: true });
+}));
+app.delete("/api/galeri/:id", authenticate, asyncHandler(async (req, res) => {
+  await getPool().execute("DELETE FROM galeri WHERE id = ?", [req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/absensi", authenticate, asyncHandler(async (req, res) => {
+  const { tanggal, rombel } = req.query;
+  if (!tanggal || !rombel) return res.status(400).json({ error: "Tanggal dan rombel harus diisi" });
+  const reqDate = new Date(tanggal);
+  if (reqDate.getDay() === 0 || reqDate.getDay() === 6) {
+    return res.json({ isHoliday: true, holidayName: "Libur Akhir Pekan" });
+  }
+  const [holidays] = await getPool().execute(
+    "SELECT title FROM kalender_akademik WHERE category = 'Holiday' AND event_date = ?",
+    [tanggal]
+  );
+  if (holidays.length > 0) {
+    return res.json({ isHoliday: true, holidayName: holidays[0].title });
+  }
+  const [students] = await getPool().execute(
+    "SELECT id, nisn, nipd, nama_lengkap FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+    [rombel]
+  );
+  const [attendance] = await getPool().execute(
+    "SELECT student_id, status, keterangan FROM absensi_siswa WHERE tanggal = ?",
+    [tanggal]
+  );
+  const attMap = /* @__PURE__ */ new Map();
+  attendance.forEach((a) => attMap.set(a.student_id, a));
+  const result = students.map((s) => {
+    const record = attMap.get(s.id);
+    return {
+      ...s,
+      status: record ? record.status : "Hadir",
+      keterangan: record ? record.keterangan : ""
+    };
+  });
+  res.json(result);
+}));
+app.get("/api/mata_pelajaran", authenticate, asyncHandler(async (req, res) => {
+  const { kurikulum_id, tingkat_pendidikan_id } = req.query;
+  if (!kurikulum_id || !tingkat_pendidikan_id) return res.json([]);
+  const [rows] = await getPool().query(`
+        SELECT mp.mata_pelajaran_id, mp.nama
+        FROM \`ref.mata_pelajaran_kurikulum\` mpk
+        JOIN \`ref.mata_pelajaran\` mp ON mpk.mata_pelajaran_id = mp.mata_pelajaran_id
+        JOIN \`ref.kurikulum\` kr ON mpk.kurikulum_id = kr.kurikulum_id
+        WHERE kr.nama_kurikulum = ? AND mpk.tingkat_pendidikan_id = ?
+        ORDER BY mp.nama ASC
+    `, [kurikulum_id, tingkat_pendidikan_id]);
+  res.json(rows);
+}));
+app.get("/api/tingkat_pendidikan", authenticate, asyncHandler(async (req, res) => {
+  const { jenjang_pendidikan_id } = req.query;
+  if (!jenjang_pendidikan_id) return res.json([]);
+  const [rows] = await getPool().query(`
+        SELECT tingkat_pendidikan_id as id, nama as label, kode as value
+        FROM \`ref.tingkat_pendidikan\`
+        WHERE jenjang_pendidikan_id = ?
+        ORDER BY CAST(tingkat_pendidikan_id AS UNSIGNED) ASC
+    `, [jenjang_pendidikan_id]);
+  res.json(rows);
+}));
+app.get("/api/kurikulum", authenticate, asyncHandler(async (req, res) => {
+  const jenjang = req.query.jenjang;
+  let query = "SELECT kurikulum_id, nama_kurikulum FROM `ref.kurikulum`";
+  let params = [];
+  if (jenjang) {
+    query += " WHERE jenjang_pendidikan_id = ?";
+    params.push(jenjang);
+  }
+  query += " ORDER BY nama_kurikulum ASC";
+  const [rows] = await getPool().query(query, params);
+  res.json(rows);
+}));
+app.post("/api/absensi", authenticate, asyncHandler(async (req, res) => {
+  const { tanggal, rombel, records } = req.body;
+  if (!tanggal || !rombel || !Array.isArray(records)) {
+    return res.status(400).json({ error: "Data tidak lengkap" });
+  }
+  const reqDate = new Date(tanggal);
+  if (reqDate.getDay() === 0 || reqDate.getDay() === 6) {
+    return res.status(400).json({ error: "Libur Akhir Pekan" });
+  }
+  const [holidays] = await getPool().execute(
+    "SELECT title FROM kalender_akademik WHERE category = 'Holiday' AND event_date = ?",
+    [tanggal]
+  );
+  if (holidays.length > 0) {
+    return res.status(400).json({ error: `Hari Libur: ${holidays[0].title}` });
+  }
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    for (const rec of records) {
+      if (rec.status === "Hadir" && !rec.keterangan) {
+        await conn.execute(
+          "DELETE FROM absensi_siswa WHERE student_id = ? AND tanggal = ?",
+          [rec.student_id, tanggal]
+        );
+      } else {
+        await conn.execute(
+          `INSERT INTO absensi_siswa (student_id, tanggal, status, keterangan, recorded_by)
+                     VALUES (?, ?, ?, ?, ?)
+                     ON DUPLICATE KEY UPDATE status = VALUES(status), keterangan = VALUES(keterangan), recorded_by = VALUES(recorded_by)`,
+          [rec.student_id, tanggal, rec.status, rec.keterangan || null, req.user.staff_id || null]
+        );
+      }
+    }
+    await conn.commit();
+    res.json({ success: true });
+  } catch (err) {
+    await conn.rollback();
+    throw err;
+  } finally {
+    conn.release();
+  }
+}));
+app.get("/api/absensi/report", authenticate, asyncHandler(async (req, res) => {
+  const { start_date, end_date, rombel } = req.query;
+  if (!start_date || !end_date || !rombel) return res.status(400).json({ error: "Parameter tidak lengkap" });
+  const [holidays] = await getPool().execute(
+    "SELECT event_date FROM kalender_akademik WHERE category = 'Holiday' AND event_date >= ? AND event_date <= ?",
+    [start_date, end_date]
+  );
+  const holidayStrs = holidays.map((h) => {
+    const d = new Date(h.event_date);
+    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+    return d.toISOString().split("T")[0];
+  });
+  let workingDays = 0;
+  const sDate = new Date(start_date);
+  const eDate = new Date(end_date);
+  for (let d = new Date(sDate); d <= eDate; d.setDate(d.getDate() + 1)) {
+    const day = d.getDay();
+    if (day !== 0 && day !== 6) {
+      const dLocal = new Date(d);
+      dLocal.setMinutes(dLocal.getMinutes() - dLocal.getTimezoneOffset());
+      const dStr = dLocal.toISOString().split("T")[0];
+      if (!holidayStrs.includes(dStr)) {
+        workingDays++;
+      }
+    }
+  }
+  const [students] = await getPool().execute(
+    "SELECT id, nisn, nipd, nama_lengkap FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+    [rombel]
+  );
+  const [attendance] = await getPool().execute(
+    `SELECT a.student_id, a.status, COUNT(*) as count
+         FROM absensi_siswa a
+         JOIN siswa s ON a.student_id = s.id
+         WHERE s.rombel = ? AND a.tanggal >= ? AND a.tanggal <= ?
+         GROUP BY a.student_id, a.status`,
+    [rombel, start_date, end_date]
+  );
+  const reportMap = /* @__PURE__ */ new Map();
+  students.forEach((s) => {
+    reportMap.set(s.id, {
+      ...s,
+      hadir: 0,
+      sakit: 0,
+      izin: 0,
+      alpa: 0
+    });
+  });
+  attendance.forEach((a) => {
+    const rec = reportMap.get(a.student_id);
+    if (rec) {
+      if (a.status === "Sakit") rec.sakit = a.count;
+      else if (a.status === "Izin") rec.izin = a.count;
+      else if (a.status === "Tanpa Keterangan") rec.alpa = a.count;
+    }
+  });
+  const reportArray = Array.from(reportMap.values()).map((rec) => {
+    rec.hadir = Math.max(0, workingDays - rec.sakit - rec.izin - rec.alpa);
+    return rec;
+  });
+  res.json({ workingDays, report: reportArray });
+}));
+app.get("/sitemap.xml", asyncHandler(async (req, res) => {
+  const [settingsRows] = await getPool().execute("SELECT sitemap_enabled FROM pengaturan_sekolah WHERE id = 1");
+  const sitemapEnabled = settingsRows.length > 0 ? settingsRows[0].sitemap_enabled : 1;
+  if (!sitemapEnabled) {
+    return res.status(404).send("Sitemap is disabled by administrator.");
+  }
+  const baseUrl = req.protocol + "://" + req.get("host");
+  const staticRoutes = ["/", "/login", "/spmb", "/academic", "/blog"];
+  let blogRoutes = [];
+  try {
+    const [blogs] = await getPool().execute("SELECT id FROM artikel_blog WHERE status = 'published'");
+    blogRoutes = blogs.map((b) => `/blog/${b.id}`);
+  } catch (err) {
+    console.error("Sitemap: Failed to fetch blogs", err);
+  }
+  const allRoutes = [...staticRoutes, ...blogRoutes];
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${allRoutes.map((route) => `  <url>
+    <loc>${baseUrl}${route}</loc>
+    <lastmod>${(/* @__PURE__ */ new Date()).toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>${route === "/" ? "1.0" : "0.8"}</priority>
+  </url>`).join("\n")}
+</urlset>`;
+  res.header("Content-Type", "application/xml");
+  res.send(sitemapXml);
+}));
+var uploadSpmb = (0, import_multer.default)({
+  storage: import_multer.default.diskStorage({
+    destination: (req, file, cb) => {
+      const dir = import_path.default.join(uploadDir, "spmb");
+      if (!import_fs.default.existsSync(dir)) import_fs.default.mkdirSync(dir, { recursive: true });
+      cb(null, dir);
+    },
+    filename: (req, file, cb) => {
+      const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+      cb(null, uniqueSuffix + import_path.default.extname(file.originalname));
+    }
+  }),
+  limits: { fileSize: 1 * 1024 * 1024 }
+  // 1MB limit
+});
+app.get("/api/spmb/status", asyncHandler(async (req, res) => {
+  const [rows] = await getPool().execute("SELECT spmb_config FROM pengaturan_sekolah WHERE id = 1");
+  if (rows.length === 0) return res.json({ active: false });
+  try {
+    const config = JSON.parse(rows[0].spmb_config || "{}");
+    res.json({ active: !!config.active });
+  } catch {
+    res.json({ active: false });
+  }
+}));
+app.post("/api/spmb/register", uploadSpmb.fields([
+  { name: "akte", maxCount: 1 },
+  { name: "kk", maxCount: 1 },
+  { name: "ktp", maxCount: 1 },
+  { name: "pasfoto", maxCount: 1 },
+  { name: "ijazah", maxCount: 1 }
+]), asyncHandler(async (req, res) => {
+  const { nisn, nik, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat_lengkap, asal_sekolah, nama_ayah, nama_ibu, pekerjaan_ayah, pekerjaan_ibu, no_telp_ortu, email, password } = req.body;
+  const [settings] = await getPool().execute("SELECT spmb_config FROM pengaturan_sekolah WHERE id = 1");
+  if (settings.length > 0) {
+    try {
+      const config = JSON.parse(settings[0].spmb_config || "{}");
+      if (!config.active) return res.status(403).json({ error: "Pendaftaran SPMB sedang ditutup." });
+    } catch {
+    }
+  }
+  if (!nik || !nama_lengkap || !password) return res.status(400).json({ error: "NIK, Nama Lengkap, dan Password wajib diisi." });
+  const hashedPassword = await import_bcryptjs.default.hash(password, 10);
+  const nomor_pendaftaran = "SPMB-" + Date.now();
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    const [result] = await conn.execute(
+      `INSERT INTO spmb_applicants 
+            (nomor_pendaftaran, nisn, nik, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat_lengkap, asal_sekolah, nama_ayah, nama_ibu, pekerjaan_ayah, pekerjaan_ibu, no_telp_ortu, email, password) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [nomor_pendaftaran, nisn || null, nik, nama_lengkap, tempat_lahir || null, tanggal_lahir || null, jenis_kelamin || null, alamat_lengkap || null, asal_sekolah || null, nama_ayah || null, nama_ibu || null, pekerjaan_ayah || null, pekerjaan_ibu || null, no_telp_ortu || null, email || null, hashedPassword]
+    );
+    const applicantId = result.insertId;
+    const files = req.files || {};
+    const docs = [
+      { field: "akte", type: "AKTE" },
+      { field: "kk", type: "KK" },
+      { field: "ktp", type: "KTP_ORTU" },
+      { field: "pasfoto", type: "PASFOTO" },
+      { field: "ijazah", type: "IJAZAH" }
+    ];
+    for (const doc of docs) {
+      if (files[doc.field] && files[doc.field].length > 0) {
+        const file = files[doc.field][0];
+        let fileUrl = `/uploads/spmb/${file.filename}`;
+        const safeName = `${nik}_${nama_lengkap}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+        const ext = import_path.default.extname(file.originalname);
+        const newFileName = `${doc.type}_${safeName}${ext}`;
+        const gdLink = await uploadToGoogleDriveFallback(file.path, newFileName, file.mimetype, "pendaftar", "Data Pendaftar SPMB", nomor_pendaftaran);
+        if (gdLink) {
+          fileUrl = gdLink;
+        }
+        await conn.execute(
+          "INSERT INTO spmb_documents (applicant_id, jenis_dokumen, file_url) VALUES (?, ?, ?)",
+          [applicantId, doc.type, fileUrl]
+        );
+      }
+    }
+    await conn.commit();
+    res.json({ success: true, nomor_pendaftaran });
+  } catch (err) {
+    await conn.rollback();
+    if (err.code === "ER_DUP_ENTRY") {
+      return res.status(400).json({ error: "NIK atau NISN sudah terdaftar." });
+    }
+    throw err;
+  } finally {
+    conn.release();
+  }
+}));
+app.put("/api/spmb/update", authenticate, uploadSpmb.fields([
+  { name: "akte", maxCount: 1 },
+  { name: "kk", maxCount: 1 },
+  { name: "ktp", maxCount: 1 },
+  { name: "pasfoto", maxCount: 1 },
+  { name: "ijazah", maxCount: 1 }
+]), asyncHandler(async (req, res) => {
+  if (req.user.type !== "applicant") return res.status(403).json({ error: "Akses ditolak." });
+  const applicantId = req.user.id;
+  const { nisn, nik, nama_lengkap, tempat_lahir, tanggal_lahir, jenis_kelamin, alamat_lengkap, asal_sekolah, nama_ayah, nama_ibu, pekerjaan_ayah, pekerjaan_ibu, no_telp_ortu, email, password } = req.body;
+  if (!nik || !nama_lengkap) return res.status(400).json({ error: "NIK dan Nama Lengkap wajib diisi." });
+  const conn = await getPool().getConnection();
+  try {
+    await conn.beginTransaction();
+    let updateQuery = `UPDATE spmb_applicants SET nisn=?, nik=?, nama_lengkap=?, tempat_lahir=?, tanggal_lahir=?, jenis_kelamin=?, alamat_lengkap=?, asal_sekolah=?, nama_ayah=?, nama_ibu=?, pekerjaan_ayah=?, pekerjaan_ibu=?, no_telp_ortu=?, email=?, status_pendaftaran='PENDING', catatan_perbaikan=NULL`;
+    let queryParams = [nisn || null, nik, nama_lengkap, tempat_lahir || null, tanggal_lahir || null, jenis_kelamin || null, alamat_lengkap || null, asal_sekolah || null, nama_ayah || null, nama_ibu || null, pekerjaan_ayah || null, pekerjaan_ibu || null, no_telp_ortu || null, email || null];
+    if (password) {
+      const hashedPassword = await import_bcryptjs.default.hash(password, 10);
+      updateQuery += `, password=?`;
+      queryParams.push(hashedPassword);
+    }
+    updateQuery += ` WHERE id=?`;
+    queryParams.push(applicantId);
+    await conn.execute(updateQuery, queryParams);
+    const files = req.files || {};
+    const docs = [
+      { field: "akte", type: "AKTE" },
+      { field: "kk", type: "KK" },
+      { field: "ktp", type: "KTP_ORTU" },
+      { field: "pasfoto", type: "PASFOTO" },
+      { field: "ijazah", type: "IJAZAH" }
+    ];
+    const [appRows] = await conn.execute("SELECT nomor_pendaftaran FROM spmb_applicants WHERE id=?", [applicantId]);
+    const nomor_pendaftaran = appRows[0]?.nomor_pendaftaran || `SPMB-EDIT-${applicantId}`;
+    for (const doc of docs) {
+      if (files[doc.field] && files[doc.field].length > 0) {
+        const file = files[doc.field][0];
+        let fileUrl = `/uploads/spmb/${file.filename}`;
+        const safeName = `${nik}_${nama_lengkap}`.replace(/[^a-zA-Z0-9_-]/g, "_");
+        const ext = import_path.default.extname(file.originalname);
+        const newFileName = `${doc.type}_${safeName}${ext}`;
+        const gdLink = await uploadToGoogleDriveFallback(file.path, newFileName, file.mimetype, "pendaftar", "Data Pendaftar SPMB", nomor_pendaftaran);
+        if (gdLink) {
+          fileUrl = gdLink;
+        }
+        await conn.execute(
+          `INSERT INTO spmb_documents (applicant_id, jenis_dokumen, file_url) VALUES (?, ?, ?)
+                     ON DUPLICATE KEY UPDATE file_url = VALUES(file_url)`,
+          [applicantId, doc.type, fileUrl]
+        );
+      }
+    }
+    await conn.commit();
+    res.json({ success: true });
+  } catch (err) {
+    await conn.rollback();
+    if (err.code === "ER_DUP_ENTRY") {
+      return res.status(400).json({ error: "NIK atau NISN sudah terdaftar pada pengguna lain." });
+    }
+    throw err;
+  } finally {
+    conn.release();
+  }
+}));
+app.post("/api/spmb/login", asyncHandler(async (req, res) => {
+  const [settings] = await getPool().execute("SELECT spmb_config FROM pengaturan_sekolah WHERE id = 1");
+  if (settings.length > 0) {
+    try {
+      const config = JSON.parse(settings[0].spmb_config || "{}");
+      if (config.login_portal_active === false) return res.status(403).json({ error: "Portal login peserta saat ini ditutup." });
+    } catch {
+    }
+  }
+  const { username, password } = req.body;
+  if (!username || !password) return res.status(400).json({ error: "Username dan Password wajib diisi." });
+  const [rows] = await getPool().execute(
+    "SELECT * FROM spmb_applicants WHERE nik = ? OR nisn = ?",
+    [username, username]
+  );
+  if (rows.length === 0) return res.status(401).json({ error: "Akun tidak ditemukan." });
+  const applicant = rows[0];
+  const isMatch = await import_bcryptjs.default.compare(password, applicant.password);
+  if (!isMatch) return res.status(401).json({ error: "Password salah." });
+  const token = import_jsonwebtoken.default.sign(
+    { id: applicant.id, type: "applicant", name: applicant.nama_lengkap },
+    JWT_SECRET,
+    { expiresIn: "7d" }
+  );
+  res.json({ success: true, token, applicant: { id: applicant.id, nama_lengkap: applicant.nama_lengkap, nomor_pendaftaran: applicant.nomor_pendaftaran } });
+}));
+app.get("/api/spmb/me", authenticate, asyncHandler(async (req, res) => {
+  if (req.user.type !== "applicant") return res.status(403).json({ error: "Akses ditolak." });
+  const [applicants] = await getPool().execute("SELECT id, nomor_pendaftaran, nisn, nik, nama_lengkap, status_pendaftaran, catatan_perbaikan, tanggal_daftar FROM spmb_applicants WHERE id = ?", [req.user.id]);
+  if (applicants.length === 0) return res.status(404).json({ error: "Pendaftar tidak ditemukan." });
+  const [docs] = await getPool().execute("SELECT jenis_dokumen, file_url FROM spmb_documents WHERE applicant_id = ?", [req.user.id]);
+  res.json({ ...applicants[0], documents: docs });
+}));
+app.get("/api/admin/spmb_applicants", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions?.includes("all") && !req.user.permissions?.includes("spmb:read") && req.user.role !== "Admin") return res.status(403).json({ error: "Akses ditolak." });
+  const [applicants] = await getPool().execute("SELECT * FROM spmb_applicants ORDER BY tanggal_daftar DESC");
+  const [docs] = await getPool().execute("SELECT * FROM spmb_documents");
+  const docsMap = /* @__PURE__ */ new Map();
+  for (const doc of docs) {
+    if (!docsMap.has(doc.applicant_id)) docsMap.set(doc.applicant_id, []);
+    docsMap.get(doc.applicant_id).push(doc);
+  }
+  const result = applicants.map((app2) => {
+    delete app2.password;
+    return {
+      ...app2,
+      documents: docsMap.get(app2.id) || []
+    };
+  });
+  res.json(result);
+}));
+app.put("/api/admin/spmb_applicants/:id/status", authenticate, asyncHandler(async (req, res) => {
+  if (!req.user.permissions?.includes("all") && !req.user.permissions?.includes("spmb:update") && req.user.role !== "Admin") return res.status(403).json({ error: "Akses ditolak." });
+  const { status, catatan } = req.body;
+  if (!["PENDING", "APPROVED", "REJECTED", "REVISION"].includes(status)) return res.status(400).json({ error: "Status tidak valid." });
+  await getPool().execute("UPDATE spmb_applicants SET status_pendaftaran = ?, catatan_perbaikan = ? WHERE id = ?", [status, catatan || null, req.params.id]);
+  res.json({ success: true });
+}));
+app.get("/api/admin/settings/drive", authenticate, asyncHandler(async (req, res) => {
+  if (!["Admin", "Superadmin"].includes(req.user.role)) return res.status(403).json({ error: "Access denied" });
+  const [rows] = await getPool().execute("SELECT google_drive_config FROM pengaturan_sekolah WHERE id = 1");
+  const config = rows.length > 0 && rows[0].google_drive_config ? JSON.parse(rows[0].google_drive_config) : null;
+  res.json({ config });
+}));
+app.post("/api/admin/settings/drive", authenticate, asyncHandler(async (req, res) => {
+  if (!["Admin", "Superadmin"].includes(req.user.role)) return res.status(403).json({ error: "Access denied" });
+  const config = req.body.config;
+  if (req.body.testConnection) {
+    const testResult = await testDriveConnection(config, req.body.testFolderId);
+    return res.json(testResult);
+  }
+  await getPool().execute("UPDATE pengaturan_sekolah SET google_drive_config = ? WHERE id = 1", [JSON.stringify(config)]);
+  res.json({ success: true, message: "Konfigurasi berhasil disimpan." });
+}));
+app.use((err, req, res, next) => {
+  console.error("Unhandled error:", err);
+  if (err.code === "LIMIT_FILE_SIZE") {
+    return res.status(400).json({ error: "Ukuran file terlalu besar (Maksimal 1MB)." });
+  }
+  res.status(500).json({
+    error: "Internal Server Error",
+    message: err.message,
+    stack: err.stack
+  });
+});
+async function startServer() {
+  try {
+    try {
+      await initDb().catch((err) => {
+        console.error("Database initialization failed (non-fatal):", err);
+      });
+    } catch (dbErr) {
+      console.error("Error during initDb call:", dbErr);
+    }
+    try {
+      const [tables] = await getPool().execute("SHOW TABLES LIKE 'el_student_pins'");
+      if (tables.length > 0) {
+        await getPool().execute(`
+          INSERT IGNORE INTO el_student_pins (student_id, pin)
+          SELECT id, '123456' FROM siswa WHERE id NOT IN (SELECT student_id FROM el_student_pins WHERE student_id IS NOT NULL)
+        `);
+        await getPool().execute(`
+          INSERT IGNORE INTO el_parent_pins (student_id, pin, parent_name, parent_phone)
+          SELECT s.id, '123456', COALESCE(s.nama_ayah, 'Orang Tua'), s.hp_orang_tua
+           FROM siswa s
+          WHERE s.hp_orang_tua IS NOT NULL AND s.hp_orang_tua != ''
+          AND s.id NOT IN (SELECT student_id FROM el_parent_pins WHERE student_id IS NOT NULL)
+        `);
+      }
+    } catch (seedErr) {
+      console.error("E-Learning seed skipped:", seedErr);
+    }
+    app.get("/api/bidang_ekskul", authenticate, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(`
+        SELECT be.*, p.nama_lengkap, p.nik 
+        FROM bidang_ekskul be 
+        JOIN pegawai p ON be.pegawai_id = p.pegawai_id
+        ORDER BY be.created_at DESC
+    `);
+      const data = rows.map((r) => ({
+        ...r,
+        kelas: r.kelas ? JSON.parse(r.kelas) : []
+      }));
+      res.json(data);
+    }));
+    app.post("/api/bidang_ekskul", authenticate, asyncHandler(async (req, res) => {
+      const { pegawai_id, kategori, mata_pelajaran, kelas } = req.body;
+      const kelasStr = JSON.stringify(kelas || []);
+      await getPool().execute(
+        "INSERT INTO bidang_ekskul (pegawai_id, kategori, mata_pelajaran, kelas) VALUES (?, ?, ?, ?)",
+        [pegawai_id, kategori, mata_pelajaran, kelasStr]
+      );
+      res.json({ success: true });
+    }));
+    app.put("/api/bidang_ekskul/:id", authenticate, asyncHandler(async (req, res) => {
+      const { pegawai_id, kategori, mata_pelajaran, kelas } = req.body;
+      const kelasStr = JSON.stringify(kelas || []);
+      await getPool().execute(
+        "UPDATE bidang_ekskul SET pegawai_id = ?, kategori = ?, mata_pelajaran = ?, kelas = ? WHERE id = ?",
+        [pegawai_id, kategori, mata_pelajaran, kelasStr, req.params.id]
+      );
+      res.json({ success: true });
+    }));
+    app.delete("/api/bidang_ekskul/:id", authenticate, asyncHandler(async (req, res) => {
+      await getPool().execute("DELETE FROM bidang_ekskul WHERE id = ?", [req.params.id]);
+      res.json({ success: true });
+    }));
+    app.get("/api/bidang_ekskul/form_options", authenticate, asyncHandler(async (req, res) => {
+      const [pegawai] = await getPool().execute("SELECT pegawai_id, nama_lengkap, nik FROM pegawai ORDER BY nama_lengkap");
+      let mapel = [];
+      try {
+        const [refMapel] = await getPool().execute(`
+            SELECT DISTINCT mp.nama 
+            FROM \`ref.mata_pelajaran\` mp
+            JOIN \`ref.mata_pelajaran_kurikulum\` mpk ON mp.mata_pelajaran_id = mpk.mata_pelajaran_id
+            JOIN \`ref.kurikulum\` k ON mpk.kurikulum_id = k.kurikulum_id
+            JOIN pengaturan_sekolah ps ON ps.kurikulum COLLATE utf8mb4_unicode_ci = k.nama_kurikulum COLLATE utf8mb4_unicode_ci
+            ORDER BY mp.nama
+        `);
+        mapel = refMapel;
+      } catch (e) {
+        console.error("Error fetching mapel:", e);
+      }
+      let rombongan_belajar = [];
+      try {
+        const [rombels] = await getPool().execute("SELECT name FROM rombongan_belajar ORDER BY name");
+        rombongan_belajar = rombels;
+      } catch (e) {
+        console.error("Error fetching rombel:", e);
+      }
+      res.json({ pegawai, mapel, rombongan_belajar });
+    }));
+    app.get("/api/akademik_ekskul", authenticate, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(`
+            SELECT ae.*, e.mata_pelajaran as nama_ekskul, p.nama_lengkap as nama_pelatih 
+            FROM akademik_ekskul ae 
+            JOIN bidang_ekskul e ON ae.ekskul_id = e.id 
+            JOIN pegawai p ON ae.pelatih_id = p.pegawai_id
+        `);
+      res.json(rows);
+    }));
+    app.post("/api/akademik_ekskul", authenticate, asyncHandler(async (req, res) => {
+      const { ekskul_id, pelatih_id, siswa_ids, jadwal_latihan } = req.body;
+      await getPool().execute(
+        "INSERT INTO akademik_ekskul (ekskul_id, pelatih_id, siswa_ids, jadwal_latihan) VALUES (?, ?, ?, ?)",
+        [ekskul_id, pelatih_id, JSON.stringify(siswa_ids || []), JSON.stringify(jadwal_latihan || [])]
+      );
+      res.json({ success: true });
+    }));
+    app.put("/api/akademik_ekskul/:id", authenticate, asyncHandler(async (req, res) => {
+      const { ekskul_id, pelatih_id, siswa_ids, jadwal_latihan } = req.body;
+      await getPool().execute(
+        "UPDATE akademik_ekskul SET ekskul_id = ?, pelatih_id = ?, siswa_ids = ?, jadwal_latihan = ? WHERE id = ?",
+        [ekskul_id, pelatih_id, JSON.stringify(siswa_ids || []), JSON.stringify(jadwal_latihan || []), req.params.id]
+      );
+      res.json({ success: true });
+    }));
+    app.delete("/api/akademik_ekskul/:id", authenticate, asyncHandler(async (req, res) => {
+      await getPool().execute("DELETE FROM akademik_ekskul WHERE id = ?", [req.params.id]);
+      res.json({ success: true });
+    }));
+    app.get("/api/absensi_ekskul", authenticate, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(`
+            SELECT a.*, 
+                   e.mata_pelajaran as nama_ekskul, 
+                   p.nama_lengkap as nama_pelatih 
+            FROM absensi_ekskul a
+            JOIN akademik_ekskul ae ON a.pembinaan_id = ae.id
+            JOIN bidang_ekskul e ON ae.ekskul_id = e.id
+            JOIN pegawai p ON ae.pelatih_id = p.pegawai_id
+            ORDER BY a.tanggal_latihan DESC, a.created_at DESC
+        `);
+      res.json(rows);
+    }));
+    app.post("/api/absensi_ekskul/buka_sesi", authenticate, asyncHandler(async (req, res) => {
+      const { pembinaan_id, tanggal_latihan, materi_kegiatan, status_pelatih } = req.body;
+      const [result] = await getPool().execute(
+        "INSERT INTO absensi_ekskul (pembinaan_id, tanggal_latihan, materi_kegiatan, status_pelatih, data_absen_siswa) VALUES (?, ?, ?, ?, ?)",
+        [pembinaan_id, tanggal_latihan, materi_kegiatan, status_pelatih, JSON.stringify([])]
+      );
+      res.json({ success: true, insertId: result.insertId });
+    }));
+    app.put("/api/absensi_ekskul/:id/absen_siswa", authenticate, asyncHandler(async (req, res) => {
+      const { data_absen_siswa } = req.body;
+      await getPool().execute(
+        "UPDATE absensi_ekskul SET data_absen_siswa = ? WHERE id = ?",
+        [JSON.stringify(data_absen_siswa), req.params.id]
+      );
+      res.json({ success: true });
+    }));
+    app.post("/api/absensi_ekskul/:id/dokumentasi", authenticate, uploadEkskul.array("dokumentasi", 2), asyncHandler(async (req, res) => {
+      const files = req.files;
+      if (!files) return res.status(400).json({ error: "No files uploaded" });
+      const paths = files.map((f) => "/uploads/ekskul/" + f.filename);
+      const foto_1 = paths[0] || null;
+      const foto_2 = paths[1] || null;
+      let query = "UPDATE absensi_ekskul SET ";
+      let params = [];
+      if (foto_1) {
+        query += "foto_1 = ?, ";
+        params.push(foto_1);
+      }
+      if (foto_2) {
+        query += "foto_2 = ?, ";
+        params.push(foto_2);
+      }
+      if (params.length > 0) {
+        query = query.slice(0, -2);
+        query += " WHERE id = ?";
+        params.push(req.params.id);
+        await getPool().execute(query, params);
+      }
+      res.json({ success: true, foto_1, foto_2 });
+    }));
+    try {
+      await getPool().execute(`
+    INSERT IGNORE INTO el_student_pins (student_id, pin)
+    SELECT s.id, '123456' FROM siswa s WHERE s.nisn IS NOT NULL AND s.nisn != ''
+  `);
+    } catch (e) {
+    }
+    app.post("/api/el/login/student", asyncHandler(async (req, res) => {
+      const { nisn, pin } = req.body;
+      if (!nisn || !pin) return res.status(400).json({ error: "NISN dan PIN wajib diisi." });
+      const [students] = await getPool().execute(
+        "SELECT s.*, esp.pin FROM siswa s, el_student_pins esp WHERE s.id = esp.student_id AND s.nisn = ?",
+        [nisn]
+      );
+      if (!students.length) {
+        const [byNisn] = await getPool().execute("SELECT id, nama_lengkap FROM siswa WHERE nisn = ?", [nisn]);
+        if (!byNisn.length) {
+          console.error("[EL] Student login failed: NISN not found:", nisn);
+          return res.status(401).json({ error: "Akun tidak ditemukan. Pastikan NISN Anda benar." });
+        } else {
+          await getPool().execute("INSERT IGNORE INTO el_student_pins (student_id, pin) VALUES (?, '123456')", [byNisn[0].id]);
+          const [retry] = await getPool().execute(
+            "SELECT s.*, esp.pin FROM siswa s, el_student_pins esp WHERE s.id = esp.student_id AND s.nisn = ?",
+            [nisn]
+          );
+          if (!retry.length) return res.status(401).json({ error: "Akun tidak ditemukan." });
+          students[0] = retry[0];
+        }
+      }
+      const student = students[0];
+      if (student.pin !== pin) return res.status(401).json({ error: "PIN salah." });
+      const [pointsRows] = await getPool().execute(
+        "SELECT COALESCE(SUM(points),0) as total FROM el_points WHERE student_id = ?",
+        [student.id]
+      );
+      const totalPoints = pointsRows[0]?.total || 0;
+      const token = import_jsonwebtoken.default.sign(
+        { id: student.id, nisn: student.nisn, type: "student", name: student.nama_lengkap, rombel: student.rombel },
+        JWT_SECRET,
+        { expiresIn: "7d" }
+      );
+      res.json({ success: true, token, student: { id: student.id, name: student.nama_lengkap, nisn: student.nisn, rombel: student.rombel, total_points: totalPoints } });
+    }));
+    app.post("/api/el/login/teacher", asyncHandler(async (req, res) => {
+      const { username, password } = req.body;
+      if (!username || !password) return res.status(400).json({ error: "Username dan password wajib diisi." });
+      const [rows] = await getPool().execute(`
+    SELECT wu.*, s.nama_lengkap as name, r.name as role_name, r.permissions
+    FROM pengguna_web wu
+    JOIN pegawai s ON wu.staff_id = s.pegawai_id
+    JOIN peran r ON wu.role_id = r.id
+    WHERE wu.username = ? AND wu.status_aktif = TRUE
+  `, [username]);
+      if (!rows.length) return res.status(401).json({ error: "Akun tidak ditemukan atau tidak aktif." });
+      const user = rows[0];
+      const isMatch = await import_bcryptjs.default.compare(password, user.password);
+      if (!isMatch) return res.status(401).json({ error: "Password salah." });
+      const token = import_jsonwebtoken.default.sign(
+        { id: user.id, username, type: "teacher", role: user.role_name, name: user.name, staff_id: user.staff_id },
+        JWT_SECRET,
+        { expiresIn: "7d" }
+      );
+      res.json({ success: true, token, teacher: { id: user.id, name: user.name, username, role: user.role_name } });
+    }));
+    app.post("/api/el/login/parent", asyncHandler(async (req, res) => {
+      const { phone, pin } = req.body;
+      if (!phone || !pin) return res.status(400).json({ error: "Nomor HP dan PIN wajib diisi." });
+      const [rows] = await getPool().execute(
+        "SELECT epp.*, s.nama_lengkap as student_name FROM el_parent_pins epp, siswa s WHERE epp.student_id = s.id AND epp.parent_phone = ?",
+        [phone]
+      );
+      if (!rows.length) return res.status(401).json({ error: "Akun tidak ditemukan." });
+      const parent = rows[0];
+      if (parent.pin !== pin) return res.status(401).json({ error: "PIN salah." });
+      const token = import_jsonwebtoken.default.sign(
+        { id: parent.id, phone: parent.parent_phone, type: "parent", student_id: parent.student_id, student_name: parent.student_name },
+        JWT_SECRET,
+        { expiresIn: "7d" }
+      );
+      res.json({ success: true, token, parent: { id: parent.id, name: parent.parent_name, student_id: parent.student_id, student_name: parent.student_name } });
+    }));
+    const elAuth = (req, res, next) => {
+      console.log("[elAuth] path:", req.path, "auth:", req.headers.authorization?.substring(0, 20));
+      const authHeader = req.headers.authorization;
+      if (!authHeader) return res.status(401).json({ error: "No token provided" });
+      const token = authHeader.split(" ")[1];
+      import_jsonwebtoken.default.verify(token, JWT_SECRET, (err, user) => {
+        if (err) return res.status(403).json({ error: "Invalid token" });
+        req.user = user;
+        next();
+      });
+    };
+    app.get("/api/debug/courses", (req, res) => {
+      console.log("[DEBUG] /api/debug/courses hit!");
+      res.json({ success: true, message: "Direct response OK" });
+    });
+    app.get("/api/el/courses", elAuth, asyncHandler(async (req, res) => {
+      const { type } = req.user;
+      let query = "SELECT c.*, s.nama_lengkap as teacher_name FROM el_courses c LEFT JOIN pegawai s ON c.teacher_id = s.pegawai_id WHERE c.status = 'published'";
+      const params = [];
+      if (type === "student") {
+        query += " AND (c.rombel = ? OR c.rombel IS NULL OR c.rombel = '')";
+        params.push(req.user.rombel);
+      } else if (type === "teacher") {
+        query = "SELECT c.*, s.nama_lengkap as teacher_name FROM el_courses c LEFT JOIN pegawai s ON c.teacher_id = s.pegawai_id WHERE c.teacher_id = ?";
+        params.push(req.user.staff_id);
+      }
+      query += " ORDER BY c.id DESC";
+      const [rows] = await getPool().execute(query, params);
+      res.json(rows);
+    }));
+    app.get("/api/el/courses/:id", elAuth, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(
+        "SELECT c.*, s.nama_lengkap as teacher_name FROM el_courses c LEFT JOIN pegawai s ON c.teacher_id = s.pegawai_id WHERE c.id = ?",
+        [req.params.id]
+      );
+      if (!rows.length) return res.status(404).json({ error: "Kursus tidak ditemukan." });
+      res.json(rows[0]);
+    }));
+    app.post("/api/el/courses", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru yang bisa membuat kursus." });
+      const { name, description, cover_color, rombel, subject, semester, tahun_pelajaran, status } = req.body;
+      const [result] = await getPool().execute(
+        "INSERT INTO el_courses (name, description, cover_color, teacher_id, rombel, subject, semester, tahun_pelajaran, status) VALUES (?,?,?,?,?,?,?,?,?)",
+        [name, description, cover_color || "#3B82F6", req.user.staff_id, rombel, subject, semester, tahun_pelajaran, status || "draft"]
+      );
+      res.json({ success: true, id: result.insertId });
+    }));
+    app.put("/api/el/courses/:id", elAuth, asyncHandler(async (req, res) => {
+      const { name, description, cover_color, rombel, subject, semester, tahun_pelajaran, status } = req.body;
+      await getPool().execute(
+        "UPDATE el_courses SET name=?, description=?, cover_color=?, rombel=?, subject=?, semester=?, tahun_pelajaran=?, status=? WHERE id=?",
+        [name, description, cover_color, rombel, subject, semester, tahun_pelajaran, status, req.params.id]
+      );
+      res.json({ success: true });
+    }));
+    app.delete("/api/el/courses/:id", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru yang bisa menghapus kursus." });
+      await getPool().execute("DELETE FROM el_courses WHERE id = ?", [req.params.id]);
+      res.json({ success: true });
+    }));
+    app.get("/api/el/courses/:courseId/modules", elAuth, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(
+        "SELECT * FROM el_modules WHERE course_id = ? ORDER BY order_index ASC, id ASC",
+        [req.params.courseId]
+      );
+      res.json(rows);
+    }));
+    app.post("/api/el/courses/:courseId/modules", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { title, content, video_url, order_index } = req.body;
+      const [result] = await getPool().execute(
+        "INSERT INTO el_modules (course_id, title, content, video_url, order_index) VALUES (?,?,?,?,?)",
+        [req.params.courseId, title, content, video_url, order_index || 0]
+      );
+      res.json({ success: true, id: result.insertId });
+    }));
+    app.put("/api/el/modules/:id", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { title, content, video_url, order_index } = req.body;
+      await getPool().execute(
+        "UPDATE el_modules SET title=?, content=?, video_url=?, order_index=? WHERE id=?",
+        [title, content, video_url, order_index, req.params.id]
+      );
+      res.json({ success: true });
+    }));
+    app.delete("/api/el/modules/:id", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      await getPool().execute("DELETE FROM el_modules WHERE id = ?", [req.params.id]);
+      res.json({ success: true });
+    }));
+    app.get("/api/el/courses/:courseId/quizzes", elAuth, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(
+        "SELECT * FROM el_quizzes WHERE course_id = ? AND status = 'published' ORDER BY id DESC",
+        [req.params.courseId]
+      );
+      res.json(rows);
+    }));
+    app.post("/api/el/courses/:courseId/quizzes", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { title, module_id, passing_score, time_limit_minutes, status } = req.body;
+      const [result] = await getPool().execute(
+        "INSERT INTO el_quizzes (course_id, module_id, title, passing_score, time_limit_minutes, status) VALUES (?,?,?,?,?,?)",
+        [req.params.courseId, module_id || null, title, passing_score || 70, time_limit_minutes || 30, status || "draft"]
+      );
+      res.json({ success: true, id: result.insertId });
+    }));
+    app.get("/api/el/quizzes/:id", elAuth, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute("SELECT * FROM el_quizzes WHERE id = ?", [req.params.id]);
+      if (!rows.length) return res.status(404).json({ error: "Kuis tidak ditemukan." });
+      res.json(rows[0]);
+    }));
+    app.put("/api/el/quizzes/:id", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { title, module_id, passing_score, time_limit_minutes, status } = req.body;
+      await getPool().execute(
+        "UPDATE el_quizzes SET title=?, module_id=?, passing_score=?, time_limit_minutes=?, status=? WHERE id=?",
+        [title, module_id || null, passing_score, time_limit_minutes, status, req.params.id]
+      );
+      res.json({ success: true });
+    }));
+    app.delete("/api/el/quizzes/:id", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      await getPool().execute("DELETE FROM el_quizzes WHERE id = ?", [req.params.id]);
+      res.json({ success: true });
+    }));
+    app.get("/api/el/quizzes/:quizId/questions", elAuth, asyncHandler(async (req, res) => {
+      const [rows] = await getPool().execute(
+        "SELECT * FROM el_quiz_questions WHERE quiz_id = ? ORDER BY order_index ASC, id ASC",
+        [req.params.quizId]
+      );
+      res.json(rows);
+    }));
+    app.post("/api/el/quizzes/:quizId/questions", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { question_text, question_image_url, option_a, option_a_image, option_b, option_b_image, option_c, option_c_image, option_d, option_d_image, correct_answer, points, order_index } = req.body;
+      if (!question_text || !option_a || !correct_answer) return res.status(400).json({ error: "question_text, option_a, dan correct_answer wajib diisi." });
+      const clean2 = (v) => v === "" || v === void 0 || v === null ? null : v;
+      const [result] = await getPool().execute(
+        `INSERT INTO el_quiz_questions (quiz_id, question_text, question_image_url, option_a, option_a_image, option_b, option_b_image, option_c, option_c_image, option_d, option_d_image, correct_answer, points, order_index) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        [req.params.quizId, clean2(question_text), clean2(question_image_url), clean2(option_a), clean2(option_a_image), clean2(option_b), clean2(option_b_image), clean2(option_c), clean2(option_c_image), clean2(option_d), clean2(option_d_image), clean2(correct_answer), clean2(points) || 10, clean2(order_index) || 0]
+      );
+      res.json({ success: true, id: result.insertId });
+    }));
+    app.put("/api/el/quizzes/:quizId/questions/:qid", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { question_text, question_image_url, option_a, option_a_image, option_b, option_b_image, option_c, option_c_image, option_d, option_d_image, correct_answer, points, order_index } = req.body;
+      await getPool().execute(
+        `UPDATE el_quiz_questions SET question_text=?, question_image_url=?, option_a=?, option_a_image=?, option_b=?, option_b_image=?, option_c=?, option_c_image=?, option_d=?, option_d_image=?, correct_answer=?, points=?, order_index=? WHERE id=?`,
+        [question_text, question_image_url, option_a, option_a_image, option_b, option_b_image, option_c, option_c_image, option_d, option_d_image, correct_answer, points, order_index, req.params.qid]
+      );
+      res.json({ success: true });
+    }));
+    app.delete("/api/el/quizzes/:quizId/questions/:qid", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      await getPool().execute("DELETE FROM el_quiz_questions WHERE id = ?", [req.params.qid]);
+      res.json({ success: true });
+    }));
+    app.post("/api/el/quizzes/:id/start", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "student") return res.status(403).json({ error: "Hanya siswa." });
+      const [quizzes] = await getPool().execute("SELECT * FROM el_quizzes WHERE id = ? AND status = 'published'", [req.params.id]);
+      if (!quizzes.length) return res.status(404).json({ error: "Kuis tidak ditemukan." });
+      const quiz = quizzes[0];
+      const [questions] = await getPool().execute(
+        "SELECT id, question_text, question_image_url, option_a, option_a_image, option_b, option_b_image, option_c, option_c_image, option_d, option_d_image, points, order_index FROM el_quiz_questions WHERE quiz_id = ? ORDER BY order_index ASC, id ASC",
+        [req.params.id]
+      );
+      const [result] = await getPool().execute(
+        "INSERT INTO el_submissions (quiz_id, student_id, answers, status) VALUES (?,?,?,?)",
+        [req.params.id, req.user.id, JSON.stringify([]), "submitted"]
+      );
+      res.json({ submission_id: result.insertId, questions, time_limit_minutes: quiz.time_limit_minutes });
+    }));
+    app.post("/api/el/quizzes/:id/submit", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "student") return res.status(403).json({ error: "Hanya siswa." });
+      const { submission_id, answers } = req.body;
+      const [questions] = await getPool().execute(
+        "SELECT id, correct_answer, points FROM el_quiz_questions WHERE quiz_id = ?",
+        [req.params.id]
+      );
+      const [quiz] = await getPool().execute("SELECT * FROM el_quizzes WHERE id = ?", [req.params.id]);
+      let score = 0;
+      let maxScore = 0;
+      for (const q of questions) {
+        maxScore += q.points;
+        const answer = answers?.find((a) => a.question_id === q.id);
+        if (answer && answer.answer === q.correct_answer) score += q.points;
+      }
+      const percentage = maxScore > 0 ? Math.round(score / maxScore * 100) : 0;
+      const passed = percentage >= (quiz[0]?.passing_score || 70);
+      await getPool().execute(
+        "UPDATE el_submissions SET answers=?, score=?, max_score=?, percentage=?, status='graded' WHERE id=?",
+        [JSON.stringify(answers), score, maxScore, percentage, submission_id]
+      );
+      let pointsEarned = 0;
+      if (percentage >= 80) pointsEarned = 25;
+      else if (percentage >= 50) pointsEarned = 15;
+      else pointsEarned = 5;
+      if (pointsEarned > 0) {
+        await getPool().execute(
+          "INSERT INTO el_points (student_id, points, source, source_id, description) VALUES (?,?,?,?,?)",
+          [req.user.id, pointsEarned, "quiz", req.params.id, `Kuis: ${quiz[0]?.title || "Kuis"}`]
+        );
+      }
+      if (quiz[0]?.module_id) {
+        await getPool().execute(
+          `INSERT INTO el_progress (student_id, module_id, completed, completed_at) VALUES (?,?,TRUE,NOW()) ON DUPLICATE KEY UPDATE completed=TRUE, completed_at=NOW()`,
+          [req.user.id, quiz[0].module_id]
+        );
+      }
+      const [pt] = await getPool().execute("SELECT COALESCE(SUM(points),0) as total FROM el_points WHERE student_id = ?", [req.user.id]);
+      res.json({ score, max_score: maxScore, percentage, passed, points_earned: pointsEarned, total_points: pt[0]?.total || 0 });
+    }));
+    app.get("/api/el/students/:id/profile", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type === "student" && req.user.id !== parseInt(req.params.id)) {
+        return res.status(403).json({ error: "Tidak punya akses." });
+      }
+      const [students] = await getPool().execute("SELECT id, nama_lengkap, nisn, rombel, jenis_kelamin FROM siswa WHERE id = ?", [req.params.id]);
+      if (!students.length) return res.status(404).json({ error: "Siswa tidak ditemukan." });
+      const student = students[0];
+      const [pointsRows] = await getPool().execute("SELECT COALESCE(SUM(points),0) as total FROM el_points WHERE student_id = ?", [req.params.id]);
+      const [completedRows] = await getPool().execute("SELECT COUNT(*) as total FROM el_progress WHERE student_id = ? AND completed = TRUE", [req.params.id]);
+      const [courseRows] = await getPool().execute("SELECT COUNT(*) as total FROM el_courses WHERE status='published' AND (rombel = ? OR rombel IS NULL OR rombel = '')", [student.rombel]);
+      res.json({
+        id: student.id,
+        name: student.nama_lengkap,
+        nisn: student.nisn,
+        rombel: student.rombel,
+        jenis_kelamin: student.jenis_kelamin,
+        total_points: pointsRows[0]?.total || 0,
+        completed_modules: completedRows[0]?.total || 0,
+        enrolled_courses: courseRows[0]?.total || 0
+      });
+    }));
+    app.get("/api/el/teacher/gradebook", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const { course_id } = req.query;
+      let query = `
+    SELECT c.id as course_id, c.name as course_name,
+           s.id as student_id, s.nama_lengkap as student_name, s.nisn,
+           q.title as quiz_title, sub.score, sub.max_score, sub.percentage, sub.submitted_at
+    FROM el_courses c
+    JOIN el_submissions sub ON sub.quiz_id IN (SELECT id FROM el_quizzes WHERE course_id = c.id)
+        JOIN siswa s ON sub.student_id = s.id
+    JOIN el_quizzes q ON sub.quiz_id = q.id
+    WHERE c.teacher_id = ?
+  `;
+      const params = [req.user.staff_id];
+      if (course_id) {
+        query += " AND c.id = ?";
+        params.push(course_id);
+      }
+      query += " ORDER BY c.id, s.nama_lengkap";
+      const [rows] = await getPool().execute(query, params);
+      const studentMap = {};
+      for (const row of rows) {
+        const key = row.student_id;
+        if (!studentMap[key]) studentMap[key] = { id: row.student_id, name: row.student_name, nisn: row.nisn, submissions: [] };
+        studentMap[key].submissions.push({ quiz_title: row.quiz_title, score: row.score, max_score: row.max_score, percentage: row.percentage, submitted_at: row.submitted_at });
+      }
+      res.json(Object.values(studentMap));
+    }));
+    app.get("/api/el/teacher/gradebook/:courseId/export", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "teacher") return res.status(403).json({ error: "Hanya guru." });
+      const [courseRows] = await getPool().execute("SELECT * FROM el_courses WHERE id = ? AND teacher_id = ?", [req.params.courseId, req.user.staff_id]);
+      if (!courseRows.length) return res.status(404).json({ error: "Kursus tidak ditemukan." });
+      const [quizzes] = await getPool().execute("SELECT * FROM el_quizzes WHERE course_id = ? ORDER BY id", [req.params.courseId]);
+      const [submissions] = await getPool().execute(`
+    SELECT s.id as student_id, s.nama_lengkap, s.nisn, q.id as quiz_id, q.title as quiz_title,
+           sub.score, sub.max_score, sub.percentage
+    FROM el_submissions sub
+        JOIN siswa s ON sub.student_id = s.id
+    JOIN el_quizzes q ON sub.quiz_id = q.id
+    WHERE q.course_id = ?
+    ORDER BY s.nama_lengkap, q.id
+  `, [req.params.courseId]);
+      const quizTitles = quizzes.map((q) => q.title);
+      const headers = ["Nama", "NISN", ...quizTitles, "Rata-rata"];
+      const studentMap = {};
+      for (const sub of submissions) {
+        if (!studentMap[sub.student_id]) {
+          studentMap[sub.student_id] = { name: sub.nama_lengkap, nisn: sub.nisn, scores: {} };
+        }
+        studentMap[sub.student_id].scores[sub.quiz_id] = sub;
+      }
+      const aoa = [headers];
+      for (const student of Object.values(studentMap)) {
+        const row = [student.name, student.nisn];
+        let totalPct = 0, count = 0;
+        for (const quiz of quizzes) {
+          const sub = student.scores[quiz.id];
+          if (sub) {
+            row.push(`${sub.score}/${sub.max_score} (${sub.percentage}%)`);
+            totalPct += sub.percentage;
+            count++;
+          } else row.push("-");
+        }
+        row.push(count > 0 ? `${Math.round(totalPct / count)}%` : "-");
+        aoa.push(row);
+      }
+      res.json({ success: true, data: aoa, course_name: courseRows[0].name });
+    }));
+    app.get("/api/el/parent/students", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "parent") return res.status(403).json({ error: "Hanya orang tua." });
+      const [students] = await getPool().execute(
+        "SELECT id, nama_lengkap, nisn, rombel FROM siswa WHERE id = ?",
+        [req.user.student_id]
+      );
+      res.json(students);
+    }));
+    app.get("/api/el/parent/student/:studentId/scores", elAuth, asyncHandler(async (req, res) => {
+      if (req.user.type !== "parent" && req.user.type !== "teacher") return res.status(403).json({ error: "Akses ditolak." });
+      const [students] = await getPool().execute("SELECT nama_lengkap FROM siswa WHERE id = ?", [req.params.studentId]);
+      const [scores] = await getPool().execute(`
+    SELECT q.title as quiz_title, c.name as course_name, sub.score, sub.max_score, sub.percentage, sub.submitted_at
+    FROM el_submissions sub
+    JOIN el_quizzes q ON sub.quiz_id = q.id
+    JOIN el_courses c ON q.course_id = c.id
+    WHERE sub.student_id = ?
+    ORDER BY sub.submitted_at DESC
+    LIMIT 50
+  `, [req.params.studentId]);
+      res.json({ student_name: students[0]?.nama_lengkap || "-", scores });
+    }));
+    app.get("/api/absensi_bidang_study", authenticate, asyncHandler(async (req, res) => {
+      const { tanggal, rombel, mata_pelajaran } = req.query;
+      const [siswa] = await getPool().execute(
+        "SELECT id, nama_lengkap, nisn FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+        [rombel]
+      );
+      const [absensi] = await getPool().execute(
+        "SELECT student_id, status, keterangan FROM absensi_bidang_study WHERE tanggal = ? AND rombel = ? AND mata_pelajaran = ?",
+        [tanggal, rombel, mata_pelajaran]
+      );
+      const absensiMap = /* @__PURE__ */ new Map();
+      for (const a of absensi) {
+        absensiMap.set(a.student_id, a);
+      }
+      const data = siswa.map((s) => ({
+        id: s.id,
+        nama_lengkap: s.nama_lengkap,
+        nisn: s.nisn,
+        status: absensiMap.has(s.id) ? absensiMap.get(s.id).status : "Hadir",
+        keterangan: absensiMap.has(s.id) ? absensiMap.get(s.id).keterangan : ""
+      }));
+      res.json(data);
+    }));
+    app.post("/api/absensi_bidang_study", authenticate, asyncHandler(async (req, res) => {
+      const { tanggal, rombel, mata_pelajaran, records } = req.body;
+      const recorded_by = req.user?.id || null;
+      const connection = await getPool().getConnection();
+      try {
+        await connection.beginTransaction();
+        for (const record of records) {
+          await connection.execute(`
+                INSERT INTO absensi_bidang_study 
+                (student_id, tanggal, mata_pelajaran, rombel, status, keterangan, recorded_by) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                ON DUPLICATE KEY UPDATE 
+                status = VALUES(status), 
+                keterangan = VALUES(keterangan),
+                recorded_by = VALUES(recorded_by)
+            `, [record.student_id, tanggal, mata_pelajaran, rombel, record.status, record.keterangan, recorded_by]);
+        }
+        await connection.commit();
+        res.json({ success: true });
+      } catch (err) {
+        await connection.rollback();
+        console.error(err);
+        res.status(500).json({ error: "Gagal menyimpan absensi bidang study" });
+      } finally {
+        connection.release();
+      }
+    }));
+    app.get("/api/absensi_bidang_study/report", authenticate, asyncHandler(async (req, res) => {
+      const { start_date, end_date, rombel, mata_pelajaran } = req.query;
+      const [siswa] = await getPool().execute(
+        "SELECT id, nama_lengkap, nisn FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+        [rombel]
+      );
+      const [absensi] = await getPool().execute(
+        "SELECT student_id, status FROM absensi_bidang_study WHERE tanggal BETWEEN ? AND ? AND rombel = ? AND mata_pelajaran = ?",
+        [start_date, end_date, rombel, mata_pelajaran]
+      );
+      const reportData = siswa.map((s) => {
+        const studentAbsensi = absensi.filter((a) => a.student_id === s.id);
+        let hadir = 0, sakit = 0, izin = 0, alpa = 0;
+        for (const a of studentAbsensi) {
+          if (a.status === "Hadir") hadir++;
+          else if (a.status === "Sakit") sakit++;
+          else if (a.status === "Izin") izin++;
+          else if (a.status === "Alpa") alpa++;
+        }
+        return {
+          id: s.id,
+          nisn: s.nisn,
+          nama_lengkap: s.nama_lengkap,
+          hadir,
+          sakit,
+          izin,
+          alpa
+        };
+      });
+      res.json({ report: reportData });
+    }));
+    app.post("/api/literasi/materi", authenticate, asyncHandler(async (req, res) => {
+      const { judul, deskripsi, cover_image, file_url, tingkat_kelas, xp_reward, pertanyaan, mata_pelajaran, waktu_baca } = req.body;
+      const [result] = await getPool().execute(
+        "INSERT INTO literasi_materi (judul, deskripsi, cover_image, file_url, tingkat_kelas, xp_reward, created_by, mata_pelajaran, waktu_baca) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+        [judul, deskripsi, cover_image, file_url, tingkat_kelas, xp_reward || 0, req.user.id, mata_pelajaran || null, waktu_baca || 0]
+      );
+      const materi_id = result.insertId;
+      if (pertanyaan && Array.isArray(pertanyaan)) {
+        for (const p of pertanyaan) {
+          if (p.trim()) {
+            await getPool().execute("INSERT INTO literasi_pertanyaan (materi_id, pertanyaan) VALUES (?, ?)", [materi_id, p]);
+          }
+        }
+      }
+      res.json({ success: true, materi_id });
+    }));
+    app.get("/api/literasi/guru-info", authenticate, asyncHandler(async (req, res) => {
+      let tingkatList = [];
+      let rombelList = [];
+      let isAdmin = req.user.permissions && req.user.permissions.includes("all");
+      if (req.user.type === "staff" && !isAdmin && req.user.staff_id) {
+        const [rombelRows] = await getPool().execute("SELECT name, tingkat FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        tingkatList = [...new Set(rombelRows.map((r) => r.tingkat).filter(Boolean))];
+        rombelList = [...new Set(rombelRows.map((r) => r.name).filter(Boolean))];
+      }
+      res.json({ isAdmin, tingkatList, rombelList });
+    }));
+    app.get("/api/literasi/materi", authenticate, asyncHandler(async (req, res) => {
+      const { tingkat_kelas } = req.query;
+      let query = "SELECT * FROM literasi_materi";
+      let params = [];
+      let hasWhere = false;
+      if (tingkat_kelas) {
+        query += " WHERE tingkat_kelas = ?";
+        params.push(tingkat_kelas);
+        hasWhere = true;
+      }
+      if (req.user.type === "staff" && !req.user.permissions.includes("all") && req.user.staff_id) {
+        const [rombelRows] = await getPool().execute("SELECT tingkat FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        if (rombelRows.length > 0) {
+          const tingkatList = [...new Set(rombelRows.map((r) => r.tingkat).filter(Boolean))];
+          if (tingkatList.length > 0) {
+            if (!hasWhere) {
+              query += " WHERE tingkat_kelas IN (" + tingkatList.map(() => "?").join(",") + ")";
+              hasWhere = true;
+            } else {
+              query += " AND tingkat_kelas IN (" + tingkatList.map(() => "?").join(",") + ")";
+            }
+            params.push(...tingkatList);
+          } else {
+            query += hasWhere ? " AND tingkat_kelas = 'INVALID'" : " WHERE tingkat_kelas = 'INVALID'";
+            hasWhere = true;
+          }
+        } else {
+          query += hasWhere ? " AND tingkat_kelas = 'INVALID'" : " WHERE tingkat_kelas = 'INVALID'";
+          hasWhere = true;
+        }
+      }
+      if (req.user.type === "student") {
+        query += hasWhere ? " AND is_active = 1" : " WHERE is_active = 1";
+        query += " ORDER BY created_at DESC";
+        const [materi2] = await getPool().execute(query, params);
+        const [jurnals] = await getPool().execute("SELECT materi_id, status FROM literasi_jurnal WHERE siswa_id = ?", [req.user.id]);
+        const jurnalMap = jurnals.reduce((acc, j) => ({ ...acc, [j.materi_id]: j.status }), {});
+        const materiWithStatus = materi2.map((m) => ({
+          ...m,
+          jurnal_status: jurnalMap[m.id] || null
+        }));
+        return res.json({ materi: materiWithStatus });
+      }
+      query += " ORDER BY created_at DESC";
+      const [materi] = await getPool().execute(query, params);
+      res.json({ materi });
+    }));
+    app.get("/api/literasi/materi/:id/pertanyaan", authenticate, asyncHandler(async (req, res) => {
+      const [pertanyaan] = await getPool().execute("SELECT id, pertanyaan FROM literasi_pertanyaan WHERE materi_id = ?", [req.params.id]);
+      res.json({ pertanyaan });
+    }));
+    app.put("/api/literasi/materi/:id/toggle", authenticate, asyncHandler(async (req, res) => {
+      if (req.user.type !== "staff") return res.status(403).json({ error: "Forbidden" });
+      const { is_active } = req.body;
+      await getPool().execute("UPDATE literasi_materi SET is_active = ? WHERE id = ?", [is_active ? 1 : 0, req.params.id]);
+      res.json({ success: true });
+    }));
+    app.put("/api/literasi/materi/:id", authenticate, asyncHandler(async (req, res) => {
+      if (req.user.type !== "staff") return res.status(403).json({ error: "Forbidden" });
+      const { judul, deskripsi, cover_image, file_url, tingkat_kelas, xp_reward, pertanyaan, mata_pelajaran, waktu_baca } = req.body;
+      await getPool().execute(
+        "UPDATE literasi_materi SET judul = ?, deskripsi = ?, cover_image = ?, file_url = ?, tingkat_kelas = ?, xp_reward = ?, mata_pelajaran = ?, waktu_baca = ? WHERE id = ?",
+        [judul, deskripsi, cover_image, file_url, tingkat_kelas, xp_reward || 0, mata_pelajaran || null, waktu_baca || 0, req.params.id]
+      );
+      await getPool().execute("DELETE FROM literasi_pertanyaan WHERE materi_id = ?", [req.params.id]);
+      if (pertanyaan && Array.isArray(pertanyaan)) {
+        for (const p of pertanyaan) {
+          if (p.trim()) {
+            await getPool().execute("INSERT INTO literasi_pertanyaan (materi_id, pertanyaan) VALUES (?, ?)", [req.params.id, p]);
+          }
+        }
+      }
+      res.json({ success: true });
+    }));
+    app.delete("/api/literasi/materi/:id", authenticate, asyncHandler(async (req, res) => {
+      if (req.user.type !== "staff") return res.status(403).json({ error: "Forbidden" });
+      await getPool().execute("DELETE FROM literasi_pertanyaan WHERE materi_id = ?", [req.params.id]);
+      await getPool().execute("DELETE FROM literasi_materi WHERE id = ?", [req.params.id]);
+      res.json({ success: true });
+    }));
+    app.post("/api/literasi/jurnal", authenticate, asyncHandler(async (req, res) => {
+      const { materi_id, jawaban_list, waktu_baca_aktual } = req.body;
+      const siswa_id = req.user.id;
+      const bacaAktual = waktu_baca_aktual || 0;
+      const [existing] = await getPool().execute(
+        "SELECT id, status, earned_xp FROM literasi_jurnal WHERE siswa_id = ? AND materi_id = ?",
+        [siswa_id, materi_id]
+      );
+      let jurnal_id;
+      if (existing.length > 0) {
+        const j = existing[0];
+        if (j.status === "disetujui") {
+          return res.status(400).json({ error: "Jurnal sudah disetujui, tidak bisa diubah." });
+        } else if (j.status === "menunggu_validasi") {
+          return res.status(400).json({ error: "Jurnal sedang menunggu validasi guru." });
+        } else if (j.status === "ditolak") {
+          if (j.earned_xp > 0) {
+            const [gamifikasi] = await getPool().execute("SELECT total_xp FROM siswa_gamifikasi WHERE siswa_id = ?", [siswa_id]);
+            if (gamifikasi.length > 0) {
+              let total_xp = gamifikasi[0].total_xp - j.earned_xp;
+              if (total_xp < 0) total_xp = 0;
+              await getPool().execute("UPDATE siswa_gamifikasi SET total_xp = ? WHERE siswa_id = ?", [total_xp, siswa_id]);
+            }
+          }
+          await getPool().execute(
+            "UPDATE literasi_jurnal SET status = 'menunggu_validasi', earned_xp = 0, dinilai_oleh = NULL, waktu_baca_aktual = waktu_baca_aktual + ? WHERE id = ?",
+            [bacaAktual, j.id]
+          );
+          await getPool().execute("DELETE FROM literasi_jawaban_jurnal WHERE jurnal_id = ?", [j.id]);
+          jurnal_id = j.id;
+        }
+      } else {
+        const [result] = await getPool().execute(
+          "INSERT INTO literasi_jurnal (siswa_id, materi_id, status, waktu_baca_aktual) VALUES (?, ?, 'menunggu_validasi', ?)",
+          [siswa_id, materi_id, bacaAktual]
+        );
+        jurnal_id = result.insertId;
+      }
+      if (jawaban_list && Array.isArray(jawaban_list)) {
+        for (const j of jawaban_list) {
+          await getPool().execute(
+            "INSERT INTO literasi_jawaban_jurnal (jurnal_id, pertanyaan_id, jawaban) VALUES (?, ?, ?)",
+            [jurnal_id, j.pertanyaan_id, j.jawaban]
+          );
+        }
+      }
+      res.json({ success: true, jurnal_id });
+    }));
+    app.get("/api/literasi/jurnal/pending", authenticate, asyncHandler(async (req, res) => {
+      const { rombel } = req.query;
+      let query = `
+        SELECT j.id as jurnal_id, j.siswa_id, j.materi_id, j.status, j.created_at, 
+               s.nama_lengkap, s.rombel, m.judul, m.tingkat_kelas, m.mata_pelajaran 
+        FROM literasi_jurnal j
+        JOIN siswa s ON j.siswa_id = s.id
+        JOIN literasi_materi m ON j.materi_id = m.id
+        WHERE j.status = 'menunggu_validasi'
+    `;
+      let params = [];
+      if (rombel) {
+        query += " AND s.rombel = ?";
+        params.push(rombel);
+      }
+      if (req.user.type === "staff" && !req.user.permissions.includes("all") && req.user.staff_id) {
+        const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        if (rombelRows.length > 0) {
+          const rombelNames = rombelRows.map((r) => r.name).filter(Boolean);
+          if (rombelNames.length > 0) {
+            query += " AND s.rombel IN (" + rombelNames.map(() => "?").join(",") + ")";
+            params.push(...rombelNames);
+          } else {
+            query += " AND s.rombel = 'INVALID'";
+          }
+        } else {
+          query += " AND s.rombel = 'INVALID'";
+        }
+      }
+      query += " ORDER BY j.created_at ASC";
+      const [jurnal] = await getPool().execute(query, params);
+      res.json({ jurnal });
+    }));
+    app.get("/api/literasi/jurnal/history", authenticate, asyncHandler(async (req, res) => {
+      let query = `
+        SELECT j.id as jurnal_id, j.siswa_id, j.materi_id, j.status, j.created_at, j.earned_xp,
+               s.nama_lengkap, s.rombel, m.judul, m.tingkat_kelas, m.mata_pelajaran 
+        FROM literasi_jurnal j
+        JOIN siswa s ON j.siswa_id = s.id
+        JOIN literasi_materi m ON j.materi_id = m.id
+        WHERE j.status = 'disetujui'
+    `;
+      let params = [];
+      if (req.user.type === "staff" && !req.user.permissions.includes("all") && req.user.staff_id) {
+        const [rombelRows] = await getPool().execute("SELECT tingkat FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        if (rombelRows.length > 0) {
+          const tingkatIds = Array.from(new Set(rombelRows.map((r) => r.tingkat).filter(Boolean)));
+          if (tingkatIds.length > 0) {
+            query += " AND m.tingkat_kelas IN (" + tingkatIds.map(() => "?").join(",") + ")";
+            params.push(...tingkatIds);
+          } else {
+            query += " AND m.tingkat_kelas = -1";
+          }
+        } else {
+          query += " AND m.tingkat_kelas = -1";
+        }
+      }
+      query += " ORDER BY j.created_at DESC LIMIT 100";
+      const [jurnal] = await getPool().execute(query, params);
+      res.json({ jurnal });
+    }));
+    app.get("/api/literasi/jurnal/:id", authenticate, asyncHandler(async (req, res) => {
+      const [jawaban] = await getPool().execute(`
+        SELECT jj.id, jj.jawaban, p.pertanyaan 
+        FROM literasi_jawaban_jurnal jj
+        JOIN literasi_pertanyaan p ON jj.pertanyaan_id = p.id
+        WHERE jj.jurnal_id = ?
+    `, [req.params.id]);
+      res.json({ jawaban });
+    }));
+    app.post("/api/literasi/jurnal/:id/approve", authenticate, asyncHandler(async (req, res) => {
+      const jurnal_id = req.params.id;
+      let guru_id = req.user.id;
+      if (req.user.type === "staff") {
+        if (req.user.staff_id) {
+          guru_id = req.user.staff_id;
+        } else {
+          const [pw] = await getPool().execute("SELECT staff_id FROM pengguna_web WHERE id = ?", [req.user.id]);
+          if (pw.length > 0 && pw[0].staff_id) {
+            guru_id = pw[0].staff_id;
+          }
+        }
+      }
+      const [jurnalData] = await getPool().execute("SELECT siswa_id, materi_id, status FROM literasi_jurnal WHERE id = ?", [jurnal_id]);
+      if (jurnalData.length === 0) return res.status(404).json({ error: "Jurnal tidak ditemukan" });
+      if (jurnalData[0].status === "disetujui") return res.status(400).json({ error: "Sudah disetujui sebelumnya" });
+      const siswa_id = jurnalData[0].siswa_id;
+      const [materiData] = await getPool().execute("SELECT xp_reward FROM literasi_materi WHERE id = ?", [jurnalData[0].materi_id]);
+      const full_xp = materiData.length > 0 ? materiData[0].xp_reward : 0;
+      const grade = req.body.grade || 100;
+      const xp = Math.round(full_xp * (grade / 100));
+      await getPool().execute(
+        "UPDATE literasi_jurnal SET status = 'disetujui', earned_xp = ?, dinilai_oleh = ? WHERE id = ?",
+        [xp, guru_id, jurnal_id]
+      );
+      const [gamifikasi] = await getPool().execute("SELECT total_xp FROM siswa_gamifikasi WHERE siswa_id = ?", [siswa_id]);
+      let total_xp = xp;
+      if (gamifikasi.length > 0) {
+        total_xp += gamifikasi[0].total_xp;
+        await getPool().execute("UPDATE siswa_gamifikasi SET total_xp = ? WHERE siswa_id = ?", [total_xp, siswa_id]);
+      } else {
+        await getPool().execute("INSERT INTO siswa_gamifikasi (siswa_id, total_xp, level) VALUES (?, ?, 1)", [siswa_id, total_xp]);
+      }
+      let newLevel = 1;
+      if (total_xp >= 1e3) newLevel = 6;
+      else if (total_xp >= 700) newLevel = 5;
+      else if (total_xp >= 450) newLevel = 4;
+      else if (total_xp >= 250) newLevel = 3;
+      else if (total_xp >= 100) newLevel = 2;
+      await getPool().execute("UPDATE siswa_gamifikasi SET level = ? WHERE siswa_id = ?", [newLevel, siswa_id]);
+      res.json({ success: true, xp_given: xp, new_level: newLevel });
+    }));
+    app.post("/api/literasi/jurnal/:id/reject", authenticate, asyncHandler(async (req, res) => {
+      const jurnal_id = req.params.id;
+      let guru_id = req.user.id;
+      if (req.user.type === "staff") {
+        if (req.user.staff_id) {
+          guru_id = req.user.staff_id;
+        } else {
+          const [pw] = await getPool().execute("SELECT staff_id FROM pengguna_web WHERE id = ?", [req.user.id]);
+          if (pw.length > 0 && pw[0].staff_id) {
+            guru_id = pw[0].staff_id;
+          }
+        }
+      }
+      const [jurnalData] = await getPool().execute("SELECT siswa_id, materi_id, status FROM literasi_jurnal WHERE id = ?", [jurnal_id]);
+      if (jurnalData.length === 0) return res.status(404).json({ error: "Jurnal tidak ditemukan" });
+      if (jurnalData[0].status === "ditolak" || jurnalData[0].status === "disetujui") {
+        return res.status(400).json({ error: "Jurnal sudah direspons sebelumnya" });
+      }
+      const siswa_id = jurnalData[0].siswa_id;
+      const [materiData] = await getPool().execute("SELECT xp_reward FROM literasi_materi WHERE id = ?", [jurnalData[0].materi_id]);
+      const full_xp = materiData.length > 0 ? materiData[0].xp_reward : 0;
+      const xp = 0;
+      await getPool().execute(
+        "UPDATE literasi_jurnal SET status = 'ditolak', earned_xp = ?, dinilai_oleh = ? WHERE id = ?",
+        [xp, guru_id, jurnal_id]
+      );
+      const newLevel = null;
+      res.json({ success: true, xp_given: xp, new_level: newLevel });
+    }));
+    app.post("/api/literasi/jurnal/:id/cancel", authenticate, asyncHandler(async (req, res) => {
+      const jurnal_id = req.params.id;
+      const [jurnalData] = await getPool().execute("SELECT siswa_id, earned_xp, status FROM literasi_jurnal WHERE id = ?", [jurnal_id]);
+      if (jurnalData.length === 0) return res.status(404).json({ error: "Jurnal tidak ditemukan" });
+      if (jurnalData[0].status !== "disetujui" && jurnalData[0].status !== "ditolak") return res.status(400).json({ error: "Jurnal belum dinilai" });
+      const siswa_id = jurnalData[0].siswa_id;
+      const xp_to_deduct = jurnalData[0].earned_xp || 0;
+      await getPool().execute(
+        "UPDATE literasi_jurnal SET status = 'menunggu_validasi', earned_xp = 0, dinilai_oleh = NULL WHERE id = ?",
+        [jurnal_id]
+      );
+      if (xp_to_deduct > 0) {
+        const [gamifikasi] = await getPool().execute("SELECT total_xp FROM siswa_gamifikasi WHERE siswa_id = ?", [siswa_id]);
+        if (gamifikasi.length > 0) {
+          let total_xp = gamifikasi[0].total_xp - xp_to_deduct;
+          if (total_xp < 0) total_xp = 0;
+          let newLevel = 1;
+          if (total_xp >= 1e3) newLevel = 6;
+          else if (total_xp >= 700) newLevel = 5;
+          else if (total_xp >= 450) newLevel = 4;
+          else if (total_xp >= 250) newLevel = 3;
+          else if (total_xp >= 100) newLevel = 2;
+          await getPool().execute("UPDATE siswa_gamifikasi SET total_xp = ?, level = ? WHERE siswa_id = ?", [total_xp, newLevel, siswa_id]);
+        }
+      }
+      res.json({ success: true });
+    }));
+    app.get("/api/literasi/leaderboard/:tingkat_kelas", authenticate, asyncHandler(async (req, res) => {
+      const tingkat = req.params.tingkat_kelas;
+      const [leaderboard] = await getPool().execute(`
+        SELECT 
+            sg.siswa_id, 
+            sg.total_xp, 
+            sg.level, 
+            s.nama_lengkap, 
+            s.rombel,
+            COALESCE(ROUND(SUM(j.waktu_baca_aktual) / 60), 0) as total_waktu_baca
+        FROM siswa_gamifikasi sg
+        JOIN siswa s ON sg.siswa_id = s.id
+        LEFT JOIN literasi_jurnal j ON j.siswa_id = sg.siswa_id AND j.status IN ('disetujui', 'menunggu_validasi')
+        LEFT JOIN literasi_materi m ON j.materi_id = m.id
+        WHERE s.rombel LIKE ?
+        GROUP BY sg.siswa_id, sg.total_xp, sg.level, s.nama_lengkap, s.rombel
+        ORDER BY sg.total_xp DESC, total_waktu_baca ASC
+        LIMIT 10
+    `, [`%${tingkat}%`]);
+      res.json({ leaderboard });
+    }));
+    app.get("/api/literasi/siswa/:id", authenticate, asyncHandler(async (req, res) => {
+      const targetId = req.params.id === "null" || req.params.id === "undefined" || !req.params.id ? req.user.id : req.params.id;
+      const [profile] = await getPool().execute("SELECT total_xp, level FROM siswa_gamifikasi WHERE siswa_id = ?", [targetId]);
+      if (profile.length > 0) {
+        res.json(profile[0]);
+      } else {
+        res.json({ total_xp: 0, level: 1 });
+      }
+    }));
+    if (process.env.NODE_ENV !== "production") {
+      console.log("Starting in development mode with Vite middleware...");
+      const { createServer: createViteServer } = await import("vite");
+      const vite = await createViteServer({
+        server: { middlewareMode: true },
+        appType: "spa"
+      });
+      app.use(vite.middlewares);
+    } else {
+      const rootPath = process.cwd();
+      const distPath = import_fs.default.existsSync(import_path.default.join(rootPath, "dist")) ? import_path.default.join(rootPath, "dist") : rootPath;
+      const assetsPattern = /^\/(assets|icons|favicon|sw\.js|vite.*\.js|vite.*\.css)/;
+      app.get(assetsPattern, (_req, res, next) => next());
+      app.use("/assets", import_express.default.static(import_path.default.join(distPath, "assets")));
+      app.use("/icons", import_express.default.static(import_path.default.join(distPath, "icons")));
+      app.use("/vite.svg", import_express.default.static(import_path.default.join(distPath, "vite.svg")));
+      app.use("/sw.js", import_express.default.static(import_path.default.join(distPath, "sw.js")));
+      app.get("*", async (req, res, next) => {
+        if (req.path.startsWith("/api")) return next();
+        res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        res.setHeader("Pragma", "no-cache");
+        res.setHeader("Expires", "0");
+        try {
+          const indexPath = import_path.default.join(distPath, "index.html");
+          let html = import_fs.default.readFileSync(indexPath, "utf8");
+          const [settingsRows] = await getPool().execute("SELECT school_name, hero_title, logo_url, seo_title FROM pengaturan_sekolah WHERE id = 1");
+          const schoolName = settingsRows.length > 0 && settingsRows[0].school_name ? settingsRows[0].school_name : "Sistem Informasi Sekolah";
+          const dynamicTitle = settingsRows.length > 0 && settingsRows[0].seo_title ? settingsRows[0].seo_title : schoolName;
+          const heroTitle = settingsRows.length > 0 && settingsRows[0].hero_title ? settingsRows[0].hero_title : "Sistem Informasi Manajemen Sekolah";
+          const logoUrl = settingsRows.length > 0 && settingsRows[0].logo_url ? settingsRows[0].logo_url : "";
+          html = html.replace(/<title>.*?<\/title>/i, `<title>${dynamicTitle}</title>`);
+          let metaTags = `
+    <meta property="og:title" content="${dynamicTitle}" />
+    <meta property="og:description" content="${heroTitle}" />
+    <meta property="og:site_name" content="${dynamicTitle}" />
+    <meta name="twitter:title" content="${dynamicTitle}" />
+    <meta name="twitter:description" content="${heroTitle}" />`;
+          if (logoUrl) {
+            let absoluteLogoUrl = logoUrl;
+            if (logoUrl.startsWith("/")) {
+              const protocol = req.headers["x-forwarded-proto"] || req.protocol;
+              absoluteLogoUrl = protocol + "://" + req.get("host") + logoUrl;
+            }
+            metaTags += `
+    <meta property="og:image" content="${absoluteLogoUrl}" />
+    <meta name="twitter:image" content="${absoluteLogoUrl}" />
+    <meta name="twitter:card" content="summary_large_image" />`;
+          }
+          html = html.replace("</head>", `${metaTags}
+  </head>`);
+          res.send(html);
+        } catch (e) {
+          console.error("Error serving dynamic index.html:", e);
+          res.sendFile(import_path.default.join(distPath, "index.html"));
+        }
+      });
+    }
+    setTimeout(verifyLicenseOnBoot, 2e3);
+    await initDb();
+    setInterval(async () => {
+      try {
+        const [blogs] = await getPool().execute(`
+                SELECT * FROM artikel_blog 
+                WHERE status = 'published' 
+                AND (social_post_schedule IS NULL OR social_post_schedule <= NOW())
+                AND ((post_to_fb = 1 AND social_post_fb_done = 0) OR (post_to_ig = 1 AND social_post_ig_done = 0))
+            `);
+        if (blogs.length > 0) {
+          const [settings] = await getPool().execute("SELECT fb_page_id, ig_account_id, meta_access_token FROM pengaturan_sekolah WHERE id = 1");
+          if (settings && settings.length > 0 && settings[0].meta_access_token) {
+            for (const blog of blogs) {
+              const postFb = blog.post_to_fb === 1 && blog.social_post_fb_done === 0;
+              const postIg = blog.post_to_ig === 1 && blog.social_post_ig_done === 0;
+              if (postFb || postIg) {
+                try {
+                  await postToSocialMedia(blog.title, blog.content, blog.image_url, postFb, postIg, settings[0].fb_page_id, settings[0].ig_account_id, settings[0].meta_access_token);
+                  await getPool().execute(`
+                                    UPDATE artikel_blog 
+                                    SET social_post_fb_done = IF(? = 1, 1, social_post_fb_done),
+                                        social_post_ig_done = IF(? = 1, 1, social_post_ig_done)
+                                    WHERE id = ?
+                                `, [postFb ? 1 : 0, postIg ? 1 : 0, blog.id]);
+                } catch (err) {
+                  console.error("Failed to auto-post blog ID", blog.id, err);
+                }
+              }
+            }
+          }
+        }
+      } catch (e) {
+        console.error("Social Media Auto-Post Job Error:", e);
+      }
+    }, 6e4);
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`
+================================================
+`);
+      console.log(`  SERVER RUNNING ON PORT ${PORT}`);
+      console.log(`  URL: http://localhost:${PORT}`);
+      console.log(`  MODE: ${process.env.NODE_ENV || "development"}`);
+      console.log(`
+================================================
+`);
+    });
+  } catch (err) {
+    console.error("Failed to start server:", err);
+    process.exit(1);
+  }
+}
+startServer();
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  getPool,
+  uploadToGoogleDriveFallback
+});
+//# sourceMappingURL=server.cjs.map
