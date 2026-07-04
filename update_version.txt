@@ -1,3 +1,4 @@
-Versi 1.6.5 - Update Pengecekan Data Bantuan
-- Penyesuaian pengecekan data bantuan jika data orang tua tidak lengkap di data utama maka akan mengecek di pengajuan bantuan.
-- Perbaikan status pengajuan bantuan yang otomatis 'Selesai' jika rekening sudah diupdate.
+Versi 1.6.6 - Template & Export Data Siswa
+- Penyatuan fitur Export Data Siswa ke dalam tombol Unduh Template
+- Data yang diunduh dari template sudah berisi data siswa terkini dan formatnya disesuaikan 100% untuk Import massal
+- Tombol Export terpisah dihapus karena sudah di-cover oleh Unduh Template & Data

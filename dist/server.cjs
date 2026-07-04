@@ -3191,16 +3191,21 @@ app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
         const obj = {};
         for (const [excelKey, dbKey] of Object.entries(map)) {
           const foundKey = Object.keys(row).find((k) => k.trim().toLowerCase() === excelKey.toLowerCase());
-          if (foundKey && row[foundKey] !== void 0 && row[foundKey] !== "") {
+          if (foundKey && row[foundKey] !== void 0 && row[foundKey] !== null && row[foundKey] !== "") {
             obj[dbKey] = row[foundKey];
           }
         }
         return obj;
       };
       for (const row of data) {
+        const idSiswa = row.id_siswa ? String(row.id_siswa).trim() : null;
+        const namaLengkap = row.nama_lengkap ? String(row.nama_lengkap).trim() : null;
+        const nikVal = row.nik ? String(row.nik).trim() : null;
         const nipd = row.nipd ? String(row.nipd).trim() : null;
+        const tempatLahir = row.tempat_lahir ? String(row.tempat_lahir).trim() : null;
+        const tanggalLahir = row.tanggal_lahir ? String(row.tanggal_lahir).trim() : null;
         const nisn = row.nisn ? String(row.nisn).trim() : null;
-        if (!nipd && !nisn) {
+        if (!namaLengkap || !nikVal || !nipd || !tempatLahir || !tanggalLahir) {
           processed++;
           skipped++;
           continue;
@@ -3249,10 +3254,9 @@ app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
         }
         let siswaId = null;
         let resolvedOldStudent = null;
-        const nikVal = row.nik ? String(row.nik).trim() : null;
-        if (nipd && existingByNIPD.has(nipd)) resolvedOldStudent = existingMap.get(existingByNIPD.get(nipd));
-        else if (nisn && existingByNISN.has(nisn)) resolvedOldStudent = existingMap.get(existingByNISN.get(nisn));
+        if (idSiswa && existingMap.has(idSiswa)) resolvedOldStudent = existingMap.get(idSiswa);
         else if (nikVal && existingByNIK.has(nikVal)) resolvedOldStudent = existingMap.get(existingByNIK.get(nikVal));
+        else if (nipd && existingByNIPD.has(nipd)) resolvedOldStudent = existingMap.get(existingByNIPD.get(nipd));
         if (resolvedOldStudent) {
           siswaId = resolvedOldStudent.id;
           const isDifferentYear = siswaData.tahun_pelajaran && resolvedOldStudent.tahun_pelajaran !== siswaData.tahun_pelajaran;
