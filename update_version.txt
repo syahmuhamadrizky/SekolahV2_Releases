@@ -1,4 +1,4 @@
-Versi 1.6.16 - Penyatuan Pengaturan Google Drive
+Versi 1.6.18 - Penyatuan Pengaturan Google Drive
 - Penambahan pengaturan Google Drive On/Off untuk Upload Program Bantuan (Rekening, Pengajuan, Laporan).
 - Penambahan pengaturan Google Drive On/Off untuk Upload Dokumentasi Ekskul.
 - Penambahan pengaturan Google Drive On/Off untuk Upload File Umum dan Permohonan Pindah.
