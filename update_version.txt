@@ -1,2 +1,3 @@
-Versi 1.6.4 - Final Fix Struktur Organisasi
-- Penyesuaian database migration untuk allow NULL pegawai_id di struktur organisasi yang menyebabkan Internal Server Error (500) pada database lama.
+Versi 1.6.5 - Update Pengecekan Data Bantuan
+- Penyesuaian pengecekan data bantuan jika data orang tua tidak lengkap di data utama maka akan mengecek di pengajuan bantuan.
+- Perbaikan status pengajuan bantuan yang otomatis 'Selesai' jika rekening sudah diupdate.
