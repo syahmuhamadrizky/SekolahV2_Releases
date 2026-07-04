@@ -1,4 +1,9 @@
+Versi 1.6.8 - Penyatuan Pengaturan Google Drive
+- Penambahan pengaturan Google Drive On/Off untuk Upload Program Bantuan (Rekening, Pengajuan, Laporan).
+- Penambahan pengaturan Google Drive On/Off untuk Upload Dokumentasi Ekskul.
+- Penambahan pengaturan Google Drive On/Off untuk Upload File Umum dan Permohonan Pindah.
+- Semua konfigurasi dapat diatur secara terpusat melalui Pengaturan Admin.
+
 Versi 1.6.7 - Perbaikan Template Data Siswa
 - Siswa yang sudah Lulus atau Mutasi (Pindah) tidak akan dimasukkan ke dalam Unduh Template Data.
 - Perbaikan format export untuk memastikan data yang tidak aktif terfilter.
-
