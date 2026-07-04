@@ -1,13 +1,1 @@
-Versi 1.6.19 - Update Data Statistik Public dan Struktur Organisasi
-- Perbaikan perhitungan jumlah Pegawai (tanpa pengawas), Siswa, dan Ekskul.
-- Penambahan variasi warna random pada kartu Struktur Organisasi public.
-
-Versi 1.6.18 - Penyatuan Pengaturan Google Drive
-- Penambahan pengaturan Google Drive On/Off untuk Upload Program Bantuan (Rekening, Pengajuan, Laporan).
-- Penambahan pengaturan Google Drive On/Off untuk Upload Dokumentasi Ekskul.
-- Penambahan pengaturan Google Drive On/Off untuk Upload File Umum dan Permohonan Pindah.
-- Semua konfigurasi dapat diatur secara terpusat melalui Pengaturan Admin.
-
-Versi 1.6.7 - Perbaikan Template Data Siswa
-- Siswa yang sudah Lulus atau Mutasi (Pindah) tidak akan dimasukkan ke dalam Unduh Template Data.
-- Perbaikan format export untuk memastikan data yang tidak aktif terfilter.
+Versi 1.6.20 - Update Foto Profil Admin dan Menu Beranda\n- Penambahan menu Beranda di semua tema.\n- Perubahan menu Pendaftaran menjadi SPMB.\n- Perbaikan pewarnaan Cards pada Struktur Organisasi.\n- Perbaikan bypass proxy Google Drive untuk foto profil Admin di Dashboard.\n

@@ -2480,6 +2480,8 @@ app.get("/api/pengaturan_sekolah", asyncHandler(async (req, res) => {
         settingsData.actual_staff_count = staffRows[0].count;
         const [ekskulRows] = await getPool().execute("SELECT COUNT(DISTINCT pegawai_id) as count FROM bidang_ekskul WHERE LOWER(kategori) LIKE '%pelatih%' OR LOWER(kategori) LIKE '%guru ekskul%' OR LOWER(kategori) LIKE '%pembina%'");
         settingsData.actual_extracurricular_count = ekskulRows[0].count;
+        const [rombelRows] = await getPool().execute("SELECT COUNT(*) as count FROM rombongan_belajar");
+        settingsData.actual_rombel_count = rombelRows[0].count;
       } catch (e) {
         console.error("Failed to fetch actual student/staff count:", e);
       }
