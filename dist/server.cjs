@@ -74,7 +74,7 @@ function getDriveClient(config) {
 async function testDriveConnection(config, testFolderId) {
   try {
     if (!testFolderId) {
-      return { success: false, message: "Folder ID belum diisi!" };
+      return { ok: false, error: "Folder ID belum diisi!" };
     }
     const drive = getDriveClient(config);
     const res = await drive.files.get({
@@ -97,10 +97,10 @@ async function testDriveConnection(config, testFolderId) {
     if (testFile.data.id) {
       await drive.files.delete({ fileId: testFile.data.id });
     }
-    return { success: true, message: `Berhasil terhubung! Akses ke folder "` + res.data.name + `" terkonfirmasi.` };
+    return { ok: true, rootFolderName: res.data.name };
   } catch (err) {
     console.error("Test Drive Error:", err);
-    return { success: false, message: "Koneksi gagal: " + err.message + ". Pastikan folder sudah di-share ke Client Email sebagai Editor." };
+    return { ok: false, error: err.message, hint: "Pastikan folder sudah di-share ke Client Email sebagai Editor." };
   }
 }
 async function findOrCreateFolder(drive, folderName, parentId) {
