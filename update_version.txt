@@ -1,4 +1,4 @@
-Versi 1.6.6 - Template & Export Data Siswa
-- Penyatuan fitur Export Data Siswa ke dalam tombol Unduh Template
-- Data yang diunduh dari template sudah berisi data siswa terkini dan formatnya disesuaikan 100% untuk Import massal
-- Tombol Export terpisah dihapus karena sudah di-cover oleh Unduh Template & Data
+Versi 1.6.7 - Perbaikan Template Data Siswa
+- Siswa yang sudah Lulus atau Mutasi (Pindah) tidak akan dimasukkan ke dalam Unduh Template Data.
+- Perbaikan format export untuk memastikan data yang tidak aktif terfilter.
+
