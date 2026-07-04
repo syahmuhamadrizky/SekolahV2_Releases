@@ -78,7 +78,8 @@ async function testDriveConnection(config, testFolderId) {
     const drive = getDriveClient(config);
     const res = await drive.files.get({
       fileId: testFolderId,
-      fields: "id, name, permissions"
+      fields: "id, name, permissions",
+      supportsAllDrives: true
     });
     const fileMetadata = {
       name: "test_connection.txt",
@@ -91,22 +92,25 @@ async function testDriveConnection(config, testFolderId) {
     const testFile = await drive.files.create({
       requestBody: fileMetadata,
       media,
-      fields: "id"
+      fields: "id",
+      supportsAllDrives: true
     });
     if (testFile.data.id) {
-      await drive.files.delete({ fileId: testFile.data.id });
+      await drive.files.delete({ fileId: testFile.data.id, supportsAllDrives: true });
     }
     return { ok: true, rootFolderName: res.data.name };
   } catch (err) {
     console.error("Test Drive Error:", err);
-    return { ok: false, error: err.message, hint: "Pastikan folder sudah di-share ke Client Email sebagai Editor." };
+    return { ok: false, error: err.message, hint: "Pastikan folder sudah di-share ke Client Email sebagai Editor/Content Manager." };
   }
 }
 async function findOrCreateFolder(drive, folderName, parentId) {
   const res = await drive.files.list({
     q: `mimeType='application/vnd.google-apps.folder' and name='${folderName.replace(/'/g, "\\'")}' and '${parentId}' in parents and trashed=false`,
     fields: "files(id, name)",
-    spaces: "drive"
+    spaces: "drive",
+    supportsAllDrives: true,
+    includeItemsFromAllDrives: true
   });
   if (res.data.files && res.data.files.length > 0) {
     return res.data.files[0].id;
@@ -118,14 +122,16 @@ async function findOrCreateFolder(drive, folderName, parentId) {
   };
   const folder = await drive.files.create({
     requestBody: fileMetadata,
-    fields: "id"
+    fields: "id",
+    supportsAllDrives: true
   });
   await drive.permissions.create({
     fileId: folder.data.id,
     requestBody: {
       role: "reader",
       type: "anyone"
-    }
+    },
+    supportsAllDrives: true
   });
   return folder.data.id;
 }
@@ -154,14 +160,16 @@ async function uploadFileToDrive(options) {
   const file = await drive.files.create({
     requestBody: fileMetadata,
     media,
-    fields: "id, webViewLink, webContentLink"
+    fields: "id, webViewLink, webContentLink",
+    supportsAllDrives: true
   });
   await drive.permissions.create({
     fileId: file.data.id,
     requestBody: {
       role: "reader",
       type: "anyone"
-    }
+    },
+    supportsAllDrives: true
   });
   return {
     viewLink: file.data.webViewLink,
