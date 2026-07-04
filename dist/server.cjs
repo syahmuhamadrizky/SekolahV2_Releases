@@ -45,14 +45,130 @@ var import_os = __toESM(require("os"), 1);
 var import_bcryptjs = __toESM(require("bcryptjs"), 1);
 
 // googleDrive.ts
-async function testDriveConnection() {
-  return { success: false, message: "Google Drive is mocked." };
+var import_googleapis = require("googleapis");
+var import_stream = require("stream");
+async function getGoogleDriveConfig() {
+  try {
+    const [rows] = await getPool().execute("SELECT google_drive_config FROM pengaturan_sekolah WHERE id = 1");
+    if (rows.length > 0 && rows[0].google_drive_config) {
+      return JSON.parse(rows[0].google_drive_config);
+    }
+    return null;
+  } catch (err) {
+    console.error("Error fetching drive config:", err);
+    return null;
+  }
+}
+function getDriveClient(config) {
+  if (!config || !config.clientEmail || !config.privateKey) {
+    throw new Error("Kredensial Google Drive belum lengkap di pengaturan.");
+  }
+  const auth = new import_googleapis.google.auth.JWT(
+    config.clientEmail,
+    void 0,
+    config.privateKey.replace(/\\n/g, "\n"),
+    ["https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+  );
+  return import_googleapis.google.drive({ version: "v3", auth });
+}
+async function testDriveConnection(config, testFolderId) {
+  try {
+    if (!testFolderId) {
+      return { success: false, message: "Folder ID belum diisi!" };
+    }
+    const drive = getDriveClient(config);
+    const res = await drive.files.get({
+      fileId: testFolderId,
+      fields: "id, name, permissions"
+    });
+    const fileMetadata = {
+      name: "test_connection.txt",
+      parents: [testFolderId]
+    };
+    const media = {
+      mimeType: "text/plain",
+      body: "This is a test file to verify Google Drive connection."
+    };
+    const testFile = await drive.files.create({
+      requestBody: fileMetadata,
+      media,
+      fields: "id"
+    });
+    if (testFile.data.id) {
+      await drive.files.delete({ fileId: testFile.data.id });
+    }
+    return { success: true, message: `Berhasil terhubung! Akses ke folder "` + res.data.name + `" terkonfirmasi.` };
+  } catch (err) {
+    console.error("Test Drive Error:", err);
+    return { success: false, message: "Koneksi gagal: " + err.message + ". Pastikan folder sudah di-share ke Client Email sebagai Editor." };
+  }
+}
+async function findOrCreateFolder(drive, folderName, parentId) {
+  const res = await drive.files.list({
+    q: `mimeType='application/vnd.google-apps.folder' and name='${folderName.replace(/'/g, "\\'")}' and '${parentId}' in parents and trashed=false`,
+    fields: "files(id, name)",
+    spaces: "drive"
+  });
+  if (res.data.files && res.data.files.length > 0) {
+    return res.data.files[0].id;
+  }
+  const fileMetadata = {
+    name: folderName,
+    mimeType: "application/vnd.google-apps.folder",
+    parents: [parentId]
+  };
+  const folder = await drive.files.create({
+    requestBody: fileMetadata,
+    fields: "id"
+  });
+  await drive.permissions.create({
+    fileId: folder.data.id,
+    requestBody: {
+      role: "reader",
+      type: "anyone"
+    }
+  });
+  return folder.data.id;
 }
 async function uploadFileToDrive(options) {
-  return { viewLink: null };
-}
-async function getGoogleDriveConfig() {
-  return null;
+  const { buffer, originalFilename, mimeType, schoolName, category, folderType, subfolderName } = options;
+  const config = await getGoogleDriveConfig();
+  if (!config || !config.rootFolderGlobal) throw new Error("Drive is not fully configured or Root Folder ID is missing");
+  const drive = getDriveClient(config);
+  const mainFolderId = await findOrCreateFolder(drive, schoolName || "Dapoy Storage", config.rootFolderGlobal);
+  const categoryFolderId = await findOrCreateFolder(drive, category || "Umum", mainFolderId);
+  let finalFolderId = categoryFolderId;
+  if (subfolderName) {
+    finalFolderId = await findOrCreateFolder(drive, subfolderName, categoryFolderId);
+  }
+  const stream = new import_stream.Readable();
+  stream.push(buffer);
+  stream.push(null);
+  const fileMetadata = {
+    name: originalFilename,
+    parents: [finalFolderId]
+  };
+  const media = {
+    mimeType,
+    body: stream
+  };
+  const file = await drive.files.create({
+    requestBody: fileMetadata,
+    media,
+    fields: "id, webViewLink, webContentLink"
+  });
+  await drive.permissions.create({
+    fileId: file.data.id,
+    requestBody: {
+      role: "reader",
+      type: "anyone"
+    }
+  });
+  return {
+    viewLink: file.data.webViewLink,
+    downloadLink: file.data.webContentLink,
+    id: file.data.id
+  };
 }
 
 // socialMedia.ts
