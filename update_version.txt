@@ -1,3 +1,7 @@
+Versi 1.6.19 - Update Data Statistik Public dan Struktur Organisasi
+- Perbaikan perhitungan jumlah Pegawai (tanpa pengawas), Siswa, dan Ekskul.
+- Penambahan variasi warna random pada kartu Struktur Organisasi public.
+
 Versi 1.6.18 - Penyatuan Pengaturan Google Drive
 - Penambahan pengaturan Google Drive On/Off untuk Upload Program Bantuan (Rekening, Pengajuan, Laporan).
 - Penambahan pengaturan Google Drive On/Off untuk Upload Dokumentasi Ekskul.

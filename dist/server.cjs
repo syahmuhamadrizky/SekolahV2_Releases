@@ -2474,10 +2474,12 @@ app.get("/api/pengaturan_sekolah", asyncHandler(async (req, res) => {
     if (rows && rows.length > 0) {
       const settingsData = rows[0];
       try {
-        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM siswa");
+        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM siswa WHERE rombel IS NOT NULL AND rombel != '' AND UPPER(rombel) != 'LULUS' AND UPPER(rombel) != 'PINDAH'");
         settingsData.actual_student_count = studentRows[0].count;
-        const [staffRows] = await getPool().execute("SELECT COUNT(*) as count FROM pegawai");
+        const [staffRows] = await getPool().execute("SELECT COUNT(*) as count FROM pegawai WHERE LOWER(jenis_ptk) NOT LIKE '%pengawas%'");
         settingsData.actual_staff_count = staffRows[0].count;
+        const [ekskulRows] = await getPool().execute("SELECT COUNT(DISTINCT pegawai_id) as count FROM bidang_ekskul WHERE LOWER(kategori) LIKE '%pelatih%' OR LOWER(kategori) LIKE '%guru ekskul%' OR LOWER(kategori) LIKE '%pembina%'");
+        settingsData.actual_extracurricular_count = ekskulRows[0].count;
       } catch (e) {
         console.error("Failed to fetch actual student/staff count:", e);
       }
