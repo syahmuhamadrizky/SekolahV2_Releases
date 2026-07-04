@@ -63,12 +63,11 @@ function getDriveClient(config) {
   if (!config || !config.clientEmail || !config.privateKey) {
     throw new Error("Kredensial Google Drive belum lengkap di pengaturan.");
   }
-  const auth = new import_googleapis.google.auth.JWT(
-    config.clientEmail,
-    void 0,
-    config.privateKey.replace(/\\n/g, "\n"),
-    ["https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
-  );
+  const auth = new import_googleapis.google.auth.JWT({
+    email: config.clientEmail,
+    key: config.privateKey.replace(/\\n/g, "\n"),
+    scopes: ["https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+  });
   return import_googleapis.google.drive({ version: "v3", auth });
 }
 async function testDriveConnection(config, testFolderId) {
