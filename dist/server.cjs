@@ -567,6 +567,9 @@ async function uploadToGoogleDriveFallback(localFilePath, newFilename, mimeType,
       if (folderType === "pendaftar" && !config.useDriveForPendaftar) return null;
       if (folderType === "pegawai" && !config.useDriveForPegawai) return null;
       if (folderType === "perubahan_data" && !config.useDriveForPerubahanData) return null;
+      if (folderType === "bantuan" && !config.useDriveForBantuan) return null;
+      if (folderType === "ekskul" && !config.useDriveForEkskul) return null;
+      if (folderType === "umum" && !config.useDriveForUmum) return null;
       try {
         const buffer = import_fs.default.readFileSync(localFilePath);
         const res = await uploadFileToDrive({
@@ -1735,6 +1738,10 @@ app.post("/api/bantuan/rekening/:siswa_id/:istilah", authenticate, uploadBantuan
     let buku_tabungan_path = void 0;
     if (req.file) {
       buku_tabungan_path = "/uploads/bantuan/" + req.file.filename;
+      const gdLink = await uploadToGoogleDriveFallback(req.file.path, req.file.filename, req.file.mimetype, "bantuan", "Buku Rekening Bantuan");
+      if (gdLink) {
+        buku_tabungan_path = gdLink;
+      }
     }
     const [existing] = await getPool().query(
       "SELECT id FROM data_bank WHERE siswa_id = ? AND istilah = ?",
@@ -1843,7 +1850,7 @@ app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantua
     const { siswa_id, istilah } = req.params;
     const body = req.body;
     const files = req.files;
-    const renameFile = (fileObj, jenisFile) => {
+    const renameFile = async (fileObj, jenisFile) => {
       if (!fileObj) return void 0;
       const ext = import_path.default.extname(fileObj.originalname);
       const sanitizedNama = (body.nama_lengkap || "").replace(/[^a-z0-9]/gi, "_").toLowerCase();
@@ -1853,12 +1860,16 @@ app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantua
       if (import_fs.default.existsSync(oldPath)) {
         import_fs.default.renameSync(oldPath, newPath);
       }
+      const gdLink = await uploadToGoogleDriveFallback(newPath, newName, fileObj.mimetype, "bantuan", "Pengajuan Bantuan - " + jenisFile);
+      if (gdLink) {
+        return gdLink;
+      }
       return "/uploads/bantuan/" + newName;
     };
-    let foto_ktp = renameFile(files["foto_ktp"]?.[0], "KTP");
-    let foto_kk = renameFile(files["foto_kk"]?.[0], "KK");
-    let foto_akte = renameFile(files["foto_akte"]?.[0], "AKTE");
-    let foto_surat_wali = renameFile(files["foto_surat_wali"]?.[0], "SURAT_WALI");
+    let foto_ktp = await renameFile(files["foto_ktp"]?.[0], "KTP");
+    let foto_kk = await renameFile(files["foto_kk"]?.[0], "KK");
+    let foto_akte = await renameFile(files["foto_akte"]?.[0], "AKTE");
+    let foto_surat_wali = await renameFile(files["foto_surat_wali"]?.[0], "SURAT_WALI");
     const [existing] = await getPool().query("SELECT id FROM pengajuan_rekening_bantuan WHERE siswa_id = ? AND istilah = ?", [siswa_id, istilah]);
     if (existing.length > 0) {
       let updateQuery = `UPDATE pengajuan_rekening_bantuan SET 
@@ -1998,7 +2009,7 @@ app.post("/api/bantuan/laporan", authenticate, uploadBantuan.fields([
     const body = req.body;
     const siswa_id = req.user.id;
     const files = req.files;
-    const renameFile = (fileObj, jenisFile) => {
+    const renameFile = async (fileObj, jenisFile) => {
       if (!fileObj) return void 0;
       const ext = import_path.default.extname(fileObj.originalname);
       const newName = `\${jenisFile}_\${siswa_id}_\${Date.now()}\${ext}`;
@@ -2007,10 +2018,14 @@ app.post("/api/bantuan/laporan", authenticate, uploadBantuan.fields([
       if (import_fs.default.existsSync(oldPath)) {
         import_fs.default.renameSync(oldPath, newPath);
       }
+      const gdLink = await uploadToGoogleDriveFallback(newPath, newName, fileObj.mimetype, "bantuan", "Laporan Bantuan - " + jenisFile);
+      if (gdLink) {
+        return gdLink;
+      }
       return "/uploads/bantuan/" + newName;
     };
-    let upload_foto_selfie = renameFile(files["upload_foto_selfie"]?.[0], "LAPORAN_SELFIE");
-    let upload_foto_transaksi = renameFile(files["upload_foto_transaksi"]?.[0], "LAPORAN_TRANSAKSI");
+    let upload_foto_selfie = await renameFile(files["upload_foto_selfie"]?.[0], "LAPORAN_SELFIE");
+    let upload_foto_transaksi = await renameFile(files["upload_foto_transaksi"]?.[0], "LAPORAN_TRANSAKSI");
     let query = "";
     let params = [];
     if (body.id && body.id !== "undefined" && body.id !== "null" && body.id !== "") {
@@ -2182,13 +2197,18 @@ app.post("/api/system/restart-pm2", authenticate, async (req, res) => {
   }
 });
 app.post("/api/upload", authenticate, (req, res, next) => {
-  upload.single("file")(req, res, (err) => {
+  upload.single("file")(req, res, async (err) => {
     if (err) {
       console.error("Multer error:", err);
       return res.status(400).json({ error: err.message || "File upload error" });
     }
     if (!req.file) return res.status(400).json({ error: "No file uploaded" });
-    res.json({ url: `/uploads/${req.file.filename}` });
+    let fileUrl = `/uploads/${req.file.filename}`;
+    const gdLink = await uploadToGoogleDriveFallback(req.file.path, req.file.filename, req.file.mimetype, "umum", "Upload Umum");
+    if (gdLink) {
+      fileUrl = gdLink;
+    }
+    res.json({ url: fileUrl });
   });
 });
 app.post("/api/profile/photo", authenticate, (req, res, next) => {
@@ -3902,7 +3922,11 @@ app.put("/api/permohonan-pindah/:id/status", authenticate, asyncHandler(async (r
 }));
 app.post("/api/permohonan-pindah/:id/upload", authenticate, uploadPermohonan.single("dokumen_scan"), asyncHandler(async (req, res) => {
   if (!req.file) return res.status(400).json({ error: "No file uploaded" });
-  const docUrl = "/uploads/permohonan/" + req.file.filename;
+  let docUrl = "/uploads/permohonan/" + req.file.filename;
+  const gdLink = await uploadToGoogleDriveFallback(req.file.path, req.file.filename, req.file.mimetype, "perubahan_data", "File Permohonan Pindah");
+  if (gdLink) {
+    docUrl = gdLink;
+  }
   await getPool().execute("UPDATE permohonan_pindah SET dokumen_scan = ? WHERE id = ?", [docUrl, req.params.id]);
   res.json({ success: true, url: docUrl });
 }));
@@ -5015,9 +5039,17 @@ async function startServer() {
     app.post("/api/absensi_ekskul/:id/dokumentasi", authenticate, uploadEkskul.array("dokumentasi", 2), asyncHandler(async (req, res) => {
       const files = req.files;
       if (!files) return res.status(400).json({ error: "No files uploaded" });
-      const paths = files.map((f) => "/uploads/ekskul/" + f.filename);
-      const foto_1 = paths[0] || null;
-      const foto_2 = paths[1] || null;
+      const processFile = async (f) => {
+        if (!f) return null;
+        let fileUrl = "/uploads/ekskul/" + f.filename;
+        const gdLink = await uploadToGoogleDriveFallback(f.path, f.filename, f.mimetype, "ekskul", "Dokumentasi Ekskul");
+        if (gdLink) {
+          fileUrl = gdLink;
+        }
+        return fileUrl;
+      };
+      const foto_1 = await processFile(files[0]);
+      const foto_2 = await processFile(files[1]);
       let query = "UPDATE absensi_ekskul SET ";
       let params = [];
       if (foto_1) {
