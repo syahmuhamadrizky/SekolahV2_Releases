@@ -96,7 +96,11 @@ async function testDriveConnection(config, testFolderId) {
       supportsAllDrives: true
     });
     if (testFile.data.id) {
-      await drive.files.delete({ fileId: testFile.data.id, supportsAllDrives: true });
+      try {
+        await drive.files.delete({ fileId: testFile.data.id, supportsAllDrives: true });
+      } catch (deleteErr) {
+        console.warn("Test file created but failed to delete (Shared Drive policy?):", deleteErr);
+      }
     }
     return { ok: true, rootFolderName: res.data.name };
   } catch (err) {
