@@ -1,1 +1,4 @@
-Versi 1.6.22 - Perbaikan Fitur Bantuan Siswa\n- Modifikasi menu Aksi pada daftar penerima bantuan menjadi "Data Rekening" dan "Update Data".\n- Pengecekan kelengkapan data penerima bantuan disesuaikan untuk mengambil dari data pengajuan spesifik, bukan dari profil utama.\n
+Versi 1.6.23 - Perbaikan Fitur Bantuan Siswa
+- Perbaikan pengecekan kelengkapan data (khusus NIK divalidasi dari database siswa).
+- Menampilkan nama file dokumen KTP, KK, Akta, Surat Wali, dan Buku Tabungan yang sudah ter-upload sebelumnya di sisi admin dan siswa.
+- Mengubah opsi status Update Data menjadi "Pengajuan Rekening", "Menunggu Laporan", "Selesai".
