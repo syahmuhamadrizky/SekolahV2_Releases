@@ -1801,8 +1801,8 @@ app.get("/api/bantuan/siswa/me", authenticate, async (req, res) => {
             SELECT 
                 pb.id as penerima_bantuan_id, pb.siswa_id,
                 jb.nama_bantuan, jb.istilah, pb.tahun, pb.semester,
-                db.nomor_rekening, db.bank, db.an_rekening,
-                prb.id as pengajuan_id, prb.status_pengajuan,
+                db.nomor_rekening, db.bank, db.an_rekening, db.upload_foto_buku_rekening,
+                prb.id as pengajuan_id, prb.status_pengajuan, prb.foto_ktp, prb.foto_kk, prb.foto_akte, prb.penanggung_jawab_rekening, prb.foto_surat_wali,
                 lb.id as laporan_id, lb.tanggal_pencairan, lb.tanggal_penarikan, lb.nominal, lb.upload_foto_selfie, lb.upload_foto_transaksi, lb.tanda_tangan
             FROM penerima_bantuan pb
             JOIN jenis_bantuan jb ON pb.istilah = jb.istilah
@@ -1835,7 +1835,7 @@ app.get("/api/bantuan/pengajuan_all", authenticate, async (req, res) => {
       }
     }
     const [rows] = await getPool().execute(`
-            SELECT p.*, s.nama_lengkap AS siswa_nama, s.nisn, s.rombel AS nama_kelas, s.nik AS siswa_nik, j.nama_bantuan, db.nomor_rekening, db.bank
+            SELECT p.*, s.nama_lengkap AS siswa_nama, s.nisn, s.rombel AS nama_kelas, s.nik AS siswa_nik, j.nama_bantuan, db.nomor_rekening, db.bank, db.an_rekening, db.upload_foto_buku_rekening
             FROM pengajuan_rekening_bantuan p
             LEFT JOIN siswa s ON p.siswa_id = s.id
             LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah

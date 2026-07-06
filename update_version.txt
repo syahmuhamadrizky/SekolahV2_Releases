@@ -1,4 +1,5 @@
-Versi 1.6.25 - Update Fitur Laporan
+Versi 1.6.26 - Fix Update Fitur Laporan
+- Perbaikan masalah pada proses ekstraksi update sebelumnya.
 - Perbaikan status update otomatis (Belum Lengkap -> Menunggu Laporan -> Selesai)
 - Fitur Upload Laporan di halaman siswa
 - Menghapus manual input status pengajuan untuk admin
