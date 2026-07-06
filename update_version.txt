@@ -1,3 +1,3 @@
-Versi 1.6.28 - Perbaikan Fitur Bantuan (Admin)
-- Memperbaiki error "Terjadi kesalahan saat menyimpan data" di menu update data bantuan (Admin).
-- Mengubah tombol Kembali menjadi Batalkan agar lebih jelas dan bisa diklik dengan benar.
+Versi 1.6.29 - Tambahan Ekspor Data Lengkap Daftar Penerima Bantuan
+- Melengkapi fungsi ekspor ke Excel di menu Daftar Penerima Bantuan (Admin) untuk menyertakan data alamat, data kontak (No HP, No KK), dan data orang tua.
+- Secara cerdas menggabungkan data dari Data Siswa Utama dan Data Update Rekening. Jika data sudah pernah di-update pada menu Update Data Bantuan, maka prioritas informasi akan diambil dari form Update Data (sesuai inputan terbaru siswa). Jika belum, maka akan mengambil dari Data Utama Siswa.

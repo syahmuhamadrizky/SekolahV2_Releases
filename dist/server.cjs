@@ -1762,12 +1762,26 @@ app.get("/api/bantuan/penerima", authenticate, async (req, res) => {
     }
     const [rows] = await getPool().execute(`
             SELECT 
-                pb.id as penerima_bantuan_id, s.id as siswa_id, s.nama_lengkap, s.nisn, s.rombel, 
+                pb.id as penerima_bantuan_id, s.id as siswa_id, s.nisn, s.rombel, s.nik,
                 jb.nama_bantuan, jb.istilah, pb.tahun, pb.semester,
-                s.tempat_lahir, s.tanggal_lahir, s.nik, dk.nomor_hp, s.nomor_kk,
-                ibu.nama as nama_ibu, ibu.nik as nik_ibu,
-                ayah.nama as nama_ayah, ayah.nik as nik_ayah,
-                wali.nama as nama_wali, wali.nik as nik_wali,
+                IFNULL(NULLIF(prb.nama_lengkap, ''), s.nama_lengkap) as nama_lengkap,
+                IFNULL(NULLIF(prb.tempat_lahir, ''), s.tempat_lahir) as tempat_lahir,
+                IFNULL(prb.tanggal_lahir, s.tanggal_lahir) as tanggal_lahir,
+                IFNULL(NULLIF(prb.nomor_hp, ''), dk.nomor_hp) as nomor_hp,
+                IFNULL(NULLIF(prb.nomor_kk, ''), s.nomor_kk) as nomor_kk,
+                IFNULL(NULLIF(prb.nama_ibu, ''), ibu.nama) as nama_ibu,
+                IFNULL(NULLIF(prb.nik_ibu, ''), ibu.nik) as nik_ibu,
+                IFNULL(NULLIF(prb.nama_ayah, ''), ayah.nama) as nama_ayah,
+                IFNULL(NULLIF(prb.nik_ayah, ''), ayah.nik) as nik_ayah,
+                IFNULL(NULLIF(prb.wali, ''), wali.nama) as nama_wali,
+                IFNULL(NULLIF(prb.nik_wali, ''), wali.nik) as nik_wali,
+                IFNULL(NULLIF(prb.alamat_jalan, ''), s.alamat_jalan) as alamat_jalan,
+                IFNULL(NULLIF(prb.rt, ''), s.rt) as rt,
+                IFNULL(NULLIF(prb.rw, ''), s.rw) as rw,
+                IFNULL(NULLIF(prb.kelurahan, ''), s.kelurahan) as kelurahan,
+                IFNULL(NULLIF(prb.kecamatan, ''), s.kecamatan) as kecamatan,
+                IFNULL(NULLIF(prb.kota, ''), s.kota) as kota,
+                IFNULL(NULLIF(prb.provinsi, ''), s.provinsi) as provinsi,
                 db.bank, db.nomor_rekening, db.an_rekening, prb.penanggung_jawab_rekening
             FROM penerima_bantuan pb
             JOIN siswa s ON pb.siswa_id = s.id
