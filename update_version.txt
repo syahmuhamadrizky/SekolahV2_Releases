@@ -1,2 +1,4 @@
-Versi 1.6.24 - Hotfix Update Data
-- Hotfix struktur folder rilis untuk pembaruan fitur Bantuan Siswa (Status Pengajuan & Dokumen).
+Versi 1.6.25 - Update Fitur Laporan
+- Perbaikan status update otomatis (Belum Lengkap -> Menunggu Laporan -> Selesai)
+- Fitur Upload Laporan di halaman siswa
+- Menghapus manual input status pengajuan untuk admin
