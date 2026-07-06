@@ -923,7 +923,8 @@ async function initDb() {
             role_id INT,
             username VARCHAR(100) UNIQUE NOT NULL,
             password VARCHAR(255) NOT NULL,
-            status_aktif BOOLEAN DEFAULT TRUE
+            status_aktif BOOLEAN DEFAULT TRUE,
+            is_elearning_admin BOOLEAN DEFAULT FALSE
           )
         `
       },
@@ -1492,6 +1493,7 @@ async function initDb() {
     await ensureColumn(p, "siswa", "agama", "VARCHAR(50) AFTER nik");
     await ensureColumn(p, "siswa", "status_aktif", "BOOLEAN DEFAULT TRUE AFTER agama");
     await ensureColumn(p, "pengguna_web", "status_aktif", "BOOLEAN DEFAULT TRUE AFTER password");
+    await ensureColumn(p, "pengguna_web", "is_elearning_admin", "BOOLEAN DEFAULT FALSE AFTER status_aktif");
     await ensureColumn(p, "pengaturan_sekolah", "school_name", "VARCHAR(255) DEFAULT 'SDN Tanah Tinggi 1'");
     await ensureColumn(p, "pengaturan_sekolah", "npsn", "VARCHAR(50)");
     await ensureColumn(p, "pengaturan_sekolah", "akreditasi", "VARCHAR(10)");
