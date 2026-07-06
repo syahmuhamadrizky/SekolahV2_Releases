@@ -1,4 +1,2 @@
-Versi 1.6.23 - Perbaikan Fitur Bantuan Siswa
-- Perbaikan pengecekan kelengkapan data (khusus NIK divalidasi dari database siswa).
-- Menampilkan nama file dokumen KTP, KK, Akta, Surat Wali, dan Buku Tabungan yang sudah ter-upload sebelumnya di sisi admin dan siswa.
-- Mengubah opsi status Update Data menjadi "Pengajuan Rekening", "Menunggu Laporan", "Selesai".
+Versi 1.6.24 - Hotfix Update Data
+- Hotfix struktur folder rilis untuk pembaruan fitur Bantuan Siswa (Status Pengajuan & Dokumen).
