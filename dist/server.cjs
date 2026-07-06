@@ -2016,7 +2016,7 @@ app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantua
         body.nama_ibu,
         body.nik_ibu,
         body.status_orang_tua || "Lengkap",
-        body.wali,
+        body.wali || body.nama_wali || null,
         body.nik_wali,
         body.hubungan_wali,
         body.nomor_hp,
@@ -2052,8 +2052,38 @@ app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantua
       }
       updateQuery += " WHERE siswa_id = ? AND istilah = ?";
       params.push(siswa_id, istilah);
-      await getPool().query(updateQuery, params);
+      const safeParams = params.map((p) => p === void 0 ? null : p);
+      await getPool().query(updateQuery, safeParams);
     } else {
+      const insertParams = [
+        siswa_id,
+        istilah,
+        body.nama_lengkap,
+        body.tempat_lahir,
+        body.tanggal_lahir || null,
+        body.nama_ayah,
+        body.nik_ayah,
+        body.nama_ibu,
+        body.nik_ibu,
+        body.status_orang_tua || "Lengkap",
+        body.wali || body.nama_wali || null,
+        body.nik_wali,
+        body.hubungan_wali,
+        body.nomor_hp,
+        body.nomor_kk,
+        body.provinsi,
+        body.kota,
+        body.kecamatan,
+        body.kelurahan,
+        body.rt,
+        body.rw,
+        body.alamat_jalan,
+        body.penanggung_jawab_rekening,
+        foto_ktp || null,
+        foto_kk || null,
+        foto_akte || null,
+        foto_surat_wali || null
+      ].map((p) => p === void 0 ? null : p);
       await getPool().query(
         `INSERT INTO pengajuan_rekening_bantuan 
                 (siswa_id, istilah, nama_lengkap, tempat_lahir, tanggal_lahir, 
@@ -2062,35 +2092,7 @@ app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantua
                 provinsi, kota, kecamatan, kelurahan, rt, rw, alamat_jalan, 
                 penanggung_jawab_rekening, foto_ktp, foto_kk, foto_akte, foto_surat_wali) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [
-          siswa_id,
-          istilah,
-          body.nama_lengkap,
-          body.tempat_lahir,
-          body.tanggal_lahir || null,
-          body.nama_ayah,
-          body.nik_ayah,
-          body.nama_ibu,
-          body.nik_ibu,
-          body.status_orang_tua || "Lengkap",
-          body.wali,
-          body.nik_wali,
-          body.hubungan_wali,
-          body.nomor_hp,
-          body.nomor_kk,
-          body.provinsi,
-          body.kota,
-          body.kecamatan,
-          body.kelurahan,
-          body.rt,
-          body.rw,
-          body.alamat_jalan,
-          body.penanggung_jawab_rekening,
-          foto_ktp || null,
-          foto_kk || null,
-          foto_akte || null,
-          foto_surat_wali || null
-        ]
+        insertParams
       );
     }
     res.json({ success: true });
