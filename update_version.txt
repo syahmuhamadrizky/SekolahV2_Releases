@@ -1,3 +1,3 @@
-Versi 1.6.29 - Tambahan Ekspor Data Lengkap Daftar Penerima Bantuan
-- Melengkapi fungsi ekspor ke Excel di menu Daftar Penerima Bantuan (Admin) untuk menyertakan data alamat, data kontak (No HP, No KK), dan data orang tua.
-- Secara cerdas menggabungkan data dari Data Siswa Utama dan Data Update Rekening. Jika data sudah pernah di-update pada menu Update Data Bantuan, maka prioritas informasi akan diambil dari form Update Data (sesuai inputan terbaru siswa). Jika belum, maka akan mengambil dari Data Utama Siswa.
+Versi 1.6.30 - Perbaikan Bug Tambah/Edit Data Pegawai
+- Memperbaiki masalah pada Form Edit Data Pegawai di mana tanggal lahir kadang mundur 1 hari akibat dari pemrosesan Timezone (UTC).
+- Memperbaiki bug pada pilihan dropdown "Sertifikasi" agar menggunakan data sertifikasi yang benar, bukan data bidang studi.
