@@ -492,134 +492,64 @@ app.get("/api/license-status", async (req, res) => {
   }
   res.json({ status, trialEndsAt, hwid: getHwid(), isLicenseValid, isExpired });
 });
-app.post("/api/sync/siswa", async (req, res) => {
+app.post(["/api/sync/siswa", "/api/sync/pegawai", "/api/sync/referensi", "/api/sync/semua", "/api/sync/:type?"], async (req, res) => {
   try {
-    const { token, data } = req.body;
-    if (!token) return res.status(401).json({ success: false, message: "Token missing" });
-    const [settingsRows] = await pool.query("SELECT sync_token FROM pengaturan_sekolah LIMIT 1");
+    const token = req.headers["authorization"]?.replace("Bearer ", "") || req.headers["x-api-key"] || req.body?.token;
+    const pool2 = getPool();
+    if (!token) {
+      return res.status(401).json({ success: false, message: "Unauthorized: No token provided" });
+    }
+    const [settingsRows] = await pool2.query("SELECT sync_token FROM pengaturan_sekolah LIMIT 1");
     if (!settingsRows || settingsRows.length === 0 || settingsRows[0].sync_token !== token || !token.startsWith("dapoy-")) {
       return res.status(403).json({ success: false, message: "Invalid API token" });
     }
-    if (!data || !data.siswa) {
-      return res.status(400).json({ success: false, message: "Data siswa is missing" });
+    const data = req.body?.data;
+    if (!data || typeof data !== "object") {
+      return res.status(400).json({ success: false, message: "Data payload is missing or invalid" });
     }
-    const [existingStudents] = await pool.query("SELECT id, nisn, nipd, nik, tahun_pelajaran, semester, rombel FROM siswa");
-    const mapById = /* @__PURE__ */ new Map();
-    const mapByNisn = /* @__PURE__ */ new Map();
-    const mapByNipd = /* @__PURE__ */ new Map();
-    const mapByNik = /* @__PURE__ */ new Map();
-    for (const s of existingStudents) {
-      mapById.set(s.id, s);
-      if (s.nisn && s.nisn.trim() && s.nisn.trim() !== "-") mapByNisn.set(s.nisn.trim(), s.id);
-      if (s.nipd && s.nipd.trim() && s.nipd.trim() !== "-") mapByNipd.set(s.nipd.trim(), s.id);
-      if (s.nik && s.nik.trim() && s.nik.trim() !== "-") mapByNik.set(s.nik.trim(), s.id);
-    }
-    const idMap = /* @__PURE__ */ new Map();
-    const arsipData = [];
-    for (const s of data.siswa) {
-      let resolvedOldStudent = null;
-      if (mapById.has(s.id)) {
-        resolvedOldStudent = mapById.get(s.id);
-      } else if (s.nisn && mapByNisn.has(s.nisn.trim())) {
-        resolvedOldStudent = mapById.get(mapByNisn.get(s.nisn.trim()));
-      } else if (s.nipd && mapByNipd.has(s.nipd.trim())) {
-        resolvedOldStudent = mapById.get(mapByNipd.get(s.nipd.trim()));
-      } else if (s.nik && mapByNik.has(s.nik.trim())) {
-        resolvedOldStudent = mapById.get(mapByNik.get(s.nik.trim()));
-      }
-      if (resolvedOldStudent) {
-        if (resolvedOldStudent.id !== s.id) {
-          idMap.set(s.id, resolvedOldStudent.id);
-          s.id = resolvedOldStudent.id;
-        }
-        const isDifferentYear = s.tahun_pelajaran && resolvedOldStudent.tahun_pelajaran !== s.tahun_pelajaran;
-        const isDifferentSemester = s.semester && resolvedOldStudent.semester !== s.semester;
-        if (isDifferentYear || isDifferentSemester) {
-          arsipData.push([
-            s.id,
-            resolvedOldStudent.tahun_pelajaran,
-            resolvedOldStudent.semester,
-            resolvedOldStudent.rombel
-          ]);
-        }
-      }
-    }
-    if (arsipData.length > 0) {
-      const BATCH_SIZE2 = 100;
-      for (let i = 0; i < arsipData.length; i += BATCH_SIZE2) {
-        const batch = arsipData.slice(i, i + BATCH_SIZE2);
-        if (batch.length === 0) continue;
-        const placeholders = batch.map(() => "(?, ?, ?, ?)").join(",");
-        await pool.query(`INSERT INTO arsip_siswa (siswa_id, tahun_pelajaran, semester, rombel) VALUES ${placeholders}`, batch.flat());
-      }
-    }
-    const resolveChildIds = (arr) => {
-      if (arr) {
-        for (const child of arr) {
-          if (idMap.has(child.siswa_id)) {
-            child.siswa_id = idMap.get(child.siswa_id);
+    const BATCH_SIZE = 200;
+    let totalProcessed = 0;
+    for (const [table, items] of Object.entries(data)) {
+      if (!Array.isArray(items) || items.length === 0) continue;
+      const sample = items[0];
+      if (!sample || typeof sample !== "object") continue;
+      const keys = Object.keys(sample).filter((k) => k !== "undefined");
+      const [cols] = await pool2.query(`SHOW COLUMNS FROM \`${table}\``).catch(() => [[]]);
+      if (cols.length === 0) {
+        let pk = keys[0];
+        if (table === "peserta_didik") pk = "peserta_didik_id";
+        else if (table === "registrasi_peserta_didik") pk = "registrasi_id";
+        else if (table === "peserta_didik_longitudinal") pk = "peserta_didik_id";
+        else if (table === "anggota_rombel") pk = "anggota_rombel_id";
+        else if (table === "rombongan_belajar") pk = "rombongan_belajar_id";
+        const colDefs = keys.map((k) => k === pk ? `\`${k}\` VARCHAR(64) NOT NULL PRIMARY KEY` : `\`${k}\` TEXT`).join(", ");
+        await pool2.query(`CREATE TABLE IF NOT EXISTS \`${table}\` (${colDefs})`);
+      } else {
+        const existingColNames = cols.map((c) => c.Field);
+        for (const k of keys) {
+          if (!existingColNames.includes(k)) {
+            await pool2.query(`ALTER TABLE \`${table}\` ADD COLUMN \`${k}\` TEXT`).catch(() => {
+            });
           }
         }
       }
-    };
-    resolveChildIds(data.data_orang_tua);
-    resolveChildIds(data.data_wali);
-    resolveChildIds(data.data_kontak);
-    resolveChildIds(data.data_periodik);
-    resolveChildIds(data.data_afirmasi);
-    const BATCH_SIZE = 100;
-    const siswaIds = data.siswa ? data.siswa.map((s) => s.id) : [];
-    const deleteChildRecords = async (table, ids) => {
-      if (!ids || ids.length === 0) return;
-      for (let i = 0; i < ids.length; i += BATCH_SIZE) {
-        const batch = ids.slice(i, i + BATCH_SIZE);
+      const placeholders = keys.map(() => "?").join(",");
+      const updateStr = keys.map((k) => `\`${k}\`=VALUES(\`${k}\`)`).join(", ");
+      const colNamesStr = keys.map((k) => `\`${k}\``).join(", ");
+      for (let i = 0; i < items.length; i += BATCH_SIZE) {
+        const batch = items.slice(i, i + BATCH_SIZE);
         if (batch.length === 0) continue;
-        const placeholders = batch.map(() => "?").join(",");
-        await pool.query(`DELETE FROM ${table} WHERE siswa_id IN (${placeholders})`, batch);
+        const values = batch.map((obj) => keys.map((k) => obj[k] === void 0 || obj[k] === null ? "" : String(obj[k])));
+        const sql = `INSERT INTO \`${table}\` (${colNamesStr}) VALUES ${batch.map(() => `(${placeholders})`).join(",")} ON DUPLICATE KEY UPDATE ${updateStr}`;
+        await pool2.query(sql, values.flat());
       }
-    };
-    if (siswaIds.length > 0) {
-      await deleteChildRecords("data_orang_tua", siswaIds);
-      await deleteChildRecords("data_wali", siswaIds);
-      await deleteChildRecords("data_kontak", siswaIds);
-      await deleteChildRecords("data_periodik", siswaIds);
-      await deleteChildRecords("data_afirmasi", siswaIds);
+      totalProcessed += items.length;
+      console.log(`Synced ${items.length} records into ${table}`);
     }
-    const upsert = async (table, items) => {
-      if (!items || items.length === 0) return;
-      for (let i = 0; i < items.length; i += BATCH_SIZE) {
-        const batch = items.slice(i, i + BATCH_SIZE);
-        if (batch.length === 0) continue;
-        const keys = Object.keys(batch[0]);
-        const values = batch.map((obj) => keys.map((k) => obj[k] === void 0 ? null : obj[k]));
-        const placeholders = keys.map(() => "?").join(",");
-        const updateStr = keys.map((k) => `${k}=VALUES(${k})`).join(", ");
-        const query = `INSERT INTO ${table} (${keys.join(",")}) VALUES ${batch.map(() => `(${placeholders})`).join(",")} ON DUPLICATE KEY UPDATE ${updateStr}`;
-        await pool.query(query, values.flat());
-      }
-    };
-    const insert = async (table, items) => {
-      if (!items || items.length === 0) return;
-      for (let i = 0; i < items.length; i += BATCH_SIZE) {
-        const batch = items.slice(i, i + BATCH_SIZE);
-        if (batch.length === 0) continue;
-        const keys = Object.keys(batch[0]);
-        const values = batch.map((obj) => keys.map((k) => obj[k] === void 0 ? null : obj[k]));
-        const placeholders = keys.map(() => "?").join(",");
-        const query = `INSERT INTO ${table} (${keys.join(",")}) VALUES ${batch.map(() => `(${placeholders})`).join(",")}`;
-        await pool.query(query, values.flat());
-      }
-    };
-    await upsert("siswa", data.siswa);
-    await insert("data_orang_tua", data.data_orang_tua);
-    await insert("data_wali", data.data_wali);
-    await insert("data_kontak", data.data_kontak);
-    await insert("data_periodik", data.data_periodik);
-    await insert("data_afirmasi", data.data_afirmasi);
-    res.json({ success: true, message: "Data siswa berhasil disinkronisasi", count: data.siswa.length });
+    res.json({ success: true, message: "Sinkronisasi berhasil (100% struktur Dapodik)", count: totalProcessed });
   } catch (e) {
     console.error("Error syncing data:", e);
-    res.status(500).json({ success: false, message: e.message });
+    res.status(500).json({ success: false, message: e.message || String(e) });
   }
 });
 app.post("/api/activate", async (req, res) => {
@@ -929,252 +859,6 @@ async function initDb() {
         `
       },
       {
-        name: "siswa",
-        query: `
-          CREATE TABLE IF NOT EXISTS siswa (
-            id VARCHAR(36) PRIMARY KEY,
-            tahun_pelajaran VARCHAR(20),
-            semester VARCHAR(10),
-            nipd VARCHAR(50) NOT NULL,
-            nisn VARCHAR(50) NOT NULL,
-            nik VARCHAR(20),
-            nama_lengkap VARCHAR(255) NOT NULL,
-            jenis_kelamin VARCHAR(2) DEFAULT NULL,
-            tempat_lahir VARCHAR(50) DEFAULT NULL,
-            tanggal_lahir VARCHAR(20) DEFAULT NULL,
-            agama VARCHAR(50) DEFAULT NULL,
-            kewarganegaraan VARCHAR(30) DEFAULT 'Indonesia',
-            alamat_jalan VARCHAR(200) DEFAULT NULL,
-            rt VARCHAR(5) DEFAULT NULL,
-            rw VARCHAR(5) DEFAULT NULL,
-            provinsi VARCHAR(100) DEFAULT NULL,
-            kota VARCHAR(100) DEFAULT NULL,
-            kecamatan VARCHAR(100) DEFAULT NULL,
-            kelurahan VARCHAR(100) DEFAULT NULL,
-            kode_pos VARCHAR(10) DEFAULT NULL,
-            lintang VARCHAR(20) DEFAULT NULL,
-            bujur VARCHAR(20) DEFAULT NULL,
-            nomor_kk VARCHAR(50) DEFAULT NULL,
-            tempat_tinggal VARCHAR(50) DEFAULT NULL,
-            moda_transportasi VARCHAR(50) DEFAULT NULL,
-            rombel VARCHAR(50),
-            status_aktif BOOLEAN DEFAULT TRUE,
-            tk_paud VARCHAR(10) DEFAULT 'Tidak',
-            nama_tk_paud VARCHAR(100) DEFAULT NULL,
-            nomor_akte_lahir VARCHAR(50) DEFAULT NULL,
-            skhun VARCHAR(50) DEFAULT NULL,
-            no_peserta_ujian_nasioal VARCHAR(50) DEFAULT NULL,
-            no_seri_ijazah VARCHAR(50) DEFAULT NULL,
-            sekolah_asal VARCHAR(100) DEFAULT NULL,
-            kebutuhan_khusus VARCHAR(100) DEFAULT NULL,
-            tanggal_mutasi DATE DEFAULT NULL,
-            INDEX (nama_lengkap),
-            INDEX (rombel)
-          )
-        `
-      },
-      {
-        name: "data_orang_tua",
-        query: `
-          CREATE TABLE IF NOT EXISTS data_orang_tua (
-              id INT AUTO_INCREMENT PRIMARY KEY,
-              siswa_id VARCHAR(36) NOT NULL,
-              tipe ENUM('ayah', 'ibu') NOT NULL,
-              nama VARCHAR(100) DEFAULT NULL,
-              nik VARCHAR(20) DEFAULT NULL,
-              tahun_lahir VARCHAR(4) DEFAULT NULL,
-              pendidikan VARCHAR(30) DEFAULT NULL,
-              pekerjaan VARCHAR(50) DEFAULT NULL,
-              penghasilan VARCHAR(50) DEFAULT NULL,
-              kebutuhan_khusus VARCHAR(10) DEFAULT 'Tidak',
-              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "data_wali",
-        query: `
-          CREATE TABLE IF NOT EXISTS data_wali (
-              id INT AUTO_INCREMENT PRIMARY KEY,
-              siswa_id VARCHAR(36) NOT NULL,
-              nama VARCHAR(100) DEFAULT NULL,
-              nik VARCHAR(20) DEFAULT NULL,
-              tahun_lahir VARCHAR(4) DEFAULT NULL,
-              pendidikan VARCHAR(30) DEFAULT NULL,
-              pekerjaan VARCHAR(50) DEFAULT NULL,
-              penghasilan VARCHAR(50) DEFAULT NULL,
-              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "data_kontak",
-        query: `
-          CREATE TABLE IF NOT EXISTS data_kontak (
-              id INT AUTO_INCREMENT PRIMARY KEY,
-              siswa_id VARCHAR(36) NOT NULL,
-              telepon_rumah VARCHAR(20) DEFAULT NULL,
-              nomor_hp VARCHAR(20) DEFAULT NULL,
-              email VARCHAR(100) DEFAULT NULL,
-              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "data_periodik",
-        query: `
-          CREATE TABLE IF NOT EXISTS data_periodik (
-              id INT AUTO_INCREMENT PRIMARY KEY,
-              siswa_id VARCHAR(36) NOT NULL,
-              tinggi_badan DECIMAL(5,2) DEFAULT NULL,
-              berat_badan DECIMAL(5,2) DEFAULT NULL,
-              lingkar_kepala VARCHAR(10) DEFAULT NULL,
-              jarak_rumah VARCHAR(20) DEFAULT NULL,
-              waktu_tempuh VARCHAR(20) DEFAULT NULL,
-              anak_keberapa INT DEFAULT NULL,
-              jumlah_saudara_kandung INT DEFAULT NULL,
-              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "data_afirmasi",
-        query: `
-          CREATE TABLE IF NOT EXISTS data_afirmasi (
-              id INT AUTO_INCREMENT PRIMARY KEY,
-              siswa_id VARCHAR(36) NOT NULL,
-              nomor_kks VARCHAR(50) DEFAULT NULL,
-              penerima_kps_pkh VARCHAR(10) DEFAULT 'Tidak',
-              nomor_kps VARCHAR(50) DEFAULT NULL,
-              penerima_kip VARCHAR(10) DEFAULT 'Tidak',
-              nomor_kip VARCHAR(50) DEFAULT NULL,
-              nama_sesuai_kip VARCHAR(100) DEFAULT NULL,
-              bank_pip VARCHAR(50) DEFAULT NULL,
-              nomor_rek_pip VARCHAR(50) DEFAULT NULL,
-              atasnama_rek_pip VARCHAR(100) DEFAULT NULL,
-              layak_pip VARCHAR(10) DEFAULT NULL,
-              alasan_layak_pip VARCHAR(200) DEFAULT NULL,
-              FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "arsip_siswa",
-        query: `
-          CREATE TABLE IF NOT EXISTS arsip_siswa (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            siswa_id VARCHAR(36) NOT NULL,
-            tahun_pelajaran VARCHAR(20),
-            semester VARCHAR(10),
-            rombel VARCHAR(50),
-            keterangan VARCHAR(50) DEFAULT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (siswa_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "riwayat_masuk",
-        query: `
-          CREATE TABLE IF NOT EXISTS riwayat_masuk (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            user_id INT,
-            student_id VARCHAR(36),
-            type ENUM('pegawai', 'student') NOT NULL,
-            username VARCHAR(100),
-            ip_address VARCHAR(50),
-            user_agent TEXT,
-            status ENUM('success', 'failed') DEFAULT 'success',
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (user_id) REFERENCES pengguna_web(id) ON DELETE SET NULL,
-            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE SET NULL
-          )
-        `
-      },
-      {
-        name: "rombongan_belajar",
-        query: `
-          CREATE TABLE IF NOT EXISTS rombongan_belajar (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            tingkat VARCHAR(20),
-            name VARCHAR(100) UNIQUE NOT NULL,
-            wali_kelas_id INT,
-            FOREIGN KEY (wali_kelas_id) REFERENCES staff(id) ON DELETE SET NULL
-          )
-        `
-      },
-      {
-        name: "absensi_siswa",
-        query: `
-          CREATE TABLE IF NOT EXISTS absensi_siswa (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            student_id VARCHAR(36) NOT NULL,
-            tanggal DATE NOT NULL,
-            status VARCHAR(50) DEFAULT 'Hadir',
-            keterangan TEXT,
-            recorded_by VARCHAR(36),
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE CASCADE,
-            UNIQUE KEY unique_attendance (student_id, tanggal)
-          )
-        `
-      },
-      {
-        name: "absensi_bidang_study",
-        query: `
-          CREATE TABLE IF NOT EXISTS absensi_bidang_study (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            student_id VARCHAR(36) NOT NULL,
-            tanggal DATE NOT NULL,
-            mata_pelajaran VARCHAR(100) NOT NULL,
-            guru_id VARCHAR(36),
-            rombel VARCHAR(100),
-            status VARCHAR(50) DEFAULT 'Hadir',
-            keterangan TEXT,
-            recorded_by VARCHAR(36),
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE CASCADE,
-            UNIQUE KEY unique_subject_attendance (student_id, tanggal, mata_pelajaran)
-          )
-        `
-      },
-      {
-        name: "pengajuan_ubah_data",
-        query: `
-          CREATE TABLE IF NOT EXISTS pengajuan_ubah_data (
-            id INT AUTO_INCREMENT PRIMARY KEY,
-            student_id VARCHAR(36) NOT NULL,
-            proposed_data TEXT NOT NULL,
-            document_url TEXT,
-            status ENUM('pending', 'approved', 'rejected') DEFAULT 'pending',
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            admin_note TEXT,
-            FOREIGN KEY (student_id) REFERENCES siswa(id) ON DELETE CASCADE
-          )
-        `
-      },
-      {
-        name: "permohonan_pindah",
-        query: `
-          CREATE TABLE IF NOT EXISTS permohonan_pindah (
-              id INT AUTO_INCREMENT PRIMARY KEY,
-              student_id VARCHAR(36) NOT NULL,
-              wali_nama VARCHAR(255),
-              wali_pekerjaan VARCHAR(255),
-              wali_alamat TEXT,
-              tujuan_sekolah VARCHAR(255),
-              tujuan_desa VARCHAR(255),
-              tujuan_kec VARCHAR(255),
-              tujuan_prov VARCHAR(255),
-              alasan TEXT,
-              status ENUM('menunggu', 'disetujui', 'ditolak') DEFAULT 'menunggu',
-              dokumen_scan VARCHAR(255),
-              created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-              updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-          ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-        `
-      },
-      {
         name: "artikel_blog",
         query: `
           CREATE TABLE IF NOT EXISTS artikel_blog (
@@ -1436,16 +1120,6 @@ async function initDb() {
           }
         }
         if (table.name === "pegawai") {
-        }
-        if (table.name === "siswa") {
-          const [cols] = await p.query("SHOW COLUMNS FROM siswa");
-          const colNames = cols.map((c) => c.Field);
-          if (!colNames.includes("agama")) {
-            await p.query("ALTER TABLE siswa ADD COLUMN agama VARCHAR(50) DEFAULT 'Islam' AFTER nik");
-          }
-          if (!colNames.includes("status_aktif")) {
-            await p.query("ALTER TABLE siswa ADD COLUMN status_aktif BOOLEAN DEFAULT TRUE AFTER agama");
-          }
         }
         if (table.name === "pengguna_web") {
           const [cols] = await p.query("SHOW COLUMNS FROM pengguna_web");
@@ -1784,7 +1458,7 @@ app.get("/api/bantuan/penerima", authenticate, async (req, res) => {
                 IFNULL(NULLIF(prb.provinsi, ''), s.provinsi) as provinsi,
                 db.bank, db.nomor_rekening, db.an_rekening, prb.penanggung_jawab_rekening
             FROM penerima_bantuan pb
-            JOIN siswa s ON pb.siswa_id = s.id
+            JOIN peserta_didik s ON pb.siswa_id = s.id
             LEFT JOIN data_kontak dk ON s.id = dk.siswa_id
             JOIN jenis_bantuan jb ON pb.istilah = jb.istilah
             LEFT JOIN data_orang_tua ibu ON s.id = ibu.siswa_id AND ibu.tipe = 'ibu'
@@ -1851,7 +1525,7 @@ app.get("/api/bantuan/pengajuan_all", authenticate, async (req, res) => {
     const [rows] = await getPool().execute(`
             SELECT p.*, s.nama_lengkap AS siswa_nama, s.nisn, s.rombel AS nama_kelas, s.nik AS siswa_nik, j.nama_bantuan, db.nomor_rekening, db.bank, db.an_rekening, db.upload_foto_buku_rekening
             FROM pengajuan_rekening_bantuan p
-            LEFT JOIN siswa s ON p.siswa_id = s.id
+            LEFT JOIN peserta_didik s ON p.siswa_id = s.id
             LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
             LEFT JOIN data_bank db ON p.siswa_id = db.siswa_id AND p.istilah = db.istilah
             ${whereClause}
@@ -1914,7 +1588,7 @@ app.post("/api/bantuan/rekening/:siswa_id/:istilah", authenticate, uploadBantuan
 app.get("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, async (req, res) => {
   try {
     const { siswa_id, istilah } = req.params;
-    const [siswaData] = await getPool().query("SELECT nik, nama_lengkap, tempat_lahir, tanggal_lahir, nomor_kk, provinsi, kota, kecamatan, kelurahan, rt, rw, alamat_jalan FROM siswa WHERE id = ?", [siswa_id]);
+    const [siswaData] = await getPool().query("SELECT nik, nama_lengkap, tempat_lahir, tanggal_lahir, nomor_kk, provinsi, kota, kecamatan, kelurahan, rt, rw, alamat_jalan FROM peserta_didik WHERE peserta_didik_id = ?", [siswa_id]);
     let nikSiswa = siswaData.length > 0 ? siswaData[0].nik || "" : "";
     const [existing] = await getPool().query("SELECT * FROM pengajuan_rekening_bantuan WHERE siswa_id = ? AND istilah = ?", [siswa_id, istilah]);
     if (existing.length > 0) {
@@ -2119,7 +1793,7 @@ app.get("/api/bantuan/laporan_all", authenticate, async (req, res) => {
     const query = `
             SELECT l.*, s.nama_lengkap, s.nisn, s.rombel, p.istilah as jenis_bantuan, j.nama_bantuan
             FROM laporan_bantuan l
-            JOIN siswa s ON l.siswa_id = s.id
+            JOIN peserta_didik s ON l.siswa_id = s.id
             JOIN penerima_bantuan p ON l.bantuan_id = p.id
             LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
             ORDER BY l.created_at DESC
@@ -2492,7 +2166,7 @@ app.get("/api/pengaturan_sekolah", asyncHandler(async (req, res) => {
     if (rows && rows.length > 0) {
       const settingsData = rows[0];
       try {
-        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM siswa WHERE rombel IS NOT NULL AND rombel != '' AND UPPER(rombel) != 'LULUS' AND UPPER(rombel) != 'PINDAH'");
+        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM peserta_didik pd JOIN anggota_rombel ar ON pd.peserta_didik_id = ar.peserta_didik_id JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE rb.nama IS NOT NULL AND rb.nama != '' AND UPPER(rb.nama) != 'LULUS' AND UPPER(rb.nama) != 'PINDAH'");
         settingsData.actual_student_count = studentRows[0].count;
         const [staffRows] = await getPool().execute("SELECT COUNT(*) as count FROM pegawai WHERE LOWER(jenis_ptk) NOT LIKE '%pengawas%'");
         settingsData.actual_staff_count = staffRows[0].count;
@@ -2783,7 +2457,7 @@ app.post("/api/meta/save-page", authenticate, asyncHandler(async (req, res) => {
 }));
 app.get("/api/rombongan_belajar/public", asyncHandler(async (req, res) => {
   const [rows] = await getPool().execute(`
-        SELECT r.*, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip
+        SELECT r.*, COALESCE(r.nama, r.name) as name, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip
         FROM rombongan_belajar r
         LEFT JOIN pegawai s ON r.wali_kelas_id = s.pegawai_id
         ORDER BY r.tingkat, r.name
@@ -2807,8 +2481,8 @@ app.get("/api/rombongan_belajar", authenticate, asyncHandler(async (req, res) =>
     }
   }
   const [rows] = await getPool().execute(`
-        SELECT r.*, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip,
-               (SELECT COUNT(*) FROM siswa WHERE rombel = r.name) as student_count
+        SELECT r.*, COALESCE(r.nama, r.name) as name, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip,
+               (SELECT COUNT(*) FROM anggota_rombel WHERE rombongan_belajar_id = r.rombongan_belajar_id) as student_count
         FROM rombongan_belajar r
         LEFT JOIN pegawai s ON r.wali_kelas_id = s.pegawai_id
         ${whereClause}
@@ -2870,11 +2544,11 @@ app.get("/api/dashboard-stats", authenticate, asyncHandler(async (req, res) => {
         }
       }
     }
-    const [rombongan_belajar] = await getPool().execute(`SELECT rombel as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY rombel`, params);
+    const [rombongan_belajar] = await getPool().execute(`SELECT rombel as name, COUNT(*) as value FROM peserta_didik ${whereClause} GROUP BY rombel`, params);
     stats.student_by_rombel = rombongan_belajar.map((r) => ({ rombel_name: r.name || "N/A", total: Number(r.value) }));
-    const [gender] = await getPool().execute(`SELECT jenis_kelamin as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY jenis_kelamin`, params);
+    const [gender] = await getPool().execute(`SELECT jenis_kelamin as name, COUNT(*) as value FROM peserta_didik ${whereClause} GROUP BY jenis_kelamin`, params);
     stats.student_by_gender = gender.map((g) => ({ gender: g.name || "N/A", total: Number(g.value) }));
-    const [agama] = await getPool().execute(`SELECT agama as name, COUNT(*) as value FROM siswa ${whereClause} GROUP BY agama`, params);
+    const [agama] = await getPool().execute(`SELECT agama as name, COUNT(*) as value FROM peserta_didik ${whereClause} GROUP BY agama`, params);
     stats.student_by_religion = agama.map((r) => ({ agama: r.name || "Islam", total: Number(r.value) }));
     const [staffStatus] = await getPool().execute("SELECT status_kepegawaian as name, COUNT(*) as value FROM pegawai WHERE jenis_ptk NOT LIKE '%Pengawas%' OR jenis_ptk IS NULL GROUP BY status_kepegawaian");
     stats.staff_by_status = staffStatus.map((s) => ({ status_kepegawaian: s.name || "Belum Diatur", total: Number(s.value) }));
@@ -3009,7 +2683,7 @@ app.post("/api/siswa/:id/toggle-status", authenticate, asyncHandler(async (req, 
   if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:toggle")) {
     return res.status(403).json({ error: "Akses ditolak." });
   }
-  await getPool().execute("UPDATE siswa SET status_aktif = NOT status_aktif WHERE id = ?", [req.params.id]);
+  await getPool().execute("UPDATE peserta_didik SET status_data = 1 - COALESCE(status_data, 1) WHERE peserta_didik_id = ?", [req.params.id]);
   res.json({ success: true });
 }));
 app.get("/api/peran", authenticate, asyncHandler(async (req, res) => {
@@ -3063,6 +2737,11 @@ app.get("/api/wilayah/search", authenticate, asyncHandler(async (req, res) => {
     `;
   const [rows] = await getPool().query(sql, [searchQuery]);
   const results = rows.map((r) => ({
+    kode_wilayah: r.kecamatan_kode || r.kelurahan_kode || "",
+    kelurahan_kode: r.kelurahan_kode || "",
+    kecamatan_kode: r.kecamatan_kode || "",
+    kota_kode: r.kota_kode || "",
+    provinsi_kode: r.provinsi_kode || "",
     kelurahan: r.kelurahan,
     kecamatan: r.kecamatan,
     kota: r.kota,
@@ -3342,7 +3021,7 @@ app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
   if (!Array.isArray(data) || data.length === 0) return res.status(400).json({ error: "Data kosong atau tidak valid." });
   const conn = await getPool().getConnection();
   try {
-    const [existingRows] = await conn.execute("SELECT id, nipd, nisn, nik, tahun_pelajaran, semester, rombel FROM siswa");
+    const [existingRows] = await conn.execute("SELECT id, nipd, nisn, nik, tahun_pelajaran, semester, rombel FROM peserta_didik");
     const existingMap = /* @__PURE__ */ new Map();
     const existingByNIPD = /* @__PURE__ */ new Map();
     const existingByNISN = /* @__PURE__ */ new Map();
@@ -3442,7 +3121,7 @@ app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
           if (fields.length > 0) {
             const setPairs = fields.map((f) => `${f}=?`);
             const values = fields.map((f) => siswaData[f]);
-            await conn.execute(`UPDATE siswa SET ${setPairs.join(",")} WHERE id=?`, [...values, siswaId]);
+            await conn.execute(`UPDATE peserta_didik SET ${setPairs.join(",")} WHERE id=?`, [...values, siswaId]);
           }
           updated++;
         } else {
@@ -3451,7 +3130,7 @@ app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
           const fields = Object.keys(siswaData);
           const values = fields.map((f) => siswaData[f]);
           const [res2] = await conn.execute(
-            `INSERT INTO siswa (${fields.join(",")}) VALUES (${fields.map(() => "?").join(",")})`,
+            `INSERT INTO peserta_didik (${fields.join(",")}) VALUES (${fields.map(() => "?").join(",")})`,
             values
           );
           if (nipd) existingByNIPD.set(nipd, siswaId);
@@ -3511,6 +3190,28 @@ app.post("/api/siswa/import", authenticate, asyncHandler(async (req, res) => {
     conn.release();
   }
 }));
+app.get("/api/referensi-dapodik", authenticate, asyncHandler(async (req, res) => {
+  try {
+    const [agama] = await getPool().execute("SELECT * FROM agama");
+    const [pekerjaan] = await getPool().execute("SELECT * FROM pekerjaan");
+    const [jenjang_pendidikan] = await getPool().execute("SELECT * FROM jenjang_pendidikan");
+    const fetchRef = async (t) => {
+      try {
+        const [r] = await getPool().execute(`SELECT * FROM ${t}`);
+        return r;
+      } catch (e) {
+        return [];
+      }
+    };
+    const jenis_tinggal = await fetchRef("jenis_tinggal");
+    const alat_transportasi = await fetchRef("alat_transportasi");
+    const [kebutuhan_khusus] = await getPool().execute("SELECT * FROM kebutuhan_khusus WHERE kebutuhan_khusus NOT LIKE '%,%'").catch(() => [[]]);
+    const penghasilan = await fetchRef("penghasilan");
+    res.json({ agama, pekerjaan, jenjang_pendidikan, jenis_tinggal, alat_transportasi, kebutuhan_khusus, penghasilan });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}));
 app.get("/api/siswa", authenticate, asyncHandler(async (req, res) => {
   let whereClause = "";
   const params = [];
@@ -3527,25 +3228,52 @@ app.get("/api/siswa", authenticate, asyncHandler(async (req, res) => {
   }
   const [rows] = await getPool().execute(`
         SELECT 
-            s.*,
-            dot_ayah.nama as nama_ayah, dot_ayah.nik as nik_ayah, dot_ayah.tahun_lahir as tahun_lahir_ayah, dot_ayah.pendidikan as pendidikan_ayah, dot_ayah.pekerjaan as pekerjaan_ayah, dot_ayah.penghasilan as penghasilan_ayah, dot_ayah.kebutuhan_khusus as kebutuhan_khusus_ayah,
-            dot_ibu.nama as nama_ibu, dot_ibu.nik as nik_ibu, dot_ibu.tahun_lahir as tahun_lahir_ibu, dot_ibu.pendidikan as pendidikan_ibu, dot_ibu.pekerjaan as pekerjaan_ibu, dot_ibu.penghasilan as penghasilan_ibu, dot_ibu.kebutuhan_khusus as kebutuhan_khusus_ibu,
-            dw.nama as nama_wali, dw.nik as nik_wali, dw.tahun_lahir as tahun_lahir_wali, dw.pendidikan as pendidikan_wali, dw.pekerjaan as pekerjaan_wali, dw.penghasilan as penghasilan_wali,
-            dk.telepon_rumah as telepon_rumah, dk.nomor_hp as hp_orang_tua, dk.email as email_orang_tua,
-            dp.tinggi_badan, dp.berat_badan, dp.lingkar_kepala, dp.jarak_rumah, dp.waktu_tempuh, dp.anak_keberapa, dp.jumlah_saudara_kandung,
-            da.nomor_kks, da.penerima_kps_pkh, da.penerima_kip, da.nomor_kip, da.nama_sesuai_kip, da.nomor_kps, da.bank_pip, da.nomor_rek_pip, da.atasnama_rek_pip, da.layak_pip, da.alasan_layak_pip,
-            (SELECT GROUP_CONCAT(COALESCE(NULLIF(jb.istilah, ''), jb.nama_bantuan) SEPARATOR ', ') FROM penerima_bantuan pb JOIN jenis_bantuan jb ON pb.istilah = jb.istilah WHERE pb.siswa_id = s.id) as bantuan_diterima,
+            s.*, s.peserta_didik_id as id, s.nama as nama_lengkap, rpd.nipd, rombel_data.rombel, rombel_data.rombongan_belajar_id, ref_agama.nama as agama,
+            s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.jenjang_pendidikan_ayah as pendidikan_ayah, s.pekerjaan_id_ayah as pekerjaan_ayah, s.penghasilan_id_ayah as penghasilan_ayah, s.kebutuhan_khusus_id_ayah as kebutuhan_khusus_ayah,
+            s.nama_ibu_kandung as nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.jenjang_pendidikan_ibu as pendidikan_ibu, s.pekerjaan_id_ibu as pekerjaan_ibu, s.penghasilan_id_ibu as penghasilan_ibu, s.kebutuhan_khusus_id_ibu as kebutuhan_khusus_ibu,
+            s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.jenjang_pendidikan_wali as pendidikan_wali, s.pekerjaan_id_wali as pekerjaan_wali, s.penghasilan_id_wali as penghasilan_wali,
+            s.nomor_telepon_rumah as telepon_rumah, s.nomor_telepon_seluler as hp_orang_tua, s.email as email_orang_tua,
+            s.anak_keberapa,
+            pdl.tinggi_badan, pdl.berat_badan, pdl.lingkar_kepala, pdl.jarak_rumah_ke_sekolah, pdl.jarak_rumah_ke_sekolah_km, pdl.waktu_tempuh_ke_sekolah, pdl.menit_tempuh_ke_sekolah, pdl.jumlah_saudara_kandung,
+            s.no_kks as nomor_kks, s.penerima_kps as penerima_kps_pkh, s.penerima_kip, s.no_kip as nomor_kip, s.nm_kip as nama_sesuai_kip, s.no_kps as nomor_kps, s.id_bank as bank_pip, s.rekening_bank as nomor_rek_pip, s.rekening_atas_nama as atasnama_rek_pip, s.layak_pip, s.id_layak_pip as alasan_layak_pip,
+            (SELECT GROUP_CONCAT(COALESCE(NULLIF(jb.istilah, ''), jb.nama_bantuan) SEPARATOR ', ') FROM penerima_bantuan pb JOIN jenis_bantuan jb ON pb.istilah = jb.istilah WHERE pb.siswa_id = s.peserta_didik_id) as bantuan_diterima,
             COALESCE(fs_foto.drive, fs_foto.server) AS foto_profil
-         FROM siswa s
-        LEFT JOIN data_orang_tua dot_ayah ON s.id = dot_ayah.siswa_id AND dot_ayah.tipe = 'ayah'
-        LEFT JOIN data_orang_tua dot_ibu ON s.id = dot_ibu.siswa_id AND dot_ibu.tipe = 'ibu'
-        LEFT JOIN data_wali dw ON s.id = dw.siswa_id
-        LEFT JOIN data_kontak dk ON s.id = dk.siswa_id
-        LEFT JOIN data_periodik dp ON s.id = dp.siswa_id
-        LEFT JOIN data_afirmasi da ON s.id = da.siswa_id
-        LEFT JOIN file_storage fs_foto ON s.id = fs_foto.data_id AND fs_foto.tipe_data = 'siswa' AND fs_foto.kategori = 'foto_profil'
+         FROM peserta_didik s
+        LEFT JOIN agama ref_agama ON s.agama_id = ref_agama.agama_id
+        LEFT JOIN (
+            SELECT 
+                peserta_didik_id, 
+                MAX(tinggi_badan) as tinggi_badan,
+                MAX(berat_badan) as berat_badan,
+                MAX(lingkar_kepala) as lingkar_kepala,
+                MAX(jarak_rumah_ke_sekolah) as jarak_rumah_ke_sekolah,
+                MAX(jarak_rumah_ke_sekolah_km) as jarak_rumah_ke_sekolah_km,
+                MAX(waktu_tempuh_ke_sekolah) as waktu_tempuh_ke_sekolah,
+                MAX(menit_tempuh_ke_sekolah) as menit_tempuh_ke_sekolah,
+                MAX(jumlah_saudara_kandung) as jumlah_saudara_kandung
+            FROM peserta_didik_longitudinal
+            GROUP BY peserta_didik_id
+        ) pdl ON pdl.peserta_didik_id = s.peserta_didik_id
+        LEFT JOIN (
+            SELECT peserta_didik_id, MAX(nipd) as nipd
+            FROM registrasi_peserta_didik
+            GROUP BY peserta_didik_id
+        ) rpd ON rpd.peserta_didik_id = s.peserta_didik_id
+        LEFT JOIN (
+            SELECT ar.peserta_didik_id, MAX(rb.nama) as rombel, MAX(rb.rombongan_belajar_id) as rombongan_belajar_id
+            FROM anggota_rombel ar
+            JOIN rombongan_belajar rb ON rb.rombongan_belajar_id = ar.rombongan_belajar_id
+            GROUP BY ar.peserta_didik_id
+        ) rombel_data ON rombel_data.peserta_didik_id = s.peserta_didik_id
+        LEFT JOIN (
+            SELECT data_id, MAX(drive) as drive, MAX(server) as server
+            FROM file_storage
+            WHERE tipe_data = 'siswa' AND kategori = 'foto_profil'
+            GROUP BY data_id
+        ) fs_foto ON s.peserta_didik_id = fs_foto.data_id
         ${whereClause}
-        ORDER BY s.nama_lengkap ASC
+        GROUP BY s.peserta_didik_id
+        ORDER BY s.nama ASC
     `, params);
   res.json(rows);
 }));
@@ -3586,7 +3314,7 @@ app.get("/api/arsip-siswa", authenticate, asyncHandler(async (req, res) => {
 app.get("/api/siswa/search", authenticate, asyncHandler(async (req, res) => {
   const q = req.query.q;
   const [rows] = await getPool().execute(
-    "SELECT id, nama_lengkap, nisn, nik, nipd FROM siswa WHERE nisn LIKE ? OR nik LIKE ? OR nama_lengkap LIKE ? ORDER BY nama_lengkap ASC LIMIT 10",
+    "SELECT s.peserta_didik_id as id, s.nama as nama_lengkap, s.nisn, s.nik, rpd.nipd FROM peserta_didik s LEFT JOIN (SELECT peserta_didik_id, MAX(nipd) as nipd FROM registrasi_peserta_didik GROUP BY peserta_didik_id) rpd ON s.peserta_didik_id = rpd.peserta_didik_id WHERE s.nisn LIKE ? OR s.nik LIKE ? OR s.nama LIKE ? ORDER BY s.nama ASC LIMIT 10",
     [`%${q}%`, `%${q}%`, `%${q}%`]
   );
   res.json(rows);
@@ -3610,7 +3338,7 @@ app.post("/api/siswa/naik-kelas", authenticate, asyncHandler(async (req, res) =>
     const allIds = [...naikIds, ...tinggalIds];
     const placeholders = allIds.map(() => "?").join(",");
     const [students] = await conn.execute(
-      `SELECT id, tahun_pelajaran, semester, rombel FROM siswa WHERE id IN (${placeholders})`,
+      `SELECT id, tahun_pelajaran, semester, rombel FROM peserta_didik WHERE id IN (${placeholders})`,
       allIds
     );
     if (students.length === 0) {
@@ -3626,7 +3354,7 @@ app.post("/api/siswa/naik-kelas", authenticate, asyncHandler(async (req, res) =>
         "INSERT INTO arsip_siswa (siswa_id, tahun_pelajaran, semester, rombel, keterangan) VALUES (?, ?, ?, ?, ?)",
         [student.id, student.tahun_pelajaran, student.semester, student.rombel, keterangan]
       );
-      let updateQuery = "UPDATE siswa SET ";
+      let updateQuery = "UPDATE peserta_didik SET ";
       let updateParams = [];
       let sets = [];
       if (isNaik) {
@@ -3675,7 +3403,7 @@ app.post("/api/siswa/mutasi-keluar", authenticate, asyncHandler(async (req, res)
     await conn.beginTransaction();
     const placeholders = student_ids.map(() => "?").join(",");
     const [students] = await conn.execute(
-      `SELECT id, tahun_pelajaran, semester, rombel FROM siswa WHERE id IN (${placeholders})`,
+      `SELECT id, tahun_pelajaran, semester, rombel FROM peserta_didik WHERE id IN (${placeholders})`,
       student_ids
     );
     if (students.length === 0) {
@@ -3689,7 +3417,7 @@ app.post("/api/siswa/mutasi-keluar", authenticate, asyncHandler(async (req, res)
         [student.id, student.tahun_pelajaran, student.semester, student.rombel]
       );
       await conn.execute(
-        "UPDATE siswa SET rombel = 'PINDAH', status_aktif = ?, tanggal_mutasi = ? WHERE id = ?",
+        "UPDATE peserta_didik SET rombel = 'PINDAH', status_aktif = ?, tanggal_mutasi = ? WHERE id = ?",
         [false, mutationDate, student.id]
       );
     }
@@ -3711,39 +3439,124 @@ app.post("/api/siswa", authenticate, asyncHandler(async (req, res) => {
   const conn = await getPool().getConnection();
   try {
     await conn.beginTransaction();
-    const clean2 = (val) => val === "" ? null : val;
+    const clean2 = (val) => val === "" || val === void 0 ? null : val;
     const siswaId = import_crypto.default.randomUUID();
     await conn.execute(
-      `INSERT INTO siswa (id, tahun_pelajaran, semester, nipd, nisn, nik, nama_lengkap, jenis_kelamin, tempat_lahir, tanggal_lahir, agama, kewarganegaraan, alamat_jalan, rt, rw, provinsi, kota, kecamatan, kelurahan, kode_pos, lintang, bujur, nomor_kk, tempat_tinggal, moda_transportasi, rombel, tk_paud, nama_tk_paud, nomor_akte_lahir, skhun, no_peserta_ujian_nasioal, no_seri_ijazah, sekolah_asal, kebutuhan_khusus)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [siswaId, s.tahun_pelajaran, s.semester, s.nipd, s.nisn, s.nik, s.nama_lengkap, s.jenis_kelamin, s.tempat_lahir, s.tanggal_lahir, s.agama, s.kewarganegaraan || "Indonesia", s.alamat_jalan, s.rt, s.rw, s.provinsi, s.kota, s.kecamatan, s.kelurahan, s.kode_pos, s.lintang, s.bujur, s.nomor_kk, s.tempat_tinggal, s.moda_transportasi, s.rombel, s.tk_paud || "Tidak", s.nama_tk_paud, s.nomor_akte_lahir, s.skhun, s.no_peserta_ujian_nasioal, s.no_seri_ijazah, s.sekolah_asal, s.kebutuhan_khusus || "Tidak"].map(clean2)
+      `INSERT INTO peserta_didik (
+                peserta_didik_id, nama, jenis_kelamin, nisn, nik, no_kk, tempat_lahir, tanggal_lahir, agama_id,
+                kebutuhan_khusus_id, alamat_jalan, rt, rw, desa_kelurahan, kode_wilayah, kode_pos, lintang, bujur,
+                jenis_tinggal_id, alat_transportasi_id, nik_ayah, nik_ibu, nik_wali, nomor_telepon_rumah, nomor_telepon_seluler, email,
+                penerima_kps, no_kps, layak_pip, penerima_kip, no_kip, nm_kip, no_kks, id_layak_pip, id_bank, rekening_bank, rekening_atas_nama,
+                nama_ayah, tahun_lahir_ayah, jenjang_pendidikan_ayah, pekerjaan_id_ayah, penghasilan_id_ayah, kebutuhan_khusus_id_ayah,
+                nama_ibu_kandung, tahun_lahir_ibu, jenjang_pendidikan_ibu, pekerjaan_id_ibu, penghasilan_id_ibu, kebutuhan_khusus_id_ibu,
+                nama_wali, tahun_lahir_wali, jenjang_pendidikan_wali, pekerjaan_id_wali, penghasilan_id_wali, kewarganegaraan, anak_keberapa, last_update
+            ) VALUES (
+                ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW()
+            )`,
+      [
+        siswaId,
+        s.nama,
+        s.jenis_kelamin,
+        s.nisn,
+        s.nik,
+        s.no_kk,
+        s.tempat_lahir,
+        s.tanggal_lahir,
+        s.agama_id,
+        s.kebutuhan_khusus_id,
+        s.alamat_jalan,
+        s.rt,
+        s.rw,
+        s.desa_kelurahan,
+        s.kode_wilayah || null,
+        s.kode_pos,
+        s.lintang,
+        s.bujur,
+        s.jenis_tinggal_id,
+        s.alat_transportasi_id,
+        s.nik_ayah,
+        s.nik_ibu,
+        s.nik_wali,
+        s.nomor_telepon_rumah,
+        s.nomor_telepon_seluler,
+        s.email,
+        s.penerima_kps,
+        s.no_kps,
+        s.layak_pip,
+        s.penerima_kip,
+        s.no_kip,
+        s.nm_kip,
+        s.no_kks,
+        s.id_layak_pip,
+        s.id_bank,
+        s.rekening_bank,
+        s.rekening_atas_nama,
+        s.nama_ayah,
+        s.tahun_lahir_ayah,
+        s.jenjang_pendidikan_ayah,
+        s.pekerjaan_id_ayah,
+        s.penghasilan_id_ayah,
+        s.kebutuhan_khusus_id_ayah,
+        s.nama_ibu_kandung,
+        s.tahun_lahir_ibu,
+        s.jenjang_pendidikan_ibu,
+        s.pekerjaan_id_ibu,
+        s.penghasilan_id_ibu,
+        s.kebutuhan_khusus_id_ibu,
+        s.nama_wali,
+        s.tahun_lahir_wali,
+        s.jenjang_pendidikan_wali,
+        s.pekerjaan_id_wali,
+        s.penghasilan_id_wali,
+        s.kewarganegaraan,
+        s.anak_keberapa
+      ].map(clean2)
     );
+    const regId = import_crypto.default.randomUUID();
     await conn.execute(
-      `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ayah', ?, ?, ?, ?, ?, ?, ?)`,
-      [siswaId, s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.pendidikan_ayah, s.pekerjaan_ayah, s.penghasilan_ayah, s.kebutuhan_khusus_ayah || "Tidak"].map(clean2)
+      `INSERT INTO registrasi_peserta_didik (
+                registrasi_id, peserta_didik_id, jenis_pendaftaran_id, tanggal_masuk_sekolah,
+                nipd, no_skhun, no_peserta_ujian, no_seri_ijazah, a_pernah_paud, a_pernah_tk, sekolah_asal
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      [
+        regId,
+        siswaId,
+        s.jenis_pendaftaran_id || "1",
+        s.tanggal_masuk_sekolah || /* @__PURE__ */ new Date(),
+        s.nipd,
+        s.no_skhun,
+        s.no_peserta_ujian,
+        s.no_seri_ijazah,
+        s.a_pernah_paud,
+        s.a_pernah_tk,
+        s.sekolah_asal
+      ].map(clean2)
     );
-    await conn.execute(
-      `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ibu', ?, ?, ?, ?, ?, ?, ?)`,
-      [siswaId, s.nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.pendidikan_ibu, s.pekerjaan_ibu, s.penghasilan_ibu, s.kebutuhan_khusus_ibu || "Tidak"].map(clean2)
-    );
-    if (s.nama_wali) {
+    if (s.rombongan_belajar_id) {
       await conn.execute(
-        `INSERT INTO data_wali (siswa_id, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan) VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        [siswaId, s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.pendidikan_wali, s.pekerjaan_wali, s.penghasilan_wali].map(clean2)
+        `INSERT INTO anggota_rombel (anggota_rombel_id, rombongan_belajar_id, peserta_didik_id, jenis_pendaftaran_id) VALUES (?, ?, ?, ?)`,
+        [import_crypto.default.randomUUID(), s.rombongan_belajar_id, siswaId, s.jenis_pendaftaran_id || "1"]
       );
     }
-    await conn.execute(
-      `INSERT INTO data_kontak (siswa_id, telepon_rumah, nomor_hp, email) VALUES (?, ?, ?, ?)`,
-      [siswaId, s.telepon_rumah, s.hp_orang_tua, s.email_orang_tua].map(clean2)
-    );
-    await conn.execute(
-      `INSERT INTO data_periodik (siswa_id, tinggi_badan, berat_badan, lingkar_kepala, jarak_rumah, waktu_tempuh, anak_keberapa, jumlah_saudara_kandung) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-      [siswaId, s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah, s.waktu_tempuh, s.anak_keberapa, s.jumlah_saudara_kandung].map(clean2)
-    );
-    await conn.execute(
-      `INSERT INTO data_afirmasi (siswa_id, nomor_kks, penerima_kps_pkh, nomor_kps, penerima_kip, nomor_kip, nama_sesuai_kip, bank_pip, nomor_rek_pip, atasnama_rek_pip, layak_pip, alasan_layak_pip) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-      [siswaId, s.nomor_kks, s.penerima_kps_pkh || "Tidak", s.nomor_kps, s.penerima_kip || "Tidak", s.nomor_kip, s.nama_sesuai_kip, s.bank_pip, s.nomor_rek_pip, s.atasnama_rek_pip, s.layak_pip || "Tidak", s.alasan_layak_pip].map(clean2)
-    );
+    if (s.tinggi_badan || s.berat_badan || s.lingkar_kepala || s.jarak_rumah_ke_sekolah || s.jumlah_saudara_kandung) {
+      await conn.execute(
+        `INSERT INTO peserta_didik_longitudinal (
+                    peserta_didik_id, semester_id, tinggi_badan, berat_badan, lingkar_kepala,
+                    jarak_rumah_ke_sekolah, jarak_rumah_ke_sekolah_km, waktu_tempuh_ke_sekolah, menit_tempuh_ke_sekolah, jumlah_saudara_kandung
+                ) VALUES (?, '20261', ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          siswaId,
+          s.tinggi_badan,
+          s.berat_badan,
+          s.lingkar_kepala,
+          s.jarak_rumah_ke_sekolah || "1",
+          s.jarak_rumah_ke_sekolah_km || "0",
+          s.waktu_tempuh_ke_sekolah || "0",
+          s.menit_tempuh_ke_sekolah || "0",
+          s.jumlah_saudara_kandung || "0"
+        ].map(clean2)
+      );
+    }
     await conn.commit();
     res.json({ success: true });
   } catch (err) {
@@ -3763,81 +3576,107 @@ app.put("/api/siswa/:id", authenticate, asyncHandler(async (req, res) => {
   const conn = await getPool().getConnection();
   try {
     await conn.beginTransaction();
-    const clean2 = (val) => val === "" ? null : val;
+    const clean2 = (val) => val === "" || val === void 0 ? null : val;
     await conn.execute(
-      `UPDATE siswa SET tahun_pelajaran = ?, semester = ?, nipd = ?, nisn = ?, nik = ?, nama_lengkap = ?, jenis_kelamin = ?, tempat_lahir = ?, tanggal_lahir = ?, agama = ?, kewarganegaraan = ?, alamat_jalan = ?, rt = ?, rw = ?, provinsi = ?, kota = ?, kecamatan = ?, kelurahan = ?, kode_pos = ?, lintang = ?, bujur = ?, nomor_kk = ?, tempat_tinggal = ?, moda_transportasi = ?, rombel = ?, tk_paud = ?, nama_tk_paud = ?, nomor_akte_lahir = ?, skhun = ?, no_peserta_ujian_nasioal = ?, no_seri_ijazah = ?, sekolah_asal = ?, kebutuhan_khusus = ? WHERE id = ?`,
-      [s.tahun_pelajaran, s.semester, s.nipd, s.nisn, s.nik, s.nama_lengkap, s.jenis_kelamin, s.tempat_lahir, s.tanggal_lahir, s.agama, s.kewarganegaraan || "Indonesia", s.alamat_jalan, s.rt, s.rw, s.provinsi, s.kota, s.kecamatan, s.kelurahan, s.kode_pos, s.lintang, s.bujur, s.nomor_kk, s.tempat_tinggal, s.moda_transportasi, s.rombel, s.tk_paud || "Tidak", s.nama_tk_paud, s.nomor_akte_lahir, s.skhun, s.no_peserta_ujian_nasioal, s.no_seri_ijazah, s.sekolah_asal, s.kebutuhan_khusus || "Tidak", siswaId].map(clean2)
+      `UPDATE peserta_didik SET 
+                nama=?, jenis_kelamin=?, nisn=?, nik=?, no_kk=?, tempat_lahir=?, tanggal_lahir=?, agama_id=?,
+                kebutuhan_khusus_id=?, alamat_jalan=?, rt=?, rw=?, desa_kelurahan=?, kode_wilayah=COALESCE(?, kode_wilayah), kode_pos=?, lintang=?, bujur=?,
+                jenis_tinggal_id=?, alat_transportasi_id=?, nik_ayah=?, nik_ibu=?, nik_wali=?, nomor_telepon_rumah=?, nomor_telepon_seluler=?, email=?,
+                penerima_kps=?, no_kps=?, layak_pip=?, penerima_kip=?, no_kip=?, nm_kip=?, no_kks=?, id_layak_pip=?, id_bank=?, rekening_bank=?, rekening_atas_nama=?,
+                nama_ayah=?, tahun_lahir_ayah=?, jenjang_pendidikan_ayah=?, pekerjaan_id_ayah=?, penghasilan_id_ayah=?, kebutuhan_khusus_id_ayah=?,
+                nama_ibu_kandung=?, tahun_lahir_ibu=?, jenjang_pendidikan_ibu=?, pekerjaan_id_ibu=?, penghasilan_id_ibu=?, kebutuhan_khusus_id_ibu=?,
+                nama_wali=?, tahun_lahir_wali=?, jenjang_pendidikan_wali=?, pekerjaan_id_wali=?, penghasilan_id_wali=?, kewarganegaraan=?, anak_keberapa=?,
+                last_update=NOW()
+            WHERE peserta_didik_id = ?`,
+      [
+        s.nama,
+        s.jenis_kelamin,
+        s.nisn,
+        s.nik,
+        s.no_kk,
+        s.tempat_lahir,
+        s.tanggal_lahir,
+        s.agama_id,
+        s.kebutuhan_khusus_id,
+        s.alamat_jalan,
+        s.rt,
+        s.rw,
+        s.desa_kelurahan,
+        s.kode_wilayah || null,
+        s.kode_pos,
+        s.lintang,
+        s.bujur,
+        s.jenis_tinggal_id,
+        s.alat_transportasi_id,
+        s.nik_ayah,
+        s.nik_ibu,
+        s.nik_wali,
+        s.nomor_telepon_rumah,
+        s.nomor_telepon_seluler,
+        s.email,
+        s.penerima_kps,
+        s.no_kps,
+        s.layak_pip,
+        s.penerima_kip,
+        s.no_kip,
+        s.nm_kip,
+        s.no_kks,
+        s.id_layak_pip,
+        s.id_bank,
+        s.rekening_bank,
+        s.rekening_atas_nama,
+        s.nama_ayah,
+        s.tahun_lahir_ayah,
+        s.jenjang_pendidikan_ayah,
+        s.pekerjaan_id_ayah,
+        s.penghasilan_id_ayah,
+        s.kebutuhan_khusus_id_ayah,
+        s.nama_ibu_kandung,
+        s.tahun_lahir_ibu,
+        s.jenjang_pendidikan_ibu,
+        s.pekerjaan_id_ibu,
+        s.penghasilan_id_ibu,
+        s.kebutuhan_khusus_id_ibu,
+        s.nama_wali,
+        s.tahun_lahir_wali,
+        s.jenjang_pendidikan_wali,
+        s.pekerjaan_id_wali,
+        s.penghasilan_id_wali,
+        s.kewarganegaraan,
+        s.anak_keberapa,
+        siswaId
+      ].map(clean2)
     );
-    const [ayahRows] = await conn.execute("SELECT id FROM data_orang_tua WHERE siswa_id = ? AND tipe = 'ayah'", [siswaId]);
-    if (ayahRows.length > 0) {
+    const [regCheck] = await conn.execute("SELECT registrasi_id FROM registrasi_peserta_didik WHERE peserta_didik_id = ?", [siswaId]);
+    if (regCheck.length > 0) {
       await conn.execute(
-        `UPDATE data_orang_tua SET nama = ?, nik = ?, tahun_lahir = ?, pendidikan = ?, pekerjaan = ?, penghasilan = ?, kebutuhan_khusus = ? WHERE siswa_id = ? AND tipe = 'ayah'`,
-        [s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.pendidikan_ayah, s.pekerjaan_ayah, s.penghasilan_ayah, s.kebutuhan_khusus_ayah || "Tidak", siswaId].map(clean2)
+        `UPDATE registrasi_peserta_didik SET nipd=?, no_skhun=?, no_peserta_ujian=?, no_seri_ijazah=?, a_pernah_paud=?, a_pernah_tk=?, sekolah_asal=? WHERE peserta_didik_id=?`,
+        [s.nipd, s.no_skhun, s.no_peserta_ujian, s.no_seri_ijazah, s.a_pernah_paud, s.a_pernah_tk, s.sekolah_asal, siswaId].map(clean2)
       );
     } else {
       await conn.execute(
-        `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ayah', ?, ?, ?, ?, ?, ?, ?)`,
-        [siswaId, s.nama_ayah, s.nik_ayah, s.tahun_lahir_ayah, s.pendidikan_ayah, s.pekerjaan_ayah, s.penghasilan_ayah, s.kebutuhan_khusus_ayah || "Tidak"].map(clean2)
+        `INSERT INTO registrasi_peserta_didik (registrasi_id, peserta_didik_id, nipd, no_skhun, no_peserta_ujian, no_seri_ijazah, a_pernah_paud, a_pernah_tk, sekolah_asal, jenis_pendaftaran_id, tanggal_masuk_sekolah) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, '1', ?)`,
+        [import_crypto.default.randomUUID(), siswaId, s.nipd, s.no_skhun, s.no_peserta_ujian, s.no_seri_ijazah, s.a_pernah_paud, s.a_pernah_tk, s.sekolah_asal, /* @__PURE__ */ new Date()].map(clean2)
       );
     }
-    const [ibuRows] = await conn.execute("SELECT id FROM data_orang_tua WHERE siswa_id = ? AND tipe = 'ibu'", [siswaId]);
-    if (ibuRows.length > 0) {
+    if (s.rombongan_belajar_id) {
+      const [arCheck] = await conn.execute("SELECT anggota_rombel_id FROM anggota_rombel WHERE peserta_didik_id = ? ORDER BY last_update DESC LIMIT 1", [siswaId]);
+      if (arCheck.length > 0) {
+        await conn.execute("UPDATE anggota_rombel SET rombongan_belajar_id = ? WHERE anggota_rombel_id = ?", [s.rombongan_belajar_id, arCheck[0].anggota_rombel_id]);
+      } else {
+        await conn.execute("INSERT INTO anggota_rombel (anggota_rombel_id, rombongan_belajar_id, peserta_didik_id, jenis_pendaftaran_id) VALUES (?, ?, ?, '1')", [import_crypto.default.randomUUID(), s.rombongan_belajar_id, siswaId]);
+      }
+    }
+    const [longCheck] = await conn.execute("SELECT peserta_didik_id FROM peserta_didik_longitudinal WHERE peserta_didik_id = ?", [siswaId]);
+    if (longCheck.length > 0) {
       await conn.execute(
-        `UPDATE data_orang_tua SET nama = ?, nik = ?, tahun_lahir = ?, pendidikan = ?, pekerjaan = ?, penghasilan = ?, kebutuhan_khusus = ? WHERE siswa_id = ? AND tipe = 'ibu'`,
-        [s.nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.pendidikan_ibu, s.pekerjaan_ibu, s.penghasilan_ibu, s.kebutuhan_khusus_ibu || "Tidak", siswaId].map(clean2)
+        `UPDATE peserta_didik_longitudinal SET tinggi_badan=?, berat_badan=?, lingkar_kepala=?, jarak_rumah_ke_sekolah=?, jarak_rumah_ke_sekolah_km=?, waktu_tempuh_ke_sekolah=?, menit_tempuh_ke_sekolah=?, jumlah_saudara_kandung=? WHERE peserta_didik_id=?`,
+        [s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah_ke_sekolah, s.jarak_rumah_ke_sekolah_km, s.waktu_tempuh_ke_sekolah, s.menit_tempuh_ke_sekolah, s.jumlah_saudara_kandung, siswaId].map(clean2)
       );
     } else {
       await conn.execute(
-        `INSERT INTO data_orang_tua (siswa_id, tipe, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan, kebutuhan_khusus) VALUES (?, 'ibu', ?, ?, ?, ?, ?, ?, ?)`,
-        [siswaId, s.nama_ibu, s.nik_ibu, s.tahun_lahir_ibu, s.pendidikan_ibu, s.pekerjaan_ibu, s.penghasilan_ibu, s.kebutuhan_khusus_ibu || "Tidak"].map(clean2)
-      );
-    }
-    const [waliRows] = await conn.execute("SELECT id FROM data_wali WHERE siswa_id = ?", [siswaId]);
-    if (waliRows.length > 0) {
-      await conn.execute(
-        `UPDATE data_wali SET nama = ?, nik = ?, tahun_lahir = ?, pendidikan = ?, pekerjaan = ?, penghasilan = ? WHERE siswa_id = ?`,
-        [s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.pendidikan_wali, s.pekerjaan_wali, s.penghasilan_wali, siswaId].map(clean2)
-      );
-    } else if (s.nama_wali) {
-      await conn.execute(
-        `INSERT INTO data_wali (siswa_id, nama, nik, tahun_lahir, pendidikan, pekerjaan, penghasilan) VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        [siswaId, s.nama_wali, s.nik_wali, s.tahun_lahir_wali, s.pendidikan_wali, s.pekerjaan_wali, s.penghasilan_wali].map(clean2)
-      );
-    }
-    const [kontakRows] = await conn.execute("SELECT id FROM data_kontak WHERE siswa_id = ?", [siswaId]);
-    if (kontakRows.length > 0) {
-      await conn.execute(
-        `UPDATE data_kontak SET telepon_rumah = ?, nomor_hp = ?, email = ? WHERE siswa_id = ?`,
-        [s.telepon_rumah, s.hp_orang_tua, s.email_orang_tua, siswaId].map(clean2)
-      );
-    } else {
-      await conn.execute(
-        `INSERT INTO data_kontak (siswa_id, telepon_rumah, nomor_hp, email) VALUES (?, ?, ?, ?)`,
-        [siswaId, s.telepon_rumah, s.hp_orang_tua, s.email_orang_tua].map(clean2)
-      );
-    }
-    const [periodikRows] = await conn.execute("SELECT id FROM data_periodik WHERE siswa_id = ?", [siswaId]);
-    if (periodikRows.length > 0) {
-      await conn.execute(
-        `UPDATE data_periodik SET tinggi_badan = ?, berat_badan = ?, lingkar_kepala = ?, jarak_rumah = ?, waktu_tempuh = ?, anak_keberapa = ?, jumlah_saudara_kandung = ? WHERE siswa_id = ?`,
-        [s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah, s.waktu_tempuh, s.anak_keberapa, s.jumlah_saudara_kandung, siswaId].map(clean2)
-      );
-    } else {
-      await conn.execute(
-        `INSERT INTO data_periodik (siswa_id, tinggi_badan, berat_badan, lingkar_kepala, jarak_rumah, waktu_tempuh, anak_keberapa, jumlah_saudara_kandung) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-        [siswaId, s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah, s.waktu_tempuh, s.anak_keberapa, s.jumlah_saudara_kandung].map(clean2)
-      );
-    }
-    const [afirmasiRows] = await conn.execute("SELECT id FROM data_afirmasi WHERE siswa_id = ?", [siswaId]);
-    if (afirmasiRows.length > 0) {
-      await conn.execute(
-        `UPDATE data_afirmasi SET nomor_kks = ?, penerima_kps_pkh = ?, nomor_kps = ?, penerima_kip = ?, nomor_kip = ?, nama_sesuai_kip = ?, bank_pip = ?, nomor_rek_pip = ?, atasnama_rek_pip = ?, layak_pip = ?, alasan_layak_pip = ? WHERE siswa_id = ?`,
-        [s.nomor_kks, s.penerima_kps_pkh || "Tidak", s.nomor_kps, s.penerima_kip || "Tidak", s.nomor_kip, s.nama_sesuai_kip, s.bank_pip, s.nomor_rek_pip, s.atasnama_rek_pip, s.layak_pip || "Tidak", s.alasan_layak_pip, siswaId].map(clean2)
-      );
-    } else {
-      await conn.execute(
-        `INSERT INTO data_afirmasi (siswa_id, nomor_kks, penerima_kps_pkh, nomor_kps, penerima_kip, nomor_kip, nama_sesuai_kip, bank_pip, nomor_rek_pip, atasnama_rek_pip, layak_pip, alasan_layak_pip) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-        [siswaId, s.nomor_kks, s.penerima_kps_pkh || "Tidak", s.nomor_kps, s.penerima_kip || "Tidak", s.nomor_kip, s.nama_sesuai_kip, s.bank_pip, s.nomor_rek_pip, s.atasnama_rek_pip, s.layak_pip || "Tidak", s.alasan_layak_pip].map(clean2)
+        `INSERT INTO peserta_didik_longitudinal (peserta_didik_id, semester_id, tinggi_badan, berat_badan, lingkar_kepala, jarak_rumah_ke_sekolah, jarak_rumah_ke_sekolah_km, waktu_tempuh_ke_sekolah, menit_tempuh_ke_sekolah, jumlah_saudara_kandung) VALUES (?, '20261', ?, ?, ?, ?, ?, ?, ?, ?)`,
+        [siswaId, s.tinggi_badan, s.berat_badan, s.lingkar_kepala, s.jarak_rumah_ke_sekolah || "1", s.jarak_rumah_ke_sekolah_km || "0", s.waktu_tempuh_ke_sekolah || "0", s.menit_tempuh_ke_sekolah || "0", s.jumlah_saudara_kandung || "0"].map(clean2)
       );
     }
     await conn.commit();
@@ -3854,7 +3693,7 @@ app.delete("/api/siswa/:id", authenticate, asyncHandler(async (req, res) => {
   if (!req.user.permissions.includes("all") && !req.user.permissions.includes("students:delete")) {
     return res.status(403).json({ error: "Akses ditolak." });
   }
-  await getPool().execute("DELETE FROM siswa WHERE id = ?", [req.params.id]);
+  await getPool().execute("DELETE FROM peserta_didik WHERE peserta_didik_id = ?", [req.params.id]);
   res.json({ success: true });
 }));
 app.get("/api/me", authenticate, asyncHandler(async (req, res) => {
@@ -3881,7 +3720,7 @@ app.get("/api/me", authenticate, asyncHandler(async (req, res) => {
     const nisn = req.user.nisn || req.user.username || "not-found";
     const [rows] = await getPool().execute(`
             SELECT s.*, COALESCE(f.drive, f.server, s.foto_profil) AS foto_profil
-            FROM siswa s 
+            FROM peserta_didik s 
             LEFT JOIN file_storage f ON s.id = f.data_id AND f.tipe_data = 'siswa' AND f.kategori = 'foto_profil'
             WHERE s.id = ? OR s.nisn = ?
         `, [id, nisn]);
@@ -3963,7 +3802,7 @@ app.get("/api/student/profile", authenticate, asyncHandler(async (req, res) => {
             dw.nama as nama_wali, dw.nik as nik_wali, dw.pekerjaan as pekerjaan_wali,
             dk.nomor_hp as hp_orang_tua, dk.email as email_orang_tua,
             COALESCE(fs_foto.drive, fs_foto.server) AS foto_profil
-         FROM siswa s
+         FROM peserta_didik s
         LEFT JOIN data_orang_tua dot_ayah ON s.id = dot_ayah.siswa_id AND dot_ayah.tipe = 'ayah'
         LEFT JOIN data_orang_tua dot_ibu ON s.id = dot_ibu.siswa_id AND dot_ibu.tipe = 'ibu'
         LEFT JOIN data_wali dw ON s.id = dw.siswa_id
@@ -3979,7 +3818,7 @@ app.post("/api/student/profile/photo", authenticate, uploadProfile.single("photo
   if (!req.file) return res.status(400).json({ error: "No file uploaded" });
   const id = req.user.id || null;
   const nisn = req.user.nisn || req.user.username || null;
-  const [rows] = await getPool().execute("SELECT id, nipd, nik, nama_lengkap FROM siswa WHERE id = ? OR nisn = ?", [id, nisn]);
+  const [rows] = await getPool().execute("SELECT id, nipd, nik, nama_lengkap FROM peserta_didik WHERE peserta_didik_id = ? OR nisn = ?", [id, nisn]);
   if (rows.length === 0) return res.status(404).json({ error: "Siswa not found" });
   const actualId = rows[0].id;
   const nik = rows[0].nik || rows[0].nipd || `siswa_${actualId}`;
@@ -4038,7 +3877,7 @@ app.get("/api/permohonan-pindah", authenticate, asyncHandler(async (req, res) =>
   const [rows] = await getPool().execute(`
         SELECT pp.*, s.nama_lengkap, s.nisn, s.tempat_lahir, s.tanggal_lahir, s.agama, s.jenis_kelamin, s.rombel, s.tahun_pelajaran, s.semester
         FROM permohonan_pindah pp
-        JOIN siswa s ON pp.student_id = s.id
+        JOIN peserta_didik s ON pp.student_id = s.id
         ORDER BY pp.created_at DESC
     `);
   res.json(rows);
@@ -4083,7 +3922,7 @@ app.get("/api/pengajuan_ubah_data", authenticate, asyncHandler(async (req, res) 
   const [rows] = await getPool().execute(`
         SELECT dcr.*, s.nama_lengkap, s.nisn 
         FROM pengajuan_ubah_data dcr
-        LEFT JOIN siswa s ON dcr.student_id = s.id
+        LEFT JOIN peserta_didik s ON dcr.student_id = s.id
         ORDER BY dcr.created_at DESC
     `);
   res.json(rows);
@@ -4096,7 +3935,7 @@ app.post("/api/pengajuan_ubah_data", authenticate, asyncHandler(async (req, res)
     if (import_fs.default.existsSync(localPath)) {
       const id = req.user.id || null;
       const nisn = req.user.nisn || req.user.username || null;
-      const [rows] = await getPool().execute("SELECT nipd, nik, nama_lengkap FROM siswa WHERE id = ? OR nisn = ?", [id, nisn]);
+      const [rows] = await getPool().execute("SELECT nipd, nik, nama_lengkap FROM peserta_didik WHERE peserta_didik_id = ? OR nisn = ?", [id, nisn]);
       if (rows.length > 0) {
         const nik = rows[0].nik || rows[0].nipd || `siswa_${id}`;
         const nama = rows[0].nama_lengkap || "Siswa";
@@ -4145,7 +3984,7 @@ app.post("/api/pengajuan_ubah_data/:id/approve", authenticate, asyncHandler(asyn
   const values = Object.values(proposedData);
   const setClause = fields.map((f) => `${f} = ?`).join(", ");
   await getPool().execute(
-    `UPDATE siswa SET ${setClause} WHERE id = ?`,
+    `UPDATE peserta_didik SET ${setClause} WHERE id = ?`,
     [...values, request.student_id]
   );
   await getPool().execute(
@@ -4165,8 +4004,8 @@ app.post("/api/pengajuan_ubah_data/:id/reject", authenticate, asyncHandler(async
 }));
 app.post("/api/login", asyncHandler(async (req, res) => {
   const { username, password, type } = req.body;
-  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress;
-  const ua = req.headers["user-agent"];
+  const ip = req.headers["x-forwarded-for"] || req.socket.remoteAddress || "unknown";
+  const ua = req.headers["user-agent"] || "unknown";
   if (type === "staff") {
     if (username === process.env.ADMIN_USERNAME && password === process.env.ADMIN_PASSWORD) {
       const token = import_jsonwebtoken.default.sign({ username, role: "Admin", type: "staff", permissions: ["all"] }, JWT_SECRET, { expiresIn: "24h" });
@@ -4188,7 +4027,7 @@ app.post("/api/login", asyncHandler(async (req, res) => {
       if (!isMatch) {
         await getPool().execute(
           "INSERT INTO riwayat_masuk (type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?)",
-          [type, username, ip, ua, "failed"]
+          [type || "unknown", username || "unknown", ip, ua, "failed"]
         );
         return res.status(401).json({ error: "User tidak ditemukan atau password salah" });
       }
@@ -4216,7 +4055,7 @@ app.post("/api/login", asyncHandler(async (req, res) => {
   } else if (type === "student") {
     const queryUsername = username || null;
     const queryPassword = password || null;
-    const [rows] = await getPool().execute("SELECT * FROM siswa WHERE (nisn = ? OR nik = ?) AND tanggal_lahir = ?", [queryUsername, queryUsername, queryPassword]);
+    const [rows] = await getPool().execute("SELECT s.*, s.peserta_didik_id as id, s.nama as nama_lengkap, rpd.nipd, rb.nama as rombel, rb.nama as kelas FROM peserta_didik s LEFT JOIN registrasi_peserta_didik rpd ON rpd.peserta_didik_id = s.peserta_didik_id LEFT JOIN anggota_rombel ar ON ar.peserta_didik_id = s.peserta_didik_id LEFT JOIN rombongan_belajar rb ON rb.rombongan_belajar_id = ar.rombongan_belajar_id WHERE (s.nisn = ? OR s.nik = ?) AND s.tanggal_lahir = ?", [queryUsername, queryUsername, queryPassword]);
     if (rows.length > 0) {
       const student = rows[0];
       if (!student.status_aktif) {
@@ -4236,7 +4075,7 @@ app.post("/api/login", asyncHandler(async (req, res) => {
   }
   await getPool().execute(
     "INSERT INTO riwayat_masuk (type, username, ip_address, user_agent, status) VALUES (?, ?, ?, ?, ?)",
-    [type, username, ip, ua, "failed"]
+    [type || "unknown", username || "unknown", ip, ua, "failed"]
   );
   res.status(401).json({ error: "User tidak ditemukan atau password salah" });
 }));
@@ -4253,7 +4092,7 @@ app.post("/api/sso/verify", asyncHandler(async (req, res) => {
   try {
     const decoded = import_jsonwebtoken.default.verify(sso_token, JWT_SECRET);
     if (decoded.type === "student") {
-      const [rows] = await getPool().execute("SELECT * FROM siswa WHERE id = ?", [decoded.id]);
+      const [rows] = await getPool().execute("SELECT * FROM peserta_didik WHERE peserta_didik_id = ?", [decoded.id]);
       if (rows.length === 0) return res.status(404).json({ error: "Siswa not found" });
       const s = rows[0];
       return res.json({ success: true, type: "SISWA", data: { username: s.nisn, nama: s.nama, nisn: s.nisn, kelas: null } });
@@ -4288,7 +4127,7 @@ app.post("/api/sso/sync-data", asyncHandler(async (req, res) => {
     return res.status(403).json({ error: "Invalid SSO Secret" });
   }
   const [siswaRows] = await getPool().execute(
-    "SELECT nisn, nama_lengkap as nama, rombel as kelas FROM siswa WHERE status_aktif = 1 AND nisn IS NOT NULL AND nisn != ''"
+    "SELECT s.nisn, s.nama as nama, rb.nama as kelas FROM peserta_didik s LEFT JOIN anggota_rombel ar ON s.peserta_didik_id = ar.peserta_didik_id LEFT JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE s.nisn IS NOT NULL AND s.nisn != ''"
   );
   const [guruRows] = await getPool().execute(
     "SELECT p.username, p.staff_id, p.is_elearning_admin FROM pengguna_web p WHERE p.status_aktif = 1"
@@ -4500,7 +4339,7 @@ app.get("/api/absensi", authenticate, asyncHandler(async (req, res) => {
     return res.json({ isHoliday: true, holidayName: holidays[0].title });
   }
   const [students] = await getPool().execute(
-    "SELECT id, nisn, nipd, nama_lengkap FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+    "SELECT s.peserta_didik_id as id, s.nisn, rpd.nipd, s.nama as nama_lengkap FROM peserta_didik s LEFT JOIN registrasi_peserta_didik rpd ON s.peserta_didik_id = rpd.peserta_didik_id JOIN anggota_rombel ar ON s.peserta_didik_id = ar.peserta_didik_id JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE rb.nama = ? ORDER BY s.nama ASC",
     [rombel]
   );
   const [attendance] = await getPool().execute(
@@ -4625,13 +4464,13 @@ app.get("/api/absensi/report", authenticate, asyncHandler(async (req, res) => {
     }
   }
   const [students] = await getPool().execute(
-    "SELECT id, nisn, nipd, nama_lengkap FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+    "SELECT s.peserta_didik_id as id, s.nisn, rpd.nipd, s.nama as nama_lengkap FROM peserta_didik s LEFT JOIN registrasi_peserta_didik rpd ON s.peserta_didik_id = rpd.peserta_didik_id JOIN anggota_rombel ar ON s.peserta_didik_id = ar.peserta_didik_id JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE rb.nama = ? ORDER BY s.nama ASC",
     [rombel]
   );
   const [attendance] = await getPool().execute(
     `SELECT a.student_id, a.status, COUNT(*) as count
          FROM absensi_siswa a
-         JOIN siswa s ON a.student_id = s.id
+         JOIN peserta_didik s ON a.student_id = s.id
          WHERE s.rombel = ? AND a.tanggal >= ? AND a.tanggal <= ?
          GROUP BY a.student_id, a.status`,
     [rombel, start_date, end_date]
@@ -5010,7 +4849,7 @@ app.get("/api/cetak/keterangan-rombel", authenticate, asyncHandler(async (req, r
             SUM(CASE WHEN s.jenis_kelamin = 'P' THEN 1 ELSE 0 END) as count_p
         FROM rombongan_belajar r
         LEFT JOIN pegawai p ON r.wali_kelas_id = p.pegawai_id
-        LEFT JOIN siswa s ON r.name = s.rombel
+        LEFT JOIN peserta_didik s ON r.name = s.rombel
         GROUP BY r.name, r.tingkat, p.nama_lengkap, p.gelar_depan, p.gelar_belakang
         ORDER BY r.name ASC
     `);
@@ -5054,12 +4893,12 @@ async function startServer() {
       if (tables.length > 0) {
         await getPool().execute(`
           INSERT IGNORE INTO el_student_pins (student_id, pin)
-          SELECT id, '123456' FROM siswa WHERE id NOT IN (SELECT student_id FROM el_student_pins WHERE student_id IS NOT NULL)
+          SELECT peserta_didik_id as id, '123456' FROM peserta_didik WHERE peserta_didik_id NOT IN (SELECT student_id FROM el_student_pins WHERE student_id IS NOT NULL)
         `);
         await getPool().execute(`
           INSERT IGNORE INTO el_parent_pins (student_id, pin, parent_name, parent_phone)
           SELECT s.id, '123456', COALESCE(s.nama_ayah, 'Orang Tua'), s.hp_orang_tua
-           FROM siswa s
+           FROM peserta_didik s
           WHERE s.hp_orang_tua IS NOT NULL AND s.hp_orang_tua != ''
           AND s.id NOT IN (SELECT student_id FROM el_parent_pins WHERE student_id IS NOT NULL)
         `);
@@ -5220,7 +5059,7 @@ async function startServer() {
     try {
       await getPool().execute(`
     INSERT IGNORE INTO el_student_pins (student_id, pin)
-    SELECT s.id, '123456' FROM siswa s WHERE s.nisn IS NOT NULL AND s.nisn != ''
+    SELECT s.id, '123456' FROM peserta_didik s WHERE s.nisn IS NOT NULL AND s.nisn != ''
   `);
     } catch (e) {
     }
@@ -5228,18 +5067,18 @@ async function startServer() {
       const { nisn, pin } = req.body;
       if (!nisn || !pin) return res.status(400).json({ error: "NISN dan PIN wajib diisi." });
       const [students] = await getPool().execute(
-        "SELECT s.*, esp.pin FROM siswa s, el_student_pins esp WHERE s.id = esp.student_id AND s.nisn = ?",
+        "SELECT s.*, esp.pin FROM peserta_didik s, el_student_pins esp WHERE s.id = esp.student_id AND s.nisn = ?",
         [nisn]
       );
       if (!students.length) {
-        const [byNisn] = await getPool().execute("SELECT id, nama_lengkap FROM siswa WHERE nisn = ?", [nisn]);
+        const [byNisn] = await getPool().execute("SELECT peserta_didik_id as id, nama as nama_lengkap FROM peserta_didik WHERE nisn = ?", [nisn]);
         if (!byNisn.length) {
           console.error("[EL] Student login failed: NISN not found:", nisn);
           return res.status(401).json({ error: "Akun tidak ditemukan. Pastikan NISN Anda benar." });
         } else {
           await getPool().execute("INSERT IGNORE INTO el_student_pins (student_id, pin) VALUES (?, '123456')", [byNisn[0].id]);
           const [retry] = await getPool().execute(
-            "SELECT s.*, esp.pin FROM siswa s, el_student_pins esp WHERE s.id = esp.student_id AND s.nisn = ?",
+            "SELECT s.*, esp.pin FROM peserta_didik s, el_student_pins esp WHERE s.id = esp.student_id AND s.nisn = ?",
             [nisn]
           );
           if (!retry.length) return res.status(401).json({ error: "Akun tidak ditemukan." });
@@ -5285,7 +5124,7 @@ async function startServer() {
       const { phone, pin } = req.body;
       if (!phone || !pin) return res.status(400).json({ error: "Nomor HP dan PIN wajib diisi." });
       const [rows] = await getPool().execute(
-        "SELECT epp.*, s.nama_lengkap as student_name FROM el_parent_pins epp, siswa s WHERE epp.student_id = s.id AND epp.parent_phone = ?",
+        "SELECT epp.*, s.nama_lengkap as student_name FROM el_parent_pins epp, peserta_didik s WHERE epp.student_id = s.id AND epp.parent_phone = ?",
         [phone]
       );
       if (!rows.length) return res.status(401).json({ error: "Akun tidak ditemukan." });
@@ -5514,7 +5353,7 @@ async function startServer() {
       if (req.user.type === "student" && req.user.id !== parseInt(req.params.id)) {
         return res.status(403).json({ error: "Tidak punya akses." });
       }
-      const [students] = await getPool().execute("SELECT id, nama_lengkap, nisn, rombel, jenis_kelamin FROM siswa WHERE id = ?", [req.params.id]);
+      const [students] = await getPool().execute("SELECT id, nama_lengkap, nisn, rombel, jenis_kelamin FROM peserta_didik WHERE peserta_didik_id = ?", [req.params.id]);
       if (!students.length) return res.status(404).json({ error: "Siswa tidak ditemukan." });
       const student = students[0];
       const [pointsRows] = await getPool().execute("SELECT COALESCE(SUM(points),0) as total FROM el_points WHERE student_id = ?", [req.params.id]);
@@ -5540,7 +5379,7 @@ async function startServer() {
            q.title as quiz_title, sub.score, sub.max_score, sub.percentage, sub.submitted_at
     FROM el_courses c
     JOIN el_submissions sub ON sub.quiz_id IN (SELECT id FROM el_quizzes WHERE course_id = c.id)
-        JOIN siswa s ON sub.student_id = s.id
+        JOIN peserta_didik s ON sub.student_id = s.id
     JOIN el_quizzes q ON sub.quiz_id = q.id
     WHERE c.teacher_id = ?
   `;
@@ -5568,7 +5407,7 @@ async function startServer() {
     SELECT s.id as student_id, s.nama_lengkap, s.nisn, q.id as quiz_id, q.title as quiz_title,
            sub.score, sub.max_score, sub.percentage
     FROM el_submissions sub
-        JOIN siswa s ON sub.student_id = s.id
+        JOIN peserta_didik s ON sub.student_id = s.id
     JOIN el_quizzes q ON sub.quiz_id = q.id
     WHERE q.course_id = ?
     ORDER BY s.nama_lengkap, q.id
@@ -5602,14 +5441,14 @@ async function startServer() {
     app.get("/api/el/parent/students", elAuth, asyncHandler(async (req, res) => {
       if (req.user.type !== "parent") return res.status(403).json({ error: "Hanya orang tua." });
       const [students] = await getPool().execute(
-        "SELECT id, nama_lengkap, nisn, rombel FROM siswa WHERE id = ?",
+        "SELECT id, nama_lengkap, nisn, rombel FROM peserta_didik WHERE peserta_didik_id = ?",
         [req.user.student_id]
       );
       res.json(students);
     }));
     app.get("/api/el/parent/student/:studentId/scores", elAuth, asyncHandler(async (req, res) => {
       if (req.user.type !== "parent" && req.user.type !== "teacher") return res.status(403).json({ error: "Akses ditolak." });
-      const [students] = await getPool().execute("SELECT nama_lengkap FROM siswa WHERE id = ?", [req.params.studentId]);
+      const [students] = await getPool().execute("SELECT nama_lengkap FROM peserta_didik WHERE peserta_didik_id = ?", [req.params.studentId]);
       const [scores] = await getPool().execute(`
     SELECT q.title as quiz_title, c.name as course_name, sub.score, sub.max_score, sub.percentage, sub.submitted_at
     FROM el_submissions sub
@@ -5624,7 +5463,7 @@ async function startServer() {
     app.get("/api/absensi_bidang_study", authenticate, asyncHandler(async (req, res) => {
       const { tanggal, rombel, mata_pelajaran } = req.query;
       const [siswa] = await getPool().execute(
-        "SELECT id, nama_lengkap, nisn FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+        "SELECT s.peserta_didik_id as id, s.nama as nama_lengkap, s.nisn FROM peserta_didik s JOIN anggota_rombel ar ON s.peserta_didik_id = ar.peserta_didik_id JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE rb.nama = ? ORDER BY s.nama ASC",
         [rombel]
       );
       const [absensi] = await getPool().execute(
@@ -5674,7 +5513,7 @@ async function startServer() {
     app.get("/api/absensi_bidang_study/report", authenticate, asyncHandler(async (req, res) => {
       const { start_date, end_date, rombel, mata_pelajaran } = req.query;
       const [siswa] = await getPool().execute(
-        "SELECT id, nama_lengkap, nisn FROM siswa WHERE rombel = ? ORDER BY nama_lengkap ASC",
+        "SELECT s.peserta_didik_id as id, s.nama as nama_lengkap, s.nisn FROM peserta_didik s JOIN anggota_rombel ar ON s.peserta_didik_id = ar.peserta_didik_id JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE rb.nama = ? ORDER BY s.nama ASC",
         [rombel]
       );
       const [absensi] = await getPool().execute(
@@ -5826,7 +5665,7 @@ async function startServer() {
           return res.status(400).json({ error: "Jurnal sedang menunggu validasi guru." });
         } else if (j.status === "ditolak") {
           if (j.earned_xp > 0) {
-            const [gamifikasi] = await getPool().execute("SELECT total_xp FROM siswa_gamifikasi WHERE siswa_id = ?", [siswa_id]);
+            const [gamifikasi] = await getPool().execute("SELECT total_xp FROM peserta_didik_gamifikasi WHERE siswa_id = ?", [siswa_id]);
             if (gamifikasi.length > 0) {
               let total_xp = gamifikasi[0].total_xp - j.earned_xp;
               if (total_xp < 0) total_xp = 0;
@@ -5863,7 +5702,7 @@ async function startServer() {
         SELECT j.id as jurnal_id, j.siswa_id, j.materi_id, j.status, j.created_at, 
                s.nama_lengkap, s.rombel, m.judul, m.tingkat_kelas, m.mata_pelajaran 
         FROM literasi_jurnal j
-        JOIN siswa s ON j.siswa_id = s.id
+        JOIN peserta_didik s ON j.siswa_id = s.id
         JOIN literasi_materi m ON j.materi_id = m.id
         WHERE j.status = 'menunggu_validasi'
     `;
@@ -5895,7 +5734,7 @@ async function startServer() {
         SELECT j.id as jurnal_id, j.siswa_id, j.materi_id, j.status, j.created_at, j.earned_xp,
                s.nama_lengkap, s.rombel, m.judul, m.tingkat_kelas, m.mata_pelajaran 
         FROM literasi_jurnal j
-        JOIN siswa s ON j.siswa_id = s.id
+        JOIN peserta_didik s ON j.siswa_id = s.id
         JOIN literasi_materi m ON j.materi_id = m.id
         WHERE j.status = 'disetujui'
     `;
@@ -5952,13 +5791,13 @@ async function startServer() {
         "UPDATE literasi_jurnal SET status = 'disetujui', earned_xp = ?, dinilai_oleh = ? WHERE id = ?",
         [xp, guru_id, jurnal_id]
       );
-      const [gamifikasi] = await getPool().execute("SELECT total_xp FROM siswa_gamifikasi WHERE siswa_id = ?", [siswa_id]);
+      const [gamifikasi] = await getPool().execute("SELECT total_xp FROM peserta_didik_gamifikasi WHERE siswa_id = ?", [siswa_id]);
       let total_xp = xp;
       if (gamifikasi.length > 0) {
         total_xp += gamifikasi[0].total_xp;
         await getPool().execute("UPDATE siswa_gamifikasi SET total_xp = ? WHERE siswa_id = ?", [total_xp, siswa_id]);
       } else {
-        await getPool().execute("INSERT INTO siswa_gamifikasi (siswa_id, total_xp, level) VALUES (?, ?, 1)", [siswa_id, total_xp]);
+        await getPool().execute("INSERT INTO peserta_didik_gamifikasi (siswa_id, total_xp, level) VALUES (?, ?, 1)", [siswa_id, total_xp]);
       }
       let newLevel = 1;
       if (total_xp >= 1e3) newLevel = 6;
@@ -6010,7 +5849,7 @@ async function startServer() {
         [jurnal_id]
       );
       if (xp_to_deduct > 0) {
-        const [gamifikasi] = await getPool().execute("SELECT total_xp FROM siswa_gamifikasi WHERE siswa_id = ?", [siswa_id]);
+        const [gamifikasi] = await getPool().execute("SELECT total_xp FROM peserta_didik_gamifikasi WHERE siswa_id = ?", [siswa_id]);
         if (gamifikasi.length > 0) {
           let total_xp = gamifikasi[0].total_xp - xp_to_deduct;
           if (total_xp < 0) total_xp = 0;
@@ -6035,8 +5874,8 @@ async function startServer() {
             s.nama_lengkap, 
             s.rombel,
             COALESCE(ROUND(SUM(j.waktu_baca_aktual) / 60), 0) as total_waktu_baca
-        FROM siswa_gamifikasi sg
-        JOIN siswa s ON sg.siswa_id = s.id
+        FROM peserta_didik_gamifikasi sg
+        JOIN peserta_didik s ON sg.siswa_id = s.id
         LEFT JOIN literasi_jurnal j ON j.siswa_id = sg.siswa_id AND j.status IN ('disetujui', 'menunggu_validasi')
         LEFT JOIN literasi_materi m ON j.materi_id = m.id
         WHERE s.rombel LIKE ?
@@ -6048,7 +5887,7 @@ async function startServer() {
     }));
     app.get("/api/literasi/siswa/:id", authenticate, asyncHandler(async (req, res) => {
       const targetId = req.params.id === "null" || req.params.id === "undefined" || !req.params.id ? req.user.id : req.params.id;
-      const [profile] = await getPool().execute("SELECT total_xp, level FROM siswa_gamifikasi WHERE siswa_id = ?", [targetId]);
+      const [profile] = await getPool().execute("SELECT total_xp, level FROM peserta_didik_gamifikasi WHERE siswa_id = ?", [targetId]);
       if (profile.length > 0) {
         res.json(profile[0]);
       } else {
