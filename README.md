@@ -59,8 +59,8 @@ Dapoy Schools hadir dengan segudang fitur *All-in-One* yang dibagi menjadi beber
 
 1. **Clone & Install Dependensi**
    ```bash
-   git clone https://github.com/syahmuhamadrizky/dapoy-schools-release.git
-   cd dapoy-schools-release
+   git clone https://github.com/syahmuhamadrizky/SekolahV2_Releases.git
+   cd SekolahV2_Releases
    npm install --production
    ```
 

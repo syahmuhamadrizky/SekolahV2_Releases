@@ -1916,7 +1916,7 @@ app.get("/api/system/version", authenticate, (req, res) => {
 app.get("/api/system/check-update", authenticate, async (req, res) => {
   try {
     const timestamp = (/* @__PURE__ */ new Date()).getTime();
-    const url = `https://raw.githubusercontent.com/syahmuhamadrizky/dapoy-schools-release/main/package.json?t=\${timestamp}`;
+    const url = `https://raw.githubusercontent.com/syahmuhamadrizky/SekolahV2_Releases/main/package.json?t=\${timestamp}`;
     const remotePkg = await new Promise((resolve, reject) => {
       import_https.default.get(url, { headers: { "Cache-Control": "no-cache" } }, (resp) => {
         let data = "";
@@ -1959,7 +1959,7 @@ app.post("/api/system/install-update", authenticate, async (req, res) => {
         const tempDir = path2.join(rootDir, "temp_update");
         const zipFile = path2.join(rootDir, "update.zip");
         console.log("[UPDATE] Mengunduh rilis terbaru...");
-        const response = await fetch("https://github.com/syahmuhamadrizky/dapoy-schools-release/archive/refs/heads/main.zip");
+        const response = await fetch("https://github.com/syahmuhamadrizky/SekolahV2_Releases/archive/refs/heads/main.zip");
         if (!response.ok) throw new Error("Gagal mengunduh update");
         const buffer = await response.arrayBuffer();
         fsExt.writeFileSync(zipFile, Buffer.from(buffer));
@@ -1967,7 +1967,7 @@ app.post("/api/system/install-update", authenticate, async (req, res) => {
         const zip = new AdmZip(zipFile);
         zip.extractAllTo(tempDir, true);
         console.log("[UPDATE] Menyalin file baru ke direktori utama...");
-        const sourceDir = path2.join(tempDir, "dapoy-schools-release-main");
+        const sourceDir = path2.join(tempDir, "SekolahV2_Releases-main");
         fsExt.cpSync(sourceDir, rootDir, { recursive: true, force: true });
         console.log("[UPDATE] Membersihkan file sementara...");
         fsExt.rmSync(tempDir, { recursive: true, force: true });

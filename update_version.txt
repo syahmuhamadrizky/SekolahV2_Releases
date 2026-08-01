@@ -1,3 +1,4 @@
-Versi 1.7.1 - Ketahanan Lisensi Offline (Offline Resilience) & Update URL
-- Fitur Ketahanan Offline: Aplikasi kini tetap berjalan sempurna secara offline (tanpa terblokir ke mode trial) apabila server pusat hub.dapoy.net mengalami downtime atau gangguan jaringan, selama parameter LICENSE_KEY sudah dikonfigurasi pada .env.
-- Pembaruan endpoint pemeriksaan rilis pemutakhiran versi aplikasi menuju ke repository GitHub baru (SekolahV2_Releases).
+Versi 2.0.1 - Pemutakhiran SekolahV2 & Ketahanan Offline Lisensi
+- Migrasi Penuh Struktur Database 100% Dapodik & Penghapusan tabel lama siswa.
+- Ketahanan Lisensi Offline (Offline Resilience): Aplikasi kini tetap beroperasi lancar tanpa batas saat server pusat (hub.dapoy.net) offline atau terjadi gangguan koneksi internet, selama LICENSE_KEY sudah terdaftar di .env.
+- Pemutakhiran sistem Cek Update & Instalasi Update Online di aplikasi agar terhubung secara mulus ke repository rilis yang baru (SekolahV2_Releases).
