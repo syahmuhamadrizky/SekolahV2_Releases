@@ -1,4 +1,3 @@
-Versi 1.7.0 - Standarisasi 100% Struktur Dapodik & Kompatibilitas Inject Balik
-- Penghapusan total ketergantungan pada tabel lama 'siswa', bertransisi 100% menggunakan tabel resmi Dapodik ('peserta_didik', 'registrasi_peserta_didik', dsb.).
-- Penambahan dukungan parameter 'kode_wilayah' pada Form Edit Siswa & API Pencarian Wilayah agar kompatibel dan dinilai valid oleh validator Dapodik.
-- Penerapan pembaruan otomatis timestamp audit 'last_update' pada setiap perubahan data siswa untuk mendukung deteksi sinkronisasi oleh engine Kemdikbud ke pusat.
+Versi 1.7.1 - Ketahanan Lisensi Offline (Offline Resilience) & Update URL
+- Fitur Ketahanan Offline: Aplikasi kini tetap berjalan sempurna secara offline (tanpa terblokir ke mode trial) apabila server pusat hub.dapoy.net mengalami downtime atau gangguan jaringan, selama parameter LICENSE_KEY sudah dikonfigurasi pada .env.
+- Pembaruan endpoint pemeriksaan rilis pemutakhiran versi aplikasi menuju ke repository GitHub baru (SekolahV2_Releases).
