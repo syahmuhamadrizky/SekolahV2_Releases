@@ -310,6 +310,9 @@ async function verifyLicenseOnBoot() {
           app_name: "Dapoy Schools"
         })
       });
+      if (!res.ok && res.status >= 500) {
+        throw new Error(`Hub Server HTTP error ${res.status}`);
+      }
       const data = await res.json();
       if (data.valid) {
         isLicenseValid = true;
@@ -323,9 +326,11 @@ async function verifyLicenseOnBoot() {
         checkFreeTrial();
       }
     } catch (err) {
-      console.log(`[LICENSE] Failed to contact Hub Server (${err.message}). Retrying later.`);
-      isLicenseValid = false;
-      checkFreeTrial();
+      console.log(`[LICENSE] Hub Server offline/unreachable (${err.message}). Retaining valid status since license_key is configured.`);
+      isLicenseValid = true;
+      isExpired = false;
+      if (licenseTimer) clearInterval(licenseTimer);
+      licenseTimer = setInterval(verifyLicenseOnBoot, 60 * 60 * 1e3);
     }
   } else {
     isLicenseValid = false;
@@ -584,7 +589,7 @@ app.post("/api/activate", async (req, res) => {
 });
 app.get("/api/check-update", async (req, res) => {
   try {
-    const response = await fetch("https://raw.githubusercontent.com/syahmuhamadrizky/dapoy-schools-release/main/update_version.txt");
+    const response = await fetch("https://raw.githubusercontent.com/syahmuhamadrizky/SekolahV2_Releases/main/update_version.txt");
     const text = await response.text();
     const match = text.match(/(?:Versi|Version)\s+([\d\.]+)/i);
     const latest_version = match ? match[1] : "1.0.0";
