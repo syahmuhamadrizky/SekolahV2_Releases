@@ -514,8 +514,11 @@ app.post(["/api/sync/siswa", "/api/sync/pegawai", "/api/sync/referensi", "/api/s
     }
     const BATCH_SIZE = 200;
     let totalProcessed = 0;
-    for (const [table, items] of Object.entries(data)) {
+    for (let [table, items] of Object.entries(data)) {
       if (!Array.isArray(items) || items.length === 0) continue;
+      if (table === "pegawai") {
+        table = "ptk";
+      }
       const sample = items[0];
       if (!sample || typeof sample !== "object") continue;
       const keys = Object.keys(sample).filter((k) => k !== "undefined");
@@ -818,37 +821,7 @@ async function initDb() {
           )
         `
       },
-      {
-        name: "pegawai",
-        query: `
-          CREATE TABLE IF NOT EXISTS pegawai (
-            pegawai_id VARCHAR(36) PRIMARY KEY,
-            nama_lengkap VARCHAR(255) NOT NULL,
-            nuptk VARCHAR(50),
-            jenis_kelamin VARCHAR(20) DEFAULT 'L',
-            tempat_lahir VARCHAR(100),
-            tanggal_lahir DATE,
-            nip VARCHAR(50),
-            status_kepegawaian VARCHAR(50) DEFAULT 'Honorer',
-            jenis_ptk VARCHAR(100),
-            gelar_depan VARCHAR(50),
-            gelar_belakang VARCHAR(50),
-            jenjang_pendidikan VARCHAR(100),
-            jurusan_prodi VARCHAR(100),
-            sertifikasi VARCHAR(100),
-            tmt_kerja VARCHAR(50),
-            tugas_tambahan VARCHAR(100),
-            mengajar VARCHAR(255),
-            jam_tugas_tambahan VARCHAR(50),
-            jjm VARCHAR(50),
-            total_jjm VARCHAR(50),
-            siswa VARCHAR(50),
-            kompetensi VARCHAR(255),
-            nik VARCHAR(50) UNIQUE,
-            jabatan_ptk VARCHAR(100)
-          )
-        `
-      },
+      // pegawai table initialization removed because it's a view pointing to ptk
       {
         name: "pengguna_web",
         query: `
@@ -1139,38 +1112,6 @@ async function initDb() {
     }
     await ensureColumn(p, "rombongan_belajar", "tingkat", "VARCHAR(20) AFTER id");
     await ensureColumn(p, "berkas_insentif", "nomor_surat", "VARCHAR(100)");
-    const pegawaiCols = [
-      { c: "nuptk", t: "VARCHAR(50)" },
-      { c: "jenis_kelamin", t: "VARCHAR(20) DEFAULT 'L'" },
-      { c: "tempat_lahir", t: "VARCHAR(100)" },
-      { c: "tanggal_lahir", t: "DATE" },
-      { c: "nip", t: "VARCHAR(50)" },
-      { c: "status_kepegawaian", t: "VARCHAR(50) DEFAULT 'Honorer'" },
-      { c: "jenis_ptk", t: "VARCHAR(100)" },
-      { c: "gelar_depan", t: "VARCHAR(50)" },
-      { c: "gelar_belakang", t: "VARCHAR(50)" },
-      { c: "jenjang_pendidikan", t: "VARCHAR(100)" },
-      { c: "jurusan_prodi", t: "VARCHAR(100)" },
-      { c: "sertifikasi", t: "VARCHAR(100)" },
-      { c: "tmt_kerja", t: "VARCHAR(50)" },
-      { c: "tugas_tambahan", t: "VARCHAR(100)" },
-      { c: "mengajar", t: "VARCHAR(255)" },
-      { c: "jam_tugas_tambahan", t: "VARCHAR(50)" },
-      { c: "jjm", t: "VARCHAR(50)" },
-      { c: "total_jjm", t: "VARCHAR(50)" },
-      { c: "siswa", t: "VARCHAR(50)" },
-      { c: "kompetensi", t: "VARCHAR(255)" },
-      { c: "nik", t: "VARCHAR(50) UNIQUE" },
-      { c: "jabatan_ptk", t: "VARCHAR(100)" }
-    ];
-    for (const col of pegawaiCols) {
-      await ensureColumn(p, "pegawai", col.c, col.t);
-    }
-    await ensureColumn(p, "siswa", "nipd", "VARCHAR(50) NOT NULL");
-    await ensureColumn(p, "siswa", "rombel", "VARCHAR(50)");
-    await ensureColumn(p, "siswa", "jenis_kelamin", "VARCHAR(2)");
-    await ensureColumn(p, "siswa", "agama", "VARCHAR(50) AFTER nik");
-    await ensureColumn(p, "siswa", "status_aktif", "BOOLEAN DEFAULT TRUE AFTER agama");
     await ensureColumn(p, "pengguna_web", "status_aktif", "BOOLEAN DEFAULT TRUE AFTER password");
     await ensureColumn(p, "pengguna_web", "is_elearning_admin", "BOOLEAN DEFAULT FALSE AFTER status_aktif");
     await ensureColumn(p, "pengaturan_sekolah", "school_name", "VARCHAR(255) DEFAULT 'SDN Tanah Tinggi 1'");
@@ -1432,7 +1373,7 @@ app.get("/api/bantuan/penerima", authenticate, async (req, res) => {
         const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
         if (rombelRows.length > 0) {
           const names = rombelRows.map((r) => r.name);
-          whereClause = `WHERE s.rombel IN (${names.map(() => "?").join(",")})`;
+          whereClause = `WHERE rombel_data.rombel IN (${names.map(() => "?").join(",")})`;
           params.push(...names);
         } else {
           whereClause = `WHERE 1=0`;
@@ -1441,7 +1382,7 @@ app.get("/api/bantuan/penerima", authenticate, async (req, res) => {
     }
     const [rows] = await getPool().execute(`
             SELECT 
-                pb.id as penerima_bantuan_id, s.id as siswa_id, s.nisn, s.rombel, s.nik,
+                pb.id as penerima_bantuan_id, s.id as siswa_id, s.nisn, rombel_data.rombel, s.nik,
                 jb.nama_bantuan, jb.istilah, pb.tahun, pb.semester,
                 IFNULL(NULLIF(prb.nama_lengkap, ''), s.nama_lengkap) as nama_lengkap,
                 IFNULL(NULLIF(prb.tempat_lahir, ''), s.tempat_lahir) as tempat_lahir,
@@ -1464,6 +1405,12 @@ app.get("/api/bantuan/penerima", authenticate, async (req, res) => {
                 db.bank, db.nomor_rekening, db.an_rekening, prb.penanggung_jawab_rekening
             FROM penerima_bantuan pb
             JOIN peserta_didik s ON pb.siswa_id = s.id
+            LEFT JOIN (
+                SELECT ar.peserta_didik_id, MAX(rb.nama) as rombel
+                FROM anggota_rombel ar
+                JOIN rombongan_belajar rb ON rb.rombongan_belajar_id = ar.rombongan_belajar_id
+                GROUP BY ar.peserta_didik_id
+            ) rombel_data ON rombel_data.peserta_didik_id = s.peserta_didik_id
             LEFT JOIN data_kontak dk ON s.id = dk.siswa_id
             JOIN jenis_bantuan jb ON pb.istilah = jb.istilah
             LEFT JOIN data_orang_tua ibu ON s.id = ibu.siswa_id AND ibu.tipe = 'ibu'
@@ -1496,7 +1443,7 @@ app.get("/api/bantuan/siswa/me", authenticate, async (req, res) => {
                 jb.nama_bantuan, jb.istilah, pb.tahun, pb.semester,
                 db.nomor_rekening, db.bank, db.an_rekening, db.upload_foto_buku_rekening,
                 prb.id as pengajuan_id, prb.status_pengajuan, prb.foto_ktp, prb.foto_kk, prb.foto_akte, prb.penanggung_jawab_rekening, prb.foto_surat_wali,
-                lb.id as laporan_id, lb.tanggal_pencairan, lb.tanggal_penarikan, lb.nominal, lb.upload_foto_selfie, lb.upload_foto_transaksi, lb.tanda_tangan
+                lb.id as laporan_id, lb.tanggal_pencairan, lb.tanggal_penarikan, lb.nominal, lb.upload_foto_selfie, lb.upload_foto_transaksi, lb.tanda_tangan, lb.is_editable
             FROM penerima_bantuan pb
             JOIN jenis_bantuan jb ON pb.istilah = jb.istilah
             LEFT JOIN data_bank db ON pb.siswa_id = db.siswa_id AND pb.istilah = db.istilah
@@ -1520,7 +1467,7 @@ app.get("/api/bantuan/pengajuan_all", authenticate, async (req, res) => {
         const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
         if (rombelRows.length > 0) {
           const names = rombelRows.map((r) => r.name);
-          whereClause = `WHERE s.rombel IN (${names.map(() => "?").join(",")})`;
+          whereClause = `WHERE rombel_data.rombel IN (${names.map(() => "?").join(",")})`;
           params.push(...names);
         } else {
           whereClause = `WHERE 1=0`;
@@ -1528,9 +1475,15 @@ app.get("/api/bantuan/pengajuan_all", authenticate, async (req, res) => {
       }
     }
     const [rows] = await getPool().execute(`
-            SELECT p.*, s.nama_lengkap AS siswa_nama, s.nisn, s.rombel AS nama_kelas, s.nik AS siswa_nik, j.nama_bantuan, db.nomor_rekening, db.bank, db.an_rekening, db.upload_foto_buku_rekening
+            SELECT p.*, s.nama_lengkap AS siswa_nama, s.nisn, rombel_data.rombel AS nama_kelas, s.nik AS siswa_nik, j.nama_bantuan, db.nomor_rekening, db.bank, db.an_rekening, db.upload_foto_buku_rekening
             FROM pengajuan_rekening_bantuan p
             LEFT JOIN peserta_didik s ON p.siswa_id = s.id
+            LEFT JOIN (
+                SELECT ar.peserta_didik_id, MAX(rb.nama) as rombel
+                FROM anggota_rombel ar
+                JOIN rombongan_belajar rb ON rb.rombongan_belajar_id = ar.rombongan_belajar_id
+                GROUP BY ar.peserta_didik_id
+            ) rombel_data ON rombel_data.peserta_didik_id = s.id
             LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
             LEFT JOIN data_bank db ON p.siswa_id = db.siswa_id AND p.istilah = db.istilah
             ${whereClause}
@@ -1593,9 +1546,27 @@ app.post("/api/bantuan/rekening/:siswa_id/:istilah", authenticate, uploadBantuan
 app.get("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, async (req, res) => {
   try {
     const { siswa_id, istilah } = req.params;
-    const [siswaData] = await getPool().query("SELECT nik, nama_lengkap, tempat_lahir, tanggal_lahir, nomor_kk, provinsi, kota, kecamatan, kelurahan, rt, rw, alamat_jalan FROM peserta_didik WHERE peserta_didik_id = ?", [siswa_id]);
+    const [siswaData] = await getPool().query(`
+            SELECT s.nik, s.nama_lengkap, s.tempat_lahir, s.tanggal_lahir, s.nomor_kk, 
+            s.provinsi, s.kota, s.kecamatan, s.kelurahan, s.rt, s.rw, s.alamat_jalan,
+            s.nama_ayah, s.nik_ayah, s.nama_ibu_kandung, s.nik_ibu, s.nama_wali, s.nik_wali,
+            kec.nama as kecamatan_nama, kota.nama as kota_nama, prov.nama as provinsi_nama
+            FROM peserta_didik s 
+            LEFT JOIN ref_mst_wilayah kec ON s.kecamatan = kec.kode_wilayah
+            LEFT JOIN ref_mst_wilayah kota ON kec.mst_kode_wilayah = kota.kode_wilayah
+            LEFT JOIN ref_mst_wilayah prov ON kota.mst_kode_wilayah = prov.kode_wilayah
+            WHERE s.peserta_didik_id = ?
+        `, [siswa_id]);
     let nikSiswa = siswaData.length > 0 ? siswaData[0].nik || "" : "";
-    const [existing] = await getPool().query("SELECT * FROM pengajuan_rekening_bantuan WHERE siswa_id = ? AND istilah = ?", [siswa_id, istilah]);
+    const [existing] = await getPool().query(`
+            SELECT p.*,
+            kec.nama as kecamatan_nama, kota.nama as kota_nama, prov.nama as provinsi_nama
+            FROM pengajuan_rekening_bantuan p
+            LEFT JOIN ref_mst_wilayah kec ON p.kecamatan = kec.kode_wilayah
+            LEFT JOIN ref_mst_wilayah kota ON kec.mst_kode_wilayah = kota.kode_wilayah
+            LEFT JOIN ref_mst_wilayah prov ON kota.mst_kode_wilayah = prov.kode_wilayah
+            WHERE p.siswa_id = ? AND p.istilah = ?
+        `, [siswa_id, istilah]);
     if (existing.length > 0) {
       let existingData = existing[0];
       existingData.nik = nikSiswa;
@@ -1618,6 +1589,9 @@ app.get("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, async (req, r
       rt: "",
       rw: "",
       alamat_jalan: "",
+      kecamatan_nama: "",
+      kota_nama: "",
+      provinsi_nama: "",
       nama_ayah: "",
       nik_ayah: "",
       nama_ibu: "",
@@ -1636,26 +1610,21 @@ app.get("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, async (req, r
       prefill.kota = s.kota || "";
       prefill.kecamatan = s.kecamatan || "";
       prefill.kelurahan = s.kelurahan || "";
+      prefill.kecamatan_nama = s.kecamatan_nama || "";
+      prefill.kota_nama = s.kota_nama || "";
+      prefill.provinsi_nama = s.provinsi_nama || "";
       prefill.rt = s.rt || "";
       prefill.rw = s.rw || "";
       prefill.alamat_jalan = s.alamat_jalan || "";
+      prefill.nama_ayah = s.nama_ayah || "";
+      prefill.nik_ayah = s.nik_ayah || "";
+      prefill.nama_ibu = s.nama_ibu_kandung || "";
+      prefill.nik_ibu = s.nik_ibu || "";
+      prefill.wali = s.nama_wali || "";
+      prefill.nik_wali = s.nik_wali || "";
     }
     if (kontakData.length > 0) {
       prefill.nomor_hp = kontakData[0].nomor_hp || "";
-    }
-    for (const ortu of ortuData) {
-      if (ortu.tipe === "ayah") {
-        prefill.nama_ayah = ortu.nama || "";
-        prefill.nik_ayah = ortu.nik || "";
-      }
-      if (ortu.tipe === "ibu") {
-        prefill.nama_ibu = ortu.nama || "";
-        prefill.nik_ibu = ortu.nik || "";
-      }
-    }
-    if (waliData.length > 0) {
-      prefill.wali = waliData[0].nama || "";
-      prefill.nik_wali = waliData[0].nik || "";
     }
     res.json(prefill);
   } catch (err) {
@@ -1793,12 +1762,143 @@ app.post("/api/bantuan/pengajuan/:siswa_id/:istilah", authenticate, uploadBantua
     res.status(500).json({ error: err.message });
   }
 });
+app.get("/api/bantuan/laporan/:id/cetak", authenticate, async (req, res) => {
+  try {
+    const [rows] = await getPool().query(`
+            SELECT 
+                l.*, 
+                COALESCE(l.tahun, p.tahun) as tahun_bantuan,
+                COALESCE(l.semester, p.semester) as semester_bantuan,
+                s.nama as nama_lengkap, s.nisn, s.nik, s.nomor_kk, s.nomor_telepon_seluler, rombel_data.rombel, 
+                p.istilah as jenis_bantuan, j.nama_bantuan,
+                prb.status_orang_tua, prb.nama_ibu, prb.nik_ibu, prb.nama_ayah, prb.nik_ayah, prb.wali, prb.nik_wali, prb.hubungan_wali, prb.penanggung_jawab_rekening,
+                db.nomor_rekening, db.bank, db.an_rekening,
+                (SELECT kota FROM pengaturan_sekolah LIMIT 1) as kota
+            FROM laporan_bantuan l
+            JOIN peserta_didik s ON l.siswa_id = s.peserta_didik_id
+            LEFT JOIN (
+                SELECT ar.peserta_didik_id, MAX(rb.nama) as rombel
+                FROM anggota_rombel ar
+                JOIN rombongan_belajar rb ON rb.rombongan_belajar_id = ar.rombongan_belajar_id
+                GROUP BY ar.peserta_didik_id
+            ) rombel_data ON rombel_data.peserta_didik_id = s.peserta_didik_id
+            JOIN penerima_bantuan p ON l.bantuan_id = p.id
+            LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
+            LEFT JOIN pengajuan_rekening_bantuan prb ON prb.siswa_id = l.siswa_id AND prb.istilah = p.istilah
+            LEFT JOIN data_bank db ON db.siswa_id = l.siswa_id AND db.istilah = p.istilah
+            WHERE l.id = ?
+        `, [req.params.id]);
+    if (!rows.length) return res.status(404).send("Laporan tidak ditemukan");
+    const data = rows[0];
+    const formatDate = (dateStr) => {
+      if (!dateStr) return "-";
+      const d = new Date(dateStr);
+      if (isNaN(d.getTime())) return dateStr;
+      return d.toLocaleDateString("id-ID", { day: "2-digit", month: "long", year: "numeric" });
+    };
+    const html = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Cetak Laporan - ${data.nama_lengkap}</title>
+            <style>
+                body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.5; color: #333; }
+                .header { text-align: center; border-bottom: 2px solid #000; padding-bottom: 10px; margin-bottom: 15px; }
+                .title { font-size: 18px; font-weight: bold; text-transform: uppercase; }
+                .subtitle { font-size: 14px; margin-top: 5px; }
+                h3 { margin-bottom: 5px; margin-top: 15px; font-size: 15px; }
+                table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+                th, td { padding: 6px 10px; border: 1px solid #ddd; text-align: left; font-size: 13px; }
+                th { background: #f4f4f4; width: 35%; font-weight: bold; }
+                .images { display: flex; gap: 20px; margin-top: 10px; }
+                .img-box { border: 1px solid #ddd; padding: 10px; text-align: center; border-radius: 8px; }
+                .img-box img { max-width: 280px; max-height: 250px; border-radius: 4px; object-fit: contain; }
+                .img-box h4 { margin: 0 0 10px 0; font-size: 14px; }
+                .signature { margin-top: 40px; float: right; width: 250px; text-align: center; font-size: 14px; }
+                .clearfix::after { content: ""; clear: both; display: table; }
+                @media print { .no-print { display: none; } }
+            </style>
+        </head>
+        <body>
+            <button class="no-print" onclick="window.print()" style="padding: 10px 20px; margin-bottom: 20px; cursor: pointer; background: #2563eb; color: white; border: none; border-radius: 6px; font-weight: bold;">\u{1F5A8}\uFE0F Cetak Sekarang</button>
+            <div class="header">
+                <div class="title">LAPORAN PENCAIRAN BANTUAN</div>
+                <div class="subtitle">${data.nama_bantuan || data.jenis_bantuan} - Tahun ${data.tahun_bantuan || "-"} Semester ${data.semester_bantuan || "-"}</div>
+            </div>
+            
+            <h3>A. Identitas Siswa</h3>
+            <table>
+                <tr><th>Nama Lengkap</th><td>${data.nama_lengkap}</td></tr>
+                <tr><th>NISN</th><td>${data.nisn || "-"}</td></tr>
+                <tr><th>NIK</th><td>${data.nik || "-"}</td></tr>
+                <tr><th>Nomor KK</th><td>${data.nomor_kk || "-"}</td></tr>
+                <tr><th>Nomor HP</th><td>${data.nomor_telepon_seluler || "-"}</td></tr>
+                <tr><th>Kelas</th><td>${data.rombel || "-"}</td></tr>
+            </table>
+
+            <h3>B. Informasi Orang Tua / Wali</h3>
+            <table>
+                <tr><th>Nama Ibu</th><td>${data.nama_ibu || "-"}</td></tr>
+                <tr><th>NIK Ibu</th><td>${data.nik_ibu || "-"}</td></tr>
+                <tr><th>Nama Ayah</th><td>${data.nama_ayah || "-"}</td></tr>
+                <tr><th>NIK Ayah</th><td>${data.nik_ayah || "-"}</td></tr>
+                <tr><th>Nama Wali</th><td>${data.wali || "-"}</td></tr>
+                <tr><th>NIK Wali</th><td>${data.nik_wali || "-"}</td></tr>
+            </table>
+
+            <h3>C. Data Rekening Bank</h3>
+            <table>
+                <tr><th>Bank</th><td>${data.bank || "-"}</td></tr>
+                <tr><th>Nomor Rekening</th><td>${data.nomor_rekening || "-"}</td></tr>
+                <tr><th>Atas Nama Rekening</th><td>${data.an_rekening || "-"}</td></tr>
+            </table>
+
+            <h3>D. Data Penarikan Dana</h3>
+            <table>
+                <tr><th>Tanggal Pencairan (Masuk Rekening)</th><td>${formatDate(data.tanggal_pencairan)}</td></tr>
+                <tr><th>Tanggal Penarikan (Diambil)</th><td>${formatDate(data.tanggal_penarikan)}</td></tr>
+                <tr><th>Nominal</th><td>Rp ${Number(data.nominal).toLocaleString("id-ID")}</td></tr>
+            </table>
+
+            <h3 style="page-break-inside: avoid; margin-top: 15px;">E. Lampiran Foto Bukti</h3>
+            <div class="images" style="page-break-inside: avoid;">
+                ${data.upload_foto_selfie ? `<div class="img-box"><h4>Foto Selfie Penerima</h4><img src="${data.upload_foto_selfie}" alt="Selfie"/></div>` : ""}
+                ${data.upload_foto_transaksi ? `<div class="img-box"><h4>Foto Bukti Transaksi</h4><img src="${data.upload_foto_transaksi}" alt="Transaksi"/></div>` : ""}
+            </div>
+
+            <div class="clearfix" style="page-break-inside: avoid;">
+                <div class="signature">
+                    <p>${data.kota || "Kota ................"}, ${formatDate((/* @__PURE__ */ new Date()).toISOString())}</p>
+                    <p>Orang Tua / Wali Siswa,</p>
+                    <br><br><br><br>
+                    <p>___________________________</p>
+                </div>
+            </div>
+            
+            <script>
+                // Otomatis trigger print saat semua gambar selesai dimuat
+                window.onload = () => { setTimeout(() => window.print(), 500); }
+            </script>
+        </body>
+        </html>
+        `;
+    res.send(html);
+  } catch (err) {
+    res.status(500).send("Error generating print view: " + err.message);
+  }
+});
 app.get("/api/bantuan/laporan_all", authenticate, async (req, res) => {
   try {
     const query = `
-            SELECT l.*, s.nama_lengkap, s.nisn, s.rombel, p.istilah as jenis_bantuan, j.nama_bantuan
+            SELECT l.*, s.nama_lengkap, s.nisn, rombel_data.rombel, p.istilah as jenis_bantuan, j.nama_bantuan
             FROM laporan_bantuan l
             JOIN peserta_didik s ON l.siswa_id = s.id
+            LEFT JOIN (
+                SELECT ar.peserta_didik_id, MAX(rb.nama) as rombel
+                FROM anggota_rombel ar
+                JOIN rombongan_belajar rb ON rb.rombongan_belajar_id = ar.rombongan_belajar_id
+                GROUP BY ar.peserta_didik_id
+            ) rombel_data ON rombel_data.peserta_didik_id = s.id
             JOIN penerima_bantuan p ON l.bantuan_id = p.id
             LEFT JOIN jenis_bantuan j ON p.istilah = j.istilah
             ORDER BY l.created_at DESC
@@ -1836,7 +1936,7 @@ app.post("/api/bantuan/laporan", authenticate, uploadBantuan.fields([
     const renameFile = async (fileObj, jenisFile) => {
       if (!fileObj) return void 0;
       const ext = import_path.default.extname(fileObj.originalname);
-      const newName = `\${jenisFile}_\${siswa_id}_\${Date.now()}\${ext}`;
+      const newName = `${jenisFile}_${siswa_id}_${Date.now()}${ext}`;
       const oldPath = fileObj.path;
       const newPath = import_path.default.join(fileObj.destination, newName);
       if (import_fs.default.existsSync(oldPath)) {
@@ -1854,7 +1954,7 @@ app.post("/api/bantuan/laporan", authenticate, uploadBantuan.fields([
     let params = [];
     if (body.id && body.id !== "undefined" && body.id !== "null" && body.id !== "") {
       query = `UPDATE laporan_bantuan SET 
-                tanggal_pencairan=?, tanggal_penarikan=?, nominal=?, tanda_tangan=?`;
+                tanggal_pencairan=?, tanggal_penarikan=?, nominal=?, tanda_tangan=?, is_editable=0`;
       params = [body.tanggal_pencairan || null, body.tanggal_penarikan || null, body.nominal || null, body.tanda_tangan || null];
       if (upload_foto_selfie) {
         query += ", upload_foto_selfie=?";
@@ -1900,6 +2000,14 @@ app.post("/api/bantuan/laporan", authenticate, uploadBantuan.fields([
 app.delete("/api/bantuan/laporan/:id", authenticate, async (req, res) => {
   try {
     await getPool().query("DELETE FROM laporan_bantuan WHERE id = ?", [req.params.id]);
+    res.json({ success: true });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+app.put("/api/bantuan/laporan/:id/izin_edit", authenticate, async (req, res) => {
+  try {
+    await getPool().query("UPDATE laporan_bantuan SET is_editable = 1 WHERE id = ?", [req.params.id]);
     res.json({ success: true });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -2171,14 +2279,23 @@ app.get("/api/pengaturan_sekolah", asyncHandler(async (req, res) => {
     if (rows && rows.length > 0) {
       const settingsData = rows[0];
       try {
-        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM peserta_didik pd JOIN anggota_rombel ar ON pd.peserta_didik_id = ar.peserta_didik_id JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id WHERE rb.nama IS NOT NULL AND rb.nama != '' AND UPPER(rb.nama) != 'LULUS' AND UPPER(rb.nama) != 'PINDAH'");
+        const [studentRows] = await getPool().execute("SELECT COUNT(*) as count FROM peserta_didik WHERE status_aktif = 1");
         settingsData.actual_student_count = studentRows[0].count;
-        const [staffRows] = await getPool().execute("SELECT COUNT(*) as count FROM pegawai WHERE LOWER(jenis_ptk) NOT LIKE '%pengawas%'");
+        const [staffRows] = await getPool().execute("SELECT COUNT(*) as count FROM pegawai");
         settingsData.actual_staff_count = staffRows[0].count;
         const [ekskulRows] = await getPool().execute("SELECT COUNT(DISTINCT pegawai_id) as count FROM bidang_ekskul WHERE LOWER(kategori) LIKE '%pelatih%' OR LOWER(kategori) LIKE '%guru ekskul%' OR LOWER(kategori) LIKE '%pembina%'");
         settingsData.actual_extracurricular_count = ekskulRows[0].count;
         const [rombelRows] = await getPool().execute("SELECT COUNT(*) as count FROM rombongan_belajar");
         settingsData.actual_rombel_count = rombelRows[0].count;
+        const bentukMap = {
+          "4": "SD / sederajat",
+          "5": "SMP / sederajat",
+          "6": "SMA / sederajat",
+          "7": "Paket A",
+          "8": "Paket B",
+          "9": "Paket C"
+        };
+        settingsData.bentuk_pendidikan_str = bentukMap[settingsData.bentuk_pendidikan?.toString()] || settingsData.bentuk_pendidikan;
       } catch (e) {
         console.error("Failed to fetch actual student/staff count:", e);
       }
@@ -2463,9 +2580,14 @@ app.post("/api/meta/save-page", authenticate, asyncHandler(async (req, res) => {
 app.get("/api/rombongan_belajar/public", asyncHandler(async (req, res) => {
   const [rows] = await getPool().execute(`
         SELECT r.*, COALESCE(r.nama, r.name) as name, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip
-        FROM rombongan_belajar r
+        FROM (
+            SELECT *, ROW_NUMBER() OVER (PARTITION BY COALESCE(nama, name) ORDER BY last_sync DESC, create_date DESC) as rn
+            FROM rombongan_belajar
+            WHERE semester_id = (SELECT MAX(semester_id) FROM rombongan_belajar)
+        ) r
         LEFT JOIN pegawai s ON r.wali_kelas_id = s.pegawai_id
-        ORDER BY r.tingkat, r.name
+        WHERE r.rn = 1
+        ORDER BY CAST(COALESCE(r.tingkat_pendidikan_id, r.tingkat) AS UNSIGNED), COALESCE(r.nama, r.name)
     `);
   res.json(rows);
 }));
@@ -2480,7 +2602,7 @@ app.get("/api/rombongan_belajar", authenticate, asyncHandler(async (req, res) =>
         [req.user.staff_id]
       );
       if (rombelCheck[0].count > 0) {
-        whereClause = "WHERE r.wali_kelas_id = ?";
+        whereClause = " AND r.wali_kelas_id = ? ";
         params.push(req.user.staff_id);
       }
     }
@@ -2488,9 +2610,14 @@ app.get("/api/rombongan_belajar", authenticate, asyncHandler(async (req, res) =>
   const [rows] = await getPool().execute(`
         SELECT r.*, COALESCE(r.nama, r.name) as name, s.nama_lengkap as wali_kelas_name, s.nip as wali_kelas_nip,
                (SELECT COUNT(*) FROM anggota_rombel WHERE rombongan_belajar_id = r.rombongan_belajar_id) as student_count
-        FROM rombongan_belajar r
+        FROM (
+            SELECT *, ROW_NUMBER() OVER (PARTITION BY COALESCE(nama, name) ORDER BY last_sync DESC, create_date DESC) as rn
+            FROM rombongan_belajar
+            WHERE semester_id = (SELECT MAX(semester_id) FROM rombongan_belajar)
+        ) r
         LEFT JOIN pegawai s ON r.wali_kelas_id = s.pegawai_id
-        ${whereClause}
+        WHERE r.rn = 1 ${whereClause}
+        ORDER BY CAST(COALESCE(r.tingkat_pendidikan_id, r.tingkat) AS UNSIGNED), COALESCE(r.nama, r.name)
     `, params);
   res.json(rows);
 }));
@@ -2537,27 +2664,31 @@ app.get("/api/dashboard-stats", authenticate, asyncHandler(async (req, res) => {
   try {
     const stats = {};
     let whereClause = "";
+    let joinClause = "LEFT JOIN anggota_rombel ar ON pd.peserta_didik_id = ar.peserta_didik_id LEFT JOIN rombongan_belajar rb ON ar.rombongan_belajar_id = rb.rombongan_belajar_id";
     const params = [];
     if (req.user.type === "staff") {
       const perms = req.user.permissions || [];
       if (!perms.includes("all")) {
-        const [rombelRows] = await getPool().execute("SELECT name FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
+        const [rombelRows] = await getPool().execute("SELECT nama FROM rombongan_belajar WHERE wali_kelas_id = ?", [req.user.staff_id]);
         if (rombelRows.length > 0) {
-          const names = rombelRows.map((r) => r.name);
-          whereClause = `WHERE rombel IN (${names.map(() => "?").join(",")})`;
+          const names = rombelRows.map((r) => r.nama);
+          whereClause = `WHERE rb.nama IN (${names.map(() => "?").join(",")})`;
           params.push(...names);
+        } else {
+          whereClause = `WHERE rb.nama = 'INVALID_NO_ROMBEL'`;
         }
       }
     }
-    const [rombongan_belajar] = await getPool().execute(`SELECT rombel as name, COUNT(*) as value FROM peserta_didik ${whereClause} GROUP BY rombel`, params);
-    stats.student_by_rombel = rombongan_belajar.map((r) => ({ rombel_name: r.name || "N/A", total: Number(r.value) }));
-    const [gender] = await getPool().execute(`SELECT jenis_kelamin as name, COUNT(*) as value FROM peserta_didik ${whereClause} GROUP BY jenis_kelamin`, params);
-    stats.student_by_gender = gender.map((g) => ({ gender: g.name || "N/A", total: Number(g.value) }));
-    const [agama] = await getPool().execute(`SELECT agama as name, COUNT(*) as value FROM peserta_didik ${whereClause} GROUP BY agama`, params);
-    stats.student_by_religion = agama.map((r) => ({ agama: r.name || "Islam", total: Number(r.value) }));
+    const [rombongan_belajar] = await getPool().execute(`SELECT rb.nama as name, COUNT(pd.peserta_didik_id) as value FROM peserta_didik pd ${joinClause} ${whereClause} GROUP BY rb.nama`, params);
+    stats.student_by_rombel = rombongan_belajar.map((r) => ({ rombel_name: r.name || "Belum Masuk Rombel", total: Number(r.value) }));
+    const [gender] = await getPool().execute(`SELECT pd.jenis_kelamin as name, COUNT(pd.peserta_didik_id) as value FROM peserta_didik pd ${joinClause} ${whereClause} GROUP BY pd.jenis_kelamin`, params);
+    stats.student_by_gender = gender.map((g) => ({ gender: g.name === "L" ? "Laki-laki" : g.name === "P" ? "Perempuan" : "N/A", total: Number(g.value) }));
+    const [agama] = await getPool().execute(`SELECT pd.agama_id as name, COUNT(pd.peserta_didik_id) as value FROM peserta_didik pd ${joinClause} ${whereClause} GROUP BY pd.agama_id`, params);
+    const agamaMap = { 1: "Islam", 2: "Kristen", 3: "Katolik", 4: "Hindu", 5: "Buddha", 6: "Khonghucu", 98: "Kepercayaan", 99: "Lainnya" };
+    stats.student_by_religion = agama.map((r) => ({ agama: agamaMap[r.name] || "Islam", total: Number(r.value) }));
     const [staffStatus] = await getPool().execute("SELECT status_kepegawaian as name, COUNT(*) as value FROM pegawai WHERE jenis_ptk NOT LIKE '%Pengawas%' OR jenis_ptk IS NULL GROUP BY status_kepegawaian");
     stats.staff_by_status = staffStatus.map((s) => ({ status_kepegawaian: s.name || "Belum Diatur", total: Number(s.value) }));
-    const [jabatan] = await getPool().execute("SELECT jabatan_ptk as name, COUNT(*) as value FROM pegawai WHERE jenis_ptk NOT LIKE '%Pengawas%' OR jenis_ptk IS NULL GROUP BY jabatan_ptk");
+    const [jabatan] = await getPool().execute("SELECT jenis_ptk as name, COUNT(*) as value FROM pegawai WHERE jenis_ptk NOT LIKE '%Pengawas%' OR jenis_ptk IS NULL GROUP BY jenis_ptk");
     stats.staff_by_position = jabatan.map((j) => ({ jabatan: j.name || "N/A", total: Number(j.value) }));
     console.log("[DEBUG] Dashboard stats compiled:", Object.keys(stats));
     res.json(stats);
@@ -2768,6 +2899,11 @@ app.get("/api/referensi/:column", (req, res, next) => {
   const [rows] = await p.query(`SELECT DISTINCT ?? as value FROM referensi WHERE ?? IS NOT NULL AND ?? != '' ORDER BY ?? ASC`, [column, column, column, column]);
   res.json(rows.map((r) => r.value));
 }));
+app.get("/api/referensi-jabatan", authenticate, asyncHandler(async (req, res) => {
+  const p = getPool();
+  const [rows] = await p.query(`SELECT DISTINCT jabatan_ptk as value FROM jabatan_ptk WHERE jabatan_ptk IS NOT NULL AND jabatan_ptk != '' ORDER BY jabatan_ptk ASC`);
+  res.json(rows.map((r) => r.value));
+}));
 app.post("/api/pegawai/import", authenticate, asyncHandler(async (req, res) => {
   if (!req.user.permissions.includes("all") && !req.user.permissions.includes("staff:import")) {
     return res.status(403).json({ error: "Access denied" });
@@ -2847,12 +2983,86 @@ app.post("/api/pegawai/import", authenticate, asyncHandler(async (req, res) => {
 }));
 app.get("/api/pegawai", authenticate, asyncHandler(async (req, res) => {
   const [rows] = await getPool().execute(`
-        SELECT p.*, p.pegawai_id as id, COALESCE(f.drive, f.server) AS foto_profil
-        FROM pegawai p
-        LEFT JOIN file_storage f ON p.pegawai_id = f.data_id AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
-        ORDER BY p.nama_lengkap ASC
+        SELECT p.*, p.pegawai_id as id, COALESCE(f.drive, f.server) AS foto_profil,
+        j.jenis_ptk AS jenis_ptk_nama,
+        sk.nama AS status_kepegawaian_nama,
+        COALESCE(NULLIF(p.jabatan_ptk, ''), (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.pegawai_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1)) as jabatan_ptk,
+        (SELECT jenjang_pendidikan_id FROM rwy_pend_formal rpf WHERE rpf.ptk_id = p.pegawai_id ORDER BY tahun_lulus DESC LIMIT 1) as rwy_jenjang_id,
+        (SELECT id_jenis_sertifikasi FROM rwy_sertifikasi rs WHERE rs.ptk_id = p.pegawai_id LIMIT 1) as rwy_sertifikasi_id,
+        (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '1' ORDER BY rpf.tahun_lulus DESC LIMIT 1) as rwy_gelar_depan,
+        (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '2' ORDER BY rpf.tahun_lulus DESC LIMIT 1) as rwy_gelar_belakang,
+        COALESCE(
+            (SELECT pg2.nama 
+             FROM rwy_kepangkatan rk 
+             JOIN pangkat_golongan pg2 ON rk.pangkat_golongan_id = pg2.pangkat_golongan_id 
+             WHERE rk.ptk_id = p.ptk_id 
+             ORDER BY rk.tanggal_sk DESC LIMIT 1),
+            pg.nama
+        ) AS pangkat_golongan_nama
+        FROM ptk p
+        LEFT JOIN file_storage f ON p.ptk_id = f.data_id AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+        LEFT JOIN jenis_ptk j ON p.jenis_ptk_id = j.jenis_ptk_id COLLATE utf8mb4_unicode_ci
+        LEFT JOIN status_kepegawaian sk ON p.status_kepegawaian_id = sk.status_kepegawaian_id COLLATE utf8mb4_unicode_ci
+        LEFT JOIN pangkat_golongan pg ON p.pangkat_golongan_id = pg.pangkat_golongan_id COLLATE utf8mb4_unicode_ci
+        ORDER BY p.nama ASC
     `);
-  res.json(rows);
+  const mapJenjang = (id) => {
+    const map = {
+      "1": "Tidak sekolah",
+      "2": "PAUD",
+      "3": "TK / sederajat",
+      "4": "SD / sederajat",
+      "5": "SMP / sederajat",
+      "6": "SMA / sederajat",
+      "7": "Paket A",
+      "8": "Paket B",
+      "9": "Paket C",
+      "10": "Paket C",
+      "20": "D1",
+      "21": "D2",
+      "22": "D3",
+      "23": "D4",
+      "24": "D4",
+      "30": "S1",
+      "35": "S2",
+      "40": "S3"
+    };
+    return map[String(id)] || null;
+  };
+  const mapSertifikasi = (id) => {
+    const map = {
+      "1": "Sertifikasi Pendidik",
+      "2": "Keahlian Tingkat 1"
+    };
+    return map[String(id)] || null;
+  };
+  const processed = rows.map((r) => {
+    const r_copy = { ...r };
+    if (!r_copy.jenjang_pendidikan && r_copy.rwy_jenjang_id) {
+      r_copy.jenjang_pendidikan = mapJenjang(r_copy.rwy_jenjang_id);
+    }
+    if (!r_copy.sertifikasi && r_copy.rwy_sertifikasi_id) {
+      r_copy.sertifikasi = mapSertifikasi(r_copy.rwy_sertifikasi_id);
+    }
+    if (!r_copy.gelar_depan && r_copy.rwy_gelar_depan) {
+      r_copy.gelar_depan = r_copy.rwy_gelar_depan;
+    }
+    if (!r_copy.gelar_belakang && r_copy.rwy_gelar_belakang) {
+      r_copy.gelar_belakang = r_copy.rwy_gelar_belakang;
+    }
+    if (!r_copy.jenis_ptk && r_copy.jenis_ptk_nama) {
+      r_copy.jenis_ptk = r_copy.jenis_ptk_nama;
+    }
+    if (!r_copy.status_kepegawaian && r_copy.status_kepegawaian_nama) {
+      r_copy.status_kepegawaian = r_copy.status_kepegawaian_nama;
+    }
+    delete r_copy.rwy_jenjang_id;
+    delete r_copy.rwy_sertifikasi_id;
+    delete r_copy.rwy_gelar_depan;
+    delete r_copy.rwy_gelar_belakang;
+    return r_copy;
+  });
+  res.json(processed);
 }));
 app.get("/api/struktur-organisasi/public", asyncHandler(async (req, res) => {
   const [rows] = await getPool().execute(`
@@ -2860,8 +3070,8 @@ app.get("/api/struktur-organisasi/public", asyncHandler(async (req, res) => {
         TRIM(CONCAT(IFNULL(CONCAT(NULLIF(p.gelar_depan, ''), ' '), ''), p.nama_lengkap, IFNULL(CONCAT(', ', NULLIF(p.gelar_belakang, '')), ''))) AS nama_lengkap, 
         p.nip, COALESCE(f.drive, f.server) AS foto_profil
         FROM struktur_organisasi s
-        LEFT JOIN pegawai p ON s.pegawai_id COLLATE utf8mb4_unicode_ci = p.pegawai_id COLLATE utf8mb4_unicode_ci
-        LEFT JOIN file_storage f ON p.pegawai_id COLLATE utf8mb4_unicode_ci = f.data_id COLLATE utf8mb4_unicode_ci AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+        LEFT JOIN ptk p ON s.pegawai_id COLLATE utf8mb4_unicode_ci = p.ptk_id COLLATE utf8mb4_unicode_ci
+        LEFT JOIN file_storage f ON p.ptk_id COLLATE utf8mb4_unicode_ci = f.data_id COLLATE utf8mb4_unicode_ci AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
         ORDER BY s.urutan ASC
     `);
   res.json(rows);
@@ -2872,8 +3082,8 @@ app.get("/api/struktur-organisasi", authenticate, asyncHandler(async (req, res) 
         TRIM(CONCAT(IFNULL(CONCAT(NULLIF(p.gelar_depan, ''), ' '), ''), p.nama_lengkap, IFNULL(CONCAT(', ', NULLIF(p.gelar_belakang, '')), ''))) AS nama_lengkap, 
         p.nip, COALESCE(f.drive, f.server) AS foto_profil
         FROM struktur_organisasi s
-        LEFT JOIN pegawai p ON s.pegawai_id COLLATE utf8mb4_unicode_ci = p.pegawai_id COLLATE utf8mb4_unicode_ci
-        LEFT JOIN file_storage f ON p.pegawai_id COLLATE utf8mb4_unicode_ci = f.data_id COLLATE utf8mb4_unicode_ci AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
+        LEFT JOIN ptk p ON s.pegawai_id COLLATE utf8mb4_unicode_ci = p.ptk_id COLLATE utf8mb4_unicode_ci
+        LEFT JOIN file_storage f ON p.ptk_id COLLATE utf8mb4_unicode_ci = f.data_id COLLATE utf8mb4_unicode_ci AND f.tipe_data = 'pegawai' AND f.kategori = 'foto_profil'
         ORDER BY s.urutan ASC
     `);
   res.json(rows);
@@ -2911,8 +3121,8 @@ app.post("/api/pegawai", authenticate, asyncHandler(async (req, res) => {
   try {
     const pegawai_id = import_crypto.default.randomUUID();
     await getPool().execute(
-      "INSERT INTO pegawai (pegawai_id, nama_lengkap, nuptk, jenis_kelamin, nip, nik, tempat_lahir, tanggal_lahir, status_kepegawaian, jenis_ptk, gelar_depan, gelar_belakang, jenjang_pendidikan, jurusan_prodi, sertifikasi, tmt_kerja, jabatan_ptk, tugas_tambahan, mengajar, jam_tugas_tambahan, jjm, total_jjm, siswa, kompetensi) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-      [pegawai_id, nama_lengkap, nuptk || null, jenis_kelamin || null, nip || null, nik || null, tempat_lahir || null, tanggal_lahir || null, status_kepegawaian || "Honorer", jenis_ptk || null, gelar_depan || null, gelar_belakang || null, jenjang_pendidikan || null, jurusan_prodi || null, sertifikasi || null, tmt_kerja || null, jabatan_ptk || null, tugas_tambahan || null, mengajar || null, jam_tugas_tambahan || null, jjm || null, total_jjm || null, siswa || null, kompetensi || null].map(cleanPegawai)
+      "INSERT INTO ptk (ptk_id, nama, nuptk, jenis_kelamin, nip, nik, tempat_lahir, tanggal_lahir, status_kepegawaian, gelar_depan, gelar_belakang) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+      [pegawai_id, nama_lengkap, nuptk || null, jenis_kelamin || null, nip || null, nik || null, tempat_lahir || null, tanggal_lahir || null, status_kepegawaian || "Honorer", gelar_depan || null, gelar_belakang || null].map(cleanPegawai)
     );
     res.json({ success: true });
   } catch (err) {
@@ -2932,16 +3142,44 @@ app.put("/api/pegawai/:id", authenticate, asyncHandler(async (req, res) => {
     return v === void 0 || v === null ? null : v;
   };
   try {
-    await getPool().execute(
-      `UPDATE pegawai SET 
-                nama_lengkap = ?, nuptk = ?, jenis_kelamin = ?, nip = ?, nik = ?, tempat_lahir = ?, 
-                tanggal_lahir = ?, status_kepegawaian = ?, jenis_ptk = ?, gelar_depan = ?, 
-                gelar_belakang = ?, jenjang_pendidikan = ?, jurusan_prodi = ?, sertifikasi = ?, 
-                tmt_kerja = ?, jabatan_ptk = ?, tugas_tambahan = ?, mengajar = ?, 
-                jam_tugas_tambahan = ?, jjm = ?, total_jjm = ?, siswa = ?, kompetensi = ?
-            WHERE pegawai_id = ?`,
-      [nama_lengkap, nuptk || null, jenis_kelamin || null, nip || null, nik || null, tempat_lahir || null, tanggal_lahir || null, status_kepegawaian || "Honorer", jenis_ptk || null, gelar_depan || null, gelar_belakang || null, jenjang_pendidikan || null, jurusan_prodi || null, sertifikasi || null, tmt_kerja || null, jabatan_ptk || null, tugas_tambahan || null, mengajar || null, jam_tugas_tambahan || null, jjm || null, total_jjm || null, siswa || null, kompetensi || null, id].map(cleanPegawai)
-    );
+    const pool2 = getPool();
+    const connection = await pool2.getConnection();
+    await connection.beginTransaction();
+    try {
+      await connection.execute(
+        `UPDATE ptk SET 
+                    nama = ?, nuptk = ?, jenis_kelamin = ?, nip = ?, nik = ?, tempat_lahir = ?, 
+                    tanggal_lahir = ?, status_kepegawaian = ?, gelar_depan = ?, gelar_belakang = ?
+                WHERE ptk_id = ?`,
+        [nama_lengkap, nuptk || null, jenis_kelamin || null, nip || null, nik || null, tempat_lahir || null, tanggal_lahir || null, status_kepegawaian || "Honorer", gelar_depan || null, gelar_belakang || null, id].map(cleanPegawai)
+      );
+      if (jenjang_pendidikan) {
+        const revMap = { "Tidak sekolah": "1", "PAUD": "2", "TK / sederajat": "3", "SD / sederajat": "4", "SMP / sederajat": "5", "SMA / sederajat": "6", "Paket A": "7", "Paket B": "8", "Paket C": "9", "D1": "20", "D2": "21", "D3": "22", "D4": "23", "S1": "30", "S2": "35", "S3": "40" };
+        const jenjangId = revMap[jenjang_pendidikan];
+        if (jenjangId) {
+          await connection.execute(`
+                        UPDATE rwy_pend_formal SET jenjang_pendidikan_id = ? 
+                        WHERE ptk_id = ? ORDER BY tahun_lulus DESC LIMIT 1
+                    `, [jenjangId, id]);
+        }
+      }
+      if (sertifikasi) {
+        const revCert = { "Sertifikasi Pendidik": "1", "Keahlian Tingkat 1": "2" };
+        const certId = revCert[sertifikasi];
+        if (certId) {
+          await connection.execute(`
+                        UPDATE rwy_sertifikasi SET id_jenis_sertifikasi = ? 
+                        WHERE ptk_id = ? LIMIT 1
+                    `, [certId, id]);
+        }
+      }
+      await connection.commit();
+    } catch (e) {
+      await connection.rollback();
+      throw e;
+    } finally {
+      connection.release();
+    }
     res.json({ success: true });
   } catch (err) {
     if (err.code === "ER_DUP_ENTRY") return res.status(400).json({ error: "NIK atau NIP sudah terdaftar" });
@@ -2949,14 +3187,14 @@ app.put("/api/pegawai/:id", authenticate, asyncHandler(async (req, res) => {
   }
 }));
 app.delete("/api/pegawai/:id", authenticate, asyncHandler(async (req, res) => {
-  await getPool().execute("DELETE FROM pegawai WHERE pegawai_id = ?", [req.params.id]);
+  await getPool().execute("DELETE FROM ptk WHERE ptk_id = ?", [req.params.id]);
   res.json({ success: true });
 }));
 app.get("/api/pegawai/search", authenticate, asyncHandler(async (req, res) => {
   const q = req.query.q;
   const [rows] = await getPool().execute(
-    "SELECT pegawai_id as id, TRIM(CONCAT(IFNULL(CONCAT(NULLIF(gelar_depan, ''), ' '), ''), nama_lengkap, IFNULL(CONCAT(', ', NULLIF(gelar_belakang, '')), ''))) AS nama_lengkap, nip, nik, jabatan_ptk FROM pegawai WHERE nama_lengkap LIKE ? OR nip LIKE ? OR nik LIKE ? LIMIT 10",
-    [`%${q}%`, `%${q}%`, `%${q}%`]
+    "SELECT ptk_id as id, TRIM(CONCAT(IFNULL(CONCAT(NULLIF(gelar_depan, ''), ' '), ''), nama, IFNULL(CONCAT(', ', NULLIF(gelar_belakang, '')), ''))) as name, nip FROM ptk WHERE LOWER(nama) LIKE ? OR nip LIKE ? LIMIT 10",
+    [`%${q}%`, `%${q}%`]
   );
   res.json(rows);
 }));
@@ -4810,13 +5048,17 @@ app.get("/api/berkas-insentif/:id/cetak-pernyataan", authenticate, asyncHandler(
     return res.json({ berkas: berkasInsentif, pegawai: [], sekolah: null, kepsek: null });
   }
   const [sekolah] = await p.query("SELECT school_name, contact_address, contact_phone, npsn, kop_surat_url, logo_url, status_sekolah FROM pengaturan_sekolah WHERE id=1 LIMIT 1");
-  const [kepsek] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip FROM pegawai WHERE jabatan_ptk = 'Kepala Sekolah' LIMIT 1");
-  const [pengawas] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip FROM pegawai WHERE jabatan_ptk = 'Pengawas' LIMIT 1");
+  const [kepsek] = await p.query("SELECT p.nama_lengkap, COALESCE(p.gelar_depan, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '1' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_depan, COALESCE(p.gelar_belakang, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '2' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_belakang, p.nip FROM ptk p WHERE (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) = 'Kepala Sekolah' LIMIT 1");
+  const [pengawas] = await p.query("SELECT p.nama_lengkap, COALESCE(p.gelar_depan, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '1' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_depan, COALESCE(p.gelar_belakang, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '2' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_belakang, p.nip FROM ptk p WHERE (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) LIKE '%Pengawas%' LIMIT 1");
   const placeholders = penerimaIds.map(() => "?").join(",");
   const [pegawaiList] = await p.query(`
-        SELECT p.pegawai_id, p.nama_lengkap, p.gelar_depan, p.gelar_belakang, p.nip, p.jabatan_ptk,
+        SELECT p.pegawai_id, p.nama_lengkap, 
+               COALESCE(p.gelar_depan, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '1' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_depan, 
+               COALESCE(p.gelar_belakang, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '2' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_belakang, 
+               p.nip,
+               (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) as jabatan_ptk,
                (SELECT GROUP_CONCAT(b.mata_pelajaran SEPARATOR ', ') FROM bidang_ekskul b WHERE b.pegawai_id = p.pegawai_id) as bidang_mengajar
-        FROM pegawai p
+        FROM ptk p
         WHERE p.pegawai_id IN (${placeholders})
     `, [...penerimaIds]);
   res.json({
@@ -4834,8 +5076,8 @@ app.get("/api/berkas-insentif/:id/cetak-dokumen-kepsek", authenticate, asyncHand
   if (berkas.length === 0) return res.status(404).json({ error: "Data tidak ditemukan" });
   const berkasInsentif = berkas[0];
   const [sekolah] = await p.query("SELECT school_name, contact_address, contact_phone, npsn, kop_surat_url, logo_url, kelurahan, kecamatan, kota, status_sekolah FROM pengaturan_sekolah WHERE id=1 LIMIT 1");
-  const [kepsek] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip, jabatan_ptk FROM pegawai WHERE jabatan_ptk = 'Kepala Sekolah' LIMIT 1");
-  const [pengawas] = await p.query("SELECT nama_lengkap, gelar_depan, gelar_belakang, nip, jabatan_ptk FROM pegawai WHERE jabatan_ptk LIKE '%Pengawas%' LIMIT 1");
+  const [kepsek] = await p.query("SELECT p.nama_lengkap, COALESCE(p.gelar_depan, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '1' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_depan, COALESCE(p.gelar_belakang, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '2' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_belakang, p.nip, (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) as jabatan_ptk FROM ptk p WHERE (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) = 'Kepala Sekolah' LIMIT 1");
+  const [pengawas] = await p.query("SELECT p.nama_lengkap, COALESCE(p.gelar_depan, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '1' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_depan, COALESCE(p.gelar_belakang, (SELECT ga.kode FROM rwy_pend_formal rpf JOIN gelar_akademik ga ON rpf.gelar_akademik_id = ga.gelar_akademik_id WHERE rpf.ptk_id = p.pegawai_id AND ga.posisi_gelar = '2' ORDER BY rpf.tahun_lulus DESC LIMIT 1)) as gelar_belakang, p.nip, (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) as jabatan_ptk FROM ptk p WHERE (SELECT rjp.jabatan_ptk FROM ptk_terdaftar pt JOIN jabatan_ptk rjp ON pt.jabatan_ptk_id = rjp.jabatan_ptk_id WHERE pt.ptk_id = p.ptk_id AND pt.jabatan_ptk_id IS NOT NULL ORDER BY pt.tahun_ajaran_id DESC LIMIT 1) LIKE '%Pengawas%' LIMIT 1");
   res.json({
     berkas: berkasInsentif,
     sekolah: sekolah.length > 0 ? sekolah[0] : null,
