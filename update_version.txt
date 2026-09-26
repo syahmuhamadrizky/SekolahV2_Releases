@@ -1,5 +1,4 @@
-Versi 2.0.6 - Rincian Gender Rombel, Cetak Insentif & Sinkronisasi Presisi
-- Penambahan rincian jumlah siswa Laki-laki (L) dan Perempuan (P) pada setiap Rombongan Belajar di Dashboard.
-- Perbaikan cetak Berkas Insentif Guru dengan integrasi data Rombel & PTK tahun ajaran aktif.
-- Optimasi perhitungan jumlah siswa rombel menggunakan DISTINCT dan filter soft_delete Dapodik untuk mencegah akumulasi data ganda.
-- Fitur pencarian data sekolah se-Indonesia otomatis via integrasi API NPSN resmi Kemdikbud.
+Versi 2.0.7 - Simplifikasi Google Drive Apps Script & Auto Root Folder
+- Penyederhanaan menu Google Drive: Penghapusan form Service Account klasik dan kolom Root Folder ID manual.
+- Struktur folder Google Drive otomatis dibuat dan dikelola langsung oleh sistem via Google Apps Script (Metode E-Kinerja BKN).
+- Perbaikan modul instalasi pembaruan sistem OTA otomatis (one-click update).
