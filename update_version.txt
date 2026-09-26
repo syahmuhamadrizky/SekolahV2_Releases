@@ -1,5 +1,8 @@
-Versi 2.0.8 - Fitur Edit Laporan Bantuan Langsung dari Dashboard Admin
-- Penambahan tombol dan Modal Edit Laporan Bantuan di Dashboard Admin untuk membantu orang tua melaporkan / memperbarui bantuan secara langsung.
-- Dukungan update data pencairan, penarikan, nominal, serta pergantian foto selfie dan bukti transaksi dari admin.
-- Integrasi penghapusan dan izin edit mandiri untuk orang tua/siswa.
-- Peningkatan keamanan dan simplifikasi penuh Google Drive Apps Script.
+Versi 2.0.9 - Tampilan Lengkap Data Pegawai & Riwayat Dapodik
+- Penyesuaian kueri data Pegawai (/api/pegawai) dengan relasi penuh ke tabel-tabel riwayat Dapodik.
+- Menampilkan Gelar Depan & Gelar Belakang otomatis dari riwayat pendidikan formal (rwy_pend_formal & gelar_akademik).
+- Menampilkan Jenjang Pendidikan & Jurusan/Prodi langsung dari riwayat pendidikan formal.
+- Menampilkan Pangkat/Golongan otomatis dari rwy_kepangkatan dan riwayat_gaji_berkala.
+- Menampilkan Jabatan PTK & Tugas Tambahan (Wali Kelas / Kepala Lab / Perpustakaan).
+- Menampilkan status Sertifikasi Pendidik dari rwy_sertifikasi.
+- Filter otomatis PTK aktif (soft_delete = 0).
