@@ -1,4 +1,4 @@
-Versi 2.2.1 - Perbaikan Akses Data Berita & Stabilitas Penuh
-- Akses Berita Tanpa Terhalang Status: Memperbaiki kueri pemanggilan artikel blog sehingga seluruh berita yang sudah tersimpan di database langsung tampil lengkap tanpa terfilter status.
-- Resiliensi Query & Pengebalan Author: Query artikel kini dilengkapi penanganan aman terhadap mapping PTK/Pegawai agar artikel selalu termuat meskipun relasi user belum lengkap.
+Versi 2.2.2 - Perbaikan Pemanggilan Berita & Integrasi Author PTK
+- Pemanggilan Berita 100% Normal: Memperbaiki lookup PTK Map pada endpoint artikel blog sehingga seluruh berita di database langsung tampil tanpa kendala.
+- Resolusi Nama Penulis Otomatis: Nama penulis artikel otomatis diselaraskan dengan nama lengkap dan gelar PTK atau nama akun pembuat.
 - Format Teks & Word-Wrapping Rapi: Menjaga kata utuh tidak terpotong saat ganti baris dan kata sambung/kata ulang bertanda hubung tetap terikat satu kesatuan.
