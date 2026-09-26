@@ -1,4 +1,5 @@
-Versi 2.0.1 - Pemutakhiran SekolahV2 & Ketahanan Offline Lisensi
-- Migrasi Penuh Struktur Database 100% Dapodik & Penghapusan tabel lama siswa.
-- Ketahanan Lisensi Offline (Offline Resilience): Aplikasi kini tetap beroperasi lancar tanpa batas saat server pusat (hub.dapoy.net) offline atau terjadi gangguan koneksi internet, selama LICENSE_KEY sudah terdaftar di .env.
-- Pemutakhiran sistem Cek Update & Instalasi Update Online di aplikasi agar terhubung secara mulus ke repository rilis yang baru (SekolahV2_Releases).
+Versi 2.0.5 - Perbaikan Sinkronisasi Rombel & Anggota Rombel Dapodik
+- Perbaikan query rombongan_belajar agar seluruh rombel (1A, 1B, 2A, 2B, dst.) tampil secara utuh tanpa terpotong filter semester.
+- Optimasi penyimpanan sinkronisasi rombel & anggota rombel dari DapoySync.
+- Generate otomatis UUID rombongan_belajar_id pada penambahan rombel manual.
+- Penyesuaian skema kolom tingkat tanpa ketergantungan kolom lama.

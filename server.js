@@ -1,1 +1,2 @@
-import('./dist/server.cjs').catch(err => console.error(err));
+// Dapoy Schools - Production Entry Point
+import './dist/server.cjs';
