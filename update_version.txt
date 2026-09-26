@@ -1,5 +1,5 @@
-Versi 2.1.3 - Perbaikan Cetak Laporan Bantuan (Gambar/PDF Base64) & Manajemen Bidang & Ekskul
-- Perbaikan cetak Laporan Bantuan: Konversi otomatis foto bukti selfie & bukti transaksi ke Base64 Data URI server-side sehingga tampil 100% sempurna tanpa broken image saat cetak / simpan PDF.
-- Dukungan lampiran dokumen berformat PDF pada cetak laporan dengan kartu informasi dan tautan unduh/buka dokumen.
-- Manajemen Bidang & Ekskul: Pilihan Mata Pelajaran terhubung lengkap ke referensi mata pelajaran Dapodik & kurikulum standar saat memilih Kategori Guru Bidang.
-- Manajemen Bidang & Ekskul: Isian manual nama bidang / ekskul yang dilatih ("Melatih ...") dengan placeholder jelas saat memilih Kategori Pelatih.
+Versi 2.1.4 - Perbaikan Total Query Data Manajemen Pegawai & Kompatibilitas Collation Database
+- Memperbaiki kueri /api/pegawai agar 100% kompatibel dengan skema tabel PTK standar Dapodik (internus_sdntating1db.sql) maupun skema legacy pegawai.
+- Menghilangkan JOIN lintas charset/collation antara tabel PTK (latin1) dan file_storage (utf8mb4) sehingga data pegawai selalu berhasil dimuat tanpa error MySQL "Illegal mix of collations" atau "Unknown column".
+- Memastikan pemetaan Gelar Depan, Gelar Belakang, Jenjang Pendidikan, Jabatan PTK, dan Status Kepegawaian tampil akurat di tabel & form edit pegawai.
+- Memperbaiki perhitungan statistik total pegawai pada dashboard.
