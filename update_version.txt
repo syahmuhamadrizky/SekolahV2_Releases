@@ -1,4 +1,5 @@
-Versi 2.1.9 - Perapihan Format Berita & Pembungkusan Kata Utuh (Word Wrapping)
-- Format Teks Berita & Artikel Rapi: Mencegah pemotongan kata di tengah-tengah (mid-word split) saat perpindahan baris. Kata yang tidak muat di ujung baris otomatis pindah utuh ke baris berikutnya.
-- Kata Ulang & Kata Hubung Utuh: Kata sambung/kata ulang dengan tanda hubung '-' (seperti anak-anak, hangat-hangatnya, bahu-membahu) kini dibungkus sebagai satu kesatuan utuh (non-breaking) sehingga tidak patah atau terpisah ke baris baru sendirian.
-- Pembersihan Karakter Khusus: Membersihkan soft hyphen (&shy;) dan baris baru tidak sengaja di dalam paragraf artikel secara otomatis pada backend dan frontend.
+Versi 2.2.0 - Perbaikan Format Teks Berita, Whole-Word Wrapping & Stabilitas Menu Berita
+- Perapihan Teks Berita & Blog Publik: Teks berita berpindah satu kata utuh saat ganti baris (mencegah kata terpotong di tengah huruf seperti aktivit/as, pega/wai, mata/ng, dll).
+- Kata Sambung & Kata Ulang Utuh: Kata dengan tanda '-' (seperti anak-anak, hangat-hangatnya, bahu-membahu) dibungkus utuh dan tidak terputus secara janggal.
+- Pengebalan Token HTML: Memastikan seluruh struktur tag HTML, class styling, dan gambar pada artikel berita termuat sempurna tanpa error blank.
+- Stabilitas Halaman Berita: Ditambahkan defensive state fallback untuk mencegah halaman blank saat memuat daftar artikel.
