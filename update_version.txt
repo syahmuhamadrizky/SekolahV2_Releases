@@ -1,4 +1,4 @@
-Versi 2.1.5 - Perbaikan Sinkronisasi & Penyimpanan Nama Struktur Organisasi
-- Memperbaiki penyimpanan nama pegawai pada Struktur Organisasi & Tim Manajemen Sekolah sehingga nama yang dipilih/diedit langsung tersimpan dan tampil sempurna.
-- Menambahkan auto-resolver in-memory untuk menghubungkan ID pegawai/PTK lama dan baru secara aman tanpa error collation SQL.
-- Mengirimkan payload nama lengkap secara eksplisit dari form admin struktur organisasi ke server backend.
+Versi 2.1.6 - Form Edit Inline Struktur Organisasi & Gelar Depan/Belakang Otomatis Lengkap
+- Gelar Lengkap Otomatis: Menyambungkan auto-resolver gelar akademik (S1/S2/D2/dsb. dari riwayat pendidikan formal) sehingga nama pejabat struktur & tim manajemen sekolah tampil lengkap beserta gelar depan dan belakang (misal: Arsiati, M.Pd, Rusna Hutajulu, S.Pd, dll).
+- Form Edit Inline: Saat tombol edit pada salah satu posisi di-klik, form edit langsung terbuka tepat di baris/card posisi tersebut tanpa perlu scroll ke atas.
+- Peningkatan Autocomplete: Pencarian pegawai di form struktur menampilkan nama lengkap bergelar secara instan.
