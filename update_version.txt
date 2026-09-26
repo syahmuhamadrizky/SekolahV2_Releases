@@ -1,6 +1,5 @@
-Versi 2.1.2 - Migrasi Otomatis Tabel Laporan Bantuan (is_editable)
-- Penambahan auto-migration schema pada tabel laporan_bantuan (menjamin ketersediaan kolom is_editable, nominal, tanggal_pencairan, dll.).
-- Memperbaiki error Unknown column 'is_editable' in 'SET' saat Admin menyimpan / mengedit laporan bantuan siswa.
-- Perbaikan total runtime chunking React & OTA Update.
-- Integrasi menu Pencarian NPSN & Nama Sekolah Se-Indonesia di form Permohonan Pindah (Admin & Siswa).
-- Penambahan toggle modul Google Drive: Laporan Kegiatan Pelatih Ekskul, Berkas Permohonan Pindah, dan Dokumen Sekolah.
+Versi 2.1.3 - Perbaikan Cetak Laporan Bantuan (Gambar/PDF Base64) & Manajemen Bidang & Ekskul
+- Perbaikan cetak Laporan Bantuan: Konversi otomatis foto bukti selfie & bukti transaksi ke Base64 Data URI server-side sehingga tampil 100% sempurna tanpa broken image saat cetak / simpan PDF.
+- Dukungan lampiran dokumen berformat PDF pada cetak laporan dengan kartu informasi dan tautan unduh/buka dokumen.
+- Manajemen Bidang & Ekskul: Pilihan Mata Pelajaran terhubung lengkap ke referensi mata pelajaran Dapodik & kurikulum standar saat memilih Kategori Guru Bidang.
+- Manajemen Bidang & Ekskul: Isian manual nama bidang / ekskul yang dilatih ("Melatih ...") dengan placeholder jelas saat memilih Kategori Pelatih.
