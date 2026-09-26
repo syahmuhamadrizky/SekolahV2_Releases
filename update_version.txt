@@ -1,5 +1,5 @@
-Versi 2.0.5 - Perbaikan Sinkronisasi Rombel & Anggota Rombel Dapodik
-- Perbaikan query rombongan_belajar agar seluruh rombel (1A, 1B, 2A, 2B, dst.) tampil secara utuh tanpa terpotong filter semester.
-- Optimasi penyimpanan sinkronisasi rombel & anggota rombel dari DapoySync.
-- Generate otomatis UUID rombongan_belajar_id pada penambahan rombel manual.
-- Penyesuaian skema kolom tingkat tanpa ketergantungan kolom lama.
+Versi 2.0.6 - Rincian Gender Rombel, Cetak Insentif & Sinkronisasi Presisi
+- Penambahan rincian jumlah siswa Laki-laki (L) dan Perempuan (P) pada setiap Rombongan Belajar di Dashboard.
+- Perbaikan cetak Berkas Insentif Guru dengan integrasi data Rombel & PTK tahun ajaran aktif.
+- Optimasi perhitungan jumlah siswa rombel menggunakan DISTINCT dan filter soft_delete Dapodik untuk mencegah akumulasi data ganda.
+- Fitur pencarian data sekolah se-Indonesia otomatis via integrasi API NPSN resmi Kemdikbud.
