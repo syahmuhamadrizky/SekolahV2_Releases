@@ -1,4 +1,4 @@
-Versi 2.1.7 - Gelar Pegawai Input Bebas, Penghapusan Permanen & Pencarian Pegawai Bidang/Ekskul
-- Input Gelar Bebas: Gelar Depan dan Gelar Belakang di Manajemen Pegawai kini berupa kolom isian teks bebas (tanpa dropdown) sehingga fleksibel untuk diisi atau dikosongkan.
-- Perbaikan Hapus Gelar: Gelar yang dihapus/dikosongkan tidak akan muncul kembali secara otomatis karena backend mencatat status kosong secara permanen dan membersihkan riwayat gelar terkait.
-- Pencarian Pegawai di Bidang & Ekskul: Memperbaiki daftar dropdown dan pencarian nama pegawai / guru pada menu Bidang & Ekskul yang sebelumnya kosong menjadi terhubung langsung ke seluruh data PTK/Pegawai lengkap dengan NIK/NIP.
+Versi 2.1.8 - Format Huruf Gelar Asli & Pembuatan Akun Pengguna Langsung dari Pegawai
+- Format Gelar Sesuai Aslinya: Nama lengkap diformat HURUF KAPITAL (UPPERCASE), sedangkan gelar depan & gelar belakang tetap mempertahankan format asli (contoh: ABDUL ROHIM, A.Md, ANA KUSUMAWATI, S.Pd, Dr. ARSIATI, M.Pd).
+- Pembuatan Akun User Web Interaktif: Menu Manajemen Pengguna kini menyediakan pemilihan pegawai langsung dari database PTK dengan auto-fill Username (NIK/NIP), Password default, dan pemilihan role secara instan.
+- Perbaikan Error Menu Pengguna: Memperbaiki resolving data pegawai pada tabel pengguna_web dan mencegah error blank/data belum tersedia.
