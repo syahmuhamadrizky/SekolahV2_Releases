@@ -1,4 +1,4 @@
-Versi 2.1.8 - Format Huruf Gelar Asli & Pembuatan Akun Pengguna Langsung dari Pegawai
-- Format Gelar Sesuai Aslinya: Nama lengkap diformat HURUF KAPITAL (UPPERCASE), sedangkan gelar depan & gelar belakang tetap mempertahankan format asli (contoh: ABDUL ROHIM, A.Md, ANA KUSUMAWATI, S.Pd, Dr. ARSIATI, M.Pd).
-- Pembuatan Akun User Web Interaktif: Menu Manajemen Pengguna kini menyediakan pemilihan pegawai langsung dari database PTK dengan auto-fill Username (NIK/NIP), Password default, dan pemilihan role secara instan.
-- Perbaikan Error Menu Pengguna: Memperbaiki resolving data pegawai pada tabel pengguna_web dan mencegah error blank/data belum tersedia.
+Versi 2.1.9 - Perapihan Format Berita & Pembungkusan Kata Utuh (Word Wrapping)
+- Format Teks Berita & Artikel Rapi: Mencegah pemotongan kata di tengah-tengah (mid-word split) saat perpindahan baris. Kata yang tidak muat di ujung baris otomatis pindah utuh ke baris berikutnya.
+- Kata Ulang & Kata Hubung Utuh: Kata sambung/kata ulang dengan tanda hubung '-' (seperti anak-anak, hangat-hangatnya, bahu-membahu) kini dibungkus sebagai satu kesatuan utuh (non-breaking) sehingga tidak patah atau terpisah ke baris baru sendirian.
+- Pembersihan Karakter Khusus: Membersihkan soft hyphen (&shy;) dan baris baru tidak sengaja di dalam paragraf artikel secara otomatis pada backend dan frontend.
