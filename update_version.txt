@@ -1,5 +1,6 @@
-Versi 2.1.0 - Pencarian Sekolah NPSN Otomatis, Modul Drive Lengkap & Perbaikan Update
+Versi 2.1.1 - Hotfix Runtime React Chunking & Blank Putih
+- Hotfix perbaikan pembundelan chunk Vite untuk menghilangkan konflik circular dependency React (Cannot read properties of undefined reading createContext).
 - Integrasi menu Pencarian NPSN & Nama Sekolah Se-Indonesia di form Permohonan Pindah (Admin & Siswa).
 - Penambahan toggle modul Google Drive: Laporan Kegiatan Pelatih Ekskul, Berkas Permohonan Pindah, dan Dokumen Sekolah.
-- Perbaikan total proses OTA Update (unduh paket langsung via CDN raw tanpa batas blob 1MB) & pemisahan chunk bundle untuk mencegah blank putih.
+- Perbaikan total proses OTA Update (unduh paket langsung via CDN raw tanpa batas blob 1MB).
 - Penyesuaian kueri data Pegawai (/api/pegawai) dengan relasi penuh riwayat Dapodik (Gelar, Jenjang, Golongan, Tugas Tambahan, Sertifikasi).
