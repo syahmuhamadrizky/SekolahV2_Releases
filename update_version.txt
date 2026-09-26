@@ -1,6 +1,6 @@
-Versi 2.1.1 - Hotfix Runtime React Chunking & Blank Putih
-- Hotfix perbaikan pembundelan chunk Vite untuk menghilangkan konflik circular dependency React (Cannot read properties of undefined reading createContext).
+Versi 2.1.2 - Migrasi Otomatis Tabel Laporan Bantuan (is_editable)
+- Penambahan auto-migration schema pada tabel laporan_bantuan (menjamin ketersediaan kolom is_editable, nominal, tanggal_pencairan, dll.).
+- Memperbaiki error Unknown column 'is_editable' in 'SET' saat Admin menyimpan / mengedit laporan bantuan siswa.
+- Perbaikan total runtime chunking React & OTA Update.
 - Integrasi menu Pencarian NPSN & Nama Sekolah Se-Indonesia di form Permohonan Pindah (Admin & Siswa).
 - Penambahan toggle modul Google Drive: Laporan Kegiatan Pelatih Ekskul, Berkas Permohonan Pindah, dan Dokumen Sekolah.
-- Perbaikan total proses OTA Update (unduh paket langsung via CDN raw tanpa batas blob 1MB).
-- Penyesuaian kueri data Pegawai (/api/pegawai) dengan relasi penuh riwayat Dapodik (Gelar, Jenjang, Golongan, Tugas Tambahan, Sertifikasi).
