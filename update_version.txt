@@ -1,8 +1,5 @@
-Versi 2.0.9 - Tampilan Lengkap Data Pegawai & Riwayat Dapodik
-- Penyesuaian kueri data Pegawai (/api/pegawai) dengan relasi penuh ke tabel-tabel riwayat Dapodik.
-- Menampilkan Gelar Depan & Gelar Belakang otomatis dari riwayat pendidikan formal (rwy_pend_formal & gelar_akademik).
-- Menampilkan Jenjang Pendidikan & Jurusan/Prodi langsung dari riwayat pendidikan formal.
-- Menampilkan Pangkat/Golongan otomatis dari rwy_kepangkatan dan riwayat_gaji_berkala.
-- Menampilkan Jabatan PTK & Tugas Tambahan (Wali Kelas / Kepala Lab / Perpustakaan).
-- Menampilkan status Sertifikasi Pendidik dari rwy_sertifikasi.
-- Filter otomatis PTK aktif (soft_delete = 0).
+Versi 2.1.0 - Pencarian Sekolah NPSN Otomatis, Modul Drive Lengkap & Perbaikan Update
+- Integrasi menu Pencarian NPSN & Nama Sekolah Se-Indonesia di form Permohonan Pindah (Admin & Siswa).
+- Penambahan toggle modul Google Drive: Laporan Kegiatan Pelatih Ekskul, Berkas Permohonan Pindah, dan Dokumen Sekolah.
+- Perbaikan total proses OTA Update (unduh paket langsung via CDN raw tanpa batas blob 1MB) & pemisahan chunk bundle untuk mencegah blank putih.
+- Penyesuaian kueri data Pegawai (/api/pegawai) dengan relasi penuh riwayat Dapodik (Gelar, Jenjang, Golongan, Tugas Tambahan, Sertifikasi).
