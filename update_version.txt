@@ -1,5 +1,4 @@
-Versi 2.2.0 - Perbaikan Format Teks Berita, Whole-Word Wrapping & Stabilitas Menu Berita
-- Perapihan Teks Berita & Blog Publik: Teks berita berpindah satu kata utuh saat ganti baris (mencegah kata terpotong di tengah huruf seperti aktivit/as, pega/wai, mata/ng, dll).
-- Kata Sambung & Kata Ulang Utuh: Kata dengan tanda '-' (seperti anak-anak, hangat-hangatnya, bahu-membahu) dibungkus utuh dan tidak terputus secara janggal.
-- Pengebalan Token HTML: Memastikan seluruh struktur tag HTML, class styling, dan gambar pada artikel berita termuat sempurna tanpa error blank.
-- Stabilitas Halaman Berita: Ditambahkan defensive state fallback untuk mencegah halaman blank saat memuat daftar artikel.
+Versi 2.2.1 - Perbaikan Akses Data Berita & Stabilitas Penuh
+- Akses Berita Tanpa Terhalang Status: Memperbaiki kueri pemanggilan artikel blog sehingga seluruh berita yang sudah tersimpan di database langsung tampil lengkap tanpa terfilter status.
+- Resiliensi Query & Pengebalan Author: Query artikel kini dilengkapi penanganan aman terhadap mapping PTK/Pegawai agar artikel selalu termuat meskipun relasi user belum lengkap.
+- Format Teks & Word-Wrapping Rapi: Menjaga kata utuh tidak terpotong saat ganti baris dan kata sambung/kata ulang bertanda hubung tetap terikat satu kesatuan.
