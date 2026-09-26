@@ -1,4 +1,4 @@
-Versi 2.1.6 - Form Edit Inline Struktur Organisasi & Gelar Depan/Belakang Otomatis Lengkap
-- Gelar Lengkap Otomatis: Menyambungkan auto-resolver gelar akademik (S1/S2/D2/dsb. dari riwayat pendidikan formal) sehingga nama pejabat struktur & tim manajemen sekolah tampil lengkap beserta gelar depan dan belakang (misal: Arsiati, M.Pd, Rusna Hutajulu, S.Pd, dll).
-- Form Edit Inline: Saat tombol edit pada salah satu posisi di-klik, form edit langsung terbuka tepat di baris/card posisi tersebut tanpa perlu scroll ke atas.
-- Peningkatan Autocomplete: Pencarian pegawai di form struktur menampilkan nama lengkap bergelar secara instan.
+Versi 2.1.7 - Gelar Pegawai Input Bebas, Penghapusan Permanen & Pencarian Pegawai Bidang/Ekskul
+- Input Gelar Bebas: Gelar Depan dan Gelar Belakang di Manajemen Pegawai kini berupa kolom isian teks bebas (tanpa dropdown) sehingga fleksibel untuk diisi atau dikosongkan.
+- Perbaikan Hapus Gelar: Gelar yang dihapus/dikosongkan tidak akan muncul kembali secara otomatis karena backend mencatat status kosong secara permanen dan membersihkan riwayat gelar terkait.
+- Pencarian Pegawai di Bidang & Ekskul: Memperbaiki daftar dropdown dan pencarian nama pegawai / guru pada menu Bidang & Ekskul yang sebelumnya kosong menjadi terhubung langsung ke seluruh data PTK/Pegawai lengkap dengan NIK/NIP.
