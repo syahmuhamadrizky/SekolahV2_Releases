@@ -1,4 +1,5 @@
-Versi 2.0.7 - Simplifikasi Google Drive Apps Script & Auto Root Folder
-- Penyederhanaan menu Google Drive: Penghapusan form Service Account klasik dan kolom Root Folder ID manual.
-- Struktur folder Google Drive otomatis dibuat dan dikelola langsung oleh sistem via Google Apps Script (Metode E-Kinerja BKN).
-- Perbaikan modul instalasi pembaruan sistem OTA otomatis (one-click update).
+Versi 2.0.8 - Fitur Edit Laporan Bantuan Langsung dari Dashboard Admin
+- Penambahan tombol dan Modal Edit Laporan Bantuan di Dashboard Admin untuk membantu orang tua melaporkan / memperbarui bantuan secara langsung.
+- Dukungan update data pencairan, penarikan, nominal, serta pergantian foto selfie dan bukti transaksi dari admin.
+- Integrasi penghapusan dan izin edit mandiri untuk orang tua/siswa.
+- Peningkatan keamanan dan simplifikasi penuh Google Drive Apps Script.
