@@ -1,4 +1,5 @@
-Versi 2.2.3 - Pembaruan UI Gamifikasi Program Literasi & Standarisasi Kurikulum
+Versi 2.2.4 - Pembaruan Standarisasi 5 Role Statis & UI Gamifikasi Program Literasi
+- Standarisasi 5 Role Statis: Role sistem dibuat permanen dan statis (Admin (Superadmin), Admin Web, Kepala Sekolah, Guru, Siswa) dengan hak akses menu yang dapat disesuaikan secara dinamis.
 - Desain Gamifikasi Program Literasi Siswa: Leveling RPG dinamis (Pembaca Pemula hingga Grand Master), progress bar XP animasi, dan podium juara 3D Top 3 Leaderboard.
 - E-Library Modern & Immersive Reading Mode: Katalog materi dengan cover interaktif, estimasi waktu baca, countdown timer otomatis pada pembaca PDF, dan formulir jurnal refleksi terstruktur.
 - Panel Manajemen Literasi Guru: Quick KPI analytics, pembuat pertanyaan interaktif terhubung referensi Dapodik, dan review drawer dengan grading percentage (100%, 75%, 50%, 25%).
