@@ -1,1 +1,3 @@
-2.3.0
+Versi 2.3.0
+- Perbaikan cetak PDF rekapitulasi data siswa dengan live fullscreen preview
+- Peningkatan pemrosesan pembaruan sistem OTA
