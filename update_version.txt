@@ -1,3 +1,3 @@
-Versi 2.3.0
-- Perbaikan cetak PDF rekapitulasi data siswa dengan live fullscreen preview
-- Peningkatan pemrosesan pembaruan sistem OTA
+Versi 2.3.1
+- Perbaikan lebar Kop Surat agar membentang penuh (full width) sejajar tabel
+- Optimalisasi pratinjau dan cetak laporan PDF statistik siswa
