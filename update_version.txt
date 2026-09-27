@@ -1,3 +1,3 @@
-Versi 2.3.1
-- Perbaikan lebar Kop Surat agar membentang penuh (full width) sejajar tabel
-- Optimalisasi pratinjau dan cetak laporan PDF statistik siswa
+Versi 2.3.2
+- Penambahan gelar resmi Kepala Sekolah pada lembar pengesahan tanda tangan laporan PDF
+- Optimalisasi integrasi gelar PTK / Dapodik pada dokumen statistik
