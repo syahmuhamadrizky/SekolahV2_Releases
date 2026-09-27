@@ -1,7 +1,6 @@
-Versi 2.2.5 - Standarisasi 4 Role Statis Pegawai, Autentikasi Mandiri Siswa Dapodik & UI Literasi Interaktif
-- Standarisasi 4 Role Statis Pegawai: Sistem distandarisasi secara permanen dengan 4 role terstruktur (Admin (Superadmin), Admin Web, Kepala Sekolah, Guru) dengan nama statis terkunci dan hak akses menu yang fleksibel.
-- Autentikasi Mandiri Siswa (Dapodik Murni): Siswa login langsung menggunakan kredensial Dapodik (NISN/NIK + Tanggal Lahir) tanpa perlu pembuatan akun manual di pengguna web.
-- Desain Gamifikasi Program Literasi Siswa: Leveling RPG dinamis (Pembaca Pemula hingga Grand Master), progress bar XP animasi, dan podium juara 3D Top 3 Leaderboard.
-- E-Library Modern & Immersive Reading Mode: Katalog materi dengan cover interaktif, estimasi waktu baca, countdown timer otomatis pada pembaca PDF, dan formulir jurnal refleksi terstruktur.
-- Panel Manajemen Literasi Guru: Quick KPI analytics, pembuat pertanyaan interaktif terhubung referensi Dapodik, dan review drawer dengan grading percentage (100%, 75%, 50%, 25%).
-- Standarisasi Bentuk Pendidikan & Kurikulum: Penyesuaian opsi kurikulum resmi sesuai jenjang pendidikan SD, SMP, SMA, dan Kesetaraan Paket A/B/C.
+Versi 2.2.6 - Modul Rekapitulasi & Statistik Peserta Didik (Tingkat Kelas, Gender L/P & Agama)
+- Rekapitulasi Jumlah Siswa Per Tingkat Kelas: Menampilkan statistik jumlah siswa untuk tiap tingkat kelas (Tingkat 1 s.d. 12) lengkap dengan breakdown Laki-laki (L), Perempuan (P), rasio persentase, dan daftar rombongan belajar.
+- Rekapitulasi Jumlah Seluruh Siswa & Gender: Menampilkan total seluruh siswa aktif, total terdaftar, rasio jumlah & persentase siswa laki-laki dan perempuan dengan visual progress bar.
+- Rekapitulasi Agama Peserta Didik: Menampilkan rincian jumlah siswa untuk tiap agama (Islam, Kristen, Katolik, Hindu, Buddha, Khonghucu, dll.) dengan perbandingan gender dan persentase total.
+- Matriks Silang Statistik Lengkap: Tabel matriks kompilasi Tingkat Kelas × Agama × Gender siap pakai untuk pelaporan kedinasan, Dapodik, dan evaluasi manajerial.
+- Filter Cepat Interaktif: Klik pada salah satu rombel di panel rekapitulasi untuk langsung memfilter tabel data siswa secara instan.
