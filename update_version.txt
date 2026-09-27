@@ -1,4 +1,5 @@
-Versi 2.2.2 - Perbaikan Pemanggilan Berita & Integrasi Author PTK
-- Pemanggilan Berita 100% Normal: Memperbaiki lookup PTK Map pada endpoint artikel blog sehingga seluruh berita di database langsung tampil tanpa kendala.
-- Resolusi Nama Penulis Otomatis: Nama penulis artikel otomatis diselaraskan dengan nama lengkap dan gelar PTK atau nama akun pembuat.
-- Format Teks & Word-Wrapping Rapi: Menjaga kata utuh tidak terpotong saat ganti baris dan kata sambung/kata ulang bertanda hubung tetap terikat satu kesatuan.
+Versi 2.2.3 - Pembaruan UI Gamifikasi Program Literasi & Standarisasi Kurikulum
+- Desain Gamifikasi Program Literasi Siswa: Leveling RPG dinamis (Pembaca Pemula hingga Grand Master), progress bar XP animasi, dan podium juara 3D Top 3 Leaderboard.
+- E-Library Modern & Immersive Reading Mode: Katalog materi dengan cover interaktif, estimasi waktu baca, countdown timer otomatis pada pembaca PDF, dan formulir jurnal refleksi terstruktur.
+- Panel Manajemen Literasi Guru: Quick KPI analytics, pembuat pertanyaan interaktif terhubung referensi Dapodik, dan review drawer dengan grading percentage (100%, 75%, 50%, 25%).
+- Standarisasi Bentuk Pendidikan & Kurikulum: Penyesuaian opsi kurikulum resmi sesuai jenjang pendidikan SD, SMP, SMA, dan Kesetaraan Paket A/B/C.
