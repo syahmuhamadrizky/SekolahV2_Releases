@@ -1,6 +1,10 @@
-Versi 2.2.7 - Perapihan Tampilan Visual Rekapitulasi Siswa (Tingkat Kelas, Gender & Agama)
-- Rekapitulasi Langsung Per Tingkat Kelas: Menampilkan kartu visual untuk setiap tingkat kelas (Kelas 1 s.d. 6 / 7 s.d. 9 / 10 s.d. 12) dengan jumlah siswa per tingkat, breakdown L/P, dan rincian rombel.
-- Rekapitulasi Total Seluruh Siswa & Rasio Gender: Jumlah siswa aktif, persentase laki-laki dan perempuan dengan progress bar elegan.
-- Rekapitulasi Agama Peserta Didik: Rincian jumlah penganut agama dengan pembagian jenis kelamin dan persentase.
-- Matriks Silang Kompilasi Resmi: Tabel lengkap Tingkat Kelas × Agama × Gender untuk kemudahan pelaporan.
-- Filter Cepat Interaktif: Klik rombel pada kartu tingkat untuk memfilter daftar siswa secara instan.
+Versi 2.2.9 - Fitur Cetak Laporan PDF Rekapitulasi & Statistik Peserta Didik
+- Fitur Cetak Laporan PDF Resmi: Tombol 'Cetak Laporan PDF' pada panel statistik untuk mencetak atau mengunduh laporan rekapitulasi siswa ke format PDF standar kedinasan.
+- Format Dokumen Resmi Lengkap:
+  1. Kop Surat Satuan Pendidikan (Logo, Pemerintah Kota, Dinas Pendidikan, NPSN, Alamat).
+  2. Ringkasan Keadaan Siswa (Total Siswa Aktif, Rasio Laki-laki & Perempuan, Jumlah Tingkat & Rombel).
+  3. Tabel Rekapitulasi Per Tingkat Kelas & Rombel.
+  4. Tabel Rekapitulasi Siswa Berdasarkan Agama & Kepercayaan.
+  5. Matriks Silang Kompilasi Resmi (Tingkat × Agama).
+  6. Lembar Pengesahan & Tanda Tangan Kepala Sekolah beserta NIP.
+- Modal Cetak Interaktif: Pengisian nomor surat/dokumen opsional sebelum proses cetak/simpan PDF.

@@ -1,6 +1,6 @@
 {
   "name": "dapoy-schools",
-  "version": "2.2.7",
+  "version": "2.2.9",
   "private": true,
   "description": "Dapoy Schools - Production Standalone Release",
   "main": "server.js",
