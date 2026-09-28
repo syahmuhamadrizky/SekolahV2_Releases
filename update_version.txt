@@ -1,7 +1,6 @@
-Versi 2.6.0
-- Fitur Arsip Digital Dokumen & Integrasi Google Drive:
-  1. Menu Unggah Berkas Hasil Tanda Tangan: Sedia tombol dan modal upload dokumen scan/PDF hasil tanda tangan resmi untuk Surat Panggilan, Surat Pernyataan Siswa/Ortu, dan dokumen kedinasan sekolah lainnya.
-  2. Integrasi Google Drive Otomatis: Berkas yang diunggah secara otomatis disimpan di server dan di-sinkronkan ke Google Drive sekolah sebagai arsip digital abadi.
-  3. Pembatasan Hak Akses Siswa: Login siswa dikonfigurasi read-only (hanya dapat melihat dan mengunduh berkas arsip resmi yang diunggah sekolah, tanpa hak mengunggah).
-  4. Format Cetak 2 Halaman (Multi-Page): Pemisahan halaman Surat Panggilan (Halaman 1: Surat kedinasan pokok & ringkasan, Halaman 2: Lembar lampiran resmi butir kasus & tabel akumulasi kehadiran).
-  5. Master Kalender Libur Nasional 2026-2027 & Hari Tidak Efektif: Dukungan sinkronisasi otomatis kalender libur nasional dan konfigurasi hari libur sekolah untuk kalkulasi hari belajar efektif.
+Versi 2.6.1
+- Perbaikan Penanganan Tanggal & Kalender Libur:
+  1. Fix Timezone Shift: Eliminasi pergeseran tanggal (UTC vs Waktu Lokal) pada seluruh formulir edit Surat Panggilan, Surat Pernyataan, dan Pelanggaran Siswa.
+  2. Database Connection DateStrings: Nilai tanggal dari MySQL dikirim sebagai format tanggal murni (YYYY-MM-DD) sehingga konsisten dan presisi 100%.
+  3. Integrasi Kalender Hari Tidak Efektif: Perhitungan hari sekolah efektif dan absensi otomatis mengabaikan hari libur sekolah dan hari Minggu.
+  4. Manajemen Hari Libur Sekolah: Konfigurasi agenda libur sekolah dan sinkronisasi libur nasional 2026-2027.
