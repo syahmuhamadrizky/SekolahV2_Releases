@@ -1,4 +1,4 @@
-Versi 2.7.1
-- Form cPanel lebih simpel & cerdas (cukup masukkan domain/link web sekolah, port :2083 otomatis).
-- Quick Action Toolbar: Tombol 'Isi Otomatis dari Web Ini', shortcut buka cPanel, dan buka Webmail.
-- Pembuatan akun email pegawai 1-klik dengan panduan WhatsApp instan.
+Versi 2.7.2
+- Perbaikan bundling & syntax parser frontend: menghapus inline handler berlebih dan melengkapi impor ikon ShieldAlert.
+- Form cPanel otomatis tanpa perlu mengisi port :2083.
+- Shortcut cPanel & Webmail 1-klik terintegrasi.
