@@ -1,3 +1,5 @@
-Versi 2.7.6
-- Perbaikan cPanel Session SSO: pemanggilan UAPI Session create_webmail_session_for_mail_user dengan parameter login & domain.
-- Auto-Login 1-Klik langsung menuju Inbox Roundcube Webmail tanpa meminta password.
+Versi 2.7.7
+- Menu khusus Manajemen Email Pegawai (cPanel Webmail Integration).
+- Fitur Reset Password Akun Email Guru/Pegawai cPanel secara instan.
+- Pemisahan formulir penambahan email manual khusus di Menu Email Pegawai.
+- Panduan integrasi HP (Android & iOS) dan fitur Salin Kredensial WhatsApp.
