@@ -1,5 +1,1 @@
-Versi 2.6.8
-- Integrasi Email Pegawai & Webmail cPanel UAPI: Setiap sekolah dapat menghubungkan akun hosting/cPanel dengan memasukkan Host, Port, Username, API Token, dan Domain sendiri secara dinamis dari menu Pengaturan.
-- Pembuatan & Pengelolaan Akun Email Guru Instan: 1-Klik buat email resmi (@sekolah.sch.id), generate password aman, reset password, dan sinkronisasi penghapusan akun email di cPanel.
-- Panduan Lengkap Mobile / HP & 1-Klik Salin Format WhatsApp: Dilengkapi panduan konfigurasi IMAP (Port 993 SSL) dan SMTP (Port 465 SSL) untuk aplikasi Gmail Android dan Apple Mail iOS, serta tombol 1-klik salin format pesan WhatsApp siap kirim ke guru.
-- Portal Mandiri Guru: Menampilkan kartu Email Resmi Sekolah Terverifikasi dengan tautan langsung ke Webmail dan panduan pengaturan di HP.
+Versi 2.6.9
