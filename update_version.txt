@@ -1,5 +1,5 @@
-Versi 2.5.4
-- Penyesuaian Format Cetak Surat Panggilan:
-  1. Penulisan nama kota pada tanggal surat dibuat Proper Case (contoh: Kota Tangerang, 27 September 2026).
-  2. Penghapusan kolom Poin pada tabel rincian butir pelanggaran siswa agar surat terlihat lebih formal dan ringkas.
-  3. Penulisan nama penandatangan (Kepala Sekolah & Guru BK/Wali Kelas) dibuat HURUF KAPITAL (UPPERCASE) lengkap beserta gelar depan dan gelar belakang sesuai data master Pegawai (PTK).
+Versi 2.5.5
+- Penyempurnaan Cetak Surat Panggilan:
+  1. Integrasi Pencarian Gelar Akademik Lengkap: Menampilkan gelar depan & belakang Kepala Sekolah dan Guru Kelas/BK secara otomatis dari master PTK, Riwayat Pendidikan Formal Dapodik, dan Data Pegawai.
+  2. Perapian Kolom Tanda Tangan: Posisi jabatan, spasi tanda tangan, nama penandatangan dan NIP dibuat sejajar 100% rata horizontal antara Kepala Sekolah dan Guru.
+  3. Standarisasi Teks: Nama penandatangan otomatis UPPERCASE dan Kota Sekolah dibuat Proper Case.
