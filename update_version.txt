@@ -1,5 +1,5 @@
-Versi 2.7.8
-- Perbaikan Sinkronisasi Daftar Akun Email Pegawai & Pembuatan Akun Baru cPanel.
-- Auto-ensure skema database ptk_email_sekolah dan integrasi tangguh fallback lokal ke cPanel.
-- Perbaikan URL SSO Webmail cPanel Roundcube agar login 1-klik langsung masuk Inbox tanpa form login.
-- Penyesuaian pencocokan data profil staf dan email dinas sekolah.
+Versi 2.7.9
+- Optimalisasi Single Sign-On (SSO) Webmail cPanel Roundcube 1-Klik Langsung Masuk Inbox.
+- Perbaikan sinkronisasi dan auto-ensure tabel ptk_email_sekolah di database.
+- Optimasi pemecahan bundle JavaScript (Vendor Chunk Splitting) untuk mempercepat performa dan mencegah syntax error browser.
+- Penyesuaian Referer policy untuk jabat tangan otentikasi cPanel.
