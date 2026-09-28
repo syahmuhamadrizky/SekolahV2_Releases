@@ -1,3 +1,5 @@
-Versi 2.5.3
-- Perbaikan Blank Putih & Syntax Error Vendor Bundle: Menghapus bundling manualChunks yang memicu error parsing JavaScript (Unexpected end of input pada vendor bundle) serta menerapkan safe-date rendering pada tabel catatan pelanggaran dan surat panggilan.
-- Optimalisasi Tampilan Tabel: Memperbaiki format tanggal kejadian dan jadwal pertemuan agar selalu tampil rapi dan bebas crash.
+Versi 2.5.4
+- Penyesuaian Format Cetak Surat Panggilan:
+  1. Penulisan nama kota pada tanggal surat dibuat Proper Case (contoh: Kota Tangerang, 27 September 2026).
+  2. Penghapusan kolom Poin pada tabel rincian butir pelanggaran siswa agar surat terlihat lebih formal dan ringkas.
+  3. Penulisan nama penandatangan (Kepala Sekolah & Guru BK/Wali Kelas) dibuat HURUF KAPITAL (UPPERCASE) lengkap beserta gelar depan dan gelar belakang sesuai data master Pegawai (PTK).
