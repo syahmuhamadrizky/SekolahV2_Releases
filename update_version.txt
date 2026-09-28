@@ -1,6 +1,4 @@
-Versi 2.6.1
-- Perbaikan Penanganan Tanggal & Kalender Libur:
-  1. Fix Timezone Shift: Eliminasi pergeseran tanggal (UTC vs Waktu Lokal) pada seluruh formulir edit Surat Panggilan, Surat Pernyataan, dan Pelanggaran Siswa.
-  2. Database Connection DateStrings: Nilai tanggal dari MySQL dikirim sebagai format tanggal murni (YYYY-MM-DD) sehingga konsisten dan presisi 100%.
-  3. Integrasi Kalender Hari Tidak Efektif: Perhitungan hari sekolah efektif dan absensi otomatis mengabaikan hari libur sekolah dan hari Minggu.
-  4. Manajemen Hari Libur Sekolah: Konfigurasi agenda libur sekolah dan sinkronisasi libur nasional 2026-2027.
+Versi 2.6.2
+- Pemisahan Format Cetak Surat Pernyataan 2 Halaman (Multi-Page):
+  1. Halaman 1: Naskah Surat Pernyataan Resmi Kedinasan dengan redaksi formal dan kalimat profesional, disertai blok tanda tangan LENGKAP (Orang Tua bermaterai Rp 10.000, Siswa, Saksi I Guru BK, Saksi II Wali Kelas, dan Mengetahui Kepala Sekolah).
+  2. Halaman 2: Lembar Lampiran Resmi Buku Catatan Rekam Jejak Pelanggaran Tata Tertib & Akumulasi Ketidakhadiran (Alfa/Bolos), disertai blok tanda tangan LENGKAP TANPA MATERAI.
