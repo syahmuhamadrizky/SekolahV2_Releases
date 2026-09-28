@@ -1,5 +1,4 @@
-Versi 2.3.9
-- Self-Healing Auto-Sync Skema Database: Otomatis mendeteksi dan memperbaiki skema database Dapodik tanpa merusak data
-- Perbaikan kompatibilitas tabel rombongan_belajar & peserta_didik murni standar Dapodik
-- Multi-tier Fallback Query Siswa: Menjamin data siswa 100% selalu tampil di semua hosting sekolah
-- Auto-healing tabel pegawai & ptk serta tabel pendukung sistem (bantuan, afirmasi, periodik, wilayah)
+Versi 2.4.0
+- Smart NIK-to-Staff Name Resolution: Kolom Nama Pegawai otomatis mengambil nama lengkap pegawai dari data Dapodik berdasarkan NIK/username
+- Fitur Edit Manual Nama Pegawai pada Modal Edit User untuk akun dengan username non-NIK atau penyesuaian khusus
+- Opsi pembuatan akun pengguna manual / non-pegawai pada Manajemen User Web
