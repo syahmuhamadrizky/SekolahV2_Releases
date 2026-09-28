@@ -1,4 +1,4 @@
-Versi 2.6.4
-- Perbaikan modul Literasi Siswa: materi bacaan & papan peringkat leaderboard otomatis sinkron 100% mengikuti tingkat kelas/rombel siswa login (termasuk kelas 6).
-- Penguatan integrasi Dapodik: penghapusan tombol Import & Template import manual pada menu Database Siswa untuk mencegah inkonsistensi sinkronisasi DapoySync.
-- Penyederhanaan menu Bantuan Siswa: penghapusan tab antarmuka "Update Data" agar fokus pada Daftar Penerima dan Laporan Bantuan.
+Versi 2.6.5
+- Penghapusan total tab "Update Data" pada menu Bantuan Siswa dan penggantian label tombol aksi menjadi "Edit Rekening".
+- Pembaruan modul Literasi Siswa: sinkronisasi otomatis materi dan leaderboard 100% mengikuti kelas siswa (misal Kelas 6).
+- Penghapusan menu/tombol Import manual di Database Siswa untuk menjamin integritas Dapodik via DapoySync.
