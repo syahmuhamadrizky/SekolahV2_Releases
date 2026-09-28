@@ -1,1 +1,4 @@
-Versi 2.7.0
+Versi 2.7.1
+- Form cPanel lebih simpel & cerdas (cukup masukkan domain/link web sekolah, port :2083 otomatis).
+- Quick Action Toolbar: Tombol 'Isi Otomatis dari Web Ini', shortcut buka cPanel, dan buka Webmail.
+- Pembuatan akun email pegawai 1-klik dengan panduan WhatsApp instan.
