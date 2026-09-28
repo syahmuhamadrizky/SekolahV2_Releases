@@ -1,5 +1,4 @@
-Versi 2.5.5
-- Penyempurnaan Cetak Surat Panggilan:
-  1. Integrasi Pencarian Gelar Akademik Lengkap: Menampilkan gelar depan & belakang Kepala Sekolah dan Guru Kelas/BK secara otomatis dari master PTK, Riwayat Pendidikan Formal Dapodik, dan Data Pegawai.
-  2. Perapian Kolom Tanda Tangan: Posisi jabatan, spasi tanda tangan, nama penandatangan dan NIP dibuat sejajar 100% rata horizontal antara Kepala Sekolah dan Guru.
-  3. Standarisasi Teks: Nama penandatangan otomatis UPPERCASE dan Kota Sekolah dibuat Proper Case.
+Versi 2.5.6
+- Penyempurnaan Form & Format Surat Panggilan:
+  1. Kustomisasi Tanggal Surat: Menambahkan input pemilihan Tanggal Surat di modal terbitkan & edit surat sehingga tanggal surat dapat disesuaikan secara bebas.
+  2. Perapian Format Rombel Siswa pada Tujuan Surat: Menghilangkan duplikasi kata 'Kelas:' sehingga langsung menampilkan format kelas dari database (contoh: 'CELLO ICHWAN PRAMUDITA (Kelas 6A)').
