@@ -1,5 +1,4 @@
-Versi 2.5.0
-- Perbaikan Pencarian Siswa & NISN: Memperbaiki kueri SQL pencarian peserta didik pada modul Catatan Pelanggaran dan Surat Panggilan dengan skema nama kolom Dapodik murni sehingga pencarian instan berdasarkan Nama, NISN, NIPD, NIK, dan Rombel dapat langsung tampil.
-- Perubahan Nama Menu: Menu sidebar resmi berganti nama menjadi "Catatan Pelanggaran".
-- Prioritas & Input Isian Absensi Siswa: Butir "Tingkat kehadiran rendah (sering alfa atau bolos)" diletakkan di urutan pertama dengan isian Jumlah Hari Ketidakhadiran.
-- Dropdown Guru Pembina / BK: Terhubung langsung dengan daftar data pegawai resmi sekolah.
+Versi 2.5.1
+- Perbaikan Penyimpanan Catatan Pelanggaran Siswa: Menambahkan skema kolom lengkap (waktu_kejadian, tempat_kejadian, uraian_kejadian, saksi, penanganan, tindak_lanjut, guru_pembina, status_penanganan, catatan) serta mekanisme auto-migration otomatis agar proses simpan catatan insiden pelanggaran siswa tidak lagi mengalami error internal server.
+- Pencarian Siswa & NISN: Pencarian instan berdasarkan Nama, NISN, NIPD, NIK, dan Rombel pada modal Catatan Pelanggaran dan Surat Panggilan.
+- Form Khusus Absensi: Isian jumlah hari ketidakhadiran (alfa/bolos) dengan kalkulasi poin otomatis.
