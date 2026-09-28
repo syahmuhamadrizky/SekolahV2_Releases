@@ -1,5 +1,5 @@
-Versi 2.7.9
-- Optimalisasi Single Sign-On (SSO) Webmail cPanel Roundcube 1-Klik Langsung Masuk Inbox.
-- Perbaikan sinkronisasi dan auto-ensure tabel ptk_email_sekolah di database.
-- Optimasi pemecahan bundle JavaScript (Vendor Chunk Splitting) untuk mempercepat performa dan mencegah syntax error browser.
-- Penyesuaian Referer policy untuk jabat tangan otentikasi cPanel.
+Versi 2.8.0
+- Perbaikan Format Alamat Email Ganda (Sanitasi Domain Ganda / Duplicate Domain).
+- Penataan Alamat Email cPanel & Sinkronisasi Data Pegawai Otomatis.
+- Optimalisasi Single Sign-On (SSO) Webmail Roundcube.
+- Penyempurnaan Chunk Splitting & Performa Dashboard Admin.
