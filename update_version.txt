@@ -1,4 +1,4 @@
-Versi 2.4.1
-- Akurasi Lampiran Foto Buku Rekening: Menjamin foto buku tabungan pada lembar cetak Laporan Bantuan 100% diambil dari data perbankan yang diupload pada tab Data Rekening
-- Pencegahan duplikasi foto selfie pada kolom foto buku rekening
-- Resolusi multi-tier rekening perbankan siswa (by siswa_id, peserta_didik_id, nik, nisn)
+Versi 2.4.2
+- Sinkronisasi Tingkat Pendidikan & Bentuk Pendidikan: Pilihan tingkat kelas (SD 1-6, SMP 7-9, SMA 10-12) otomatis mengikuti bentuk pendidikan pada Pengaturan Sekolah
+- Sinkronisasi Mata Pelajaran & Kurikulum: Referensi mata pelajaran pada modul literasi otomatis disesuaikan dengan Kurikulum aktif (Kurikulum Merdeka Fase A/B/C, K13, KTSP) dan tingkat kelas
+- Tampilan Papan Peringkat Literasi Dinamis: Tab kelas pada Hall of Fame Leaderboard Literasi otomatis menyesuaikan jenjang sekolah
