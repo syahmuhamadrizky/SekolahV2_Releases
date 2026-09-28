@@ -1,3 +1,4 @@
-Versi 2.4.4
-- Tampilan Lampiran Foto Bukti Lebih Besar & Eksklusif: Format cetak laporan bantuan kini menampilkan 1 baris penuh per foto (3 baris untuk 3 foto bukti: Selfie, Buku Rekening, Bukti Transaksi) sehingga foto tampil jauh lebih besar, tajam, dan jelas saat dicetak/disimpan sebagai PDF
-- Optimasi Page Break Cetak: Mencegah pemotongan kotak foto bukti saat proses cetak/print
+Versi 2.4.6
+- KOP Surat Sekolah Resmi & Format Cetak 2 Halaman Eksklusif: Lembar cetak laporan bantuan kini dilengkapi KOP Surat Sekolah dan dibagi rapi menjadi 2 halaman:
+  * Halaman 1: KOP Surat Sekolah, Identitas Siswa, Data Orang Tua/Wali, Data Rekening Bank, dan Data Penarikan Dana
+  * Halaman 2: Khusus Lampiran Foto Bukti Penyaluran (Foto Selfie di baris 1 & Foto Buku Rekening + Bukti Transaksi di baris 2) serta Tanda Tangan Orang Tua/Wali Siswa
