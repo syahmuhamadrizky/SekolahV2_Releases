@@ -1,4 +1,3 @@
-Versi 2.4.6
-- KOP Surat Sekolah Resmi & Format Cetak 2 Halaman Eksklusif: Lembar cetak laporan bantuan kini dilengkapi KOP Surat Sekolah dan dibagi rapi menjadi 2 halaman:
-  * Halaman 1: KOP Surat Sekolah, Identitas Siswa, Data Orang Tua/Wali, Data Rekening Bank, dan Data Penarikan Dana
-  * Halaman 2: Khusus Lampiran Foto Bukti Penyaluran (Foto Selfie di baris 1 & Foto Buku Rekening + Bukti Transaksi di baris 2) serta Tanda Tangan Orang Tua/Wali Siswa
+Versi 2.4.7
+- Fitur Menu Surat Panggilan Orang Tua/Wali Siswa: Menu baru lengkap untuk pembuatan, pengelolaan, pencarian siswa Dapodik 100%, filter kategori alasan pemanggilan (Kedisiplinan & Tata Tertib, Akademik & Evaluasi Belajar, Administrasi & Komunikasi, Kesehatan & Konseling Khusus, serta opsi Alasan Khusus/Lainnya), penomoran surat otomatis, dan cetak format resmi A4 lengkap dengan KOP Surat Sekolah dan tanda tangan Mengetahui Kepala Sekolah & Guru BK.
+- Perbaikan Lebar KOP Surat: KOP Surat resmi pada cetak laporan bantuan dan surat panggilan kini disesuaikan agar membentang lebar penuh 100% selebar halaman dokumen dengan tata letak proporsional dan presisi.
