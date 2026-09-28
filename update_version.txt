@@ -1,5 +1,5 @@
-Versi 2.4.9
-- Perubahan Nama Menu: Menu sidebar kini berganti nama menjadi "Catatan Pelanggaran" untuk mencerminkan fungsi terpadu buku kasus dan pemanggilan orang tua.
-- Prioritas & Input Isian Absensi Siswa: Butir "Tingkat kehadiran rendah (sering alfa atau bolos)" kini diletakkan di urutan pertama pada kategori Kedisiplinan. Jika butir terkait absensi/alfa/bolos dipilih, otomatis muncul kolom khusus input "Jumlah Hari Ketidakhadiran (Hari Alfa/Bolos)" beserta kalkulasi poin otomatis.
-- Dropdown Guru Pembina / BK dari Data Pegawai: Guru pembina / BK kini dapat dipilih langsung dari daftar nama pegawai resmi sekolah.
-- Peningkatan Pencarian Siswa & UI Autocomplete: Pencarian nama siswa dan NISN kini diperbaiki dengan respons instan, drop-down pencarian real-time, dan tampilan kartu data siswa terpilih.
+Versi 2.5.0
+- Perbaikan Pencarian Siswa & NISN: Memperbaiki kueri SQL pencarian peserta didik pada modul Catatan Pelanggaran dan Surat Panggilan dengan skema nama kolom Dapodik murni sehingga pencarian instan berdasarkan Nama, NISN, NIPD, NIK, dan Rombel dapat langsung tampil.
+- Perubahan Nama Menu: Menu sidebar resmi berganti nama menjadi "Catatan Pelanggaran".
+- Prioritas & Input Isian Absensi Siswa: Butir "Tingkat kehadiran rendah (sering alfa atau bolos)" diletakkan di urutan pertama dengan isian Jumlah Hari Ketidakhadiran.
+- Dropdown Guru Pembina / BK: Terhubung langsung dengan daftar data pegawai resmi sekolah.
