@@ -1,4 +1,4 @@
-Versi 2.4.0
-- Smart NIK-to-Staff Name Resolution: Kolom Nama Pegawai otomatis mengambil nama lengkap pegawai dari data Dapodik berdasarkan NIK/username
-- Fitur Edit Manual Nama Pegawai pada Modal Edit User untuk akun dengan username non-NIK atau penyesuaian khusus
-- Opsi pembuatan akun pengguna manual / non-pegawai pada Manajemen User Web
+Versi 2.4.1
+- Akurasi Lampiran Foto Buku Rekening: Menjamin foto buku tabungan pada lembar cetak Laporan Bantuan 100% diambil dari data perbankan yang diupload pada tab Data Rekening
+- Pencegahan duplikasi foto selfie pada kolom foto buku rekening
+- Resolusi multi-tier rekening perbankan siswa (by siswa_id, peserta_didik_id, nik, nisn)
