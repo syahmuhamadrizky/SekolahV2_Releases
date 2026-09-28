@@ -1,3 +1,4 @@
-Versi 2.7.3
-- Pembersihan antarmuka cPanel: tampilan lebih bersih, to the point, dan privat.
-- Integrasi pembuatan email pegawai dan Webmail sekolah.
+Versi 2.7.4
+- Webmail Auto-Login 1-Klik (SSO): Akses langsung ke Inbox Webmail / Roundcube tanpa perlu memasukkan password manual.
+- Pembersihan form konfigurasi cPanel di Pengaturan Sekolah.
+- Optimasi konektivitas & panduan HP Guru.
