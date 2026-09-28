@@ -1,4 +1,3 @@
-Versi 2.7.5
-- Domain cPanel & Domain Email Resmi terkunci otomatis 100% mengikuti domain website hosting (tanpa perlu ketik manual).
-- Webmail Auto-Login 1-Klik (SSO) langsung ke Inbox Roundcube.
-- Menu Webmail Resmi di portal guru.
+Versi 2.7.6
+- Perbaikan cPanel Session SSO: pemanggilan UAPI Session create_webmail_session_for_mail_user dengan parameter login & domain.
+- Auto-Login 1-Klik langsung menuju Inbox Roundcube Webmail tanpa meminta password.
