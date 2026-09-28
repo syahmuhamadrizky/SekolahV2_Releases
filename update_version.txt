@@ -1,8 +1,7 @@
-Versi 2.5.8
-- Modul Surat Pernyataan / Klarifikasi Orang Tua & Siswa (Opsi 1):
-  1. Tab Menu ke-3 Terintegrasi: Menghadirkan tab khusus 'Surat Pernyataan Ortu & Siswa' pada modul Catatan Pelanggaran & Panggilan.
-  2. 5 Preset Template Resmi: Dilengkapi template Surat Pernyataan Tata Tertib, Klarifikasi Pelanggaran, Perjanjian Terakhir (SP-3), Pernyataan Pengunduran Diri (Drop Out / Mandiri), dan Bebas Narkoba/Sajam/Tawuran.
-  3. Format Cetak F4 / Legal Kedinasan: Output cetak standar dinas dengan KOP Sekolah, detail orang tua & siswa, butir pernyataan terstruktur, kotak materai Rp10.000, serta tanda tangan Orang Tua, Siswa, Saksi Guru BK, Saksi Wali Kelas, dan Mengetahui Kepala Sekolah.
-- Hak Akses & Scoping Login Siswa & Guru (Role Scoping):
-  1. Portal Siswa (Student Dashboard): Siswa dapat melihat catatan kedisiplinan dan riwayat pelanggaran miliknya sendiri secara transparan, termasuk status evaluasi, total poin bobot, serta mengunduh/mencetak Surat Panggilan dan Surat Pernyataan terkait dirinya.
-  2. Portal Guru / Wali Kelas (Teacher Dashboard): Guru mata pelajaran / wali kelas hanya dapat mengakses catatan pelanggaran, surat panggilan, dan surat pernyataan dari siswa di kelas/rombel yang diampunya (atau kasus yang dilaporkan olehnya), menjaga privasi dan ketepatan wewenang antar rombel (akses penuh tetap dimiliki Admin, Kepala Sekolah, dan Guru BK).
+Versi 2.5.9
+- Pembaruan Modul Surat Pernyataan & Surat Panggilan:
+  1. Kalkulasi Akumulasi Ketidakhadiran Otomatis: Saat beberapa pelanggaran terkait absensi (alfa/bolos) dipilih, sistem secara otomatis menghitung total hari ketidakhadiran, menampilkan badge durasi per kasus, serta menyertakan baris total akumulasi pada lembar cetak F4.
+  2. Nomor Surat Fleksibel / Custom: Mendukung pengisian nomor surat secara manual maupun generate otomatis oleh sistem kedinasan.
+  3. Saksi Sekolah Fleksibel: Saksi I & Saksi II mendukung jabatan kustom (Bagian Kesiswaan, Pembina OSIS/Kesiswaan, Staff TU, Guru BK, Wali Kelas).
+  4. Opsi Tanda Tangan Siswa Dinamis: Checkbox pilihan untuk menyertakan atau meniadakan kolom tanda tangan siswa (hanya orang tua di atas materai Rp10.000).
+- Optimalisasi Tampilan Cetak & Sinkronisasi Rilis Produksi.
