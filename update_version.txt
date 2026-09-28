@@ -1,6 +1,4 @@
-Versi 2.6.6
-- Penambahan Tombol "Buat Laporan" di tabel Daftar Penerima Bantuan: Admin/Operator kini dapat langsung membantu menginput dan menerbitkan Laporan Pencairan Bantuan (tanggal pencairan, tanggal penarikan, nominal, foto selfie & bukti penarikan) bagi orang tua siswa yang gaptek tanpa perlu login via akun siswa.
-- Laporan yang diterbitkan admin otomatis masuk dan tampil di tab "Laporan Bantuan".
-- Penghapusan total tab "Update Data" pada menu Bantuan Siswa dan penggantian label tombol aksi menjadi "Edit Rekening".
-- Pembaruan modul Literasi Siswa: sinkronisasi otomatis materi dan leaderboard 100% mengikuti kelas siswa (misal Kelas 6).
-- Penghapusan menu/tombol Import manual di Database Siswa.
+Versi 2.6.7
+- Pencegahan Duplikasi Laporan Bantuan: Tombol "Buat Laporan" pada tabel Daftar Penerima Bantuan otomatis ter-disable / berubah menjadi status "Sudah Dilaporkan" jika sudah ada laporan yang terbit dengan kombinasi Siswa, Jenis Bantuan, Tahun, dan Semester yang sama.
+- Validasi data lengkap pada tombol "Buat Laporan": Tombol nonaktif jika data rekening siswa belum lengkap.
+- Backend /api/bantuan/laporan otomatis memperbarui record yang ada jika ditemukan kesamaan kombinasi periode, mencegah redudansi data di database.
