@@ -1,3 +1,3 @@
-Versi 2.5.2
-- Perbaikan Cetak Surat Panggilan: Memperbaiki autentikasi token saat membuka jendela cetak Surat Panggilan resmi ber-KOP format F4 sehingga tidak lagi muncul error "No token provided".
-- Kustomisasi Nomor Surat Panggilan: Menambahkan kolom Nomor Surat dan Sifat Surat pada modal penerbitan surat agar pengguna dapat mengetik nomor surat resmi sendiri atau membiarkannya terisi otomatis oleh sistem.
+Versi 2.5.3
+- Perbaikan Blank Putih & Syntax Error Vendor Bundle: Menghapus bundling manualChunks yang memicu error parsing JavaScript (Unexpected end of input pada vendor bundle) serta menerapkan safe-date rendering pada tabel catatan pelanggaran dan surat panggilan.
+- Optimalisasi Tampilan Tabel: Memperbaiki format tanggal kejadian dan jadwal pertemuan agar selalu tampil rapi dan bebas crash.
