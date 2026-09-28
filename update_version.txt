@@ -1,4 +1,6 @@
-Versi 2.6.5
+Versi 2.6.6
+- Penambahan Tombol "Buat Laporan" di tabel Daftar Penerima Bantuan: Admin/Operator kini dapat langsung membantu menginput dan menerbitkan Laporan Pencairan Bantuan (tanggal pencairan, tanggal penarikan, nominal, foto selfie & bukti penarikan) bagi orang tua siswa yang gaptek tanpa perlu login via akun siswa.
+- Laporan yang diterbitkan admin otomatis masuk dan tampil di tab "Laporan Bantuan".
 - Penghapusan total tab "Update Data" pada menu Bantuan Siswa dan penggantian label tombol aksi menjadi "Edit Rekening".
 - Pembaruan modul Literasi Siswa: sinkronisasi otomatis materi dan leaderboard 100% mengikuti kelas siswa (misal Kelas 6).
-- Penghapusan menu/tombol Import manual di Database Siswa untuk menjamin integritas Dapodik via DapoySync.
+- Penghapusan menu/tombol Import manual di Database Siswa.
