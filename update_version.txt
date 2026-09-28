@@ -1,4 +1,5 @@
-Versi 2.4.8
-- Buku Catatan Pelanggaran Siswa & Penerbitan Surat Panggilan Multi-Kasus: Alur kerja bimbingan konseling kini terintegrasi penuh. Setiap insiden pelanggaran siswa dapat dicatat berkala (kategori, jenis kasus, poin, kronologi, saksi, penanganan langsung, dan guru pembina). Saat menerbitkan Surat Panggilan Orang Tua, guru dapat memilih satu atau beberapa butir pelanggaran yang pernah dilakukan siswa untuk dilampirkan otomatis ke dalam surat.
-- Standar Cetak Kertas F4 (Folio) Ber-KOP Sekolah: Template cetak resmi surat panggilan kini menggunakan ukuran standar F4 (215mm x 330mm) dengan KOP Surat Sekolah lebar penuh (100%), tabel rincian butir kasus yang dipilih, jadwal pertemuan, dan tanda tangan resmi Mengetahui Kepala Sekolah & Guru BK / Wali Kelas.
-- Pencarian Siswa Multi-Level Realtime: Penyempurnaan pencarian peserta didik berbasis database Dapodik 100% dengan responsivitas tinggi dan fallback query otomatis.
+Versi 2.4.9
+- Perubahan Nama Menu: Menu sidebar kini berganti nama menjadi "Catatan Pelanggaran" untuk mencerminkan fungsi terpadu buku kasus dan pemanggilan orang tua.
+- Prioritas & Input Isian Absensi Siswa: Butir "Tingkat kehadiran rendah (sering alfa atau bolos)" kini diletakkan di urutan pertama pada kategori Kedisiplinan. Jika butir terkait absensi/alfa/bolos dipilih, otomatis muncul kolom khusus input "Jumlah Hari Ketidakhadiran (Hari Alfa/Bolos)" beserta kalkulasi poin otomatis.
+- Dropdown Guru Pembina / BK dari Data Pegawai: Guru pembina / BK kini dapat dipilih langsung dari daftar nama pegawai resmi sekolah.
+- Peningkatan Pencarian Siswa & UI Autocomplete: Pencarian nama siswa dan NISN kini diperbaiki dengan respons instan, drop-down pencarian real-time, dan tampilan kartu data siswa terpilih.
