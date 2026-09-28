@@ -1,3 +1,4 @@
-Versi 2.3.6
-- Optimalisasi tampilan Detail Pegawai: menyederhanakan tab dan memindahkan Tugas Tambahan ke tab Kepegawaian
-- Peningkatan stabilitas dan kompatibilitas antarmuka manajemen pegawai
+Versi 2.3.7
+- Memberikan otorisasi penuh kepada Superadmin untuk mengedit, mereset password, dan menghapus akun pengguna (termasuk sesama Superadmin)
+- Menambahkan Modal Edit Akun Pengguna di Manajemen User Web
+- Proteksi keamanan: user non-superadmin tidak dapat memodifikasi akun Superadmin
