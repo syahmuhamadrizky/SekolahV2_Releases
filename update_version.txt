@@ -1,5 +1,5 @@
-Versi 2.8.0
-- Perbaikan Format Alamat Email Ganda (Sanitasi Domain Ganda / Duplicate Domain).
-- Penataan Alamat Email cPanel & Sinkronisasi Data Pegawai Otomatis.
-- Optimalisasi Single Sign-On (SSO) Webmail Roundcube.
-- Penyempurnaan Chunk Splitting & Performa Dashboard Admin.
+Versi 2.8.1
+- Manajemen Kuota Email cPanel (Pengaturan Kuota MB & Kuota Unlimited).
+- Preset Kuota Cepat (250MB, 500MB, 1GB, 2GB, 5GB, Custom MB & Unlimited).
+- Modal Atur Kuota Kotak Surat Langsung dari Tabel Email Pegawai.
+- Penyesuaian Tampilan Kuota & Penggunaan Disk cPanel.
