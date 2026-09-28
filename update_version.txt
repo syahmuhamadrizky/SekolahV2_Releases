@@ -1,4 +1,4 @@
-Versi 2.7.4
-- Webmail Auto-Login 1-Klik (SSO): Akses langsung ke Inbox Webmail / Roundcube tanpa perlu memasukkan password manual.
-- Pembersihan form konfigurasi cPanel di Pengaturan Sekolah.
-- Optimasi konektivitas & panduan HP Guru.
+Versi 2.7.5
+- Domain cPanel & Domain Email Resmi terkunci otomatis 100% mengikuti domain website hosting (tanpa perlu ketik manual).
+- Webmail Auto-Login 1-Klik (SSO) langsung ke Inbox Roundcube.
+- Menu Webmail Resmi di portal guru.
