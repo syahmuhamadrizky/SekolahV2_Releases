@@ -1,5 +1,4 @@
-Versi 2.6.3
-- Pemisahan Format Cetak Surat Pernyataan 2 Halaman (Multi-Page): Halaman 1 Naskah resmi kedinasan lengkap TTD & Materai Rp10.000, Halaman 2 Lembar Lampiran Rekap Kasus & Akumulasi Kehadiran lengkap TTD tanpa materai.
-- Penerbitan Surat Keputusan (SK) Kepala Sekolah tentang Pemberhentian Status Kesiswaan (In Absentia / Sepihak Sekolah) saat siswa mangkir dan orang tua tidak memenuhi 3x surat panggilan resmi serta home visit gagal.
-- Susunan tanda tangan resmi pihak sekolah lengkap 4 pejabat: Saksi I Guru BK, Saksi II Wali Kelas, Saksi III Bidang Kesiswaan, dan Menetapkan/Mengetahui Kepala Sekolah.
-- Penambahan jabatan dan pemilihan staff "Bidang Kesiswaan" serta toggle fleksibel tanda tangan orang tua/siswa.
+Versi 2.6.4
+- Perbaikan modul Literasi Siswa: materi bacaan & papan peringkat leaderboard otomatis sinkron 100% mengikuti tingkat kelas/rombel siswa login (termasuk kelas 6).
+- Penguatan integrasi Dapodik: penghapusan tombol Import & Template import manual pada menu Database Siswa untuk mencegah inkonsistensi sinkronisasi DapoySync.
+- Penyederhanaan menu Bantuan Siswa: penghapusan tab antarmuka "Update Data" agar fokus pada Daftar Penerima dan Laporan Bantuan.
