@@ -1,7 +1,7 @@
-Versi 2.5.9
-- Pembaruan Modul Surat Pernyataan & Surat Panggilan:
-  1. Kalkulasi Akumulasi Ketidakhadiran Otomatis: Saat beberapa pelanggaran terkait absensi (alfa/bolos) dipilih, sistem secara otomatis menghitung total hari ketidakhadiran, menampilkan badge durasi per kasus, serta menyertakan baris total akumulasi pada lembar cetak F4.
-  2. Nomor Surat Fleksibel / Custom: Mendukung pengisian nomor surat secara manual maupun generate otomatis oleh sistem kedinasan.
-  3. Saksi Sekolah Fleksibel: Saksi I & Saksi II mendukung jabatan kustom (Bagian Kesiswaan, Pembina OSIS/Kesiswaan, Staff TU, Guru BK, Wali Kelas).
-  4. Opsi Tanda Tangan Siswa Dinamis: Checkbox pilihan untuk menyertakan atau meniadakan kolom tanda tangan siswa (hanya orang tua di atas materai Rp10.000).
-- Optimalisasi Tampilan Cetak & Sinkronisasi Rilis Produksi.
+Versi 2.6.0
+- Fitur Arsip Digital Dokumen & Integrasi Google Drive:
+  1. Menu Unggah Berkas Hasil Tanda Tangan: Sedia tombol dan modal upload dokumen scan/PDF hasil tanda tangan resmi untuk Surat Panggilan, Surat Pernyataan Siswa/Ortu, dan dokumen kedinasan sekolah lainnya.
+  2. Integrasi Google Drive Otomatis: Berkas yang diunggah secara otomatis disimpan di server dan di-sinkronkan ke Google Drive sekolah sebagai arsip digital abadi.
+  3. Pembatasan Hak Akses Siswa: Login siswa dikonfigurasi read-only (hanya dapat melihat dan mengunduh berkas arsip resmi yang diunggah sekolah, tanpa hak mengunggah).
+  4. Format Cetak 2 Halaman (Multi-Page): Pemisahan halaman Surat Panggilan (Halaman 1: Surat kedinasan pokok & ringkasan, Halaman 2: Lembar lampiran resmi butir kasus & tabel akumulasi kehadiran).
+  5. Master Kalender Libur Nasional 2026-2027 & Hari Tidak Efektif: Dukungan sinkronisasi otomatis kalender libur nasional dan konfigurasi hari libur sekolah untuk kalkulasi hari belajar efektif.
