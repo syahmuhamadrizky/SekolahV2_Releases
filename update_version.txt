@@ -1,4 +1,6 @@
-Versi 2.5.6
-- Penyempurnaan Form & Format Surat Panggilan:
-  1. Kustomisasi Tanggal Surat: Menambahkan input pemilihan Tanggal Surat di modal terbitkan & edit surat sehingga tanggal surat dapat disesuaikan secara bebas.
-  2. Perapian Format Rombel Siswa pada Tujuan Surat: Menghilangkan duplikasi kata 'Kelas:' sehingga langsung menampilkan format kelas dari database (contoh: 'CELLO ICHWAN PRAMUDITA (Kelas 6A)').
+Versi 2.5.7
+- Fitur Rentang Tanggal Khusus Ketidakhadiran (Absensi):
+  1. Input Rentang Tanggal Mulai & Selesai Absen: Jika jenis pelanggaran terkait absensi/ketidakhadiran (sering alfa/bolos), sistem otomatis menyediakan input rentang tanggal ketidakhadiran.
+  2. Perhitungan Hari & Poin Otomatis: Jumlah hari dan akumulasi poin bobot (5 poin/hari) otomatis terhitung secara presisi berdasarkan rentang tanggal yang dipilih.
+  3. Format Rentang Tanggal di Cetak Surat & Tabel: Riwayat kasus absensi tercetak rapi dengan format rentang tanggal (misal: '6 Juli 2026 s.d. 20 Juli 2026') pada lembar surat panggilan resmi dan tabel riwayat.
+  4. Perbaikan Safe Date Parsing: Mencegah tanggal bergeser/mundur 1 hari akibat timezone UTC saat mengedit catatan pelanggaran.
