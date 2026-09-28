@@ -1,5 +1,5 @@
-Versi 2.7.7
-- Menu khusus Manajemen Email Pegawai (cPanel Webmail Integration).
-- Fitur Reset Password Akun Email Guru/Pegawai cPanel secara instan.
-- Pemisahan formulir penambahan email manual khusus di Menu Email Pegawai.
-- Panduan integrasi HP (Android & iOS) dan fitur Salin Kredensial WhatsApp.
+Versi 2.7.8
+- Perbaikan Sinkronisasi Daftar Akun Email Pegawai & Pembuatan Akun Baru cPanel.
+- Auto-ensure skema database ptk_email_sekolah dan integrasi tangguh fallback lokal ke cPanel.
+- Perbaikan URL SSO Webmail cPanel Roundcube agar login 1-klik langsung masuk Inbox tanpa form login.
+- Penyesuaian pencocokan data profil staf dan email dinas sekolah.
