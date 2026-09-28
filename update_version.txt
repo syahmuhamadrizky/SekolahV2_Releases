@@ -1,4 +1,5 @@
-Versi 2.3.8
-- Menambahkan lampiran Foto Buku Rekening siswa dari data perbankan pada lembar cetak Laporan Pencairan Bantuan
-- Penyesuaian layout dan tata letak print dokumen (Foto Selfie, Buku Rekening, Bukti Transaksi) agar pas dan rapi pada A4
-- Menampilkan thumbnail Foto Buku Rekening pada tabel daftar laporan bantuan di dashboard admin
+Versi 2.3.9
+- Self-Healing Auto-Sync Skema Database: Otomatis mendeteksi dan memperbaiki skema database Dapodik tanpa merusak data
+- Perbaikan kompatibilitas tabel rombongan_belajar & peserta_didik murni standar Dapodik
+- Multi-tier Fallback Query Siswa: Menjamin data siswa 100% selalu tampil di semua hosting sekolah
+- Auto-healing tabel pegawai & ptk serta tabel pendukung sistem (bantuan, afirmasi, periodik, wilayah)
