@@ -1,4 +1,5 @@
-Versi 2.6.7
-- Pencegahan Duplikasi Laporan Bantuan: Tombol "Buat Laporan" pada tabel Daftar Penerima Bantuan otomatis ter-disable / berubah menjadi status "Sudah Dilaporkan" jika sudah ada laporan yang terbit dengan kombinasi Siswa, Jenis Bantuan, Tahun, dan Semester yang sama.
-- Validasi data lengkap pada tombol "Buat Laporan": Tombol nonaktif jika data rekening siswa belum lengkap.
-- Backend /api/bantuan/laporan otomatis memperbarui record yang ada jika ditemukan kesamaan kombinasi periode, mencegah redudansi data di database.
+Versi 2.6.8
+- Integrasi Email Pegawai & Webmail cPanel UAPI: Setiap sekolah dapat menghubungkan akun hosting/cPanel dengan memasukkan Host, Port, Username, API Token, dan Domain sendiri secara dinamis dari menu Pengaturan.
+- Pembuatan & Pengelolaan Akun Email Guru Instan: 1-Klik buat email resmi (@sekolah.sch.id), generate password aman, reset password, dan sinkronisasi penghapusan akun email di cPanel.
+- Panduan Lengkap Mobile / HP & 1-Klik Salin Format WhatsApp: Dilengkapi panduan konfigurasi IMAP (Port 993 SSL) dan SMTP (Port 465 SSL) untuk aplikasi Gmail Android dan Apple Mail iOS, serta tombol 1-klik salin format pesan WhatsApp siap kirim ke guru.
+- Portal Mandiri Guru: Menampilkan kartu Email Resmi Sekolah Terverifikasi dengan tautan langsung ke Webmail dan panduan pengaturan di HP.
