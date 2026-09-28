@@ -1,4 +1,4 @@
-Versi 2.3.7
-- Memberikan otorisasi penuh kepada Superadmin untuk mengedit, mereset password, dan menghapus akun pengguna (termasuk sesama Superadmin)
-- Menambahkan Modal Edit Akun Pengguna di Manajemen User Web
-- Proteksi keamanan: user non-superadmin tidak dapat memodifikasi akun Superadmin
+Versi 2.3.8
+- Menambahkan lampiran Foto Buku Rekening siswa dari data perbankan pada lembar cetak Laporan Pencairan Bantuan
+- Penyesuaian layout dan tata letak print dokumen (Foto Selfie, Buku Rekening, Bukti Transaksi) agar pas dan rapi pada A4
+- Menampilkan thumbnail Foto Buku Rekening pada tabel daftar laporan bantuan di dashboard admin
