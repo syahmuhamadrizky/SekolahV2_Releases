@@ -1,4 +1,3 @@
-Versi 2.7.2
-- Perbaikan bundling & syntax parser frontend: menghapus inline handler berlebih dan melengkapi impor ikon ShieldAlert.
-- Form cPanel otomatis tanpa perlu mengisi port :2083.
-- Shortcut cPanel & Webmail 1-klik terintegrasi.
+Versi 2.7.3
+- Pembersihan antarmuka cPanel: tampilan lebih bersih, to the point, dan privat.
+- Integrasi pembuatan email pegawai dan Webmail sekolah.
