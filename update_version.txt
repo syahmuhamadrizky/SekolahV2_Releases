@@ -1,5 +1,6 @@
-Versi 2.9.7
-- Rich Text Formatting Toolbar: Fitur penulisan email dengan toolbar lengkap gaya Microsoft Word & Gmail (Bold, Italic, Underline, Font Family, Ukuran Huruf, Pewarnaan Teks & Stabilo, Perataan Teks, Daftar Angka/Poin, Indentasi, Sisipkan Link).
-- Dukungan Penuh Format HTML Email Masuk: Rendering aman dengan insulated sandbox container, pemilih mode HTML vs Teks, dan fitur cetak pesan email.
-- Hapus Massal (Bulk Delete): Fitur seleksi pesan dengan checkbox per baris & master checkbox di header untuk menghapus puluhan pesan sekaligus secara instan.
-- Sistem Pagination Rapi: Tampilan pesan per halaman kini default 30 baris dengan opsi kustomisasi (15, 30, 50, 100 baris) dan navigasi halaman yang nyaman.
+Versi 2.9.8
+- Perbaikan Header Profil Guru: Menghapus fallback 'Honorer' dan menampilkan data identitas resmi (NIK, NIP, NUPTK, Status Kepegawaian dari Dapodik).
+- Status & Hak Akses Guru Wali Kelas: Menampilkan badge khusus Wali Kelas dan membatasi data siswa hanya untuk murid di kelas/rombel yang diampunya.
+- Perbaikan Riwayat Siswa: Menghubungkan arsip siswa langsung ke tabel peserta didik sehingga nama lengkap, NISN, dan detail siswa tampil akurat.
+- Rich Text Formatting Toolbar: Penulisan email dengan toolbar lengkap gaya Microsoft Word & Gmail.
+- Dukungan Penuh Format HTML Email Masuk & Hapus Massal (Bulk Delete).
