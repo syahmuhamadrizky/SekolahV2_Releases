@@ -1,6 +1,6 @@
 {
   "name": "dapoy-schools",
-  "version": "2.9.3",
+  "version": "2.9.4",
   "private": true,
   "description": "Dapoy Schools - Production Standalone Release",
   "main": "server.js",
@@ -17,6 +17,9 @@
     "googleapis": "^173.0.0",
     "jsonwebtoken": "^9.0.3",
     "multer": "^2.2.0",
-    "mysql2": "^3.22.5"
+    "mysql2": "^3.22.5",
+    "nodemailer": "^10.0.12",
+    "imapflow": "^2.1.2",
+    "mailparser": "^3.9.31"
   }
 }

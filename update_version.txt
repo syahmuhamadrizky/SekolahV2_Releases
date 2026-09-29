@@ -1,4 +1,4 @@
-Versi 2.9.3
-- Native Webmail Client Terintegrasi: Sistem portal sekolah kini memiliki webmail client mandiri (IMAP/SMTP SSL) tanpa bergantung sama sekali pada antarmuka cPanel atau port 2096.
-- Baca, kirim email (dengan lampiran), balas, teruskan, dan kelola kotak masuk langsung di dalam dashboard portal Dapoy-Schools.
-- Zero Security Token / Session Cookie Error: Komunikasi email berjalan 100% mulus via protokol IMAP/SMTP standar.
+Versi 2.9.4
+- Fix Server Startup Resilience & Zero-503: Menggunakan dynamic lazy-loading modul email sehingga server Node.js tidak akan pernah crash pada saat boot.
+- Penyempurnaan dependensi runtime paket email di package.json dan build release.
+- Webmail Mandiri (IMAP/SMTP SSL) 100% aktif dan berjalan mulus tanpa ketergantungan cPanel port 2096.
