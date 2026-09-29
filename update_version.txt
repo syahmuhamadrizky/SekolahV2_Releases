@@ -1,4 +1,5 @@
-Versi 2.8.6
-- Perbaikan Parameter Eksekusi cPanel UAPI Permission Toggle (Full Email Address Resolution).
-- Sinkronisasi Akurat Status suspended_outgoing, suspended_incoming, dan suspended_login dari cPanel.
-- Penanganan Kesalahan dan Respon Eksekusi Real-Time pada Server cPanel.
+Versi 2.8.7
+- Fitur Mandiri Pegawai/Guru: Tampilan Info Email Resmi Sekolah di Beranda Dashboard Guru.
+- Fitur Mandiri Pegawai/Guru: Ubah Password Email Sekolah langsung dari Portal Pegawai (Tersinkronisasi ke cPanel UAPI).
+- Generator Password Acak Kuat dan Validasi Keamanan untuk Pegawai.
+- Panduan Setup Mail Client (Gmail / iPhone Mail / Outlook) langsung di Dashboard Pegawai.
