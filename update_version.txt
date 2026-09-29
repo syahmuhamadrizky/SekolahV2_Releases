@@ -1,4 +1,5 @@
-Versi 2.9.12
+Versi 2.9.13
+- Penyempurnaan Stabilitas Modul E-Office / Arsip Surat & Disposisi: Auto-check dan migrasi mandiri tabel arsip surat di database, penanganan query resilient, serta pemuatan data yang lebih mulus dan andal tanpa error toast.
 - Modul E-Office / Arsip Surat & Disposisi Digital: Pengarsipan resmi surat masuk dan surat keluar sekolah lengkap dengan buku agenda surat masuk & keluar, unggah scan PDF/berkas lampiran, dan ekspor data ke Excel.
 - Alur Disposisi Pimpinan & Tindak Lanjut GTK: Pimpinan/Kepala Sekolah dapat memberikan instruksi disposisi terarah ke staf/guru terkait, penetapan batas waktu (deadline), catatan pimpinan, pelaporan respon staf, dan cetak Lembar Disposisi Kedinasan A4 ber-Kop Surat resmi.
 - Konfigurasi Format & Penomoran Surat Keluar Otomatis: Format nomor surat keluar 1 kolom fleksibel (contoh: 421.2/XXX/SDN-TT1/MM/YYYY) dengan generator otomatis nomor urut tahunan (XXX), bulan angka Romawi (MM), dan tahun terbit (YYYY) yang terintegrasi di seluruh modul persuratan sekolah.
