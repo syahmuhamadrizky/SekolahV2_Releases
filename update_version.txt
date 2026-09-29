@@ -1,6 +1,6 @@
-Versi 2.9.16
-- Pemisahan Tahun Pengadaan & Sumber Dana Buku Perpustakaan: Menambahkan kolom khusus Tahun Pengadaan (tahun masuk ke sekolah) terpisah dari Tahun Terbit penerbit, serta pilihan Sumber Dana Pengadaan (Dana BOS Reguler, BOS Kinerja, Hibah/Sumbangan, APBD, Swadaya Komite).
-- Penyempurnaan Cetak Kartu Anggota Perpustakaan: Pencetakan kartu anggota kini menggunakan jendela cetak terisolasi (isolated print dialog) sehingga mencetak murni kartu ID perpustakaan presisi tanpa tercampur tampilan dashboard/tab sistem.
-- Preview Kartu Anggota Real-Time: Pratinjau langsung kartu anggota perpustakaan di layar sebelum dicetak ke printer atau disimpan sebagai PDF.
-- Penyempurnaan Cetak Label Punggung Buku: Pencetakan label punggung buku (nomor klasifikasi DDC, kode pengarang, kode judul, barcode) kini presisi dan rapi sesuai ukuran standar stiker buku.
-- Pembaruan Ekspor Excel Perpustakaan: Format laporan Excel katalog buku kini memuat rincian Tahun Pengadaan dan Sumber Dana secara lengkap untuk kebutuhan audit aset & SPJ BOS.
+Versi 2.9.17
+- Kustomisasi Kategori Buku Perpustakaan: Daftar kategori buku perpustakaan kini dapat dikustomisasi sepenuhnya oleh sekolah (tambah, edit, dan kelola kategori langsung dari menu Aturan & Kategori Perpustakaan atau saat input buku baru).
+- Pencetakan Label Buku Lengkap & Massal: Fitur cetak label stiker buku fisik (Label Punggung/Spine DDC, Label Barcode, dan Set Lengkap Kombinasi) dengan opsi cetak satuan maupun cetak massal (batch multi-pilih) siap tempel ke lembar stiker/kertas HVS A4.
+- Dukungan Cetak Eksemplar Buku: Label dapat dicetak 1 lembar per judul atau dicetak sesuai total stok eksemplar buku fisik dengan nomor penanda eksemplar otomatis (c.1, c.2, c.3, dst).
+- Peminjaman Multi-Buku Dinamis: Siswa dan guru kini dapat meminjam lebih dari 1 buku sekaligus dalam satu transaksi peminjaman dinamis (keranjang peminjaman).
+- Paket Peminjaman 1 Semester: Pilihan durasi khusus 1 Semester (~180 Hari) yang otomatis terdeteksi untuk kategori Buku Pelajaran, Buku Guru, serta Agama dan Budi Pekerti.
