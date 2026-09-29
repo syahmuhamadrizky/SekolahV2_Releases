@@ -1,8 +1,6 @@
-Versi 2.9.15
-- Modul Baru: Perpustakaan Sekolah (E-Perpus & Sirkulasi Buku Digital): Sistem manajemen perpustakaan modern terintegrasi data Dapodik peserta didik & GTK.
-- Katalog Buku & Koleksi E-Book: Manajemen buku fisik (ISBN, DDC, Klasifikasi, Rak, Stok) serta pembaca E-Book PDF interaktif langsung di dalam aplikasi (in-app reader).
-- Sirkulasi Peminjaman & Pengembalian Otomatis: Pencarian peminjam terintegrasi Dapodik (Siswa & Guru), hitung otomatis tanggal jatuh tempo (+7 hari/kustom), kalkulasi denda keterlambatan, dan pencatatan kondisi fisik buku saat kembali.
-- Cetak Label Punggung Buku & Kartu Anggota: Cetak label barcode/QR untuk ditempel di rak/buku, serta cetak Kartu Anggota Perpustakaan resmi lengkap dengan foto profil siswa.
-- Buku Tamu / Presensi Kunjungan Perpustakaan: Check-in kilat kunjungan siswa, guru, dan tamu luar dengan statistik tujuan kunjungan (baca, pinjam, riset).
-- Pengaturan Perpustakaan Fleksibel & Ekspor Excel: Konfigurasi kuota maksimal pinjam, durasi peminjaman standar, tarif denda per hari, tata tertib perpustakaan, dan ekspor riwayat sirkulasi/katalog ke format Excel.
-- Integrasi Hak Akses Role: Menu Perpustakaan terdaftar di manajemen role pengguna untuk Guru, Petugas Perpus, dan Tenaga Kependidikan.
+Versi 2.9.16
+- Pemisahan Tahun Pengadaan & Sumber Dana Buku Perpustakaan: Menambahkan kolom khusus Tahun Pengadaan (tahun masuk ke sekolah) terpisah dari Tahun Terbit penerbit, serta pilihan Sumber Dana Pengadaan (Dana BOS Reguler, BOS Kinerja, Hibah/Sumbangan, APBD, Swadaya Komite).
+- Penyempurnaan Cetak Kartu Anggota Perpustakaan: Pencetakan kartu anggota kini menggunakan jendela cetak terisolasi (isolated print dialog) sehingga mencetak murni kartu ID perpustakaan presisi tanpa tercampur tampilan dashboard/tab sistem.
+- Preview Kartu Anggota Real-Time: Pratinjau langsung kartu anggota perpustakaan di layar sebelum dicetak ke printer atau disimpan sebagai PDF.
+- Penyempurnaan Cetak Label Punggung Buku: Pencetakan label punggung buku (nomor klasifikasi DDC, kode pengarang, kode judul, barcode) kini presisi dan rapi sesuai ukuran standar stiker buku.
+- Pembaruan Ekspor Excel Perpustakaan: Format laporan Excel katalog buku kini memuat rincian Tahun Pengadaan dan Sumber Dana secara lengkap untuk kebutuhan audit aset & SPJ BOS.
