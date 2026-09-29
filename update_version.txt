@@ -1,4 +1,4 @@
-Versi 2.8.9
-- Perbaikan Resolusi Email Sesi Login Guru / Pegawai untuk 1-Click Login Webmail SSO (Auto-Login Roundcube cPanel).
-- Sinkronisasi Akurat Endpoint /api/cpanel/my-webmail-sso dan /api/cpanel/my-change-password dengan Multi-Relasi Database.
-- Optimasi Direct URL Generation pada Sesi Keamanan Webmail cPanel.
+Versi 2.9.0
+- Perbaikan "Your session cookie is invalid" pada 1-Click Login Webmail (cPanel Cookie IP Binding Resolution).
+- Pengiriman Otomatis IP Klien Pengguna ke cPanel UAPI Session Creation untuk Menghindari Penolakan Validasi Cookie Antar-IP.
+- Normalisasi URL Sesi Roundcube cPanel (/login/?app=roundcube).
