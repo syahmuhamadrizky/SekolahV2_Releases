@@ -1,4 +1,4 @@
-Versi 2.8.3
+Versi 2.8.4
 - Fitur Pembuatan Email Official / Bebas Sekolah (Preset Cepat & Tanpa Terikat Pegawai).
 - Sinkronisasi Multi-Domain Cerdas Berdasarkan Host Aktif Browser.
 - Tampilan Badge & Avatar Khusus untuk Akun Email Official / Dinas Sekolah.
