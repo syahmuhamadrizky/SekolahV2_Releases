@@ -1,6 +1,5 @@
-Versi 2.9.8
+Versi 2.9.9
+- Sinkronisasi Akurat Wali Kelas dari Konfigurasi Rombel: Menghilangkan duplikasi rombel semester lampau dan memastikan data wali kelas aktif sesuai rombongan belajar terbaru.
 - Perbaikan Header Profil Guru: Menghapus fallback 'Honorer' dan menampilkan data identitas resmi (NIK, NIP, NUPTK, Status Kepegawaian dari Dapodik).
 - Status & Hak Akses Guru Wali Kelas: Menampilkan badge khusus Wali Kelas dan membatasi data siswa hanya untuk murid di kelas/rombel yang diampunya.
 - Perbaikan Riwayat Siswa: Menghubungkan arsip siswa langsung ke tabel peserta didik sehingga nama lengkap, NISN, dan detail siswa tampil akurat.
-- Rich Text Formatting Toolbar: Penulisan email dengan toolbar lengkap gaya Microsoft Word & Gmail.
-- Dukungan Penuh Format HTML Email Masuk & Hapus Massal (Bulk Delete).
