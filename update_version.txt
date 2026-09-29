@@ -1,5 +1,5 @@
-Versi 2.8.2
-- Penyaringan Otomatis Email Pegawai cPanel Sesuai Domain Aktif Aplikasi.
-- Penyembunyian Akun Email Non-Domain pada Shared Hosting.
-- Pembersihan Label Navigasi dan Header Halaman Email Pegawai.
-- Penyesuaian Statistik Kotak Surat & Kuota Sesuai Domain Aktif.
+Versi 2.8.3
+- Fitur Pembuatan Email Official / Bebas Sekolah (Preset Cepat & Tanpa Terikat Pegawai).
+- Sinkronisasi Multi-Domain Cerdas Berdasarkan Host Aktif Browser.
+- Tampilan Badge & Avatar Khusus untuk Akun Email Official / Dinas Sekolah.
+- Pemulihan & Optimalisasi Deteksi Akun Email cPanel yang Sudah Ada.
