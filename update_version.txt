@@ -1,4 +1,5 @@
-Versi 2.9.6
-- Halaman Khusus Webmail Mandiri (/webmail & /mail): Klien email modern dengan dukungan Dual-Mode Login (Auto-login SSO dari Dashboard & Login Mandiri langsung via Email Resmi + Password).
-- Identitas Pengirim Dinamis: Pengiriman email official sekolah otomatis menggunakan nama resmi sekolah, dan email pegawai otomatis menggunakan nama lengkap guru/pegawai pemilik email.
-- Perbaikan Reset Password Akun Email Official & PTK di server cPanel dengan multi-format fallback serta sinkronisasi password database otomatis.
+Versi 2.9.7
+- Rich Text Formatting Toolbar: Fitur penulisan email dengan toolbar lengkap gaya Microsoft Word & Gmail (Bold, Italic, Underline, Font Family, Ukuran Huruf, Pewarnaan Teks & Stabilo, Perataan Teks, Daftar Angka/Poin, Indentasi, Sisipkan Link).
+- Dukungan Penuh Format HTML Email Masuk: Rendering aman dengan insulated sandbox container, pemilih mode HTML vs Teks, dan fitur cetak pesan email.
+- Hapus Massal (Bulk Delete): Fitur seleksi pesan dengan checkbox per baris & master checkbox di header untuk menghapus puluhan pesan sekaligus secara instan.
+- Sistem Pagination Rapi: Tampilan pesan per halaman kini default 30 baris dengan opsi kustomisasi (15, 30, 50, 100 baris) dan navigasi halaman yang nyaman.
