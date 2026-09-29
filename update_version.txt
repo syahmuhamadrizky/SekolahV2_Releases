@@ -1,4 +1,4 @@
-Versi 2.9.4
-- Fix Server Startup Resilience & Zero-503: Menggunakan dynamic lazy-loading modul email sehingga server Node.js tidak akan pernah crash pada saat boot.
-- Penyempurnaan dependensi runtime paket email di package.json dan build release.
-- Webmail Mandiri (IMAP/SMTP SSL) 100% aktif dan berjalan mulus tanpa ketergantungan cPanel port 2096.
+Versi 2.9.5
+- Penyempurnaan Koneksi Mail Server (IMAP/SMTP SSL): Multi-host fallback cerdas (127.0.0.1, localhost, mail domain) untuk koneksi instan bebas firewall/proxy cPanel.
+- Penambahan Antarmuka Sambungkan Password Webmail Mandiri bagi akun PTK yang belum menyimpan kata sandi email di portal.
+- Penanganan error IMAP/SMTP yang aman dan transparan tanpa memicu 500 Internal Server Error.
