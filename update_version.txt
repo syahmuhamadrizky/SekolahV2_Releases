@@ -1,4 +1,4 @@
-Versi 2.9.1
-- Pembaruan Arsitektur Webmail SSO: Menggunakan Endpoint Direct 302 Server-Side Redirect (/api/cpanel/my-webmail-sso-redirect).
-- Menghilangkan Konsumsi Ganda (Double Consumption) Token Sesi cPanel dan Mengatasi Popup Blocker Browser.
-- Penyempurnaan Parameter UAPI Session: Eksekusi Murni login dan domain Sesuai Spesifikasi Resmi cPanel.
+Versi 2.9.2
+- Direct 1-Click Auto-Login Webmail: Menggunakan autentikasi POST langsung dari IP browser pengguna ke server cPanel / Roundcube Webmail.
+- Menghilangkan total kendala Cookie Session Invalid / IP mismatch pada cPanel hosting.
+- Penyimpanan kredensial terenkripsi AES-256-CBC untuk auto-login instan pegawai & admin.
