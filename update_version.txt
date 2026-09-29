@@ -1,5 +1,6 @@
-Versi 2.9.10
-- Fitur Draf Email (Webmail Drafts): Pengguna dapat menyimpan draf pesan email kapan saja tanpa harus langsung mengirimkannya.
-- Folder Draf di Webmail: Folder 'Draf' khusus di sidebar webmail untuk melihat, mencari, dan mengelola daftar draf tersimpan.
-- Lanjutkan Mengedit Draf: Klik pada item draf untuk langsung melanjutkan penulisan dengan seluruh penerima, subjek, isi pesan HTML, dan status tersimpan otomatis.
-- Sinkronisasi Draf Otomatis: Draf yang berhasil dikirim akan dibersihkan secara otomatis, serta mendukung penghapusan massal (bulk delete) untuk draf yang tidak lagi diperlukan.
+Versi 2.9.11
+- Modul Notula Rapat Resmi: Menu Notula Rapat baru untuk pencatatan dan dokumentasi risalah rapat dinas, dewan guru, komite, kurikulum/KBM, SPMB, dan evaluasi sekolah.
+- Daftar Hadir & Presensi Rapat Terintegrasi: Rekapitulasi kehadiran peserta rapat dari database GTK/Pegawai dan tamu undangan eksternal dengan status kehadiran instan.
+- Lampiran Foto Dokumentasi & Berkas: Dukungan multi-upload foto dokumentasi kegiatan rapat dan berkas lampiran (PDF/Dokumen/Spreadsheet).
+- Format Cetak Resmi (Kop Surat & Lembar Risalah): Cetak standar A4 lengkap dengan kop surat resmi sekolah, susunan acara, pokok pembahasan, keputusan/kesimpulan, rencana tindak lanjut (RTL), dan lembar tanda tangan ganda.
+- Sinkronisasi Hak Akses (Role Management): Seluruh menu sistem (termasuk Notula Rapat, Email Pegawai, Permohonan Pindah, Berkas Insentif, dll.) telah 100% terintegrasi di konfigurasi Hak Akses / Role.
