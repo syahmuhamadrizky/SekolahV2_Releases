@@ -1,4 +1,4 @@
 Versi 2.9.6
 - Halaman Khusus Webmail Mandiri (/webmail & /mail): Klien email modern dengan dukungan Dual-Mode Login (Auto-login SSO dari Dashboard & Login Mandiri langsung via Email Resmi + Password).
+- Identitas Pengirim Dinamis: Pengiriman email official sekolah otomatis menggunakan nama resmi sekolah, dan email pegawai otomatis menggunakan nama lengkap guru/pegawai pemilik email.
 - Perbaikan Reset Password Akun Email Official & PTK di server cPanel dengan multi-format fallback serta sinkronisasi password database otomatis.
-- Navigasi Cepat Webmail Halaman Penuh di Dashboard Guru dan Staff.
