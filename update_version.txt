@@ -1,8 +1,8 @@
-Versi 2.9.14
-- Penyederhanaan Form Input Arsip Surat: Menghapus kolom kode klasifikasi manual yang berlebih karena format nomor surat telah menyatu secara dinamis.
-- Penyempurnaan Stabilitas Modul E-Office / Arsip Surat & Disposisi: Auto-check dan migrasi mandiri tabel arsip surat di database, penanganan query resilient, serta pemuatan data yang lebih mulus dan andal tanpa error toast.
-- Modul E-Office / Arsip Surat & Disposisi Digital: Pengarsipan resmi surat masuk dan surat keluar sekolah lengkap dengan buku agenda surat masuk & keluar, unggah scan PDF/berkas lampiran, dan ekspor data ke Excel.
-- Alur Disposisi Pimpinan & Tindak Lanjut GTK: Pimpinan/Kepala Sekolah dapat memberikan instruksi disposisi terarah ke staf/guru terkait, penetapan batas waktu (deadline), catatan pimpinan, pelaporan respon staf, dan cetak Lembar Disposisi Kedinasan A4 ber-Kop Surat resmi.
-- Konfigurasi Format & Penomoran Surat Keluar Otomatis: Format nomor surat keluar 1 kolom fleksibel (contoh: 421.2/XXX/SDN-TT1/MM/YYYY) dengan generator otomatis nomor urut tahunan (XXX), bulan angka Romawi (MM), dan tahun terbit (YYYY) yang terintegrasi di seluruh modul persuratan sekolah.
-- Pembatasan Hak Hapus Notula Rapat & Arsip Surat: Keamanan data persuratan dan risalah rapat di mana dokumen hanya dapat dihapus oleh pembuat aslinya (owner) atau pengguna dengan peran Superadmin.
-- Integrasi Hak Akses Role (Role Management): Menu E-Office / Arsip Surat & Disposisi telah terintegrasi penuh ke dalam sistem manajemen role dan hak akses.
+Versi 2.9.15
+- Modul Baru: Perpustakaan Sekolah (E-Perpus & Sirkulasi Buku Digital): Sistem manajemen perpustakaan modern terintegrasi data Dapodik peserta didik & GTK.
+- Katalog Buku & Koleksi E-Book: Manajemen buku fisik (ISBN, DDC, Klasifikasi, Rak, Stok) serta pembaca E-Book PDF interaktif langsung di dalam aplikasi (in-app reader).
+- Sirkulasi Peminjaman & Pengembalian Otomatis: Pencarian peminjam terintegrasi Dapodik (Siswa & Guru), hitung otomatis tanggal jatuh tempo (+7 hari/kustom), kalkulasi denda keterlambatan, dan pencatatan kondisi fisik buku saat kembali.
+- Cetak Label Punggung Buku & Kartu Anggota: Cetak label barcode/QR untuk ditempel di rak/buku, serta cetak Kartu Anggota Perpustakaan resmi lengkap dengan foto profil siswa.
+- Buku Tamu / Presensi Kunjungan Perpustakaan: Check-in kilat kunjungan siswa, guru, dan tamu luar dengan statistik tujuan kunjungan (baca, pinjam, riset).
+- Pengaturan Perpustakaan Fleksibel & Ekspor Excel: Konfigurasi kuota maksimal pinjam, durasi peminjaman standar, tarif denda per hari, tata tertib perpustakaan, dan ekspor riwayat sirkulasi/katalog ke format Excel.
+- Integrasi Hak Akses Role: Menu Perpustakaan terdaftar di manajemen role pengguna untuk Guru, Petugas Perpus, dan Tenaga Kependidikan.
