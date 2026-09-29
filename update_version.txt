@@ -1,5 +1,4 @@
-Versi 2.8.8
-- Perbaikan Blank Putih / SyntaxError pada Bundle Frontend (Optimasi Chunking Vendor Utils & Build Target ES2020).
-- Resolusi Akurat Nama Pegawai/Guru pada Dashboard: Menampilkan Nama Lengkap Guru/PTK Asli (Bukan Username) secara Konsisten.
-- Multi-Layer Lookup Profil PTK (Pegawai/PTK ID/NIK/NUPTK/NIP) pada Endpoint Otentikasi dan Profil /api/me.
-- Self-Service Email Resmi Sekolah & Ubah Password Mandiri untuk Pegawai/Guru.
+Versi 2.8.9
+- Perbaikan Resolusi Email Sesi Login Guru / Pegawai untuk 1-Click Login Webmail SSO (Auto-Login Roundcube cPanel).
+- Sinkronisasi Akurat Endpoint /api/cpanel/my-webmail-sso dan /api/cpanel/my-change-password dengan Multi-Relasi Database.
+- Optimasi Direct URL Generation pada Sesi Keamanan Webmail cPanel.
