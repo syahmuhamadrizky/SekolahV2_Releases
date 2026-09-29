@@ -1,5 +1,5 @@
-Versi 2.8.4
-- Fitur Pembuatan Email Official / Bebas Sekolah (Preset Cepat & Tanpa Terikat Pegawai).
-- Sinkronisasi Multi-Domain Cerdas Berdasarkan Host Aktif Browser.
-- Tampilan Badge & Avatar Khusus untuk Akun Email Official / Dinas Sekolah.
-- Pemulihan & Optimalisasi Deteksi Akun Email cPanel yang Sudah Ada.
+Versi 2.8.5
+- Penambahan Fitur Granular Email Permissions & Access Mode (Hanya Kirim, Hanya Terima, Kirim & Terima, Suspend).
+- Kontrol saklar switch ON/OFF untuk Izin Kirim (SMTP), Izin Terima (Inbox Mailbox), dan Izin Login (Webmail / IMAP).
+- Integrasi Quick Presets (Normal, No-Reply Broadcast, Support Inbox Only, Suspend).
+- Indikator badge status izin akses real-time pada tabel akun email sekolah & official.
