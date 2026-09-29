@@ -1,4 +1,4 @@
-Versi 2.9.2
-- Direct 1-Click Auto-Login Webmail: Menggunakan autentikasi POST langsung dari IP browser pengguna ke server cPanel / Roundcube Webmail.
-- Menghilangkan total kendala Cookie Session Invalid / IP mismatch pada cPanel hosting.
-- Penyimpanan kredensial terenkripsi AES-256-CBC untuk auto-login instan pegawai & admin.
+Versi 2.9.3
+- Native Webmail Client Terintegrasi: Sistem portal sekolah kini memiliki webmail client mandiri (IMAP/SMTP SSL) tanpa bergantung sama sekali pada antarmuka cPanel atau port 2096.
+- Baca, kirim email (dengan lampiran), balas, teruskan, dan kelola kotak masuk langsung di dalam dashboard portal Dapoy-Schools.
+- Zero Security Token / Session Cookie Error: Komunikasi email berjalan 100% mulus via protokol IMAP/SMTP standar.
