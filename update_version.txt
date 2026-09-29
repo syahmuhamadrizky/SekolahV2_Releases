@@ -1,6 +1,6 @@
-Versi 2.9.11
-- Modul Notula Rapat Resmi: Menu Notula Rapat baru untuk pencatatan dan dokumentasi risalah rapat dinas, dewan guru, komite, kurikulum/KBM, SPMB, dan evaluasi sekolah.
-- Daftar Hadir & Presensi Rapat Terintegrasi: Rekapitulasi kehadiran peserta rapat dari database GTK/Pegawai dan tamu undangan eksternal dengan status kehadiran instan.
-- Lampiran Foto Dokumentasi & Berkas: Dukungan multi-upload foto dokumentasi kegiatan rapat dan berkas lampiran (PDF/Dokumen/Spreadsheet).
-- Format Cetak Resmi (Kop Surat & Lembar Risalah): Cetak standar A4 lengkap dengan kop surat resmi sekolah, susunan acara, pokok pembahasan, keputusan/kesimpulan, rencana tindak lanjut (RTL), dan lembar tanda tangan ganda.
-- Sinkronisasi Hak Akses (Role Management): Seluruh menu sistem (termasuk Notula Rapat, Email Pegawai, Permohonan Pindah, Berkas Insentif, dll.) telah 100% terintegrasi di konfigurasi Hak Akses / Role.
+Versi 2.9.12
+- Modul E-Office / Arsip Surat & Disposisi Digital: Pengarsipan resmi surat masuk dan surat keluar sekolah lengkap dengan buku agenda surat masuk & keluar, unggah scan PDF/berkas lampiran, dan ekspor data ke Excel.
+- Alur Disposisi Pimpinan & Tindak Lanjut GTK: Pimpinan/Kepala Sekolah dapat memberikan instruksi disposisi terarah ke staf/guru terkait, penetapan batas waktu (deadline), catatan pimpinan, pelaporan respon staf, dan cetak Lembar Disposisi Kedinasan A4 ber-Kop Surat resmi.
+- Konfigurasi Format & Penomoran Surat Keluar Otomatis: Format nomor surat keluar 1 kolom fleksibel (contoh: 421.2/XXX/SDN-TT1/MM/YYYY) dengan generator otomatis nomor urut tahunan (XXX), bulan angka Romawi (MM), dan tahun terbit (YYYY) yang terintegrasi di seluruh modul persuratan sekolah.
+- Pembatasan Hak Hapus Notula Rapat & Arsip Surat: Keamanan data persuratan dan risalah rapat di mana dokumen hanya dapat dihapus oleh pembuat aslinya (owner) atau pengguna dengan peran Superadmin.
+- Integrasi Hak Akses Role (Role Management): Menu E-Office / Arsip Surat & Disposisi telah terintegrasi penuh ke dalam sistem manajemen role dan hak akses.
