@@ -1,4 +1,4 @@
-Versi 2.9.0
-- Perbaikan "Your session cookie is invalid" pada 1-Click Login Webmail (cPanel Cookie IP Binding Resolution).
-- Pengiriman Otomatis IP Klien Pengguna ke cPanel UAPI Session Creation untuk Menghindari Penolakan Validasi Cookie Antar-IP.
-- Normalisasi URL Sesi Roundcube cPanel (/login/?app=roundcube).
+Versi 2.9.1
+- Pembaruan Arsitektur Webmail SSO: Menggunakan Endpoint Direct 302 Server-Side Redirect (/api/cpanel/my-webmail-sso-redirect).
+- Menghilangkan Konsumsi Ganda (Double Consumption) Token Sesi cPanel dan Mengatasi Popup Blocker Browser.
+- Penyempurnaan Parameter UAPI Session: Eksekusi Murni login dan domain Sesuai Spesifikasi Resmi cPanel.
