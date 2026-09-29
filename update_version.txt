@@ -1,4 +1,4 @@
-Versi 2.9.5
-- Penyempurnaan Koneksi Mail Server (IMAP/SMTP SSL): Multi-host fallback cerdas (127.0.0.1, localhost, mail domain) untuk koneksi instan bebas firewall/proxy cPanel.
-- Penambahan Antarmuka Sambungkan Password Webmail Mandiri bagi akun PTK yang belum menyimpan kata sandi email di portal.
-- Penanganan error IMAP/SMTP yang aman dan transparan tanpa memicu 500 Internal Server Error.
+Versi 2.9.6
+- Halaman Khusus Webmail Mandiri (/webmail & /mail): Klien email modern dengan dukungan Dual-Mode Login (Auto-login SSO dari Dashboard & Login Mandiri langsung via Email Resmi + Password).
+- Perbaikan Reset Password Akun Email Official & PTK di server cPanel dengan multi-format fallback serta sinkronisasi password database otomatis.
+- Navigasi Cepat Webmail Halaman Penuh di Dashboard Guru dan Staff.
