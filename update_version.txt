@@ -1,5 +1,5 @@
-Versi 2.8.1
-- Manajemen Kuota Email cPanel (Pengaturan Kuota MB & Kuota Unlimited).
-- Preset Kuota Cepat (250MB, 500MB, 1GB, 2GB, 5GB, Custom MB & Unlimited).
-- Modal Atur Kuota Kotak Surat Langsung dari Tabel Email Pegawai.
-- Penyesuaian Tampilan Kuota & Penggunaan Disk cPanel.
+Versi 2.8.2
+- Penyaringan Otomatis Email Pegawai cPanel Sesuai Domain Aktif Aplikasi.
+- Penyembunyian Akun Email Non-Domain pada Shared Hosting.
+- Pembersihan Label Navigasi dan Header Halaman Email Pegawai.
+- Penyesuaian Statistik Kotak Surat & Kuota Sesuai Domain Aktif.
