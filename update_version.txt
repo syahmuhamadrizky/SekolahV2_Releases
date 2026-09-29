@@ -1,5 +1,5 @@
-Versi 2.8.7
-- Fitur Mandiri Pegawai/Guru: Tampilan Info Email Resmi Sekolah di Beranda Dashboard Guru.
-- Fitur Mandiri Pegawai/Guru: Ubah Password Email Sekolah langsung dari Portal Pegawai (Tersinkronisasi ke cPanel UAPI).
-- Generator Password Acak Kuat dan Validasi Keamanan untuk Pegawai.
-- Panduan Setup Mail Client (Gmail / iPhone Mail / Outlook) langsung di Dashboard Pegawai.
+Versi 2.8.8
+- Perbaikan Blank Putih / SyntaxError pada Bundle Frontend (Optimasi Chunking Vendor Utils & Build Target ES2020).
+- Resolusi Akurat Nama Pegawai/Guru pada Dashboard: Menampilkan Nama Lengkap Guru/PTK Asli (Bukan Username) secara Konsisten.
+- Multi-Layer Lookup Profil PTK (Pegawai/PTK ID/NIK/NUPTK/NIP) pada Endpoint Otentikasi dan Profil /api/me.
+- Self-Service Email Resmi Sekolah & Ubah Password Mandiri untuk Pegawai/Guru.
