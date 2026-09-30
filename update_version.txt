@@ -1,8 +1,1 @@
-Versi 2.9.18
-- Modul Penilaian Asesmen Sumatif Tengah Semester (ASTS): Pengisian 1 nilai angka (0-100) per mata pelajaran per semester per siswa standar Dapodik.
-- Matriks Mapel Default Otomatis: Disesuaikan secara cerdas berdasarkan Bentuk Sekolah (SD/SMP/SMA/SMK), Kurikulum (Kurikulum Merdeka/K13), dan Tingkat Kelas (Fase A-F).
-- Fleksibilitas Konfigurasi Mapel: Tambah mapel kustom, edit KKM/KKTP target, urutan tampil, dan aktif/nonaktifkan mapel.
-- Fitur Input Cepat & Excel: Mendukung Quick Fill, unduh format template Excel, dan impor file Excel untuk input massal secara offline.
-- Rekapitulasi & Leger Nilai: Matriks nilai siswa x mapel dengan perhitungan total nilai, rata-rata kelas, ketuntasan, dan peringkat/ranking otomatis.
-- Cetak Dokumen Resmi: Cetak Leger Nilai ASTS Landscape A4 resmi dengan tanda tangan Wali Kelas & Kepala Sekolah, serta Cetak Rapor Lembar Hasil ASTS Siswa.
-- Akses Mandiri Siswa: Siswa dapat melihat rekap nilai ASTS semester aktif di StudentDashboard.
+Versi 2.9.19
