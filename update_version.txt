@@ -1,5 +1,4 @@
-Versi 2.9.72
-- Standardisasi & Penyempurnaan Predikat Nilai ASTS: Menyelaraskan konversi interval predikat nilai satuan per mapel dan predikat rekap rata-rata sesuai panduan resmi kurikulum (A: >=90 / Sangat Baik, B: >=80 / Baik, C: >=KKM / Cukup, D: <KKM / Perlu Bimbingan).
-- Sinkronisasi Predikat Rerata Rapor & Ekspor Leger: Menambahkan kolom predikat & keterangan capaian rata-rata siswa pada ekspor Excel Leger serta lembar cetak rapor ASTS.
-- Konsistensi Predikat Sikap di Semua Modul: Menjamin nilai sikap spiritual & sosial default berpredikat B (Baik) di seluruh cetak lembar rapor, portal siswa, dan rekap nilai.
-- Keselarasan Portal Siswa: Penilaian ASTS pada portal siswa kini menggunakan penghitungan predikat terintegrasi dengan KKM masing-masing mapel.
+Versi 2.9.73
+- Otomatisasi Kepala Sekolah dari Data PTK Aktif: Seluruh modul cetak surat (Surat Panggilan, Surat Pernyataan, Keterangan Rombel, Leger ASTS, dsb.), pengaturan jadwal, serta profil sekolah kini secara otomatis mendeteksi dan mengambil nama lengkap serta NIP Kepala Sekolah dari data pegawai (PTK) yang memiliki jabatan/tugas tambahan Kepala Sekolah pada Tahun Pelajaran aktif.
+- Penghapusan Hardcode Nama Anomali: Menghilangkan seluruh hardcode nama kepala sekolah terdahulu dan nilai default statis di seluruh komponen dashboard dan modul cetak.
+- Konsistensi Penandatanganan & Format Gelar: Menstandarkan format gelar (depan & belakang) pada penandatanganan dokumen dan rekap di seluruh sistem.
