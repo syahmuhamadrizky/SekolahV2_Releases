@@ -1,5 +1,5 @@
-Versi 2.9.61
-- Tampilan KOP Gambar 100% Full-Width: Gambar KOP surat instansi dari pengaturan situs membentang penuh 100% selebar dokumen cetak rapor & leger tanpa pemotongan lebar/tinggi.
-- Gelar Lengkap Otomatis Kepala Sekolah & Wali Kelas: Penambahan gelar depan dan gelar belakang penanda tangan resmi dari basis data PTK Dapodik.
-- Perataan Presisi Format Tanda Tangan Rapor & Leger: Penjajaran horizontal satu garis lurus untuk tanda tangan Orang Tua, Wali Kelas, dan Kepala Sekolah.
-- Konfigurasi Titimangsa Fleksibel: Pemilihan tanggal cetak rapor dan leger dapat ditentukan langsung melalui toolbar pengisian dan rekapitulasi nilai ASTS.
+Versi 2.9.62
+- Template & Import Excel Fleksibel ASTS: Dukungan template Excel per mapel dan template matriks seluruh kelas dengan pencocokan cerdas ID, NISN, NIPD, atau Nama Siswa.
+- Format Penyatuan Kolom Sub-Mapel: Huruf sub-mapel (a., b., c.) menyatu 1 kolom dengan nama mata pelajaran pada lembar cetak rapor ASTS.
+- Auto Catatan & Toleransi Input: Pengisian otomatis deskripsi KKTP jika kolom catatan Excel kosong serta toleransi format angka koma/titik dan predikat ekskul.
+- Katalog Standar Cabang Seni: Dukungan lengkap preset varian Seni Musik, Seni Rupa, Seni Tari, dan Seni Teater di seluruh jenjang pendidikan.
