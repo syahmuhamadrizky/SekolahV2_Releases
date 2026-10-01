@@ -1,4 +1,4 @@
-Versi 2.9.58
-- Penyempurnaan KOP Surat Resmi Full Width 100%: Layout tabel fixed presisi tepi-ke-tepi (edge-to-edge), logo rata kiri penuh, teks instansi/sekolah luas terpusat, dan garis ganda pembatas membentang penuh 100% selebar lembar rapor.
-- Hirarki Seni Budaya & Sub-Cabang Seni: Nilai diinput langsung pada cabang seni (Seni Rupa, Seni Musik) dan tersusun berjenjang (a, b, c) di bawah Seni Budaya dan Prakarya pada cetak Rapor ASTS.
-- Bebas Duplikasi Mapel Dinamis: Pengelompokan Mulok vs Ekskul saling mengunci secara eksklusif.
+Versi 2.9.59
+- Fleksibilitas Penuh Pengelompokan Bahasa Inggris (Wajib / Muatan Lokal / Ekstrakulikuler): Mata pelajaran Bahasa Inggris kini dapat dipilih dan dikonfigurasi secara bebas sebagai Intrakurikuler Wajib, Muatan Lokal, ataupun Ekstrakurikuler sesuai dengan kebijakan kurikulum sekolah/daerah masing-masing.
+- Preset Template Mapel Presisi: Pilihan template katalog mapel standar kini secara instan mengisi nama, kode mapel, dan kelompok mapel yang tepat tanpa terjadinya penimpaan duplikasi nama.
+- Integrasi Rapor & Leger Akurat: Penempatan Bahasa Inggris di Rapor ASTS otomatis terintegrasi ke Tabel A (Wajib), Tabel B (Mulok), atau Tabel C (Ekskul Predikat A-E) secara eksklusif.
