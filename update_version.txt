@@ -1,5 +1,5 @@
-Versi 2.9.68
-- Pembaruan Cetak Rapor ASTS: Kolom Ketercapaian/Status Tuntas pada lembar rapor siswa diganti menjadi PREDIKAT (A, B, C, D) yang dihitung secara dinamis menyesuaikan interval KKTP/KKM tiap mata pelajaran.
-- Predikat pada Rekapitulasi Rapor: Menampilkan Predikat Rata-Rata beserta keterangannya pada kotak statistik rekapitulasi rapor siswa.
-- Predikat pada Tabel List Nilai: Menambahkan kolom Predikat di tabel form input nilai per mapel dengan tetap mempertahankan kolom Status Ketuntasan.
-- Perbaikan Reset/Kosongkan Nilai & Predikat Ekskul: Nilai atau predikat ekstrakurikuler kini dapat dikosongkan/direset kembali secara otomatis di database.
+Versi 2.9.69
+- Penambahan Penilaian Sikap Spiritual & Sikap Sosial ASTS: Modul penilaian karakter dan sikap lengkap dengan 4 indikator spiritual dan 6 indikator sosial berstatus default tercentang semua (predikat A).
+- Kustomisasi Fleksibel Dewan Guru: Guru dapat mengatur predikat (A/B/C/D), mengklik indikator terpenuhi untuk setiap siswa, serta mengedit deskripsi narasi capaian atau membuat otomatis.
+- Fitur Aksi Massal Sikap: Dukungan "Centang Semua Indikator (Semua Siswa)" dan "Set Semua Predikat A" untuk mempercepat penilaian sekelas.
+- Integrasi Cetak Rapor & Leger ASTS: Tabel Penilaian Perkembangan Karakter & Sikap otomatis disisipkan dan dicetak pada lembar Rapor ASTS siswa serta dapat diakses di dashboard siswa.
