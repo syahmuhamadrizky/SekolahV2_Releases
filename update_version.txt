@@ -1,5 +1,4 @@
-Versi 2.9.55
-- Peningkatan Format Cetak Rapor ASTS (Rapor Bayangan): Layout KOP surat resmi sekolah diperlebar penuh (full width) dan proporsional dengan penempatan logo presisi.
-- Optimasi Margin & Tipografi: Format teks instansi pemerintah, nama sekolah, alamat, dan kontak lebih rapi sesuai standar resmi surat dinas tanpa terlipat sempit.
-- Rapor Asesmen Sumatif Tengah Semester (ASTS): Rekap nilai intrakurikuler, mulok, ekskul, catatan wali kelas, dan pengesahan 3 pihak resmi.
-- Cetak Massal 1 Rombel: Dukungan cetak semua siswa satu kelas sekaligus dengan page-break otomatis.
+Versi 2.9.56
+- Perbaikan Pengelompokan Mapel Dinamis (Mulok vs Ekskul): Mapel fleksibel seperti BTQ atau Tahfidz kini 100% mengikuti kriteria kelompok yang dipilih (Ekskul / Mulok / Wajib) tanpa terjadi duplikasi cetak pada Rapor ASTS.
+- Peningkatan Format Cetak Rapor ASTS: KOP Surat resmi melebar penuh (full-width), proporsional, dan ringkasan statistik berfokus pada Jumlah Nilai dan Rata-Rata.
+- Cetak Massal 1 Rombel: Dukungan cetak seluruh rapor siswa dalam 1 kelas sekaligus dengan page-break otomatis.
