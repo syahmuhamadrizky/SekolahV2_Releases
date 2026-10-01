@@ -1,5 +1,6 @@
-Versi 2.9.63
-- Format Huruf Kapital (UPPERCASE) Nama Siswa: Nama peserta didik pada lembar cetak rapor ASTS, cetak leger landscape, dan tabel antarmuka ditampilkan dalam huruf kapital standar dokumen resmi.
-- Pembersihan Header Rapor ASTS: Penghapusan teks 'Rapor Bayangan' pada header dokumen cetak agar menjadi format resmi Lembar Hasil ASTS.
-- Template & Import Excel Fleksibel ASTS: Dukungan template Excel per mapel dan template matriks seluruh kelas dengan pencocokan cerdas ID, NISN, NIPD, atau Nama Siswa.
-- Auto Catatan & Toleransi Input: Pengisian otomatis deskripsi KKTP jika kolom catatan Excel kosong serta toleransi format angka koma/titik dan predikat ekskul.
+Versi 2.9.64
+- Penilaian Ekstrakurikuler Berbasis Predikat Murni: Seluruh kegiatan ekstrakurikuler dinilai murni dengan Predikat (A, B, C, D, E) tanpa nilai angka KKTP dan tidak dihitung ke akumulasi total nilai atau pembagian rata-rata rapor.
+- Form Input & Spreadsheet Matriks Ekskul Interaktif: Tombol pilihan predikat (A: Sangat Baik, B: Baik, C: Cukup, D: Kurang, E: Sangat Kurang) pada form input per mapel dan dropdown predikat pada mode matriks kelas.
+- Pemisahan Tabel Cetak Rapor ASTS: Ekstrakurikuler dimuat khusus pada Tabel C dengan format No, Kegiatan Ekstrakurikuler, Predikat, dan Keterangan.
+- Template & Import Excel Ekstrakurikuler: Penyesuaian kolom Predikat ASTS (A/B/C/D/E) pada template download dan import nilai Excel.
+- Tampilan Dashboard Siswa: Kartu hasil belajar siswa untuk mapel ekstrakurikuler menampilkan badge predikat dan keterangan dengan rapi.
