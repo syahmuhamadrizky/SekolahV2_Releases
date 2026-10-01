@@ -1,1 +1,5 @@
-Versi 2.9.50
+Versi 2.9.51
+- Penilaian ASTS: Format predikat A-E khusus Ekstrakurikuler tanpa deskripsi catatan.
+- Pemisahan Akumulasi Nilai: Ekstrakurikuler dan Muatan Lokal dipisahkan dan tidak dihitung ke dalam Rerata & Total Nilai Wajib.
+- Barometer Mata Pelajaran: Fitur geser urutan mapel (tombol panah atas/bawah & Drag and Drop) dengan penyimpanan urutan instan ke database.
+- Optimasi & Kestabilan: Auto-load master barometer mapel dan perlindungan safe rendering pada menu Penilaian ASTS.
