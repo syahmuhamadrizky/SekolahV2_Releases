@@ -1,4 +1,5 @@
-Versi 2.9.59
-- Fleksibilitas Penuh Pengelompokan Bahasa Inggris (Wajib / Muatan Lokal / Ekstrakulikuler): Mata pelajaran Bahasa Inggris kini dapat dipilih dan dikonfigurasi secara bebas sebagai Intrakurikuler Wajib, Muatan Lokal, ataupun Ekstrakurikuler sesuai dengan kebijakan kurikulum sekolah/daerah masing-masing.
-- Preset Template Mapel Presisi: Pilihan template katalog mapel standar kini secara instan mengisi nama, kode mapel, dan kelompok mapel yang tepat tanpa terjadinya penimpaan duplikasi nama.
-- Integrasi Rapor & Leger Akurat: Penempatan Bahasa Inggris di Rapor ASTS otomatis terintegrasi ke Tabel A (Wajib), Tabel B (Mulok), atau Tabel C (Ekskul Predikat A-E) secara eksklusif.
+Versi 2.9.60
+- Format KOP Surat Resmi Lebih Lebar & Bolder: Penyesuaian tipografi teks instansi/sekolah yang lebih lebar, proporsional, serta garis pembatas ganda (double border) solid 100% selebar halaman dokumen cetak rapor & leger landscape.
+- Perataan Presisi Format Tanda Tangan Rapor & Leger: Penjajaran horizontal satu garis lurus untuk tanda tangan Orang Tua, Wali Kelas, dan Kepala Sekolah dengan penempatan titimangsa yang proporsional.
+- Fleksibilitas Pengelompokan Bahasa Inggris (Wajib / Mulok / Ekstrakulikuler): Mata pelajaran Bahasa Inggris dapat ditentukan secara bebas pada seluruh jenjang pendidikan (SD, SMP, SMA, SMK).
+- Konfigurasi Titimangsa Interaktif: Pemilihan tanggal cetak rapor dan leger dapat diatur langsung melalui toolbar pengisian dan rekapitulasi nilai ASTS.
