@@ -1,7 +1,6 @@
-Versi 2.9.66
-- Watermark Logo Sekolah Otomatis di Setiap Lembar Halaman Cetak (Multi-Page): Penerapan fixed background watermark di mesin cetak browser sehingga logo sekolah muncul tepat di tengah setiap lembar halaman fisik kertas/PDF (halaman 1, halaman 2, dst. serta cetak massal seluruh rombel).
-- Penilaian Ekstrakurikuler Berbasis Predikat Murni: Seluruh kegiatan ekstrakurikuler dinilai murni dengan Predikat (A, B, C, D, E) tanpa nilai angka KKTP dan tidak dihitung ke akumulasi total nilai atau pembagian rata-rata rapor.
-- Form Input & Spreadsheet Matriks Ekskul Interaktif: Tombol pilihan predikat (A: Sangat Baik, B: Baik, C: Cukup, D: Kurang, E: Sangat Kurang) pada form input per mapel dan dropdown predikat pada mode matriks kelas.
-- Pemisahan Tabel Cetak Rapor ASTS: Ekstrakurikuler dimuat khusus pada Tabel C dengan format No, Kegiatan Ekstrakurikuler, Predikat, dan Keterangan.
-- Template & Import Excel Ekstrakurikuler: Penyesuaian kolom Predikat ASTS (A/B/C/D/E) pada template download dan import nilai Excel.
-- Tampilan Dashboard Siswa: Kartu hasil belajar siswa untuk mapel ekstrakurikuler menampilkan badge predikat dan keterangan dengan rapi.
+Versi 2.9.67
+- Sinkronisasi Barometer Kategori Mata Pelajaran & Ekskul: Pengaturan kelompok mapel (Ekstrakulikuler, Muatan Lokal, Wajib, Peminatan, Kejuruan) dari Master Data / Barometer Database menjadi prioritas absolut di seluruh antarmuka (Form Input Per Mapel, Spreadsheet Matriks Kelas, Leger Nilai, Rapor ASTS, Cetak Massal, dan Portal Siswa).
+- Perbaikan Deteksi Ekskul vs Mulok: Mapel seperti BTQ/Tahfidz yang diatur sebagai Ekstrakurikuler di database tidak lagi tertimpa deteksi nama Mulok dan sepenuhnya beroperasi dalam mode penilaian predikat huruf (A, B, C, D, E).
+- Watermark Logo Sekolah Otomatis di Setiap Lembar Halaman Cetak (Multi-Page): Penerapan fixed background watermark di mesin cetak browser sehingga logo sekolah muncul tepat di tengah setiap lembar halaman fisik kertas/PDF.
+- Penilaian Ekstrakurikuler Berbasis Predikat Murni: Seluruh kegiatan ekstrakurikuler dinilai murni dengan Predikat tanpa nilai angka KKTP dan dikecualikan dari total nilai maupun rata-rata peringkat.
+- Template & Import/Export Excel Spreadsheet Matriks ASTS: Sinkronisasi kolom predikat untuk mapel ekskul pada template download, import excel, dan export leger.
