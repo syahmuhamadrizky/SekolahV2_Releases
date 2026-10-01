@@ -1,4 +1,5 @@
-Versi 2.9.64
+Versi 2.9.65
+- Watermark Logo Sekolah Elegan pada Cetak Rapor ASTS: Penambahan watermark logo sekolah samar-samar di tengah dokumen cetak rapor ASTS (perorangan & massal) dengan rasio presisi dan transparansi elegan (print-color-adjust exact).
 - Penilaian Ekstrakurikuler Berbasis Predikat Murni: Seluruh kegiatan ekstrakurikuler dinilai murni dengan Predikat (A, B, C, D, E) tanpa nilai angka KKTP dan tidak dihitung ke akumulasi total nilai atau pembagian rata-rata rapor.
 - Form Input & Spreadsheet Matriks Ekskul Interaktif: Tombol pilihan predikat (A: Sangat Baik, B: Baik, C: Cukup, D: Kurang, E: Sangat Kurang) pada form input per mapel dan dropdown predikat pada mode matriks kelas.
 - Pemisahan Tabel Cetak Rapor ASTS: Ekstrakurikuler dimuat khusus pada Tabel C dengan format No, Kegiatan Ekstrakurikuler, Predikat, dan Keterangan.
