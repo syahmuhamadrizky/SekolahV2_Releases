@@ -1,6 +1,6 @@
-Versi 2.9.70
-- Penambahan Penilaian Sikap Spiritual & Sikap Sosial ASTS: Modul penilaian karakter dan sikap lengkap dengan 4 indikator spiritual dan 6 indikator sosial berstatus default tercentang semua (predikat A).
-- Penataan Posisi Paling Atas di Lembar Rapor: Tabel Penilaian Perkembangan Karakter & Sikap (Spiritual & Sosial) ditempatkan di posisi paling atas (Bagian A) sebelum Mata Pelajaran Wajib.
-- Kustomisasi Fleksibel Dewan Guru: Guru dapat mengatur predikat (A/B/C/D), mengklik indikator terpenuhi untuk setiap siswa, serta mengedit deskripsi narasi capaian atau membuat otomatis.
-- Fitur Aksi Massal Sikap: Dukungan "Centang Semua Indikator (Semua Siswa)" dan "Set Semua Predikat A" untuk mempercepat penilaian sekelas.
-- Integrasi Cetak Rapor, Leger & Portal Siswa: Tabel Penilaian Perkembangan Karakter & Sikap otomatis disisipkan pada lembar Rapor ASTS siswa, rekapitulasi leger, serta portal dashboard siswa.
+Versi 2.9.71
+- Perbaikan Sistem Simpan Otomatis (Auto-Save) Sikap ASTS: Memperbaiki sinkronisasi payload batch dan status auto-save real-time agar tersimpan sempurna tanpa kendala.
+- Pembaruan Standar Predikat Default B (Baik): Nilai default predikat sikap spiritual dan sikap sosial disesuaikan menjadi B (Baik) dengan seluruh indikator tetap tercentang secara default.
+- Tombol Aksi Cepat Massal Sikap: Menambahkan aksi "Set Semua Predikat B (Baik)" dan "Set Semua Predikat A" untuk fleksibilitas pengaturan nilai sekelas.
+- Penataan Posisi Paling Atas di Rapor ASTS: Penilaian Karakter & Sikap (Spiritual & Sosial) berada di posisi teratas (Bagian A) mendahului daftar mata pelajaran wajib.
+- Sinkronisasi Cetak Lembar Rapor, Leger, & Portal Siswa: Penilaian sikap tampil konsisten dan responsif pada seluruh modul terkait.
