@@ -1,4 +1,4 @@
-Versi 2.9.56
-- Perbaikan Pengelompokan Mapel Dinamis (Mulok vs Ekskul): Mapel fleksibel seperti BTQ atau Tahfidz kini 100% mengikuti kriteria kelompok yang dipilih (Ekskul / Mulok / Wajib) tanpa terjadi duplikasi cetak pada Rapor ASTS.
-- Peningkatan Format Cetak Rapor ASTS: KOP Surat resmi melebar penuh (full-width), proporsional, dan ringkasan statistik berfokus pada Jumlah Nilai dan Rata-Rata.
-- Cetak Massal 1 Rombel: Dukungan cetak seluruh rapor siswa dalam 1 kelas sekaligus dengan page-break otomatis.
+Versi 2.9.57
+- Hirarki Seni Budaya & Sub-Cabang Seni (Seni Rupa, Seni Musik): Nilai diinput langsung per cabang seni tanpa perlu mengisi parent Seni Budaya secara terpisah, dan pada cetak Rapor ASTS otomatis tersusun rapi secara berjenjang (6. Seni Budaya dan Prakarya -> a. Seni Rupa, b. Seni Musik).
+- Perbaikan Pengelompokan Dinamis (Mulok vs Ekskul): Mapel fleksibel seperti BTQ/Tahfidz mutlak mengikuti kriteria kelompok yang dipilih tanpa duplikasi cetak.
+- Format Cetak Rapor ASTS Resmi: KOP surat melebar penuh, rekap statistik terfokus, dan lembar tanda tangan 3 pihak.
