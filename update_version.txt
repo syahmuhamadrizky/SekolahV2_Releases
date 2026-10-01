@@ -1,4 +1,4 @@
-Versi 2.9.73
-- Otomatisasi Kepala Sekolah dari Data PTK Aktif: Seluruh modul cetak surat (Surat Panggilan, Surat Pernyataan, Keterangan Rombel, Leger ASTS, dsb.), pengaturan jadwal, serta profil sekolah kini secara otomatis mendeteksi dan mengambil nama lengkap serta NIP Kepala Sekolah dari data pegawai (PTK) yang memiliki jabatan/tugas tambahan Kepala Sekolah pada Tahun Pelajaran aktif.
-- Penghapusan Hardcode Nama Anomali: Menghilangkan seluruh hardcode nama kepala sekolah terdahulu dan nilai default statis di seluruh komponen dashboard dan modul cetak.
-- Konsistensi Penandatanganan & Format Gelar: Menstandarkan format gelar (depan & belakang) pada penandatanganan dokumen dan rekap di seluruh sistem.
+Versi 2.9.74
+- Pembersihan Menyeluruh & Penyelarasan Kepala Sekolah ASTS: Memperbarui endpoint pengaturan sekolah dan backend leger ASTS agar selalu menyalurkan data Kepala Sekolah aktif dari database PTK Dapodik secara dinamis dan mensterilkan sisa cache data anomali pada database.
+- Sanitasi Otomatis Database: Menambahkan pembersihan otomatis pada record pengaturan sekolah saat booting agar data lama yang tersimpan di database langsung dibersihkan dan disinkronkan ke PTK aktif.
+- Rapor & Leger ASTS Bersih & Presisi: Mengunci filter anti-anomali pada cetak lembar hasil ASTS dan leger sehingga nama Kepala Sekolah yang tampil murni sesuai PTK penugasan aktif (Arsiati, S.Pd.SD, M.Pd).
