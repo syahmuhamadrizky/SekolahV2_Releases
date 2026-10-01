@@ -1,5 +1,5 @@
-Versi 2.9.52
-- Penilaian ASTS: Format predikat A-E khusus Ekstrakurikuler tanpa deskripsi catatan.
-- Akumulasi Nilai: Muatan Lokal (Mulok) masuk ke dalam Total Nilai dan Rerata Nilai bersama Mapel Wajib (hanya Ekstrakurikuler yang tidak masuk rerata).
+Versi 2.9.53
+- Perbaikan Penilaian ASTS: Mengatasi runtime error type safety (f.toLowerCase) pada komponen seleksi, filter, dan dashboard.
+- Akumulasi Nilai ASTS: Muatan Lokal (Mulok) masuk ke dalam Total Nilai dan Rerata Nilai bersama Mapel Wajib (hanya Ekstrakurikuler yang tidak masuk rerata).
+- Format Ekskul ASTS: Predikat A-E khusus Ekstrakurikuler tanpa deskripsi catatan.
 - Barometer Mata Pelajaran: Fitur geser urutan mapel (tombol panah atas/bawah & Drag and Drop) dengan penyimpanan urutan instan ke database.
-- Kestabilan Dashboard: Perbaikan error handling dan auto-recovery pada mode login Administrator.
