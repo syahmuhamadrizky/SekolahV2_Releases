@@ -1,6 +1,5 @@
-Versi 2.9.71
-- Perbaikan Sistem Simpan Otomatis (Auto-Save) Sikap ASTS: Memperbaiki sinkronisasi payload batch dan status auto-save real-time agar tersimpan sempurna tanpa kendala.
-- Pembaruan Standar Predikat Default B (Baik): Nilai default predikat sikap spiritual dan sikap sosial disesuaikan menjadi B (Baik) dengan seluruh indikator tetap tercentang secara default.
-- Tombol Aksi Cepat Massal Sikap: Menambahkan aksi "Set Semua Predikat B (Baik)" dan "Set Semua Predikat A" untuk fleksibilitas pengaturan nilai sekelas.
-- Penataan Posisi Paling Atas di Rapor ASTS: Penilaian Karakter & Sikap (Spiritual & Sosial) berada di posisi teratas (Bagian A) mendahului daftar mata pelajaran wajib.
-- Sinkronisasi Cetak Lembar Rapor, Leger, & Portal Siswa: Penilaian sikap tampil konsisten dan responsif pada seluruh modul terkait.
+Versi 2.9.72
+- Standardisasi & Penyempurnaan Predikat Nilai ASTS: Menyelaraskan konversi interval predikat nilai satuan per mapel dan predikat rekap rata-rata sesuai panduan resmi kurikulum (A: >=90 / Sangat Baik, B: >=80 / Baik, C: >=KKM / Cukup, D: <KKM / Perlu Bimbingan).
+- Sinkronisasi Predikat Rerata Rapor & Ekspor Leger: Menambahkan kolom predikat & keterangan capaian rata-rata siswa pada ekspor Excel Leger serta lembar cetak rapor ASTS.
+- Konsistensi Predikat Sikap di Semua Modul: Menjamin nilai sikap spiritual & sosial default berpredikat B (Baik) di seluruh cetak lembar rapor, portal siswa, dan rekap nilai.
+- Keselarasan Portal Siswa: Penilaian ASTS pada portal siswa kini menggunakan penghitungan predikat terintegrasi dengan KKM masing-masing mapel.
