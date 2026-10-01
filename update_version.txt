@@ -1,5 +1,6 @@
-Versi 2.9.53
-- Perbaikan Penilaian ASTS: Mengatasi runtime error type safety (f.toLowerCase) pada komponen seleksi, filter, dan dashboard.
-- Akumulasi Nilai ASTS: Muatan Lokal (Mulok) masuk ke dalam Total Nilai dan Rerata Nilai bersama Mapel Wajib (hanya Ekstrakurikuler yang tidak masuk rerata).
-- Format Ekskul ASTS: Predikat A-E khusus Ekstrakurikuler tanpa deskripsi catatan.
-- Barometer Mata Pelajaran: Fitur geser urutan mapel (tombol panah atas/bawah & Drag and Drop) dengan penyimpanan urutan instan ke database.
+Versi 2.9.54
+- Cetak Lembar Rapor ASTS Siswa Lengkap: Format cetak Rapor Bayangan / Asesmen Sumatif Tengah Semester (ASTS) resmi per siswa dengan KOP Surat Resmi Sekolah (Logo, Instansi Pemerintah, Dinas Pendidikan, NPSN, Kontak, Double Border Line).
+- Pembagian Kelompok Mapel Terstruktur: Pengelompokan tabel Mata Pelajaran Wajib (Intrakurikuler), Muatan Lokal (Mulok), dan Ekstrakurikuler (Predikat & Keterangan).
+- Rekapitulasi & Catatan Wali Kelas: Jumlah Nilai, Rata-Rata Nilai Akademik, Peringkat Kelas, dan Saran Motivasi Belajar.
+- Pengesahan Resmi 3 Pihak: Lembar tanda tangan Orang Tua / Wali Siswa, Wali Kelas (dengan Gelar & NIP), dan Kepala Sekolah (dengan Gelar & NIP).
+- Cetak Massal 1 Rombel: Tombol "Cetak Semua Rapor ASTS" dengan pemisah halaman (page-break) untuk mencetak seluruh rapor kelas sekaligus.
