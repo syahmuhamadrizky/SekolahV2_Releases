@@ -1,4 +1,4 @@
-Versi 2.9.57
-- Hirarki Seni Budaya & Sub-Cabang Seni (Seni Rupa, Seni Musik): Nilai diinput langsung per cabang seni tanpa perlu mengisi parent Seni Budaya secara terpisah, dan pada cetak Rapor ASTS otomatis tersusun rapi secara berjenjang (6. Seni Budaya dan Prakarya -> a. Seni Rupa, b. Seni Musik).
-- Perbaikan Pengelompokan Dinamis (Mulok vs Ekskul): Mapel fleksibel seperti BTQ/Tahfidz mutlak mengikuti kriteria kelompok yang dipilih tanpa duplikasi cetak.
-- Format Cetak Rapor ASTS Resmi: KOP surat melebar penuh, rekap statistik terfokus, dan lembar tanda tangan 3 pihak.
+Versi 2.9.58
+- Penyempurnaan KOP Surat Resmi Full Width 100%: Layout tabel fixed presisi tepi-ke-tepi (edge-to-edge), logo rata kiri penuh, teks instansi/sekolah luas terpusat, dan garis ganda pembatas membentang penuh 100% selebar lembar rapor.
+- Hirarki Seni Budaya & Sub-Cabang Seni: Nilai diinput langsung pada cabang seni (Seni Rupa, Seni Musik) dan tersusun berjenjang (a, b, c) di bawah Seni Budaya dan Prakarya pada cetak Rapor ASTS.
+- Bebas Duplikasi Mapel Dinamis: Pengelompokan Mulok vs Ekskul saling mengunci secara eksklusif.
