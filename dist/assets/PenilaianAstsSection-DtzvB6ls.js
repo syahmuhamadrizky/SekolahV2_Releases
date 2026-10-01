@@ -255,7 +255,7 @@ import{r as g,j as e}from"./vendor-react-Cq2hLklJ.js";import{r as Rt,u as ge,w a
                 </div>
 
                 <!-- REKAPITULASI & STATISTIK SISWA -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 6px 10px; background-color: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 8px; text-align: center; font-size: 11px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 6px 10px; background-color: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 8px; text-align: center; font-size: 11px;">
                     <div>
                         <span style="display: block; font-size: 9px; font-weight: 800; text-transform: uppercase; color: #64748b;">Jumlah Nilai (Wajib & Mulok)</span>
                         <span style="font-size: 13.5px; font-weight: 900; color: #0f172a;">${d.toFixed(2)}</span>
@@ -263,10 +263,6 @@ import{r as g,j as e}from"./vendor-react-Cq2hLklJ.js";import{r as Rt,u as ge,w a
                     <div>
                         <span style="display: block; font-size: 9px; font-weight: 800; text-transform: uppercase; color: #64748b;">Rata-Rata Nilai</span>
                         <span style="font-size: 13.5px; font-weight: 900; color: #1d4ed8;">${N}</span>
-                    </div>
-                    <div>
-                        <span style="display: block; font-size: 9px; font-weight: 800; text-transform: uppercase; color: #64748b;">Peringkat di Kelas</span>
-                        <span style="font-size: 13.5px; font-weight: 900; color: #047857;">${a.ranking?`${a.ranking} dari ${k?.stats?.total_students||"-"}`:"-"}</span>
                     </div>
                 </div>
 
