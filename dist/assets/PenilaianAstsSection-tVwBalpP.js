@@ -2,32 +2,32 @@ import{r as h,j as e}from"./vendor-react-Cq2hLklJ.js";import{r as Xt,u as we,w a
                 <div style="margin-bottom: ${n?"16px":"12px"}; width: 100%; text-align: center;">
                     <img src="${i}" alt="KOP Surat" style="width: 100%; max-height: ${n?"160px":"135px"}; object-fit: contain; display: block; margin: 0 auto;" />
                 </div>
-            `;const r=t?.logo_url||a?.logo_url||t?.hero_image_url||"",s=t?.kota||t?.kabupaten||a?.kota||a?.kabupaten||"TANGERANG",o=s.replace(/^Kota /i,"").replace(/^Kabupaten /i,"").trim(),d=s.toUpperCase().startsWith("KAB")?"KABUPATEN":"KOTA",m=t?.school_name||a?.school_name||"SEKOLAH DASAR NEGERI",p=t?.status_sekolah||a?.status_sekolah||"Negeri",c=t?.kecamatan||a?.kecamatan||"",x=t?.kelurahan||a?.kelurahan||"",g=t?.contact_address||a?.contact_address||t?.alamat_jalan||a?.alamat_jalan||"",y=t?.contact_phone||a?.contact_phone||t?.nomor_telepon||"",S=t?.contact_email||a?.contact_email||"",T=t?.website||a?.website||"",D=t?.npsn||a?.npsn||"-",A=n?96:85,B=n?"110px":"90px";return`
-            <div style="width: 100%; margin-bottom: ${n?"16px":"14px"};">
+            `;const r=t?.logo_url||a?.logo_url||t?.hero_image_url||"",s=t?.kota||t?.kabupaten||a?.kota||a?.kabupaten||"TANGERANG",o=s.replace(/^Kota /i,"").replace(/^Kabupaten /i,"").trim(),d=s.toUpperCase().startsWith("KAB")?"KABUPATEN":"KOTA",m=t?.school_name||a?.school_name||"SEKOLAH DASAR NEGERI",p=t?.status_sekolah||a?.status_sekolah||"Negeri",c=t?.kecamatan||a?.kecamatan||"",x=t?.kelurahan||a?.kelurahan||"",g=t?.contact_address||a?.contact_address||t?.alamat_jalan||a?.alamat_jalan||"",y=t?.contact_phone||a?.contact_phone||t?.nomor_telepon||"",S=t?.contact_email||a?.contact_email||"",T=t?.website||a?.website||"",D=t?.npsn||a?.npsn||"-",A=n?115:100,B=n?"125px":"105px";return`
+            <div style="width: 100%; margin-bottom: ${n?"18px":"16px"};">
                 <table style="width: 100%; border: none; border-collapse: collapse; margin: 0; padding: 0;">
                     <tr style="border: none;">
                         <td style="border: none; width: ${B}; min-width: ${B}; max-width: ${B}; vertical-align: middle; text-align: left; padding: 0;">
                             ${r?`
-                                <img src="${r}" alt="Logo Sekolah" style="width: ${A}px; height: ${A}px; object-fit: contain; display: block;" />
+                                <img src="${r}" alt="Logo Sekolah" style="max-width: ${A}px; max-height: ${A}px; width: auto; height: auto; object-fit: contain; display: block;" />
                             `:`
-                                <div style="width: ${A-5}px; height: ${A-5}px; border: 2px dashed #94a3b8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; color: #64748b;">LOGO</div>
+                                <div style="width: ${A-10}px; height: ${A-10}px; border: 2px dashed #94a3b8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; color: #64748b;">LOGO</div>
                             `}
                         </td>
-                        <td style="border: none; vertical-align: middle; text-align: center; padding: 0 10px;">
-                            <p style="font-size: ${n?"14.5pt":"13pt"}; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 1px 0; color: #000000; line-height: 1.2;">
+                        <td style="border: none; vertical-align: middle; text-align: center; padding: 0 4px;">
+                            <p style="font-size: ${n?"16.5pt":"15pt"}; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; margin: 0 0 1px 0; color: #000000; line-height: 1.15;">
                                 PEMERINTAH ${d} ${o.toUpperCase()}
                             </p>
-                            <p style="font-size: ${n?"16pt":"14.5pt"}; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 2px 0; color: #000000; line-height: 1.2;">
+                            <p style="font-size: ${n?"18.5pt":"16.5pt"}; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; margin: 0 0 2px 0; color: #000000; line-height: 1.15;">
                                 DINAS PENDIDIKAN DAN KEBUDAYAAN
                             </p>
-                            <h1 style="font-size: ${n?"18.5pt":"16pt"}; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 2px 0; color: #000000; line-height: 1.25;">
+                            <h1 style="font-size: ${n?"21.5pt":"19pt"}; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 2px 0; color: #000000; line-height: 1.2;">
                                 ${p.toLowerCase()==="swasta"?"":"UPT SATUAN PENDIDIKAN "}${m.toUpperCase()}
                             </h1>
-                            ${c?`<p style="font-size: ${n?"12pt":"11pt"}; font-weight: 700; text-transform: uppercase; margin: 0 0 2px 0; color: #000000; line-height: 1.2;">KECAMATAN ${c.toUpperCase()}</p>`:""}
-                            <p style="font-size: ${n?"10pt":"9.5pt"}; margin: 0 0 1px 0; color: #1e293b; line-height: 1.25;">
+                            ${c?`<p style="font-size: ${n?"14pt":"13pt"}; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 2px 0; color: #000000; line-height: 1.15;">KECAMATAN ${c.toUpperCase()}</p>`:""}
+                            <p style="font-size: ${n?"11pt":"10.2pt"}; margin: 0 0 1px 0; color: #1e293b; line-height: 1.25;">
                                 ${g}${x?", "+x:""}${c?", Kec. "+c:""}${o?", "+o:""}
                             </p>
-                            <p style="font-size: ${n?"9.5pt":"9pt"}; margin: 0; color: #334155; line-height: 1.25;">
+                            <p style="font-size: ${n?"10.5pt":"9.8pt"}; margin: 0; color: #334155; line-height: 1.25;">
                                 NPSN: <strong>${D}</strong>${y?" | Telp: "+y:""}${S?" | Email: "+S:""}${T?" | Web: "+T:""}
                             </p>
                         </td>
@@ -36,7 +36,7 @@ import{r as h,j as e}from"./vendor-react-Cq2hLklJ.js";import{r as Xt,u as we,w a
                         </td>
                     </tr>
                 </table>
-                <div style="border-top: 3.5px solid #000000; border-bottom: 1.5px solid #000000; height: 3.5px; width: 100%; margin-top: 8px; clear: both;"></div>
+                <div style="border-top: 4px solid #000000; border-bottom: 1.5px solid #000000; height: 3.5px; width: 100%; margin-top: 8px; clear: both;"></div>
             </div>
         `},wa=(a,t,n=!1)=>{const i=window.open("","_blank");if(!i){alert("Popup terblokir oleh browser. Harap izinkan popup browser untuk mencetak rapor.");return}const r=`
             <!DOCTYPE html>
