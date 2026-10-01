@@ -1,5 +1,5 @@
-Versi 2.9.60
-- Format KOP Surat Resmi Lebih Lebar & Bolder: Penyesuaian tipografi teks instansi/sekolah yang lebih lebar, proporsional, serta garis pembatas ganda (double border) solid 100% selebar halaman dokumen cetak rapor & leger landscape.
-- Perataan Presisi Format Tanda Tangan Rapor & Leger: Penjajaran horizontal satu garis lurus untuk tanda tangan Orang Tua, Wali Kelas, dan Kepala Sekolah dengan penempatan titimangsa yang proporsional.
-- Fleksibilitas Pengelompokan Bahasa Inggris (Wajib / Mulok / Ekstrakulikuler): Mata pelajaran Bahasa Inggris dapat ditentukan secara bebas pada seluruh jenjang pendidikan (SD, SMP, SMA, SMK).
-- Konfigurasi Titimangsa Interaktif: Pemilihan tanggal cetak rapor dan leger dapat diatur langsung melalui toolbar pengisian dan rekapitulasi nilai ASTS.
+Versi 2.9.61
+- Tampilan KOP Gambar 100% Full-Width: Gambar KOP surat instansi dari pengaturan situs membentang penuh 100% selebar dokumen cetak rapor & leger tanpa pemotongan lebar/tinggi.
+- Gelar Lengkap Otomatis Kepala Sekolah & Wali Kelas: Penambahan gelar depan dan gelar belakang penanda tangan resmi dari basis data PTK Dapodik.
+- Perataan Presisi Format Tanda Tangan Rapor & Leger: Penjajaran horizontal satu garis lurus untuk tanda tangan Orang Tua, Wali Kelas, dan Kepala Sekolah.
+- Konfigurasi Titimangsa Fleksibel: Pemilihan tanggal cetak rapor dan leger dapat ditentukan langsung melalui toolbar pengisian dan rekapitulasi nilai ASTS.
