@@ -1,4 +1,4 @@
-Versi 2.9.79
-- Penyederhanaan Manajemen Ekstrakurikuler: Menghilangkan tab lawas Pembinaan Ekskul sehingga antarmuka lebih bersih, fokus, dan ringkas dengan alur 2-Langkah:
-  1. Jadwal Sesi Latihan (Buat jadwal sesi latihan lengkap dengan siswa wajib hadir).
-  2. Riwayat & Absensi Sesi (Buka sesi latihan dan catat absensi kehadiran siswa serta foto dokumentasi).
+Versi 2.9.80
+- Opsi Penggunaan Nilai Sikap ASTS: Guru/Wali Kelas kini dapat secara fleksibel menentukan apakah ingin menggunakan dan mencantumkan Nilai Sikap Spiritual, Sikap Sosial, keduanya, atau menonaktifkannya pada Lembar Rapor dan Leger ASTS. Penomoran bagian rapor menyesuaikan otomatis secara rapi.
+- Penambahan Tab Laporan Kegiatan pada Ekstrakurikuler: Rekap sesi latihan yang telah terlaksana, cetak laporan resmi A4 (Kop Surat, rincian materi, tabel absensi siswa, dokumentasi foto, & tanda tangan pelatih/kepala sekolah), serta Export Excel Presensi.
+- Integrasi Email Resmi Sekolah & Webmail di Portal Pelatih: Menampilkan email resmi di profil/header pelatih, akses Webmail langsung, ganti password email cPanel, dan panduan sinkronisasi email di HP (Android & iOS) mirip seperti Portal Guru.
