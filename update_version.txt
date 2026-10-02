@@ -1,6 +1,6 @@
-v2.9.87
-- Perbaikan Navigasi Tombol Dashboard Pelatih: Tombol 'Dashboard' & 'Buka Dashboard' di Beranda/Navbar kini mengarah langsung ke Dashboard Pelatih (/pelatih) ketika login sebagai pelatih
+v2.9.88
+- Sinkronisasi Template Matriks Nilai ASTS: Unduh template matriks Excel kini 100% memuat seluruh mata pelajaran aktif, termasuk Muatan Lokal (Mulok) dan Ekstrakurikuler (Ekskul) yang telah diatur
+- Import Matriks Fleksibel: Mampu membaca seluruh kolom nilai mapel, mulok, dan predikat ekskul (A-E) secara otomatis
+- Perbaikan Navigasi Tombol Dashboard Pelatih: Tombol 'Dashboard' & 'Buka Dashboard' di Beranda mengarah langsung ke Dashboard Pelatih (/pelatih)
 - Fitur Hapus Sesi Latihan: Admin dan Pembina dapat menghapus riwayat sesi latihan/absensi yang salah input atau duplikat
-- Menu Kelengkapan Data Pelatih: Pengisian form dan upload berkas fleksibel tanpa keharusan langsung lengkap
-- Pilihan Nama Bank: Input manual bank dengan rekomendasi otomatis (datalist)
-- Sinkronisasi Multi-Perangkat: Nomor KTA Pelatih otomatis tersinkronisasi lintas HP & Desktop
+- Menu Kelengkapan Data Pelatih: Pengisian form dan upload berkas fleksibel tanpa batasan wajib sekaligus
