@@ -1,4 +1,4 @@
-Versi 2.9.78
-- Perbaikan Dropdown Ekskul & Pelatih pada Pembuatan Jadwal Sesi Latihan: Ekskul dan nama pelatih langsung muncul otomatis dari data penugasan bidang ekskul (bidang_ekskul) dan pembinaan ekskul.
-- Otomatisasi Daftar Siswa Sesi: Siswa dari rombel/kelas yang dilatih langsung otomatis dimuat dan dapat dipilih secara individual atau sekaligus per kelas.
-- Alur Terintegrasi Sesi Latihan: Buat Jadwal Sesi Latihan -> Buka Sesi Sesuai Jadwal -> Absensi Kehadiran Siswa & Dokumentasi Foto.
+Versi 2.9.79
+- Penyederhanaan Manajemen Ekstrakurikuler: Menghilangkan tab lawas Pembinaan Ekskul sehingga antarmuka lebih bersih, fokus, dan ringkas dengan alur 2-Langkah:
+  1. Jadwal Sesi Latihan (Buat jadwal sesi latihan lengkap dengan siswa wajib hadir).
+  2. Riwayat & Absensi Sesi (Buka sesi latihan dan catat absensi kehadiran siswa serta foto dokumentasi).
