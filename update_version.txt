@@ -1,4 +1,4 @@
-Versi 2.9.75
-- Perbaikan Autentikasi Login Pelatih Ekstrakurikuler: Memperbaiki endpoint login dan /api/me untuk Pelatih agar terhubung langsung ke tabel standar Dapodik `ptk` serta fallback ke `pegawai` dan `pengguna_web`.
-- Multi-Identitas & Fleksibilitas Login Pelatih: Mendukung login Pelatih menggunakan NIK, NIP, NUPTK, maupun Username dengan verifikasi password default NIK/NIP atau password kustom yang telah diubah.
-- Penyempurnaan Tampilan Form Login Pelatih: Memperjelas label, placeholder, dan catatan panduan login untuk Pelatih Ekskul pada antarmuka web login.
+Versi 2.9.76
+- Otomatisasi Input Pembinaan Pelatih Ekskul: Saat login sebagai Pelatih, form Tambah Data Pembinaan otomatis mengunci dan memilih nama Pelatih serta Ekskul yang dilatih.
+- Filter Otomatis Kelas & Siswa Berdasarkan Penugasan Pelatih: Daftar siswa dan filter kelas di form pembinaan otomatis dibatasi HANYA pada rombel/kelas yang ditugaskan ke Pelatih tersebut di konfigurasi Bidang & Ekskul.
+- Otomatisasi Buka Sesi Latihan: Pemilihan pembinaan pada dialog Buka Sesi Latihan langsung mengarahkan ke data pembinaan milik Pelatih yang login.
