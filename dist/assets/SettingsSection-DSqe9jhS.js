@@ -1,4 +1,4 @@
-import{r as n,j as e}from"./vendor-react-Cq2hLklJ.js";import{F as i,b as g,I as D}from"./SharedComponents-cKUydYyC.js";import{bA as De,r as Me,bB as te,H as Ie,bC as se,x as Fe,bD as Le,M as Xe,o as le,bE as re,bF as B,l as Ee,q as y,aZ as ne,a6 as j,a8 as M,a5 as de,bG as Oe,ao as Ke,g as oe,an as Ge,X as Ue,$ as Be,k as ie,bs as ce}from"./vendor-icons-DVGXG6bW.js";const Y=`function doGet(e) {
+import{r as n,j as e}from"./vendor-react-Cq2hLklJ.js";import{F as i,b as g,I as D}from"./SharedComponents-DHGLv8MO.js";import{bA as De,r as Me,bB as te,H as Ie,bC as se,x as Fe,bD as Le,M as Xe,o as le,bE as re,bF as B,l as Ee,q as y,aZ as ne,a6 as j,a8 as M,a5 as de,bG as Oe,ao as Ke,g as oe,an as Ge,X as Ue,$ as Be,k as ie,bs as ce}from"./vendor-icons-DVGXG6bW.js";const Y=`function doGet(e) {
   return ContentService.createTextOutput(JSON.stringify({
     status: "ok",
     message: "Google Apps Script Drive Storage Web App Dapoy-Schools Siap Digunakan!"

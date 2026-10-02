@@ -1,4 +1,4 @@
-Versi 2.9.77
-- Alur Baru Terintegrasi Ekstrakurikuler: Pelatih wajib membuat Jadwal Sesi Latihan terlebih dahulu (lengkap dengan nama sesi, tanggal, jam latihan, materi, dan daftar siswa yang wajib hadir).
-- Pembukaan Sesi Latihan Berdasarkan Jadwal: Pelatih membuka sesi latihan dari jadwal yang sudah dibuat, mengonfirmasi kehadiran pelatih, dan langsung mengaktifkan sesi.
-- Absensi Kehadiran Siswa Per Sesi: Pelatih melakukan absensi kehadiran siswa (Hadir/Sakit/Izin/Alpa) khusus bagi siswa yang terdaftar pada jadwal sesi tersebut, serta upload foto dokumentasi latihan.
+Versi 2.9.78
+- Perbaikan Dropdown Ekskul & Pelatih pada Pembuatan Jadwal Sesi Latihan: Ekskul dan nama pelatih langsung muncul otomatis dari data penugasan bidang ekskul (bidang_ekskul) dan pembinaan ekskul.
+- Otomatisasi Daftar Siswa Sesi: Siswa dari rombel/kelas yang dilatih langsung otomatis dimuat dan dapat dipilih secara individual atau sekaligus per kelas.
+- Alur Terintegrasi Sesi Latihan: Buat Jadwal Sesi Latihan -> Buka Sesi Sesuai Jadwal -> Absensi Kehadiran Siswa & Dokumentasi Foto.
