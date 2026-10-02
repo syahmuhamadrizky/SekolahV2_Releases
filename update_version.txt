@@ -1,5 +1,5 @@
-Versi 2.9.84
-- Canvas Tanda Tangan Digital Kehadiran Pelatih: Sesi latihan kini dilengkapi kanvas tanda tangan interaktif (responsif sentuhan layar HP/tablet & mouse) saat pelatih membuka sesi atau menandatangani riwayat sesi kehadiran. Tanda tangan digital tersimpan otomatis dan dicetak pada lembar pengesahan laporan.
-- Cetak Rekapitulasi Latihan Bulanan Lengkap Lampiran Gambar (Tanpa Daftar Absensi Siswa): Tombol baru 'Cetak Rekap Bulanan' di Tab Laporan untuk mencetak dokumen rangkuman pelaksanaan seluruh sesi latihan per bulan dengan Kop Surat resmi, tabel capaian materi & rekap kehadiran kumulatif, lampiran galeri seluruh foto dokumentasi sesi di bulan tersebut, serta tanda tangan Kepala Sekolah (nama lengkap bergelar & NIP) dan Pelatih (tanda tangan digital canvas & nomor KTA).
-- Nomor KTA Pelatih Terintegrasi: Nomor KTA pelatih otomatis dicantumkan di bawah nama pelatih pada cetak laporan sesi tunggal dan rekap bulanan (KTA. [Nomor KTA]).
-- Pengelompokan & Penyempurnaan Cetak Laporan: Tata letak Kop Surat resmi full-width, pembagian kelas rapi, serta integrasi status kehadiran pelatih dan siswa.
+v2.9.85
+- Menu Baru: Kelengkapan Data Pelatih (Upload KTP, Sertifikat Pelatih, KTA, Ijazah, Buku Tabungan)
+- Sinkronisasi Multi-Perangkat: Nomor KTA Pelatih otomatis tersinkronisasi lintas HP & Desktop
+- Kolom isian lengkap: NIK, Lisensi, Lembaga Penerbit, No. Rekening Bank, Pendidikan, No HP/WA, dan Riwayat Pengalaman
+- Cetak Lembar Biodata & Berkas Pelatih (PDF/Print View)
