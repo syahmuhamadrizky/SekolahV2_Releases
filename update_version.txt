@@ -1,4 +1,5 @@
-Versi 2.9.81
+Versi 2.9.82
+- Otomatisasi Cabang Ekstrakurikuler Program Latihan: Pendeteksian cabang ekskul otomatis 100% berdasarkan akun pelatih yang sedang login (terkoneksi langsung ke Dapodik/bidang_ekskul/akademik_ekskul), auto-select cabang ekskul tanpa dropdown kosong, serta badge verifikasi akun pelatih.
 - Menu Program Latihan Ekstrakurikuler: Pelatih dapat mengunggah silabus/program latihan berkas PDF (tipe periode bulanan/semesteran), didukung alur verifikasi & pengesahan/tanda tangan Kepala Sekolah secara digital, pratinjau PDF langsung, dan Google Drive backup.
 - Penyempurnaan Laporan & Dokumentasi Ekskul: Pengelompokan daftar presensi siswa per kelas (Kelas 1A, 1B, dst.), kop surat melebar 100% (full-width), ringkasan capaian eksekutif & evaluasi pedagogis pelatih, serta upload dokumentasi hingga 6 foto dengan kompresi otomatis client-side (< 1MB).
 - Perbaikan Layout Dashboard: Padding container dashboard disempurnakan agar border elemen internal lebih lapang, proporsional, dan elegan.
