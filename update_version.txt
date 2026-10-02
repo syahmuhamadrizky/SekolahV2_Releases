@@ -1,4 +1,4 @@
-Versi 2.9.80
-- Opsi Penggunaan Nilai Sikap ASTS: Guru/Wali Kelas kini dapat secara fleksibel menentukan apakah ingin menggunakan dan mencantumkan Nilai Sikap Spiritual, Sikap Sosial, keduanya, atau menonaktifkannya pada Lembar Rapor dan Leger ASTS. Penomoran bagian rapor menyesuaikan otomatis secara rapi.
-- Penambahan Tab Laporan Kegiatan pada Ekstrakurikuler: Rekap sesi latihan yang telah terlaksana, cetak laporan resmi A4 (Kop Surat, rincian materi, tabel absensi siswa, dokumentasi foto, & tanda tangan pelatih/kepala sekolah), serta Export Excel Presensi.
-- Integrasi Email Resmi Sekolah & Webmail di Portal Pelatih: Menampilkan email resmi di profil/header pelatih, akses Webmail langsung, ganti password email cPanel, dan panduan sinkronisasi email di HP (Android & iOS) mirip seperti Portal Guru.
+Versi 2.9.81
+- Menu Program Latihan Ekstrakurikuler: Pelatih dapat mengunggah silabus/program latihan berkas PDF (tipe periode bulanan/semesteran), didukung alur verifikasi & pengesahan/tanda tangan Kepala Sekolah secara digital, pratinjau PDF langsung, dan Google Drive backup.
+- Penyempurnaan Laporan & Dokumentasi Ekskul: Pengelompokan daftar presensi siswa per kelas (Kelas 1A, 1B, dst.), kop surat melebar 100% (full-width), ringkasan capaian eksekutif & evaluasi pedagogis pelatih, serta upload dokumentasi hingga 6 foto dengan kompresi otomatis client-side (< 1MB).
+- Perbaikan Layout Dashboard: Padding container dashboard disempurnakan agar border elemen internal lebih lapang, proporsional, dan elegan.
