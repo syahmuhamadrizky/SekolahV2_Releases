@@ -1,4 +1,4 @@
-Versi 2.9.74
-- Pembersihan Menyeluruh & Penyelarasan Kepala Sekolah ASTS: Memperbarui endpoint pengaturan sekolah dan backend leger ASTS agar selalu menyalurkan data Kepala Sekolah aktif dari database PTK Dapodik secara dinamis dan mensterilkan sisa cache data anomali pada database.
-- Sanitasi Otomatis Database: Menambahkan pembersihan otomatis pada record pengaturan sekolah saat booting agar data lama yang tersimpan di database langsung dibersihkan dan disinkronkan ke PTK aktif.
-- Rapor & Leger ASTS Bersih & Presisi: Mengunci filter anti-anomali pada cetak lembar hasil ASTS dan leger sehingga nama Kepala Sekolah yang tampil murni sesuai PTK penugasan aktif (Arsiati, S.Pd.SD, M.Pd).
+Versi 2.9.75
+- Perbaikan Autentikasi Login Pelatih Ekstrakurikuler: Memperbaiki endpoint login dan /api/me untuk Pelatih agar terhubung langsung ke tabel standar Dapodik `ptk` serta fallback ke `pegawai` dan `pengguna_web`.
+- Multi-Identitas & Fleksibilitas Login Pelatih: Mendukung login Pelatih menggunakan NIK, NIP, NUPTK, maupun Username dengan verifikasi password default NIK/NIP atau password kustom yang telah diubah.
+- Penyempurnaan Tampilan Form Login Pelatih: Memperjelas label, placeholder, dan catatan panduan login untuk Pelatih Ekskul pada antarmuka web login.
