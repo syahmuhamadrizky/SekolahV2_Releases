@@ -1,6 +1,5 @@
-v2.9.88
-- Sinkronisasi Template Matriks Nilai ASTS: Unduh template matriks Excel kini 100% memuat seluruh mata pelajaran aktif, termasuk Muatan Lokal (Mulok) dan Ekstrakurikuler (Ekskul) yang telah diatur
-- Import Matriks Fleksibel: Mampu membaca seluruh kolom nilai mapel, mulok, dan predikat ekskul (A-E) secara otomatis
-- Perbaikan Navigasi Tombol Dashboard Pelatih: Tombol 'Dashboard' & 'Buka Dashboard' di Beranda mengarah langsung ke Dashboard Pelatih (/pelatih)
-- Fitur Hapus Sesi Latihan: Admin dan Pembina dapat menghapus riwayat sesi latihan/absensi yang salah input atau duplikat
-- Menu Kelengkapan Data Pelatih: Pengisian form dan upload berkas fleksibel tanpa batasan wajib sekaligus
+v2.9.89
+- Sinkronisasi Urutan & Filter Barometer Mapel di Mode Spreadsheet Matriks: Kolom mata pelajaran pada mode spreadsheet matriks dan unduh template Excel kini 100% mengikuti urutan dan filter yang telah diatur pada Barometer Mapel (termasuk Wajib, Mulok, dan Ekskul).
+- Filter Akurat per Tingkat & Rombel: Mapel yang tampil dan diunduh secara presisi disaring sesuai tingkat/fase rombel aktif tanpa mencampur mapel dari jenjang lain.
+- Pembersihan Urutan Leger ASTS: Endpoint /api/asts/leger mengurutkan mapel secara konsisten berdasarkan urutan di tabel ref_mata_pelajaran.
+- Import Nilai Matriks Adaptif: Mendukung pembacaan nilai dan predikat ekskul sesuai urutan kolom hasil template matriks.
