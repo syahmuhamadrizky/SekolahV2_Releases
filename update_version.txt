@@ -1,5 +1,6 @@
-v2.9.85
-- Menu Baru: Kelengkapan Data Pelatih (Upload KTP, Sertifikat Pelatih, KTA, Ijazah, Buku Tabungan)
+v2.9.86
+- Fitur Hapus Sesi Latihan: Admin dan Pembina dapat menghapus riwayat sesi latihan/absensi yang salah input atau duplikat
+- Menu Kelengkapan Data Pelatih: Pengisian form dan upload berkas fleksibel tanpa keharusan langsung lengkap
+- Pilihan Nama Bank: Input manual bank dengan rekomendasi otomatis (datalist)
 - Sinkronisasi Multi-Perangkat: Nomor KTA Pelatih otomatis tersinkronisasi lintas HP & Desktop
-- Kolom isian lengkap: NIK, Lisensi, Lembaga Penerbit, No. Rekening Bank, Pendidikan, No HP/WA, dan Riwayat Pengalaman
 - Cetak Lembar Biodata & Berkas Pelatih (PDF/Print View)
