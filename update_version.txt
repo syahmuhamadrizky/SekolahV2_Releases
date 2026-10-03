@@ -1,4 +1,4 @@
-v2.9.100
-- Optimasi UI & Responsivitas Webmail Mode HP (Mobile-First): Redesain tampilan Webmail saat diakses via ponsel agar tidak lagi bertumpuk dan sangat nyaman digunakan.
-- Pill Navigasi Folder Horizontal & Mobile Card View: Mengganti tombol sidebar vertikal dengan pill scroll horizontal dan card daftar pesan ala Gmail/Apple Mail dengan inisial avatar, subject ringkas, dan info waktu.
-- Fullscreen Native Experience untuk Baca & Tulis Email di HP: Tampilan detail email dan modal composer otomatis responsif layar penuh (fullscreen) di perangkat seluler dengan toolbar rich-text yang dapat digeser (horizontal swipe) dan tombol aksi yang ergonomis.
+v2.9.101
+- Perbaikan Menu Absensi Ekstrakulikuler di Dashboard Guru: Mengarahkan menu 'Absen Ekstrakulikuler' ke halaman data kehadiran, agenda, dan sesi latihan ekskul (AkademikEkskulSection), serta memisahkan 'Manajemen Ekskul' (CRUD data master).
+- Mode Akses Guru / Wali Kelas (Lihat & Cetak Saja): Guru dan Wali Kelas kini dapat memantau presensi seluruh siswa dari semua rombel/kelas yang terlibat dalam kegiatan ekstrakulikuler, melihat foto dokumentasi, serta mencetak laporan sesi atau rekap bulanan (PDF/Excel) secara read-only tanpa mengubah data pelatih.
+- Proteksi Read-Only Guru: Modal presensi siswa menampilkan status kehadiran dalam bentuk badge warna yang informatif dan menonaktifkan tombol ubah presensi untuk peran Guru.
