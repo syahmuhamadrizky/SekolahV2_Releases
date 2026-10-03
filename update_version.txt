@@ -1,3 +1,4 @@
-v2.9.93
-- Perbaikan Tombol Simpan Sesi & Mapel Tryout: Menyempurnakan pengiriman token autentikasi dan pemetaan kolom semester/status aktif saat menyimpan sesi dan mata pelajaran tryout.
-- Validasi Input & Indikator Loading: Menambahkan feedback visual saat proses penyimpanan sesi/mapel berlangsung.
+v2.9.94
+- Input Tanggal Pelaksanaan Sesi Tryout: Menambahkan kolom dan input tanggal pelaksanaan pada manajemen sesi tryout dan lembar cetak hasil siswa.
+- Kop Surat Gambar dari Pengaturan Situs: Lembar cetak Tryout kini otomatis menggunakan gambar Kop Surat resmi yang diatur pada menu Pengaturan Situs.
+- Penyempurnaan Tampilan Lembar Hasil: Menghapus baris peringkat kelas/paralel pada footer tabel nilai cetak sesuai format resmi sekolah.
