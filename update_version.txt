@@ -1,7 +1,4 @@
-v2.9.97
-- Perbaikan Duplikasi Siswa ASTS: Penghapusan baris ganda pada daftar pengisian nilai ASTS (Per Mapel, Matriks, Leger, dan Sikap) dengan sistem deduplikasi otomatis berbasis Peserta Didik ID.
-- Isolasi Cetak Rapor Tryout: Cetak dokumen PDF / Printer kini diisolasi murni ke kertas dokumen A4 tanpa menyertakan elemen dashboard atau halaman latar belakang.
-- Tanda Tangan Lengkap Gelar pada Rapor Tryout: Penanda tangan Kepala Sekolah dan Wali Kelas masing-masing rombel otomatis memuat gelar depan, nama lengkap, dan gelar belakang sesuai data master PTK / Pegawai.
-- Tanggal Pelaksanaan Sesi Tryout: Penambahan input tanggal pelaksanaan tryout dan integrasi otomatis ke lembar identitas siswa saat dicetak.
-- Kop Surat Gambar Resmi: Kop surat cetak tryout otomatis mengambil gambar kop dari Pengaturan Situs.
-- Tampilan Cetak Resmi: Penghapusan baris peringkat kelas/paralel pada footer lembar cetak rapor tryout.
+v2.9.98
+- Fitur Kunci / Nonaktifkan Sesi Tryout: Admin/Guru dapat mengaktifkan atau menonaktifkan status sesi tryout dengan 1 klik pada tabel Sesi Tryout.
+- Proteksi Anti-Salah Input Nilai: Ketika sesi dinonaktifkan/dikunci, penginputan dan pengeditan nilai pada Matriks Nilai (termasuk Quick-Fill dan Import Excel) otomatis dikunci (Read-Only) serta dilindungi di tingkat server API.
+- Tetap Dapat Cetak & Lihat Leger Kapan Saja: Meskipun sesi tryout dalam status nonaktif/terkunci, Guru dan Wali Kelas tetap 100% leluasa melihat Leger & Ranking serta mencetak Lembar Hasil / Rapor Tryout baik secara perorangan maupun massal.
