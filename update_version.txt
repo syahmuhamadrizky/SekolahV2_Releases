@@ -1,4 +1,4 @@
-v2.9.99
-- Akses & Login Guru Bidang Study: Guru Bidang Study dan Pelatih kini dapat login langsung ke Portal Guru dengan hak akses yang terintegrasi secara otomatis.
-- Penilaian Terisolasi & Sesuai Pengaturan Bidang Study: Guru Bidang hanya dapat melihat dan menginput nilai pada mata pelajaran dan kelas/rombel yang ditugaskan kepada mereka di pengaturan Bidang Study.
-- Absensi Bidang Study & Ekstrakulikuler: Integrasi otomatis presensi mata pelajaran dan absensi siswa berdasarkan kelas dan bidang yang diampu tanpa mengganggu kelas lain.
+v2.9.100
+- Optimasi UI & Responsivitas Webmail Mode HP (Mobile-First): Redesain tampilan Webmail saat diakses via ponsel agar tidak lagi bertumpuk dan sangat nyaman digunakan.
+- Pill Navigasi Folder Horizontal & Mobile Card View: Mengganti tombol sidebar vertikal dengan pill scroll horizontal dan card daftar pesan ala Gmail/Apple Mail dengan inisial avatar, subject ringkas, dan info waktu.
+- Fullscreen Native Experience untuk Baca & Tulis Email di HP: Tampilan detail email dan modal composer otomatis responsif layar penuh (fullscreen) di perangkat seluler dengan toolbar rich-text yang dapat digeser (horizontal swipe) dan tombol aksi yang ergonomis.
