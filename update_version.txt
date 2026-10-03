@@ -1,4 +1,4 @@
-v2.9.98
-- Fitur Kunci / Nonaktifkan Sesi Tryout: Admin/Guru dapat mengaktifkan atau menonaktifkan status sesi tryout dengan 1 klik pada tabel Sesi Tryout.
-- Proteksi Anti-Salah Input Nilai: Ketika sesi dinonaktifkan/dikunci, penginputan dan pengeditan nilai pada Matriks Nilai (termasuk Quick-Fill dan Import Excel) otomatis dikunci (Read-Only) serta dilindungi di tingkat server API.
-- Tetap Dapat Cetak & Lihat Leger Kapan Saja: Meskipun sesi tryout dalam status nonaktif/terkunci, Guru dan Wali Kelas tetap 100% leluasa melihat Leger & Ranking serta mencetak Lembar Hasil / Rapor Tryout baik secara perorangan maupun massal.
+v2.9.99
+- Akses & Login Guru Bidang Study: Guru Bidang Study dan Pelatih kini dapat login langsung ke Portal Guru dengan hak akses yang terintegrasi secara otomatis.
+- Penilaian Terisolasi & Sesuai Pengaturan Bidang Study: Guru Bidang hanya dapat melihat dan menginput nilai pada mata pelajaran dan kelas/rombel yang ditugaskan kepada mereka di pengaturan Bidang Study.
+- Absensi Bidang Study & Ekstrakulikuler: Integrasi otomatis presensi mata pelajaran dan absensi siswa berdasarkan kelas dan bidang yang diampu tanpa mengganggu kelas lain.
