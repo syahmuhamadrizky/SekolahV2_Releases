@@ -1,4 +1,5 @@
-v2.9.90
-- Rekapitulasi Laporan Latihan Ekskul Bulanan: Menampilkan daftar lengkap seluruh nama pelatih yang bertugas pada periode aktif dan menyederhanakan ringkasan pembinaan.
-- Tanda Tangan Digital Pelatih Per Sesi: Kolom tabel rangkuman kini menampilkan tanda tangan digital resmi pelatih per sesi latihan.
-- Pengesahan Tunggal Kepala Sekolah: Lembar pengesahan akhir laporan bulanan ekskul kini khusus memuat pengesahan resmi Kepala Sekolah.
+v2.9.91
+- Modul Penilaian Tryout Khusus Kelas 6: Fitur evaluasi akademik persiapan Ujian Sekolah & Asesmen Standarisasi tanpa penilaian sikap.
+- Matriks Input Cepat & Leger Ranking: Input nilai terpadu per kelas, export/import template Excel, kalkulasi otomatis nilai total, rata-rata, peringkat kelas, serta peringkat paralel angkatan kelas 6.
+- Cetak Lembar Hasil / Rapor Tryout: Dilengkapi KOP resmi sekolah, capaian nilai mapel per KKM, rata-rata kelas, catatan motivasi wali kelas, serta pengesahan tanda tangan Wali Kelas dan Kepala Sekolah (cetak tunggal & massal).
+- Manajemen Sesi & Mapel Tryout: Konfigurasi dinamis daftar sesi dan mata pelajaran tryout beserta KKM dan urutan.
