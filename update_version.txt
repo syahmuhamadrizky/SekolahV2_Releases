@@ -1,5 +1,3 @@
-v2.9.91
-- Modul Penilaian Tryout Khusus Kelas 6: Fitur evaluasi akademik persiapan Ujian Sekolah & Asesmen Standarisasi tanpa penilaian sikap.
-- Matriks Input Cepat & Leger Ranking: Input nilai terpadu per kelas, export/import template Excel, kalkulasi otomatis nilai total, rata-rata, peringkat kelas, serta peringkat paralel angkatan kelas 6.
-- Cetak Lembar Hasil / Rapor Tryout: Dilengkapi KOP resmi sekolah, capaian nilai mapel per KKM, rata-rata kelas, catatan motivasi wali kelas, serta pengesahan tanda tangan Wali Kelas dan Kepala Sekolah (cetak tunggal & massal).
-- Manajemen Sesi & Mapel Tryout: Konfigurasi dinamis daftar sesi dan mata pelajaran tryout beserta KKM dan urutan.
+v2.9.92
+- Filter Pelatih Tanpa Nomor KTA: Laporan rekapitulasi pembinaan ekskul kini hanya menyertakan pelatih yang telah mengonfigurasi Nomor KTA resmi di sistem.
+- Validasi Kelengkapan KTA: Memastikan pelaporan administrasi keabsahan pembina/pelatih ekskul terverifikasi dengan lisensi KTA aktif.
