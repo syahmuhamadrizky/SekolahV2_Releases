@@ -1,4 +1,5 @@
-v2.9.96
+v2.9.97
+- Perbaikan Duplikasi Siswa ASTS: Penghapusan baris ganda pada daftar pengisian nilai ASTS (Per Mapel, Matriks, Leger, dan Sikap) dengan sistem deduplikasi otomatis berbasis Peserta Didik ID.
 - Isolasi Cetak Rapor Tryout: Cetak dokumen PDF / Printer kini diisolasi murni ke kertas dokumen A4 tanpa menyertakan elemen dashboard atau halaman latar belakang.
 - Tanda Tangan Lengkap Gelar pada Rapor Tryout: Penanda tangan Kepala Sekolah dan Wali Kelas masing-masing rombel otomatis memuat gelar depan, nama lengkap, dan gelar belakang sesuai data master PTK / Pegawai.
 - Tanggal Pelaksanaan Sesi Tryout: Penambahan input tanggal pelaksanaan tryout dan integrasi otomatis ke lembar identitas siswa saat dicetak.
