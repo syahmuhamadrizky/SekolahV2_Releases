@@ -1,3 +1,3 @@
-v2.9.103
-- Penanganan Sesi Login Expired Otomatis: Menambahkan interceptor global dan deteksi kedaluwarsa token JWT di semua menu/halaman dashboard (Admin, Guru, Pelatih, Siswa).
-- Proteksi & Banner Notifikasi Sesi Habis: Menghindari menu atau aksi tombol yang tidak merespons karena token habis dengan mengalihkan user secara otomatis ke halaman login disertai banner informasi sesi kedaluwarsa.
+v2.9.104
+- Masa Aktif Sesi 7 Hari & Decoder JWT Presisi: Memperpanjang masa aktif sesi login menjadi 7 hari penuh serta menyempurnakan decoder Base64 & TextDecoder agar tidak terjadi false logout.
+- Pembersihan URL & Tombol Tutup Banner Sesi: Menambahkan pembersihan otomatis URL query (?expired=1) pada login dan tombol dismiss (X) agar banner peringatan tidak terus tampil saat direfresh.
