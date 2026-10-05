@@ -1,4 +1,3 @@
-v2.9.101
-- Perbaikan Menu Absensi Ekstrakulikuler di Dashboard Guru: Mengarahkan menu 'Absen Ekstrakulikuler' ke halaman data kehadiran, agenda, dan sesi latihan ekskul (AkademikEkskulSection), serta memisahkan 'Manajemen Ekskul' (CRUD data master).
-- Mode Akses Guru / Wali Kelas (Lihat & Cetak Saja): Guru dan Wali Kelas kini dapat memantau presensi seluruh siswa dari semua rombel/kelas yang terlibat dalam kegiatan ekstrakulikuler, melihat foto dokumentasi, serta mencetak laporan sesi atau rekap bulanan (PDF/Excel) secara read-only tanpa mengubah data pelatih.
-- Proteksi Read-Only Guru: Modal presensi siswa menampilkan status kehadiran dalam bentuk badge warna yang informatif dan menonaktifkan tombol ubah presensi untuk peran Guru.
+v2.9.102
+- Perbaikan Resolusi Rombel & Deduplikasi Siswa Penilaian ASTS: Memperketat pencocokan ID rombongan belajar terpilih dan mengisolasi filter query penilaian agar tidak menggabungkan data rombel riwayat/lama, mencegah duplikasi jumlah siswa (misal 28 menjadi 56) pada tampilan input nilai dan unduhan template Excel.
+- Presisi Template & Matriks Nilai ASTS: Menjamin jumlah siswa pada lembar template Excel mode Per Mapel dan Matriks Spreadsheet 100% konsisten sesuai data rombel aktif semester berjalan.
