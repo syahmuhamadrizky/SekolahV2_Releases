@@ -1,5 +1,5 @@
-v2.9.110
-- Pemulihan & Konsolidasi Rombongan Belajar Aktif: Mengonsolidasikan data rombel agar tidak ada duplikasi riwayat semester lampau, mengaitkan wali kelas dan gelar secara otomatis, serta menghitung rincian jumlah siswa Laki-laki, Perempuan, dan Total secara presisi.
+v2.9.111
+- Restorasi Presisi Manajemen Rombongan Belajar (Sesuai Standar v2.9.105): Mengaktifkan partisi semester aktif untuk mengeliminasi rombel ganda, menghubungkan seluruh wali kelas terdaftar beserta gelar depan/belakang, dan menampilkan rincian peserta didik L/P/Total secara akurat.
 - Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian pada penambahan manual maupun edit form di database.
 - Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar presisi dan rapi.
 - Dukungan Gelar Pendidik di Rapor & Leger ASTS: Memastikan pemformatan gelar depan dan gelar belakang wali kelas / kepala sekolah muncul akurat saat cetak Rapor ASTS dan Leger Nilai.
