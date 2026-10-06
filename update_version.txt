@@ -1,6 +1,4 @@
-v2.9.117
-- Modul Baru Terisolasi: Laporan Kinerja Pegawai (Tendik & Honorer): Modul mandiri komprehensif bagi Pegawai Tenaga Kependidikan / Honorer non-pelatih untuk menyusun dan melaporkan kinerja tugas berkala.
-- Rentang Tanggal & Kegiatan Dinamis: Formulir pembuatan laporan fleksibel dengan rentang tanggal periode, baris kegiatan dinamis (Nama Kegiatan, Deskripsi Uraian Tugas, Waktu/Jam, Output Hasil), dan upload bukti foto dokumentasi langsung per kegiatan.
-- Master Template Pekerjaan Rutin: Fitur penyimpanan dan pengelolaan template tugas rutin (Administrasi, Kebersihan, Keamanan, Sarpras, IT/Operator, Perpustakaan, dll.) yang dapat dimasukkan 1-klik ke dalam laporan kinerja.
-- Cetak Laporan Resmi: Format cetak resmi berstandar Kop Surat Sekolah, tabel uraian kinerja dengan dokumentasi foto presisi, catatan evaluasi atasan, titimangsa, dan tanda tangan Kepala Sekolah & Pegawai.
-- Alur Pengajuan & Review: Status berjenjang (Draft, Diajukan, Disetujui, Perlu Perbaikan) dengan catatan atasan dan kontrol hak akses terintegrasi.
+v2.9.118
+- Proteksi Hak Akses Presensi & Laporan Ekstrakurikuler: Penegakan ketat izin edit dan hapus pada modul Laporan & Absensi Ekstrakurikuler. Guru/Wali Kelas biasa kini hanya berstatus Read-Only (Melihat presensi, export excel, dan cetak laporan/rekap).
+- Pembatasan Aksi Mutasi Data: Tombol buat jadwal latihan, buka sesi dari jadwal, input/edit absensi siswa, upload/kelola foto dokumentasi, tanda tangan digital pelatih, serta hapus sesi/jadwal dikunci dan hanya dapat diakses oleh Pelatih dan Administrator.
+- Perlindungan Endpoint Backend API: Memvalidasi otorisasi server pada seluruh endpoint mutasi data ekskul (/api/jadwal_ekskul, /api/absensi_ekskul, buka_sesi, absen_siswa, dokumentasi) sehingga mencegah perubahan tidak sah dari user selain pelatih/admin.
