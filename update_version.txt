@@ -1,4 +1,4 @@
-v2.9.118
-- Proteksi Hak Akses Presensi & Laporan Ekstrakurikuler: Penegakan ketat izin edit dan hapus pada modul Laporan & Absensi Ekstrakurikuler. Guru/Wali Kelas biasa kini hanya berstatus Read-Only (Melihat presensi, export excel, dan cetak laporan/rekap).
-- Pembatasan Aksi Mutasi Data: Tombol buat jadwal latihan, buka sesi dari jadwal, input/edit absensi siswa, upload/kelola foto dokumentasi, tanda tangan digital pelatih, serta hapus sesi/jadwal dikunci dan hanya dapat diakses oleh Pelatih dan Administrator.
-- Perlindungan Endpoint Backend API: Memvalidasi otorisasi server pada seluruh endpoint mutasi data ekskul (/api/jadwal_ekskul, /api/absensi_ekskul, buka_sesi, absen_siswa, dokumentasi) sehingga mencegah perubahan tidak sah dari user selain pelatih/admin.
+v2.9.119
+- Modul Pegawai Wajib Lapor Kinerja: Fitur bagi Administrator untuk mendaftarkan dan mengelola pegawai honorer/tendik yang wajib mengisi Laporan Kinerja secara berkala dengan penentuan Tugas Pokok (Petugas Kebersihan, Petugas Keamanan, Tata Usaha, Tenaga Perpustakaan, Laboran & Petugas TIK, Penjaga Sekolah & Sarpras).
+- Paket 120 Template Pekerjaan Rutin Universal: Penyediaan 20 template kegiatan standar untuk masing-masing 6 kategori Tugas Pokok (total 120+ template) dengan bahasa baku dan universal yang relevan untuk seluruh jenjang pendidikan (SD, SMP, SMA, SMK sederajat).
+- Integrasi Otomatis & Pemilihan Cepat Template: Form pengisian laporan kinerja kini secara otomatis menyesuaikan dan memprioritaskan rekomendasi template sesuai tugas pokok pegawai yang dipilih dalam 1-klik.
