@@ -1,6 +1,7 @@
-v2.9.114
-- Restorasi Presisi Query & Relasi Rombel v2.9.105: Mengembalikan query partisi murni dan pengurutan tingkat kelas secara berurutan rapi (Kelas 1 s/d 6), tanpa duplikasi data, serta menghubungkan data wali kelas, gelar, dan rincian siswa (L/P/Total) secara otomatis dari tabel ptk & pegawai.
-- Manajemen Bidang & Ekstrakurikuler: Memastikan penyimpanan, pengeditan, dan pemetaan data guru bidang serta pelatih ekskul tersimpan secara presisi pada skema database.
-- Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian pada penambahan manual maupun edit form di database.
-- Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar presisi dan rapi.
-- Dukungan Gelar Pendidik di Rapor & Leger ASTS: Memastikan pemformatan gelar depan dan gelar belakang wali kelas / kepala sekolah muncul akurat saat cetak Rapor ASTS dan Leger Nilai.
+v2.9.115
+- Perbaikan Spreadsheet Matrix & Leger ASTS: Memperbaiki query backend /api/asts/leger dan pemetaan kolom wali kelas/pegawai di database sehingga seluruh daftar siswa dan kolom mata pelajaran muncul lengkap dan presisi di mode Spreadsheet Matrix & Rekapitulasi Leger.
+- Restorasi Presisi Query & Relasi Rombel: Query partisi murni dan pengurutan tingkat kelas berurutan rapi (Kelas 1 s/d 6) tanpa duplikasi data, serta wali kelas, gelar, dan rincian siswa (L/P/Total) otomatis terhubung.
+- Manajemen Bidang & Ekstrakurikuler: Penyimpanan, pengeditan, dan pemetaan data guru bidang serta pelatih ekskul tersimpan presisi pada database.
+- Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian.
+- Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar rapi dan presisi.
+- Dukungan Gelar Pendidik di Rapor & Leger ASTS: Pemformatan gelar depan dan gelar belakang wali kelas / kepala sekolah muncul akurat saat cetak Rapor ASTS dan Leger Nilai.
