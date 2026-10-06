@@ -1,3 +1,4 @@
-v2.9.107
-- Perataan Presisi Kolom Cetak Rapor ASTS: Penyelarasan lebar kolom (NO, Mata Pelajaran, KKTP, Nilai, Predikat, Deskripsi) antara tabel Wajib, Muatan Lokal, dan Ekstrakurikuler agar garis vertikal sejajar lurus rapi.
-- Default Penilaian Sikap Baik (B): Menetapkan nilai awal predikat sikap spiritual dan sosial menjadi 'B' (Baik) secara konsisten di UI dan database.
+v2.9.108
+- Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian pada penambahan manual maupun edit form di database.
+- Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar presisi dan rapi.
+- Dukungan Gelar Pendidik di Rapor & Leger ASTS: Memastikan pemformatan gelar depan dan gelar belakang wali kelas / kepala sekolah muncul akurat saat cetak Rapor ASTS dan Leger Nilai.
