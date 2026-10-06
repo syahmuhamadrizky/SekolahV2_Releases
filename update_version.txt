@@ -1,3 +1,4 @@
-v2.9.105
+v2.9.106
+- Auto-Repair & Schema Sync Bidang Ekskul: Otomatis sinkronisasi dan perbaikan kolom tabel bidang_ekskul pada server hosting untuk mencegah error 500 saat menambah data guru bidang/pelatih.
 - Penilaian Harian Dinamis & Rekap Leger: Penentuan tanggal & mapel per sesi, auto-kalkulasi tuntas/remedial, rekap leger matriks kelas, serta ekspor/impor Excel dan cetak berita acara.
 - Master Mapel Global & Restrukturisasi Menu: Konfigurasi master mapel terpusat dan pengelompokan navigasi di bawah Menu Penilaian (Harian, ASTS, ASAS, Akumulasi).
