@@ -1,4 +1,5 @@
-v2.9.108
+v2.9.109
+- Perbaikan Tampilan Manajemen Rombongan Belajar: Mengoptimalkan dan menyederhanakan kueri pemanggilan daftar rombel agar tidak error / kosong pada database sekolah serta menghitung rincian siswa (L/P/Total) secara aman.
 - Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian pada penambahan manual maupun edit form di database.
 - Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar presisi dan rapi.
 - Dukungan Gelar Pendidik di Rapor & Leger ASTS: Memastikan pemformatan gelar depan dan gelar belakang wali kelas / kepala sekolah muncul akurat saat cetak Rapor ASTS dan Leger Nilai.
