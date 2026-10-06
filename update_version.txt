@@ -1,7 +1,6 @@
-v2.9.116
-- Presisi Gelar Akademik Wali Kelas & Guru Terpadu: Mengintegrasikan resolver gelar akademik komprehensif yang menghubungkan tabel ptk, pegawai, rwy_pend_formal, dan gelar_akademik Dapodik, sehingga seluruh wali kelas (misal Renny Triwianti, S.Pd; Rusna Hutajulu, S.Pd; Rohiyanah, S.Pd; Khoirunnisa, S.Pd; Humairoh, S.Pd; KOMARIAH, S.Pd; JUNAINI, S.Pd; Siti Hani, S.Pd; Erlina Suswita, S.Pd; Yati Nurhayati, S.Pd; Nina Alimah, S.Pd, dll.) memiliki gelar lengkap dan presisi di daftar rombel, cetak rombel, dan leger ASTS.
-- Perbaikan Spreadsheet Matrix & Leger ASTS: Memperbaiki query backend /api/asts/leger dan pemetaan kolom wali kelas/pegawai di database sehingga seluruh daftar siswa dan kolom mata pelajaran muncul lengkap dan presisi di mode Spreadsheet Matrix & Rekapitulasi Leger.
-- Restorasi Presisi Query & Relasi Rombel: Query partisi murni dan pengurutan tingkat kelas berurutan rapi (Kelas 1 s/d 6) tanpa duplikasi data, serta wali kelas, gelar, dan rincian siswa (L/P/Total) otomatis terhubung.
-- Manajemen Bidang & Ekstrakurikuler: Penyimpanan, pengeditan, dan pemetaan data guru bidang serta pelatih ekskul tersimpan presisi pada database.
-- Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian.
-- Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar rapi dan presisi.
+v2.9.117
+- Modul Baru Terisolasi: Laporan Kinerja Pegawai (Tendik & Honorer): Modul mandiri komprehensif bagi Pegawai Tenaga Kependidikan / Honorer non-pelatih untuk menyusun dan melaporkan kinerja tugas berkala.
+- Rentang Tanggal & Kegiatan Dinamis: Formulir pembuatan laporan fleksibel dengan rentang tanggal periode, baris kegiatan dinamis (Nama Kegiatan, Deskripsi Uraian Tugas, Waktu/Jam, Output Hasil), dan upload bukti foto dokumentasi langsung per kegiatan.
+- Master Template Pekerjaan Rutin: Fitur penyimpanan dan pengelolaan template tugas rutin (Administrasi, Kebersihan, Keamanan, Sarpras, IT/Operator, Perpustakaan, dll.) yang dapat dimasukkan 1-klik ke dalam laporan kinerja.
+- Cetak Laporan Resmi: Format cetak resmi berstandar Kop Surat Sekolah, tabel uraian kinerja dengan dokumentasi foto presisi, catatan evaluasi atasan, titimangsa, dan tanda tangan Kepala Sekolah & Pegawai.
+- Alur Pengajuan & Review: Status berjenjang (Draft, Diajukan, Disetujui, Perlu Perbaikan) dengan catatan atasan dan kontrol hak akses terintegrasi.
