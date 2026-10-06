@@ -1,7 +1,7 @@
-v2.9.115
+v2.9.116
+- Presisi Gelar Akademik Wali Kelas & Guru Terpadu: Mengintegrasikan resolver gelar akademik komprehensif yang menghubungkan tabel ptk, pegawai, rwy_pend_formal, dan gelar_akademik Dapodik, sehingga seluruh wali kelas (misal Renny Triwianti, S.Pd; Rusna Hutajulu, S.Pd; Rohiyanah, S.Pd; Khoirunnisa, S.Pd; Humairoh, S.Pd; KOMARIAH, S.Pd; JUNAINI, S.Pd; Siti Hani, S.Pd; Erlina Suswita, S.Pd; Yati Nurhayati, S.Pd; Nina Alimah, S.Pd, dll.) memiliki gelar lengkap dan presisi di daftar rombel, cetak rombel, dan leger ASTS.
 - Perbaikan Spreadsheet Matrix & Leger ASTS: Memperbaiki query backend /api/asts/leger dan pemetaan kolom wali kelas/pegawai di database sehingga seluruh daftar siswa dan kolom mata pelajaran muncul lengkap dan presisi di mode Spreadsheet Matrix & Rekapitulasi Leger.
 - Restorasi Presisi Query & Relasi Rombel: Query partisi murni dan pengurutan tingkat kelas berurutan rapi (Kelas 1 s/d 6) tanpa duplikasi data, serta wali kelas, gelar, dan rincian siswa (L/P/Total) otomatis terhubung.
 - Manajemen Bidang & Ekstrakurikuler: Penyimpanan, pengeditan, dan pemetaan data guru bidang serta pelatih ekskul tersimpan presisi pada database.
 - Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian.
 - Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar rapi dan presisi.
-- Dukungan Gelar Pendidik di Rapor & Leger ASTS: Pemformatan gelar depan dan gelar belakang wali kelas / kepala sekolah muncul akurat saat cetak Rapor ASTS dan Leger Nilai.
