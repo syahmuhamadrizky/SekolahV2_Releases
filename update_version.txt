@@ -1,4 +1,3 @@
-v2.9.119
-- Modul Pegawai Wajib Lapor Kinerja: Fitur bagi Administrator untuk mendaftarkan dan mengelola pegawai honorer/tendik yang wajib mengisi Laporan Kinerja secara berkala dengan penentuan Tugas Pokok (Petugas Kebersihan, Petugas Keamanan, Tata Usaha, Tenaga Perpustakaan, Laboran & Petugas TIK, Penjaga Sekolah & Sarpras).
-- Paket 120 Template Pekerjaan Rutin Universal: Penyediaan 20 template kegiatan standar untuk masing-masing 6 kategori Tugas Pokok (total 120+ template) dengan bahasa baku dan universal yang relevan untuk seluruh jenjang pendidikan (SD, SMP, SMA, SMK sederajat).
-- Integrasi Otomatis & Pemilihan Cepat Template: Form pengisian laporan kinerja kini secara otomatis menyesuaikan dan memprioritaskan rekomendasi template sesuai tugas pokok pegawai yang dipilih dalam 1-klik.
+v2.9.120
+- Manajemen Akun & Password Pegawai Wajib Lapor Kinerja: Akun login dibuat otomatis dengan default username dan password berupa NIK/NIP pegawai, didukung fitur ganti password mandiri bagi pegawai dan reset password cepat oleh Admin.
+- Kartu Profil Identitas Formulir Kinerja: Redesain formulir laporan kinerja dengan Identity Profile Card modern, integrasi pemilih pegawai cepat, serta pengaturan edit manual yang rapi dan elegan.
