@@ -1,4 +1,5 @@
-v2.9.112
+v2.9.113
+- Urutan & Pemetaan Wali Kelas Rombel: Memperbaiki pengurutan rombel berdasarkan tingkat kelas (Tingkat 1 s/d tingkat atas) secara berurutan rapi serta menghubungkan data wali kelas dan gelarnya secara otomatis dari seluruh tabel kepegawaian/tugas tambahan.
 - Konsolidasi Rombel Lintas Versi Database: Menjamin kompatibilitas 100% pada semua versi MySQL/MariaDB (termasuk non-window functions), otomatis memilih rombel aktif semester berjalan, mengaitkan wali kelas dan gelar, serta menampilkan rincian siswa (L/P/Total) secara presisi.
 - Perbaikan Simpan & Edit Data Pegawai / PTK Manual: Memperbaiki penyimpanan Jenis PTK, Jabatan PTK, Jenjang Pendidikan, Gelar, Sertifikasi, dan seluruh atribut kepegawaian pada penambahan manual maupun edit form di database.
 - Tampilan Kolom Database Pegawai: Menyelaraskan seluruh 6 kolom tabel (Nama, Identitas, Jabatan/Tugas, Pangkat/Gol, Pendidikan/Jenis PTK, Aksi) agar presisi dan rapi.
