@@ -1,3 +1,3 @@
-v2.9.120
-- Manajemen Akun & Password Pegawai Wajib Lapor Kinerja: Akun login dibuat otomatis dengan default username dan password berupa NIK/NIP pegawai, didukung fitur ganti password mandiri bagi pegawai dan reset password cepat oleh Admin.
-- Kartu Profil Identitas Formulir Kinerja: Redesain formulir laporan kinerja dengan Identity Profile Card modern, integrasi pemilih pegawai cepat, serta pengaturan edit manual yang rapi dan elegan.
+v2.9.121
+- Isolasi & Presisi Nilai per Mata Pelajaran (100% Strict Segregation): Memperbaiki query pencarian dan penyimpanan nilai (Penilaian Harian & ASTS) agar menggunakan exact matching murni tanpa substring matching, mencegah nilai tertukar atau saling menimpa antar mapel dengan nama mirip (contoh: PAI vs Budi Pekerti).
+- Pencegahan Debounce Race Condition Auto-Save: Optimalisasi sinkronisasi nilai otomatis saat beralih mapel atau rombel di modul penilaian.
