@@ -1,3 +1,4 @@
-v2.9.128
-- Presisi Filter & Deduplikasi Mapel: Memastikan daftar mata pelajaran disaring secara akurat berdasarkan tingkat/fase kelas (Fase A, B, C, D, E, F) tanpa mapel duplikat (deduplicated) dan mengisolasi mapel jenjang tertentu (seperti IPAS hanya untuk Fase B/C).
-- Sinkronisasi Dinamis Rombel Penilaian Harian: Mengotomatisasi pemilihan rombel aktif dan memperbarui daftar mata pelajaran secara seketika saat kelas dipilih.
+v2.10.1
+- Pemisahan Manajemen Sesi & Input Nilai Harian: Tab 'Daftar Sesi Penilaian' kini difokuskan khusus untuk membuat, mengatur, dan mengonfigurasi sesi penilaian (mata pelajaran sesuai tingkat kelas, jenis penilaian, KKM, tanggal, dan lingkup TP) melalui modal popup yang rapi.
+- Lembar Kerja Khusus Input Nilai Sesi: Tab 'Input Nilai Sesi' kini menjadi antarmuka mandiri untuk menginput dan menyimpan nilai siswa berdasarkan sesi penilaian yang dipilih, lengkap dengan live statistik capaian, quick fill KKM, deskripsi capaian otomatis, serta export/import format Excel.
+- Kelengkapan Gelar Akademik Penanda Tangan Surat: Seluruh dokumen cetak surat resmi (Surat Panggilan Ortu, Surat Pernyataan Siswa/Ortu, Lampiran Kasus) otomatis menyertakan gelar akademik lengkap (gelar depan & belakang) bagi seluruh penanda tangan dan saksi dari data Dapodik & Manajemen Pegawai.
