@@ -1,3 +1,4 @@
-v2.9.122
-- Menu Mandiri Barometer Mata Pelajaran: Memisahkan konfigurasi barometer mata pelajaran dari dalam modul ASTS menjadi menu tersendiri di Dashboard Navigasi Utama, menjamin 100% keamanan data nilai ASTS yang sudah ada tanpa risiko tereset.
-- Katalog Master Terpadu Penilaian: Barometer mata pelajaran kini menjadi acuan tunggal otomatis (single source of truth) untuk Penilaian Harian, Penilaian ASTS, hingga modul Rapor ASAS mendatang.
+v2.9.123
+- Konfigurasi Mapel Terpusat: Mengganti penamaan menu menjadi Konfigurasi Mapel dan memusatkan seluruh pengaturan katalog master mata pelajaran di menu utama.
+- Pembersihan Modul Penilaian Harian: Menghapus tab konfigurasi mapel yang redundan di dalam Penilaian Harian sehingga otomatis terhubung rapi ke Konfigurasi Mapel utama.
+- Peningkatan Keamanan Data: Skema database auto-migration non-destruktif memastikan seluruh nilai siswa, rombel, dan ASTS tetap utuh 100%.
