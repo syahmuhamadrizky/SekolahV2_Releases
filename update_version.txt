@@ -1,4 +1,1 @@
-v2.10.2
-- Pembaruan Matriks Hak Akses Terkategori (RBAC 2.0): Seluruh modul, submenu, tab, dan tombol tindakan (View, Tambah, Edit, Hapus, Ekspor, Impor, Cetak, Approval, Disposisi, Sirkulasi, Konfigurasi Bobot/KKM, Toggle Status, dan Reset Akun) kini dikelompokkan ke dalam 7 Kategori Modul Utama dengan pencarian instan dan 1-klik toggle per kolom aksi.
-- Pemisahan Hak Akses & Portal Guru Bidang Studi vs Pelatih Ekskul: Guru Bidang Studi terhubung ke portal guru dengan filter kelas & mapel yang diampu tanpa menu pelatih, sementara Pelatih Ekskul tetap pada portal khusus pelatih.
-- Evaluasi Izin Dinamis & Masa Depan Aman: Pengecekan izin dashboard diperbarui menggunakan pola dinamis sehingga penambahan hak akses langsung sinkron tanpa perlu pengaturan ulang berulang kali.
+v2.10.3
