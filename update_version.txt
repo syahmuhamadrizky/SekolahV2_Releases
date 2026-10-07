@@ -1,4 +1,3 @@
-v2.9.124
-- Adaptasi Multi-Jenjang Konfigurasi Mapel: Mendukung penuh deteksi otomatis seluruh jenjang pendidikan (SD, SMP/MTs/Paket B, SMA/MA/Paket C, dan SMK).
-- Penyesuaian Fase & Tingkat Otomatis: Pilihan fase (Fase D untuk SMP, Fase E & F untuk SMA/SMK, Fase A, B, C untuk SD) beserta katalog preset mapel standar otomatis menyesuaikan dengan jenjang di Pengaturan Situs.
-- Sinkronisasi Master Penilaian: Seluruh modul Penilaian Harian dan ASTS konsisten mengikuti barometer jenjang aktif tanpa distorsi data.
+v2.9.125
+- Perbaikan Permission Berkas Pembaruan (Anti 403 Forbidden): Memastikan seluruh ekstraksi berkas rilis OTA secara otomatis menerapkan izin chmod 0755 untuk folder dan 0644 untuk berkas, mencegah akses ditolak oleh web server Apache/LiteSpeed di cPanel.
+- Stabilisasi Engine Node.js Hosting: Menjamin integritas berkas dist/ dan server.js pasca pembaruan otomatis.
