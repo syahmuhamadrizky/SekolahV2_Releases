@@ -1,3 +1,3 @@
-v2.9.121
-- Isolasi & Presisi Nilai per Mata Pelajaran (100% Strict Segregation): Memperbaiki query pencarian dan penyimpanan nilai (Penilaian Harian & ASTS) agar menggunakan exact matching murni tanpa substring matching, mencegah nilai tertukar atau saling menimpa antar mapel dengan nama mirip (contoh: PAI vs Budi Pekerti).
-- Pencegahan Debounce Race Condition Auto-Save: Optimalisasi sinkronisasi nilai otomatis saat beralih mapel atau rombel di modul penilaian.
+v2.9.122
+- Menu Mandiri Barometer Mata Pelajaran: Memisahkan konfigurasi barometer mata pelajaran dari dalam modul ASTS menjadi menu tersendiri di Dashboard Navigasi Utama, menjamin 100% keamanan data nilai ASTS yang sudah ada tanpa risiko tereset.
+- Katalog Master Terpadu Penilaian: Barometer mata pelajaran kini menjadi acuan tunggal otomatis (single source of truth) untuk Penilaian Harian, Penilaian ASTS, hingga modul Rapor ASAS mendatang.
