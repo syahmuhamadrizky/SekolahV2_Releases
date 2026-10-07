@@ -1,4 +1,4 @@
-v2.10.1
-- Pemisahan Manajemen Sesi & Input Nilai Harian: Tab 'Daftar Sesi Penilaian' kini difokuskan khusus untuk membuat, mengatur, dan mengonfigurasi sesi penilaian (mata pelajaran sesuai tingkat kelas, jenis penilaian, KKM, tanggal, dan lingkup TP) melalui modal popup yang rapi.
-- Lembar Kerja Khusus Input Nilai Sesi: Tab 'Input Nilai Sesi' kini menjadi antarmuka mandiri untuk menginput dan menyimpan nilai siswa berdasarkan sesi penilaian yang dipilih, lengkap dengan live statistik capaian, quick fill KKM, deskripsi capaian otomatis, serta export/import format Excel.
-- Kelengkapan Gelar Akademik Penanda Tangan Surat: Seluruh dokumen cetak surat resmi (Surat Panggilan Ortu, Surat Pernyataan Siswa/Ortu, Lampiran Kasus) otomatis menyertakan gelar akademik lengkap (gelar depan & belakang) bagi seluruh penanda tangan dan saksi dari data Dapodik & Manajemen Pegawai.
+v2.10.2
+- Pembaruan Matriks Hak Akses Terkategori (RBAC 2.0): Seluruh modul, submenu, tab, dan tombol tindakan (View, Tambah, Edit, Hapus, Ekspor, Impor, Cetak, Approval, Disposisi, Sirkulasi, Konfigurasi Bobot/KKM, Toggle Status, dan Reset Akun) kini dikelompokkan ke dalam 7 Kategori Modul Utama dengan pencarian instan dan 1-klik toggle per kolom aksi.
+- Pemisahan Hak Akses & Portal Guru Bidang Studi vs Pelatih Ekskul: Guru Bidang Studi terhubung ke portal guru dengan filter kelas & mapel yang diampu tanpa menu pelatih, sementara Pelatih Ekskul tetap pada portal khusus pelatih.
+- Evaluasi Izin Dinamis & Masa Depan Aman: Pengecekan izin dashboard diperbarui menggunakan pola dinamis sehingga penambahan hak akses langsung sinkron tanpa perlu pengaturan ulang berulang kali.
