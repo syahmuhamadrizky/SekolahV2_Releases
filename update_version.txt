@@ -1,4 +1,4 @@
-v2.9.123
-- Konfigurasi Mapel Terpusat: Mengganti penamaan menu menjadi Konfigurasi Mapel dan memusatkan seluruh pengaturan katalog master mata pelajaran di menu utama.
-- Pembersihan Modul Penilaian Harian: Menghapus tab konfigurasi mapel yang redundan di dalam Penilaian Harian sehingga otomatis terhubung rapi ke Konfigurasi Mapel utama.
-- Peningkatan Keamanan Data: Skema database auto-migration non-destruktif memastikan seluruh nilai siswa, rombel, dan ASTS tetap utuh 100%.
+v2.9.124
+- Adaptasi Multi-Jenjang Konfigurasi Mapel: Mendukung penuh deteksi otomatis seluruh jenjang pendidikan (SD, SMP/MTs/Paket B, SMA/MA/Paket C, dan SMK).
+- Penyesuaian Fase & Tingkat Otomatis: Pilihan fase (Fase D untuk SMP, Fase E & F untuk SMA/SMK, Fase A, B, C untuk SD) beserta katalog preset mapel standar otomatis menyesuaikan dengan jenjang di Pengaturan Situs.
+- Sinkronisasi Master Penilaian: Seluruh modul Penilaian Harian dan ASTS konsisten mengikuti barometer jenjang aktif tanpa distorsi data.
