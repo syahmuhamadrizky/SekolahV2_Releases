@@ -1,5 +1,3 @@
-v2.10.10
-- Penguncian 100% portal dashboard Guru Kelas & Guru Bidang ke profil pendidik yang login
-- Penyelarasan verifikasi akun PTK/Pegawai & password default pada /api/login dan /api/me
-- Integrasi Webmail Dinas dan penyembunyian modul tryout untuk Guru Bidang Studi
-- Optimasi pemuatan data portal guru (fast load)
+v2.10.11
+- Penyembunyian mata pelajaran berkategori Ekstrakulikuler / Ekskul dari modul Penilaian Harian
+- Penyelarasan filter dan daftar mapel khusus Penilaian Harian
