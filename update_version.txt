@@ -1,1 +1,4 @@
-v2.10.8
+v2.10.9
+- Perbaikan simpan sesi & nilai Penilaian Harian
+- Penyesuaian hak akses & tampilan role Guru Bidang Studi (Absensi, Penilaian, Jadwal, Kalender & Warta)
+- Tampilan nama lengkap guru aktif pada header/dashboard
