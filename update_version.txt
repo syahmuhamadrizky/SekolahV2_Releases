@@ -1,3 +1,5 @@
-v2.10.11
-- Penyembunyian mata pelajaran berkategori Ekstrakulikuler / Ekskul dari modul Penilaian Harian
-- Penyelarasan filter dan daftar mapel khusus Penilaian Harian
+v2.11.0
+- Penambahan Modul Pengaturan Ujian (Denah Ruang, Alokasi Peserta, Sesi, Format Nomor Peserta, Jadwal & Absensi Pengawas)
+- Penambahan Hak Akses RBAC Pengaturan Ujian untuk Admin dan Guru Kelas per Tingkat Kelas
+- Penambahan Fitur Ubah Password Mandiri untuk Guru Kelas, Guru Bidang Studi, Pelatih, dan Pegawai/Staff
+- Auto-sync skema database dan kolom ujian non-destructive saat boot
