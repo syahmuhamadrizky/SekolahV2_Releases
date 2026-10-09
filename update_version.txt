@@ -1,5 +1,6 @@
-v2.11.2
-- Pilihan 2 variasi ukuran cetak kartu peserta ujian yang presisi: Standar KTP/PVC (85,6 x 54 mm) dan Plastik Name Tag B2 Tali Gantung (106 x 75 mm)
-- Optimasi tata letak dan proporsi teks, foto, QR Code, dan tanda tangan pada kartu ujian ukuran besar
-- Penambahan auto-recovery reload otomatis pada browser saat pembaruan rilis diterapkan
-- Akses penuh modul ruang & pengaturan sesi untuk guru kelas sesuai tingkat kelas
+v2.11.3
+- Peningkatan ukuran, font hitam solid, dan tata letak Label Tempel Meja Ujian (print 2 kolom, foto besar, teks kontras tinggi)
+- Sinkronisasi KKTP & deduplikasi Mapel ASTS berbasis ID Mapel & Fase secara seragam per tingkat kelas
+- Penambahan styling warna khusus Predikat C (Amber/Kuning Keemasan) dan kolom badge Predikat pada Penilaian Harian & ASTS
+- Pembaruan cetak Kartu Peserta Ujian ukuran B2 (106 x 75 mm) dengan font proporsional dan warna hitam pekat
+- Auto-sync nilai, nama mapel, dan KKTP saat konfigurasi barometer mapel diperbarui
