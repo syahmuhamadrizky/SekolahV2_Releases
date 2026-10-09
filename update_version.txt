@@ -1,6 +1,6 @@
-v2.11.3
-- Peningkatan ukuran, font hitam solid, dan tata letak Label Tempel Meja Ujian (print 2 kolom, foto besar, teks kontras tinggi)
-- Sinkronisasi KKTP & deduplikasi Mapel ASTS berbasis ID Mapel & Fase secara seragam per tingkat kelas
-- Penambahan styling warna khusus Predikat C (Amber/Kuning Keemasan) dan kolom badge Predikat pada Penilaian Harian & ASTS
-- Pembaruan cetak Kartu Peserta Ujian ukuran B2 (106 x 75 mm) dengan font proporsional dan warna hitam pekat
-- Auto-sync nilai, nama mapel, dan KKTP saat konfigurasi barometer mapel diperbarui
+v2.11.4
+- Pemulihan & proteksi menyeluruh nilai ASTS siswa pada tabel leger dan rekap nilai
+- Peningkatan ukuran dan kontras tinggi hitam solid pada cetak Label Tempel Meja Ujian
+- Sinkronisasi master barometer mapel & KKTP seragam per tingkat kelas / Fase
+- Penambahan styling warna Predikat C (Amber Keemasan) pada Penilaian Harian & ASTS
+- Pembaruan Kartu Peserta Ujian ukuran B2 (106 x 75 mm) dengan tipografi proporsional
