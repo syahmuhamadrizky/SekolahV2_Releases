@@ -1,5 +1,5 @@
-v2.11.1
-- Akses penuh Tab Ruang & Alokasi Peserta serta Format Nomor & Pengaturan Sesi Ujian untuk Guru Kelas sesuai tingkat kelas binaannya
-- Filter otomatis sesi ujian, alokasi kursi peserta, dan denah ruang ujian presisi berdasarkan tingkat kelas guru yang sedang login
-- Dukungan ekspor data alokasi ruang ujian format Excel untuk Guru Kelas
-- Pembaruan sistem sinkronisasi modul ujian dan kompatibilitas OTA update
+v2.11.2
+- Pilihan 2 variasi ukuran cetak kartu peserta ujian yang presisi: Standar KTP/PVC (85,6 x 54 mm) dan Plastik Name Tag B2 Tali Gantung (106 x 75 mm)
+- Optimasi tata letak dan proporsi teks, foto, QR Code, dan tanda tangan pada kartu ujian ukuran besar
+- Penambahan auto-recovery reload otomatis pada browser saat pembaruan rilis diterapkan
+- Akses penuh modul ruang & pengaturan sesi untuk guru kelas sesuai tingkat kelas
