@@ -1,6 +1,5 @@
-v2.11.4
-- Pemulihan & proteksi menyeluruh nilai ASTS siswa pada tabel leger dan rekap nilai
-- Peningkatan ukuran dan kontras tinggi hitam solid pada cetak Label Tempel Meja Ujian
-- Sinkronisasi master barometer mapel & KKTP seragam per tingkat kelas / Fase
-- Penambahan styling warna Predikat C (Amber Keemasan) pada Penilaian Harian & ASTS
-- Pembaruan Kartu Peserta Ujian ukuran B2 (106 x 75 mm) dengan tipografi proporsional
+v2.11.5
+- Pemulihan & perbaikan pemuatan nilai siswa pada input Penilaian ASTS Mode Per Mapel
+- Sinkronisasi instan nilai antara Mode Per Mapel, Spreadsheet Matrix, dan Leger
+- Pencocokan multi-kandidat ID mapel, nama mapel, dan rombongan belajar di backend ASTS
+- Proteksi data nilai agar tidak hilang atau kosong saat beralih antar mata pelajaran
