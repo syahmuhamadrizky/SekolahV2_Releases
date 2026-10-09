@@ -1,5 +1,5 @@
-v2.11.0
-- Penambahan Modul Pengaturan Ujian (Denah Ruang, Alokasi Peserta, Sesi, Format Nomor Peserta, Jadwal & Absensi Pengawas)
-- Penambahan Hak Akses RBAC Pengaturan Ujian untuk Admin dan Guru Kelas per Tingkat Kelas
-- Penambahan Fitur Ubah Password Mandiri untuk Guru Kelas, Guru Bidang Studi, Pelatih, dan Pegawai/Staff
-- Auto-sync skema database dan kolom ujian non-destructive saat boot
+v2.11.1
+- Akses penuh Tab Ruang & Alokasi Peserta serta Format Nomor & Pengaturan Sesi Ujian untuk Guru Kelas sesuai tingkat kelas binaannya
+- Filter otomatis sesi ujian, alokasi kursi peserta, dan denah ruang ujian presisi berdasarkan tingkat kelas guru yang sedang login
+- Dukungan ekspor data alokasi ruang ujian format Excel untuk Guru Kelas
+- Pembaruan sistem sinkronisasi modul ujian dan kompatibilitas OTA update
