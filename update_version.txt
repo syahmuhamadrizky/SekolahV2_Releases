@@ -1,5 +1,5 @@
-v2.11.5
-- Pemulihan & perbaikan pemuatan nilai siswa pada input Penilaian ASTS Mode Per Mapel
-- Sinkronisasi instan nilai antara Mode Per Mapel, Spreadsheet Matrix, dan Leger
-- Pencocokan multi-kandidat ID mapel, nama mapel, dan rombongan belajar di backend ASTS
-- Proteksi data nilai agar tidak hilang atau kosong saat beralih antar mata pelajaran
+v2.11.7
+- Standardisasi format penulisan gelar akademik pada cetak kartu peserta & seluruh berkas ujian/tryout
+- Gelar depan dan gelar belakang penandatangan dipertahankan apa adanya (casing asli sesuai standar EYD/PTK)
+- Hanya nama inti penandatangan (Kepala Sekolah, Wali Kelas, Pengawas Ruang, Ketua Panitia) yang dibuat UPPERCASE
+- Penghapusan styling CSS uppercase global pada kolom penandatangan kartu peserta, daftar hadir, denah, dan lembar hasil ujian
