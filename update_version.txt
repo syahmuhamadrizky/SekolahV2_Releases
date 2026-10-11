@@ -3,4 +3,5 @@ v2.11.8
 - Fitur 1-Klik Inisialisasi Susunan Panitia Standar (Penanggung Jawab, Ketua, Sekretaris, Bendahara, Seksi Naskah/Ruang/Proktor)
 - Konfigurasi Dokumen SK Lengkap (Nomor SK, Konsiderans Menimbang & Mengingat, Diktum Keputusan, Tembusan)
 - Cetak Dokumen SK Kepanitiaan Ujian format A4 Resmi dengan Kop Sekolah & Lampiran Susunan Panitia
+- Akses Modul & Struktur Panitia Ujian untuk Login Guru Kelas presisi sesuai tingkat kelas binaan (Ujian/Tryout)
 - Proteksi Hak Akses (RBAC) dinamis untuk penambahan, pengubahan, konfigurasi, dan pencetakan SK Panitia
