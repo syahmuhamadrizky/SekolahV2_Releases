@@ -1,5 +1,4 @@
-v2.11.10
-- Standardisasi warna predikat nilai: Predikat A, B, C bertuliskan warna hitam, hanya Predikat D (dan E) berwarna merah pada Penilaian ASTS & Penilaian Harian
-- Standardisasi rumus perhitungan Predikat dinamis berbasis Target KKTP sesuai interval resmi Kemendikbud: (100 - KKTP) / 3
-- Perbaikan inkonsistensi predikat pada nilai yang sama di input nilai harian, input ASTS per mapel & matrix, leger, pratinjau rapor, cetak dokumen, hingga portal siswa
-- Sinkronisasi otomatis kalkulasi predikat dan status tuntas di server backend dan database
+v2.11.11
+- Perbaikan predikat rata-rata pada pratinjau dan cetak rapor ASTS berbasis akumulasi KKTP dinamis mapel aktual siswa
+- Sinkronisasi predikat rata-rata di ekspor Leger Excel agar otomatis mengacu pada rata-rata KKTP mapel rombel
+- Penyelarasan catatan & saran wali kelas otomatis dengan predikat rata-rata hasil kalkulasi KKTP dinamis
