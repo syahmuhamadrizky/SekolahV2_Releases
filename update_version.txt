@@ -1,4 +1,6 @@
-v2.11.11
-- Perbaikan predikat rata-rata pada pratinjau dan cetak rapor ASTS berbasis akumulasi KKTP dinamis mapel aktual siswa
-- Sinkronisasi predikat rata-rata di ekspor Leger Excel agar otomatis mengacu pada rata-rata KKTP mapel rombel
-- Penyelarasan catatan & saran wali kelas otomatis dengan predikat rata-rata hasil kalkulasi KKTP dinamis
+v2.11.12
+- Implementasi Anti-Cache Headers global pada seluruh rute API untuk mencegah caching disk/memory browser
+- Penambahan auto cache-busting timestamp (_t) & headers no-cache pada client fetch interceptor
+- Sistem otomatis deteksi migrasi server/update aplikasi (VersionWatcher) dengan auto-purge CacheStorage
+- Pembersihan otomatis cache offline browser saat login dan logout pengguna
+- Pembaruan Service Worker Network-First bypass dan auto-purge cache aktif
