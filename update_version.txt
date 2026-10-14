@@ -1,5 +1,5 @@
-v2.11.14
-- Perbaikan modul Penilaian Tryout di portal Guru: sinkronisasi otomatis pemilihan rombel aktif saat data rombel selesai dimuat
-- Sinkronisasi presisi hak akses rombel dan data siswa wali kelas/guru kelas pada Penilaian Tryout dan Pengaturan Ujian
-- Penambahan fleksibilitas pencocokan rombel (by ID dan nama kelas) agar daftar siswa dan nilai tryout tampil 100% lengkap
-- Dukungan query nilai tryout dengan fallback parameter nama rombel
+v2.11.15
+- Peningkatan presisi Export & Import Excel Penilaian Tryout spesifik per sesi dan mapel aktif
+- Penamaan file unduhan otomatis menyertakan nama rombel dan nama sesi (contoh: Format_Nilai_Tryout_Kelas_6B_TryOut_TKA_Paket_2.xlsx)
+- Import Excel cerdas: pencocokan otomatis berdasarkan ID mapel maupun nama mata pelajaran, serta pencocokan siswa via UUID, NISN, NIPD, atau nama
+- Dukungan parsing desimal koma (khas Excel Indonesia) dan validasi feedback jumlah siswa & nilai yang berhasil diimpor
