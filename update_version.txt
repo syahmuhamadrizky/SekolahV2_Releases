@@ -1,5 +1,8 @@
-v2.11.15
-- Peningkatan presisi Export & Import Excel Penilaian Tryout spesifik per sesi dan mapel aktif
-- Penamaan file unduhan otomatis menyertakan nama rombel dan nama sesi (contoh: Format_Nilai_Tryout_Kelas_6B_TryOut_TKA_Paket_2.xlsx)
-- Import Excel cerdas: pencocokan otomatis berdasarkan ID mapel maupun nama mata pelajaran, serta pencocokan siswa via UUID, NISN, NIPD, atau nama
-- Dukungan parsing desimal koma (khas Excel Indonesia) dan validasi feedback jumlah siswa & nilai yang berhasil diimpor
+v2.11.16
+- Fitur Cetak Dokumen Resmi Leger & Rekapitulasi Penilaian Tryout untuk seluruh 4 moda:
+  1. Per Sesi: Cetak Leger Nilai Tryout per sesi/hari aktif lengkap dengan rank kelas, paralel, dan nilai mapel
+  2. Rekap & Rata-Rata per Mapel: Cetak komparasi perkembangan nilai per mata pelajaran lintas sesi & hari
+  3. Rekap per Sesi/Hari: Cetak rekapitulasi total dan rata-rata per sesi/hari ujian
+  4. Leger Akumulasi Total: Cetak Master Leger Final TKA penentuan juara kelas dan paralel
+- Format cetak terisolasi (Landscape A4) dengan Kop Surat Resmi Sekolah, tabel rapi, footer statistik, dan tanda tangan Kepala Sekolah & Wali Kelas
+- Perbaikan Cetak Keterangan Rombel: Eliminasi duplikasi gelar Kepala Sekolah & Pengawas melalui normalisasi cerdas tanda baca & casing
