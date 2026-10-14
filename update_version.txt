@@ -1,5 +1,5 @@
-v2.11.13
-- Perbaikan stabilitas sesi login dan eliminasi auto-kick agresif pada background request dashboard
-- Auto-inject header Authorization otomatis pada seluruh request API internal yang membutuhkan autentikasi
-- Penambahan toleransi clock-skew pada validasi token lokal agar tidak ter-logout saat switch tab atau minimize
-- Peningkatan kehandalan VersionWatcher deteksi pembaruan sistem dan anti-cache
+v2.11.14
+- Perbaikan modul Penilaian Tryout di portal Guru: sinkronisasi otomatis pemilihan rombel aktif saat data rombel selesai dimuat
+- Sinkronisasi presisi hak akses rombel dan data siswa wali kelas/guru kelas pada Penilaian Tryout dan Pengaturan Ujian
+- Penambahan fleksibilitas pencocokan rombel (by ID dan nama kelas) agar daftar siswa dan nilai tryout tampil 100% lengkap
+- Dukungan query nilai tryout dengan fallback parameter nama rombel
