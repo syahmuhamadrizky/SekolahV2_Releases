@@ -1,12 +1,10 @@
-v2.11.17
+v2.11.18
+- Penyesuaian Tata Letak Lembar Hasil Akumulasi TKA (Pratinjau & Cetak):
+  1. Menghilangkan kolom Peringkat pada Lembar Hasil Siswa (peringkat difokuskan hanya pada Master Leger & Rekap Nilai)
+  2. Mengganti slot identitas dengan informasi "Semester" agar struktur data tetap proporsional dan tidak kosong
+  3. Memperbarui footer rata-rata akhir dengan keterangan "*Rata-rata komulatif seluruh sesi" sebagai pengganti teks juara
 - Perbaikan Cetak Dokumen Lembar Hasil Akumulasi TKA (PDF/Printer):
   1. Penanganan struktur data nilai multi-sesi (sesi_breakdown) untuk mencegah kegagalan klik tombol pada moda akumulasi
   2. Penerapan tata letak cetak resmi A4 untuk Lembar Rekapitulasi Akumulasi TKA Final lintas sesi
   3. Penambahan visual responsif (feedback klik active:scale & pointer) pada tombol aksi cetak pratinjau
-- Fitur Cetak Dokumen Resmi Leger & Rekapitulasi Penilaian Tryout untuk seluruh 4 moda:
-  1. Per Sesi: Cetak Leger Nilai Tryout per sesi/hari aktif lengkap dengan rank kelas, paralel, dan nilai mapel
-  2. Rekap & Rata-Rata per Mapel: Cetak komparasi perkembangan nilai per mata pelajaran lintas sesi & hari
-  3. Rekap per Sesi/Hari: Cetak rekapitulasi total dan rata-rata per sesi/hari ujian
-  4. Leger Akumulasi Total: Cetak Master Leger Final TKA penentuan juara kelas dan paralel
-- Format cetak terisolasi (Landscape A4) dengan Kop Surat Resmi Sekolah, tabel rapi, footer statistik, dan tanda tangan Kepala Sekolah & Wali Kelas
-- Perbaikan Cetak Keterangan Rombel: Eliminasi duplikasi gelar Kepala Sekolah & Pengawas melalui normalisasi cerdas tanda baca & casing
+- Fitur Cetak Dokumen Resmi Leger & Rekapitulasi Penilaian Tryout untuk seluruh 4 moda (Sesi, Mapel, Hari, Akumulasi Final)
