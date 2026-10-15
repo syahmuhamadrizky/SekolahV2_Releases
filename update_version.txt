@@ -1,3 +1,10 @@
+v2.13.3
+- Sistem Rekonsiliasi Cerdas Siswa Pindahan / Manual ke Dapodik Resmi:
+  1. Auto-Reconciliation Berbasis NIK/NISN: Saat sinkronisasi Dapodik berjalan, sistem secara cerdas mencocokkan siswa baru Dapodik dengan siswa yang sempat diinput manual berdasarkan NIK (16 digit) atau NISN.
+  2. Migrasi Seluruh Nilai & Aktivitas Otomatis: Jika kecocokan ditemukan, seluruh nilai ASTS, formatif, proyek P5 kokurikuler, absensi, riwayat kelas, dan data ujian yang terikat pada ID manual otomatis dialihkan ke ID resmi Dapodik tanpa tercecer/hilang.
+  3. Anti-Duplikasi 100%: Mencegah terjadinya data siswa ganda (double), ID manual di-upgrade otomatis ke ID Dapodik resmi yang valid.
+  4. Endpoint Rekonsiliasi Mandiri: Disediakan endpoint POST /api/students/reconcile-dapodik bagi administrator untuk mengecek dan menyelaraskan data siswa kapan saja.
+
 v2.13.2
 - Perbaikan & Penyempurnaan Cetak Rapor Kokurikuler (P5):
   1. Perbaikan Kueri Rapor Siswa: Memperbaiki relasi SQL JOIN pada tabel ptk (ptk_id) saat mengambil data wali kelas rombel sehingga lembar cetak rapor kokurikuler siswa dapat dimuat tanpa kendala / tidak kosong.
