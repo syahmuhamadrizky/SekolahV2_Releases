@@ -1,12 +1,7 @@
-v2.13.0
-- Otomatisasi Fase & Lingkup Penilaian Kokurikuler P5 (Kurikulum Merdeka):
-  1. Penyelarasan Otomatis Fase ke Seluruh Rombel: Proyek kokurikuler berbasis Fase (Fase A, B, C, D, E, F) kini otomatis berlaku untuk seluruh rombel pada fase tersebut tanpa perlu membuat ulang kegiatan per kelas.
-  2. Isolasi Hak Akses Guru Kelas: Menu Penilaian Kokurikuler diproteksi dan hanya tampil pada login Guru Kelas, disesuaikan dengan rombel binaannya.
-  3. Deteksi Fase Otomatis Jenjang Sekolah: Opsi Fase menyesuaikan bentuk pendidikan di Pengaturan Sekolah (SD/MI: Fase A-C; SMP/MTs: Fase D; SMA/SMK: Fase E-F; PAUD/TK: Fase Fondasi).
-  4. Perbaikan Koneksi Penyimpanan Kegiatan: Menuntaskan inisialisasi tabel DB kokurikuler dan menangani parameter payload server.
-- Standarisasi Format Nilai Bulat Murni & Rata-rata 2 Desimal (Semua Modul):
-  1. Nilai Bulat Murni (Max 100): Input dan tampilan nilai pada Penilaian Harian (PH), ASTS, Tryout/TKA, Kokurikuler, KKM, Nilai Remedial, dan Total Nilai menggunakan bilangan bulat tanpa akhiran .00 (contoh: 80, 75, 65).
-  2. Nilai Rata-rata 2 Desimal: Khusus nilai rata-rata diformat rapi dengan 2 digit desimal (contoh: 75.00, 71.50).
-- Penyesuaian Dinamis Tahun Pelajaran & Titimangsa Auto-Save:
-  1. Tahun Pelajaran Dinamis: Lembar rapor, rekapitulasi nilai, preview modal, dan ekspor Excel mengikuti tahun ajaran sesi/kegiatan aktif (contoh: 2026/2027).
-  2. Titimangsa Auto-Save: Perubahan titimangsa pada modal cetak tersimpan instan ke penyimpanan lokal dan database.
+v2.13.1
+- Cetak Rapor Kokurikuler (P5) Individual Per Siswa (Kurikulum Merdeka):
+  1. Filter Lengkap Tahun Pelajaran & Semester: Modal cetak dilengkapi filter Tahun Pelajaran, Semester (1 Ganjil / 2 Genap), Rombel, serta Pilihan Siswa (cetak per siswa atau cetak massal 1 kelas).
+  2. Seluruh Kegiatan Kokurikuler Terangkum Otomatis: Seluruh proyek kokurikuler yang terdaftar sesuai tingkat kelas / fase di semester & tahun ajaran tersebut otomatis masuk menjadi satu lembar rapor per siswa.
+  3. Format Standar Resmi A4 Kurikulum Merdeka: Lembar rapor individual per siswa dilengkapi Kop Surat Resmi Sekolah, Biodata Siswa, Matriks Penilaian 3 Pilar (Karakter P5, Proses & Partisipasi, Hasil Karya & Portofolio), Catatan Narasi Capaian Karakter, Legenda Predikat (BB, MB, BSH, SB), serta 3 Kolom Tanda Tangan Resmi (Orang Tua, Kepala Sekolah, Guru Kelas / Wali Kelas).
+  4. Isolasi Fase Ketat 100%: Kegiatan kokurikuler terisolasi penuh sesuai fase tingkat kelas (contoh: Proyek Fase A untuk Kelas 1 & 2 tidak akan tampil/bocor di Kelas 3A Fase B), dilengkapi panduan visual otomatis jika belum ada proyek untuk fase kelas yang dipilih.
+  5. Tombol Cetak Cepat Tiap Siswa: Disediakan tombol cetak rapor langsung di samping nama masing-masing siswa pada tabel penilaian.
