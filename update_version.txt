@@ -1,4 +1,8 @@
-v2.11.16
+v2.11.17
+- Perbaikan Cetak Dokumen Lembar Hasil Akumulasi TKA (PDF/Printer):
+  1. Penanganan struktur data nilai multi-sesi (sesi_breakdown) untuk mencegah kegagalan klik tombol pada moda akumulasi
+  2. Penerapan tata letak cetak resmi A4 untuk Lembar Rekapitulasi Akumulasi TKA Final lintas sesi
+  3. Penambahan visual responsif (feedback klik active:scale & pointer) pada tombol aksi cetak pratinjau
 - Fitur Cetak Dokumen Resmi Leger & Rekapitulasi Penilaian Tryout untuk seluruh 4 moda:
   1. Per Sesi: Cetak Leger Nilai Tryout per sesi/hari aktif lengkap dengan rank kelas, paralel, dan nilai mapel
   2. Rekap & Rata-Rata per Mapel: Cetak komparasi perkembangan nilai per mata pelajaran lintas sesi & hari
