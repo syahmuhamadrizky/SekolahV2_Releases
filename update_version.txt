@@ -1,3 +1,9 @@
+v2.13.2
+- Perbaikan & Penyempurnaan Cetak Rapor Kokurikuler (P5):
+  1. Perbaikan Kueri Rapor Siswa: Memperbaiki relasi SQL JOIN pada tabel ptk (ptk_id) saat mengambil data wali kelas rombel sehingga lembar cetak rapor kokurikuler siswa dapat dimuat tanpa kendala / tidak kosong.
+  2. UI Fallback & Retry State: Menambahkan tampilan notifikasi ramah dan tombol muat ulang jika lembar rapor sedang tidak memuat data atau filter belum sesuai.
+  3. Peningkatan Stabilitas Cetak Rapor: Memastikan data rombel, sekolah, proyek, dan penilaian 3 pilar per siswa terintegrasi secara mulus.
+
 v2.13.1
 - Cetak Rapor Kokurikuler (P5) Individual Per Siswa (Kurikulum Merdeka):
   1. Filter Lengkap Tahun Pelajaran & Semester: Modal cetak dilengkapi filter Tahun Pelajaran, Semester (1 Ganjil / 2 Genap), Rombel, serta Pilihan Siswa (cetak per siswa atau cetak massal 1 kelas).
