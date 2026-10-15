@@ -1,8 +1,14 @@
+v2.13.6
+- Perbaikan Input Tambah Siswa Baru & Dukungan Gelar Pegawai Honorer:
+  1. Fix Parameter INSERT Siswa Baru: Memperbaiki jumlah parameter placeholder query INSERT INTO peserta_didik di server.ts sehingga form Tambah Siswa Baru tersimpan sukses 100% tanpa error 'Column count doesn't match value count at row 1'.
+  2. Input Gelar Pegawai Honorer / Wajib Kinerja: Menambahkan kolom input Gelar Depan & Gelar Belakang pada master pegawai honorer serta otomatisasi kolom tanda tangan dokumen laporan kinerja.
+  3. Migrasi Database Otomatis: Sinkronisasi kolom gelar_depan & gelar_belakang pada tabel laporan_kinerja dan laporan_kinerja_pegawai_wajib.
+
 v2.13.5
 - Penyempurnaan Cetak Dokumen Rapor, Laporan Kinerja, Penilaian ASTS & Tambah Siswa:
   1. Perbaikan Input Siswa Baru (Column Count Mismatch): Memperbaiki jumlah parameter placeholder pada query INSERT INTO peserta_didik di server.ts sehingga form Tambah Siswa Baru tersimpan sukses 100% tanpa error 'Column count doesn't match value count at row 1'.
   2. Cetak Rapor Kokurikuler Terpusat & Bottom Action Bar: Lembar A4 pratinjau rapor kokurikuler kini rapi berada di tengah (centered), dilengkapi Bottom Action Bar di bagian bawah untuk kemudahan cetak langsung, serta nama Kepala Sekolah dan Wali Kelas diformat huruf kapital rapi dengan gelar yang proporsional.
-  3. Laporan Kinerja Pegawai (Honorer): Menambahkan opsi toggle checkbox untuk menyembunyikan/menampilkan kolom "Hari / Tanggal & Waktu" pada tabel kegiatan cetak, mendukung KOP Surat resmi berbasis gambar dari pengaturan sekolah, serta format nama pegawai dan kepala sekolah berhuruf kapital.
+  3. Laporan Kinerja Pegawai (Honorer): Menambahkan kolom input Gelar Depan & Gelar Belakang untuk pegawai wajib kinerja/honorer (otomatis tampil pada dokumen cetak laporan), opsi toggle checkbox untuk menyembunyikan/menampilkan kolom "Hari / Tanggal & Waktu", serta KOP Surat resmi sekolah.
   4. Penilaian ASTS (Opsi Sikap & Ekstrakurikuler Default Non-Aktif): Nilai Sikap Spiritual, Sikap Sosial, dan Ekstrakurikuler pada Lembar Rapor ASTS kini dapat disembunyikan/ditampilkan sesuai kebutuhan, dengan pengaturan awal (default) Non-Aktif.
 
 v2.13.4
