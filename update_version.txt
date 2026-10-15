@@ -1,10 +1,10 @@
-v2.11.18
-- Penyesuaian Tata Letak Lembar Hasil Akumulasi TKA (Pratinjau & Cetak):
-  1. Menghilangkan kolom Peringkat pada Lembar Hasil Siswa (peringkat difokuskan hanya pada Master Leger & Rekap Nilai)
-  2. Mengganti slot identitas dengan informasi "Semester" agar struktur data tetap proporsional dan tidak kosong
-  3. Memperbarui footer rata-rata akhir dengan keterangan "*Rata-rata komulatif seluruh sesi" sebagai pengganti teks juara
-- Perbaikan Cetak Dokumen Lembar Hasil Akumulasi TKA (PDF/Printer):
-  1. Penanganan struktur data nilai multi-sesi (sesi_breakdown) untuk mencegah kegagalan klik tombol pada moda akumulasi
-  2. Penerapan tata letak cetak resmi A4 untuk Lembar Rekapitulasi Akumulasi TKA Final lintas sesi
-  3. Penambahan visual responsif (feedback klik active:scale & pointer) pada tombol aksi cetak pratinjau
-- Fitur Cetak Dokumen Resmi Leger & Rekapitulasi Penilaian Tryout untuk seluruh 4 moda (Sesi, Mapel, Hari, Akumulasi Final)
+v2.12.0
+- Penambahan Modul Baru: Penilaian Kokurikuler & Proyek P5 (Kurikulum Merdeka):
+  1. Manajemen Kegiatan/Proyek Dinamis: CRUD proyek kokurikuler, kategori (Proyek Karakter P5, Field Trip, Observasi, Pengayaan), fase (A s.d F), dan deskripsi tujuan
+  2. Penilaian 3 Pilar Kualitatif: Matriks penilaian per rombel dengan predikat SB, BSH, MB, BB untuk Pilar A (Karakter & Dimensi), Pilar B (Proses & Keaktifan), dan Pilar C (Hasil Karya / Unjuk Kerja)
+  3. Generator Narasi Rapor Otomatis: Pembuatan deskripsi rapor kualitatif siap cetak secara otomatis (per siswa maupun massal satu kelas)
+  4. Format Cetak Resmi Rapor Kokurikuler: Dokumen cetak formal A4 ber-kop sekolah dengan identitas kegiatan, tabel capaian 3 pilar, narasi rapor, dan kolom tanda tangan
+- Integrasi Hak Akses Role (RBAC) & Navigasi:
+  1. Pendaftaran izin modul penilaian_kokurikuler ke RolesSection dengan hak akses view, create, update, delete, export, dan print
+  2. Integrasi menu navigasi responsif pada Dashboard Admin dan Dashboard Guru (Guru Kelas & Guru Bidang)
+- Peningkatan performa dan optimasi sinkronisasi data Dapodik peserta_didik murni via anggota_rombel
