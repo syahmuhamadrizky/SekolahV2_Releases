@@ -1,3 +1,9 @@
+v2.13.4
+- Penyempurnaan Registrasi Siswa Baru & Proteksi Integritas Rombel:
+  1. Validasi Wajib Kelas / Rombel: Menjadikan pilihan Kelas / Rombel sebagai kolom wajib pada form tambah siswa agar setiap siswa baru langsung terikat ke anggota_rombel, tahun pelajaran, dan semester aktif Dapodik.
+  2. Auto-Focus Siswa Baru: Setelah simpan data siswa baru berhasil, filter kelas otomatis di-reset ke 'Semua Kelas' dan kolom pencarian otomatis memfilter nama siswa baru tersebut agar langsung muncul di baris paling atas.
+  3. Anti-Cache Global API Middleware: Menambahkan header Cache-Control (no-store, no-cache, must-revalidate) pada seluruh rute /api/* di server.ts agar pembaruan data selalu instan tampil di browser tanpa tertahan cache.
+
 v2.13.3
 - Sistem Rekonsiliasi Cerdas Siswa Pindahan / Manual ke Dapodik Resmi:
   1. Auto-Reconciliation Berbasis NIK/NISN: Saat sinkronisasi Dapodik berjalan, sistem secara cerdas mencocokkan siswa baru Dapodik dengan siswa yang sempat diinput manual berdasarkan NIK (16 digit) atau NISN.
