@@ -1,3 +1,9 @@
+v2.13.19
+- Pengurutan Natural Rombel & Abjad Siswa Serta Isolasi Semester Penilaian ASTS:
+  1. Pengurutan Natural Rombel (Tingkat & Abjad): Memperbaiki pengurutan daftar dan dropdown rombel belajar sehingga terurut rapi dari tingkat terendah hingga tertinggi (Tingkat 1 s.d. 6) dan alfabetis (Kelas 1A, 1B, 1C, Kelas 2A, 2B, dst.) baik di Manajemen Rombel, Asesmen ASTS, maupun seluruh dropdown rombel.
+  2. Pengurutan Abjad Siswa (A–Z): Seluruh daftar dan dropdown siswa pada modul penilaian ASTS, nilai harian, leger, sikap, dan tanda terima kini otomatis terurut berdasarkan abjad nama siswa dari A sampai Z.
+  3. Isolasi Ketat Semester & Tahun Ajaran ASTS: Mengunci seleksi rombel agar siswa tahun lalu (arsip) tidak bocor dan menggandakan jumlah siswa pada rombel aktif tahun berjalan (misal: rombel 1B kini menampilkan murni siswa aktif semester berjalan tanpa penggabungan siswa tahun sebelumnya).
+
 v2.13.18
 - Penanganan Tipe Data & Kompatibilitas Sinkronisasi DapoySync (Anti-Gagal Sinkron):
   1. Sanitasi Nilai Desimal & Angka Kosong: Menangani nilai desimal/angka/tanggal kosong dari Dapodik menjadi NULL yang valid di MySQL/MariaDB sehingga tidak lagi memicu error 'Incorrect decimal value: \'\' for column jarak_rumah_ke_sekolah_km'.
