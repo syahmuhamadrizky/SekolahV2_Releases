@@ -1,3 +1,8 @@
+v2.13.16
+- Perbaikan Unduh Template Matriks Excel & Penyederhanaan Kolom Tanda Tangan:
+  1. Presisi Mata Pelajaran Template Matriks Excel: Memperbaiki logika pemilihan mapel pada ekspor dan impor template matriks Excel ASTS sehingga 100% konsisten dengan pengaturan fase/tingkat rombel (pada Fase A tidak akan lagi memuat IPAS atau mapel dari fase lain).
+  2. Penyederhanaan Header Kolom Tanda Tangan: Mengubah teks header tanda tangan pada Tanda Terima Rapor ASTS, Tanda Terima Hasil Tryout (LHTO), dan Tanda Terima Hasil Ujian menjadi cukup 'Tanda Tangan' murni tanpa embel-embel Ganjil/Genap.
+
 v2.13.15
 - Penyesuaian Kolom Tanda Tangan Penerima Tunggal Berdasarkan Semester Aktif:
   1. Tanda Terima Pengambilan Rapor (Penilaian ASTS / SAS): Menghilangkan pembagian dua subkolom ganjil/genap dan menyatukannya menjadi 1 kolom tanda tangan tunggal yang secara dinamis mengikuti semester yang dipilih (Tanda Tangan Ganjil saat semester ganjil, Tanda Tangan Genap saat semester genap), dengan nomor urut siswa di tiap baris.
