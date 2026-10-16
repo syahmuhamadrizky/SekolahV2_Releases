@@ -1,3 +1,10 @@
+v2.13.13
+- Standarisasi Penulisan Nama & Gelar Pegawai serta Optimasi Lebar Kolom Cetak:
+  1. Preservasi Casing Gelar Pegawai: Gelar depan (Drs., Hj., Dr., dsb.) dan gelar belakang (S.Pd, S.Pd.SD, M.Pd, dsb.) tidak lagi di-UPPERCASE, format dan huruf kecilnya tetap terjaga murni sesuai standar resmi penulisan gelar Indonesia (EYD).
+  2. Eliminasi CSS Uppercase Container: Menghilangkan class uppercase pada pembungkus nama penandatangan dan struktur panitia sehingga nama inti tetap UPPERCASE sedangkan gelar tampil rapi apa adanya.
+  3. Lebar Kolom 1 Baris Utuh: Melebarkan kolom Nama & NIP pada tabel Struktur Kepanitiaan Laporan Pelaksanaan Ujian sehingga nama lengkap dan gelar tampil dalam 1 baris utuh tanpa tertekuk ke bawah.
+  4. Normalisasi Casing Gelar Otomatis: Sinkronisasi pemetaan gelar akademik standar Indonesia baik pada frontend maupun backend server.
+
 v2.13.12
 - Pemisahan & Penyelarasan Penandatangan Panitia Ujian (Ketua Panitia & Penanggung Jawab):
   1. Resolusi Akurat Ketua Panitia: Memperbaiki logika ekstraksi Ketua Panitia pada Laporan Pelaksanaan Ujian agar memprioritaskan personil berjabatan 'Ketua Pelaksana' / 'Ketua Panitia' dan secara tegas mengesampingkan 'Penanggung Jawab', sehingga tidak terjadi tumpang tindih nama.
