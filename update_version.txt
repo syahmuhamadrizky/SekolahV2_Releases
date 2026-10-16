@@ -1,3 +1,14 @@
+v2.13.9
+- Fitur Pelaporan Pelaksanaan Kegiatan Ujian & Rekap Harian:
+  1. Tab Pelaporan Pelaksanaan: Terintegrasi langsung dengan Sesi Ujian, Kepanitiaan, dan Jadwal Pengawas di Pengaturan Ujian.
+  2. Laporan Pelaksanaan Harian: Pencatatan kehadiran peserta didik (hadir, tidak hadir, rincian siswa sakit/izin/alpa), kehadiran pengawas ruang, petugas piket, status pelaksanaan, dan catatan kejadian / berita acara.
+  3. Upload Foto Dokumentasi Kegiatan: Mendukung upload banyak foto per hari, input keterangan/caption tiap foto, pratinjau foto resolusi tinggi, dan tombol tambah foto cepat langsung dari kartu hari.
+  4. Sinkronisasi Jadwal Pengawas Cerdas: Tombol otomatis untuk membuat draf laporan harian dari tanggal dan mata pelajaran jadwal pengawas.
+  5. Cetak Laporan Eksekutif Lengkap: Cover resmi kop sekolah, lembar pengesahan bertanda tangan (Ketua Panitia & Kepala Sekolah), pendahuluan & SK kepanitiaan, rekap ruang & jadwal pengawas, rekapitulasi kehadiran harian, serta lampiran dokumentasi foto kegiatan per hari.
+- Penilaian ASTS (Filter Ekstrakulikuler pada Leger Nilai):
+  1. Menyembunyikan kolom nilai ekstrakulikuler dari cetak Leger Nilai dan ekspor Excel ketika opsi Ekstrakurikuler di-toggle OFF.
+  2. Pratinjau matriks spreadsheet leger di layar otomatis menyembunyikan kolom ekskul saat non-aktif.
+
 v2.13.8
 - Penyempurnaan Manajemen Rombongan Belajar (Rombel) & Eliminasi Kelas Lampau:
   1. Isolasi Semester Aktif Berjalan: Kueri penarikan rombel otomatis mendeteksi tahun ajaran dan semester aktif. Kelas-kelas historis dari tahun/semester lampau yang sudah tidak dibuka lagi di semester berjalan tidak akan bocor ke daftar kelas aktif.
