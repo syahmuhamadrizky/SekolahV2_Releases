@@ -1,3 +1,10 @@
+v2.13.12
+- Pemisahan & Penyelarasan Penandatangan Panitia Ujian (Ketua Panitia & Penanggung Jawab):
+  1. Resolusi Akurat Ketua Panitia: Memperbaiki logika ekstraksi Ketua Panitia pada Laporan Pelaksanaan Ujian agar memprioritaskan personil berjabatan 'Ketua Pelaksana' / 'Ketua Panitia' dan secara tegas mengesampingkan 'Penanggung Jawab', sehingga tidak terjadi tumpang tindih nama.
+  2. Pengesahan Laporan Pelaksanaan Ujian Presisi: Menyelaraskan tanda tangan pada Kata Pengantar (Ketua Panitia) serta Lembar Pengesahan (Kolom Kiri: Ketua Panitia Pelaksana, Kolom Kanan: Penanggung Jawab / Kepala Sekolah).
+  3. Penyelarasan Matriks Pengawas & Dokumen Cetak Ujian: Sinkronisasi nama penandatangan pada Matriks Jadwal Pengawas, Daftar Hadir Pengawas Ruang, Rekapitulasi Denah Ruang, dan Lampiran SK Panitia dengan struktur kepanitiaan aktif sesi ujian.
+  4. Refresh Otomatis Data Kepanitiaan: Memastikan data kepanitiaan sesi otomatis tersinkronisasi saat tab cetak maupun pratinjau dokumen dibuka.
+
 v2.13.11
 - Fitur Pelaporan Pelaksanaan Ujian (Tata Letak Foto & Batasan Unggah):
   1. Tata Letak Foto 2 Kolom Simetris: Tampilan galeri foto dokumentasi pelaksanaan ujian dibatasi maksimal 2 foto per baris (1 baris maksimal 2 foto, otomatis membuat baris baru jika lebih dari 2 foto) pada kartu harian maupun dokumen cetak resmi eksekutif.
