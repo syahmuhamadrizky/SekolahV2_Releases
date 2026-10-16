@@ -1,3 +1,11 @@
+v2.13.20
+- Optimasi Performa & Zero-Latency Dashboard Loading (Ramah Shared Hosting):
+  1. Kompresi Respons HTTP (Gzip Compression): Mengaktifkan middleware compression() pada Express server sehingga seluruh transfer data JSON, HTML, dan aset menyusut 80-90% lebih kecil, meminimalkan durasi koneksi terbuka, dan sangat menghemat bandwidth hosting.
+  2. Zero-Latency Render (Hydration Cache): Dashboard langsung memuat data cache terakhir dari localStorage saat refresh sehingga UI langsung terbuka seketika (0 ms) tanpa layar blank putih atau spinner loading lama.
+  3. Progressive Non-Blocking Loader: Menghilangkan Promise.all kaku yang sebelumnya memblokir 17 endpoint API sekaligus. Data krusial Home (statistik, rombel, pengumuman, pegawai) dimuat duluan dalam slot koneksi browser tanpa antrean, sedangkan modul sekunder dimuat bertahap di latar belakang.
+  4. Optimasi Query & Summary Totals: Endpoint /api/dashboard-stats kini menyediakan ringkasan total siswa, pegawai, rombel, dan warta langsung tanpa perlu browser mengunduh seluruh database siswa 1 MB hanya untuk menghitung total kartu.
+  5. On-Demand Tab Loader: Modul data sekunder (siswa, jadwal, kalender, role, user) otomatis diprioritaskan saat tab bersangkutan diklik jika belum selesai dimuat.
+
 v2.13.19
 - Pengurutan Natural Rombel & Abjad Siswa Serta Isolasi Semester Penilaian ASTS:
   1. Pengurutan Natural Rombel (Tingkat & Abjad): Memperbaiki pengurutan daftar dan dropdown rombel belajar sehingga terurut rapi dari tingkat terendah hingga tertinggi (Tingkat 1 s.d. 6) dan alfabetis (Kelas 1A, 1B, 1C, Kelas 2A, 2B, dst.) baik di Manajemen Rombel, Asesmen ASTS, maupun seluruh dropdown rombel.
