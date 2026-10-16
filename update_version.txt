@@ -1,3 +1,10 @@
+v2.13.14
+- Fitur Lembar Tanda Terima Pengambilan Rapor, Hasil Ujian & Hasil Tryout:
+  1. Tanda Terima Pengambilan Rapor (Penilaian ASTS / SAS): Menyediakan cetak lembar tanda terima resmi penyerahan Laporan Hasil Belajar (Rapor) per rombel kelas lengkap dengan kop surat sekolah, tabel tanda tangan zik-zak (ganjil-genap), dan pengesahan Kepala Sekolah serta Wali Kelas.
+  2. Tanda Terima Penyerahan Hasil Ujian (Pengaturan Ujian): Menyediakan dokumen cetak tanda terima penyerahan berkas / hasil pelaksanaan ujian per ruang atau seluruh sesi ujian, lengkap dengan identitas ujian, nama orang tua/wali, tanda tangan penerima, dan pengesahan Ketua Panitia serta Kepala Sekolah.
+  3. Tanda Terima Lembar Hasil Tryout (Penilaian Tryout): Menyediakan cetak tanda terima penyerahan Lembar Hasil Try Out (LHTO) per rombel kelas/tingkat pada tab Leger dan tab Cetak, lengkap dengan tanda tangan orang tua/wali serta pengesahan Kepala Sekolah dan Wali Kelas.
+  4. Penghilangan Kata Kampus & Penyelarasan Kota/Kabupaten: Menghilangkan kata 'Kampus' pada tempat pelaksanaan ujian dan langsung mengambil nama Kota/Kabupaten resmi dari pengaturan situs.
+
 v2.13.13
 - Standarisasi Penulisan Nama & Gelar Pegawai serta Optimasi Lebar Kolom Cetak:
   1. Preservasi Casing Gelar Pegawai: Gelar depan (Drs., Hj., Dr., dsb.) dan gelar belakang (S.Pd, S.Pd.SD, M.Pd, dsb.) tidak lagi di-UPPERCASE, format dan huruf kecilnya tetap terjaga murni sesuai standar resmi penulisan gelar Indonesia (EYD).
