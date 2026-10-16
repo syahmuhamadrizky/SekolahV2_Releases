@@ -1,3 +1,9 @@
+v2.13.18
+- Penanganan Tipe Data & Kompatibilitas Sinkronisasi DapoySync (Anti-Gagal Sinkron):
+  1. Sanitasi Nilai Desimal & Angka Kosong: Menangani nilai desimal/angka/tanggal kosong dari Dapodik menjadi NULL yang valid di MySQL/MariaDB sehingga tidak lagi memicu error 'Incorrect decimal value: \'\' for column jarak_rumah_ke_sekolah_km'.
+  2. Auto-Remedy Kolom NOT NULL Tanpa Default: Secara otomatis mendeteksi dan menyesuaikan kolom tabel yang berstatus NOT NULL tanpa default (seperti kolom 'nama' pada tabel referensi) agar tidak lagi memicu error 'Field nama doesnt have a default value'.
+  3. Relaksasi Strict Mode Sesi Sinkronisasi: Mengaktifkan mode non-strict khusus selama sesi sinkronisasi Dapodik agar proses penerimaan data dari DapoySync berjalan mulus 100%.
+
 v2.13.17
 - Integrasi Referensi Wilayah Indonesia Lokal (Database ref_mst_wilayah) & Anti-Kosong:
   1. Jalur Referensi Wilayah Internal: Mengintegrasikan dropdown Provinsi, Kota/Kabupaten, Kecamatan, dan Kelurahan di Pengaturan Sekolah langsung ke tabel master Dapodik `ref_mst_wilayah` (107.117 baris) melalui API backend internal `/api/wilayah/...`.
