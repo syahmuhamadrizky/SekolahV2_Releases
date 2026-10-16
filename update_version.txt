@@ -1,3 +1,8 @@
+v2.13.21
+- Pemulihan & Anti-Crash 503 (Standalone Inlined Compression):
+  1. Bundel Kompresi Mandiri (Zero External Dependency): Modul compression dibundel langsung ke dalam berkas eksekusi server (dist/server.cjs) saat proses build rilis sehingga server hosting yang melakukan OTA update tidak memerlukan 'npm install compression' lagi di cPanel.
+  2. Proteksi Ganda Fallback (Anti-Crash Startup): Inisialisasi kompresi Express diproteksi dengan penanganan try-catch. Bila library belum terpasang atau terjadi kendala lingkungan hosting, server secara otomatis beralih ke mode normal tanpa memicu kegagalan startup proses (503 Service Unavailable).
+
 v2.13.20
 - Optimasi Performa & Zero-Latency Dashboard Loading (Ramah Shared Hosting):
   1. Kompresi Respons HTTP (Gzip Compression): Mengaktifkan middleware compression() pada Express server sehingga seluruh transfer data JSON, HTML, dan aset menyusut 80-90% lebih kecil, meminimalkan durasi koneksi terbuka, dan sangat menghemat bandwidth hosting.
