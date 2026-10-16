@@ -1,3 +1,8 @@
+v2.13.17
+- Integrasi Referensi Wilayah Indonesia Lokal (Database ref_mst_wilayah) & Anti-Kosong:
+  1. Jalur Referensi Wilayah Internal: Mengintegrasikan dropdown Provinsi, Kota/Kabupaten, Kecamatan, dan Kelurahan di Pengaturan Sekolah langsung ke tabel master Dapodik `ref_mst_wilayah` (107.117 baris) melalui API backend internal `/api/wilayah/...`.
+  2. Bebas Ketergantungan Eksternal & Anti-Kosong: Dropdown wilayah kini tidak lagi bergantung pada ketersediaan website pihak ketiga (emsifa.com) sehingga terbebas dari kendala CORS, blokir ISP, atau downtime, serta dilengkapi fallback 38 provinsi resmi Indonesia yang membuat dropdown selalu terisi instan dan lengkap.
+
 v2.13.16
 - Perbaikan Unduh Template Matriks Excel & Penyederhanaan Kolom Tanda Tangan:
   1. Presisi Mata Pelajaran Template Matriks Excel: Memperbaiki logika pemilihan mapel pada ekspor dan impor template matriks Excel ASTS sehingga 100% konsisten dengan pengaturan fase/tingkat rombel (pada Fase A tidak akan lagi memuat IPAS atau mapel dari fase lain).
