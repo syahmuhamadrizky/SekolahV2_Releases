@@ -1,3 +1,9 @@
+v2.13.15
+- Penyesuaian Kolom Tanda Tangan Penerima Tunggal Berdasarkan Semester Aktif:
+  1. Tanda Terima Pengambilan Rapor (Penilaian ASTS / SAS): Menghilangkan pembagian dua subkolom ganjil/genap dan menyatukannya menjadi 1 kolom tanda tangan tunggal yang secara dinamis mengikuti semester yang dipilih (Tanda Tangan Ganjil saat semester ganjil, Tanda Tangan Genap saat semester genap), dengan nomor urut siswa di tiap baris.
+  2. Tanda Terima Penyerahan Hasil Ujian (Pengaturan Ujian): Menyelaraskan kolom tanda tangan penerima menjadi 1 kolom yang jelas sesuai semester sesi ujian yang aktif.
+  3. Tanda Terima Lembar Hasil Tryout (Penilaian Tryout): Menyelaraskan kolom tanda tangan penerima menjadi 1 kolom tunggal sesuai semester kegiatan tryout.
+
 v2.13.14
 - Fitur Lembar Tanda Terima Pengambilan Rapor, Hasil Ujian & Hasil Tryout:
   1. Tanda Terima Pengambilan Rapor (Penilaian ASTS / SAS): Menyediakan cetak lembar tanda terima resmi penyerahan Laporan Hasil Belajar (Rapor) per rombel kelas lengkap dengan kop surat sekolah, tabel tanda tangan zik-zak (ganjil-genap), dan pengesahan Kepala Sekolah serta Wali Kelas.
