@@ -1,3 +1,14 @@
+v2.13.10
+- Fitur Rentang Tanggal & Salin Cepat Laporan Kinerja Pegawai (Honorer / Tendik):
+  1. Mode 1 Tanggal atau Rentang Tanggal: Setiap item rincian kegiatan pada Laporan Kinerja kini mendukung pemilihan 1 tanggal pelaksanaan tunggal maupun rentang tanggal (tanggal mulai s/d selesai) untuk kegiatan rutin berkala.
+  2. Tombol Pintas Set 1 Bulan Penuh: Fitur 1-klik untuk otomatis mengisi tanggal mulai dan selesai sesuai seluruh rentang periode laporan bulanan pegawai.
+  3. Salin Cepat & Multi-Day Batch Copy: Tombol Salin instan ke hari berikutnya (otomatis lewati hari Minggu) serta modal kalender interaktif untuk menyalin rincian uraian tugas sekaligus ke seluruh hari kerja atau tanggal pilihan.
+  4. Format Cetak Resmi Rentang Tanggal: Tampilan cetak PDF otomatis menampilkan rentang tanggal 'DD MMMM YYYY s/d DD MMMM YYYY' secara elegan pada lembar laporan resmi.
+  5. Migrasi Skema Database Otomatis: Sinkronisasi kolom tanggal_selesai pada tabel laporan_kinerja_item di backend server.
+- Pengaturan Ujian & Pelaporan Pelaksanaan:
+  1. Validasi Rentang Tanggal Ujian: Sinkronisasi tanggal mulai dan tanggal selesai kegiatan ujian sehingga pilihan tanggal laporan pelaksanaan terkunci dalam periode ujian.
+  2. Otomasi Petugas & Sesi: Pemilihan sesi dan petugas piket otomatis terisi dari susunan panitia ujian yang telah ditentukan.
+
 v2.13.9
 - Fitur Pelaporan Pelaksanaan Kegiatan Ujian & Rekap Harian:
   1. Tab Pelaporan Pelaksanaan: Terintegrasi langsung dengan Sesi Ujian, Kepanitiaan, dan Jadwal Pengawas di Pengaturan Ujian.
