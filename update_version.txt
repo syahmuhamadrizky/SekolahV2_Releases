@@ -1,3 +1,13 @@
+v2.13.11
+- Fitur Pelaporan Pelaksanaan Ujian (Tata Letak Foto & Batasan Unggah):
+  1. Tata Letak Foto 2 Kolom Simetris: Tampilan galeri foto dokumentasi pelaksanaan ujian dibatasi maksimal 2 foto per baris (1 baris maksimal 2 foto, otomatis membuat baris baru jika lebih dari 2 foto) pada kartu harian maupun dokumen cetak resmi eksekutif.
+  2. Batas Unggah Maksimal 6 Foto: Jumlah foto dokumentasi per laporan pelaksanaan harian dibatasi maksimal 6 foto dengan indikator kuota dan status penuh secara real-time.
+  3. Batas Ukuran File 2 MB per Foto: Validasi ukuran file maksimal 2 MB per foto pada sisi frontend dan backend Multer untuk mengoptimalkan kinerja penyimpanan dan kecepatan muat dokumen.
+  4. Pilihan Berkas Jamak (Multiple Upload): Mendukung pemilihan banyak foto sekaligus dalam sekali dialog berkas, dilengkapi tombol pratinjau penuh dan tombol hapus cepat foto langsung dari kartu harian.
+- Optimasi Cetak Halaman Laporan Pelaksanaan Ujian:
+  1. Pemisahan Halaman (Page Break) Presisi: Setiap BAB (Cover, Lembar Pengesahan, Kata Pengantar, BAB I, BAB II, BAB III, dan Lampiran Dokumentasi) dicetak pada halaman baru tersendiri tanpa tumpang tindih.
+  2. Integrasi Pengaturan Laporan Eksekutif: Kustomisasi teks kata pengantar, latar belakang, tujuan, dan evaluasi tersinkronisasi langsung ke dokumen cetak.
+
 v2.13.10
 - Fitur Rentang Tanggal & Salin Cepat Laporan Kinerja Pegawai (Honorer / Tendik):
   1. Mode 1 Tanggal atau Rentang Tanggal: Setiap item rincian kegiatan pada Laporan Kinerja kini mendukung pemilihan 1 tanggal pelaksanaan tunggal maupun rentang tanggal (tanggal mulai s/d selesai) untuk kegiatan rutin berkala.
