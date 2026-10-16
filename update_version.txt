@@ -1,3 +1,11 @@
+v2.13.7
+- Penyempurnaan Template, Ekspor & Impor Penilaian ASTS Presisi 100%:
+  1. Direct Persistence ke Database: Data nilai dari impor file Excel kini langsung disimpan permanen ke database melalui POST /api/asts/nilai/batch dan /api/asts/matrix/batch, diverifikasi status responnya, dan otomatis memicu sinkronisasi tampilan tanpa resiko tertahan debounce auto-save.
+  2. Smart 4-Level Matching Siswa: Pencocokan baris Excel ke siswa mendukung 4 lapis pencocokan bertingkat (ID Siswa UUID Dapodik -> NISN dengan toleransi leading zero -> NIPD / NIS -> Nama Siswa dengan normalisasi huruf dan spasi).
+  3. Header Kolom Ekstra Fleksibel: Ekstraksi kolom Excel kebal terhadap spasi ekstra, huruf besar/kecil, dan variasi penamaan header ("Nilai ASTS", "Nilai", "Skor", "Catatan", dsb.).
+  4. Pembacaan Binary ArrayBuffer: Menggunakan Uint8Array + readAsArrayBuffer untuk integritas pembacaan berkas .xlsx tanpa distorsi encoding.
+  5. Resolusi Rombel Kanonikal di Backend: Memastikan rombongan_belajar_id pada kueri simpan dan hapus nilai ASTS otomatis mencocokkan UUID, ID, maupun nama kelas resmi Dapodik.
+
 v2.13.6
 - Perbaikan Input Tambah Siswa Baru & Dukungan Gelar Pegawai Honorer:
   1. Fix Parameter INSERT Siswa Baru: Memperbaiki jumlah parameter placeholder query INSERT INTO peserta_didik di server.ts sehingga form Tambah Siswa Baru tersimpan sukses 100% tanpa error 'Column count doesn't match value count at row 1'.
