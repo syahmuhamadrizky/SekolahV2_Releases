@@ -1,3 +1,10 @@
+v2.13.8
+- Penyempurnaan Manajemen Rombongan Belajar (Rombel) & Eliminasi Kelas Lampau:
+  1. Isolasi Semester Aktif Berjalan: Kueri penarikan rombel otomatis mendeteksi tahun ajaran dan semester aktif. Kelas-kelas historis dari tahun/semester lampau yang sudah tidak dibuka lagi di semester berjalan tidak akan bocor ke daftar kelas aktif.
+  2. Normalisasi String & Anti-Duplikasi Rombel 100%: Menambahkan kanonikalisasi nama rombel (menghilangkan perbedaan spasi ekstra, tanda hubung, dan huruf besar/kecil) untuk mencegah duplikasi baris kelas (seperti kasus dobel Kelas 2A).
+  3. Cerdas Memilih Entri Terbaik: Jika terdapat data kelas yang serupa, sistem otomatis memilih entri yang berada di semester aktif, memiliki jumlah siswa terbanyak, dan memiliki wali kelas terisi.
+  4. Layer Proteksi Ganda UI: Menambahkan memoized deduplication pada antarmuka Manajemen Rombongan Belajar untuk menjamin tampilan selalu konsisten, bersih, dan bebas duplikasi.
+
 v2.13.7
 - Penyempurnaan Template, Ekspor & Impor Penilaian ASTS Presisi 100%:
   1. Direct Persistence ke Database: Data nilai dari impor file Excel kini langsung disimpan permanen ke database melalui POST /api/asts/nilai/batch dan /api/asts/matrix/batch, diverifikasi status responnya, dan otomatis memicu sinkronisasi tampilan tanpa resiko tertahan debounce auto-save.
