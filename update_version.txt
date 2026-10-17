@@ -1,3 +1,11 @@
+v2.13.24
+- Optimasi Kecepatan Ekstrem (Wuzz) & Stabilitas Pemuatan Data Dashboard:
+  1. Akselerasi Pemuatan Data Siswa (Phase 1 Priority): Endpoint /api/siswa kini diprioritaskan dimuat langsung di awal bersamaan dengan modul rombel dan pegawai tanpa penundaan (delay timeout), sehingga data siswa dan seluruh modul terkait langsung siap saat diklik.
+  2. In-Memory Master Cache Referensi Dapodik: Menghilangkan 7 kueri database berulang pada tabel referensi (agama, pekerjaan, pendidikan, penghasilan, tinggal, transportasi, kebutuhan khusus) dengan sistem caching memori RAM backend (TTL 30 menit). Waktu respon kueri data siswa kini terpangkas signifikan menjadi single-query super cepat (~140ms).
+  3. Peningkatan Kapasitas Connection Pool Database: Batas koneksi MySQL dinaikkan menjadi 25 koneksi paralel aktif untuk mencegah antrean (queue contention) saat browser memuat banyak modul secara bersamaan.
+  4. Staggered Batching Modul Sekunder: Modul pendukung (kalender, ekskul, galeri, blog, log aktivitas) dimuat bertahap dalam batch kecil tanpa membebani socket koneksi HTTP browser.
+  5. Indikator Loading Elegan pada Database Siswa: Tabel data siswa kini menampilkan animasi pemuatan informatif ("Sedang memuat data peserta didik...") jika data masih dalam proses transfer alih-alih menampilkan tabel kosong.
+
 v2.13.23
 - Modul RKA / DPA BOSDA & Impor Excel Massal Terintegrasi:
   1. Fitur Impor Excel RKA / DPA BOSDA: Mendukung unggah berkas .xlsx/.xls untuk memasukkan Judul Kelompok Belanja (Header) dan Rincian Item Belanja secara massal dengan pemetaan hierarki (parent_id) dan kategori belanja otomatis.
