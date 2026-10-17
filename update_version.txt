@@ -1,3 +1,13 @@
+v2.13.22
+- Modul Manajemen Anggaran BOSDA & Penatausahaan Buku Kas Sekolah:
+  1. Modul Penatausahaan BOSDA Lengkap: Pengelolaan sumber anggaran BOSDA, rekening kas bank sekolah, kategori belanja RKA/DPA, dan pencatatan penerimaan anggaran serta pesanan belanja barang/jasa.
+  2. Buku Pembantu Kas Bank & Buku Pembantu Kas Tunai: Rekapitulasi mutasi debet, kredit, dan saldo secara real-time dengan pengurutan kronologis (ASC) dari transaksi terlama serta prioritas penerimaan.
+  3. Mutasi Kas Presisi (Tarik & Setor Tunai): Alur transaksi setor tunai ke bank tercatat otomatis sebagai Penerimaan di Buku Kas Bank dan Pengeluaran di Buku Kas Tunai, begitu pun sebaliknya untuk tarik tunai dari bank.
+  4. Fitur Edit & Hapus Transaksi Mutasi Kas: Transaksi mutasi kas kini dapat disunting (nomor bukti, tanggal, nominal, keterangan) atau dihapus langsung dari tabel ledger maupun modal riwayat mutasi kas.
+  5. Filter Bulan & Saldo Awal Pindahan: Buku Kas Bank dan Kas Tunai kini dilengkapi filter bulan dengan kalkulasi otomatis saldo awal pindahan bulan sebelumnya pada tabel maupun dokumen cetak.
+  6. Dokumen Cetak Standar A4 Resmi: Cetak Buku Kas Bank, Buku Kas Tunai, dan Rekapitulasi Penerimaan Kas Anggaran dengan Kop Surat resmi, tanpa baris penyimpan kas yang mengganggu, serta tanda tangan resmi Kepala Sekolah dan Bendahara BOSDA (konsisten tanpa peran fungsional PTK).
+  7. Hak Akses Terintegrasi (RBAC): Modul BOSDA terdaftar penuh pada Roles & Permissions dengan kontrol hak akses view, create, update, delete, print, dan config.
+
 v2.13.21
 - Pemulihan & Anti-Crash 503 (Standalone Inlined Compression):
   1. Bundel Kompresi Mandiri (Zero External Dependency): Modul compression dibundel langsung ke dalam berkas eksekusi server (dist/server.cjs) saat proses build rilis sehingga server hosting yang melakukan OTA update tidak memerlukan 'npm install compression' lagi di cPanel.
