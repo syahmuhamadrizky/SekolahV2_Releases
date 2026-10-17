@@ -1,3 +1,10 @@
+v2.13.23
+- Modul RKA / DPA BOSDA & Impor Excel Massal Terintegrasi:
+  1. Fitur Impor Excel RKA / DPA BOSDA: Mendukung unggah berkas .xlsx/.xls untuk memasukkan Judul Kelompok Belanja (Header) dan Rincian Item Belanja secara massal dengan pemetaan hierarki (parent_id) dan kategori belanja otomatis.
+  2. Generator Template Baku RKA 4-Sheet: Menyediakan unduhan template resmi Excel lengkap dengan 4 sheet terstruktur: Sheet 1 (Template RKA) berisi contoh data riil dan formula pagu, Sheet 2 (Panduan Pengisian) panduan hierarki dan pengisian kolom, Sheet 3 (Daftar Satuan Baku) referensi satuan baku sekolah, dan Sheet 4 (Kategori Tersedia di Sistem) daftar kategori anggaran aktif.
+  3. Pembersih Data & Validasi Pagu Cerdas: Pembersihan format angka toleran (Rp, spasi, koma desimal, pemisah ribuan titik), pratinjau data interaktif sebelum disimpan dengan statistik ringkas, serta validasi otomatis terhadap batas Plafon Pagu Anggaran aktif.
+  4. Transaksi Database Atomik & Hak Akses (RBAC): Endpoint backend /api/bosda/rka/import dengan transaksi database MySQL aman (START TRANSACTION, COMMIT, ROLLBACK) serta pendaftaran izin aksi 'import' pada modul BOSDA di Roles & Permissions.
+
 v2.13.22
 - Modul Manajemen Anggaran BOSDA & Penatausahaan Buku Kas Sekolah:
   1. Modul Penatausahaan BOSDA Lengkap: Pengelolaan sumber anggaran BOSDA, rekening kas bank sekolah, kategori belanja RKA/DPA, dan pencatatan penerimaan anggaran serta pesanan belanja barang/jasa.
