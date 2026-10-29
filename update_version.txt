@@ -1,3 +1,11 @@
+v2.14.3
+- Isolasi Total Foto Buku Rekening & Data Rekening Bank Berdasarkan Jenis Bantuan (Anti-Bocor Antar Bantuan):
+  1. Isolasi Ketat Rekening Per Bantuan: Setiap program bantuan (misal: PIP yang disalurkan via BRI SimPel vs Tangerang Cerdas/TangCer via Bank BJB) memiliki data nomor rekening dan foto fisik buku rekening yang terisolasi 100% dan terikat pada jenis bantuan (istilah) masing-masing.
+  2. Eliminasi Kebocoran Lintas Bantuan (Cross-Contamination Fix): Memperbaiki logika frontend dan backend kueri data_bank serta laporan_bantuan sehingga foto buku rekening atau nomor rekening dari bantuan satu (misal: BJB pada TangCer) tidak akan pernah bocor, tertukar, atau tampil pada bantuan lain (misal: PIP).
+  3. Reset Bersih State Antarmuka: Saat orang tua berpindah antar jenis bantuan pada form publik /laporan-bantuan, seluruh pratinjau berkas dan isian nomor rekening di-reset bersih secara otomatis dan hanya memuat foto yang benar-benar tersimpan untuk jenis bantuan yang bersangkutan.
+  4. Penyimpanan Foto Buku Rekening Mandiri pada Laporan: Menambahkan kolom upload_foto_buku_rekening pada tabel laporan_bantuan untuk mengabadikan foto buku tabungan spesifik saat laporan dicatat, mendampingi tabel data_bank.
+  5. Penyempurnaan Tanda Terima & Riwayat: Dokumen tanda terima resmi dan riwayat laporan menampilkan rincian bank dan buku tabungan yang akurat sesuai jenis bantuan yang dilaporkan.
+
 v2.14.2
 - Redesain Formulir Laporan Bantuan Publik (Anti-Bingung & Tertib) & Perbaikan Rute:
   1. Identifikasi Siswa di Awal (Step 1): Orang tua kini cukup memasukkan NISN atau NIK dan Tanggal Lahir siswa. Tidak perlu lagi memilih jenis bantuan atau tahun di awal.
