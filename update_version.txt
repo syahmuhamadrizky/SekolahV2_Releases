@@ -1,3 +1,11 @@
+v2.14.4
+- Isolasi Mutlak Foto Buku Rekening & Pemisahan Data Rekening Bank per Bantuan:
+  1. Isolasi Ketat Rekening Per Bantuan: Setiap program bantuan (misal: PIP dengan Bank BRI SimPel vs Tangerang Cerdas / TangCer dengan Bank BJB) memiliki data rekening dan foto buku tabungan terpisah 100%.
+  2. Eliminasi Kebocoran Antar Bantuan: Foto buku rekening dan nomor rekening dari satu bantuan (misal: TangCer / BJB) tidak akan pernah bocor, tertukar, atau tampil di bantuan lain (misal: PIP).
+  3. Reset Bersih Otomatis: Saat orang tua berpindah jenis bantuan di /laporan-bantuan, formulir dan pratinjau foto langsung di-reset bersih secara otomatis.
+  4. Penyimpanan Foto Buku Rekening Mandiri: Tabel laporan_bantuan kini menyimpan upload_foto_buku_rekening riil saat pelaporan dicatat.
+  5. Penyempurnaan Tanda Terima: Resi cetak dan detail riwayat hanya memuat data rekening yang sesuai dengan bantuan yang dilaporkan.
+
 v2.14.3
 - Isolasi Total Foto Buku Rekening & Data Rekening Bank Berdasarkan Jenis Bantuan (Anti-Bocor Antar Bantuan):
   1. Isolasi Ketat Rekening Per Bantuan: Setiap program bantuan (misal: PIP yang disalurkan via BRI SimPel vs Tangerang Cerdas/TangCer via Bank BJB) memiliki data nomor rekening dan foto fisik buku rekening yang terisolasi 100% dan terikat pada jenis bantuan (istilah) masing-masing.
