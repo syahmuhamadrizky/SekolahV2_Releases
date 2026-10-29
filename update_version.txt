@@ -1,9 +1,11 @@
 v2.14.1
-- Penambahan Alias Rute /laporan-bantuan & Pencegahan Layar Putih (Blank Screen):
-  1. Multi-Alias Rute Formulir Laporan Bantuan: Menambahkan dukungan langsung untuk URL /laporan-bantuan di samping /lapor-bantuan, /laporan_bantuan, /lapor_bantuan, /bantuan, dan /bantuan-siswa sehingga orang tua siswa maupun operator dapat langsung membuka formulir baik menggunakan kata "lapor" maupun "laporan".
-  2. Implementasi Route Error Boundary: Membungkus rute aplikasi dengan penangkap error (RouteErrorBoundary) yang menampilkan antarmuka informatif dan tombol muat ulang jika terjadi galat saat memuat chunk.
-  3. Catch-All Route Redirection: Menambahkan rute penangkap global (* -> /) untuk mencegah layar putih kosong jika pengguna mengakses tautan yang tidak terdaftar.
-  4. Toleransi Dynamic Import: Menjamin kompatibilitas penuh pemuatan modul lazy-loading halaman laporan publik baik pada modul default maupun named export.
+- Redesain Formulir Laporan Bantuan Publik (Anti-Bingung & Tertib) & Perbaikan Rute:
+  1. Identifikasi Siswa di Awal (Step 1): Orang tua kini cukup memasukkan NISN atau NIK dan Tanggal Lahir siswa. Tidak perlu lagi memilih jenis bantuan atau tahun di awal.
+  2. Pemilihan Bantuan Bertingkat (Cascaded Selection - Step 2): Sistem secara otomatis hanya menampilkan Jenis Bantuan, Tahun Penyaluran, dan Semester/Tahap di mana siswa tersebut benar-benar tercatat sebagai penerima bantuan.
+  3. Indikator Status Laporan Jelas (Sudah vs Belum Dilaporkan): Setiap kartu semester/tahap menampilkan status secara kontras (Hijau: Sudah Dilaporkan, Kuning: Belum Dilaporkan) lengkap dengan tanggal lapor dan nominal, mencegah orang tua salah memilih periode pelaporan.
+  4. Akses Cetak / Resi Cepat: Bagi bantuan yang sudah dilaporkan, orang tua dapat langsung membuka dan mencetak tanda terima resmi tanpa harus mengisi ulang dari awal.
+  5. Penyelarasan Konsep "Jumlah Pencairan": Seluruh label diselaraskan menjadi "Jumlah Pencairan (Rp)" dan "Tanggal Pencairan Dana" karena penarikan tunai adalah hak siswa dan sekolah hanya mencatat jumlah bantuan resmi yang dicairkan.
+  6. Penambahan Alias Rute /laporan-bantuan: Mendaftarkan rute langsung /laporan-bantuan di samping /lapor-bantuan, /bantuan, dan /bantuan-siswa serta proteksi RouteErrorBoundary untuk mencegah layar putih kosong.
 
 v2.14.0
 - Formulir Laporan Bantuan Publik (Google-Form Style Tanpa Login) & Peningkatan Modul Bantuan:
