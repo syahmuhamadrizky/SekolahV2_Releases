@@ -1,3 +1,15 @@
+v2.14.0
+- Formulir Laporan Bantuan Publik (Google-Form Style Tanpa Login) & Peningkatan Modul Bantuan:
+  1. Formulir Laporan Online Mandiri untuk Orang Tua Siswa: Halaman publik baru (/lapor-bantuan, /bantuan, /bantuan-siswa) yang memungkinkan orang tua siswa melaporkan pencairan dana bantuan tanpa perlu akun/login.
+  2. Verifikasi Data Siswa & SK Bantuan: Pemeriksaan instan berdasarkan kombinasi Jenis Bantuan, Tahun, NISN/NIK, dan Tanggal Lahir Siswa yang terintegrasi dengan database Dapodik dan SK penerima.
+  3. Form Isian Bertahap & Unggah Berkas Lengkap: Mendukung input data kontak, rekening bank siswa, unggah foto buku tabungan (kamera HP/galeri), rincian pencairan, nominal dengan format dan terbilang rupiah otomatis, unggah foto bukti penarikan/struk, dan foto selfie siswa penerima bantuan.
+  4. Cetak Bukti Resi Laporan Resmi: Menyediakan tanda terima resmi hasil pelaporan online yang dapat langsung dicetak atau disimpan dalam format PDF oleh orang tua.
+  5. Integrasi Dashboard Operator: Tombol "Form Lapor Ortu" dan "Salin Link" pada tabel Daftar Penerima Bantuan untuk memudahkan pembagian tautan ke grup WhatsApp orang tua. Laporan yang masuk otomatis mengubah status siswa menjadi "Sudah Dilaporkan" (hijau).
+  6. Opsi Periode Fleksibel (Semester / Tahap Manual): Fitur toggle beralih antara Semester (Ganjil/Genap) atau Tahap (Ketik Manual) pada formulir tambah & edit penerima bantuan serta filter pencarian tabel.
+  7. Perbaikan Cetak Penilaian Tryout & ASTS: Pengetatan filter rombel aktif (soft_delete = 0) dan penghapusan fallback default yang mencegah kebocoran siswa kelas lain pada cetakan dokumen penilaian/leger.
+  8. Perbaikan Permohonan Pindah Siswa (500 Error Fix): Penambahan kolom tujuan_kota dan tujuan_prov serta migrasi otomatis skema database.
+  9. Migrasi Database Aman & Non-Destructive Auto-Sync: Pembaruan skema dan penambahan kolom baru berjalan otomatis saat startup tanpa merusak atau menghapus data yang telah ada.
+
 v2.13.24
 - Optimasi Kecepatan Ekstrem (Wuzz) & Stabilitas Pemuatan Data Dashboard:
   1. Akselerasi Pemuatan Data Siswa (Phase 1 Priority): Endpoint /api/siswa kini diprioritaskan dimuat langsung di awal bersamaan dengan modul rombel dan pegawai tanpa penundaan (delay timeout), sehingga data siswa dan seluruh modul terkait langsung siap saat diklik.
