@@ -1,3 +1,10 @@
+v2.14.1
+- Penambahan Alias Rute /laporan-bantuan & Pencegahan Layar Putih (Blank Screen):
+  1. Multi-Alias Rute Formulir Laporan Bantuan: Menambahkan dukungan langsung untuk URL /laporan-bantuan di samping /lapor-bantuan, /laporan_bantuan, /lapor_bantuan, /bantuan, dan /bantuan-siswa sehingga orang tua siswa maupun operator dapat langsung membuka formulir baik menggunakan kata "lapor" maupun "laporan".
+  2. Implementasi Route Error Boundary: Membungkus rute aplikasi dengan penangkap error (RouteErrorBoundary) yang menampilkan antarmuka informatif dan tombol muat ulang jika terjadi galat saat memuat chunk.
+  3. Catch-All Route Redirection: Menambahkan rute penangkap global (* -> /) untuk mencegah layar putih kosong jika pengguna mengakses tautan yang tidak terdaftar.
+  4. Toleransi Dynamic Import: Menjamin kompatibilitas penuh pemuatan modul lazy-loading halaman laporan publik baik pada modul default maupun named export.
+
 v2.14.0
 - Formulir Laporan Bantuan Publik (Google-Form Style Tanpa Login) & Peningkatan Modul Bantuan:
   1. Formulir Laporan Online Mandiri untuk Orang Tua Siswa: Halaman publik baru (/lapor-bantuan, /bantuan, /bantuan-siswa) yang memungkinkan orang tua siswa melaporkan pencairan dana bantuan tanpa perlu akun/login.
