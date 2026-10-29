@@ -1,3 +1,22 @@
+v2.14.7
+- Wajib Kelengkapan Data Kartu Keluarga, Orang Tua / Wali Berdasarkan Status, Batas Upload JPG/PNG Max 2MB, & Tanda Tangan Digital di Layar HP/Device:
+  1. Kelengkapan Wajib Kartu Keluarga & Kontak: Orang tua wajib mengisi 16 digit Nomor Kartu Keluarga (KK) dan minimal 10 digit Nomor HP/WhatsApp aktif.
+  2. Ketentuan Status Orang Tua: Input data orang tua otomatis beradaptasi dengan status keberadaan orang tua:
+     - Lengkap: Wajib mengisi Nama & NIK (16 digit) Ibu Kandung dan Ayah Kandung.
+     - Yatim: Wajib mengisi Nama & NIK Ibu Kandung, Ayah otomatis ditandai Almarhum.
+     - Piatu: Wajib mengisi Nama & NIK Ayah Kandung, Ibu otomatis ditandai Almarhumah.
+     - Yatim Piatu / Panti Asuhan / Wali: Wajib mengisi Nama Wali, NIK Wali (16 digit), dan Hubungan Wali dengan siswa.
+     - Penanggung Jawab Rekening: Pilihan penanggung jawab (Ibu, Ayah, Wali, atau Siswa Sendiri).
+  3. Pembatasan Upload Berkas Ketat: Upload berkas Buku Tabungan, Bukti Transaksi, dan Foto Selfie dibatasi secara ketat hanya menerima format gambar JPG / PNG dengan ukuran maksimal 2 MB per berkas.
+  4. Tanda Tangan Digital Langsung di Layar HP/Device (Touch Canvas Pad):
+     - Fitur gores tanda tangan langsung menggunakan jari pada layar sentuh HP atau mouse komputer dengan dukungan sentuhan lancar (touch-action: none).
+     - Tombol Bersihkan / Ulangi TTD dan deteksi status tanda tangan (Sudah TTD / Wajib TTD).
+     - Tanda tangan digital otomatis tersimpan ke server sebagai berkas PNG resmi dan terhubung dengan laporan bantuan.
+     - Bagi orang tua yang sebelumnya belum membubuhkan tanda tangan, dapat membuka kembali formulir dan melengkapi tanda tangan secara instan.
+  5. Pengesahan Resi & Cetak Daftar Penerima:
+     - Tanda tangan orang tua otomatis tertera di lembar Tanda Terima / Resi Pelaporan Digital (Cetak PDF).
+     - Tanda tangan orang tua otomatis tampil pada dokumen resmi cetak landscape "Daftar Penerima Bantuan" pihak sekolah sehingga panitia tinggal unduh dokumen lengkap bertanda tangan asli.
+
 v2.14.6
 - Fitur Cetak Daftar Penerima Bantuan (Landscape & KOP Surat Sekolah):
   1. Filter Khusus Daftar Penerima: Menambahkan dropdown filter terintegrasi untuk Jenis Program Bantuan, Tahun Anggaran, dan Semester/Tahap Penyaluran pada tab Daftar Penerima Bantuan.
