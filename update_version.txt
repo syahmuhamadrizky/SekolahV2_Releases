@@ -1,3 +1,10 @@
+v2.14.8
+- Perbaikan Query Cetak Daftar Penerima Bantuan (Landscape KOP Sekolah):
+  1. Fix Unknown Column pb.tahap & prb.nik: Memperbaiki kueri SQL pada endpoint GET /api/bantuan/penerima/cetak di server.ts dengan menghapus pemanggilan kolom tidak ada (pb.tahap dan prb.nik).
+  2. Resolusi Format Tanggal Pencairan: Memastikan tanggal pencairan bantuan ditampilkan rapi dan aman tanpa terpotong format MySQL.
+  3. Base URL Assets: Menambahkan tag <base href="/"> agar seluruh logo sekolah, KOP surat, dan tanda tangan digital ter-render sempurna pada jendela/tab cetak baru.
+  4. Penanganan Pesan Error Cetak: Menampilkan detail pesan error dari server jika terjadi kendala pada saat tombol Cetak Daftar diklik.
+
 v2.14.7
 - Wajib Kelengkapan Data Kartu Keluarga, Orang Tua / Wali Berdasarkan Status, Batas Upload JPG/PNG Max 2MB, & Tanda Tangan Digital di Layar HP/Device:
   1. Kelengkapan Wajib Kartu Keluarga & Kontak: Orang tua wajib mengisi 16 digit Nomor Kartu Keluarga (KK) dan minimal 10 digit Nomor HP/WhatsApp aktif.
