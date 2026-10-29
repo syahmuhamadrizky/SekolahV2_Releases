@@ -1,3 +1,10 @@
+v2.14.6
+- Fitur Cetak Daftar Penerima Bantuan (Landscape & KOP Surat Sekolah):
+  1. Filter Khusus Daftar Penerima: Menambahkan dropdown filter terintegrasi untuk Jenis Program Bantuan, Tahun Anggaran, dan Semester/Tahap Penyaluran pada tab Daftar Penerima Bantuan.
+  2. Dokumen Cetak Format Landscape Resmi: Format cetak resmi berorientasi Landscape lengkap dengan KOP Surat Resmi Sekolah (gambar KOP atau KOP Dinas Pendidikan).
+  3. Kolom Tanda Tangan Orang Tua: Dilengkapi kolom tanda tangan orang tua/wali dengan penomoran selang-seling standar dinas serta dukungan tanda tangan digital bagi siswa yang telah melapor secara online.
+  4. Pengesahan Kepala Sekolah & Operator: Dilengkapi lembar pengesahan resmi Kepala Sekolah dan Operator Bantuan dengan penulisan nama dan gelar sesuai EYD standar baku.
+
 v2.14.5
 - Penyempurnaan Pencarian Siswa & Toleransi Zona Waktu Tanggal Lahir (Form Laporan Publik):
   1. Resolusi Ketidakcocokan Tanggal Lahir (Timezone / UTC vs WIB Fix): Menyelaraskan verifikasi tanggal lahir siswa pada form publik /laporan-bantuan dengan toleransi pergeseran zona waktu (UTC+0 vs WIB+7) serta memeriksa tanggal lahir yang tercatat pada data pengajuan rekening bantuan.
