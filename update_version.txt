@@ -1,3 +1,11 @@
+v2.14.9
+- Fitur Fleksibilitas Tambah Penerima Bantuan (Per Kelas & Siswa Pilihan), Bantuan Barang Fisik, serta Pencegahan Duplikasi:
+  1. Tambah Penerima Mode Per Kelas (Satu Rombel Sekaligus): Operator dapat menambahkan seluruh atau sebagian siswa dalam satu rombongan belajar sekaligus dengan fitur 'Pilih Semua Siswa' dan pencarian nama/NISN di dalam kelas.
+  2. Deteksi & Pencegahan Duplikasi Siswa Otomatis: Sistem secara cerdas mendeteksi siswa yang sudah terdaftar sebagai penerima pada bantuan dan tahun/periode yang sama (diberi label ⚠️ Sudah Terdaftar & dinonaktifkan dari checkbox pilihan) sehingga terhindar dari pendaftaran ganda.
+  3. Tambah Penerima Mode Per Siswa (Individu): Mendukung pencarian fleksibel nama/NISN/NIK siswa untuk program bantuan yang ditujukan spesifik bagi siswa pilihan.
+  4. Endpoint Batch Terisolasi & Aman: Penyediaan endpoint baru POST /api/bantuan/penerima/batch dan GET /api/bantuan/rombel-siswa dengan transaksi database rollback-safe yang mematuhi 100% arsitektur Dapodik.
+  5. Dukungan Penuh Kategori Bantuan (Barang Fisik vs Uang Tunai): Integrasi alokasi bantuan berupa Uang Tunai / Transfer Bank maupun Paket Barang Fisik (seragam, tas, sepatu, dsb.) baik pada dashboard admin sekolah maupun portal verifikasi & laporan bantuan publik orang tua.
+
 v2.14.8
 - Perbaikan Query Cetak Daftar Penerima Bantuan (Landscape KOP Sekolah):
   1. Fix Unknown Column pb.tahap & prb.nik: Memperbaiki kueri SQL pada endpoint GET /api/bantuan/penerima/cetak di server.ts dengan menghapus pemanggilan kolom tidak ada (pb.tahap dan prb.nik).
