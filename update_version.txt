@@ -1,3 +1,9 @@
+v2.14.5
+- Penyempurnaan Pencarian Siswa & Toleransi Zona Waktu Tanggal Lahir (Form Laporan Publik):
+  1. Resolusi Ketidakcocokan Tanggal Lahir (Timezone / UTC vs WIB Fix): Menyelaraskan verifikasi tanggal lahir siswa pada form publik /laporan-bantuan dengan toleransi pergeseran zona waktu (UTC+0 vs WIB+7) serta memeriksa tanggal lahir yang tercatat pada data pengajuan rekening bantuan.
+  2. Multi-Identitas Fleksibel (NISN / NIK / ID): Pencarian dan penarikan data bantuan penerima kini secara penuh mendukung pengenalan NIK 16 digit siswa, NISN, maupun ID internal Dapodik.
+  3. Pesan Kesalahan Lebih Jelas & Edukatif: Membedakan pesan kesalahan saat nomor NISN/NIK tidak ditemukan di sekolah dengan kesalahan pengisian tanggal lahir agar orang tua tidak bingung.
+
 v2.14.4
 - Isolasi Mutlak Foto Buku Rekening & Pemisahan Data Rekening Bank per Bantuan:
   1. Isolasi Ketat Rekening Per Bantuan: Setiap program bantuan (misal: PIP dengan Bank BRI SimPel vs Tangerang Cerdas / TangCer dengan Bank BJB) memiliki data rekening dan foto buku tabungan terpisah 100%.
