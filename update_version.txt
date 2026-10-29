@@ -1,4 +1,4 @@
-v2.14.1
+v2.14.2
 - Redesain Formulir Laporan Bantuan Publik (Anti-Bingung & Tertib) & Perbaikan Rute:
   1. Identifikasi Siswa di Awal (Step 1): Orang tua kini cukup memasukkan NISN atau NIK dan Tanggal Lahir siswa. Tidak perlu lagi memilih jenis bantuan atau tahun di awal.
   2. Pemilihan Bantuan Bertingkat (Cascaded Selection - Step 2): Sistem secara otomatis hanya menampilkan Jenis Bantuan, Tahun Penyaluran, dan Semester/Tahap di mana siswa tersebut benar-benar tercatat sebagai penerima bantuan.
