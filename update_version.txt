@@ -1,3 +1,9 @@
+v2.14.10
+- Penyempurnaan Tanda Tangan & Pernyataan Resmi Dokumen Cetak Bantuan Siswa:
+  1. Cetak Daftar Penerima: Nama Kepala Sekolah tampil huruf kapital (UPPER) lengkap beserta gelar akademik/keagamaan resmi (contoh: ARSIATI, S.Pd.SD, M.Pd), bergaris bawah tebal standar dokumen dinas, serta penempatan rapi di sebelah kanan dengan titimangsa tanggal.
+  2. Penghapusan Tanda Tangan Pengelola: Mengeliminasi kolom tanda tangan pengelola/operator pada lembar cetak daftar penerima bantuan dan lembar tanda terima laporan pencairan bantuan.
+  3. Keterangan Pencairan Mandiri Orang Tua/Wali: Menambahkan klausul/pernyataan resmi bahwa pencairan dan penarikan dana bantuan dilakukan secara mandiri oleh Orang Tua / Wali peserta didik melalui rekening bank penyalur tanpa perantara serta tanpa potongan apapun dari pihak sekolah (atau penyerahan utuh tanpa biaya untuk paket barang fisik).
+
 v2.14.9
 - Fitur Fleksibilitas Tambah Penerima Bantuan (Per Kelas & Siswa Pilihan), Bantuan Barang Fisik, serta Pencegahan Duplikasi:
   1. Tambah Penerima Mode Per Kelas (Satu Rombel Sekaligus): Operator dapat menambahkan seluruh atau sebagian siswa dalam satu rombongan belajar sekaligus dengan fitur 'Pilih Semua Siswa' dan pencarian nama/NISN di dalam kelas.
