@@ -1,3 +1,9 @@
+v2.14.11
+- Dukungan Nominal Global Opsional untuk Bantuan Berupa Barang Fisik:
+  1. Input Nominal Global Opsional: Menambahkan kolom nominal / estimasi total nilai bantuan pada program bantuan barang, form pendaftaran penerima (per kelas maupun per siswa), dan form edit penerima.
+  2. Kondisional Pada Dokumen Cetak: Jika nominal global diisi (> 0), nilai nominal akan otomatis ditampilkan pada lembar cetak daftar penerima bantuan, ringkasan total dana, rincian data penyerahan barang pada tanda terima resmi, dan klausul pernyataan orang tua. Sebaliknya, jika dikosongkan (0 atau null), dokumen cetak secara otomatis hanya menampilkan daftar paket barang fisik tanpa nominal.
+  3. Visualisasi Dashboard & Verifikasi Publik: Tampilan badge nominal opsional di tabel bantuan admin dan form verifikasi publik penerima bantuan orang tua.
+
 v2.14.10
 - Penyempurnaan Tanda Tangan & Pernyataan Resmi Dokumen Cetak Bantuan Siswa:
   1. Cetak Daftar Penerima: Nama Kepala Sekolah tampil huruf kapital (UPPER) lengkap beserta gelar akademik/keagamaan resmi (contoh: ARSIATI, S.Pd.SD, M.Pd), bergaris bawah tebal standar dokumen dinas, serta penempatan rapi di sebelah kanan dengan titimangsa tanggal.
