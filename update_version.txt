@@ -1,3 +1,8 @@
+v2.14.15
+- Otomatisasi Format Nama Rekening "[Nama Penanggung Jawab] QQ [Nama Siswa]":
+  1. Format Otomatis pada Bukti Cetak & Daftar Kolektif: Menampilkan format baku "[Nama Penanggung Jawab] QQ [Nama Siswa]" (contoh: YUYUN SARTIKA QQ MUHAMAD KHOIRUN NIZAM) secara otomatis pada lembar Cetak Bukti Pengajuan Pembukaan Rekening, Cetak Daftar Kolektif, dan Tanda Terima Publik Orang Tua.
+  2. Preview & Auto-Fill Nama Rekening (QQ): Menampilkan pratinjau langsung Nama Rekening (QQ) pada formulir orang tua (/pengajuan-rekening), tabel admin Pembukaan Rekening Bantuan, Export Excel Bank, serta mengisi otomatis kolom Atas Nama Rekening pada modal Detail/Edit Berkas Admin.
+
 v2.14.14
 - Fitur Verifikasi & Status Selesai / Belum Selesai pada Pembukaan Rekening Bantuan Siswa (Proteksi Penutupan Form Orang Tua):
   1. Filter Status Selesai & Belum Selesai: Mengganti filter kelengkapan berkas menjadi filter berbasis Status Pembukaan Rekening ('Semua Status', 'Belum Selesai', dan 'Sudah Selesai') dilengkapi tombol filter cepat (pills) beserta penghitung jumlah siswa real-time.
