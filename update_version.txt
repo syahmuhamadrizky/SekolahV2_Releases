@@ -1,3 +1,12 @@
+v2.14.13
+- Formulir Publik & Manajemen Nominasi Pengajuan Pembukaan Rekening Bantuan Siswa:
+  1. Manajemen Nominasi Rekening Baru oleh Admin (Individu & Per Kelas/Rombel): Admin dapat mendaftarkan siswa yang akan dibuatkan rekening bantuan baru baik secara individu maupun satu rombel sekaligus, serta menentukan Jenis Bantuan Tujuan, Bank Tujuan, dan Tahun Persiapan.
+  2. Formulir Publik Orang Tua Tanpa Login (/pengajuan-rekening & /buka-rekening): Orang tua masuk menggunakan NISN/NIK dan Tanggal Lahir siswa yang telah dinominasikan oleh Admin.
+  3. Persetujuan Wajib Ketentuan Persiapan Bantuan (Prioritas Desil & Presensi): Sebelum mengisi form, orang tua wajib membaca dan menyetujui bahwa pembukaan rekening ini adalah tahap persiapan administrasi untuk periode mendatang, belum menjamin siswa pasti diajukan, dan pengajuan tetap diprioritaskan berdasarkan Update Data Desil Terbaru serta Tingkat Presensi Kehadiran Siswa.
+  4. Kelengkapan Data Anak, Orang Tua, & Aturan Wali dengan Surat Kuasa: Mendukung pengisian data anak, alamat lengkap (pencarian wilayah otomatis), data orang tua, dan penanggung jawab rekening (QQ). Jika orang tua masih lengkap/ada namun penanggung jawab rekening diwakilkan oleh Wali, sistem otomatis mewajibkan pengisian identitas Wali serta unggah Foto Surat Kuasa dari Orang Tua Siswa.
+  5. Unggah Berkas Persyaratan & Tanda Tangan Digital: Wajib mengunggah Foto KTP Penanggung Jawab, Foto Kartu Keluarga (KK), Foto Akte Kelahiran Anak, Foto Surat Kuasa/Wali (jika diwakili Wali), serta membubuhkan Tanda Tangan Digital.
+  6. Cetak Bukti Tanda Terima Resmi & Daftar Kolektif Ber-KOP Sekolah: Bukti pengajuan pembukaan rekening dilengkapi Kop Surat Sekolah, preview foto berkas terunggah, klausul prioritas Desil & Presensi, Tanda Tangan Penanggung Jawab, tampilan cetak bersih tanpa latar belakang, serta fitur Export Excel Kolektif Bank.
+
 v2.14.12
 - Panduan Jelas Upload Foto Orang Tua & Penyempurnaan Cetak Tanda Terima Laporan Bantuan (KOP Sekolah, Foto Bukti, TTD Penanggung Jawab, & Print Bersih):
   1. Keterangan Upload Foto Jelas untuk Orang Tua: Menambahkan kotak panduan kontras pada ketiga bagian upload berkas:
