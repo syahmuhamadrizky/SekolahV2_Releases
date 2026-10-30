@@ -1,3 +1,14 @@
+v2.14.12
+- Panduan Jelas Upload Foto Orang Tua & Penyempurnaan Cetak Tanda Terima Laporan Bantuan (KOP Sekolah, Foto Bukti, TTD Penanggung Jawab, & Print Bersih):
+  1. Keterangan Upload Foto Jelas untuk Orang Tua: Menambahkan kotak panduan kontras pada ketiga bagian upload berkas:
+     - Foto Buku Tabungan: Foto Buku Bank yang berisi identitas Nama Pemilik dan Nomor Rekening.
+     - Foto Bukti Pengambilan: Foto Struk Pengambilan / Foto Buku Bank Bagian Transaksi.
+     - Foto Selfie Siswa: Foto anak sedang memegang uang bantuan dan buku rekening.
+  2. Kop Surat Sekolah Resmi pada Tanda Terima: Menampilkan gambar Kop Surat Sekolah (kop_surat_url) secara penuh pada bagian atas Tanda Terima Resmi Pelaporan Pencairan Bantuan Siswa.
+  3. Dokumentasi Foto Bukti pada Tanda Terima Cetak: Menampilkan ketiga foto bukti yang telah diunggah (Foto Buku Tabungan, Foto Bukti Pengambilan, dan Foto Selfie Siswa) pada lembar cetak tanda terima.
+  4. Tanda Tangan Penanggung Jawab & Nomor KK: Menampilkan tanda tangan penanggung jawab rekening (Ibu/Ayah/Wali) serta nomor Kartu Keluarga (KK) secara lengkap pada lembar tanda terima.
+  5. Cetak Bersih Tanpa Warna Latar Belakang: Menghilangkan warna latar belakang gradien dan bingkai luar saat dicetak (@media print) sehingga hanya bagian dokumen tanda terima yang tercetak di atas kertas putih bersih.
+
 v2.14.11
 - Dukungan Nominal Global Opsional untuk Bantuan Berupa Barang Fisik:
   1. Input Nominal Global Opsional: Menambahkan kolom nominal / estimasi total nilai bantuan pada program bantuan barang, form pendaftaran penerima (per kelas maupun per siswa), dan form edit penerima.
