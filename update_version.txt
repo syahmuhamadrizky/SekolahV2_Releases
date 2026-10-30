@@ -1,3 +1,9 @@
+v2.14.14
+- Fitur Verifikasi & Status Selesai / Belum Selesai pada Pembukaan Rekening Bantuan Siswa (Proteksi Penutupan Form Orang Tua):
+  1. Filter Status Selesai & Belum Selesai: Mengganti filter kelengkapan berkas menjadi filter berbasis Status Pembukaan Rekening ('Semua Status', 'Belum Selesai', dan 'Sudah Selesai') dilengkapi tombol filter cepat (pills) beserta penghitung jumlah siswa real-time.
+  2. Tombol Verifikasi Selesai 1-Klik & Aksi Massal (Bulk Action): Admin dapat memverifikasi dan menandai status pembukaan rekening menjadi 'Selesai' (atau mengembalikan ke 'Belum Selesai') langsung per baris siswa, melalui tombol 'Simpan & Tandai Selesai' di dalam modal Detail/Edit Berkas, maupun secara massal menggunakan kotak centang (checkbox) untuk banyak siswa sekaligus.
+  3. Penutupan Otomatis Akses Form Orang Tua saat Status Selesai: Ketika status pembukaan rekening siswa telah ditandai 'Selesai' oleh Admin, orang tua yang memasukkan NISN/NIK dan Tanggal Lahir di halaman publik (/pengajuan-rekening) otomatis menerima pemberitahuan resmi bahwa proses pembukaan rekening sudah SELESAI dan akses pengisian formulir telah ditutup.
+
 v2.14.13
 - Formulir Publik & Manajemen Nominasi Pengajuan Pembukaan Rekening Bantuan Siswa:
   1. Manajemen Nominasi Rekening Baru oleh Admin (Individu & Per Kelas/Rombel): Admin dapat mendaftarkan siswa yang akan dibuatkan rekening bantuan baru baik secara individu maupun satu rombel sekaligus, serta menentukan Jenis Bantuan Tujuan, Bank Tujuan, dan Tahun Persiapan.
