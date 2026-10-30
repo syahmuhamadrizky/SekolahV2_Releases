@@ -1,3 +1,8 @@
+v2.14.17
+- Verifikasi Otomatis Status Selesai Jika Nomor Rekening Sudah Ada & Optimasi Query Ekstrem:
+  1. Verifikasi Otomatis (Auto-Verified Selesai): Jika siswa sudah memiliki Nomor Rekening di data bank (atau saat Nomor Rekening diinput/disimpan), status Pembukaan Rekening Bantuan otomatis berubah menjadi "Selesai" (✨ Verifikasi Otomatis) dan akses formulir orang tua otomatis ditutup.
+  2. Optimasi Query Wilayah (107.117 Baris) & Memoisasi Skema: Mengganti kondisi OR JOIN pada tabel ref_mst_wilayah dan peserta_didik menjadi Indexed Primary Key Lookup serta menjalankan pengecekan skema cukup 1 kali saat server berjalan sehingga penarikan data berlangsung instan (< 50ms).
+
 v2.14.16
 - Optimasi Kecepatan Ekstrem Menu Program Bantuan & Pembukaan Rekening Bantuan:
   1. Optimasi Query Wilayah (107.117 Baris): Mengganti kondisi OR JOIN pada tabel ref_mst_wilayah dan peserta_didik menjadi Indexed Primary Key Lookup (COALESCE), menghilangkan full table scan jutaan baris sehingga penarikan data berjalan instan (< 50ms).
