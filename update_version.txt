@@ -1,3 +1,9 @@
+v2.14.18
+- Panel Admin Berkas & Biodata Personal Pelatih, Sinkronisasi Kelas Pelatih Ekskul & Pembersihan KTA:
+  1. Menu / Tab Berkas & Biodata Personal Pelatih (Admin): Menambahkan tab pengelolaan lengkap "Berkas & Biodata Personal Pelatih" pada menu Manajemen Bidang & Ekskul serta Pembinaan & Absensi Ekskul untuk mengecek biodata, nomor rekening bank, pratinjau/unduh 6 dokumen (KTP, Sertifikat, KTA, Ijazah, Buku Rekening, SK), verifikasi berkas, dan export Excel.
+  2. Sinkronisasi Ketat Kelas Binaan Pelatih Ekskul: Memfilter daftar kelas dan siswa pada Jadwal Sesi Latihan & Absensi Ekskul agar selalu mengikuti pembagian kelas resmi pelatih di Manajemen Bidang & Ekskul.
+  3. Pembersihan Tampilan Nomor KTA Pelatih: Menghapus kemunculan Nomor KTA pelatih pada laporan cetak dan rekapitulasi bulanan ekskul untuk mencegah ketidaksesuaian data antar pelatih.
+
 v2.14.17
 - Verifikasi Otomatis Status Selesai Jika Nomor Rekening Sudah Ada & Optimasi Query Ekstrem:
   1. Verifikasi Otomatis (Auto-Verified Selesai): Jika siswa sudah memiliki Nomor Rekening di data bank (atau saat Nomor Rekening diinput/disimpan), status Pembukaan Rekening Bantuan otomatis berubah menjadi "Selesai" (✨ Verifikasi Otomatis) dan akses formulir orang tua otomatis ditutup.
