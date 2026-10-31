@@ -1,3 +1,26 @@
+v2.14.19
+- Validasi 1-Klik Laporan Kegiatan Ekstrakurikuler oleh Admin & Proteksi Kunci Laporan Pelatih:
+  1. Validasi 1-Klik & Validasi Massal (Semua Sesi): Admin dapat langsung memvalidasi laporan kegiatan ekstrakurikuler pada tab Laporan Kegiatan hanya dengan 1 klik (tanpa perlu tanda tangan kanvas) maupun memvalidasi sekaligus seluruh laporan yang tampil dengan tombol "Validasi Semua".
+  2. Proteksi Kunci Laporan Bagi Pelatih: Begitu laporan sesi kegiatan telah berstatus "Tervalidasi", laporan otomatis dikunci sehingga pelatih tidak dapat lagi mengubah atau menghapus jadwal latihan, presensi kehadiran siswa, tanda tangan pelatih, maupun foto dokumentasi kegiatan pada sesi tersebut.
+  3. Filter Status Validasi Laporan: Menambahkan filter "Tervalidasi" dan "Belum Divalidasi" serta kartu indikator progres validasi pada tab Laporan Kegiatan Ekstrakurikuler.
+
+v2.14.18
+- Panel Admin Berkas & Biodata Personal Pelatih, Sinkronisasi Kelas Pelatih Ekskul & Pembersihan KTA:
+  1. Menu / Tab Berkas & Biodata Personal Pelatih (Admin): Menambahkan tab pengelolaan lengkap "Berkas & Biodata Personal Pelatih" pada menu Manajemen Bidang & Ekskul serta Pembinaan & Absensi Ekskul untuk mengecek biodata, nomor rekening bank, pratinjau/unduh 6 dokumen (KTP, Sertifikat, KTA, Ijazah, Buku Rekening, SK), verifikasi berkas, dan export Excel.
+  2. Sinkronisasi Ketat Kelas Binaan Pelatih Ekskul: Memfilter daftar kelas dan siswa pada Jadwal Sesi Latihan & Absensi Ekskul agar selalu mengikuti pembagian kelas resmi pelatih di Manajemen Bidang & Ekskul.
+  3. Pembersihan Tampilan Nomor KTA Pelatih: Menghapus kemunculan Nomor KTA pelatih pada laporan cetak dan rekapitulasi bulanan ekskul untuk mencegah ketidaksesuaian data antar pelatih.
+
+v2.14.17
+- Verifikasi Otomatis Status Selesai Jika Nomor Rekening Sudah Ada & Optimasi Query Ekstrem:
+  1. Verifikasi Otomatis (Auto-Verified Selesai): Jika siswa sudah memiliki Nomor Rekening di data bank (atau saat Nomor Rekening diinput/disimpan), status Pembukaan Rekening Bantuan otomatis berubah menjadi "Selesai" (✨ Verifikasi Otomatis) dan akses formulir orang tua otomatis ditutup.
+  2. Optimasi Query Wilayah (107.117 Baris) & Memoisasi Skema: Mengganti kondisi OR JOIN pada tabel ref_mst_wilayah dan peserta_didik menjadi Indexed Primary Key Lookup serta menjalankan pengecekan skema cukup 1 kali saat server berjalan sehingga penarikan data berlangsung instan (< 50ms).
+
+v2.14.16
+- Optimasi Kecepatan Ekstrem Menu Program Bantuan & Pembukaan Rekening Bantuan:
+  1. Optimasi Query Wilayah (107.117 Baris): Mengganti kondisi OR JOIN pada tabel ref_mst_wilayah dan peserta_didik menjadi Indexed Primary Key Lookup (COALESCE), menghilangkan full table scan jutaan baris sehingga penarikan data berjalan instan (< 50ms).
+  2. Memoisasi Skema & Penambahan Index Database: Menjalankan pengecekan skema ensureLaporanBantuanSchema cukup 1 kali saat server berjalan (mencegah antrean lock ALTER TABLE pada setiap request) serta menambahkan index pada tabel bantuan.
+  3. Payload Ringan & Smooth Refresh UI: Mengecualikan pengiriman string base64 tanda tangan mentah pada endpoint tabel daftar serta mempertahankan tampilan baris tabel saat muat ulang (refresh) berlangsung.
+
 v2.14.15
 - Otomatisasi Format Nama Rekening "[Nama Penanggung Jawab] QQ [Nama Siswa]":
   1. Format Otomatis pada Bukti Cetak & Daftar Kolektif: Menampilkan format baku "[Nama Penanggung Jawab] QQ [Nama Siswa]" (contoh: YUYUN SARTIKA QQ MUHAMAD KHOIRUN NIZAM) secara otomatis pada lembar Cetak Bukti Pengajuan Pembukaan Rekening, Cetak Daftar Kolektif, dan Tanda Terima Publik Orang Tua.
