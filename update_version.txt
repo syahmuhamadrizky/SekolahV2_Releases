@@ -1,3 +1,9 @@
+v2.14.20
+- Validasi Ketat Nomor KTA Pelatih (Anti-Bocor / Anti-Duplikasi) & Tampilan KTA Resmi:
+  1. Validasi Keaslian Nomor KTA Pelatih: Mengimplementasikan pengecekan validitas nomor KTA dengan NIK pelatih (mencocokkan segmen 6 digit tanggal lahir DDMMYY) dan memastikan tidak ada duplikasi atau kebocoran KTA ke pelatih lain.
+  2. Tampilan Nomor KTA Resmi pada Laporan & Cetak: Menampilkan nomor KTA pelatih yang sah pada Pratinjau Laporan Sesi, Cetak Laporan Sesi Latihan, Rekapitulasi Laporan Bulanan (Daftar Pelatih/Pembina), dan kolom Kehadiran & TTD Pelatih tabel bulanan. Jika pelatih belum mengisi/tidak memiliki KTA sah, sistem tidak menampilkan nomor KTA tiruan atau milik pelatih lain.
+  3. Sanitasi Data Absensi Ekskul: Membersihkan nomor KTA tercemar dari histori absensi di database sehingga data laporan selalu menampilkan nomor KTA yang valid milik pelatih yang bersangkutan.
+
 v2.14.19
 - Validasi 1-Klik Laporan Kegiatan Ekstrakurikuler oleh Admin & Proteksi Kunci Laporan Pelatih:
   1. Validasi 1-Klik & Validasi Massal (Semua Sesi): Admin dapat langsung memvalidasi laporan kegiatan ekstrakurikuler pada tab Laporan Kegiatan hanya dengan 1 klik (tanpa perlu tanda tangan kanvas) maupun memvalidasi sekaligus seluruh laporan yang tampil dengan tombol "Validasi Semua".
