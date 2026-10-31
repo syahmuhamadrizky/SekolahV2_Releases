@@ -1,3 +1,9 @@
+v2.14.21
+- Perbaikan Endpoint & Skema Database Validasi Laporan Ekstrakurikuler:
+  1. Penambahan Endpoint Validasi Backend: Mengaktifkan endpoint PUT /api/absensi_ekskul/:id/validasi (Validasi 1-Klik) dan POST /api/absensi_ekskul/validasi_bulanan (Validasi Massal) untuk Administrator dan Kepala Sekolah sehingga tombol validasi laporan bekerja sukses 100% tanpa error "Gagal memvalidasi laporan kegiatan".
+  2. Migrasi Skema Database Otomatis: Memastikan kolom status_validasi, validated_by, validated_at, ttd_kepsek, dan catatan_kepsek pada tabel absensi_ekskul serta kolom status_validasi pada tabel jadwal_ekskul terpasang otomatis.
+  3. Proteksi Kunci Backend (Anti-Bypass): Menjaga integritas laporan dengan menolak pengeditan jadwal, presensi siswa, foto dokumentasi, dan tanda tangan pelatih ketika sesi latihan telah berstatus "Tervalidasi".
+
 v2.14.20
 - Validasi Ketat Nomor KTA Pelatih (Anti-Bocor / Anti-Duplikasi) & Tampilan KTA Resmi:
   1. Validasi Keaslian Nomor KTA Pelatih: Mengimplementasikan pengecekan validitas nomor KTA dengan NIK pelatih (mencocokkan segmen 6 digit tanggal lahir DDMMYY) dan memastikan tidak ada duplikasi atau kebocoran KTA ke pelatih lain.
